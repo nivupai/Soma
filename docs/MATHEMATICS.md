@@ -107,3 +107,14 @@ Numerical test tolerances:
 References: [NeuroDSP Welch API](https://neurodsp-tools.github.io/neurodsp/generated/neurodsp.spectral.compute_spectrum_welch.html),
 [Welch (1967)](https://doi.org/10.1109/TAU.1967.1161901), and
 [SciPy spectrogram](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.spectrogram.html).
+
+## Event-based extensions
+
+Milestone 2 adds average referencing, continuous Butterworth SOS filtering,
+annotation-contained half-open epochs, Morlet wavelets, explicit rest references,
+ERD/ERS and lateralization. Their equations, units, measured filter behavior,
+reference assumptions, support masks and tolerance derivations are documented in
+[METHODS.md](METHODS.md). Welch density normalization and band integration above
+are unchanged; the motor-imagery experiment explicitly uses one-second segments
+rather than Milestone 1's two-second whole-record defaults. MNE wavelet power
+must never be used as a Welch density denominator or treated as calibrated PSD.

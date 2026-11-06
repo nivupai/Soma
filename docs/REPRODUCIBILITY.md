@@ -46,3 +46,44 @@ output directories to record the committed revision. Generated files are ignored
 Spectral PNGs show 0–40 Hz (or the available range if smaller) and six decades
 below the largest plotted density. This display limit hides numerical roundoff
 near pure-tone zero bins; the saved NPZ density arrays are untouched.
+
+## Milestone 2 artifact schema
+
+`configs/motor-imagery.json` is an executable CLI configuration. Defaults and all
+actual overrides, sampling rates, Welch and Morlet settings, reference floors,
+QC thresholds, channels and run identities are included in each manifest. The
+existing library/version/Git/seed tracking remains unchanged. Source EDF hashes
+are retained, and arrays are derived without rewriting EDFs. Runs 4/8/12 require
+explicit prior fetch; analysis never downloads recordings.
+
+Top-level tables retain `subject`, `run`, `recording` and annotation/trial indices:
+
+- `events.csv`: original code, semantic label, onset, duration and sample.
+- `trials.csv`: every proposal by stage, acceptance, exact half-open sample range,
+  reference event identity and rejection reasons.
+- `spectral_features.csv`: accepted trial/channel/band powers and valid reference,
+  percent/log/difference normalization. Unavailable numeric values are empty CSV
+  cells; counts distinguish unavailable normalization from absent trials.
+- `condition_summary.csv`: per-run means, sample SD and normalized counts.
+- `lateralization.csv`: per-trial C4-minus-C3 over sum, with defined sign.
+- `quality.json`: channel metrics, every proposed trial's detailed QC and counts.
+- `preprocessing.json`: actual settings, SOS coefficients, measured response,
+  phase, group delay, edge guard and channel policy.
+- `geometry.json`: coordinates, frame, units, montage name and template caveat.
+
+Each `run-XX/spectra.npz` stores density T×C×F, frequency/channel/trial/condition
+coordinates, rest density and rest trial indices, and T×C×band reference powers.
+`run-XX/timefrequency.npz` stores wavelet power T×C×F×time, explicit coordinates,
+full-support masks, half-support widths, band trajectories, aligned reference
+power, percent/log/difference arrays, validity mask, condition-mean power and
+condition trial counts. Band order is explicitly stored. Load with
+`allow_pickle=False`. NaNs in arrays are explicit unsupported or undefined
+quantities, not nonfinite raw samples passed through the analysis.
+
+Plots can be disabled without suppressing scientific artifacts. When no supported
+wavelet reference exists, `erd_ers.png` is omitted and normalization is masked.
+Some conditions can have valid absolute results but no normalized results. Longer
+context and short analysis windows have separate logs; their counts can differ.
+Noisy synthetic references use the recorded seed; filtering and QC settings must
+be held constant when comparing runs. Multi-run summaries retain each run rather
+than treating trials as independent population observations.

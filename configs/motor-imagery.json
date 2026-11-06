@@ -1,0 +1,30 @@
+{
+  "preprocessing": {
+    "reference": "average",
+    "highpass_hz": 1.0,
+    "lowpass_hz": 40.0,
+    "order": 4,
+    "phase": "zero",
+    "notch_hz": null,
+    "notch_q": 30.0,
+    "notch_justification": null,
+    "remove_dc": false,
+    "transient_tolerance": 0.0001
+  },
+  "quality": {
+    "channel_ptp_v": 0.0005,
+    "trial_ptp_v": 0.0003,
+    "excursion_v": 0.00015,
+    "flat_std_v": 0.00000005
+  },
+  "analysis": {"start_s": 1.0, "stop_s": 3.0, "require_containment": true},
+  "context": {"start_s": 0.0, "stop_s": 4.0, "require_containment": true},
+  "matched_reference": {"start_s": -3.0, "stop_s": -1.0, "require_containment": true},
+  "baseline": "condition_rest",
+  "minimum_rest_s": 2.0,
+  "minimum_band_reference_v2": 1e-20,
+  "minimum_wavelet_reference_v2": 1e-20,
+  "channels": ["C3", "Cz", "C4"],
+  "morlet": {"frequencies": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30], "n_cycles": 5.0},
+  "plots": true
+}

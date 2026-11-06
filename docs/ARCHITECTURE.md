@@ -1,7 +1,7 @@
 # Architecture
 
-Soma is an installable `src/` package with numerical algorithms independent of
-MNE. Dataset adapters return MNE Raw plus JSON-compatible metadata. Experiment
+Soma is an installable `src/` package with array-facing numerical interfaces
+independent of MNE Raw objects. MNE supplies ingestion and Morlet primitives. Dataset adapters return MNE Raw plus JSON-compatible metadata. Experiment
 orchestration chooses scientific parameters and saves artifacts; visualization
 consumes completed results. No global dataset is downloaded at import time.
 
@@ -60,3 +60,35 @@ CLI failures print the exception and return 1; Typer argument errors return 2.
 Default outputs stay under `data/` and `reports/` relative to the working directory.
 User paths are explicit overrides. Plot caches default under `data/derived/.cache`;
 `MPLCONFIGDIR` and `XDG_CACHE_HOME` can explicitly override those locations.
+
+## Milestone 2 additions
+
+Existing loader, signal, Welch and Milestone 1 experiment interfaces are retained.
+New functionality is isolated in the following modules:
+
+| Module | API / responsibility |
+| --- | --- |
+| `eeg.quality` | `QualityConfig`, `quality_metrics`: finite checks and quantitative flags |
+| `eeg.preprocessing` | `PreprocessingConfig`, `ProcessedRecording`, `select_eeg`, `rereference`, `design_filter`, `preprocess` |
+| `eeg.geometry` | `assign_geometry`: copy, exact channel matches, meter coordinates, explicit provenance |
+| `eeg.events` | `Event`, `parse_events`, `validate_events`, `event_table` |
+| `eeg.epoching` | `EpochConfig`, `Trial`, `EpochSet`, `extract_trials`, `matched_rest`, `trial_table` |
+| `eeg.timefrequency` | `TrialSpectra`, `trial_spectra`, `MorletConfig`, `TimeFrequency`, `morlet_power` |
+| `eeg.erd` | `PowerCoordinates`, `PowerChange`, `power_change`, `lateralization` |
+| `eeg.motor_imagery` | `MotorImageryConfig`, `analyze_run`, `motor_imagery`: orchestration and artifacts |
+| `signal.event_locked` | `event_locked_eeg`: known seeded suppression, optional artifacts |
+| `visualization.motor_imagery` | optional `plot_motor_imagery` |
+
+Array shapes are explicitly trial/channel/frequency/time; no general framework or
+xarray dependency was introduced. `ProcessedRecording` separates continuous
+numeric data from the original MNE object. `EpochSet.trials` aligns accepted
+samples, while `EpochSet.log` retains all proposals. Named frozen configuration
+defaults are immutable. Numerical stages avoid hidden mutation; copied MNE data
+are used only at ingestion, geometry and preprocessing boundaries. The new
+plotting module is imported only when requested by experiment orchestration.
+
+`analyze_run` returns both numerical objects and tables for programmatic analysis.
+`motor_imagery` writes a new directory and retains per-run arrays. A failed run
+can leave a partial directory, as in Milestone 1. No multi-file transaction is
+claimed. The CLI JSON parser constructs explicit configuration dataclasses rather
+than merging arbitrary unknown keys. Runs 4/8/12 are validated before execution.

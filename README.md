@@ -49,3 +49,35 @@ pytest -m integration tests/integration
 See [architecture](docs/ARCHITECTURE.md), [mathematics](docs/MATHEMATICS.md),
 [datasets](docs/DATASETS.md), [reproducibility](docs/REPRODUCIBILITY.md),
 [verification](docs/VERIFICATION.md), and [roadmap](docs/ROADMAP.md).
+
+## Milestone 2: event-based motor imagery
+
+The existing Milestone 1 APIs and commands remain available. The new pipeline
+adds copy-safe continuous filtering, explicit referencing, template geometry,
+run-aware events with durations, logged trial rejection, valid-rest references,
+trial Welch PSDs, Morlet power with support masks, and descriptive ERD/ERS.
+
+```bash
+soma eeg motor-imagery --subject 1 --runs 4 --output reports/motor-imagery-s1
+# Only recordings explicitly fetched by you are loaded; this command never downloads.
+soma eeg motor-imagery --subject 1 --runs 4 --runs 8 --runs 12 --output reports/motor-imagery-multi
+soma eeg motor-imagery --subject 1 --runs 4 --baseline matched_rest --output reports/matched-rest
+soma eeg motor-imagery --subject 1 --runs 4 --baseline none --no-plots --output reports/absolute
+soma eeg motor-imagery --subject 1 --runs 4 --config configs/motor-imagery.json --output reports/configured
+soma experiments event-locked --seed 42 --output reports/event-locked
+soma experiments event-locked --seed 42 --artifacts --output reports/event-locked-artifacts
+```
+
+Defaults: 64-channel average reference, continuous 1–40 Hz Butterworth SOS
+forward-backward filter, no notch/ICA, [1,3) s analysis, [0,4) s TFR context,
+separately identified T0 rest references. The synthetic model uses no rereference
+to preserve its known three-channel ground truth. All numerical settings can be
+specified with the JSON configuration; unknown fields fail clearly. `--baseline`
+and `--reference` override the JSON. `--no-plots` produces scientific artifacts
+without importing the new plotting module.
+
+Outputs include events/trials CSVs, QC/filter/geometry JSON, spectral features,
+condition summaries, lateralization, run-specific NPZs, provenance and a report.
+Figures show event timeline, template sensors, PSDs, TFR and supported ERD/ERS.
+No reference is fabricated when unavailable. Runs are never silently pooled.
+See [scientific methods](docs/METHODS.md) before interpreting normalized power.

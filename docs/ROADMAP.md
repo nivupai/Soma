@@ -1,32 +1,29 @@
 # Roadmap
 
-Milestone 1 supplies dataset selection, validated arrays, spectral estimation,
-synthetic benchmarks and reproducible descriptive outputs. Scientific limitations
-include no artifact handling, no reference model, no event-based segmentation,
-no uncertainty estimates, and no inferential interpretation of band differences.
+Milestones 1 and 2 provide explicit dataset ingestion, validated signal arrays,
+NeuroDSP spectra, reproducible synthetic laboratories, continuous preprocessing,
+template electrode geometry, duration-aware events, logged extraction/QC, valid
+rest references and sensor-level Morlet/ERD descriptions. They include no MRI,
+source localization, ICA, neural networks, decoding or cross-validation pipeline.
 
-Milestone 2 should focus on EEG preprocessing and event-based analysis:
+A future Milestone 3 could focus on preprocessing sensitivity, uncertainty and
+multi-run EEG replication, subject to a separate request:
 
-1. Define reference and bad-channel policies with explicit Raw copies, provenance,
-   filter transition bands, padding, phase and edge behavior.
-2. Add run-aware rest/left/right epochs with annotation durations, rejection rules,
-   baseline windows, boundary handling and trial counts.
-3. Validate anti-aliasing before resampling; document filter impulse/frequency
-   responses and power effects using synthetic artifacts and known transients.
-4. Estimate event-related mu/beta changes within trials, retain subject hierarchy,
-   quantify uncertainty, and prevent temporal leakage in any decoding evaluation.
-5. Expand cached real-data fixtures and data-quality reports before multicohort work.
+1. Quantify how reference choice, filter settings, QC thresholds and rest strategy
+   affect per-run conclusions; inspect flagged data before adopting automation.
+2. Compare runs 4/8/12 with explicit selection, trial counts and hierarchical
+   subject/run structure; do not pool trials into population claims.
+3. Add bootstrap/permutation procedures only with defined estimands, exchangeability
+   assumptions, multiplicity handling and simulation-based coverage checks.
+4. Evaluate artifact assessment against manually reviewed examples; consider
+   documented optional ICA only after channel geometry/QC/reference validation.
+5. Add time-frequency uncertainty and oscillatory/aperiodic diagnostics if the
+   scientific questions and numerical validation justify the extra models.
 
-Later milestones may add classical motor-imagery decoding with leakage-safe
-cross-validation, time-frequency estimation with explicit temporal/frequency
-tradeoffs, and oscillation/aperiodic separation with model diagnostics.
-
-Source localization needs measured/digitized sensor positions, reference-aware
-forward models, conductivity assumptions, coregistration, inverse regularization
-and simulation-based ground truth. Structural MRI needs explicit image affine,
-coordinate-frame and surface topology contracts, validated external tooling and
-reproducible anatomical processing. fMRI needs motion/confound handling, design
-matrices, autocorrelation models and corrected statistical inference. Multimodal
-registration requires explicit transforms, interpolation choices and quantitative
-registration checks. These features are deferred; the present directories hold
-no pretend numerical implementations.
+Later classical decoding would require leakage-safe evaluation. Source
+localization needs measured/digitized sensor positions, reference-aware forward
+models, conductivity assumptions, coregistration, regularization and simulations.
+Structural MRI needs image-affine/frame and topology contracts; fMRI needs motion
+and confound handling, design matrices and autocorrelation-aware inference.
+Multimodal registration requires explicit transforms and quantitative checks.
+These remain deferred and are not represented by pretend implementations.

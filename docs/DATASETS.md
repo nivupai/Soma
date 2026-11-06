@@ -46,3 +46,22 @@ The real experiment selects C3, Cz, C4 where present. It reports whole-record
 spectra and band integrals; rest and imagery are mixed. It makes no condition
 comparisons and no statistical claims. Only label metadata is inspected; no
 measured sensor positions or forward geometry are inferred.
+
+## Milestone 2 event and geometry layer
+
+The new motor-imagery pipeline preserves the loader's original annotation values,
+onsets and durations, and validates a typed event table. Recording-relative
+sample indices are derived through MNE with explicit handling of `first_samp`.
+Only unilateral imagery runs 4, 8, 12 are accepted by this particular workflow.
+Other task types remain valid for the general dataset adapter and event parser.
+
+`assign_geometry` creates a copy with exact matches to the installed MNE 1005
+template (current `colin27_1005`, legacy `standard_1005`). Its finite head-frame
+coordinates in meters are explicitly marked template, not subject measurements.
+The Milestone 1 loader itself still assigns no montage and performs no filtering.
+
+Annotation durations determine whether a proposed analysis or reference interval
+is supported. An onset alone is not a trial-duration model. Invalid event tables
+fail before analysis; unsupported extraction windows are individually logged.
+Runs 8/12 are supported but were not downloaded during this milestone; multi-run
+identity preservation was tested offline with deterministic synthetic fixtures.
