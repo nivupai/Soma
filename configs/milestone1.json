@@ -1,0 +1,10 @@
+{
+  "description": "Scientific parameter reference; CLI defaults match these values. Not an automatically loaded configuration file.",
+  "dataset": "eegmmidb",
+  "subject": 1,
+  "run": 4,
+  "channels": ["C3", "Cz", "C4"],
+  "welch": {"nperseg": 320, "noverlap": 160, "window": "hann", "average": "mean"},
+  "bands_hz": {"mu": [8, 13], "beta": [13, 30]},
+  "synthetic": {"fs_hz": 160, "duration_s": 20, "seed": 42}
+}

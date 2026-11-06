@@ -1,0 +1,24 @@
+name: Scientific checks
+on: [push, pull_request]
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    env:
+      MPLBACKEND: Agg
+      MPLCONFIGDIR: /tmp/soma-mpl
+      XDG_CACHE_HOME: /tmp/soma-cache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -e '.[dev]'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: mypy src/soma
+      - run: pytest
+      - run: soma --help && soma datasets list
+      - run: soma experiments synthetic-spectrum --output reports/ci-synthetic
