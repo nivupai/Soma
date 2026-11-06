@@ -1,0 +1,28 @@
+cohort:
+  subjects:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  runs:
+  - 4
+  - 8
+  - 12
+  plots: true
+  statistics:
+    seed: 42
+    n_bootstrap: 2000
+    confidence: 0.95
+    sign_flip: false
+variants:
+- primary
+- reference_none
+- reference_fz_pz
+- filter_05_40
+- filter_1_45
+- normalization_none
+- normalization_matched
+- qc_strict
+- qc_permissive
+- burst_high_25

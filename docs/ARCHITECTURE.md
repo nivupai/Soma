@@ -92,3 +92,35 @@ plotting module is imported only when requested by experiment orchestration.
 can leave a partial directory, as in Milestone 1. No multi-file transaction is
 claimed. The CLI JSON parser constructs explicit configuration dataclasses rather
 than merging arbitrary unknown keys. Runs 4/8/12 are validated before execution.
+
+## Milestone 3 additions
+
+`experiments.config` builds frozen cohort configurations from strict YAML/JSON;
+`experiments.cohort.run_cohort` processes selected recordings sequentially through
+existing `analyze_run`, then continuous `signal.bursts`. It retains compact
+per-record artifacts rather than all subjects' TFR arrays in memory. `analyze_run`
+adds selected processed arrays and profiling metadata to its return mapping;
+its existing signature and outputs remain compatible. Preprocessing adds an
+explicit named-channel reference option while preserving average/none defaults.
+
+`experiments.cache` provides content-addressed, checksummed run artifacts keyed
+by dataset identity, input fingerprint, complete numerical settings and software
+identity. No pickle or executable object cache is used. `experiments.sensitivity`
+constructs a predefined one-factor-at-a-time design; it is not a parameter search.
+`statistics.hierarchical` owns paired run/subject aggregation, resampling,
+lateralization and optional multiplicity-corrected sign flips. `signal.cohort_synthetic`
+provides repeated-measures and controlled pulse-train laboratories.
+`experiments.benchmark` measures cost/cache behavior and repeated CI coverage.
+`visualization.cohort` reads saved tables for auditable figures.
+
+New CLI commands: `eeg cohort`, `eeg sensitivity`, `eeg bursts`,
+`experiments cohort-synthetic`, `experiments benchmark`, and
+`experiments uncertainty-validation`. Typer uses repeated `--subjects`/`--runs`
+options rather than space-separated variable-length options. New commands emit
+JSON summaries/errors; complete and partial cohorts retain explicit statuses,
+while zero-completion commands return failure. Earlier CLI behavior is unchanged.
+
+PyYAML is the only new runtime dependency; its types are included in development
+dependencies. Statistical arrays remain NumPy/Pandas, not an additional modeling
+framework. Template coordinate provenance and future measured DigMontage boundary
+remain intact; no source/MRI algorithms were introduced.

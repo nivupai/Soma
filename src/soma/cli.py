@@ -180,5 +180,153 @@ def run_event_locked(
         fail(exc)
 
 
+def _structured_fail(exc: Exception) -> None:
+    typer.echo(
+        json.dumps({"status": "failed", "error_type": type(exc).__name__, "error": str(exc)}),
+        err=True,
+    )
+    raise typer.Exit(1)
+
+
+@eeg.command("cohort")
+def eeg_cohort(
+    subjects: Annotated[list[int], typer.Option(help="Repeat --subjects for each participant")],
+    runs: Annotated[list[int], typer.Option(help="Repeat --runs for 4, 8, 12")],
+    output: Path = Path("reports/cohort"),
+    data_dir: DataDir = Path("data/raw"),
+    config: Path | None = None,
+    cache_dir: Path = Path("data/derived/cohort-cache"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Analyze explicitly selected cached subjects/runs; report partial completion as JSON."""
+    from soma.experiments.cohort import run_cohort
+    from soma.experiments.config import CohortConfig, config_from_dict, read_config
+
+    try:
+        cfg = config_from_dict(read_config(config)) if config else CohortConfig()
+        cfg = replace(
+            cfg, subjects=tuple(subjects), runs=tuple(runs), plots=False if no_plots else cfg.plots
+        )
+        result = run_cohort(data_dir, output, cfg, cache_dir)
+        typer.echo(json.dumps(result))
+        if not result["complete"]:
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@eeg.command("sensitivity")
+def eeg_sensitivity(
+    config: Annotated[Path, typer.Option(help="Predefined sensitivity design YAML/JSON")],
+    output: Path = Path("reports/sensitivity"),
+    data_dir: DataDir = Path("data/raw"),
+    cache_dir: Path = Path("data/derived/cohort-cache"),
+) -> None:
+    """Run a predefined one-factor-at-a-time design from YAML/JSON; never downloads."""
+    from soma.experiments.config import read_config
+    from soma.experiments.sensitivity import run_sensitivity
+
+    try:
+        result = run_sensitivity(data_dir, output, read_config(config), cache_dir)
+        typer.echo(json.dumps(result))
+        if result.get("status") == "failed":
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@eeg.command("bursts")
+def eeg_bursts(
+    runs: Annotated[list[int], typer.Option(help="Repeat --runs for each imagery recording")],
+    subject: int = 1,
+    output: Path = Path("reports/bursts"),
+    data_dir: DataDir = Path("data/raw"),
+    cache_dir: Path = Path("data/derived/cohort-cache"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Continuous mu/beta bursts plus spectral comparisons; same cohort cache and provenance."""
+    from soma.experiments.cohort import run_cohort
+    from soma.experiments.config import CohortConfig
+
+    try:
+        result = run_cohort(
+            data_dir,
+            output,
+            CohortConfig(subjects=(subject,), runs=tuple(runs), plots=not no_plots),
+            cache_dir,
+        )
+        typer.echo(json.dumps(result))
+        if not result["complete"]:
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@experiments.command("cohort-synthetic")
+def synthetic_cohort(
+    output: Path = Path("reports/cohort-synthetic"),
+    seed: int = 42,
+    missing: bool = False,
+    artifacts: bool = False,
+    cache_dir: Path = Path("data/derived/cohort-cache"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Five subjects × three runs with seeded individual effects, noise and known bursts."""
+    from soma.experiments.cohort import run_cohort
+    from soma.experiments.config import CohortConfig
+
+    try:
+        cfg = CohortConfig(
+            synthetic_seed=seed,
+            synthetic_missing=missing,
+            synthetic_artifacts=artifacts,
+            plots=not no_plots,
+        )
+        result = run_cohort(Path("data/raw"), output, cfg, cache_dir)
+        typer.echo(json.dumps(result))
+        if not result["complete"]:
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@experiments.command("benchmark")
+def run_benchmark(output: Path = Path("reports/benchmark"), seed: int = 42) -> None:
+    """Measure run/TFR/memory costs, cold/warm cache and a three-variant sensitivity sweep."""
+    from soma.experiments.benchmark import benchmark
+
+    try:
+        typer.echo(json.dumps(benchmark(output, seed)))
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@experiments.command("uncertainty-validation")
+def run_coverage(
+    output: Path = Path("reports/uncertainty-validation"),
+    seed: int = 42,
+    repetitions: int = 200,
+    n_subjects: int = 40,
+    n_bootstrap: int = 1000,
+) -> None:
+    """Repeated subject simulations to measure percentile-bootstrap coverage."""
+    from soma.experiments.benchmark import uncertainty_validation
+
+    try:
+        typer.echo(
+            json.dumps(uncertainty_validation(output, seed, repetitions, n_subjects, n_bootstrap))
+        )
+    except Exception as exc:
+        _structured_fail(exc)
+
+
 if __name__ == "__main__":
     app()

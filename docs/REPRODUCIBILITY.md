@@ -87,3 +87,75 @@ context and short analysis windows have separate logs; their counts can differ.
 Noisy synthetic references use the recorded seed; filtering and QC settings must
 be held constant when comparing runs. Multi-run summaries retain each run rather
 than treating trials as independent population observations.
+
+## Milestone 3 cohort and sensitivity execution
+
+YAML/JSON describes subjects/runs and scientific settings; data/cache/output paths
+are separate CLI arguments. `configs/cohort.yaml` selects 1–5×4/8/12 and seed 42
+for statistics. `configs/sensitivity.yaml` names all ten predefined variants.
+Repeat `--subjects` and `--runs` for Typer lists; cohort analysis never downloads.
+The existing explicit fetch command requests only a selected Cartesian product.
+
+Each new output directory is exclusive. Deterministic experiment IDs include
+canonical scientific settings, relevant software identity and ordered requested
+record fingerprints (or explicit unavailability markers); sensitivity IDs include
+the constituent experiment IDs. Reordering the same selections does not change
+identity. Different inputs/configurations do not overwrite one another.
+
+Run cache keys contain original EDF SHA-256 (or a seeded synthetic source
+identity), recording/subject/run, all motor/burst settings, installed scientific
+versions, Python version, architecture/byte order, application version and a
+source-code digest. Statistical/plot settings are excluded from the numerical
+run cache, but retained in experiment provenance. Changing statistics alone can
+reuse run artifacts; changing numerical settings invalidates them. Development
+source changes invalidate caches even before a version bump. Source hashing is
+conservative and can invalidate caches for changes unrelated to a particular
+estimator; no premature layered preprocessing cache is claimed.
+
+Caches contain CSV, JSON, numeric NPY/NPZ and checksums, never pickle. Publication
+uses a staging directory and rename. Every cache read verifies artifacts; corrupt
+or incomplete cache entries are reported as failed records, not silently trusted
+or overwritten. Remove or relocate a corrupt cache explicitly before retrying.
+Output copies do not share writable table files with the cache. Full selected
+continuous arrays are cached once; cohort outputs retain compact summaries,
+coordinates and time-averaged TFRs rather than duplicating full trial TFR volumes.
+The Milestone 2 command remains available for complete trial×channel×frequency×time
+artifacts.
+
+Top-level cohort artifacts:
+
+- `coverage.csv/json`: every requested record, errors, fingerprints, cache status,
+  stage counts and timing; no external exclusion list is applied.
+- `events.csv`, `trials.csv`, `features.csv`, `summary.csv`: original run/trial
+  identities, rejected proposals, spectral features and descriptive run summaries.
+- `run_contrasts.csv`, `subject_contrasts.csv`, `population.csv`: paired-run and
+  subject estimands, effective n, run SD, nominal subject-bootstrap CIs.
+- `leave_one_subject_out.csv`: subject exclusion sensitivity, not a deletion policy.
+- `lateralization*.csv`: explicit absolute/log sensor conventions and uncertainty.
+- `burst_features.csv`, `burst_events.csv`, `burst_dynamics.csv`: exposure-aware
+  trial features, censored fragments and 100 ms event-relative bins.
+- `burst_condition_summary.csv`, `burst_*contrasts.csv`, `burst_population.csv`:
+  exposure-weighted within-run and equal-subject paired summaries.
+- `burst_power_contrasts.csv`, `burst_power_associations.csv`: aligned descriptive
+  subject associations, with missingness and effective n.
+- `retention.csv`, `profiling.csv`, `manifest.json`, `report.md` and saved figures.
+
+Per-subject/run metadata retains template coordinates, preprocessing response,
+QC details, thresholds, source identity and profiling. `tfr_mean.npz` contains
+`mean_over_valid_time` (trial×channel×frequency), trial labels/indices, frequencies,
+channels, and the original time/support coordinates; it is not a full TFR volume.
+Failures can leave incomplete output directories, as in earlier milestones.
+
+Sensitivity tables retain each configuration, aggregate and matched-subject
+changes, sign consistency, relative changes, retained trials/subjects, missing
+references and burst effects. Near-zero primary denominators can make relative
+changes unstable; use absolute changes and explicit retention first. No best
+configuration is selected. Cached compute timing in a warm run describes its
+original miss; `elapsed_seconds` and cache status describe the current attempt.
+
+Benchmarks save hardware/software context, cold/warm and sweep wall costs,
+per-run TFR costs, exact array footprints, tracemalloc peaks and process high-water
+RSS. Native allocations may not all appear in tracemalloc; RSS is not a per-stage
+memory delta. No absolute-time thresholds run in CI. Separate 200-replication
+normal-subject coverage experiments at n=40 and n=5 expose the limitations of
+nominal percentile intervals; their results are not replaced by a favorable seed.

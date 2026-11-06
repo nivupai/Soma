@@ -213,3 +213,232 @@ not guarantees against all ringing or inter-condition smearing. Rest selection,
 reference, filtering and rejection choices affect these descriptive results.
 No ICA, inferential statistics, source localization, MRI or decoding is included.
 Milestone 3 was not started.
+
+# Milestone 3 verification
+
+Executed locally on 2026-11-06 with Soma 0.3.0, Python 3.12.2, macOS 15.7 ARM64,
+10 logical CPUs. External scientific versions remain those recorded above;
+PyYAML 6.0.3 and types-PyYAML 6.0.12.20261103 were added for declarative configs.
+`requirements-resolved.txt` was refreshed, and editable installation completed.
+Only Python 3.12 was run locally; configured Python 3.11/3.12 remote CI was not
+executed and nothing was pushed.
+
+| Check | Observed result |
+| --- | --- |
+| Default offline suite | 202 passed, 3 integration cases deselected |
+| Unit suite | 133 passed |
+| Numerical suite | 69 passed |
+| Cached-data integration suite | 3 passed |
+| Distinct tests | 205: original 143 unchanged, 62 added |
+| Ruff lint / format | Passed |
+| Strict mypy | Passed, 39 source files |
+| Dependency check | No broken requirements |
+| CLI help and existing behavior | Passed regression suite and smoke commands |
+| Full synthetic cohort | 15/15 records completed |
+| Synthetic missing/artifact cohort | 15/15 records completed with explicit missing/rejected trials |
+| Real subject 1, runs 4/8/12 | 3/3 completed |
+| Real subjects 1–5, runs 4/8/12 | 15/15 completed |
+| Ten-configuration real sensitivity sweep | 150/150 record/configuration analyses completed |
+| Cold/warm cache benchmark and three-variant sweep | Completed |
+| Repeated normal-subject coverage | 200 independent replications each at n=40 and n=5 |
+
+No original test assertion was deleted or weakened. Added tests cover strict
+selection/configuration, record identity, repeated-measures grouping, uneven
+trial counts, missing conditions, bootstrap determinism and effective n,
+scale-invariant exact sign flips, Holm correction, fixed channel references,
+invalid/empty inputs, physical threshold calibration, occupancy/duration/count
+interventions, noise sensitivity, censoring/exposure, event bins, individual
+synthetic effects, missing events/artifacts, cache reuse/invalidation/corruption,
+partial/all-missing cohorts, channel mismatches and sampling inconsistency.
+
+## Dataset coverage and retention
+
+Only the requested 15 EDFs were fetched or reused: S001–S005, each R04/R08/R12.
+All fetch attempts succeeded, recorded in
+`data/derived/milestone3-download-attempts.json`. All loaded files validated as
+64 EEG at 160 Hz. No outside exclusion list, other runs or expanded 1–10 cohort
+was used. The adapter and cohort compatibility checks were retained unchanged
+where appropriate; deliberate invalid-channel/sampling fixtures verify failures.
+
+Primary annotations: 225 rest, 113 left-imagery, 112 right-imagery. Primary
+imagery retention: 210/225 (93.33%), all five subjects with three paired runs.
+Every run retained 14/15 imagery windows. The 15 rejections were recording-end
+filter-guard overlaps, not default amplitude flags. Rest 210/225, imagery TFR
+context 210/225, rest TFR context 210/225, matched-reference proposals 210/225.
+Reference availability must intersect accepted imagery and reference identities;
+proposal counts alone are not normalized-trial counts.
+
+Primary settings: average reference over all 64 EEG, 1–40 Hz continuous
+Butterworth SOS forward/backward, no notch/ICA/resampling, C3/Cz/C4 analysis,
+[1,3) s half-open power windows, [0,4) s TFR context, same-run accepted T0
+reference, one-second Hann Welch / 50% overlap, five-cycle 8–30 Hz Morlet with
+support masks. Default broad-filter guard: 582 samples, 3.6375 s. Every run saves
+actual geometry, response, QC and source fingerprint. Template head coordinates
+remain distinct from measured digitization.
+
+## Real descriptive effects and uncertainty
+
+Primary contrast is left-minus-right mean log absolute trial power, paired in
+run, equally averaged over runs within subject, then equally over subjects.
+Natural log ratios and nominal 95% pointwise percentile subject-bootstrap intervals:
+
+| Sensor/band | Mean contrast | Nominal interval | Effective subjects |
+| --- | --- | --- | --- |
+| C3 mu | +0.134851 | [−0.073409, +0.343110] | 5 |
+| C4 mu | −0.187216 | [−0.225190, −0.142448] | 5 |
+| C3 beta | +0.054245 | [−0.064034, +0.172524] | 5 |
+| C4 beta | −0.045273 | [−0.110623, +0.020076] | 5 |
+
+C4 mu subject means were negative for 5/5 subjects and 12/15 run contrasts.
+C3 mu was positive for 3/5 subject means and 8/15 run contrasts. These are
+observed consistency counts, not population significance or uniform physiology.
+Subject estimates, run SDs, leave-one-subject-out results, lateralization variants
+and burst CIs are saved separately. Sign flips were disabled in the primary
+cohort; at five subjects their exact two-sided minimum p is 0.0625 even with
+unanimous signs. No uncorrected multiple-location inference is made.
+
+**Small-n uncertainty limitation:** 200 repeated independent normal-subject
+simulations gave coverage 187/200=93.5% at n=40 (exact binomial 95% interval
+[89.14%,96.49%]), but 161/200=80.5% at n=5 ([74.32%,85.75%]). Nominal percentile
+intervals at five subjects are therefore not calibrated 95% evidence. This
+limitation is stated in the protocol, reports and nominal forest labels; the
+negative C4 interval is not reported as a significant population finding.
+
+## Sensitivity findings
+
+All ten configurations and all five subjects are retained in the design. They
+are not ranked to select a favored result. Actual imagery counts:
+
+| Variant | Accepted / 225 |
+| --- | --- |
+| Primary | 210 |
+| Acquisition reference | 197 |
+| Fz/Pz pair reference | 210 |
+| 0.5–40 Hz | 195 |
+| 1–45 Hz | 210 |
+| No power normalization | 210 |
+| Matched rest | 210 |
+| Strict QC | 193 |
+| Permissive QC | 210 |
+| Dual high threshold 2.5× rest median | 210 |
+
+C3 mu mean contrast changed from +0.134851 to −0.102075 with acquisition reference,
+and to +0.029485 with Fz/Pz. C4 mu remained negative: −0.230782 acquisition,
+−0.142662 Fz/Pz. The 0.5 Hz high-pass produced +0.101107 C3 / −0.176636 C4;
+strict QC +0.128703 / −0.222747. Raising low-pass 40→45 Hz changed these mu
+contrasts by less than 2×10^−7 log units. These are descriptive sensitivity
+results and include induced changes in accepted trials. Matched-subject change
+and sign consistency are also saved to distinguish membership from mean changes.
+
+Absolute log contrasts were unchanged by normalization choice or the burst-only
+threshold change, as expected with unchanged accepted spectral trials. No
+normalization intentionally leaves 100% of normalized feature cells unavailable.
+Matched rest leaves 90/1260=7.14% unavailable; strict QC leaves 36/1158=3.11%.
+No missing reference was filled with an epsilon or invented interval.
+
+## Burst results and synthetic validation
+
+Detection used continuous NeuroDSP seven-cycle FIR/Hilbert processing with
+rest-dual median multiples (1,2) and rest percentiles (75%,95%); minimum duration
+three cycles at the lower band edge. Guards add preprocessing support, half FIR
+support and two seconds of Hilbert guard. Threshold volts, reference exposure,
+FIR coefficients, observed event bins and censored fragments are saved.
+
+Illustrative equal-run/channel descriptions over C3/C4 (within-run occupancy
+and rates first use actual exposure):
+
+| Strategy/band | Rest occupancy | Left occupancy | Right occupancy |
+| --- | --- | --- | --- |
+| Rest dual, mu | 19.38% | 15.97% | 16.79% |
+| Rest dual, beta | 6.77% | 3.56% | 3.81% |
+| Rest percentile, mu | 5.89% | 4.70% | 4.37% |
+| Rest percentile, beta | 1.07% | 0.40% | 0.80% |
+
+Rest-dual mu onset rates were about 0.312/s rest, 0.239/s left, 0.264/s right;
+beta 0.212/s, 0.114/s, 0.109/s. Complete-duration means were around 0.57–0.62 s
+for mu and 0.30 s for beta; censored fragments are excluded and missing means
+are not zeros. These threshold-dependent observations do not establish that
+changes in burst occurrence causally explain power changes. Subject-level
+burst–power associations and effective pair counts are saved, not promoted to
+inferential correlations.
+
+Changing the rest-dual high threshold 2→2.5 reduced the C3 mu left-minus-right
+occupancy contrast from +0.023620 to +0.004786, illustrating definition sensitivity.
+The alternative percentile strategy also yields markedly fewer events. Raw
+threshold crossings are not assumed independent physiological events.
+
+The synthetic cohort completed all 15 records with 120/120 imagery windows.
+The missing/artifact variant had 114 proposed imagery windows (six explicitly
+omitted annotations), 105 accepted and nine pulse-related rejections. Rest
+retention was 105/135 in both, with recording-boundary guards logged. Individual
+baselines/effects persist across runs, while run/trial variability and noise are
+seeded independently. No-reference simulated C3 effects recovered known individual
+log-power targets within the predeclared 0.2-log-unit tolerance; the population
+mean error stayed below 0.1. Average-referenced noisy truth is not asserted to
+retain an unreferenced analytical effect.
+
+Controlled pulse-train tests recovered burst counts for amplitude, shorter and
+fewer-burst manipulations; mean-square ratios matched 0.36, 0.5 and 1/3 within
+0.001, accounting for a small fixed floor. Hilbert boundary recovery uses a
+cycle-based tolerance, not sample-exact ground truth. Increasing noise changed
+detections without changing true intervals. Monte Carlo coverage validation is
+separate from these deterministic/single-seed numerical regressions.
+
+## Profiling and artifact inspection
+
+The recorded benchmark on this hardware: four synthetic records cold cache
+2.731 s, warm cache 0.289 s (0→4 hits); three-variant sensitivity subset 1.757 s.
+Mean original-miss TFR computation about 0.0847 s; maximum traced peak about
+24.02 MiB for the seven-channel synthetic model. A separate initial 15-record
+real run averaged about 0.773 s per record, with ~49.44 MiB traced peak and
+~0.122 s TFR stage. Timings are execution observations, not performance guarantees
+or CI assertions. Real 64-channel referenced continuous arrays occupy ~9.77 MiB;
+three selected channels ~0.458 MiB. Exact arrays and TFR footprints are recorded
+in profiling.csv. Process high-water RSS is cumulative, not per-stage delta;
+tracemalloc can miss some native allocations.
+
+Figures were rendered from their saved CSV data and visually inspected: subject
+effects, run consistency, C3/C4 lateralization, occupancy, complete durations,
+nominal forest intervals, accepted/proposed retention, sensitivity heatmap and
+reference missingness. Retention labels use contrasting text and include requested
+missing subjects/runs rather than silently omitting failed rows. All plotted
+values and sample counts can be reconstructed from the adjacent tables.
+
+Initial complete review artifacts: `reports/m3-review/{cohort,subject1-bursts,
+synthetic,synthetic-missing-artifacts,benchmark,coverage40,coverage5}/` and
+`reports/m3-sensitivity-review/`. Final committed-provenance outputs use
+`reports/milestone3-committed/` with the same named experiment subdirectories.
+Caches and raw EDFs are ignored by Git; no raw data were committed.
+
+## Failures, fixes and remaining limits
+
+- New static checks caught Pandas scalar-union typing, tuple field `index`
+  ambiguity, an implicit plotting type and immutable/loop defaults. Explicit
+  table boundaries and types fixed them without relaxing strict checks.
+- Early new burst tests demanded sample-exact abrupt Hilbert boundaries and
+  identical masks after amplitude reduction. Those assumptions are invalid;
+  cycle-scale timing/count/overlap tests replaced them while analytical power
+  assertions remained tight. A fixture also counted only half its four outcomes;
+  its expected grouping count was corrected.
+- Unit-scale validation found an absolute sign-flip tie tolerance unsuitable for
+  very small powers. A scale-relative tolerance now preserves p-values at
+  scales 10^−20, 1 and 10^20, guarded by regression tests.
+- The first sensitivity CLI invocation revealed a positional Typer config;
+  it is now the requested required `--config` option and the full sweep ran.
+- A Pandas warning from concatenating empty burst tables was fixed by retaining
+  the schema but concatenating only nonempty run tables. Zero-detection records
+  remain present in exposure/features tables.
+- Figure review improved actual integer subject/run ticks and dark-cell label
+  contrast. A configuration-generation helper without explicit plotting-cache
+  environment emitted font-cache warnings; all verification workflows use
+  designated writable caches. No scientific data were changed by figure fixes.
+
+Only the initial five subjects and one local Python/platform environment were
+verified. Population inference, long-burst survival modeling, a calibrated
+small-n uncertainty method, measured electrodes, robust artifact diagnosis,
+source localization, MRI, ML and cluster permutation analysis remain outside
+this milestone. Cache reuse is conservative; it caches exact run outputs rather
+than implementing speculative layered optimization. Percentile coverage is poor
+at five subjects, reference choice changes conclusions, and detector definitions
+change occupancy. These are findings to retain, not failures to hide by selecting
+another configuration. Milestone 4 was not started.

@@ -65,3 +65,13 @@ is supported. An onset alone is not a trial-duration model. Invalid event tables
 fail before analysis; unsupported extraction windows are individually logged.
 Runs 8/12 are supported but were not downloaded during this milestone; multi-run
 identity preservation was tested offline with deterministic synthetic fixtures.
+
+## Milestone 3 cohort validation
+
+The requested real cohort is subjects 1–5, runs 4/8/12, explicitly fetched as
+15 EDFs. No other subjects or runs were downloaded. Every record is processed
+separately, checked by the existing adapter, and compared for full EEG channel-set
+and sampling-rate compatibility. Failure summaries retain missing, incomplete,
+unsupported-annotation, geometry and sampling errors. No outside exclusion list
+is applied; any future exclusion must appear with its reason and identity.
+Optional expansion to 1–10 requires explicit configuration and fetch.

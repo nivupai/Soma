@@ -2,6 +2,7 @@
 
 from dataclasses import asdict, dataclass
 from pathlib import Path
+from time import perf_counter
 from typing import Any
 
 import numpy as np
@@ -95,11 +96,13 @@ def _reference(
 def analyze_run(
     raw: Any, subject: int, run: int, identity: str, cfg: MotorImageryConfig = DEFAULT_MOTOR_IMAGERY
 ) -> dict[str, Any]:
+    started = perf_counter()
     if run not in (4, 8, 12):
         raise ValueError("Motor imagery workflow supports unilateral imagery runs 4, 8, 12 only")
     geometry_raw, geometry = assign_geometry(raw)
     events = parse_events(geometry_raw, subject, run, identity)
     processed_all = preprocess(geometry_raw, cfg.preprocessing, qc=cfg.quality)
+    preprocessing_seconds = perf_counter() - started
     processed = _select(processed_all, cfg.channels)
     epochs = extract_trials(processed, events, cfg.analysis, qc=cfg.quality)
     rest = extract_trials(processed, events, cfg.analysis, codes=("T0",), qc=cfg.quality)
@@ -111,9 +114,11 @@ def analyze_run(
     spectra = trial_spectra(epochs)
     rest_spectra = trial_spectra(rest)
     matched_spectra = trial_spectra(matched)
+    tfr_started = perf_counter()
     tfr = morlet_power(context, cfg.morlet)
     rest_tfr = morlet_power(rest_context, cfg.morlet)
     matched_tfr = morlet_power(matched, cfg.morlet)
+    tfr_seconds = perf_counter() - tfr_started
     reference_epochs = rest if cfg.baseline == "condition_rest" else matched
     reference_spectra = rest_spectra if cfg.baseline == "condition_rest" else matched_spectra
     reference_context = rest_context if cfg.baseline == "condition_rest" else matched
@@ -311,6 +316,18 @@ def analyze_run(
         "band_change": change,
         "band_reference": band_reference,
         "wavelet_reference": tfr_reference,
+        "processed": processed,
+        "profile": {
+            "core_seconds": perf_counter() - started,
+            "preprocessing_seconds": preprocessing_seconds,
+            "tfr_seconds": tfr_seconds,
+            "continuous_selected_array_mib": processed.data.nbytes / 2**20,
+            "continuous_reference_array_mib": processed_all.data.nbytes / 2**20,
+            "morlet_power_arrays_mib": (
+                tfr.power.nbytes + rest_tfr.power.nbytes + matched_tfr.power.nbytes
+            )
+            / 2**20,
+        },
     }
 
 

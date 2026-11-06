@@ -232,3 +232,102 @@ negligible zero-phase quadrature. Original Milestone 1 assertions are unchanged.
 - [SciPy Butterworth design](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html)
 - [SciPy SOS forward-backward filtering](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfiltfilt.html)
 - [NeuroDSP Welch API](https://neurodsp-tools.github.io/neurodsp/generated/neurodsp.spectral.compute_spectrum_welch.html)
+
+# Milestone 3: replication, bursts and robustness
+
+The prespecified design, cohort rules, statistical units, outcome definitions,
+missingness policy and interpretation boundaries are in [PROTOCOL.md](PROTOCOL.md).
+Milestone 1 and 2 estimators and defaults remain available without changed APIs.
+
+## Continuous burst implementation
+
+The installed NeuroDSP 2.3.0 signatures and source were inspected before wrapping:
+`filter_signal(..., filter_type='fir', n_cycles=7, return_filter=True)`,
+`amp_by_time(..., f_range=None, remove_edges=False)`, and
+`detect_bursts_dual_threshold(..., f_range=None, min_n_cycles=None,
+min_burst_duration=3/f_low, magnitude_type='amplitude', avg_type='median')`.
+Soma filters a reflected continuous signal once, measures its amplitude, computes
+rest/fixed physical thresholds, then calls the genuine detector. The detector's
+own Hilbert computation is retained rather than duplicating its hysteresis or
+minimum-duration implementation. Low/high thresholds are divided by its input
+median amplitude so internal normalization cancels exactly. No samples are
+silently omitted before this normalization.
+
+The valid observation mask excludes the original broad-band filter guard plus
+half the actual FIR kernel plus two seconds of extra Hilbert guard at each end.
+FIR coefficients, threshold calibration, rest exposure and edge lengths are saved
+per subject/run/channel/band/strategy. Detection is not repeated on two-second
+trial snippets. Accepted event windows map the continuous detections into
+half-open observations. Every fragment retains absolute and cue-relative times,
+original event/trial identity, duration, amplitude and censoring flags.
+
+`burst_dynamics.csv` contains per-trial 100 ms event-relative bins and their
+actual exposure/burst seconds. This is binned occupancy over accepted analysis
+windows, not a full unobserved pre-cue trajectory. Overlap/smoothing of Hilbert
+and FIR estimates prevents independent-time-point inference. Both primary
+strategies use accepted same-run rest; unavailable calibration gives unavailable
+metrics, not a zero-burst assertion. A fixed-voltage mode supports synthetic
+benchmarks only when explicitly selected.
+
+## Controlled numerical interventions
+
+The pulse-train laboratory holds a 10 Hz carrier and known bouts at 5–7, 12–14
+and 20–22 s within a 30 s record. Interventions reduce burst amplitude to 0.6,
+shorten durations to one second, keep only one bout, or increase broadband noise
+without altering true bouts. With a low constant oscillatory floor, mean-square
+ratios approach 0.36, 0.5 and 1/3 for the first three interventions. Burst count
+and occupied time need not respond to amplitude in the same way as band power.
+Changing noise or thresholds can change detected boundaries despite identical
+underlying oscillatory intervals.
+
+Abrupt real sinusoid gating violates ideal analytic-envelope separation; Hilbert
+ringing means exact sample-wise threshold boundaries are not ground truth.
+Direct detector timing is tested within one 10 Hz period (0.1 s) per edge;
+occupancy tolerance follows 2 edges×0.1 s×number_of_bouts / total duration. FIR
+integration tests allow one lower-band period per edge for envelope broadening.
+Noiseless interior amplitude/power scaling remains a tight analytical benchmark.
+Detector invariance is checked for count/overlap, not an invented promise of
+identical threshold samples under amplitude rescaling.
+
+The cohort simulation uses individual lognormal baseline scale, an individual
+contralateral amplitude factor, shared run/channel amplitude variability,
+trial-specific variability, independent run noise, known high-envelope intervals,
+optional omitted annotations and pulses. Seeds derive from global seed, subject
+and run via SeedSequence, preserving individual parameters across runs while
+changing run noise. Ground truth is explicitly **before referencing/filtering**.
+No-reference numerical comparisons validate C3 paired log-power recovery; an
+average-reference simulation is not falsely asserted to preserve the same truth.
+
+## Statistics and uncertainty
+
+The hierarchical module implements transparent subject-vector percentile
+resampling in bounded memory chunks. It pairs within run before run aggregation,
+prevents duplicate subject/outcome rows at the resampling boundary, and retains
+missing subject counts. Natural-log absolute-power contrasts are dimensionless
+log ratios. Within-run normalized log-power contrasts can change when references
+or valid trial sets differ; shared condition-rest denominators cancel only under
+the relevant equal-reference/trial assumptions.
+
+Burst means also receive subject-level contrast CIs; raw occupancy/rate summaries
+are exposure-weighted within run before equal-run subject aggregation. Complete
+burst duration/amplitude contrasts can be missing when no complete bursts exist;
+zero occupancy is not filled with zero mean duration. Lateralization reports
+arithmetic and logarithmic sensor contrasts separately. Subject exclusion
+estimates and run SDs describe robustness, not population exclusion decisions.
+
+The uncertainty laboratory runs independent normal-subject simulations and saves
+every interval plus aggregate coverage and its exact binomial interval. This
+exposes substantial percentile undercoverage at five subjects; the nominal 95%
+forest plot intervals are exploratory, not validated confidence guarantees.
+Optional exact sign flips and Holm correction are described in PROTOCOL.md;
+there is no trial-level randomization or time-frequency cluster inference.
+
+Additional authoritative API references:
+
+- [NeuroDSP dual thresholds](https://neurodsp-tools.github.io/neurodsp/generated/neurodsp.burst.detect_bursts_dual_threshold.html)
+- [NeuroDSP amplitude](https://neurodsp-tools.github.io/neurodsp/generated/neurodsp.timefrequency.amp_by_time.html)
+- [NeuroDSP filtering](https://neurodsp-tools.github.io/neurodsp/generated/neurodsp.filt.filter_signal.html)
+- [SciPy bootstrap interval terminology](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html)
+
+Soma's subject resampling is its own small NumPy implementation; citing SciPy's
+interval documentation does not imply that SciPy performs the cohort grouping.

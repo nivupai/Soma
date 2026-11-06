@@ -118,3 +118,68 @@ reference assumptions, support masks and tolerance derivations are documented in
 are unchanged; the motor-imagery experiment explicitly uses one-second segments
 rather than Milestone 1's two-second whole-record defaults. MNE wavelet power
 must never be used as a Welch density denominator or treated as calibrated PSD.
+
+## Repeated-measures estimands
+
+For subject s, paired run r, channel c, band b, let P denote integrated trial
+Welch power (V²). The primary run contrast is
+
+```math
+u_{srcb} = \frac{1}{n_L}\sum_{i\in L}\ln P_{srcbi}
+          -\frac{1}{n_R}\sum_{i\in R}\ln P_{srcbi},\qquad
+\delta_{scb}=\frac{1}{R_s}\sum_{r\,\mathrm{paired}}u_{srcb}.
+```
+
+Both conditions must have valid observations in a run. The cohort estimate is
+`mean_s(delta_s)` over available subjects, never over all trials pooled across
+subjects. Its unit is natural log ratio; exp(delta) compares geometric mean
+powers. Absolute contrasts use arithmetic mean differences in V²; ERD contrasts
+are percentage points. Equal-run averaging defines an estimand different from
+pooling runs with unequal retained trial counts.
+
+Subject bootstrap samples S subject contrasts with replacement, averages them,
+and takes empirical alpha/2 and 1−alpha/2 quantiles. This approximates uncertainty
+under independent representative subjects. It is not a finite-sample guarantee;
+the five-subject normal Monte Carlo coverage is explicitly reported. CIs are
+pointwise, not simultaneous. Paired standardized d_z is mean(delta)/SD(delta),
+undefined if subject SD is zero; it is not a source-level or causal effect size.
+
+For an optional symmetric subject-null sign-flip test, the statistic is
+`abs(mean(delta))` over sign patterns epsilon_s in {−1,+1}. Exact two-sided p is
+the proportion of all patterns at least as extreme; Monte Carlo uses a plus-one
+correction. Floating-point ties use tolerance proportional to the data scale,
+not an absolute voltage-dependent constant. Holm adjusted p-values are the
+monotone cumulative maxima of `(m−i+1)*p_(i)`, clipped at one. The tested family
+is all power channel/band/outcome cells in that execution.
+
+## Burst measurements and censoring
+
+Let B[n] be a continuous dual-threshold detection mask, V[n] the supported-sample
+mask, and W an accepted event window. With uniform fs:
+
+```math
+E=\frac{1}{f_s}\sum_{n\in W}V[n],\quad
+T_B=\frac{1}{f_s}\sum_{n\in W}B[n]V[n],\quad
+\mathrm{occupancy}=T_B/E,\quad \mathrm{rate}=N_{\mathrm{observed\ onsets}}/E.
+```
+
+Exposure E is seconds; rate is s⁻¹. E=0 means unavailable, not zero. Rates count
+continuous onsets whose beginning is observed, not every entry of an ongoing
+burst into a window. Mean burst amplitude averages Hilbert amplitude (V) over
+observed burst samples. Complete durations average only intervals with both ends
+observed. Censored intervals contribute occupancy and amplitude but are excluded
+from complete-duration means, which can therefore be biased toward shorter bouts;
+no survival model is claimed.
+
+NeuroDSP normalizes Hilbert amplitude A by its whole-input median M. To apply
+physical thresholds L/H volts, pass L/M and H/M. The resulting inequalities are
+A>L and A>H. Rest-dual L/H are per-channel same-run accepted-rest median multiples;
+rest-percentile uses empirical reference quantiles. A_min duration is three cycles
+at the band's lower edge. A zero input returns no detections explicitly.
+
+For a stationary sinusoid with amplitude factor a, power scales a². For disjoint
+integer-cycle bouts at fixed amplitude, mean-square power scales approximately
+with occupied fraction; changing burst count and changing duration can produce
+similar band power. Hilbert/filter smearing, noise, thresholds and censoring
+prevent identifying a unique underlying burst mechanism from band power alone.
+Subject-level associations do not resolve causality.

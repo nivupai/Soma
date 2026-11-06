@@ -23,3 +23,4 @@ jobs:
       - run: soma --help && soma datasets list
       - run: soma experiments synthetic-spectrum --output reports/ci-synthetic
       - run: soma experiments event-locked --no-plots --output reports/ci-event-locked
+      - run: soma experiments cohort-synthetic --no-plots --output reports/ci-cohort --cache-dir data/derived/ci-cache

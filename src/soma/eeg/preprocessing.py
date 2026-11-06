@@ -23,6 +23,7 @@ class PreprocessingConfig:
     notch_justification: str | None = None
     remove_dc: bool = False
     transient_tolerance: float = 1e-4
+    reference_channels: tuple[str, ...] = ()
 
 
 DEFAULT_PREPROCESSING = PreprocessingConfig()
@@ -47,9 +48,19 @@ def select_eeg(raw: Any, channels: tuple[str, ...] | None = None) -> tuple[str, 
     return selected
 
 
-def rereference(data: NDArray[np.float64], reference: str) -> NDArray[np.float64]:
+def rereference(
+    data: NDArray[np.float64], reference: str, indices: tuple[int, ...] | None = None
+) -> NDArray[np.float64]:
     if reference == "none":
         return data.copy()
+    if reference == "channels":
+        if (
+            not indices
+            or len(set(indices)) != len(indices)
+            or any(i < 0 or i >= data.shape[0] for i in indices)
+        ):
+            raise ValueError("Explicit reference requires unique available EEG channel indices")
+        return data - np.mean(data[list(indices)], axis=0, keepdims=True)
     if reference != "average" or data.shape[0] < 2:
         raise ValueError("Reference must be none, or average with at least two EEG channels")
     return data - np.mean(data, axis=0, keepdims=True)
@@ -153,7 +164,12 @@ def preprocess(
     before = quality_metrics(data, names, fs, qc, line_hz=cfg.notch_hz)
     if not np.isfinite(data).all():
         raise ValueError("Nonfinite EEG samples: inspect quality_metrics before preprocessing")
-    data = rereference(data, cfg.reference)
+    if cfg.reference_channels and cfg.reference != "channels":
+        raise ValueError("reference_channels requires reference=channels")
+    if not set(cfg.reference_channels) <= set(names):
+        raise ValueError("Reference channel is unavailable in selected EEG")
+    indices = tuple(names.index(ch) for ch in cfg.reference_channels)
+    data = rereference(data, cfg.reference, indices)
     if cfg.remove_dc:
         data -= np.mean(data, axis=1, keepdims=True)
     sos, characteristics = design_filter(fs, cfg)
@@ -178,7 +194,9 @@ def preprocess(
             "channels": list(names),
             "units": "V",
             "fs_hz": fs,
-            "reference_channels": list(names) if cfg.reference == "average" else [],
+            "reference_channels": (
+                list(names) if cfg.reference == "average" else list(cfg.reference_channels)
+            ),
             "filter": characteristics,
             "quality_before": before,
             "quality_after": quality_metrics(data, names, fs, qc, line_hz=cfg.notch_hz),
