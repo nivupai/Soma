@@ -548,4 +548,34 @@ no source-localization maps or independent-trial intervals were introduced.
 Known-mixture recovery and computational stages were measured on actual runs.
 The final code development summaries are identical to the preserved initial run;
 data-boundary/status refinements did not change the numerical model definitions.
-Prospective results will be recorded after the separate committed freeze.
+Prospective results are recorded below after the separate committed freeze.
+
+
+## Prospective Milestone 5 verification
+
+The feature was committed as `3816e4e`; frozen development-only settings were
+committed as `a6b458f` before any real access to subjects 36–65. Frozen checksum:
+`7eced826d6024e633400917fb9dc1c2db26898b85b9ef6b6da47e67603f5d439`.
+The source digest remains `8b737ed92e21614a9b013671` before and after evaluation.
+All three prospective manifests identify clean freeze commit `a6b458f`.
+
+All 90 requested target EDFs completed; 1,234 retained trials, 30 subjects,
+all classes/runs present. All 999 pipeline fits completed: nine zero-shot,
+180 fixed adaptation, 810 within-target run-held-out. A post-evaluation audit
+rechecked the immutable frozen files against Git, chronological receipts, all
+195 original EDF hashes, exact source/target groups, unique predictions,
+absence of prospective inner tuning, balanced run-4 adaptation counts and
+separate test runs. All 11 checks passed. Numerical/data/model choices were
+not changed after held-out access. Audit code and hashes are retained with reports.
+
+The released-code synthetic and benchmark workflows also completed. Synthetic
+source-separated and independent-label results match the earlier validated
+experiments; the benchmark records wall/CPU/allocation/RSS measurements for each
+stage. Prospective and development figure captions specify subject N and CI
+meaning, and representative high-resolution figures were visually inspected.
+
+This adds real-data evaluation evidence, not extra unit-test counts: **312 tests**
+remain the validated suite, with all 256 original files byte-identical. Only
+Python 3.12.2/macOS ARM64 was executed locally; configured remote CI is not claimed.
+The statistical and physiological limitations in `DECODING_METHODS.md` and
+`MILESTONE5_RESULTS.md` remain part of the findings.

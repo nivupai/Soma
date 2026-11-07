@@ -1,12 +1,121 @@
 # Milestone 5 decoding results — v0.5.0
 
 The initial decoding protocol was sealed before model experiments. Subjects 1–35
-are exploratory development data; 36–65 remain reserved pending the separately
-committed final configuration and explicit prospective command. The table below
-is development-only and does not select a held-out winner.
+are exploratory development data. Subjects 36–65 were accessed only after the
+separate committed freeze; all three prospective modes are now complete. All
+nine models are reported without held-out winner selection.
 
 Initial canonical protocol SHA-256:
 `11912588d1457a334580eab3fa1093367a762ee94c0157ed6d71cdaa849547bf`.
+
+## Completed prospective evaluation
+
+The separately frozen configuration was committed as **a6b458f** before access.
+Its canonical SHA-256 is
+`7eced826d6024e633400917fb9dc1c2db26898b85b9ef6b6da47e67603f5d439`.
+Freeze time: `2026-11-07T05:29:04.732664+00:00`; first access:
+`2026-11-07T05:30:13.518648+00:00`; completion:
+`2026-11-07T05:34:22.409338+00:00` (all UTC). The implementation is feature
+commit **3816e4e**. All three prospective manifests identify the clean freeze
+commit and unchanged numerical source digest `8b737ed92e21614a9b013671`.
+
+All 90/90 held-out recordings completed. All 30 subjects contributed all runs;
+1,234/1,350 proposals survived common analysis/context QC (91.41%). Every test
+run retained both classes. No resampling, model selection, preprocessing change,
+hyperparameter search or feature selection used these outcomes. This is a
+prospectively reserved partition of an existing public dataset, not prospective
+clinical data collection or an externally registered clinical trial.
+
+| Frozen model | Zero-shot N=30, mean BA [95% t interval] | Within-held-out N=30, mean BA |
+|---|---|---:|
+| motor_mu_lr | 56.18% [52.33, 60.03] | 51.77% |
+| motor_bands_lda | 58.65% [54.80, 62.50] | 53.89% |
+| multiband_lr | 60.77% [56.53, 65.02] | 56.11% |
+| burst_lr | 57.62% [53.80, 61.44] | 54.06% |
+| csp_lda | 54.00% [51.13, 56.87] | 57.04% |
+| covariance_lda | 56.72% [53.28, 60.16] | 54.97% |
+| euclidean_mdm | 50.83% [49.61, 52.04] | 52.60% |
+| riemann_mdm | 50.87% [49.58, 52.16] | 54.52% |
+| tangent_lr | 56.58% [52.75, 60.41] | 55.17% |
+| dummy | 50.00% [degenerate interval] | 50.00% |
+
+Zero-shot training contains only subjects 1–35; every target participant remains
+outside fitting. Within-held-out training uses two runs from that same target
+subject and the third for testing, with fixed parameters. Those are different
+training budgets and estimands, not interchangeable measures of generalization.
+Intervals above are pointwise nominal subject t intervals. All nine models are
+reported in the original order; no winner was selected after held-out access.
+
+The three prespecified prospective paired tests were:
+
+| Contrast | Mean difference | 95% subject t interval | Sign-flip p | Holm p |
+|---|---:|---|---:|---:|
+| tangent_lr − multiband_lr | -4.193 pp | [-8.112, -0.274] pp | 0.03635 | 0.07270 |
+| riemann_mdm − euclidean_mdm | +0.048 pp | [-1.471, +1.566] pp | 0.95930 | 0.95930 |
+| csp_lda − multiband_lr | -6.776 pp | [-10.513, -3.040] pp | 0.00085 | 0.00255 |
+
+Under the declared symmetric-null assumptions, CSP is lower than multiband power
+in this frozen broadband configuration after Holm correction. The tangent
+contrast's unadjusted t interval excludes zero, but its Holm p=0.07270 does not
+pass 0.05. The Riemannian-versus-Euclidean MDM advantage observed in development
+is absent prospectively. This does not establish that CSP or manifold methods
+are intrinsically inferior; preprocessing and domain shifts constrain this result.
+Sign-flip p-values use 19,999 seeded draws and are Monte Carlo approximations.
+
+Zero-shot equal-subject/run metric summaries illustrate why accuracy alone is
+insufficient (right is positive):
+
+| Model | Accuracy | Sensitivity | Specificity | ROC-AUC | Brier | Log loss |
+|---|---:|---:|---:|---:|---:|---:|
+| multiband_lr | 60.86% | 49.89% | 71.65% | 0.6679 | 0.2371 | 0.6707 |
+| tangent_lr | 56.43% | 45.91% | 67.25% | 0.6213 | 0.2541 | 0.7203 |
+| dummy | 49.79% | 100.00% | 0.00% | 0.5000 | 0.2500 | 0.6932 |
+
+Tangent probabilities have worse proper scores than the prior dummy despite
+above-chance balanced accuracy. Reliability plots are descriptive; no probability
+calibration was tuned on held-out data. MDM distance margins supply AUC but no
+claimed calibrated probabilities. Full per-run/subject metrics and confusion
+counts are retained alongside these summaries.
+
+Prospective labeled adaptation uses the same 819 evaluation trials from runs
+8/12 at every calibration count. All 30 participants support every count:
+
+| Model | k=0 | k=4 | k=8 |
+|---|---:|---:|---:|
+| multiband_lr | 62.92% | 62.80% | 63.16% |
+| tangent_lr | 58.63% | 59.14% | 58.92% |
+
+The k=8 versus k=0 mean changes are +0.24 pp for multiband and +0.30 pp for
+tangent; these small descriptive changes do not establish meaningful adaptation
+benefit. Pooling eight target examples among 1,441 source trials gives the target
+only about 0.55% of training mass. This is a fixed baseline, not an optimized
+adaptation rule. It must not be tuned further using the same reserved cohort.
+
+The prospective audit passed 11 direct checks over saved memberships, labels,
+fits and inputs. All 195 source-plus-target EDF checksums remain unchanged.
+Zero-shot has exactly nine final fits and no inner selection; adaptation has
+180 fits with source counts [718,723] plus balanced run-4 counts; within-subject
+has 810 fits. All 999 pipeline fits and all mode statuses completed without
+failure. Audit inputs and reproduction code are at `reports/m5-heldout/audit.json`
+and `audit_reproduction.py`.
+
+Prospective stage wall/CPU times were 22.21/21.99 s zero-shot, 21.40/21.28 s
+adaptation and 26.09/25.89 s within subject. Process high-water RSS reached
+1,259.73 MiB. The shared source/target bank is 531.01 MiB; within-target work
+releases that bank and builds its own 244.96 MiB representation. Access-start to
+completion elapsed 248.89 s, including downloads, data processing and rendering.
+Pipeline inference still repeats some fold-local transforms for predictions,
+margins and probabilities; the implementation prioritizes explicit training
+boundaries over optimal latency. No online performance claim is made.
+
+All prospective figures were inspected: model distributions/intervals, CSP
+sensor patterns, covariance conditioning, tangent slices, confusion, reliability,
+subject forests and adaptation. `figure_captions.md` records exact subject Ns,
+trial-count meaning and uncertainty. Numerical validity does not imply transfer:
+affine-invariant geometry handles one common invertible transform, not a different
+unknown mixing matrix for every participant. Isotropic shrinkage adds another
+limit to blanket invariance claims. Training pools retained trials; evaluation
+and inner selection weight subjects equally, a distinct weighting interpretation.
 
 ## Development cohort and comparison
 
@@ -124,12 +233,36 @@ confusion matrices, reliability, adaptation curves and synthetic recovery/distan
 Figure sample sizes and uncertainty are specified in their associated tables and
 captions; trial-level reliability/confusion counts are descriptive correlated data.
 
+## Measured synthetic computational stages
+
+These are actual instrumented stages on six-subject known-mixture data, not
+extrapolations to the real cohort. Tracemalloc increases runtime; process RSS
+is a cumulative high-water mark. All-data timing objects are discarded rather
+than reused by the separately fresh nested pipelines. The representation-bank
+stage includes PSD, burst context and per-trial OAS (substage times are saved).
+
+| Stage | Wall seconds | CPU seconds | Peak traced MiB |
+|---|---:|---:|---:|
+| PSD_and_burst_context | 6.2409 | 6.0106 | 64.575 |
+| OAS_covariances | 0.2729 | 0.2705 | 0.892 |
+| MNE_CSP_fit | 0.0880 | 0.0870 | 28.932 |
+| Riemannian_100_distances | 0.0234 | 0.0230 | 0.009 |
+| training_tangent_fit | 0.0348 | 0.0348 | 0.912 |
+| tangent_mapping | 0.0130 | 0.0129 | 0.905 |
+| logistic_fit | 0.0067 | 0.0067 | 0.174 |
+| nested_cross_subject | 11.3465 | 11.3403 | 30.852 |
+
+Released-code synthetic/benchmark outputs are at `reports/m5-release-synthetic`
+and `reports/m5-release-benchmark`; numerical validation results agree with the
+preserved earlier runs.
+
 ## Prospective status and limitations
 
-Prospective evaluation is pending the separately committed freeze at this code
-checkpoint. All model-selection rules remain fixed and all nine models will be
-reported. Development data have already been inspected; their results remain
-exploratory. Retrospective zero-phase filtering is not an online BCI pipeline.
+Prospective evaluation completed under the separately committed freeze, with
+all nine models and unchanged rules. Development results remain exploratory.
+The reserved cohort is now used; it cannot serve as an independent confirmatory
+sample for future decisions chosen using these outcomes.
+Retrospective zero-phase filtering is not an online BCI pipeline.
 Automatic QC is not expert artifact diagnosis; template patterns do not locate
 sources. Fixed subject IDs are not random population sampling. Shrinkage is not
 generally affine-equivariant, CV errors share training data, and classifiers may

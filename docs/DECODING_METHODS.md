@@ -146,3 +146,34 @@ additional confirmatory analysis. Run it with:
 Adaptation's zero-label curve uses only runs 8/12, so its baseline is not directly
 identical to the main zero-shot score over runs 4/8/12. Interpret changes across
 k on the same adaptation evaluation cells, rather than comparing unmatched runs.
+
+
+## API input contracts
+
+`TrialDataset`, `load_trials` and `combine_trials` retain event/window/channel
+identity. `build_bank`/`FeatureBank.input(model)` expose the model-specific
+numeric representation. Spectral pipelines consume feature matrices; burst
+pipelines consume the aligned band/channel/(filtered,amplitude)/context tensor.
+CSP consumes canonical raw trial tensors. Covariance pipelines default to raw
+trial tensors; `precomputed_covariance=True` explicitly selects validated
+trial-local matrices, as used by the shared-bank engine. Direct array callers
+must retain the dataset's channel/feature order and units.
+
+`make_pipeline` constructs fresh sklearn pipelines. `TrainingCSP`,
+`TrialCovariances`, `TrainingTangentSpace` and `CovarianceMDM` provide the numerical
+components. `outer_splits`, `inner_splits` and `validate_split` define boundaries;
+`evaluate`, `choose_parameters` and `adaptation` implement controlled fitting.
+`freeze_heldout` and `evaluate_heldout` enforce the prospective workflow.
+
+Training objectives pool accepted trials, so participants with more retained
+trials carry more training mass. Inner selection and population evaluation use
+equal subject weights; these are different roles. Statistical influence removes
+one evaluation subject's paired scores; it is not repeated model retraining.
+Covariance congruence invariance applies to one common transform on all matrices,
+not arbitrary different unknown participant-specific mixing. These distinctions
+help explain why valid geometry can fail to generalize in the frozen protocol.
+
+The prospective cohort has now been evaluated. Further choices made using these
+outcomes require a new independent evaluation sample. Cue-labeled decoding does
+not isolate motor physiology or prove online BCI control. No Milestone 6 work
+has been started.

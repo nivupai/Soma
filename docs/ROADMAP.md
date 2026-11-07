@@ -17,7 +17,7 @@ Milestone 5 now implements trial-level decoding, spectral/burst baselines, MNE
 CSP, explicit covariance rank/SPD regularization, Euclidean/Riemannian MDM,
 training-reference tangent features, grouped nested evaluation, fixed limited
 adaptation and auditable leakage checks. Development subjects are 1–35;
-prospective subjects 36–65 require a separately frozen, verified configuration.
+subjects 36–65 have completed the separately frozen prospective evaluation.
 See `DECODING_METHODS.md` and `MILESTONE5_RESULTS.md` for the staged research record.
 
 Milestone 6 has not started. A separate request could define independent-cohort
@@ -25,10 +25,10 @@ domain-shift validation, better justified adaptation or probability calibration.
 The existing prospective cohort must not be reused to choose a winner and then
 be presented as an independent confirmatory sample again.
 
-Optional ICA would require reviewed assumptions and provenance. Classical
-motor-imagery decoding would require leakage-safe subject/run evaluation.
-Neither is implemented. Source localization still requires measured electrode
-positions, anatomical coregistration, reference-aware forward models,
+Optional ICA remains unimplemented and would require reviewed assumptions and
+provenance. Classical decoding now has leakage-aware subject/run evaluation,
+without claims of clinical or online reliability. Source localization still
+requires measured electrode positions, anatomical coregistration, reference-aware forward models,
 conductivity assumptions, inverse regularization and simulation checks.
 Structural MRI/fMRI/registration require their own validated affine, coordinate,
 statistical and interpolation contracts. Template sensor metadata is not a

@@ -225,3 +225,19 @@ An exact development-start source archive documents the single Ruff-only shorten
 of an unused held-out receipt message during development; executed numerical
 methods and all protocol decisions remained unchanged. Prospective code is frozen
 after the completed development and current-code validation, not during that edit.
+
+
+The completed prospective report is `reports/m5-heldout`. Freeze commit `a6b458f`
+precedes its access-start receipt and all EDF downloads. Every prospective model
+manifest identifies that clean commit and the unchanged frozen source identity.
+The final reporting commit changes documentation only. Frozen configurations
+remain immutable, with false `heldout_accessed` denoting their creation-time
+snapshot; completion/access state is in the report receipts. Reproducing the
+same fixed run is not a fresh prospective validation.
+
+`audit.json` and `audit_reproduction.py` verify all source/target EDF hashes and
+recorded fit memberships. `metrics_model.csv` gives equal-subject/run metric
+summaries derived from per-run data, and `figure_captions.md` gives sample counts
+and uncertainty for the saved figures. `environment.json` includes numerical
+software and thread-pool information. Raw EDFs, caches and bulky reports remain
+Git-ignored; compact results and sealed configurations are committed.

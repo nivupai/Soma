@@ -164,9 +164,9 @@ soma decode adaptation --subjects 1:35 --output reports/decoding-adaptation
 soma decode synthetic --seed 42 --output reports/decoding-synthetic
 soma decode benchmark --output reports/decoding-benchmark
 # Efficient complete development suite: one shared trial/feature bank, including null refits.
-soma decode development-suite --output reports/m5-development
+soma decode development-suite --output reports/m5-development-final
 # Requires completed development and a passing receipt for the exact code/environment:
-soma decode freeze-heldout --verification reports/m5-verification.json --output configs/decoding-frozen.yaml
+soma decode freeze-heldout --verification configs/decoding-verification.json --development reports/m5-development-final --output configs/decoding-frozen.yaml
 # Explicit prospective access only after freezing; --fetch is a separate opt-in.
 soma decode evaluate-heldout --subjects 36:65 --config configs/decoding-frozen.yaml --output reports/decoding-heldout --fetch
 ```
@@ -179,3 +179,18 @@ by EDF/code/parameter/dependency identity and checksums. Fitted model objects ar
 never loaded from untrusted pickle files. Main decoding dependencies are
 scikit-learn and pyRiemann, with MNE CSP. No deep learning or anatomical source
 reconstruction is implemented.
+
+
+Milestone 5 completed 105 development and 90 prospectively reserved recordings,
+all nine frozen decoders and all three evaluation modes. The suite passes 312
+tests, including all 256 baseline tests unchanged. Full model tables, calibration,
+adaptation, numerical checks and limitations are in
+[Milestone 5 results](docs/MILESTONE5_RESULTS.md) and the
+[prospective freeze record](docs/PROSPECTIVE_DECODING_FREEZE.md).
+
+The commands illustrate the staged workflow; supplied frozen files are immutable
+and already exist. Use a new report directory for reproduction. Verification
+receipts must describe actual successful checks for the current code/environment;
+the original receipt, command logs and generation script are preserved under
+`configs/decoding-verification.json` and `reports/m5-verification`. A deterministic
+rerun of the completed held-out sample is not another prospective validation.
