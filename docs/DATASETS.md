@@ -87,3 +87,13 @@ import or source construction. Default conductor surfaces resolve to FLASH.
 explicit selected-subject files with a byte budget. Empty-room recordings are
 not participants. Secondary metadata discovery does not establish a usable head
 model. See INDIVIDUAL_SOURCE_VALIDATION.md for identity and license limitations.
+
+## MRI references in v0.10.0
+
+The separate typed imaging reference registry lists official McGill BrainWeb and
+author Mindboggle-101. BrainWeb's validated target is the original-normal provided
+discrete tissue phantom, not a threshold mask. Mindboggle's selected native labels
+are manual DKT31 cortex, not a tissue-segmentation standard. Explicit selected
+fetches use verified official forms/ranges and preserve raw label IDs, metadata,
+license/source attribution and SHA256. The unavoidable NKI cohort transport is
+separate from the one-subject retained subset. See MILESTONE10_DATA_PROVENANCE.md.

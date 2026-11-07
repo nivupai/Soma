@@ -1,0 +1,40 @@
+mode: surfaces
+seed: 42
+reference_root: data/raw/references
+brainweb_alias: t1_icbm_normal_1mm_pn0_rf0
+brainweb_truth: phantom_1.0mm_normal_crisp
+mindboggle_subject: NKI-RS-22-11
+surface_tolerances_mm:
+- 1.0
+- 2.0
+voxel_spacing_mm:
+- 4.0
+- 2.0
+- 1.0
+source_spacing_m:
+- 0.02
+- 0.015
+- 0.01
+lambda2:
+- 0.01
+- 0.1111111111111111
+- 1.0
+monte_carlo: 20
+source_moment_Am: 1.0e-08
+offgrid_tolerance_m: 0.0005
+true_positions_m:
+- - 0.0183
+  - 0.0091
+  - 0.0527
+- - -0.0231
+  - 0.0173
+  - 0.0309
+- - 0.0117
+  - -0.0131
+  - 0.0153
+max_intersection_faces: 20000
+repair_max_vertex_m: 0.00025
+repair_max_area_fraction: 0.01
+repair_max_hole_perimeter_m: 0.02
+repair_max_hole_area_m2: 2.0e-05
+realistic_BEM: true

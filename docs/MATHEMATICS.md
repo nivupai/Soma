@@ -302,3 +302,21 @@ points. Nominal 95% ellipsoid coverage uses chi-square(3), assessed over indepen
 simulations with a Wilson interval. Factor interactions are paired differences of
 differences, including a three-way contrast, not an exact additive decomposition
 of nonlinear metrics. See MODEL_RELIABILITY_PROTOCOL.md for distributions and scope.
+
+## Milestone 10 overlap, topology and continuous sources
+
+Dice=2TP/(2TP+FP+FN), Jaccard=TP/(TP+FP+FN). Physical region volume is count×|det A|.
+An exposed voxel face has area ||aᵢ×aⱼ||, not one voxel unit. Boundary precision,
+recall and surface Dice use those physical areas at declared mm tolerances.
+Weighted symmetric distances and pooled HD95 retain their finite-surfel definition.
+Absence has explicit undefined cases rather than a fabricated perfect score.
+
+For a validated closed connected orientable surface χ=V−E+F=2−2g; orientability
+constraints and eligibility are checked before evaluating genus. Algebraic signed
+volume is distinct from geometrically validated enclosed volume.
+
+Continuous truth y=L(r_true)q+ε is generated separately from L_grid. A vertex-valued
+peak obeys ||r_peak−r_true||≥minᵢ||rᵢ−r_true||. This is a geometric lower bound, not an
+additive attribution formula. The Tikhonov scale ||L_grid||F/sqrt(rank) and fixed
+lambda policy are reported for every grid. Source moments are not implicitly
+converted into volume-normalized current density as the number of vertices changes.

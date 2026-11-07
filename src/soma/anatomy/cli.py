@@ -151,3 +151,15 @@ def audit_evidence_command(
         result(evidence_study(config, output), output)
     except Exception as exc:
         failure(exc)
+
+
+@app.command("repair-audit")
+def repair_audit_command(
+    config: Path = Path("configs/mesh-repair.yaml"), output: Path = Path("reports/repair")
+) -> None:
+    from soma.benchmarks.imaging_workflows import repair_audit
+
+    try:
+        result(repair_audit(config, output), output)
+    except Exception as exc:
+        failure(exc)

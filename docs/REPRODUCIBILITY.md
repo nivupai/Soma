@@ -307,3 +307,19 @@ Every final report records the source-tree hash in addition to Git revision/dirt
 state, recursive output hashes, wall/CPU time and process high-water RSS. See the
 Milestone 9 receipt and run script. Reports and large public assets remain ignored;
 committed receipts do not imply the historical report arrays are bundled in Git.
+
+## Independent-reference study (v0.10.0)
+
+The M10 protocol/five YAML files have a pre-analysis checksum receipt. Raw BrainWeb
+and Mindboggle downloads preserve formats, licenses/source documents, selection,
+transport bytes, paths and SHA256. The first invalid empty BrainWeb response is
+quarantined; it was never used in scoring. Explicit header/label casts are recorded.
+Old reports and all baseline tests are checked byte-for-byte against their receipts.
+
+Continuous-source/operator caches bind actual source/sensor coordinates, physical
+conductor parameters, transforms, code and MNE/NumPy/SciPy versions. Returned native
+source identities are checked. Common seed streams pair all source/grid/solver/
+lambda comparisons. Manifests and supplemental analysis bind exact source/data/code
+hashes; output directories are exclusive. Report assumptions, cache state and
+process RSS scope when reproducing timings. Data licenses and transport containers
+are not a promise that the whole reference distribution is bundled with the code.

@@ -249,3 +249,17 @@ factorial simulations; `plots` saves headless figures with numeric companions.
 The old M6/M8 inverse and surface APIs remain unchanged. No full dense cortical K
 or new segmentation backend is introduced. Source audit commands require cached
 assets; the historical inverse audit additionally requires the M8 arrays.
+
+## v0.10.0 independent benchmark layer
+
+`datasets.registry.REFERENCE_REGISTRY` extends factual discovery without inventing
+EEG sample rates for MRI. `datasets.references` implements official selected/range
+fetching, verified MINC/NIfTI conversion and original cortical VTK ingestion.
+`benchmarks.segmentation` wraps existing Volume with identity/ontology contracts,
+physical surfel metrics and the limited unsupervised baseline. `topology` and
+`surfaces` extend existing Mesh/QC with adjacency/orientability, conservative repair
+and analytic references. `offgrid` and `source_workflows` separate continuous-dipole
+truth from reconstruction grids, using established MNE forwards and existing
+inverse machinery. Existing data models, APIs and commands remain operational.
+The new imaging/anatomy/source CLI methods are additive. No grid interpolation is
+misrepresented as independent forward physics and no repaired mesh certifies anatomy.

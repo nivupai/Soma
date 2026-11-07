@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-11-07T22:11:20.406441+00:00",
+  "baseline_revision": "144dcf7",
+  "experiments_performed": false,
+  "files_sha256": {
+    "docs/MILESTONE10_PROTOCOL.md": "766dea3c3163a66ed617e4f0b9f540e9d4354b8db0337bc614339f9841160bb0",
+    "configs/segmentation-benchmark.yaml": "ac06bdbb22ba262f483581f4220164096c66e6556690cef0460a6f57f02d19ce",
+    "configs/surface-benchmark.yaml": "7129a514c8c71b807f174b5578c0f28a7908920fa4764584c8b856984ea7805c",
+    "configs/mesh-repair.yaml": "aa6a92f4144b8e3f1d33ea11360a84f962ce6ff0a2ffdff69d0b736c185a0595",
+    "configs/offgrid.yaml": "adb8920de6247e61134e3545714cd23459edcdda711ffbaa8ad86edb128e3471",
+    "configs/grid-convergence.yaml": "3977412c4297de10278c6c5d5b7804c6c6fb34cc5c253cf6b764497a14cfdc4a"
+  }
+}

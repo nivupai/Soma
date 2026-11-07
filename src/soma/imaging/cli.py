@@ -214,3 +214,71 @@ def benchmark_command(
         _done(benchmark(input, output), output)
     except Exception as exc:
         _fail(exc)
+
+
+references = typer.Typer(help="Official imaging references; downloads are explicit")
+app.add_typer(references, name="references")
+
+
+@references.command("list")
+def reference_list() -> None:
+    """List reference types without network access."""
+    from dataclasses import asdict
+
+    from soma.datasets.registry import REFERENCE_REGISTRY
+
+    typer.echo(
+        json.dumps({name: asdict(item) for name, item in REFERENCE_REGISTRY.items()}, indent=2)
+    )
+
+
+@references.command("discover")
+def reference_discover(fetch: bool = False) -> None:
+    from soma.datasets.references import discover
+
+    try:
+        typer.echo(json.dumps(discover(fetch=fetch), indent=2))
+    except Exception as exc:
+        _fail(exc)
+
+
+@references.command("fetch")
+def reference_fetch(dataset: str = "brainweb") -> None:
+    """Explicit frozen BrainWeb or selected NKI-RS-22-11 download; never entire collection."""
+    from soma.datasets.references import fetch_brainweb, fetch_mindboggle
+
+    try:
+        if dataset == "brainweb":
+            value = fetch_brainweb()
+        elif dataset == "mindboggle-101":
+            value = fetch_mindboggle()
+        else:
+            raise ValueError("Supported references: brainweb, mindboggle-101")
+        typer.echo(json.dumps(value))
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("benchmark-segmentation")
+def benchmark_segmentation(
+    config: Path = Path("configs/segmentation-benchmark.yaml"),
+    output: Path = Path("reports/segmentation"),
+) -> None:
+    from soma.benchmarks.imaging_workflows import segmentation_benchmark
+
+    try:
+        _done(segmentation_benchmark(config, output), output)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("benchmark-surfaces")
+def benchmark_surfaces(
+    config: Path = Path("configs/surface-benchmark.yaml"), output: Path = Path("reports/surfaces")
+) -> None:
+    from soma.benchmarks.imaging_workflows import surface_benchmark
+
+    try:
+        _done(surface_benchmark(config, output), output)
+    except Exception as exc:
+        _fail(exc)

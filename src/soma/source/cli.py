@@ -224,3 +224,28 @@ def uncertainty_study_command(
         _echo_result(uncertainty_study(config, output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("offgrid")
+def offgrid_command(
+    config: Path = Path("configs/offgrid.yaml"), output: Path = Path("reports/offgrid")
+) -> None:
+    from soma.benchmarks.source_workflows import source_benchmark
+
+    try:
+        _echo_result(source_benchmark(config, output), output)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("grid-convergence")
+def grid_convergence_command(
+    config: Path = Path("configs/grid-convergence.yaml"),
+    output: Path = Path("reports/grid-convergence"),
+) -> None:
+    from soma.benchmarks.source_workflows import source_benchmark
+
+    try:
+        _echo_result(source_benchmark(config, output, grid_only=True), output)
+    except Exception as exc:
+        _fail(exc)

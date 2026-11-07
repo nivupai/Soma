@@ -250,3 +250,15 @@ not invented reference Dice values. Exact source-to-triangle clearance differs f
 `mindist` setting; the additional finding is documented without altering M8 sources.
 The original SPM foreground rejection is preserved. See ANATOMICAL_EVIDENCE.md and
 MODEL_RELIABILITY_ADDITIONAL_FINDINGS.md.
+
+## Milestone 10 external references
+
+Actual original-normal BrainWeb MINC and discrete tissue codes were validated;
+provided class counts match exactly. A limited unsupervised baseline is scored
+without a reference ROI. Actual NKI-RS-22-11 native T1/manual DKT31 and separate
+publisher classifier predictions cover 62 cortical labels, with exact explicit
+world-grid reindexing, not fitted registration. Raw float-stored manual label IDs
+are verified integral before conversion. Manual cortical labels do not validate
+CSF/gray/white tissue or conductor boundaries. Original VTK coordinates remain
+unmapped where their volume chain is unverified. See SEGMENTATION_BENCHMARKS.md,
+SURFACE_TOPOLOGY_VALIDATION.md and MILESTONE10_DATA_PROVENANCE.md.

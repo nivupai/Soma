@@ -712,3 +712,41 @@ See the [verification receipt](../experiments/milestone9/verification.json),
 [scientific findings](MILESTONE9_RESULTS.md). The full suite includes unchanged
 M6–8 source/geometry/integration regressions. No independent anatomical/clinical
 certification, population guarantee, remote push or Milestone 10 implementation.
+
+
+## Milestone 10 — independent references and continuous sources
+
+Baseline `144dcf7` passed all 495 tests before implementation. Final Soma 0.10.0
+passes **541 tests**, including 15 explicitly enabled integration cases, in
+**69.31 s** (60 warnings). All 39 original test files are byte-for-byte unchanged;
+46 tests were added. Ruff, formatting, strict mypy (137 modules), and `pip check`
+pass. Source and installed package metadata both report 0.10.0.
+
+All five benchmark commands completed under `reports/milestone10-validated`.
+The saved source-tree fingerprint agrees across their manifests. Verification
+checked **99 output hashes**, **1,497 NPZ arrays** without pickle/object arrays or
+nonfinite numeric values, and **15 scientific figures**, which were visually
+inspected. Original 63 M9 report files and the six frozen protocol/config files
+retain their recorded hashes. The supplemental paired interaction analysis binds
+its own code and input hashes separately.
+
+| Workflow | Wall time | Peak process RSS |
+| --- | ---: | ---: |
+| segmentation | 53.57 s | 675.5 MiB |
+| surfaces | 20.64 s | 443.2 MiB |
+| repair | 10.02 s | 235.5 MiB |
+| offgrid, including conditional participant BEM | 4.93 s | 744.7 MiB |
+| grid convergence | 0.62 s | 217.9 MiB |
+
+These are the executed local runs, with cache state and stage CPU timings in the
+manifests. RSS is process high-water including libraries, not incremental memory.
+Downloading and initial cache construction are excluded from these workflow times.
+Reference files and the selected Mindboggle cohort transport have recorded SHA256
+checksums. No large data or generated report directory is committed.
+
+See the [verification receipt](../experiments/milestone10/verification.json),
+[frozen protocol](MILESTONE10_PROTOCOL.md), [results](MILESTONE10_RESULTS.md), and
+[acquisition clarifications](MILESTONE10_DATA_PROVENANCE.md). Favorable cortical
+metrics do not certify tissue/skull anatomy; large unchecked meshes retain
+unassessed intersection status, and participant anatomical BEM readiness remains
+INDETERMINATE. No remote push or Milestone 11 implementation is included.

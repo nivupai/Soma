@@ -36,3 +36,32 @@ REGISTRY = {
         load_recording,
     )
 }
+
+
+# Imaging references have no EEG sample rate or channel/run contract. Extend the
+# registry with a separate typed collection rather than inventing those fields.
+@dataclass(frozen=True)
+class ReferenceDataset:
+    identifier: str
+    modality: str
+    source: str
+    reference: str
+    license: str
+
+
+REFERENCE_REGISTRY = {
+    "brainweb": ReferenceDataset(
+        "brainweb",
+        "simulated MRI",
+        "https://brainweb.bic.mni.mcgill.ca/",
+        "provided discrete tissue labels / fuzzy memberships",
+        "official citation request; record exact downloaded terms",
+    ),
+    "mindboggle-101": ReferenceDataset(
+        "mindboggle-101",
+        "T1 MRI",
+        "https://mindboggle.info/data.html",
+        "manual DKT cortical parcellation",
+        "CC BY 4.0 current author release; separate assets have separate terms",
+    ),
+}

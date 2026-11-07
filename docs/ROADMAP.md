@@ -64,3 +64,9 @@ unit-aware inverse comparisons, anatomical evidence and paired uncertainty
 attribution. It explains severe historical attenuation rather than promising to
 fix an underdetermined estimator. Proposed Milestone 10 would require independent
 anatomical references and a separate prospective study; it was not started.
+
+Milestone 10 implements independent provided MRI references, physical overlap/
+boundary metrics, topology and conservative repair, analytic convergence and
+continuous off-grid source studies. Anatomical/clinical claims remain constrained.
+A proposed Milestone 11 would add independent human tissue/conductor references,
+multi-subject holdouts and justified frame/source-prior studies; it was not started.

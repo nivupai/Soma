@@ -3,7 +3,7 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.9.0 includes template and participant-matched EEG source modeling,
+v0.10.0 includes template and participant-matched EEG source modeling,
 structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
 experiments. Participant results remain conditional research computations:
 independent anatomical readiness is INDETERMINATE. See
@@ -302,3 +302,17 @@ The new source audit/calibration commands explain the historical current
 attenuation through W L, compare signed MNE currents with separately labeled
 normalized statistics, and quantify paired uncertainty interactions. Anatomical
 evidence remains INDETERMINATE. See [Milestone 9 results](docs/MILESTONE9_RESULTS.md).
+
+## Independent references and off-grid validation (v0.10.0)
+
+```bash
+soma mri references list
+soma mri references fetch --dataset brainweb
+soma mri references fetch --dataset mindboggle-101  # selected subject, cohort transport
+sh experiments/milestone10/run.sh reports/my-m10-run
+```
+
+The methods study compares actual provided tissue/manual cortical references,
+checks topology and conservative repair, and evaluates continuous dipoles against
+separate reconstruction grids. Downloads are explicit; cortical labels are not
+skull/scalp truth. See [Milestone 10 results](docs/MILESTONE10_RESULTS.md).

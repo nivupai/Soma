@@ -202,3 +202,14 @@ statistic/(A m) units; no physical amplitude/residual comparison is made for the
 Fixed/loose/free vectors retain their basis, channel and source identities.
 See INVERSE_CALIBRATION.md for regularization/depth, independent exact oracles,
 selected PSF/CTF operations and the unfavorable recovery retained in full.
+
+## Milestone 10 continuous-source evaluation
+
+The new benchmark forward evaluates explicit MRI dipoles independently of each
+reconstruction grid, retaining source moment/orientation and conductor identity.
+Same-grid control, shared-conductor off-grid, distinct discretization and physical
+model mismatch are separate classes. Shared isotropic spherical assumptions and
+solver-specific scalp projection remain. Participant BEM uses actual independent
+continuous-location forward evaluations with the unchanged MNE fixed/free inverse;
+its anatomical readiness is still INDETERMINATE. See OFFGRID_SOURCE_MODELING.md
+and DISCRETIZATION_ERROR.md for quantization bounds, prior scaling and limitations.
