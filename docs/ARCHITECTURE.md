@@ -171,3 +171,25 @@ candidate records retain search errors. No pickle model loading is used. New
 commands are grouped under `soma decode`. Trials and label-independent features
 may be reused; fitted CSP, burst thresholds, scalers, tangent points and class
 means are rebuilt for every permitted training partition.
+
+
+## v0.6.0 source-modeling boundary
+
+`geometry/` owns explicit metre-valued frames, rigid/affine transformations,
+electrodes and source IDs. `source/template.py` owns opt-in fsaverage asset
+fetching and checksummed geometry; `forward.py` delegates physical BEM fields to
+MNE and binds their channel/source/orientation identities. `noise.py` owns
+rank-aware projector/covariance contracts. `inverse.py` separates the independent
+small SVD reference from MNE's full cortical inverse. `resolution.py` exposes
+bounded PSF/CTF products and mesh geodesics. `source/power.py` batches genuine
+NeuroDSP spectra. Source experiment modules orchestrate fixed simulations,
+resolution and trial-wise real reconstruction; visualization has no solver role.
+
+The native anatomical forward remains free to preserve depth-prior information;
+the primary inverse is fixed signed normal. Free vector kernels rotate Cartesian
+MNE output back into the stored surface basis. Source IDs are hemisphere/vertex
+pairs, not inferred solely from matrix dimensions. Physical caches have atomic
+completion receipts and checksums; scientific reports have code/config/version
+and result hashes. Future participant anatomy adapters must explicitly supply
+participant MRI transforms and validated geometry, without reusing template
+coordinates as participant anatomy. See SOURCE_MODELING_METHODS.md.

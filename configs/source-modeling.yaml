@@ -1,0 +1,65 @@
+protocol_version: 1
+baseline_revision: 6bc9999
+study_role: template_based_methodological_demonstration
+subjects: [1]
+runs: [4, 8, 12]
+anatomy:
+  template: fsaverage
+  subjects_dir: data/anatomy
+  spacing: ico3
+  surface: white
+  add_dist: false
+  bem_filename: fsaverage-5120-5120-5120-bem-sol.fif
+  transform: fsaverage
+  montage: fsaverage_1005
+  mindist_mm: 5.0
+  n_jobs: 1
+orientation: fixed
+use_cps: false
+reference: average_all_validated_64_EEG
+preprocessing:
+  reference: average
+  highpass_hz: 1.0
+  lowpass_hz: 40.0
+  order: 4
+  phase: zero
+quality:
+  channel_ptp_v: 0.0005
+  trial_ptp_v: 0.0003
+  excursion_v: 0.00015
+  flat_std_v: 0.00000005
+epoch: [1.0, 3.0]
+noise:
+  source: accepted_same_run_T0_rest_epochs
+  method: shrunk
+  shrinkage: 0.1
+  rank_policy: average_reference_retained_subspace
+  measurement_noise_claim: false
+inverse:
+  methods: [MNE, dSPM]
+  depth: 0.8
+  lambda2: 0.1111111111111111
+  nave: 1
+  orientation: fixed_normal
+  evoked_comparison_nave: 1
+source_power:
+  bands: {mu: [8.0, 13.0], beta: [13.0, 30.0]}
+  welch_segment_s: 1.0
+  welch_overlap_fraction: 0.5
+  primary: mean_of_individual_trial_vertex_powers
+  roi: template_precentral_labels_if_available
+  roi_aggregation: mean_of_vertex_powers_not_power_of_mean_waveform
+  map_contrast: within_run_log_ratio_of_condition_mean_powers_equal_run_mean
+  minimum_rest_power: {MNE: 1.0e-40, dSPM: 1.0e-20}
+resolution:
+  lambda2_grid: [0.0001, 0.01, 0.1111111111111111, 1.0, 10.0]
+  selected_columns: 12
+  distance_metrics: [euclidean_head_m, within_hemisphere_white_mesh_geodesic_m]
+  prohibit_full_cortical_dense_resolution: true
+  signed_linear_kernel_required: true
+interpretation:
+  anatomy: template_not_individual
+  sensor_positions: template_not_digitized
+  localization_truth_claim: false
+  source_maps: exploratory_no_vertexwise_population_inference
+seed: 20261107

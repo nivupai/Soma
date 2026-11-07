@@ -579,3 +579,21 @@ remain the validated suite, with all 256 original files byte-identical. Only
 Python 3.12.2/macOS ARM64 was executed locally; configured remote CI is not claimed.
 The statistical and physiological limitations in `DECODING_METHODS.md` and
 `MILESTONE5_RESULTS.md` remain part of the findings.
+
+
+## v0.6.0 source validation
+
+The unchanged v0.5.0 baseline passed all 312 tests before edits. The source suite
+adds analytical/numerical geometry, SVD, rank, covariance, whitening, orientation,
+resolution, mesh-geodesic, phase-cancellation and CLI tests. Explicit integration
+compares fresh and cached actual fsaverage BEM fields, detects cache corruption,
+checks fixed/free MNE inverse kernels and covariance/projector boundaries, and
+compares Soma lead fields with MNE's own noiseless simulation. MNE's simulator
+removes input projections: the test first checks unreferenced fields and then
+explicitly adds average reference. Fifty source tests supplement the baseline.
+
+`pytest`, complete cached integration, Ruff lint/format, strict mypy, dependency
+checks, all source CLI workflows, 280 cortical simulations, a fresh forward
+benchmark and the subject-1 trial-power demonstration are recorded in
+SOURCE_MODELING_VALIDATION.md. Ordinary CI remains offline, including the small
+analytical-sphere conductivity control; template tests are integration marked.

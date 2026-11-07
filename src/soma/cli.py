@@ -11,6 +11,7 @@ from soma.datasets.eegbci import fetch, load_recording
 from soma.datasets.registry import REGISTRY
 from soma.eeg.analysis import analyze_recording
 from soma.signal.experiments import synthetic_spectrum
+from soma.source.cli import app as source_app
 
 if TYPE_CHECKING:
     from soma.eeg.motor_imagery import MotorImageryConfig
@@ -19,6 +20,7 @@ app = typer.Typer(help="Soma scientific computing foundation", no_args_is_help=T
 datasets = typer.Typer(help="List metadata or fetch explicitly selected recordings")
 eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
+app.add_typer(source_app, name="source")
 app.add_typer(datasets, name="datasets")
 app.add_typer(eeg, name="eeg")
 app.add_typer(experiments, name="experiments")

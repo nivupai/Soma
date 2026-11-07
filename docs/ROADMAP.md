@@ -27,9 +27,19 @@ be presented as an independent confirmatory sample again.
 
 Optional ICA remains unimplemented and would require reviewed assumptions and
 provenance. Classical decoding now has leakage-aware subject/run evaluation,
-without claims of clinical or online reliability. Source localization still
-requires measured electrode positions, anatomical coregistration, reference-aware forward models,
-conductivity assumptions, inverse regularization and simulation checks.
+without claims of clinical or online reliability. Individualized source localization still requires measured electrodes and anatomical
+coregistration. Template forward/inverse operators, conductivity assumptions,
+regularization and simulation checks are now implemented in Milestone 6.
 Structural MRI/fMRI/registration require their own validated affine, coordinate,
 statistical and interpolation contracts. Template sensor metadata is not a
-substitute for these. No MRI, source model, deep learning or dashboard was added.
+substitute for these. No participant MRI pipeline, deep learning or dashboard was added.
+
+
+Milestone 6 is implemented: frame-safe geometry, opt-in fsaverage anatomy,
+MNE EEG BEM forwards, rank-aware noise covariance/whitening, minimum norm/dSPM,
+bounded resolution analysis, cortical simulations, trial-wise exploratory
+motor-imagery power and headless figures. See SOURCE_MODELING_VALIDATION.md for
+the successful workflows and unfavorable recovery/leakage results. Individual
+MRI registration, segmentation, FreeSurfer reconstruction, FEM, measured sensor
+coregistration and independent anatomical validation remain future work.
+Milestone 7 has not been started.

@@ -374,3 +374,17 @@ null procedures and failure semantics. Source patterns remain sensor transforms
 with template locations. Decoding performance neither proves anatomical origin
 nor establishes clinical utility, causal motor representation or online BCI
 performance. These retrospective zero-phase epochs are not a causal online system.
+
+
+## Milestone 6 source methods
+
+The sealed SOURCE_MODELING_PROTOCOL.md fixes subject 1 runs 4/8/12, ico3 fsaverage
+white sources, a three-shell BEM, fsaverage_1005 template sensors, average EEG
+reference, signed normals, depth 0.8, λ²=1/9, and rest-background shrinkage 0.1.
+Existing EDF, event, filtering, QC and [1,3)-s epoch APIs are reused unchanged.
+MNE minimum norm and dSPM are applied trial by trial. NeuroDSP vertex powers
+precede condition/run and template-ROI averaging. The evoked comparison holds
+nave=1 fixed to isolate averaging from inverse changes. No source-map population
+inference or anatomical truth claim is made. See SOURCE_MODELING_METHODS.md for
+units, covariance dependence, inverse assumptions, synthetic controls and the
+participant-MRI adapter boundary; SOURCE_MODELING_VALIDATION.md records outcomes.

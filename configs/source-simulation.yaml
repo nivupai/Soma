@@ -1,0 +1,20 @@
+protocol: configs/source-modeling.yaml
+seed: 20261107
+fs_hz: 160.0
+duration_s: 4.0
+current_amplitude_Am: 1.0e-8
+frequency_hz: 10.0
+scenarios: [focal, separated, correlated, depth, amplitude_modulated, bursts, forward_mismatch]
+snr_db: [-10.0, 0.0, 10.0, 20.0]
+repetitions: 10
+noise_covariance_samples: 16000
+noise_covariance_seed_offset: 100000
+noise_correlation: 0.35
+primary_lambda2: 0.1111111111111111
+lambda2_grid: [0.0001, 0.01, 0.1111111111111111, 1.0, 10.0]
+primary_depth: 0.8
+sensitivity_depth: [0.0, 0.8]
+relative_forward_perturbation: 0.05
+mismatch_role: abstract_synthetic_operator_perturbation_not_conductivity_recompute
+selection_rule: fixed_before_simulation_no_truth_driven_tuning
+metrics: [relative_current_error, forward_residual, peak_euclidean_error_m, spatial_dispersion_m, amplitude_bias, timecourse_correlation]

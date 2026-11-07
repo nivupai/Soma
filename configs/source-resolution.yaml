@@ -1,0 +1,10 @@
+protocol: configs/source-modeling.yaml
+lambda2_grid: [0.0001, 0.01, 0.1111111111111111, 1.0, 10.0]
+selected_columns: 12
+method: MNE
+noise_std_v: 1.0e-6
+noise_correlation: 0.35
+depth: 0.8
+orientation: fixed
+geodesic: true
+full_dense_matrix: false

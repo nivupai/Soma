@@ -227,3 +227,23 @@ test classes. ROC-AUC uses continuous margins; proper Brier/log scores require
 actual classifier probabilities. Participant/run grouping, nested selection and
 matched subject/run contrasts define independent evaluation units; thousands of
 correlated windows never substitute for participant N.
+
+
+## EEG source operators (v0.6.0)
+
+For metre-valued geometry, y[V] = L[V/(A m)] j[A m] + e[V]. Average reference
+uses P = I−11ᵀ/C on data, lead field and covariance, with one removed direction.
+A retained-subspace whitener Q satisfies Q C Qᵀ = I. The independent reference
+minimizes ||Q(Lj−y)||²+λ²||j||² using SVD filters s/(s²+λ²), with a rank-aware
+pseudoinverse at zero regularization. MNE's anatomical source prior/depth and
+whitened scaling are distinct from this toy dimensional objective. dSPM is
+noise normalized and dimensionless.
+
+For signed, fixed linear W, K = W L has PSF columns and CTF rows. Selected
+products avoid a full cortical K. Squared-amplitude spatial dispersion and
+leakage complement peak error. Euclidean head distance differs from white-mesh
+edge geodesic distance; no cortical geodesic is defined between hemispheres.
+Vector magnitudes are nonlinear and do not share a fixed W L interpretation.
+Mean power over trials differs from power of the mean waveform; opposite-phase
+10-Hz trials demonstrate the distinction analytically. Full derivations and
+numerical interpretations are in SOURCE_MODELING_METHODS.md.

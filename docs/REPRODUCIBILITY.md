@@ -241,3 +241,27 @@ summaries derived from per-run data, and `figure_captions.md` gives sample count
 and uncertainty for the saved figures. `environment.json` includes numerical
 software and thread-pool information. Raw EDFs, caches and bulky reports remain
 Git-ignored; compact results and sealed configurations are committed.
+
+
+## Source-modeling reproduction
+
+The source protocol receipt binds the original Markdown and YAML SHA256 before
+real analysis. `source-*.sha256` seal canonical JSON configurations. Source
+commands require explicit asset fetching; tests never fetch fsaverage. Use the
+README source commands with a new output directory and bounded BLAS threads.
+`geometry.npz` supplies source vertices and head coordinates for all figure arrays;
+`forward.json` binds montage, transforms, BEM conductivities and anatomical hashes.
+Native FIF/source caches have staged publication and checksum completion receipts.
+Result manifests bind the full source tree, parameters, seeds, libraries, Git
+revision/dirty state and file checksums. Real results retain raw EDF hashes,
+trial/QC logs, rest covariance FIFs, trial-wise vertex powers, ROI features,
+equal-run maps and units. Synthetic results retain every case's truth metadata,
+training/evaluation seed distinction, operators and numerical recovery tables.
+Selected resolution arrays retain PSFs, CTFs and separate geodesic distances.
+
+Run `pytest` for offline CI, and `pytest -o addopts=''` for explicitly cached
+integration tests. No anatomy/raw data or large result arrays are committed.
+The v0.6.0 implementation was exercised before its feature commit; manifests
+honestly record the baseline Git revision plus a dirty tree and exact source
+hash. A later commit does not retroactively alter those receipts. Local report
+paths and measured performance are listed in SOURCE_MODELING_VALIDATION.md.

@@ -3,7 +3,9 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-No MRI or source localization implementations are included.
+v0.6.0 adds frame-safe geometry, template EEG BEM forward modeling, rank-aware
+whitening, MNE/dSPM source reconstruction, and source-resolution validation.
+Template maps are exploratory; participant MRI processing is not implemented.
 
 Python 3.11–3.12:
 
@@ -19,7 +21,8 @@ soma eeg inspect --subject 1 --run 4 --data-dir data/raw
 soma eeg analyze --subject 1 --run 4 --data-dir data/raw --output reports/eeg-s001-r04
 ```
 
-Downloads require `datasets fetch` or the explicit `eeg replicate --fetch` flag. Repeat `--subjects` and `--runs` to
+EEG downloads require `datasets fetch` or the explicit `eeg replicate --fetch` flag.
+Anatomy downloads require `source inspect-template --fetch`. Repeat `--subjects` and `--runs` to
 select multiple recordings. `SOMA_DATA_DIR` sets the raw data root. Output
 directories must be new except resumable replication/calibration with `--resume`. Raw EDF and
 reports are excluded from Git. `requirements-resolved.txt` captures the verified
@@ -194,3 +197,35 @@ receipts must describe actual successful checks for the current code/environment
 the original receipt, command logs and generation script are preserved under
 `configs/decoding-verification.json` and `reports/m5-verification`. A deterministic
 rerun of the completed held-out sample is not another prospective validation.
+
+
+## Milestone 6: template EEG source modeling
+
+Read the sealed [source protocol](docs/SOURCE_MODELING_PROTOCOL.md),
+[methods](docs/SOURCE_MODELING_METHODS.md), and
+[measured validation](docs/SOURCE_MODELING_VALIDATION.md).
+
+```bash
+export MPLBACKEND=Agg
+export OPENBLAS_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+soma source inspect-template --fetch  # explicit large fsaverage download
+soma datasets fetch eegmmidb --subjects 1 --runs 4 --runs 8 --runs 12
+soma source inspect-template
+soma source forward --subject 1 --run 4 --output reports/my-source-forward
+soma source simulate --config configs/source-simulation.yaml --output reports/my-source-simulation
+soma source inverse --subject 1 --runs 4 --runs 8 --runs 12 --output reports/my-source-inverse
+soma source resolution --config configs/source-resolution.yaml --output reports/my-source-resolution
+soma source benchmark --output reports/my-source-benchmark
+```
+
+The verified demonstration is in `reports/milestone6-verified/` (local, excluded
+from Git); the standalone fresh-forward benchmark is in
+`reports/milestone6-final/benchmark/`. The fixed-normal forward is 64×1,284,
+rank 63. Fifty new source tests supplement the 312 unchanged baseline tests.
+Ordinary CI is offline; cached-template tests require an explicit integration run.
+
+All real maps use individual-trial source power, with an evoked comparison using
+the same inverse kernel. MNE currents and dimensionless dSPM estimates retain
+separate units. Anatomical templates, normalized channel labels, and good numerical
+conditioning do not establish individualized motor-cortex localization.
