@@ -491,9 +491,17 @@ configuration estimates count against sign agreement and trigger an explicit
 incomplete-evidence flag. These corrections do not change the frozen primary
 analysis or its successful numerical backend.
 
-The complete suite has **255 tests: 251 offline plus 4 cached-data integration**,
-including all 205 baseline tests unchanged and 50 new tests. The exact source
+The complete suite has **256 tests: 252 offline plus 4 cached-data integration**,
+including all 205 baseline tests unchanged and 51 new tests. The exact source
 used for the completed development sensitivity sweep is archived locally in
 `reports/m4-execution-source/source.zip` with a checksum and software digest;
 this makes its dirty-tree provenance recoverable. Final clean-commit replication
 and audit reports are separately generated, preserving development generations.
+
+A final missing-outcome audit added an independent exact-sign-pattern regression:
+when only one primary channel is available, Holm still retains the planned
+family of two (the unavailable comparison is conservatively p=1 internally).
+Both primary channels were available in the completed cohort, so this follow-up
+correction leaves all reported estimates and adjusted p-values unchanged. Main
+clean scientific reports identify feature commit `3ac9715`; the correction and
+its extra test are recorded in a subsequent local fix commit.

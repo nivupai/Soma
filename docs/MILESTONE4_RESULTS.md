@@ -201,3 +201,12 @@ After the empty-cohort edge fix, final committed-code sensitivity artifacts
 recompute robustness and rendering from its checksummed saved tables, preserving
 the original scientific provenance. Fresh replication, calibration and reference
 audit outputs under `reports/milestone4-committed/` carry the final revision.
+
+Post-feature-commit clean regeneration produced byte-identical replication
+features, subject contrasts and population intervals; the calibration summary
+and reference-accounting table were also byte-identical. The clean repeat took
+103.02 s for replication and 64.00 s for calibration while those workflows ran
+concurrently. Their manifests identify clean feature revision `3ac9715`.
+A subsequent missing-outcome Holm correction retains the planned two-test family
+if one primary outcome is unavailable; both were observed here, and recomputing
+all inference confirms unchanged estimates, intervals and adjusted p-values.

@@ -265,3 +265,30 @@ def test_reference_audit_rejects_nonimagery_selection(tmp_path):
 
     with pytest.raises(ValueError, match="unilateral"):
         audit_reference(tmp_path, tmp_path / "audit", (1,), (1,), plots=False)
+
+
+def test_holm_preserves_two_planned_tests_when_one_channel_unavailable():
+    from soma.experiments.replication import _infer_table
+
+    protocol, _ = load_protocol(Path("configs/replication.yaml"))
+    protocol["inference"]["n_resamples"] = 199
+    subjects = pd.DataFrame(
+        [
+            dict(
+                subject=s,
+                channel=c,
+                band="mu",
+                outcome="log_absolute_power",
+                units="natural_log_ratio",
+                contrast=float(s) if c == "C3" else np.nan,
+            )
+            for s in range(1, 6)
+            for c in ("C3", "C4")
+        ]
+    )
+    table = _infer_table(subjects, protocol)
+    result = table[(table.channel == "C3") & (table.method == "t")].iloc[0]
+    # Five positive independent effects: 2 of 32 exact sign patterns are as extreme.
+    assert result.p_sign_flip == pytest.approx(2 / 32)
+    assert result.p_holm_primary == pytest.approx(4 / 32)
+    assert table[table.channel == "C4"].p_holm_primary.isna().all()

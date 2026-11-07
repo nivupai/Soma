@@ -180,9 +180,12 @@ def _infer_table(subjects: pd.DataFrame, protocol: dict[str, Any]) -> pd.DataFra
     population["p_holm_primary"] = np.nan
     tested = population.p_sign_flip.notna()
     if tested.any():
-        population.loc[tested, "p_holm_primary"] = holm(
-            population.loc[tested, "p_sign_flip"].to_numpy(float)
-        )
+        observed = population.loc[tested, "p_sign_flip"].to_numpy(float)
+        # Unavailable outcomes stay in the prespecified family; they cannot
+        # make the remaining comparison less conservative.
+        unavailable = len(protocol["primary"]["channels"]) - len(observed)
+        family = np.r_[observed, np.ones(unavailable)]
+        population.loc[tested, "p_holm_primary"] = holm(family)[: len(observed)]
     return population
 
 
