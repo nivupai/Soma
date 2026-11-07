@@ -1,0 +1,340 @@
+protocol:
+  protocol_version: 1
+  name: soma-m5-decoding-development
+  baseline_revision: e7624c0
+  development_subjects:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 35
+  heldout_subjects:
+  - 36
+  - 37
+  - 38
+  - 39
+  - 40
+  - 41
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+  - 47
+  - 48
+  - 49
+  - 50
+  - 51
+  - 52
+  - 53
+  - 54
+  - 55
+  - 56
+  - 57
+  - 58
+  - 59
+  - 60
+  - 61
+  - 62
+  - 63
+  - 64
+  - 65
+  runs:
+  - 4
+  - 8
+  - 12
+  channels:
+  - FC3
+  - FCz
+  - FC4
+  - C3
+  - Cz
+  - C4
+  - CP3
+  - CPz
+  - CP4
+  preprocessing:
+    reference: average
+    highpass_hz: 1.0
+    lowpass_hz: 40.0
+    order: 4
+    phase: zero
+  quality:
+    channel_ptp_v: 0.0005
+    trial_ptp_v: 0.0003
+    excursion_v: 0.00015
+    flat_std_v: 5.0e-08
+  epoch:
+  - 1.0
+  - 3.0
+  context:
+  - 0.0
+  - 4.0
+  fs_hz: 160.0
+  labels:
+    T1: 0
+    T2: 1
+  positive_class: right_hand_imagery
+  models:
+  - motor_mu_lr
+  - motor_bands_lda
+  - multiband_lr
+  - burst_lr
+  - csp_lda
+  - covariance_lda
+  - euclidean_mdm
+  - riemann_mdm
+  - tangent_lr
+  search:
+    logistic_C:
+    - 0.1
+    - 1.0
+    csp_components:
+    - 2
+    - 4
+    csp_regularization:
+    - 0.1
+    - 0.3
+  fixed:
+    logistic_C: 1.0
+    csp_components: 4
+    csp_regularization: 0.1
+    covariance_estimator: oas
+    covariance_relative_floor: 1.0e-06
+    covariance_trace_normalize: false
+    burst_low_multiplier: 1.0
+    burst_high_multiplier: 2.0
+    burst_min_cycles: 3.0
+    burst_filter_cycles: 3.0
+  outer_subject_folds: 5
+  inner_subject_folds: 3
+  metric: balanced_accuracy
+  primary_comparisons:
+  - - tangent_lr
+    - multiband_lr
+  - - riemann_mdm
+    - euclidean_mdm
+  - - csp_lda
+    - multiband_lr
+  multiple_comparison: Holm_over_three_prespecified_paired_comparisons_per_mode
+  adaptation_models:
+  - multiband_lr
+  - tangent_lr
+  adaptation_trial_counts:
+  - 0
+  - 4
+  - 8
+  adaptation_run: 4
+  adaptation_test_runs:
+  - 8
+  - 12
+  null_models:
+  - multiband_lr
+  - tangent_lr
+  null_repetitions: 19
+  seed: 20261107
+  confidence: 0.95
+  n_resamples: 1999
+initial_protocol_sha256: 11912588d1457a334580eab3fa1093367a762ee94c0157ed6d71cdaa849547bf
+frozen_at_utc: '2026-11-07T05:29:04.732664+00:00'
+software:
+  application: 0.5.0
+  python: 3.12.2
+  machine: arm64
+  byteorder: little
+  libraries:
+    numpy: 2.5.4
+    scipy: 1.18.1
+    mne: 1.13.2
+    neurodsp: 2.3.0
+    pandas: 2.3.3
+    PyYAML: 6.0.3
+  source_digest: 8b737ed92e21614a9b013671
+  decoding_libraries:
+    scikit-learn: 1.9.1
+    pyriemann: '0.12'
+    threadpoolctl: 3.8.0
+development_dataset_fingerprint: 2af27ea74ed1f92e1f9822842af7860c88799a6775473872e9ae854e249dc4f5
+development_manifest_checksums:
+  reports/m5-development-final/within-subject/manifest.json: 922f04c39a11b5df8b855acf4f2a535a274ce5183a30e6c62828fe0942c2a81e
+  reports/m5-development-final/cross-subject/manifest.json: 8e6ee39404bce1c214d480addf62bd83674f1068c2fb39de6bb02562e002005b
+  reports/m5-development-final/adaptation/manifest.json: d2a82b691f61c350abf2955d8a11a7fb180a2a44781dfb3b73480b931d5dbd92
+  reports/m5-development-final/nulls/manifest.json: cf0329b5147383138cf95626d3e163fe7867fa7636f7b1317c83f53294826514
+verification_sha256: 48fa0e4e42be8eb2d994d70b204b714a2d1f6de06a7857f5f003b226bcea03a2
+selection_rule: subject-balanced development CV maximum; first-entry ties
+selected_parameters:
+  motor_mu_lr:
+    classifier__C: 1.0
+  motor_bands_lda: {}
+  multiband_lr:
+    classifier__C: 1.0
+  burst_lr:
+    classifier__C: 0.1
+  csp_lda:
+    csp__n_components: 4
+    csp__reg: 0.1
+  covariance_lda: {}
+  euclidean_mdm: {}
+  riemann_mdm: {}
+  tangent_lr:
+    classifier__C: 0.1
+selection_scores:
+- model: motor_mu_lr
+  candidate: 0
+  params:
+    classifier__C: 0.1
+  mean_subject_balanced_accuracy: 0.5974132102233605
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: motor_mu_lr
+  candidate: 1
+  params:
+    classifier__C: 1.0
+  mean_subject_balanced_accuracy: 0.5991138904954695
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: motor_bands_lda
+  candidate: 0
+  params: {}
+  mean_subject_balanced_accuracy: 0.6058086837974056
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: multiband_lr
+  candidate: 0
+  params:
+    classifier__C: 0.1
+  mean_subject_balanced_accuracy: 0.603157240629045
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: multiband_lr
+  candidate: 1
+  params:
+    classifier__C: 1.0
+  mean_subject_balanced_accuracy: 0.6049657798342009
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: burst_lr
+  candidate: 0
+  params:
+    classifier__C: 0.1
+  mean_subject_balanced_accuracy: 0.5579187666969622
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: burst_lr
+  candidate: 1
+  params:
+    classifier__C: 1.0
+  mean_subject_balanced_accuracy: 0.5532196907102922
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: csp_lda
+  candidate: 0
+  params:
+    csp__n_components: 2
+    csp__reg: 0.1
+  mean_subject_balanced_accuracy: 0.5465095775152166
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: csp_lda
+  candidate: 1
+  params:
+    csp__n_components: 2
+    csp__reg: 0.3
+  mean_subject_balanced_accuracy: 0.5300402792696026
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: csp_lda
+  candidate: 2
+  params:
+    csp__n_components: 4
+    csp__reg: 0.1
+  mean_subject_balanced_accuracy: 0.552096036795285
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: csp_lda
+  candidate: 3
+  params:
+    csp__n_components: 4
+    csp__reg: 0.3
+  mean_subject_balanced_accuracy: 0.543921410669531
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: covariance_lda
+  candidate: 0
+  params: {}
+  mean_subject_balanced_accuracy: 0.5518297116417417
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: euclidean_mdm
+  candidate: 0
+  params: {}
+  mean_subject_balanced_accuracy: 0.4944947189402077
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: riemann_mdm
+  candidate: 0
+  params: {}
+  mean_subject_balanced_accuracy: 0.5176870748299319
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: tangent_lr
+  candidate: 0
+  params:
+    classifier__C: 0.1
+  mean_subject_balanced_accuracy: 0.5704452752761023
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+- model: tangent_lr
+  candidate: 1
+  params:
+    classifier__C: 1.0
+  mean_subject_balanced_accuracy: 0.5702271475391776
+  n_subject_scores: 35
+  errors: []
+  training_membership_sha256: 30c992aa98cfcde9ac565efc9e1bd55df561fa92198f611db31dc586e32b2fe6
+heldout_accessed: false
