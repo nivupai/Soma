@@ -208,3 +208,22 @@ counted as noncoverage. MCSE=sqrt(p(1−p)/R); exact binomial confidence limits
 also appear in saved data and plots. Conditional-success coverage is separately
 labeled. Coverage of the structural clean effect and of the observed-data target
 are distinct in contamination, MNAR and preprocessing-shift scenarios.
+
+
+## Milestone 5 linear decoding and matrix geometry
+
+CSP solves a generalized symmetric eigenproblem between class covariances and
+their composite covariance; log variance along selected filters feeds regularized
+LDA. Shrinkage targets an isotropic covariance before explicit trace-relative
+eigenvalue flooring. Symmetric positive-definite matrices form a curved domain;
+Euclidean and affine-invariant means minimize different distances. Matrix logs
+and exponentials define the intrinsic distance and training-reference tangent
+coordinates, with sqrt(2)-weighted off-diagonals preserving Frobenius geometry.
+Full equations, rank handling, estimator assumptions and limits of affine
+invariance after shrinkage are in `DECODING_METHODS.md`.
+
+Balanced accuracy is (sensitivity_right + specificity_left)/2 and requires both
+test classes. ROC-AUC uses continuous margins; proper Brier/log scores require
+actual classifier probabilities. Participant/run grouping, nested selection and
+matched subject/run contrasts define independent evaluation units; thousands of
+correlated windows never substitute for participant N.

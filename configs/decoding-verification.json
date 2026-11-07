@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "software": {
+    "application": "0.5.0",
+    "python": "3.12.2",
+    "machine": "arm64",
+    "byteorder": "little",
+    "libraries": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mne": "1.13.2",
+      "neurodsp": "2.3.0",
+      "pandas": "2.3.3",
+      "PyYAML": "6.0.3"
+    },
+    "source_digest": "8b737ed92e21614a9b013671",
+    "decoding_libraries": {
+      "scikit-learn": "1.9.1",
+      "pyriemann": "0.12",
+      "threadpoolctl": "3.8.0"
+    }
+  },
+  "timestamp_utc": "2026-11-07T05:25:31.823771+00:00",
+  "test_counts": {
+    "total": 312,
+    "baseline": 256,
+    "new": 56
+  },
+  "baseline_revision": "e7624c0",
+  "all_baseline_test_files_byte_identical": true,
+  "checks": {
+    "pytest": {
+      "command": [
+        ".venv/bin/pytest",
+        "-o",
+        "addopts=",
+        "-q"
+      ],
+      "return_code": 0,
+      "log_sha256": "8712dea5e56035d65bfd07f31698790a3ee6d7c5c5c3f40c91232872da203074"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "return_code": 0,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "return_code": 0,
+      "log_sha256": "08a6f81023ff0ea3c8b53845f1b8c00d66f580c7277f7ca6121dad2281a9c914"
+    },
+    "mypy": {
+      "command": [
+        ".venv/bin/mypy",
+        "src/soma"
+      ],
+      "return_code": 0,
+      "log_sha256": "b0ace9fa65214a0173d654eb85c8e448e9b3ef16afd34ed8ee583a66146336f1"
+    },
+    "dependencies": {
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        ".venv/bin/python"
+      ],
+      "return_code": 0,
+      "log_sha256": "297cc2d5e4a078a37dfaf869e2f327997f244cbb3b5f134d8de32e253b3b41e7"
+    },
+    "cli": {
+      "command": [
+        ".venv/bin/soma",
+        "decode",
+        "--help"
+      ],
+      "return_code": 0,
+      "log_sha256": "bd0396f3cd32ab5f8cdaf2c9e9be59e94b6636d614172ad7f25b53e23ce9e41b"
+    }
+  },
+  "supplemental_diagnostic_manifest_sha256": "206085664c41824dd2993015b57f92df15b3195f41cdc481d7e8db57dfb9174b",
+  "supplemental_diagnostic_status": "partial; shared-trial intersection removes S22 run4, all 12 failed within-subject cells preserved"
+}

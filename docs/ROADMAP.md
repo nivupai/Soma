@@ -13,10 +13,17 @@ and a completed seven-scenario calibration over N=5–100. Small-sample bootstra
 undercoverage and biased-target coverage remain explicit scientific findings.
 See `MILESTONE4_RESULTS.md` for measured outcomes and limitations.
 
-A proposed Milestone 5 would prespecify expanded replication and reviewed artifact
-labels, quantify selection/missingness sensitivity, and independently validate
-any interval-selection decision. It requires a separate user request and has not
-started. No automatic download of the remaining subjects is scheduled.
+Milestone 5 now implements trial-level decoding, spectral/burst baselines, MNE
+CSP, explicit covariance rank/SPD regularization, Euclidean/Riemannian MDM,
+training-reference tangent features, grouped nested evaluation, fixed limited
+adaptation and auditable leakage checks. Development subjects are 1–35;
+prospective subjects 36–65 require a separately frozen, verified configuration.
+See `DECODING_METHODS.md` and `MILESTONE5_RESULTS.md` for the staged research record.
+
+Milestone 6 has not started. A separate request could define independent-cohort
+domain-shift validation, better justified adaptation or probability calibration.
+The existing prospective cohort must not be reused to choose a winner and then
+be presented as an independent confirmatory sample again.
 
 Optional ICA would require reviewed assumptions and provenance. Classical
 motor-imagery decoding would require leakage-safe subject/run evaluation.

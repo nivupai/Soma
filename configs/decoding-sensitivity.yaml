@@ -1,0 +1,14 @@
+study_role: exploratory_development_only_posthoc_diagnostic
+initial_protocol_sha256: 11912588d1457a334580eab3fa1093367a762ee94c0157ed6d71cdaa849547bf
+specified_after_main_development_results: true
+heldout_accessed: false
+subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+model: csp_lda
+fixed_parameters: {csp__n_components: 4, csp__reg: 0.1}
+trial_policy: identical_intersection_of_retained_trial_ids_across_all_variants
+variants:
+  primary: {}
+  reference_none: {reference: none}
+  reference_fz_pz: {reference: channels, reference_channels: [Fz, Pz]}
+  filter_8_30: {highpass_hz: 8.0, lowpass_hz: 30.0}
+selection_policy: diagnostic_only_no_change_to_primary_or_prospective_rules

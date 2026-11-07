@@ -1,0 +1,53 @@
+protocol_version: 1
+name: soma-m5-decoding-development
+baseline_revision: e7624c0
+development_subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+heldout_subjects: [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65]
+runs: [4, 8, 12]
+channels: [FC3, FCz, FC4, C3, Cz, C4, CP3, CPz, CP4]
+preprocessing:
+  reference: average
+  highpass_hz: 1.0
+  lowpass_hz: 40.0
+  order: 4
+  phase: zero
+quality:
+  channel_ptp_v: 0.0005
+  trial_ptp_v: 0.0003
+  excursion_v: 0.00015
+  flat_std_v: 0.00000005
+epoch: [1.0, 3.0]
+context: [0.0, 4.0]
+fs_hz: 160.0
+labels: {T1: 0, T2: 1}
+positive_class: right_hand_imagery
+models: [motor_mu_lr, motor_bands_lda, multiband_lr, burst_lr, csp_lda, covariance_lda, euclidean_mdm, riemann_mdm, tangent_lr]
+search:
+  logistic_C: [0.1, 1.0]
+  csp_components: [2, 4]
+  csp_regularization: [0.1, 0.3]
+fixed:
+  logistic_C: 1.0
+  csp_components: 4
+  csp_regularization: 0.1
+  covariance_estimator: oas
+  covariance_relative_floor: 0.000001
+  covariance_trace_normalize: false
+  burst_low_multiplier: 1.0
+  burst_high_multiplier: 2.0
+  burst_min_cycles: 3.0
+  burst_filter_cycles: 3.0
+outer_subject_folds: 5
+inner_subject_folds: 3
+metric: balanced_accuracy
+primary_comparisons: [[tangent_lr, multiband_lr], [riemann_mdm, euclidean_mdm], [csp_lda, multiband_lr]]
+multiple_comparison: Holm_over_three_prespecified_paired_comparisons_per_mode
+adaptation_models: [multiband_lr, tangent_lr]
+adaptation_trial_counts: [0, 4, 8]
+adaptation_run: 4
+adaptation_test_runs: [8, 12]
+null_models: [multiband_lr, tangent_lr]
+null_repetitions: 19
+seed: 20261107
+confidence: 0.95
+n_resamples: 1999

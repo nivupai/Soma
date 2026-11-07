@@ -149,3 +149,25 @@ dependencies. Calibration restricts the code digest to its inference, model and
 calibration modules, permitting unrelated CLI changes without resimulation.
 Reference audits are exclusively created reports; interruption leaves an explicit
 partial directory, requiring a new output path.
+
+
+## Milestone 5 decoding layer
+
+`decoding/data.py` owns provenance-validated trial tensors and streamed per-record
+preprocessing into a checksummed trial cache. `features.py` builds trial-local
+NeuroDSP and OAS banks once. `models.py` creates fresh sklearn pipelines; public
+matrix pipelines can also accept raw trial tensors. `csp.py`, `covariance.py`
+and `riemannian.py` isolate validated third-party numerical methods and explicit
+rank/SPD boundaries. `splits.py` validates groups, IDs and raw sample overlap.
+`evaluation.py` performs subject-balanced inner selection, fresh outer fits,
+adaptation, metrics and auditable partition/fit/state reporting. `workflows.py`
+separates development from explicitly gated frozen prospective evaluation.
+`benchmark.py` measures actual computation; `visualization/decoding.py` renders
+saved predictions and diagnostic tables. Existing M1–M4 APIs remain unchanged.
+
+All fit records reference a stored partition checksum, avoiding duplicated large
+membership lists. Gzipped JSON retains every fit including failures; explicit
+candidate records retain search errors. No pickle model loading is used. New
+commands are grouped under `soma decode`. Trials and label-independent features
+may be reused; fitted CSP, burst thresholds, scalers, tangent points and class
+means are rebuilt for every permitted training partition.

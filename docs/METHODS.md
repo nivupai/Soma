@@ -356,3 +356,21 @@ are specified in `STATISTICS.md`. Nominal 95% intervals are pointwise; the two
 primary sign-flip tests alone receive Holm correction. Secondary intervals and
 sensitivity analyses are exploratory. No mixed-effects, classification, ICA,
 source reconstruction or MRI model is introduced.
+
+
+## Milestone 5 decoding
+
+The sealed `DECODING_PROTOCOL.md` precedes model experiments. Development subjects
+1–35 and prospective subjects 36–65 are separated at the data-loader and command
+boundaries. Use a fixed nine-channel sensor set after continuous validated
+preprocessing and a common QC/context-retained trial set. Nine prespecified models
+cover motor mu/beta spectra, multichannel powers, NeuroDSP bursts, MNE CSP,
+regularized covariance, Euclidean/Riemannian MDM and tangent logistic regression.
+All learned transforms stay inside fresh training pipelines. Split memberships,
+inner candidates and fit states make leakage checks inspectable.
+
+See `DECODING_METHODS.md` for estimands, source/target separation, fixed adaptation,
+null procedures and failure semantics. Source patterns remain sensor transforms
+with template locations. Decoding performance neither proves anatomical origin
+nor establishes clinical utility, causal motor representation or online BCI
+performance. These retrospective zero-phase epochs are not a causal online system.

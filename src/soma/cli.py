@@ -469,5 +469,181 @@ def stats_influence(
         _structured_fail(exc)
 
 
+decode = typer.Typer(help="Leakage-auditable motor-imagery decoding and covariance geometry")
+app.add_typer(decode, name="decode")
+
+
+def _decode_development(
+    mode: str,
+    subjects: str,
+    runs: list[int] | None,
+    config: Path,
+    output: Path,
+    data_dir: Path,
+    cache_dir: Path,
+    no_plots: bool,
+) -> None:
+    from soma.decoding.workflows import run_development
+
+    try:
+        selected = _subject_selection(subjects)
+        if selected is None or (runs is not None and sorted(runs) != [4, 8, 12]):
+            raise ValueError("Decoding requires explicit development subjects and runs 4/8/12")
+        result = run_development(
+            data_dir, selected, config, output, mode, cache=cache_dir, plots=not no_plots
+        )
+        typer.echo(json.dumps(result))
+        if result["status"] != "complete":
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@decode.command("within-subject")
+def decode_within(
+    subjects: str = "1:35",
+    runs: Annotated[list[int] | None, typer.Option()] = None,
+    config: Path = Path("configs/decoding.yaml"),
+    output: Path = Path("reports/decoding-within"),
+    data_dir: DataDir = Path("data/raw"),
+    cache_dir: Path = Path("data/derived/decoding-trials"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Train on two runs; test each remaining run; never random trial CV."""
+    _decode_development(
+        "within-subject", subjects, runs, config, output, data_dir, cache_dir, no_plots
+    )
+
+
+@decode.command("cross-subject")
+def decode_cross(
+    subjects: str = "1:35",
+    runs: Annotated[list[int] | None, typer.Option()] = None,
+    config: Path = Path("configs/decoding.yaml"),
+    output: Path = Path("reports/decoding-cross"),
+    data_dir: DataDir = Path("data/raw"),
+    cache_dir: Path = Path("data/derived/decoding-trials"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Nested subject-disjoint GroupKFold with training-only model selection."""
+    _decode_development(
+        "cross-subject", subjects, runs, config, output, data_dir, cache_dir, no_plots
+    )
+
+
+@decode.command("adaptation")
+def decode_adaptation(
+    subjects: str = "1:35",
+    config: Path = Path("configs/decoding.yaml"),
+    output: Path = Path("reports/decoding-adaptation"),
+    data_dir: DataDir = Path("data/raw"),
+    cache_dir: Path = Path("data/derived/decoding-trials"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Supply 0/4/8 labeled run-4 trials; evaluate only runs 8/12."""
+    _decode_development("adaptation", subjects, None, config, output, data_dir, cache_dir, no_plots)
+
+
+@decode.command("synthetic")
+def decode_synthetic(
+    seed: int = 42,
+    config: Path = Path("configs/decoding.yaml"),
+    output: Path = Path("reports/decoding-synthetic"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Known oscillatory mixtures and independent-label null; no network."""
+    from soma.decoding.workflows import synthetic_workflow
+
+    try:
+        typer.echo(json.dumps(synthetic_workflow(config, output, seed, plots=not no_plots)))
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@decode.command("development-suite")
+def decode_suite(
+    config: Path = Path("configs/decoding.yaml"),
+    output: Path = Path("reports/m5-development"),
+    data_dir: DataDir = Path("data/raw"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Run all development modes and 19 full nested permutation nulls, sharing trial features."""
+    from soma.decoding.workflows import development_suite
+
+    try:
+        result = development_suite(data_dir, config, output, plots=not no_plots)
+        typer.echo(json.dumps(result))
+        if result["status"] != "complete":
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@decode.command("freeze-heldout")
+def decode_freeze(
+    verification: Annotated[Path, typer.Option(help="Passing current-code verification receipt")],
+    config: Path = Path("configs/decoding.yaml"),
+    development: Path = Path("reports/m5-development"),
+    output: Path = Path("configs/decoding-frozen.yaml"),
+    data_dir: DataDir = Path("data/raw"),
+) -> None:
+    """Seal development-only model choices before accessing prospective subjects."""
+    from soma.decoding.workflows import freeze_heldout
+
+    try:
+        typer.echo(json.dumps(freeze_heldout(data_dir, config, development, output, verification)))
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@decode.command("evaluate-heldout")
+def decode_heldout(
+    config: Annotated[
+        Path, typer.Option(help="Separately frozen protocol and selected parameters")
+    ],
+    subjects: str = "36:65",
+    output: Path = Path("reports/decoding-heldout"),
+    data_dir: DataDir = Path("data/raw"),
+    fetch_data: Annotated[bool, typer.Option("--fetch")] = False,
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Explicit prospective evaluation; validates freeze before any held-out fetch/read."""
+    from soma.decoding.workflows import evaluate_heldout
+
+    try:
+        selected = _subject_selection(subjects)
+        if selected is None:
+            raise ValueError("Explicit prospective subjects required")
+        result = evaluate_heldout(
+            data_dir, config, selected, output, fetch_data=fetch_data, plots=not no_plots
+        )
+        typer.echo(json.dumps(result))
+        if result["status"] != "complete":
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@decode.command("benchmark")
+def decode_benchmark(
+    output: Path = Path("reports/decoding-benchmark"),
+    config: Path = Path("configs/decoding.yaml"),
+    seed: int = 42,
+) -> None:
+    """Measure synthetic feature, matrix, CSP, geometry and nested evaluation stages."""
+    from soma.decoding.benchmark import benchmark
+
+    try:
+        typer.echo(json.dumps(benchmark(output, config, seed)))
+    except Exception as exc:
+        _structured_fail(exc)
+
+
 if __name__ == "__main__":
     app()

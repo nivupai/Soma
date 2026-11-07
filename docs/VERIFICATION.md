@@ -505,3 +505,47 @@ Both primary channels were available in the completed cohort, so this follow-up
 correction leaves all reported estimates and adjusted p-values unchanged. Main
 clean scientific reports identify feature commit `3ac9715`; the correction and
 its extra test are recorded in a subsequent local fix commit.
+
+# Milestone 5 verification — v0.5.0
+
+All **256 baseline tests passed unchanged before implementation**. The final
+implementation passes **312 tests** including unit, numerical, adversarial and
+cached-data integration cases (56 new). Exact original test file bytes are
+compared with `e7624c0`. Ruff, Ruff formatting, strict mypy (65 source files),
+dependency compatibility and CLI checks pass. `configs/decoding-verification.json`
+records current software identity, command return codes and log hashes; the
+logs are under `reports/m5-verification`.
+
+New tests independently check analytic covariance, OAS/shrinkage scale/permutation,
+SPD rank/floor/zero-energy behavior, diagonal and congruence Riemannian properties,
+Euclidean versus geometric means, training tangent references, CSP known source
+directions/order/rank, deterministic oscillatory mixtures, unequal class counts,
+independent-label chance behavior and clear separated-class performance averaged
+across independent simulations. The cache/raw-tensor prediction paths agree.
+Cached real EEG confirms ordered 9×320 analysis and 9×640 context tensors,
+consistent warm-cache fingerprints and explicit cache-identity corruption failure.
+
+Adversarial tests reject global-fitted CSP/tangent/scalers, overlapping trials,
+missing provenance, subject/run overlap, outer-test hyperparameter selection and
+adaptation labels from evaluation runs. Changing outer labels cannot change
+inner choices; extreme test input cannot change training scalers or thresholds.
+A confounded fingerprint fixture gives 100% under trial-random splitting versus
+50% on unseen subjects. Held-out tests use synthetic fixtures and temporary
+paths only: stale code or an unfinished freeze fails before fetch/read, invalid
+frozen choices fail, and a failed secondary held-out mode propagates partial status.
+No real prospective data were read by verification tests.
+
+The final development run completed 105/105 recordings, 1,441 retained trials,
+105 within-subject partitions, five nested subject-disjoint outer folds, fixed
+adaptation and all 19 complete nested permutation refits. All primary model/fold
+cells succeeded. The supplementary post-hoc common-trial preprocessing diagnostic
+preserves its 12 failed within-subject cells (S22 missing run 4 after intersection).
+Primary preprocessing and prospective rules were not changed by that diagnostic.
+
+All requested scientific figure types were generated and representative outputs
+visually inspected. Saved caption documents specify subject Ns and uncertainty;
+no source-localization maps or independent-trial intervals were introduced.
+Known-mixture recovery and computational stages were measured on actual runs.
+The final code development summaries are identical to the preserved initial run;
+data-boundary/status refinements did not change the numerical model definitions.
+Prospective results will be recorded after the separate committed freeze.

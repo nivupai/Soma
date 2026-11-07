@@ -147,3 +147,35 @@ attempts retain their identities and errors. No command implicitly fetches all
 See [statistical methodology](docs/STATISTICS.md),
 [Milestone 4 results](docs/MILESTONE4_RESULTS.md), and
 [verification](docs/VERIFICATION.md). All figures derive from saved CSV tables.
+
+
+## Milestone 5 — decoding and covariance geometry (v0.5.0)
+
+The [sealed decoding protocol](docs/DECODING_PROTOCOL.md) defines nine sensor-space
+models, grouped evaluation and a reserved prospective cohort. Development uses
+subjects 1–35; subjects 36–65 require a separate frozen configuration and command.
+See [decoder methods](docs/DECODING_METHODS.md) for assumptions and leakage boundaries.
+
+```bash
+# Repeat --runs using the existing Typer convention.
+soma decode within-subject --subjects 1:35 --runs 4 --runs 8 --runs 12 --output reports/decoding-within
+soma decode cross-subject --subjects 1:35 --runs 4 --runs 8 --runs 12 --output reports/decoding-cross
+soma decode adaptation --subjects 1:35 --output reports/decoding-adaptation
+soma decode synthetic --seed 42 --output reports/decoding-synthetic
+soma decode benchmark --output reports/decoding-benchmark
+# Efficient complete development suite: one shared trial/feature bank, including null refits.
+soma decode development-suite --output reports/m5-development
+# Requires completed development and a passing receipt for the exact code/environment:
+soma decode freeze-heldout --verification reports/m5-verification.json --output configs/decoding-frozen.yaml
+# Explicit prospective access only after freezing; --fetch is a separate opt-in.
+soma decode evaluate-heldout --subjects 36:65 --config configs/decoding-frozen.yaml --output reports/decoding-heldout --fetch
+```
+
+All learned transformations remain inside fresh training pipelines. Trial-local
+NeuroDSP features and OAS covariances can be shared across folds; scalers, burst
+thresholds, CSP, tangent references and class means cannot. Output directories
+are new; failed folds retain error records, and cached trial files are validated
+by EDF/code/parameter/dependency identity and checksums. Fitted model objects are
+never loaded from untrusted pickle files. Main decoding dependencies are
+scikit-learn and pyRiemann, with MNE CSP. No deep learning or anatomical source
+reconstruction is implemented.

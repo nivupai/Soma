@@ -196,3 +196,32 @@ The final sensitivity report recomputes robustness and figures from the complete
 scientific manifest and exact-source archive. It explicitly records this as
 saved-table aggregation, rather than claiming a second raw-data sweep. The
 self-contained `reaggregate.py` is retained alongside that report.
+
+
+## Milestone 5 decoding identities
+
+`configs/decoding.yaml`, its SHA-256 and `decoding-freeze.json` seal the narrative
+and machine protocol before training. Initial canonical SHA-256:
+`11912588d1457a334580eab3fa1093367a762ee94c0157ed6d71cdaa849547bf`.
+Do not edit the sealed narrative or configuration to reflect observed outcomes.
+The later `decoding-frozen.yaml` stores the full initial protocol, final
+source/dependency identity, development input fingerprint, candidate scores and
+selected parameters, validation receipt hash and timestamp before prospective
+fetch/read. The held-out command verifies all of those applicable boundaries
+before creating its access-start receipt and explicitly requested fetch.
+
+Decode manifests include sklearn/pyRiemann/threadpoolctl versions as well as the
+existing numerical dependencies. Cache records include EDF hashes, exact settings,
+code identity, retained trial IDs/arrays and artifact checksums. Predictions,
+metrics_run/subject, comparisons, influence, selection, partitions, gzipped fits,
+fitted states and profiling are machine-readable. No fitted supervised
+transformation is reused across training partitions. Figure inputs are saved;
+sensor pattern maps declare template geometry and arbitrary pattern units.
+
+Final development outputs live at `reports/m5-development-final` (the initial
+run is preserved at `reports/m5-development`), synthetic results at
+`reports/m5-synthetic-verified`, and measured stages at `reports/m5-benchmark-verified`.
+An exact development-start source archive documents the single Ruff-only shortening
+of an unused held-out receipt message during development; executed numerical
+methods and all protocol decisions remained unchanged. Prospective code is frozen
+after the completed development and current-code validation, not during that edit.
