@@ -247,3 +247,24 @@ Vector magnitudes are nonlinear and do not share a fixed W L interpretation.
 Mean power over trials differs from power of the mean waveform; opposite-phase
 10-Hz trials demonstrate the distinction analytically. Full derivations and
 numerical interpretations are in SOURCE_MODELING_METHODS.md.
+
+
+## MRI grids, registration and surfaces (v0.7.0)
+
+An identified voxel map x_RAS,m = A[i,j,k,1] converts dimensionless centers to
+physical metres. Its determinant may be negative because of storage orientation;
+that is distinct from a reflected physical rigid transform. Reorientation composes
+a voxel permutation/flip into A. RAS↔LPS negates x/y. Physical vectors use the
+linear map, normals its inverse transpose. Source→reference resampling is a
+pull operation with matrix solve(A_source, T_reference→source @ A_reference).
+
+SimpleITK registration returns fixed→moving physical coordinates. Global matrices
+are recovered from independent transformed basis points, including transform center.
+Known-transform error is evaluated on analytic landmarks and separately on polar
+rotation/translation, not inferred from loss. Surface area sums triangle areas;
+closed oriented volume uses the scalar triple-product sum divided by six, with
+validity checks before an enclosed-volume claim. Euler characteristic is V−E+F;
+vertex-link, edge-winding and nonadjacent intersection checks supplement it.
+Triangle feature distances and solid-angle winding numbers test synthetic shell
+separation/containment. They do not certify physiological conductor interfaces.
+See the MRI methods and validation documents for tolerances and measured failures.

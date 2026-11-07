@@ -42,4 +42,17 @@ motor-imagery power and headless figures. See SOURCE_MODELING_VALIDATION.md for
 the successful workflows and unfavorable recovery/leakage results. Individual
 MRI registration, segmentation, FreeSurfer reconstruction, FEM, measured sensor
 coregistration and independent anatomical validation remain future work.
-Milestone 7 has not been started.
+Milestone 7 now adds the structural MRI subsystem described below.
+
+
+Milestone 7 implements lazy anatomical volumes, explicit NIfTI geometry, RAS/LPS
+and voxel maps, resampling, SimpleITK rigid/affine registration, conservative
+labels/masks, physical surface extraction, mesh/containment diagnostics and a
+subject-aware interface to future MNE anatomy. The actual SPM foreground mesh
+fails topology and remains ineligible for BEM use. The measured fsaverage EEG
+source pipeline is preserved. See MRI_VALIDATION.md.
+
+A proposed Milestone 8 would validate participant-matched sensor/MRI coregistration
+and anatomical conductor boundaries using independent anatomical evidence and
+established tools, before any individual EEG forward inference. It would require
+its own reviewed scope and data. Milestone 8 has not been implemented or started.

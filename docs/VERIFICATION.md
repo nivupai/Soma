@@ -597,3 +597,18 @@ checks, all source CLI workflows, 280 cortical simulations, a fresh forward
 benchmark and the subject-1 trial-power demonstration are recorded in
 SOURCE_MODELING_VALIDATION.md. Ordinary CI remains offline, including the small
 analytical-sphere conductivity control; template tests are integration marked.
+
+
+## v0.7.0 MRI verification
+
+The clean 8a5ca65 baseline passed all 362 tests unchanged before implementation.
+The new MRI suite checks physical voxel maps, NIfTI-1/2 forms/units/scaling,
+4D selection, file truncation, RAS/LPS and SimpleITK indexing, scalar dtype
+preservation, affine/shear normals, one-pass resampling, analytic intensity/label
+behavior, rigid/affine independent landmark recovery, moment initialization,
+serialization with nonzero centers, Dice/Jaccard/components, marching-cubes
+convergence, pathological topology, exact triangle contacts, nested containment,
+source-frame/subject compatibility and CLI behavior. Cached real integration
+verifies SPM anatomy and the existing fsaverage lead field without fetching.
+MRI_VALIDATION.md records executed checks and actual counts, including failures
+that remain scientific results rather than hidden repairs.

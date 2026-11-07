@@ -265,3 +265,28 @@ The v0.6.0 implementation was exercised before its feature commit; manifests
 honestly record the baseline Git revision plus a dirty tree and exact source
 hash. A later commit does not retroactively alter those receipts. Local report
 paths and measured performance are listed in SOURCE_MODELING_VALIDATION.md.
+
+
+## MRI experiments and provenance
+
+Use configs/mri-geometry.yaml and new output paths. The MRI plan records initial
+acceptance criteria and explicitly records the added continuous-sphere control
+after binary-mask area bias was observed; no preregistered success is invented.
+Synthetic seed 42, analytic transforms/landmarks, optimizer traces, inverse
+consistency, threshold references and mesh measurements are retained. Real data
+have an anatomy-only HTTP-range receipt with official URL, member name, ETag,
+terms and SHA256. No functional series or raw anatomical image is committed.
+
+MRI manifests include parameters, input metadata/checksums, complete source-tree
+hash, software versions, Git revision/dirty state, runtime/CPU/RSS and result
+hashes. Transform subdirectories contain native SimpleITK and RAS-m receipts;
+figure companions contain numerical arrays. The exact verified source identity,
+artifacts, tests and performance are in MRI_VALIDATION.md and the small committed
+experiments/milestone7/verification.json. Reports were produced before the feature
+commit and honestly retain the parent revision plus dirty state.
+
+Ordinary pytest is offline. Full cached integration is `pytest -o addopts=''`;
+tests never fetch MRI/anatomy. A real experiment without --fetch requires the
+verified local cache. For bounded profiling, set OPENBLAS_NUM_THREADS=1 and
+ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1. Benchmark lazy/eager memory in isolated
+processes; process high-water RSS is not an incremental stage allocation.

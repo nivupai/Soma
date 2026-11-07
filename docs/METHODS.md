@@ -388,3 +388,18 @@ nave=1 fixed to isolate averaging from inverse changes. No source-map population
 inference or anatomical truth claim is made. See SOURCE_MODELING_METHODS.md for
 units, covariance dependence, inverse assumptions, synthetic controls and the
 participant-MRI adapter boundary; SOURCE_MODELING_VALIDATION.md records outcomes.
+
+
+## Structural MRI modeling (v0.7.0)
+
+The MRI implementation plan precedes the new algorithms and real-image analysis.
+NIfTI-1/2 ingestion preserves coded/stored spatial forms, scaling and source hashes;
+ambiguous geometry requires explicit policy. Synthetic asymmetric Gaussian images
+supply independently evaluated rigid/affine truths and physical landmarks. The
+SPM auditory T1w image supplies a separate controlled-transform demonstration,
+not a reference tissue segmentation. Otsu/morphology is labeled as a coarse
+foreground estimate. Invalid real mesh geometry is reported with null reliable
+enclosed volume and no BEM-readiness claim. The synthetic MRI-to-MNE bridge checks
+frames, units, subject identity and explicit transform provenance; no PhysioNet
+EEG is paired with an unrelated MRI. Detailed methods are in MRI_GEOMETRY_METHODS,
+MRI_REGISTRATION_METHODS, MRI_SURFACE_MODELING and MRI_TO_SOURCE_ARCHITECTURE.

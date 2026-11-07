@@ -8,6 +8,9 @@ from numpy.typing import NDArray
 
 
 class Frame(StrEnum):
+    VOXEL = "voxel"
+    RAS = "ras"
+    LPS = "lps"
     HEAD = "head"
     MRI = "mri"
     DEVICE = "device"
@@ -22,6 +25,8 @@ class Points:
 
     def __post_init__(self) -> None:
         xyz = np.array(self.xyz, dtype=float, copy=True)
+        if self.frame == Frame.VOXEL:
+            raise ValueError("Voxel indices are dimensionless; use VoxelMap")
         if self.unit != "m":
             raise ValueError("Internal geometry must use metres; convert explicitly")
         if xyz.ndim != 2 or xyz.shape[1] != 3 or not np.isfinite(xyz).all():

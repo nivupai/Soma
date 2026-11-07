@@ -1,0 +1,1050 @@
+{
+  "version": "0.7.0",
+  "baseline_revision": "8a5ca65",
+  "baseline_tests": 362,
+  "baseline_runtime_s": 41.28,
+  "full_tests": {
+    "passed": 421,
+    "runtime_s": 43.5,
+    "warnings": 56,
+    "warnings_origin": "upstream skimage ndarray.shape deprecation under NumPy 2.5"
+  },
+  "new_MRI_tests": 59,
+  "source_tree_sha256": "b7100392af35daf75165914cf752b9a1add8af31813e945ee03d27d185fa7e60",
+  "configuration_sha256": "fa80a3ef38170a9b1316747af73e7ff19e3d06b1ad09601a2c80bc48d5e2a6e9",
+  "dataset": {
+    "dataset": "spm-auditory",
+    "subject": "SPM-auditory-01",
+    "modality": "T1w structural",
+    "source_url": "https://www.fil.ion.ucl.ac.uk/spm/download/data/MoAEpilot/MoAEpilot.bids.zip",
+    "terms_url": "https://www.fil.ion.ucl.ac.uk/spm/data/auditory/",
+    "terms": "Personal education and evaluation; other uses require contacting FIL methods group. Not the SPM software license.",
+    "archive_member": "MoAEpilot/sub-01/anat/sub-01_T1w.nii",
+    "archive_etag": "\"1cc7499-2f0a032e93840\"",
+    "archive_size_bytes": 30176409,
+    "http_byte_ranges": [
+      [
+        30176387,
+        30176408
+      ],
+      [
+        30176367,
+        30176386
+      ],
+      [
+        30175306,
+        30176386
+      ],
+      [
+        27907298,
+        27907327
+      ],
+      [
+        27907328,
+        27907363
+      ],
+      [
+        27907392,
+        30175305
+      ]
+    ],
+    "downloaded_bytes": 2269103,
+    "functional_files_downloaded": false,
+    "sha256": "20d1669c33b19393f98d2141e36ca99960bff41f3858f2cb274c697547fda224"
+  },
+  "native_geometry": {
+    "shape": [
+      256,
+      256,
+      54
+    ],
+    "stored_dtype": ">i2",
+    "voxel_to_RAS_m": [
+      [
+        -0.001,
+        0.0,
+        0.0,
+        0.127
+      ],
+      [
+        0.0,
+        0.001,
+        0.0,
+        -0.167
+      ],
+      [
+        0.0,
+        0.0,
+        0.003,
+        -0.07200000000000001
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "spacing_m": [
+      0.001,
+      0.001,
+      0.003
+    ],
+    "axis_codes": [
+      "L",
+      "A",
+      "S"
+    ],
+    "storage_determinant": -2.999999999999995e-09,
+    "voxel_volume_m3": 2.999999999999995e-09,
+    "physical_corner_bounds_m": [
+      [
+        -0.1285,
+        -0.1675,
+        -0.07350000000000001
+      ],
+      [
+        0.1275,
+        0.0885,
+        0.0885
+      ]
+    ],
+    "grid_id": "a3a58c596223f27c77b1e5adeab8e7221dbfaa725df9578d7d47ab0179d11c44",
+    "frame": "RAS+",
+    "physical_units": "m",
+    "kind": "intensity"
+  },
+  "nifti_metadata": {
+    "source_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mri/spm-auditory-T1w.nii",
+    "source_sha256": "20d1669c33b19393f98d2141e36ca99960bff41f3858f2cb274c697547fda224",
+    "nifti_class": "Nifti1Image",
+    "qform": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "qform_code": 2,
+    "qform_stored_raw": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sform_stored_raw": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sform": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sform_code": 2,
+    "selected_affine_source": "sform",
+    "affine_policy": "error",
+    "source_spatial_units": "mm",
+    "interpreted_spatial_units": "mm",
+    "time_units": "sec",
+    "pixdim_m": [
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.003000000026077032
+    ],
+    "slope": 0.125,
+    "intercept": 0.0,
+    "diagnostics": [],
+    "source_shape": [
+      256,
+      256,
+      54
+    ],
+    "selected_frame": null,
+    "lazy": true
+  },
+  "synthetic_registration": [
+    {
+      "mode": "rigid",
+      "perturbation_multiplier": 0.5,
+      "translation_error_m": 7.971946379593876e-06,
+      "rotation_error_deg": 0.023839251645473854,
+      "median_landmark_TRE_m": 1.0766189048502532e-05,
+      "max_landmark_TRE_m": 1.5085933491463221e-05,
+      "affine_linear_error_frobenius": 0.0005884166868341286,
+      "inverse_consistency_error": 8.342739807647913e-18,
+      "physical_grid_Dice_before": 0.8520710059171598,
+      "physical_grid_Dice_after": 0.9872298624754421,
+      "before_MSE": 0.00016551677254028618,
+      "after_MSE": 4.439687927515479e-06,
+      "independent_reverse_consistency_m": null,
+      "accepted_landmarks": true,
+      "runtime_s": 0.4844575000461191
+    },
+    {
+      "mode": "rigid",
+      "perturbation_multiplier": 1.0,
+      "translation_error_m": 3.564076492286339e-05,
+      "rotation_error_deg": 0.02556239801840767,
+      "median_landmark_TRE_m": 3.4979905588520234e-05,
+      "max_landmark_TRE_m": 4.092524800030937e-05,
+      "affine_linear_error_frobenius": 0.0006309485615136991,
+      "inverse_consistency_error": 1.116870669913556e-16,
+      "physical_grid_Dice_before": 0.7188715953307393,
+      "physical_grid_Dice_after": 0.9891838741396264,
+      "before_MSE": 0.000646171742118895,
+      "after_MSE": 3.0922592486604117e-06,
+      "independent_reverse_consistency_m": 7.290810259823217e-05,
+      "accepted_landmarks": true,
+      "runtime_s": 0.26638425001874566
+    },
+    {
+      "mode": "rigid",
+      "perturbation_multiplier": 2.0,
+      "translation_error_m": 1.8164895131615628e-05,
+      "rotation_error_deg": 0.023947726755085087,
+      "median_landmark_TRE_m": 1.9960734687756347e-05,
+      "max_landmark_TRE_m": 2.4319125682086475e-05,
+      "affine_linear_error_frobenius": 0.0005910941435188306,
+      "inverse_consistency_error": 2.564180084519063e-16,
+      "physical_grid_Dice_before": 0.45095168374816985,
+      "physical_grid_Dice_after": 0.9872423945044161,
+      "before_MSE": 0.00225134938955307,
+      "after_MSE": 3.947473487642128e-06,
+      "independent_reverse_consistency_m": null,
+      "accepted_landmarks": true,
+      "runtime_s": 0.48893812496680766
+    },
+    {
+      "mode": "affine",
+      "perturbation_multiplier": 0.5,
+      "translation_error_m": 2.2375306659233165e-05,
+      "rotation_error_deg": 0.03346284045748461,
+      "median_landmark_TRE_m": 3.7087761936692334e-05,
+      "max_landmark_TRE_m": 9.028429454692403e-05,
+      "affine_linear_error_frobenius": 0.004347161540317149,
+      "inverse_consistency_error": 1.5721294143790737e-16,
+      "physical_grid_Dice_before": 0.8540856031128404,
+      "physical_grid_Dice_after": 0.988719960765081,
+      "before_MSE": 0.00015869285562075675,
+      "after_MSE": 4.407023880048655e-06,
+      "independent_reverse_consistency_m": null,
+      "accepted_landmarks": true,
+      "runtime_s": 0.6668327079387382
+    },
+    {
+      "mode": "affine",
+      "perturbation_multiplier": 1.0,
+      "translation_error_m": 3.467915609231849e-05,
+      "rotation_error_deg": 0.05877991962582734,
+      "median_landmark_TRE_m": 7.75952815276358e-05,
+      "max_landmark_TRE_m": 9.183901243844856e-05,
+      "affine_linear_error_frobenius": 0.005291530056651289,
+      "inverse_consistency_error": 2.224044627977822e-16,
+      "physical_grid_Dice_before": 0.7228103946102021,
+      "physical_grid_Dice_after": 0.9897008337420304,
+      "before_MSE": 0.000630565220490098,
+      "after_MSE": 2.990017492265906e-06,
+      "independent_reverse_consistency_m": 0.0001268154263035119,
+      "accepted_landmarks": true,
+      "runtime_s": 0.676194499945268
+    },
+    {
+      "mode": "affine",
+      "perturbation_multiplier": 2.0,
+      "translation_error_m": 3.484296375138901e-05,
+      "rotation_error_deg": 0.02879716914212509,
+      "median_landmark_TRE_m": 8.619768171063625e-05,
+      "max_landmark_TRE_m": 0.00017309771847174812,
+      "affine_linear_error_frobenius": 0.009345130920235322,
+      "inverse_consistency_error": 1.4540036416577105e-17,
+      "physical_grid_Dice_before": 0.44561068702290074,
+      "physical_grid_Dice_after": 0.9844054580896686,
+      "before_MSE": 0.0022715453524142504,
+      "after_MSE": 3.903684500983218e-06,
+      "independent_reverse_consistency_m": null,
+      "accepted_landmarks": true,
+      "runtime_s": 0.7554269169922918
+    }
+  ],
+  "registration_failure_cases": [
+    {
+      "case": "constant",
+      "numerically_completed": false,
+      "anatomically_accepted": false,
+      "reason": "Constant/ambiguous intensity image cannot be registered"
+    },
+    {
+      "case": "minimal_overlap",
+      "numerically_completed": true,
+      "anatomically_accepted": false,
+      "known_failure_or_ambiguity": true,
+      "translation_error_m": 0.04832965847354337,
+      "rotation_error_deg": 82.183955466987,
+      "median_landmark_TRE_m": 0.058477057495145174,
+      "max_landmark_TRE_m": 0.07475170757405047,
+      "affine_linear_error_frobenius": 1.859039530342541,
+      "inverse_consistency_error": 2.770664173799697e-16,
+      "stop": "RegularStepGradientDescentOptimizerv4: Maximum number of iterations (60) exceeded."
+    },
+    {
+      "case": "rotationally_ambiguous_sphere",
+      "numerically_completed": true,
+      "anatomically_accepted": false,
+      "known_failure_or_ambiguity": true,
+      "translation_error_m": 2.462162897252036e-05,
+      "rotation_error_deg": 4.357292496311862,
+      "median_landmark_TRE_m": 0.0016063908612207515,
+      "max_landmark_TRE_m": 0.0020755034308420784,
+      "affine_linear_error_frobenius": 0.10752375417777084,
+      "inverse_consistency_error": 1.110350006647984e-16,
+      "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 22 iterations. Current step (6.10352e-05) is less than minimum step (0.0001)."
+    }
+  ],
+  "surface_convergence": [
+    {
+      "kind": "sphere",
+      "spacing_m": 0.004,
+      "mesh_area_m2": 0.0121843176842719,
+      "mesh_volume_m3": 0.00011367466666666666,
+      "volume_relative_error": 0.0051047280179727815,
+      "area_relative_error": 0.07733021536326018,
+      "euler": 2,
+      "valid": true,
+      "extraction_s": 0.002005708054639399
+    },
+    {
+      "kind": "ellipsoid",
+      "spacing_m": 0.004,
+      "mesh_area_m2": 0.009071510237038265,
+      "mesh_volume_m3": 6.520533333333334e-05,
+      "volume_relative_error": 0.011642750861453756,
+      "area_relative_error": null,
+      "euler": 2,
+      "valid": true,
+      "extraction_s": 0.0009539159946143627
+    },
+    {
+      "kind": "sphere",
+      "spacing_m": 0.003,
+      "mesh_area_m2": 0.012279726436714279,
+      "mesh_volume_m3": 0.0001116675,
+      "volume_relative_error": 0.012642521793654063,
+      "area_relative_error": 0.0857662012329466,
+      "euler": 2,
+      "valid": true,
+      "extraction_s": 0.0015774579951539636
+    },
+    {
+      "kind": "ellipsoid",
+      "spacing_m": 0.003,
+      "mesh_area_m2": 0.009015323827430387,
+      "mesh_volume_m3": 6.543675e-05,
+      "volume_relative_error": 0.008135026441087307,
+      "area_relative_error": null,
+      "euler": 2,
+      "valid": true,
+      "extraction_s": 0.001536875031888485
+    },
+    {
+      "kind": "sphere",
+      "spacing_m": 0.002,
+      "mesh_area_m2": 0.012221370821944598,
+      "mesh_volume_m3": 0.00011235599999999999,
+      "volume_relative_error": 0.006554845220389078,
+      "area_relative_error": 0.08060643203974599,
+      "euler": 2,
+      "valid": true,
+      "extraction_s": 0.0036042500287294388
+    },
+    {
+      "kind": "ellipsoid",
+      "spacing_m": 0.002,
+      "mesh_area_m2": 0.009102788563170861,
+      "mesh_volume_m3": 6.581600000000001e-05,
+      "volume_relative_error": 0.0023865014727441998,
+      "area_relative_error": null,
+      "euler": 2,
+      "valid": true,
+      "extraction_s": 0.0031445829663425684
+    },
+    {
+      "kind": "analytic_sphere_field",
+      "spacing_m": 0.004,
+      "mesh_area_m2": 0.01124692016884415,
+      "mesh_volume_m3": 0.00011190663509475815,
+      "volume_relative_error": 0.010528103327125761,
+      "area_relative_error": 0.005553922538066328,
+      "euler": 2,
+      "valid": true
+    },
+    {
+      "kind": "analytic_sphere_field",
+      "spacing_m": 0.003,
+      "mesh_area_m2": 0.011273946653240725,
+      "mesh_volume_m3": 0.00011241720262253467,
+      "volume_relative_error": 0.0060136952255790245,
+      "area_relative_error": 0.003164256656893512,
+      "euler": 2,
+      "valid": true
+    },
+    {
+      "kind": "analytic_sphere_field",
+      "spacing_m": 0.002,
+      "mesh_area_m2": 0.011293931698883935,
+      "mesh_volume_m3": 0.00011279700146327469,
+      "volume_relative_error": 0.002655536176448693,
+      "area_relative_error": 0.001397190655763516,
+      "euler": 2,
+      "valid": true
+    }
+  ],
+  "synthetic_segmentation": {
+    "dice": 1.0,
+    "jaccard": 1.0
+  },
+  "nested_boundaries": {
+    "geometric_candidate": true,
+    "pairs": [
+      {
+        "minimum_triangle_distance_m": 0.007348469228349538,
+        "intersecting_or_touching_triangle_pairs": 0,
+        "candidate_pairs": 34059,
+        "tolerance_m": 1e-08,
+        "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+        "adjacent_triangles_excluded": false,
+        "extrema_inside": true,
+        "contained": true
+      },
+      {
+        "minimum_triangle_distance_m": 0.007348469228349538,
+        "intersecting_or_touching_triangle_pairs": 0,
+        "candidate_pairs": 81409,
+        "tolerance_m": 1e-08,
+        "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+        "adjacent_triangles_excluded": false,
+        "extrema_inside": true,
+        "contained": true
+      }
+    ],
+    "required_separation_m": 0.001,
+    "physiological_conductor_validated": false,
+    "interpretation": "geometric checks only; masks are not validated anatomical conductivity interfaces"
+  },
+  "real_registration": {
+    "translation_error_m": 0.0004029693464184131,
+    "rotation_error_deg": 0.1977714630909892,
+    "median_landmark_TRE_m": 0.00035395981743511335,
+    "max_landmark_TRE_m": 0.0003758031815618861,
+    "affine_linear_error_frobenius": 0.004881527904488743,
+    "inverse_consistency_error": 2.491044007879343e-16,
+    "config": {
+      "mode": "rigid",
+      "metric": "meansquares",
+      "iterations": 300,
+      "learning_rate_mm": 1.0,
+      "min_step_mm": 0.0001,
+      "shrink_factors": [
+        4,
+        2,
+        1
+      ],
+      "smoothing_sigmas_mm": [
+        2.0,
+        1.0,
+        0.0
+      ],
+      "initialization": "geometry",
+      "threads": 1
+    },
+    "direction": "fixed_RAS_m_to_moving_RAS_m",
+    "native_direction": "fixed_LPS_mm_to_moving_LPS_mm",
+    "metric_value": 0.05392326985374315,
+    "last_level_iteration": 27,
+    "total_recorded_iterations": 149,
+    "optimizer_stop": "RegularStepGradientDescentOptimizerv4: Step too small after 26 iterations. Current step (6.10352e-05) is less than minimum step (0.0001).",
+    "iteration_limit_reached": false,
+    "valid_fixed_voxels": 374720,
+    "valid_fraction": 0.9382448971415981,
+    "runtime_s": 1.5523051250493154,
+    "anatomical_success_claim": false,
+    "simpleitk_version": "2.5.7"
+  },
+  "real_mesh": {
+    "vertex_count": 10264,
+    "face_count": 20940,
+    "edge_count": 31401,
+    "degenerate_triangles": 0,
+    "duplicate_faces": 6,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 9,
+    "nonmanifold_vertices": 12,
+    "inconsistent_oriented_edges": 0,
+    "connected_components": 1,
+    "euler_characteristic": -197,
+    "surface_area_m2": 0.18878218487687962,
+    "signed_volume_m3": 0.0031524739583333335,
+    "enclosed_volume_m3": null,
+    "volume_reliable_under_checks": false,
+    "outward_global_winding": true,
+    "triangle_quality_min": 0.5999999999999963,
+    "triangle_quality_median": 0.8164965809277264,
+    "self_intersection_check": null,
+    "geometrically_valid_under_checks": false,
+    "scope": "single connected boundary; nonadjacent intersections checked, adjacent face degeneracy and winding checked; not general solid certification"
+  },
+  "estimated_mask_metadata": {
+    "source_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mri/spm-auditory-T1w.nii",
+    "source_sha256": "20d1669c33b19393f98d2141e36ca99960bff41f3858f2cb274c697547fda224",
+    "nifti_class": "Nifti1Image",
+    "qform": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "qform_code": 2,
+    "qform_stored_raw": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sform_stored_raw": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sform": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        127.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -167.0
+      ],
+      [
+        0.0,
+        0.0,
+        3.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sform_code": 2,
+    "selected_affine_source": "sform",
+    "affine_policy": "error",
+    "source_spatial_units": "mm",
+    "interpreted_spatial_units": "mm",
+    "time_units": "sec",
+    "pixdim_m": [
+      0.0010000000474974513,
+      0.0010000000474974513,
+      0.003000000026077032
+    ],
+    "slope": 0.125,
+    "intercept": 0.0,
+    "diagnostics": [],
+    "source_shape": [
+      256,
+      256,
+      54
+    ],
+    "selected_frame": null,
+    "lazy": true,
+    "segmentation": {
+      "source": "automatic_intensity_threshold_baseline",
+      "threshold": 51.99609375,
+      "reference_annotation": false,
+      "clinical_tissue_segmentation": false
+    },
+    "resampling": {
+      "source_grid": {
+        "shape": [
+          256,
+          256,
+          54
+        ],
+        "stored_dtype": "uint8",
+        "voxel_to_RAS_m": [
+          [
+            -0.001,
+            0.0,
+            0.0,
+            0.127
+          ],
+          [
+            0.0,
+            0.001,
+            0.0,
+            -0.167
+          ],
+          [
+            0.0,
+            0.0,
+            0.003,
+            -0.07200000000000001
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "spacing_m": [
+          0.001,
+          0.001,
+          0.003
+        ],
+        "axis_codes": [
+          "L",
+          "A",
+          "S"
+        ],
+        "storage_determinant": -2.999999999999995e-09,
+        "voxel_volume_m3": 2.999999999999995e-09,
+        "physical_corner_bounds_m": [
+          [
+            -0.1285,
+            -0.1675,
+            -0.07350000000000001
+          ],
+          [
+            0.1275,
+            0.0885,
+            0.0885
+          ]
+        ],
+        "grid_id": "a3a58c596223f27c77b1e5adeab8e7221dbfaa725df9578d7d47ab0179d11c44",
+        "frame": "RAS+",
+        "physical_units": "m",
+        "kind": "labels"
+      },
+      "reference_grid": {
+        "shape": [
+          52,
+          52,
+          33
+        ],
+        "stored_dtype": "float32",
+        "voxel_to_RAS_m": [
+          [
+            -0.005,
+            0.0,
+            0.0,
+            0.127
+          ],
+          [
+            0.0,
+            0.005,
+            0.0,
+            -0.167
+          ],
+          [
+            0.0,
+            0.0,
+            0.005,
+            -0.07200000000000001
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "spacing_m": [
+          0.005,
+          0.005,
+          0.005
+        ],
+        "axis_codes": [
+          "L",
+          "A",
+          "S"
+        ],
+        "storage_determinant": -1.2500000000000026e-07,
+        "voxel_volume_m3": 1.2500000000000026e-07,
+        "physical_corner_bounds_m": [
+          [
+            -0.1305,
+            -0.1695,
+            -0.07450000000000001
+          ],
+          [
+            0.1295,
+            0.0905,
+            0.0905
+          ]
+        ],
+        "grid_id": "34729c8ab673578dc3570933587a54367a1a63673699071505039877fd32d2df",
+        "frame": "RAS+",
+        "physical_units": "m",
+        "kind": "intensity"
+      },
+      "reference_to_source_RAS_m": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pull_voxel_matrix": [
+        [
+          5.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          5.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.6666666666666665,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "order": 0,
+      "background": 0,
+      "one_pass": true
+    },
+    "morphology": {
+      "closing_iterations_voxels": 1,
+      "fill_holes": true,
+      "largest_component": true,
+      "input_components": 8,
+      "changed_voxels": 5168
+    }
+  },
+  "performance": {
+    "benchmark": {
+      "status": "complete",
+      "isolated_loading_profiles": [
+        {
+          "mode": "lazy",
+          "load_s": 0.006032082950696349,
+          "materialize_s": 1.4170072972774506e-06,
+          "peak_RSS_MiB": 67.5,
+          "peak_delta_MiB": 0.0,
+          "materialized_bytes": 0,
+          "stored_voxel_bytes": 7077888
+        },
+        {
+          "mode": "eager",
+          "load_s": 0.004444458056241274,
+          "materialize_s": 0.009620749973692,
+          "peak_RSS_MiB": 98.5625,
+          "peak_delta_MiB": 33.8125,
+          "materialized_bytes": 28311552,
+          "stored_voxel_bytes": 7077888
+        }
+      ],
+      "resample_s": 0.017012457945384085,
+      "points": 100000,
+      "point_roundtrip_s": 0.006894624908454716,
+      "roundtrip_max_voxel_error": 2.842170943040401e-14,
+      "surface_extraction_s": 0.006805417011491954,
+      "mesh_validation_s": 0.08542554103769362,
+      "mesh_faces": 20412,
+      "registration_s": 1.0556765419896692,
+      "registration_optimizer": "RegularStepGradientDescentOptimizerv4: Step too small after 77 iterations. Current step (6.10352e-05) is less than minimum step (0.0001).",
+      "landmarks_m": [
+        [
+          -0.018,
+          -0.009,
+          0.012
+        ],
+        [
+          0.013,
+          0.016,
+          -0.008
+        ],
+        [
+          0.018,
+          -0.017,
+          0.016
+        ],
+        [
+          -0.006,
+          0.019,
+          0.019
+        ]
+      ],
+      "runtime_s": 1.8187479170737788,
+      "cpu_s": 1.2398610000000003,
+      "process_peak_RSS_MiB": 307.046875,
+      "RSS_scope": "process high-water including libraries; not incremental allocation"
+    },
+    "synthetic": {
+      "runtime_s": 9.79845912498422,
+      "cpu_s": 9.765674,
+      "process_peak_RSS_MiB": 335.15625
+    },
+    "real": {
+      "runtime_s": 2.858448875020258,
+      "cpu_s": 2.8053339999999998,
+      "process_peak_RSS_MiB": 416.921875,
+      "load_s": 0.0045435839565470815,
+      "resample_s": 0.04307033296208829,
+      "surface_extraction_s": 0.006719624972902238,
+      "mesh_validation_s": 0.08468429197091609
+    }
+  },
+  "source_modeling_compatibility": {
+    "source_modules_changed": false,
+    "lead_field_bitwise_identical_to_v0_6": true,
+    "lead_field_array_sha256": "cb9ab482b96054bad34a401894000073eb2a4c2850d4524aeeb928f1ae66fac6",
+    "shape": [
+      64,
+      1284
+    ],
+    "rank": 63,
+    "real_inverse_status": "complete"
+  },
+  "MRI_figures": 11,
+  "figure_sha256": {
+    "synthetic/nested-surface-readiness.png": "490a8a42de70c1aab52152f32d5dc1341560885f634259cf43282562848ed26f",
+    "synthetic/voxel-grid-affine.png": "1db6996541e0ef528e208d2b5f662acab922c44a6909f17bb747264ac1b3fb5e",
+    "synthetic/registration-error-versus-perturbation.png": "e079ba84e30066f6f58c9e1a8267ab70f88baf9bca33dc5c5a57905617fa013a",
+    "synthetic/synthetic-registration-overlay.png": "e3352d429e8407b391f46ff2e76459fc51598540e86f9b09b1e2075e408a59eb",
+    "real/MRI-orthogonal-slices.png": "a863c09608110b94484d11db6cd5d5660687d7c3ada35ec3a5a0874cb8362762",
+    "real/segmentation-foreground-overlay.png": "5e22952bfc3e0b193f5b76fee0257cb282a93ab4895a5cb73601f2fd578973b4",
+    "real/real-controlled-registration.png": "0a341f5aff5e10651302e1ca7be1f044c3bf764209d659212cb7139483f8bf83",
+    "real/extracted-surface.png": "72708c50a633bde900d673ce64b45c447068d760bba735edebef8cbe51699977",
+    "real/mesh-quality-distribution.png": "49fed5669f5087ff749e3a5ac75eee79c78e2246e5116a9bd91a60bc5d877d20",
+    "real/orientation-physical-diagnostics.png": "3dfa53109bf780e0ede3078aad8d5a40482696d62c4a160da45b2ccfdb42e3a7",
+    "real/qform-sform-comparison.png": "63ccdca4d9ae7d56c814c01230c5229f1862c3c8a0ac4153c9fe685b090073ff"
+  },
+  "report_root": "reports/milestone7-complete",
+  "manifest_sha256": {
+    "benchmark/manifest.json": "1240c47fe4913b092e3aef64ff1484bded8db72dd478f3e465d7617262b0c7b8",
+    "real/manifest.json": "4bae5f492f9591aad1dcc1375947fd014f889dea3a21ddcd4e8a5a92350c86e9",
+    "cli-surface/manifest.json": "efb39110450efcc136bfb4013ba24c26dd3356fec711e299a95c32165e012045",
+    "synthetic/manifest.json": "8dddeea22e0eed70015082485f31bdcdbc04e5b38126848bf58e8251c8fdb8e4",
+    "source-inverse-regression/manifest.json": "f4fb48f1d2945fe78ec7504a23f77d5d9c84c5dc067075df85124c9efea38fb1",
+    "cli-registration/manifest.json": "c1c47c3893982e7b1ac46bf034848fbf1a006614078c2bf8712cf07442496841",
+    "source-forward-regression/manifest.json": "fce8b35f3a17c7d865b94bc5d49d94f8c149a4d10e61347343639b904c98ab21"
+  },
+  "nested_transform_files_sha256": {
+    "real/controlled-registration/fixed-to-moving-LPS-mm.tfm": "4802afb3d06f0dbced91d203cb0a23942357eeb3c6f3e3b58161892f49441391",
+    "synthetic/registration-rigid-1.0/fixed-to-moving-LPS-mm.tfm": "fd718fa307a1da7fe73e96772ad1af3525a26857fae8aefcc39b729624666668",
+    "synthetic/registration-affine-2.0/fixed-to-moving-LPS-mm.tfm": "0b6d4f744586908375f30e63dcf207259a04cc38aa2cacb5d328e995615b5681",
+    "synthetic/registration-affine-0.5/fixed-to-moving-LPS-mm.tfm": "ebb102fcc63e5be44b36efbcd803c08250defec1074516e662478734e3d1d227",
+    "synthetic/registration-rigid-2.0/fixed-to-moving-LPS-mm.tfm": "0dd19a362c63f2d0e4138f14cf2bb8ae7a6396eeca29d57d208a01be61e3fefc",
+    "synthetic/registration-affine-1.0/fixed-to-moving-LPS-mm.tfm": "874385670f53b39429cf34e7121996c4ce33e02739e1fcd5938a97c03ac4bb08",
+    "synthetic/registration-rigid-0.5/fixed-to-moving-LPS-mm.tfm": "251746ab4fe516c6d1424cf51f053e39737c675872357986b89c67aa1d74bde2",
+    "cli-registration/transform/fixed-to-moving-LPS-mm.tfm": "4802afb3d06f0dbced91d203cb0a23942357eeb3c6f3e3b58161892f49441391",
+    "real/controlled-registration/transform.json": "1bdb1776bdfefe25ce7c79d32ab24a5c82404146750cba0c9b10716ff8ffee36",
+    "synthetic/registration-rigid-1.0/transform.json": "c5321d0f5afbbf757a3a539dd64532dc6b77dda4ac9663759577508c6ac1b514",
+    "synthetic/registration-affine-2.0/transform.json": "c383d0cb0559d9fe410e29750e46c40e78cc0133aad191e1f5a4af68dac59b4e",
+    "synthetic/registration-affine-0.5/transform.json": "185e28cbe98484b7b66c6704042b0e533331d5f2b2762151d0db471487b1c784",
+    "synthetic/registration-rigid-2.0/transform.json": "7f16731e4b45e3ba550a3019024411245ae9742c42db56bd68bc6f596d027f03",
+    "synthetic/registration-affine-1.0/transform.json": "0ce590ff2c227e24a64f8d592a8296ded2dce967094dfe810b36ce975dd8bd1d",
+    "synthetic/registration-rigid-0.5/transform.json": "b645af9db9d8af019b55f2c72d92e4816302e31dc2371577769f901158caf751",
+    "cli-registration/transform/transform.json": "8fc9a6331fd763f29ea7eba01991debde00fddece9e5b47d861f166bb904e7d6"
+  },
+  "interpretation": "Structural geometry demonstration; real coarse foreground fails topology/BEM readiness; no participant EEG/MRI alignment fabricated.",
+  "real_controlled_image_MSE": {
+    "before": 625.8678827382492,
+    "after": 133.4117897745063
+  },
+  "offline_tests": {
+    "passed": 410,
+    "integration_deselected": 11,
+    "runtime_s": 30.3
+  },
+  "platform": {
+    "system": "macOS-15.7-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_CPUs": 10,
+    "verified_workflow_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS": "1",
+      "MPLBACKEND": "Agg"
+    }
+  }
+}

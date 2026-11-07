@@ -1,0 +1,31 @@
+seed: 42
+world_units: m
+registration:
+  mode: rigid
+  metric: meansquares
+  iterations: 300
+  learning_rate_mm: 1.0
+  min_step_mm: 0.0001
+  shrink_factors: [4, 2, 1]
+  smoothing_sigmas_mm: [2.0, 1.0, 0.0]
+  initialization: geometry
+  threads: 1
+synthetic:
+  spacing_m: [0.002, 0.0025, 0.003]
+  perturbation_multipliers: [0.5, 1.0, 2.0]
+  surface_spacing_m: [0.004, 0.003, 0.002]
+  sphere_radius_m: 0.03
+  nested_spacing_m: 0.006
+  nested_radii_m: [0.024, 0.036, 0.048]
+real:
+  dataset: spm-auditory
+  root: data/raw/mri
+  target_spacing_m: 0.003
+  surface_spacing_m: 0.005
+  mask_method: Otsu_foreground_largest_component_closed_filled_not_brain_tissue
+acceptance:
+  voxel_roundtrip_m: 1.0e-12
+  rigid_median_landmark_TRE_m: 0.001
+  affine_median_landmark_TRE_m: 0.0015
+  rotation_error_deg: 1.0
+  nested_minimum_separation_m: 0.001

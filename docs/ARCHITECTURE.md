@@ -193,3 +193,24 @@ completion receipts and checksums; scientific reports have code/config/version
 and result hashes. Future participant anatomy adapters must explicitly supply
 participant MRI transforms and validated geometry, without reusing template
 coordinates as participant anatomy. See SOURCE_MODELING_METHODS.md.
+
+
+## v0.7.0 MRI subsystem
+
+`geometry.coordinates.VoxelMap` handles dimensionless identified grids without
+weakening the existing metre-valued rigid `Transform`. RAS/LPS/VOXEL frame names
+extend the existing enum. `imaging.Volume` owns a lazy real scalar 3D array and
+RAS-m affine; `nifti` owns explicit qform/sform/unit/scaling policy. `orientation`
+changes storage without interpolation; `resampling` implements explicit one-pass
+pull grids. `registration` converts NiBabel RAS/(i,j,k) to SimpleITK LPS/(k,j,i),
+uses mature rigid/affine optimizers and exports fixed-to-moving matrices.
+`segmentation` provides conservative mask/label operations; `surfaces` delegates
+to marching cubes; `mesh_quality` measures topology, intersections and containment.
+`bridge.AnatomicalModel` enforces explicit subject/physical-transform provenance
+before candidate MNE geometry export. Candidate geometry is not a BEM solution.
+
+`datasets.structural` fetches only the SPM auditory T1w member via exact HTTP
+ranges, requiring an explicit download request. `experiments.mri_geometry`
+coordinates analytic benchmarks, real-image controlled recovery and figures;
+rendering is separate. The fsaverage source modules are unchanged and remain
+operational. See MRI_TO_SOURCE_ARCHITECTURE.md for future individual MRI boundaries.

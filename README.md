@@ -3,9 +3,10 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.6.0 adds frame-safe geometry, template EEG BEM forward modeling, rank-aware
-whitening, MNE/dSPM source reconstruction, and source-resolution validation.
-Template maps are exploratory; participant MRI processing is not implemented.
+v0.7.0 includes template EEG source modeling and structural MRI volumes,
+physical geometry, SimpleITK registration, label processing, surface extraction
+and mesh validation. Template maps remain exploratory; validated individual
+EEG/MRI anatomical modeling is future work.
 
 Python 3.11–3.12:
 
@@ -22,7 +23,8 @@ soma eeg analyze --subject 1 --run 4 --data-dir data/raw --output reports/eeg-s0
 ```
 
 EEG downloads require `datasets fetch` or the explicit `eeg replicate --fetch` flag.
-Anatomy downloads require `source inspect-template --fetch`. Repeat `--subjects` and `--runs` to
+Template anatomy downloads require `source inspect-template --fetch`; structural
+MRI uses `mri experiment real --fetch`. Repeat `--subjects` and `--runs` to
 select multiple recordings. `SOMA_DATA_DIR` sets the raw data root. Output
 directories must be new except resumable replication/calibration with `--resume`. Raw EDF and
 reports are excluded from Git. `requirements-resolved.txt` captures the verified
@@ -229,3 +231,43 @@ All real maps use individual-trial source power, with an evoked comparison using
 the same inverse kernel. MNE currents and dimensionless dSPM estimates retain
 separate units. Anatomical templates, normalized channel labels, and good numerical
 conditioning do not establish individualized motor-cortex localization.
+
+
+## Milestone 7: structural MRI geometry and anatomical candidates
+
+Use the [MRI geometry methods](docs/MRI_GEOMETRY_METHODS.md),
+[registration methods](docs/MRI_REGISTRATION_METHODS.md),
+[surface methods](docs/MRI_SURFACE_MODELING.md),
+[MRI-to-source boundary](docs/MRI_TO_SOURCE_ARCHITECTURE.md), and
+[validation results](docs/MRI_VALIDATION.md).
+
+```bash
+export MPLBACKEND=Agg
+export OPENBLAS_NUM_THREADS=1
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
+soma mri experiment synthetic --seed 42 --output reports/my-mri-synthetic
+soma mri experiment real --dataset spm-auditory --fetch --output reports/my-mri-real
+soma mri inspect --input data/raw/mri/spm-auditory-T1w.nii
+soma mri validate --input data/raw/mri/spm-auditory-T1w.nii
+soma mri resample --input input.nii.gz --reference reference.nii.gz --output reports/my-resample
+soma mri register --fixed fixed.nii.gz --moving moving.nii.gz --mode rigid --output reports/my-registration
+soma mri surfaces --mask mask.nii.gz --output reports/my-surface
+soma mri benchmark --input data/raw/mri/spm-auditory-T1w.nii --output reports/my-mri-benchmark
+```
+
+Downloads require the explicit `--fetch` on the real experiment. The SPM adapter
+retrieves only the anatomical ZIP member using HTTP byte ranges, not the functional
+time series. Dataset terms permit personal education/evaluation; see the recorded
+source terms before other uses. Raw anatomy and full reports remain excluded
+from Git. All result directories must be new; source files are never overwritten.
+
+Internal physical coordinates use metres; NIfTI storage and SimpleITK units are
+converted explicitly. Ambiguous qform/sform metadata requires an explicit policy.
+Label resampling requires `--labels --order 0`. Registration matrices map fixed
+RAS to moving RAS; optimization completion does not establish anatomical accuracy.
+
+The verified local reports are in `reports/milestone7-complete/`. The real threshold
+foreground surface fails topology checks and is **not BEM ready**. Synthetic
+closed nested shells pass their scoped geometric checks. No production brain/
+tissue segmentation, individual EEG/MRI coregistration, new BEM solver or
+Milestone 8 implementation is included.
