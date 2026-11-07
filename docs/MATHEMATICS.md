@@ -268,3 +268,20 @@ vertex-link, edge-winding and nonadjacent intersection checks supplement it.
 Triangle feature distances and solid-angle winding numbers test synthetic shell
 separation/containment. They do not certify physiological conductor interfaces.
 See the MRI methods and validation documents for tolerances and measured failures.
+
+## Participant geometry and sensitivity (v0.8.0)
+
+Weighted rigid fitting minimizes Σwᵢ‖Rxᵢ+t−yᵢ‖² with RᵀR=I and det R=1.
+Weighted centers determine t; SVD of centered cross covariance determines R.
+Rank-two noncollinear triples suffice, but do not certify chirality; rank-three
+mirror correspondences fail. ICP alternates nearest-vertex correspondence and
+trimmed rigid updates. Its fit residual is distinct from true transform error.
+
+The forward is L(G,σ,T). Central Jₖ≈[L(θ+hₖ)−L(θ−hₖ)]/(2hₖ) is meaningful only
+with identical physical channel/source/basis correspondences. Conductivity
+perturbations solve a new BEM. For small random δθ, Cov(Lδθ)≈J Cθ Jᵀ; finite
+Monte Carlo parameter variance and derivative error must be assessed separately.
+For fixed linear inverse W, source-noise covariance is W Cε Wᵀ. Model mismatch
+bias is (W_alt L_true−I)j, distinct from measurement variance. Vector norms are
+nonlinear and cannot substitute for signed linear resolution operators.
+See ANATOMICAL_UNCERTAINTY.md for units, steps and local-smoothness limits.

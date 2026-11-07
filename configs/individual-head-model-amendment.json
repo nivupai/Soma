@@ -1,0 +1,8 @@
+{
+  "recorded_at_utc": "2026-11-07T18:44:44.732044+00:00",
+  "amendment_document": "docs/INDIVIDUAL_HEAD_MODEL_AMENDMENT.md",
+  "sha256": "2ee69cce8d3e8c77d0a9c3142ad4c87bdae759bd505d597304c25244ac585fa8",
+  "development_experiments_already_performed": true,
+  "original_protocol_unchanged": true,
+  "resolved_surface_origin": "distributed_MNE_sample_FLASH_via_symlinks"
+}

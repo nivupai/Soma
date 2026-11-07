@@ -1,0 +1,7 @@
+individual_config: configs/individual-source.yaml
+synthetic_seed: 42
+fiducial_sigma_m: [0.001, 0.003, 0.005]
+headshape_sigma_m: [0.001, 0.003]
+icp_iterations: 30
+icp_trim_fraction: 0.9
+robust_cutoff_m: 0.01

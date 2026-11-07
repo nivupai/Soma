@@ -45,3 +45,20 @@ merely because a caller supplies those names.
 The regression suite runs existing geometry, MNE covariance and fixed/free inverse
 checks unchanged. A fresh subject-1 trial-wise MNE/dSPM source demonstration also
 confirms that MRI additions did not replace the validated fsaverage anatomy.
+
+## Implemented participant assets (Milestone 8)
+
+The candidate-mask pathway above still cannot certify anatomy or pair SPM with
+unrelated EEG. A separate `IndividualModel` now accepts curated corresponding
+MNE sample MRI/EEG assets. Its identity/provenance includes MGH voxel dimensions,
+scanner-RAS and tkregister-RAS maps, three named conductor asset hashes and QC,
+measured sensor locations/projectors, head→MRI transform, uncertainty scope,
+source configuration, and physical BEM/forward cache receipts. MRI plots use the
+tkregister map with explicit mm→m conversion. No arbitrary NIfTI affine is used
+as a substitute. Contracts reject subject/frame/ordering mismatches and template
+identities; final forward reports retain source orientation and inverse provenance.
+
+The source pathway runs only after computational checks pass; independent
+anatomical evidence remains unavailable, so overall readiness is INDETERMINATE.
+This conditional participant research pathway does not upgrade generic M7 masks
+or the failed SPM foreground to anatomical conductor boundaries.

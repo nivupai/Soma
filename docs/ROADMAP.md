@@ -52,7 +52,9 @@ subject-aware interface to future MNE anatomy. The actual SPM foreground mesh
 fails topology and remains ineligible for BEM use. The measured fsaverage EEG
 source pipeline is preserved. See MRI_VALIDATION.md.
 
-A proposed Milestone 8 would validate participant-matched sensor/MRI coregistration
-and anatomical conductor boundaries using independent anatomical evidence and
-established tools, before any individual EEG forward inference. It would require
-its own reviewed scope and data. Milestone 8 has not been implemented or started.
+Milestone 8 implements participant-matched sample MRI/EEG assets, weighted rigid
+coregistration and ICP, scoped conductor readiness, MNE BEM forwards/inverses,
+physical geometry/conductivity sensitivity and independent spherical controls.
+Overall anatomical readiness remains INDETERMINATE; no independent MRI fiducial
+truth or conductivity measurements exist. See INDIVIDUAL_SOURCE_VALIDATION.md.
+Future work requires separately authorized scope; Milestone 9 was not started.

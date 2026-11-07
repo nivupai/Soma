@@ -612,3 +612,49 @@ source-frame/subject compatibility and CLI behavior. Cached real integration
 verifies SPM anatomy and the existing fsaverage lead field without fetching.
 MRI_VALIDATION.md records executed checks and actual counts, including failures
 that remain scientific results rather than hidden repairs.
+
+## Milestone 8 — participant anatomy (v0.8.0)
+
+Verified 2026-11-07 on macOS ARM64, Python 3.12.2. Before implementation the
+unchanged v0.7.0 baseline passed all 421 tests (46.41 s). Final acceptance:
+`pytest -o addopts='' -q` passed **461 tests in 48.47 s**, including 40 added
+geometry, numerical, adversarial, CLI and integration tests and all 12 opt-in
+integration cases. All 33 existing test files are byte-identical to the baseline.
+There were 56 existing dependency/API deprecation warnings; no failures.
+Ruff and formatting passed (195 files), strict mypy passed (120 source files),
+and `pip check` found no broken requirements. Python 3.11 was not rerun locally.
+
+Executed all six workflows under `reports/milestone8-verified`: synthetic lab,
+coregistration, surface validation, participant EEG forward/inverse, uncertainty
+sweep, and separate MEG forward-only fallback. Actual EEG dimensions are 59×1,239,
+rank 58; MEG is 305×3,717 free components for 1,239 sources. Computational surface
+readiness is PASS; overall anatomical readiness is INDETERMINATE. Actual curated
+boundaries are FLASH, disclosed by a post-development amendment without altering
+the sealed original protocol. No measured MRI fiducial truth was invented.
+
+Synthetic BEM/analytical discrepancies decrease from 30.36% to 18.66%. Correct-model
+cortical simulation still has 28.315-mm peak error and −98.967% current bias;
+conductivity alternatives change the forward 14.50–37.33%. These unfavorable
+results are retained. The 48-trial real example uses audiovisual labels and
+separates phase-locked from trialwise power. Independent fresh MNE forward and
+direct inverse adapter comparisons pass; these are not anatomical validation.
+
+Final wall time/process peak RSS: synthetic 2.83 s/199.6 MiB; coregistration
+2.22 s/320.0 MiB; surface validation 1.91 s/250.6 MiB; individual EEG 3.07 s/540.8 MiB;
+21-case sweep 25.76 s/701.3 MiB; MEG 6.29 s/422.1 MiB. Cache state and individual
+stage times are recorded; these are representative local runs, not universal
+benchmarks. The explicitly fetched primary cache is approximately 2.7 GiB.
+
+Twenty figures were visually inspected. All 92 manifest-listed outputs passed
+SHA256 verification and 137 NPZ arrays loaded without pickle/object arrays or
+nonfinite numeric values. Figure data companions were checked. Each manifest
+matches the final Python source-tree SHA256. Runs precede the release commit and
+record the then-dirty baseline revision; the exact tree hash binds their code.
+The compact [verification receipt](../experiments/milestone8/verification.json)
+preserves parameters, asset hashes, versions, transforms, seeds, metrics and
+manifest hashes. Large assets and reports are intentionally ignored by Git.
+
+Milestone 6 integration and Milestone 7 SPM-foreground rejection passed unchanged.
+FreeSurfer watershed generation and ds000117 participant reconstruction were not
+executed; secondary metadata discovery was. No Milestone 9 or remote push.
+See [scientific validation and limitations](INDIVIDUAL_SOURCE_VALIDATION.md).

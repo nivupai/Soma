@@ -7,6 +7,7 @@ from typing import TYPE_CHECKING, Annotated
 
 import typer
 
+from soma.anatomy.cli import app as anatomy_app
 from soma.datasets.eegbci import fetch, load_recording
 from soma.datasets.registry import REGISTRY
 from soma.eeg.analysis import analyze_recording
@@ -23,6 +24,7 @@ eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
 app.add_typer(source_app, name="source")
 app.add_typer(mri_app, name="mri")
+app.add_typer(anatomy_app, name="anatomy")
 app.add_typer(datasets, name="datasets")
 app.add_typer(eeg, name="eeg")
 app.add_typer(experiments, name="experiments")

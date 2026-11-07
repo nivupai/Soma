@@ -24,7 +24,11 @@ def sealed_config(path: Path) -> dict[str, Any]:
     ).hexdigest()
     if path.with_suffix(".sha256").read_text().strip() != digest:
         raise ValueError("Source configuration differs from its sealed checksum")
-    if "protocol" in config:
+    if "individual_config" in config:
+        from soma.anatomy.config import frozen_config
+
+        frozen_config(path)
+    elif "protocol" in config:
         sealed_config(Path(config["protocol"]))
     else:
         receipt = json.loads(path.with_name("source-modeling-freeze.json").read_text())

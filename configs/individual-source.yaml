@@ -1,0 +1,51 @@
+protocol_version: 1
+baseline_revision: 8d54270
+dataset: mne-sample
+subject: sample
+root: data/raw/mne-sample
+mode: participant_matched
+modality: eeg
+bad_channel_policy: exclude_dataset_marked
+reference: average_retained_EEG
+ssp_policy: omit_MEG_SSP_for_EEG_only
+anatomy:
+  surface_origin: distributed_MNE_sample_watershed
+  bem_ico: 3
+  source_spacing: ico3
+  source_surface: white
+  conductivities_S_m: [0.3, 0.006, 0.3]
+  mindist_mm: 5.0
+coregistration:
+  primary: distributed_sample_head_to_MRI_transform
+  validation: independent_fiducial_SVD_and_headshape_ICP_comparison
+  primary_transform_replaced_by_ICP: false
+  fiducial_robust_fit: false
+  maximum_fiducial_residual_m: 0.02
+surface_acceptance:
+  topology_closed_connected_oriented: true
+  check_nonadjacent_intersections: true
+  minimum_separation_m: 0.0001
+  minimum_triangle_quality: 0.01
+  full_anatomical_truth_available: false
+  unsupported_required_checks: INDETERMINATE
+inverse:
+  method: MNE
+  depth: 0.8
+  lambda2: 0.1111111111111111
+  orientation: fixed_normal
+  use_cps: false
+  nave: 1
+  covariance: shrinkage_pre_stimulus_baseline
+  shrinkage: 0.1
+real_analysis:
+  raw_file: sample_audvis_filt-0-40_raw.fif
+  event_channel: STI 014
+  event_ids: {auditory_left: 1, auditory_right: 2, visual_left: 3, visual_right: 4}
+  time_window_s: [-0.2, 0.5]
+  baseline_s: [-0.2, 0.0]
+  reject_eeg_V: 0.00015
+  maximum_epochs_per_condition: 12
+  response_window_s: [0.05, 0.2]
+  primary_output: exploratory_phase_locked_MNE_and_trialwise_power_comparison
+seed: 42
+n_jobs: 1

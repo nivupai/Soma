@@ -1,0 +1,12 @@
+{
+  "frozen_at_utc": "2026-11-07T18:16:25.362887+00:00",
+  "baseline_revision": "8d54270",
+  "real_experiments_performed": false,
+  "files_sha256": {
+    "docs/INDIVIDUAL_HEAD_MODEL_PROTOCOL.md": "a120d1fa30a1b854cc3483c04606f0bb6e642129181152c36aaa98ccf17d7193",
+    "configs/individual-source.yaml": "c91b5e8bc8e925029ee0c9c73e516dca20121cca3f1b8f7b8e65b1265dccb272",
+    "configs/coregistration.yaml": "617199362fa70aa7926f024a5d3266cf9ecb0c5d09ab05bd6f6ce78329bdcd8d",
+    "configs/bem.yaml": "f69037234b9e0ebc75fc00c9c183b4b92d7fd917fb3870f4e3fd35f906853cbe",
+    "configs/source-uncertainty.yaml": "1d2963222c531c54bb5c303f0932973144d4b5c4b7cc1af3327873ab52efe611"
+  }
+}

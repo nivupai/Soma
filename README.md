@@ -3,10 +3,11 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.7.0 includes template EEG source modeling and structural MRI volumes,
-physical geometry, SimpleITK registration, label processing, surface extraction
-and mesh validation. Template maps remain exploratory; validated individual
-EEG/MRI anatomical modeling is future work.
+v0.8.0 includes template and participant-matched EEG source modeling,
+structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
+experiments. Participant results remain conditional research computations:
+independent anatomical readiness is INDETERMINATE. See
+[Milestone 8 validation](docs/INDIVIDUAL_SOURCE_VALIDATION.md).
 
 Python 3.11–3.12:
 
@@ -271,3 +272,20 @@ foreground surface fails topology checks and is **not BEM ready**. Synthetic
 closed nested shells pass their scoped geometric checks. No production brain/
 tissue segmentation, individual EEG/MRI coregistration, new BEM solver or
 Milestone 8 implementation is included.
+
+## Participant MRI/EEG research workflow (v0.8.0)
+
+```bash
+soma anatomy inspect --dataset mne-sample --fetch  # explicit full sample archive
+sh experiments/milestone8/run.sh reports/my-m8-run
+soma anatomy inspect --dataset ds000117 --discover  # metadata only
+soma anatomy inspect --dataset ds000117 --subject sub-01
+```
+
+The synthetic command runs offline: `soma anatomy experiment synthetic --seed 42
+--output reports/my-synthetic-head`. Real commands never fetch implicitly.
+The [sealed protocol](docs/INDIVIDUAL_HEAD_MODEL_PROTOCOL.md),
+[disclosed amendment](docs/INDIVIDUAL_HEAD_MODEL_AMENDMENT.md),
+[coregistration methods](docs/COREGISTRATION_METHODS.md),
+[BEM checks](docs/BEM_GEOMETRY_VALIDATION.md) and
+[uncertainty methods](docs/ANATOMICAL_UNCERTAINTY.md) define scope and limitations.

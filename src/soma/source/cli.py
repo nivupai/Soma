@@ -7,7 +7,8 @@ from typing import Annotated
 import typer
 
 app = typer.Typer(
-    help="Template EEG source modeling; anatomy fetch is explicit", no_args_is_help=True
+    help=("Template and participant EEG source modeling; anatomy fetch is explicit"),
+    no_args_is_help=True,
 )
 
 
@@ -18,7 +19,7 @@ def _echo_result(result: dict[str, object], output: Path) -> None:
                 "status": result.get("status", "complete"),
                 "output": str(output),
                 "summary": str(output / "summary.json"),
-                "runtime_s": result.get("runtime_s"),
+                "runtime_s": result.get("runtime_s", result.get("wall_s")),
             }
         )
     )
@@ -131,5 +132,41 @@ def benchmark_command(output: Path = Path("reports/source-benchmark")) -> None:
                 {"output": str(output), "fresh_forward_s": result["fresh_bem_forward_runtime_s"]}
             )
         )
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("build-individual")
+def individual_command(
+    config: Path = Path("configs/individual-source.yaml"),
+    output: Path = Path("reports/individual-source"),
+    meg_fallback: bool = False,
+) -> None:
+    """Matched MRI/EEG conditional research workflow; explicit MEG fallback is
+    separately labeled."""
+    try:
+        if meg_fallback:
+            from soma.source.meg_matched import build_meg_fallback
+
+            value = build_meg_fallback(config, output)
+        else:
+            from soma.anatomy.workflow import build_individual_workflow
+
+            value = build_individual_workflow(config, output)
+        _echo_result(value, output)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("uncertainty")
+def uncertainty_command(
+    config: Path = Path("configs/source-uncertainty.yaml"),
+    output: Path = Path("reports/source-uncertainty"),
+) -> None:
+    """Recompute matched forwards for geometry/conductivity changes; fixed inverse policy."""
+    from soma.anatomy.uncertainty import uncertainty_workflow
+
+    try:
+        _echo_result(uncertainty_workflow(config, output), output)
     except Exception as exc:
         _fail(exc)

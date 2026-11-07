@@ -1,0 +1,1903 @@
+{
+  "milestone": 8,
+  "version": "0.8.0",
+  "verified_at_utc": "2026-11-07T19:06:54.763427+00:00",
+  "baseline_revision": "8d54270",
+  "source_tree_sha256": "795425efc68426463ff08a3ac7be871dec7fffe84dbd9a533a586c0e154046c1",
+  "execution_revision_note": "Runs precede release commit; exact source-tree hash binds executed code. No push.",
+  "baseline_tests": {
+    "passed": 421,
+    "seconds": 46.41
+  },
+  "acceptance_tests": {
+    "command": "pytest -o addopts='' -q",
+    "passed": 461,
+    "added": 40,
+    "seconds": 48.47,
+    "warnings": 56,
+    "old_test_files_unchanged": 33,
+    "integration_tests_included": 12
+  },
+  "static_checks": {
+    "ruff": "pass",
+    "format": "195 files formatted",
+    "mypy": "120 source files pass strict checking",
+    "pip_check": "no broken requirements"
+  },
+  "environment": {
+    "python": "3.12.2",
+    "libraries": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mne": "1.13.2",
+      "neurodsp": "2.3.0",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.2",
+      "typer": "0.28.0",
+      "nibabel": "5.4.2",
+      "SimpleITK": "2.5.7",
+      "scikit-image": "0.26.0"
+    },
+    "platform": "macOS-15.7-arm64-arm-64bit",
+    "machine": "arm64",
+    "MNE_workers": 1,
+    "OPENBLAS_NUM_THREADS": 1
+  },
+  "protocol": {
+    "frozen_at_utc": "2026-11-07T18:16:25.362887+00:00",
+    "baseline_revision": "8d54270",
+    "real_experiments_performed": false,
+    "files_sha256": {
+      "docs/INDIVIDUAL_HEAD_MODEL_PROTOCOL.md": "a120d1fa30a1b854cc3483c04606f0bb6e642129181152c36aaa98ccf17d7193",
+      "configs/individual-source.yaml": "c91b5e8bc8e925029ee0c9c73e516dca20121cca3f1b8f7b8e65b1265dccb272",
+      "configs/coregistration.yaml": "617199362fa70aa7926f024a5d3266cf9ecb0c5d09ab05bd6f6ce78329bdcd8d",
+      "configs/bem.yaml": "f69037234b9e0ebc75fc00c9c183b4b92d7fd917fb3870f4e3fd35f906853cbe",
+      "configs/source-uncertainty.yaml": "1d2963222c531c54bb5c303f0932973144d4b5c4b7cc1af3327873ab52efe611"
+    }
+  },
+  "amendment": {
+    "recorded_at_utc": "2026-11-07T18:44:44.732044+00:00",
+    "amendment_document": "docs/INDIVIDUAL_HEAD_MODEL_AMENDMENT.md",
+    "sha256": "2ee69cce8d3e8c77d0a9c3142ad4c87bdae759bd505d597304c25244ac585fa8",
+    "development_experiments_already_performed": true,
+    "original_protocol_unchanged": true,
+    "resolved_surface_origin": "distributed_MNE_sample_FLASH_via_symlinks"
+  },
+  "dataset": {
+    "MRI_geometry": {
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "voxel_size_mm": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "voxel_to_scanner_RAS_mm": [
+        [
+          -1.0,
+          1.1548402056860141e-07,
+          -1.918524645816433e-07,
+          122.72639465332031
+        ],
+        [
+          8.568169107547874e-08,
+          1.5716082657490915e-08,
+          1.0,
+          -118.96092987060547
+        ],
+        [
+          1.4901164746561335e-08,
+          -1.0,
+          6.402840924124575e-09,
+          100.7120361328125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "voxel_to_MNE_MRI_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -128.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "MNE_MRI_units_in_models": "m"
+    },
+    "native_surface_inspection": {
+      "inner_skull": {
+        "vertex_count": 2562,
+        "face_count": 5120,
+        "finite_vertices": true,
+        "coordinate_units_on_disk": "mm",
+        "frame": "FreeSurfer MRI surface RAS",
+        "scope": "inventory only; full geometry QC applies to solver ico3 surfaces"
+      },
+      "outer_skull": {
+        "vertex_count": 2562,
+        "face_count": 5120,
+        "finite_vertices": true,
+        "coordinate_units_on_disk": "mm",
+        "frame": "FreeSurfer MRI surface RAS",
+        "scope": "inventory only; full geometry QC applies to solver ico3 surfaces"
+      },
+      "outer_skin": {
+        "vertex_count": 2562,
+        "face_count": 5120,
+        "finite_vertices": true,
+        "coordinate_units_on_disk": "mm",
+        "frame": "FreeSurfer MRI surface RAS",
+        "scope": "inventory only; full geometry QC applies to solver ico3 surfaces"
+      }
+    },
+    "dataset": "mne-sample",
+    "subject": "sample",
+    "mode": "participant_matched",
+    "identity_evidence": "official curated matching MEG/sample and subjects/sample; distributed source subject_his_id=sample",
+    "raw_subject_info": null,
+    "identity_limitation": "recording subject_info absent; not independently authenticated identity",
+    "source_URL": "https://osf.io/download/86qa2?version=6",
+    "archive_MD5": "e8f30c4516abdc12a0c08e6bae57409c",
+    "version": "0.12",
+    "license_scope": "official MNE sample educational/tutorial data; not hardware/MRI system performance evaluation",
+    "license_source": "https://mne.tools/stable/documentation/datasets.html#sample",
+    "assets_sha256": {
+      "MEG/sample/sample_audvis_filt-0-40_raw.fif": "327e163c9d4ee6855d41d887d86cec3fa7d6dea3c870e8263edf802889b4f844",
+      "MEG/sample/sample_audvis_raw-trans.fif": "cc3cace84721aaa30b4d277a387b00a19e84890fa897bd548a153bc588e9ad47",
+      "subjects/sample/mri/T1.mgz": "93ad7e7de63375511af08c5a123e7bf1de69d043e16250ede8179294ce43dd91",
+      "subjects/sample/mri/transforms/talairach.xfm": "cb91021e61481f6160f6951f04af5aadc47142bd8d2806809d82a4a02f23b3e1",
+      "subjects/sample/bem/sample-oct-6-src.fif": "3df68067b1b55179f6dad57583be342d2f23e4990d9b2b4954969b110491e648",
+      "subjects/sample/bem/inner_skull.surf": "de11c0e08ed1249d0651c6aad70207302b8ff80cef62dc8d152f4ccd30b45f6a",
+      "subjects/sample/bem/outer_skull.surf": "6e6a10a6319887c8447875fc5daf0bc50be4c28435da254e95ad26f823bee7d6",
+      "subjects/sample/bem/outer_skin.surf": "6abd0d0093297bd76686928f386542ab2d3c94bc5c800e262550d7e1099b91f2",
+      "subjects/sample/surf/lh.white": "2146ad8a31cc34fab5c108432d13f301173ed82a071ff78c74395d2dc0e1ea42",
+      "subjects/sample/surf/rh.white": "582d1220ab57212390f345d44e1c2de925efb89cbb9624c118a1d5adc668b2ba"
+    },
+    "digitization_counts": {
+      "cardinal": 3,
+      "HPI": 4,
+      "EEG": 61,
+      "headshape_EXTRA": 78
+    },
+    "EEG_total": 60,
+    "EEG_retained": 59,
+    "EEG_digitization_correspondence_max_m": 0.0,
+    "EEG_names": [
+      "EEG 001",
+      "EEG 002",
+      "EEG 003",
+      "EEG 004",
+      "EEG 005",
+      "EEG 006",
+      "EEG 007",
+      "EEG 008",
+      "EEG 009",
+      "EEG 010",
+      "EEG 011",
+      "EEG 012",
+      "EEG 013",
+      "EEG 014",
+      "EEG 015",
+      "EEG 016",
+      "EEG 017",
+      "EEG 018",
+      "EEG 019",
+      "EEG 020",
+      "EEG 021",
+      "EEG 022",
+      "EEG 023",
+      "EEG 024",
+      "EEG 025",
+      "EEG 026",
+      "EEG 027",
+      "EEG 028",
+      "EEG 029",
+      "EEG 030",
+      "EEG 031",
+      "EEG 032",
+      "EEG 033",
+      "EEG 034",
+      "EEG 035",
+      "EEG 036",
+      "EEG 037",
+      "EEG 038",
+      "EEG 039",
+      "EEG 040",
+      "EEG 041",
+      "EEG 042",
+      "EEG 043",
+      "EEG 044",
+      "EEG 045",
+      "EEG 046",
+      "EEG 047",
+      "EEG 048",
+      "EEG 049",
+      "EEG 050",
+      "EEG 051",
+      "EEG 052",
+      "EEG 054",
+      "EEG 055",
+      "EEG 056",
+      "EEG 057",
+      "EEG 058",
+      "EEG 059",
+      "EEG 060"
+    ],
+    "bad_channels": [
+      "MEG 2443",
+      "EEG 053"
+    ],
+    "surface_origin": "FLASH-derived participant surfaces via default symlinks",
+    "surface_products": {
+      "inner_skull": {
+        "resolved_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mne-sample/MNE-sample-data/subjects/sample/bem/flash/inner_skull.surf",
+        "default_equals_FLASH": true
+      },
+      "outer_skull": {
+        "resolved_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mne-sample/MNE-sample-data/subjects/sample/bem/flash/outer_skull.surf",
+        "default_equals_FLASH": true
+      },
+      "outer_skin": {
+        "resolved_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mne-sample/MNE-sample-data/subjects/sample/bem/flash/outer_skin.surf",
+        "default_equals_FLASH": true
+      }
+    },
+    "MRI_fiducial_file_present": false,
+    "MRI_fiducial_comparison": "MNI-derived initialization estimate only, no manually digitized MRI fiducial truth",
+    "head_to_MRI_m": [
+      [
+        0.9993095397949219,
+        0.012759342789649963,
+        0.034894198179244995,
+        0.0020699098240584135
+      ],
+      [
+        0.009984787553548813,
+        0.8124047517776489,
+        -0.5830085277557373,
+        0.011302143335342407
+      ],
+      [
+        -0.03578702360391617,
+        0.5829542875289917,
+        0.8117163777351379,
+        -0.02755521982908249
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "available_modalities": [
+      "EEG",
+      "MEG",
+      "structural MRI"
+    ],
+    "used_modality": "EEG"
+  },
+  "secondary_metadata": {
+    "dataset": "ds000117",
+    "description": {
+      "Name": "Multisubject, multimodal face processing",
+      "License": "CC0",
+      "Authors": [
+        "Wakeman, DG",
+        "Ap\u0161valka, D",
+        "Henson, RN"
+      ],
+      "Acknowledgements": "This work was supported by the UK Medical Research Council (SUAG/010\nRG91365) and Elekta Ltd.",
+      "HowToAcknowledge": "Cite this paper: https://www.ncbi.nlm.nih.gov/pubmed/25977808 and consider including the following message: 'This data was obtained from the OpenNeuro database. Its accession number is ds000117'",
+      "Funding": [
+        "UK Medical Research Council (SUAG/010 RG91365), Elekta Ltd."
+      ],
+      "ReferencesAndLinks": [
+        "https://www.ncbi.nlm.nih.gov/pubmed/25977808",
+        "https://openfmri.org/dataset/ds000117/",
+        "ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/Publications/"
+      ],
+      "BIDSVersion": "1.8.0",
+      "DatasetDOI": "doi:10.18112/openneuro.ds000117.v2.0.0"
+    },
+    "license": "CC0",
+    "license_scope": "current BIDS snapshot, not historical OpenfMRI release",
+    "repository_tree_sha": "74fb8db3352f0cf425f11ebeba6c7a2aa1974c0e",
+    "metadata_source": "https://api.github.com/repos/OpenNeuroDatasets/ds000117",
+    "subjects": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-07",
+      "sub-08",
+      "sub-09",
+      "sub-10",
+      "sub-11",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-15",
+      "sub-16"
+    ],
+    "downloaded_data_files": false,
+    "individual_model_ready": false,
+    "missing_for_individual_forward": "subject-specific reconstructed boundaries/source space and justified sensor\u2194MRI transform must be supplied and validated",
+    "nonparticipant_recordings": [
+      "sub-emptyroom"
+    ]
+  },
+  "coregistration": {
+    "fiducial_origin": {
+      "names": [
+        "LPA",
+        "nasion",
+        "RPA"
+      ],
+      "MRI_fiducials_origin": "MNE get_mni_fiducials, derived via participant talairach; not manual anatomical truth"
+    },
+    "registration_wall_s": {
+      "weighted_fiducial_SVD": 0.00030758301727473736,
+      "ICP": 0.0019315839745104313
+    },
+    "primary_head_to_MRI_m": [
+      [
+        0.9993095397949219,
+        0.012759342789649963,
+        0.034894198179244995,
+        0.0020699098240584135
+      ],
+      [
+        0.009984787553548813,
+        0.8124047517776489,
+        -0.5830085277557373,
+        0.011302143335342407
+      ],
+      [
+        -0.03578702360391617,
+        0.5829542875289917,
+        0.8117163777351379,
+        -0.02755521982908249
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "independent_MRI_fiducial_truth_available": false,
+    "primary_to_estimated_MRI_fiducials_residual_m": [
+      0.023508468941186828,
+      0.010030402991114695,
+      0.027356721010014556
+    ],
+    "fiducial_20mm_truth_gate": "INDETERMINATE: no measured MRI target fiducials",
+    "SVD_fit": {
+      "method": "weighted_SVD_Procrustes",
+      "weighted_RMS_m": 0.008064069441580168,
+      "max_residual_m": 0.009343635694211755,
+      "singular_values": [
+        0.003954097087205958,
+        0.0025837254560045625,
+        9.787442791654587e-28
+      ],
+      "rank": 2,
+      "reflection_identifiable": false,
+      "determinant": 0.9999999999999987,
+      "source_frame": "head",
+      "destination_frame": "mri",
+      "units": "m"
+    },
+    "SVD_transform_m": [
+      [
+        0.9984296119077669,
+        0.055860509199217534,
+        0.004232443467978856,
+        -0.0020580813754915175
+      ],
+      [
+        -0.04846005391209017,
+        0.8991170996090193,
+        -0.4350173150180359,
+        0.0008752327419008464
+      ],
+      [
+        -0.028105751022572217,
+        0.4341290645679785,
+        0.9004121401096211,
+        -0.006926220252966011
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "SVD_residuals_to_estimated_targets_m": [
+      0.007201613064648138,
+      0.0074780270898695276,
+      0.009343635694211755
+    ],
+    "established_MNE_SVD_matrix_max_difference": 6.661338147750939e-16,
+    "ICP": {
+      "method": "trimmed_nearest_vertex_ICP",
+      "distance_kind": "nearest_scalp_vertex_not_exact_triangle_distance",
+      "trace_RMS_m": [
+        0.005767414949752283,
+        0.005578016448415766,
+        0.0054858931661502025,
+        0.005411744723838186,
+        0.005403821049352796,
+        0.005403821049352796
+      ],
+      "iterations": 6,
+      "trim_fraction": 0.9,
+      "measurement_kind": "digitized_headshape",
+      "fit_RMS_m": 0.00540382104935279,
+      "anatomical_ground_truth_claim": false
+    },
+    "ICP_transform_m": [
+      [
+        0.9997997366300648,
+        0.005591658601614263,
+        0.01921412690448892,
+        0.003841809953427996
+      ],
+      [
+        0.006611238965686239,
+        0.8139568217939354,
+        -0.580887857821458,
+        0.009802263839556362
+      ],
+      [
+        -0.01888760227898835,
+        0.5808984493841965,
+        0.8137568066374864,
+        -0.025820055663620046
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "primary_headshape_RMS_m": 0.004651071971933368,
+    "ICP_headshape_RMS_m": 0.00459811650386979,
+    "primary_transform_replaced": false,
+    "fit_is_not_true_registration_error": true
+  },
+  "readiness": {
+    "status": "INDETERMINATE",
+    "checks": {
+      "topology": {
+        "status": "PASS",
+        "supported": true
+      },
+      "geometry": {
+        "status": "PASS",
+        "supported": true
+      },
+      "anatomical_evidence": {
+        "status": "INDETERMINATE",
+        "supported": false
+      },
+      "coordinate_consistency": {
+        "status": "PASS",
+        "supported": true
+      },
+      "sensor_compatibility": {
+        "status": "PASS",
+        "supported": true
+      },
+      "numerical_mesh_quality": {
+        "status": "PASS",
+        "supported": true
+      }
+    },
+    "computational_readiness": "PASS",
+    "subject": "sample",
+    "boundaries": [
+      "inner_skull",
+      "outer_skull",
+      "outer_scalp"
+    ],
+    "nesting": {
+      "geometric_candidate": true,
+      "pairs": [
+        {
+          "minimum_triangle_distance_m": 0.0032376010535365026,
+          "intersecting_or_touching_triangle_pairs": 0,
+          "candidate_pairs": 30573,
+          "tolerance_m": 1e-08,
+          "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+          "adjacent_triangles_excluded": false,
+          "extrema_inside": true,
+          "contained": true
+        },
+        {
+          "minimum_triangle_distance_m": 0.003475712572339602,
+          "intersecting_or_touching_triangle_pairs": 0,
+          "candidate_pairs": 42323,
+          "tolerance_m": 1e-08,
+          "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+          "adjacent_triangles_excluded": false,
+          "extrema_inside": true,
+          "contained": true
+        }
+      ],
+      "required_separation_m": 0.0001,
+      "physiological_conductor_validated": false,
+      "interpretation": "geometric checks only; masks are not validated anatomical conductivity interfaces"
+    },
+    "minimum_separation_m": 0.0001,
+    "intersection_tolerance_m": 1e-08,
+    "minimum_triangle_quality": 0.01,
+    "anatomical_certification": false,
+    "clinical_certification": false,
+    "unsupported_required_checks": [
+      "anatomical_evidence"
+    ],
+    "surface_provenance": {
+      "source": "distributed participant FLASH-derived boundaries via default symlinks",
+      "geometry_preparation": "MNE ico3",
+      "assets_sha256": {
+        "subjects/sample/bem/inner_skull.surf": "de11c0e08ed1249d0651c6aad70207302b8ff80cef62dc8d152f4ccd30b45f6a",
+        "subjects/sample/bem/outer_skull.surf": "6e6a10a6319887c8447875fc5daf0bc50be4c28435da254e95ad26f823bee7d6",
+        "subjects/sample/bem/outer_skin.surf": "6abd0d0093297bd76686928f386542ab2d3c94bc5c800e262550d7e1099b91f2"
+      }
+    }
+  },
+  "solver_meshes": [
+    {
+      "vertex_count": 642,
+      "face_count": 1280,
+      "edge_count": 1920,
+      "degenerate_triangles": 0,
+      "duplicate_faces": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "nonmanifold_vertices": 0,
+      "inconsistent_oriented_edges": 0,
+      "connected_components": 1,
+      "euler_characteristic": 2,
+      "surface_area_m2": 0.07065060861001864,
+      "signed_volume_m3": 0.001578195080584533,
+      "enclosed_volume_m3": 0.001578195080584533,
+      "volume_reliable_under_checks": true,
+      "outward_global_winding": true,
+      "triangle_quality_min": 0.9009801397889677,
+      "triangle_quality_median": 0.9987949715932165,
+      "self_intersection_check": {
+        "minimum_triangle_distance_m": null,
+        "intersecting_or_touching_triangle_pairs": 0,
+        "candidate_pairs": 1373,
+        "tolerance_m": 1e-08,
+        "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+        "adjacent_triangles_excluded": true
+      },
+      "geometrically_valid_under_checks": true,
+      "scope": "single connected boundary; nonadjacent intersections checked, adjacent face degeneracy and winding checked; not general solid certification"
+    },
+    {
+      "vertex_count": 642,
+      "face_count": 1280,
+      "edge_count": 1920,
+      "degenerate_triangles": 0,
+      "duplicate_faces": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "nonmanifold_vertices": 0,
+      "inconsistent_oriented_edges": 0,
+      "connected_components": 1,
+      "euler_characteristic": 2,
+      "surface_area_m2": 0.08267604682033217,
+      "signed_volume_m3": 0.002070790678581504,
+      "enclosed_volume_m3": 0.002070790678581504,
+      "volume_reliable_under_checks": true,
+      "outward_global_winding": true,
+      "triangle_quality_min": 0.8551051150837395,
+      "triangle_quality_median": 0.998215006257581,
+      "self_intersection_check": {
+        "minimum_triangle_distance_m": null,
+        "intersecting_or_touching_triangle_pairs": 0,
+        "candidate_pairs": 3139,
+        "tolerance_m": 1e-08,
+        "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+        "adjacent_triangles_excluded": true
+      },
+      "geometrically_valid_under_checks": true,
+      "scope": "single connected boundary; nonadjacent intersections checked, adjacent face degeneracy and winding checked; not general solid certification"
+    },
+    {
+      "vertex_count": 642,
+      "face_count": 1280,
+      "edge_count": 1920,
+      "degenerate_triangles": 0,
+      "duplicate_faces": 0,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "nonmanifold_vertices": 0,
+      "inconsistent_oriented_edges": 0,
+      "connected_components": 1,
+      "euler_characteristic": 2,
+      "surface_area_m2": 0.14619559061635867,
+      "signed_volume_m3": 0.0047184621587262315,
+      "enclosed_volume_m3": 0.0047184621587262315,
+      "volume_reliable_under_checks": true,
+      "outward_global_winding": true,
+      "triangle_quality_min": 0.7422784633049132,
+      "triangle_quality_median": 0.9896166347697067,
+      "self_intersection_check": {
+        "minimum_triangle_distance_m": null,
+        "intersecting_or_touching_triangle_pairs": 0,
+        "candidate_pairs": 11440,
+        "tolerance_m": 1e-08,
+        "method": "centroid-sphere conservative broad phase; exact triangle feature distances",
+        "adjacent_triangles_excluded": true
+      },
+      "geometrically_valid_under_checks": true,
+      "scope": "single connected boundary; nonadjacent intersections checked, adjacent face degeneracy and winding checked; not general solid certification"
+    }
+  ],
+  "forward": {
+    "shape": [
+      59,
+      1239
+    ],
+    "rank": 58,
+    "orientation": "signed fixed cortical normals; native free surface forward retained for depth weighting",
+    "assumed_conductivities_scalp_skull_brain_S_m": [
+      0.3,
+      0.006,
+      0.3
+    ]
+  },
+  "real_EEG": {
+    "conditions": [
+      {
+        "condition": "auditory_left",
+        "event_code": 1,
+        "accepted": 12,
+        "evoked_linearity_relative_error": 6.8295754664906265e-16,
+        "evoked_to_trialwise_mu_power_ratio": 0.11775992320996666,
+        "source_RMS_response_peak_Am": 1.13117068088628e-09,
+        "interpretation": "exploratory phase-locked response and separate trialwise power; no real localization truth"
+      },
+      {
+        "condition": "auditory_right",
+        "event_code": 2,
+        "accepted": 12,
+        "evoked_linearity_relative_error": 6.396345690857379e-16,
+        "evoked_to_trialwise_mu_power_ratio": 0.09776496980721455,
+        "source_RMS_response_peak_Am": 1.8194177777158102e-09,
+        "interpretation": "exploratory phase-locked response and separate trialwise power; no real localization truth"
+      },
+      {
+        "condition": "visual_left",
+        "event_code": 3,
+        "accepted": 12,
+        "evoked_linearity_relative_error": 6.043239448263326e-16,
+        "evoked_to_trialwise_mu_power_ratio": 0.24846027472758064,
+        "source_RMS_response_peak_Am": 4.616103117841155e-09,
+        "interpretation": "exploratory phase-locked response and separate trialwise power; no real localization truth"
+      },
+      {
+        "condition": "visual_right",
+        "event_code": 4,
+        "accepted": 12,
+        "evoked_linearity_relative_error": 6.428012809547725e-16,
+        "evoked_to_trialwise_mu_power_ratio": 0.28802772055764064,
+        "source_RMS_response_peak_Am": 3.005080870315883e-09,
+        "interpretation": "exploratory phase-locked response and separate trialwise power; no real localization truth"
+      }
+    ],
+    "noise": {
+      "kind": "pre_stimulus_neural_background_not_pure_instrument_noise",
+      "rank": 58,
+      "eigenvalues": [
+        5.497375622106753e-27,
+        2.1856233009417314e-12,
+        2.196774981102427e-12,
+        2.206047326485726e-12,
+        2.2186192948512842e-12,
+        2.2400762717932968e-12,
+        2.2635185966449874e-12,
+        2.2866836820921995e-12,
+        2.2986183776747443e-12,
+        2.320960466683118e-12,
+        2.3218818730537374e-12,
+        2.356250314386377e-12,
+        2.3863315426182124e-12,
+        2.393473221842396e-12,
+        2.4509948000100023e-12,
+        2.5046484309315786e-12,
+        2.5368391282738264e-12,
+        2.5453953328716557e-12,
+        2.6030381987573263e-12,
+        2.6585850329056957e-12,
+        2.6696123994448723e-12,
+        2.7766504282983445e-12,
+        2.859924136333573e-12,
+        2.9399385721476535e-12,
+        3.1519762253138386e-12,
+        3.17541203117333e-12,
+        3.348722299699493e-12,
+        3.790138852488544e-12,
+        4.1359653671777055e-12,
+        4.255151361516601e-12,
+        4.483542408363243e-12,
+        4.806322088074099e-12,
+        4.9407460566317845e-12,
+        5.010466716732739e-12,
+        5.253459907957571e-12,
+        5.806944689398795e-12,
+        6.308826666202696e-12,
+        6.985224501749128e-12,
+        8.193475799778632e-12,
+        8.312053369342119e-12,
+        8.67496552079664e-12,
+        8.934436790614666e-12,
+        1.0625049487471e-11,
+        1.1031596843910079e-11,
+        1.1903985221504045e-11,
+        1.2924929810815619e-11,
+        1.4441025909104334e-11,
+        1.5550832822260503e-11,
+        1.6895292860316305e-11,
+        2.0869270093015423e-11,
+        2.4652047426208823e-11,
+        2.7592618490230985e-11,
+        3.4355528575640425e-11,
+        3.654085860715153e-11,
+        4.177060259016248e-11,
+        9.71531678495685e-11,
+        1.1630283700181254e-10,
+        1.4637577865582989e-10,
+        4.2630072525749635e-10
+      ],
+      "retained_condition": 195.0476667565787,
+      "whitening_identity_error": 6.878357487765727e-14,
+      "reference_nullity": 1
+    },
+    "event_semantics": "MNE sample audiovisual task, not PhysioNet motor imagery",
+    "MNE_reference_adapter_relative_error": 0.0,
+    "nave": 1,
+    "source_units": "A m",
+    "power_units": "(A m)^2",
+    "trialwise_power_band_Hz": [
+      8,
+      13
+    ],
+    "Welch_window_samples": 106,
+    "Welch_frequency_resolution_Hz": 1.4165447882886202,
+    "power_comparison_scope": "short audiovisual epochs; phase and noise average away; not motor imagery",
+    "real_source_truth_available": false
+  },
+  "synthetic": {
+    "seed": 42,
+    "alignment": [
+      {
+        "measurement_std_m": 0.0,
+        "fit_RMS_m": 1.947705154527678e-17,
+        "translation_error_m": 2.6020852139652106e-18,
+        "rotation_error_deg": 7.194987636981187e-15,
+        "median_landmark_TRE_m": 1.6369922760103165e-17,
+        "max_landmark_TRE_m": 2.943923360032078e-17,
+        "affine_linear_error_frobenius": 2.992586547019258e-16,
+        "inverse_consistency_error": 2.5296072461304636e-16,
+        "relative_forward_change": 2.955430541799818e-16
+      },
+      {
+        "measurement_std_m": 0.001,
+        "fit_RMS_m": 0.0010665510258861227,
+        "translation_error_m": 0.0009654100682698664,
+        "rotation_error_deg": 1.0169406951902509,
+        "median_landmark_TRE_m": 0.0011240179053038151,
+        "max_landmark_TRE_m": 0.0016177389421408808,
+        "affine_linear_error_frobenius": 0.02510049532486654,
+        "inverse_consistency_error": 3.155481530599373e-16,
+        "relative_forward_change": 0.011707973803941151
+      },
+      {
+        "measurement_std_m": 0.003,
+        "fit_RMS_m": 0.003167137266792452,
+        "translation_error_m": 0.002915174115469422,
+        "rotation_error_deg": 3.118724127163071,
+        "median_landmark_TRE_m": 0.0034041169699823197,
+        "max_landmark_TRE_m": 0.004978287298292372,
+        "affine_linear_error_frobenius": 0.07696897618375118,
+        "inverse_consistency_error": 4.906742569692937e-17,
+        "relative_forward_change": 0.03680949162421895
+      },
+      {
+        "measurement_std_m": 0.005,
+        "fit_RMS_m": 0.005221969113135615,
+        "translation_error_m": 0.0048901762301414905,
+        "rotation_error_deg": 5.315000271948413,
+        "median_landmark_TRE_m": 0.005726127059244882,
+        "max_landmark_TRE_m": 0.00851218618621953,
+        "affine_linear_error_frobenius": 0.13114143419983923,
+        "inverse_consistency_error": 2.272958486979947e-16,
+        "relative_forward_change": 0.0629284731165928
+      }
+    ],
+    "headshape_alignment": [
+      {
+        "measurement_std_m": 0.0,
+        "fit_RMS_m": 6.110541385563096e-17,
+        "translation_error_m": 1.7018866238460528e-17,
+        "rotation_error_deg": 1.3997777997155045e-14,
+        "median_landmark_TRE_m": 5.692959673613669e-17,
+        "max_landmark_TRE_m": 9.047210765559601e-17,
+        "affine_linear_error_frobenius": 1.164845824162759e-15,
+        "inverse_consistency_error": 1.5959695356067807e-16,
+        "relative_forward_change": 4.1431370559864154e-16,
+        "scope": "initialized at truth; spherical scalp cannot establish rotation truth"
+      },
+      {
+        "measurement_std_m": 0.001,
+        "fit_RMS_m": 0.0018151750311804341,
+        "translation_error_m": 0.0002558314547877746,
+        "rotation_error_deg": 0.19530568070770804,
+        "median_landmark_TRE_m": 0.00032300516102950696,
+        "max_landmark_TRE_m": 0.0005427188788990443,
+        "affine_linear_error_frobenius": 0.004820665869119225,
+        "inverse_consistency_error": 6.938902374231531e-17,
+        "relative_forward_change": 0.005268168906563308,
+        "scope": "initialized at truth; spherical scalp cannot establish rotation truth"
+      },
+      {
+        "measurement_std_m": 0.003,
+        "fit_RMS_m": 0.00544566657775962,
+        "translation_error_m": 0.0007673439247901213,
+        "rotation_error_deg": 0.5871746864461691,
+        "median_landmark_TRE_m": 0.0009685294389520229,
+        "max_landmark_TRE_m": 0.0016291187352468074,
+        "affine_linear_error_frobenius": 0.014492983223557774,
+        "inverse_consistency_error": 3.9262043080280774e-17,
+        "relative_forward_change": 0.015812248292686733,
+        "scope": "initialized at truth; spherical scalp cannot establish rotation truth"
+      }
+    ],
+    "negative_controls": {
+      "incorrect_correspondence": {
+        "rejected": true,
+        "reason": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      "nonmanifold_boundary": "FAIL"
+    },
+    "discretization_vs_analytical": [
+      {
+        "subdivisions": 1,
+        "relative_BEM_vs_analytical_error": 0.3036342493723366,
+        "discretization_role": "separate from registration error"
+      },
+      {
+        "subdivisions": 2,
+        "relative_BEM_vs_analytical_error": 0.1866369958230243,
+        "discretization_role": "separate from registration error"
+      }
+    ],
+    "derivative_convergence": {
+      "translation_x": [
+        {
+          "step": 0.001,
+          "derivative_norm": 7708.966761034914,
+          "relative_change_from_previous": null
+        },
+        {
+          "step": 0.0005,
+          "derivative_norm": 7708.966761034888,
+          "relative_change_from_previous": 8.563826443863028e-14
+        },
+        {
+          "step": 0.00025,
+          "derivative_norm": 7708.966761034781,
+          "relative_change_from_previous": 1.9739274450532578e-13
+        }
+      ],
+      "rotation_z": [
+        {
+          "step": 0.017453292519943295,
+          "derivative_norm": 787.5464126012704,
+          "relative_change_from_previous": null
+        },
+        {
+          "step": 0.008726646259971648,
+          "derivative_norm": 787.5937678539815,
+          "relative_change_from_previous": 0.016669923470018354
+        },
+        {
+          "step": 0.004363323129985824,
+          "derivative_norm": 784.5846377821803,
+          "relative_change_from_previous": 0.02099496284522971
+        }
+      ],
+      "electrode0_x": [
+        {
+          "step": 0.001,
+          "derivative_norm": 294.1284740252992,
+          "relative_change_from_previous": null
+        },
+        {
+          "step": 0.0005,
+          "derivative_norm": 294.12847402528297,
+          "relative_change_from_previous": 3.9136381109658413e-13
+        },
+        {
+          "step": 0.00025,
+          "derivative_norm": 294.12847402526626,
+          "relative_change_from_previous": 6.589806495387042e-13
+        }
+      ],
+      "skull_sigma": [
+        {
+          "step": 0.0006,
+          "derivative_norm": 55353.69383404501,
+          "relative_change_from_previous": null
+        },
+        {
+          "step": 0.0003,
+          "derivative_norm": 55227.98110579609,
+          "relative_change_from_previous": 0.0024065937737574004
+        },
+        {
+          "step": 0.00015,
+          "derivative_norm": 55196.683740901695,
+          "relative_change_from_previous": 0.000599530011316639
+        }
+      ]
+    },
+    "local_propagation": {
+      "parameter": "head_to_MRI_translation_x",
+      "std_m": 0.0002,
+      "repetitions": 20,
+      "relative_realized_linearization_error": 3.315543205947458e-13,
+      "predicted_total_operator_variance": 2.3771267409095636,
+      "MC_total_operator_variance": 3.871730512067196,
+      "MC_to_predicted_variance_ratio": 1.6287438298665347,
+      "parameter_sample_variance_ratio": 1.6287438298664902,
+      "scope": "local small-translation approximation; not a large-error anatomical posterior",
+      "sensor_covariance_relative_MC_error": 0.6287438298663942,
+      "sensor_covariance_error_given_realized_parameter_variance": 2.439304651455305e-13,
+      "Gaussian_MC_variance_ratio_95_percent_interval": [
+        0.46876402536778794,
+        1.729069834827879
+      ]
+    },
+    "source_mismatch": [
+      {
+        "case": "correct",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 0.0,
+        "source_relative_error": 0.7890354384207028,
+        "amplitude_bias_ratio_minus_one": -0.7267648674910265,
+        "sensor_residual_relative": 0.43513379810203234,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03139895916330748,
+        "off_target_energy_fraction": 0.553581072744105,
+        "energy_outside_20mm_fraction": 0.5535810727441048
+      },
+      {
+        "case": "fiducial_noise_m",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 2.955430541799818e-16,
+        "source_relative_error": 0.7890354384207029,
+        "amplitude_bias_ratio_minus_one": -0.7267648674910265,
+        "sensor_residual_relative": 0.4351337981020324,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.0313989591633075,
+        "off_target_energy_fraction": 0.5535810727441051,
+        "energy_outside_20mm_fraction": 0.5535810727441048
+      },
+      {
+        "case": "fiducial_noise_m",
+        "magnitude": 0.001,
+        "relative_leadfield_change": 0.011707973803941151,
+        "source_relative_error": 0.7887879609297206,
+        "amplitude_bias_ratio_minus_one": -0.726863309650482,
+        "sensor_residual_relative": 0.435518558291174,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03139487486138125,
+        "off_target_energy_fraction": 0.5535869120271548,
+        "energy_outside_20mm_fraction": 0.5535869120271548
+      },
+      {
+        "case": "fiducial_noise_m",
+        "magnitude": 0.003,
+        "relative_leadfield_change": 0.03680949162421895,
+        "source_relative_error": 0.7885515604125708,
+        "amplitude_bias_ratio_minus_one": -0.7271345878887977,
+        "sensor_residual_relative": 0.43653619078928535,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031392145662501605,
+        "off_target_energy_fraction": 0.5538775229706389,
+        "energy_outside_20mm_fraction": 0.5538775229706387
+      },
+      {
+        "case": "fiducial_noise_m",
+        "magnitude": 0.005,
+        "relative_leadfield_change": 0.0629284731165928,
+        "source_relative_error": 0.7885131397656987,
+        "amplitude_bias_ratio_minus_one": -0.7271180158595707,
+        "sensor_residual_relative": 0.43789128789695675,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03140168400338755,
+        "off_target_energy_fraction": 0.5545586219168338,
+        "energy_outside_20mm_fraction": 0.5545586219168339
+      },
+      {
+        "case": "headshape_noise_m",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 4.1431370559864154e-16,
+        "source_relative_error": 0.7890354384207029,
+        "amplitude_bias_ratio_minus_one": -0.7267648674910265,
+        "sensor_residual_relative": 0.4351337981020322,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031398959163307504,
+        "off_target_energy_fraction": 0.5535810727441052,
+        "energy_outside_20mm_fraction": 0.5535810727441051
+      },
+      {
+        "case": "headshape_noise_m",
+        "magnitude": 0.001,
+        "relative_leadfield_change": 0.005268168906563308,
+        "source_relative_error": 0.7891205675938029,
+        "amplitude_bias_ratio_minus_one": -0.7269326649044667,
+        "sensor_residual_relative": 0.4353012424226947,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031401133947709325,
+        "off_target_energy_fraction": 0.5540089657544669,
+        "energy_outside_20mm_fraction": 0.5540089657544668
+      },
+      {
+        "case": "headshape_noise_m",
+        "magnitude": 0.003,
+        "relative_leadfield_change": 0.015812248292686733,
+        "source_relative_error": 0.7893353278822713,
+        "amplitude_bias_ratio_minus_one": -0.727274301693333,
+        "sensor_residual_relative": 0.4356340195114807,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03140673491491977,
+        "off_target_energy_fraction": 0.5548773750437968,
+        "energy_outside_20mm_fraction": 0.5548773750437965
+      },
+      {
+        "case": "conductivity_scalp_low",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 0.11150306736071906,
+        "source_relative_error": 0.7850316616404428,
+        "amplitude_bias_ratio_minus_one": -0.7318149619715846,
+        "sensor_residual_relative": 0.41137469339547117,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03035423344256665,
+        "off_target_energy_fraction": 0.5219735911943408,
+        "energy_outside_20mm_fraction": 0.5219735911943408
+      },
+      {
+        "case": "conductivity_skull_low",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 0.2878558937686771,
+        "source_relative_error": 0.806842371711826,
+        "amplitude_bias_ratio_minus_one": -0.7192813632444388,
+        "sensor_residual_relative": 0.5325446171830667,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.033765597150110946,
+        "off_target_energy_fraction": 0.6266594382492892,
+        "energy_outside_20mm_fraction": 0.626659438249289
+      },
+      {
+        "case": "conductivity_skull_high",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 0.2771545352483734,
+        "source_relative_error": 0.7798244569552979,
+        "amplitude_bias_ratio_minus_one": -0.7381498446753656,
+        "sensor_residual_relative": 0.3801003440182693,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.028553596083884136,
+        "off_target_energy_fraction": 0.46806577700286345,
+        "energy_outside_20mm_fraction": 0.4680657770028635
+      },
+      {
+        "case": "conductivity_brain_high",
+        "magnitude": 0.0,
+        "relative_leadfield_change": 0.15533920183193412,
+        "source_relative_error": 0.7931626927150259,
+        "amplitude_bias_ratio_minus_one": -0.7179153666597106,
+        "sensor_residual_relative": 0.4724598615773745,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.032449989122165984,
+        "off_target_energy_fraction": 0.5851735611149351,
+        "energy_outside_20mm_fraction": 0.5851735611149351
+      },
+      {
+        "case": "translation_x_m",
+        "magnitude": 0.001,
+        "relative_leadfield_change": 0.009735527624393862,
+        "source_relative_error": 0.7902819663272908,
+        "amplitude_bias_ratio_minus_one": -0.727567149165729,
+        "sensor_residual_relative": 0.43257476940102585,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031547876617384236,
+        "off_target_energy_fraction": 0.5578208645417341,
+        "energy_outside_20mm_fraction": 0.557820864541734
+      },
+      {
+        "case": "translation_x_m",
+        "magnitude": 0.003,
+        "relative_leadfield_change": 0.028693208128294883,
+        "source_relative_error": 0.792933234438581,
+        "amplitude_bias_ratio_minus_one": -0.7292389533624811,
+        "sensor_residual_relative": 0.42668605136504323,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031833316899797,
+        "off_target_energy_fraction": 0.5662080501993241,
+        "energy_outside_20mm_fraction": 0.5662080501993241
+      },
+      {
+        "case": "translation_x_m",
+        "magnitude": 0.005,
+        "relative_leadfield_change": 0.047782104874617336,
+        "source_relative_error": 0.7957832691381564,
+        "amplitude_bias_ratio_minus_one": -0.7310760625382693,
+        "sensor_residual_relative": 0.42109916306971834,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.032111956060146635,
+        "off_target_energy_fraction": 0.5745091035841998,
+        "energy_outside_20mm_fraction": 0.5745091035841998
+      },
+      {
+        "case": "rotation_z_deg",
+        "magnitude": 1.0,
+        "relative_leadfield_change": 0.01737834281926493,
+        "source_relative_error": 0.789475788986597,
+        "amplitude_bias_ratio_minus_one": -0.7271430695142529,
+        "sensor_residual_relative": 0.4352265289682149,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03142828875368573,
+        "off_target_energy_fraction": 0.5547970662325039,
+        "energy_outside_20mm_fraction": 0.5547970662325039
+      },
+      {
+        "case": "rotation_z_deg",
+        "magnitude": 3.0,
+        "relative_leadfield_change": 0.05161063257685454,
+        "source_relative_error": 0.7902743343062254,
+        "amplitude_bias_ratio_minus_one": -0.7278681941839449,
+        "sensor_residual_relative": 0.4354699626104856,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031473367458843556,
+        "off_target_energy_fraction": 0.5571030159710457,
+        "energy_outside_20mm_fraction": 0.5571030159710455
+      },
+      {
+        "case": "rotation_z_deg",
+        "magnitude": 5.0,
+        "relative_leadfield_change": 0.08597820840051217,
+        "source_relative_error": 0.7909680050649941,
+        "amplitude_bias_ratio_minus_one": -0.7284322556055782,
+        "sensor_residual_relative": 0.4362918234736685,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03151872664110393,
+        "off_target_energy_fraction": 0.5594391642063825,
+        "energy_outside_20mm_fraction": 0.5594391642063824
+      },
+      {
+        "case": "electrode_noise_m",
+        "magnitude": 0.001,
+        "relative_leadfield_change": 0.020004438107951904,
+        "source_relative_error": 0.7885301190126407,
+        "amplitude_bias_ratio_minus_one": -0.7266350891971369,
+        "sensor_residual_relative": 0.4329914055674841,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.03128485980674893,
+        "off_target_energy_fraction": 0.5502531675286964,
+        "energy_outside_20mm_fraction": 0.5502531675286965
+      },
+      {
+        "case": "electrode_noise_m",
+        "magnitude": 0.003,
+        "relative_leadfield_change": 0.06056693266277053,
+        "source_relative_error": 0.7882277144941452,
+        "amplitude_bias_ratio_minus_one": -0.7268314963573818,
+        "sensor_residual_relative": 0.43280050527979547,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.031072724816226967,
+        "off_target_energy_fraction": 0.5441448299250713,
+        "energy_outside_20mm_fraction": 0.5441448299250713
+      },
+      {
+        "case": "electrode_noise_m",
+        "magnitude": 0.005,
+        "relative_leadfield_change": 0.10024733487356859,
+        "source_relative_error": 0.7885444920726575,
+        "amplitude_bias_ratio_minus_one": -0.7268673276789112,
+        "sensor_residual_relative": 0.4356165057153987,
+        "truth_index": 0,
+        "peak_index": 0,
+        "peak_euclidean_m": 0.0,
+        "dispersion_euclidean_m": 0.030951999967430036,
+        "off_target_energy_fraction": 0.5407246785381834,
+        "energy_outside_20mm_fraction": 0.5407246785381834
+      }
+    ]
+  },
+  "participant_mismatch": [
+    {
+      "case": "correct",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.0,
+      "relative_spectrum_change": 0.0,
+      "source_relative_error": 0.9985897392899782,
+      "amplitude_bias_ratio_minus_one": -0.989671361410299,
+      "sensor_residual_relative": 0.20935085159935085,
+      "source_noise_variance_Am2": 4.448515968353224e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.05937946017716707,
+      "off_target_energy_fraction": 0.9939612262056067,
+      "energy_outside_20mm_fraction": 0.9209540279788226
+    },
+    {
+      "case": "translation_x_m",
+      "magnitude": 0.001,
+      "status": "computed",
+      "relative_leadfield_change": 0.012572955138061774,
+      "relative_spectrum_change": 0.0006273924002536561,
+      "source_relative_error": 0.9986167480750138,
+      "amplitude_bias_ratio_minus_one": -0.9897408046644028,
+      "sensor_residual_relative": 0.20919720991579488,
+      "source_noise_variance_Am2": 4.450924060721931e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.05947380263063592,
+      "off_target_energy_fraction": 0.9940125198335799,
+      "energy_outside_20mm_fraction": 0.9217698659476886
+    },
+    {
+      "case": "translation_x_m",
+      "magnitude": 0.003,
+      "status": "computed",
+      "relative_leadfield_change": 0.03754267086672632,
+      "relative_spectrum_change": 0.0019048896680860922,
+      "source_relative_error": 0.9986880413207287,
+      "amplitude_bias_ratio_minus_one": -0.9898972009877766,
+      "sensor_residual_relative": 0.20902253428136974,
+      "source_noise_variance_Am2": 4.45462001534059e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.059641774771668696,
+      "off_target_energy_fraction": 0.9941351917293216,
+      "energy_outside_20mm_fraction": 0.9234347284675358
+    },
+    {
+      "case": "translation_x_m",
+      "magnitude": 0.005,
+      "status": "computed",
+      "relative_leadfield_change": 0.06218788068330516,
+      "relative_spectrum_change": 0.0029793921613847176,
+      "source_relative_error": 0.9987795713784321,
+      "amplitude_bias_ratio_minus_one": -0.9900652090138891,
+      "sensor_residual_relative": 0.2089100421092323,
+      "source_noise_variance_Am2": 4.458811986992229e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.0598134616317421,
+      "off_target_energy_fraction": 0.9942766895436873,
+      "energy_outside_20mm_fraction": 0.9250278332641169
+    },
+    {
+      "case": "rotation_z_deg",
+      "magnitude": 1.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.0229789307240602,
+      "relative_spectrum_change": 0.0009118326441618529,
+      "source_relative_error": 0.9986076952545258,
+      "amplitude_bias_ratio_minus_one": -0.9897166002099842,
+      "sensor_residual_relative": 0.20923680091862212,
+      "source_noise_variance_Am2": 4.443877161587606e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.059483000300764706,
+      "off_target_energy_fraction": 0.9939942464674424,
+      "energy_outside_20mm_fraction": 0.9194395853431704
+    },
+    {
+      "case": "rotation_z_deg",
+      "magnitude": 3.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.06841008313770831,
+      "relative_spectrum_change": 0.0025863459765123114,
+      "source_relative_error": 0.9986947877317454,
+      "amplitude_bias_ratio_minus_one": -0.9898601089149583,
+      "sensor_residual_relative": 0.20916669977660396,
+      "source_noise_variance_Am2": 4.435828212003676e-19,
+      "truth_index": 281,
+      "peak_index": 222,
+      "peak_euclidean_m": 0.02129177212909668,
+      "dispersion_euclidean_m": 0.05970811016169049,
+      "off_target_energy_fraction": 0.9941193645992894,
+      "energy_outside_20mm_fraction": 0.9152181894378403
+    },
+    {
+      "case": "rotation_z_deg",
+      "magnitude": 5.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.11346599646364702,
+      "relative_spectrum_change": 0.00419871127350173,
+      "source_relative_error": 0.9989097313612202,
+      "amplitude_bias_ratio_minus_one": -0.9901050100303664,
+      "sensor_residual_relative": 0.208830590162301,
+      "source_noise_variance_Am2": 4.44257964456275e-19,
+      "truth_index": 281,
+      "peak_index": 222,
+      "peak_euclidean_m": 0.02129177212909668,
+      "dispersion_euclidean_m": 0.05996171624361244,
+      "off_target_energy_fraction": 0.9943768848523602,
+      "energy_outside_20mm_fraction": 0.9115891430005221
+    },
+    {
+      "case": "electrode_noise_m",
+      "magnitude": 0.001,
+      "status": "computed",
+      "relative_leadfield_change": 0.03153012113088999,
+      "relative_spectrum_change": 0.003645140178803648,
+      "source_relative_error": 0.9985078034457878,
+      "amplitude_bias_ratio_minus_one": -0.9895225642164299,
+      "sensor_residual_relative": 0.2121886549372476,
+      "source_noise_variance_Am2": 4.4311708586913565e-19,
+      "truth_index": 281,
+      "peak_index": 389,
+      "peak_euclidean_m": 0.02658463778162553,
+      "dispersion_euclidean_m": 0.05909675344830727,
+      "off_target_energy_fraction": 0.9938323407038532,
+      "energy_outside_20mm_fraction": 0.9178822540161115
+    },
+    {
+      "case": "electrode_noise_m",
+      "magnitude": 0.003,
+      "status": "computed",
+      "relative_leadfield_change": 0.09422079917661921,
+      "relative_spectrum_change": 0.009913381354915363,
+      "source_relative_error": 0.9987589006388982,
+      "amplitude_bias_ratio_minus_one": -0.989336209632897,
+      "sensor_residual_relative": 0.22606020587145134,
+      "source_noise_variance_Am2": 4.340923607275028e-19,
+      "truth_index": 281,
+      "peak_index": 222,
+      "peak_euclidean_m": 0.02129177212909668,
+      "dispersion_euclidean_m": 0.05801816233027754,
+      "off_target_energy_fraction": 0.9939086498732257,
+      "energy_outside_20mm_fraction": 0.9134664841507063
+    },
+    {
+      "case": "electrode_noise_m",
+      "magnitude": 0.005,
+      "status": "computed",
+      "relative_leadfield_change": 0.154889952938046,
+      "relative_spectrum_change": 0.015843024281688208,
+      "source_relative_error": 0.999849598362011,
+      "amplitude_bias_ratio_minus_one": -0.9896736188274876,
+      "sensor_residual_relative": 0.24769633452600498,
+      "source_noise_variance_Am2": 4.145110992190976e-19,
+      "truth_index": 281,
+      "peak_index": 93,
+      "peak_euclidean_m": 0.037524084795377194,
+      "dispersion_euclidean_m": 0.056875739729824654,
+      "off_target_energy_fraction": 0.9947124384900962,
+      "energy_outside_20mm_fraction": 0.916570470692757
+    },
+    {
+      "case": "conductivity_scalp_low",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.14504305479263882,
+      "relative_spectrum_change": 0.14462295211405757,
+      "source_relative_error": 0.997841165433827,
+      "amplitude_bias_ratio_minus_one": -0.9910283696680476,
+      "sensor_residual_relative": 0.20506860903233748,
+      "source_noise_variance_Am2": 3.47338808321403e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.059905492740631054,
+      "off_target_energy_fraction": 0.9940275531519044,
+      "energy_outside_20mm_fraction": 0.9225205890345113
+    },
+    {
+      "case": "conductivity_skull_low",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.3363384754504754,
+      "relative_spectrum_change": 0.33512795167564957,
+      "source_relative_error": 1.0043786178324963,
+      "amplitude_bias_ratio_minus_one": -0.9840255762146989,
+      "sensor_residual_relative": 0.22254429979359774,
+      "source_noise_variance_Am2": 9.217092718149703e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.05742300255249739,
+      "off_target_energy_fraction": 0.9936957791464426,
+      "energy_outside_20mm_fraction": 0.9161268591266862
+    },
+    {
+      "case": "conductivity_skull_high",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.3733107592978062,
+      "relative_spectrum_change": 0.36937536307962343,
+      "source_relative_error": 0.9973682941041091,
+      "amplitude_bias_ratio_minus_one": -0.9925354048661137,
+      "sensor_residual_relative": 0.1922299856267102,
+      "source_noise_variance_Am2": 2.5799294632465306e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.061083348636070185,
+      "off_target_energy_fraction": 0.9941584042879402,
+      "energy_outside_20mm_fraction": 0.9260444632018863
+    },
+    {
+      "case": "conductivity_brain_high",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.15062714892989115,
+      "relative_spectrum_change": 0.15052516360119184,
+      "source_relative_error": 1.0001754286735938,
+      "amplitude_bias_ratio_minus_one": -0.9878184645814142,
+      "sensor_residual_relative": 0.2100214881573776,
+      "source_noise_variance_Am2": 6.146063797924879e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.05929825274991842,
+      "off_target_energy_fraction": 0.9939459686211078,
+      "energy_outside_20mm_fraction": 0.920786860054113
+    },
+    {
+      "case": "fiducial_refit_no_noise",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.40579293265216926,
+      "relative_spectrum_change": 0.046302401394849334,
+      "source_relative_error": 0.9993609327499478,
+      "amplitude_bias_ratio_minus_one": -0.990289992020472,
+      "sensor_residual_relative": 0.2205663142632962,
+      "source_noise_variance_Am2": 3.6353520849747187e-19,
+      "truth_index": 281,
+      "peak_index": 304,
+      "peak_euclidean_m": 0.020433586465671092,
+      "dispersion_euclidean_m": 0.05350231027710352,
+      "off_target_energy_fraction": 0.9947488437942541,
+      "energy_outside_20mm_fraction": 0.9043653868162926
+    },
+    {
+      "case": "fiducial_noise_m",
+      "magnitude": 0.001,
+      "status": "computed",
+      "relative_leadfield_change": 0.4188973819602711,
+      "relative_spectrum_change": 0.04565754809668144,
+      "source_relative_error": 0.9997560848975707,
+      "amplitude_bias_ratio_minus_one": -0.9906793454577195,
+      "sensor_residual_relative": 0.22033932311539384,
+      "source_noise_variance_Am2": 3.617911364596827e-19,
+      "truth_index": 281,
+      "peak_index": 304,
+      "peak_euclidean_m": 0.020433586465671092,
+      "dispersion_euclidean_m": 0.05382353616160625,
+      "off_target_energy_fraction": 0.9951615451534485,
+      "energy_outside_20mm_fraction": 0.9097814668327545,
+      "measurement_only_change_vs_unperturbed_refit": 0.034632806253093534
+    },
+    {
+      "case": "fiducial_noise_m",
+      "magnitude": 0.003,
+      "status": "computed",
+      "relative_leadfield_change": 0.44330266158102594,
+      "relative_spectrum_change": 0.045928152315238314,
+      "source_relative_error": 1.000678548625193,
+      "amplitude_bias_ratio_minus_one": -0.9916260322835712,
+      "sensor_residual_relative": 0.21963675589900167,
+      "source_noise_variance_Am2": 3.600088186284579e-19,
+      "truth_index": 281,
+      "peak_index": 384,
+      "peak_euclidean_m": 0.02952246506745208,
+      "dispersion_euclidean_m": 0.05440735122073055,
+      "off_target_energy_fraction": 0.9960801009155479,
+      "energy_outside_20mm_fraction": 0.918772191533517,
+      "measurement_only_change_vs_unperturbed_refit": 0.08657105025971311
+    },
+    {
+      "case": "fiducial_noise_m",
+      "magnitude": 0.005,
+      "status": "computed",
+      "relative_leadfield_change": 0.4686661312641883,
+      "relative_spectrum_change": 0.04638846677287957,
+      "source_relative_error": 1.001492517635291,
+      "amplitude_bias_ratio_minus_one": -0.9923707783326015,
+      "sensor_residual_relative": 0.21792827328074174,
+      "source_noise_variance_Am2": 3.614811308789064e-19,
+      "truth_index": 281,
+      "peak_index": 384,
+      "peak_euclidean_m": 0.02952246506745208,
+      "dispersion_euclidean_m": 0.05501933174425207,
+      "off_target_energy_fraction": 0.9967673441835094,
+      "energy_outside_20mm_fraction": 0.9250880628086715,
+      "measurement_only_change_vs_unperturbed_refit": 0.13542000477310662
+    },
+    {
+      "case": "headshape_refit_no_noise",
+      "magnitude": 0.0,
+      "status": "computed",
+      "relative_leadfield_change": 0.03228463158065767,
+      "relative_spectrum_change": 0.004808525585437082,
+      "source_relative_error": 0.9985269299841043,
+      "amplitude_bias_ratio_minus_one": -0.9896642347053547,
+      "sensor_residual_relative": 0.21001770857172103,
+      "source_noise_variance_Am2": 4.379643303354468e-19,
+      "truth_index": 281,
+      "peak_index": 390,
+      "peak_euclidean_m": 0.02831499124629312,
+      "dispersion_euclidean_m": 0.05888061402935112,
+      "off_target_energy_fraction": 0.9939141936220492,
+      "energy_outside_20mm_fraction": 0.9184456894836502
+    },
+    {
+      "case": "headshape_noise_m",
+      "magnitude": 0.001,
+      "status": "computed",
+      "relative_leadfield_change": 0.07699448677278459,
+      "relative_spectrum_change": 0.009407256938070778,
+      "source_relative_error": 0.9987808760663615,
+      "amplitude_bias_ratio_minus_one": -0.9900078118244303,
+      "sensor_residual_relative": 0.2103650450980105,
+      "source_noise_variance_Am2": 4.380080988928434e-19,
+      "truth_index": 281,
+      "peak_index": 222,
+      "peak_euclidean_m": 0.02129177212909668,
+      "dispersion_euclidean_m": 0.05918297198767904,
+      "off_target_energy_fraction": 0.994248254070207,
+      "energy_outside_20mm_fraction": 0.9098224762449882,
+      "measurement_only_change_vs_unperturbed_refit": 0.06772460351413793
+    },
+    {
+      "case": "headshape_noise_m",
+      "magnitude": 0.003,
+      "status": "computed",
+      "relative_leadfield_change": 0.07597029692507096,
+      "relative_spectrum_change": 0.006284751872678607,
+      "source_relative_error": 0.9986267276447326,
+      "amplitude_bias_ratio_minus_one": -0.9897958971583368,
+      "sensor_residual_relative": 0.20998764843969103,
+      "source_noise_variance_Am2": 4.481946113885986e-19,
+      "truth_index": 281,
+      "peak_index": 222,
+      "peak_euclidean_m": 0.02129177212909668,
+      "dispersion_euclidean_m": 0.05968906495156438,
+      "off_target_energy_fraction": 0.9940445929391014,
+      "energy_outside_20mm_fraction": 0.9148020292788079,
+      "measurement_only_change_vs_unperturbed_refit": 0.08334009943176451
+    }
+  ],
+  "MEG_fallback": {
+    "status": "matched_MEG_forward_only",
+    "mode": "participant_matched_MEG_fallback",
+    "subject": "sample",
+    "sensor_count": 305,
+    "source_count": 1239,
+    "shape": [
+      305,
+      3717
+    ],
+    "device_to_head_m": [
+      [
+        0.9914199709892273,
+        -0.039936363697052,
+        -0.12446729093790054,
+        -0.006129309069365263
+      ],
+      [
+        0.06066115200519562,
+        0.984011709690094,
+        0.1674562394618988,
+        6.360560655593872e-05
+      ],
+      [
+        0.11578965932130814,
+        -0.17356973886489868,
+        0.9779911637306213,
+        0.06474152207374573
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "device_transform_quality": {
+      "orthogonality_max_error": 5.794446222839866e-07,
+      "determinant": 1.000000703315144,
+      "near_rigid_tolerance": 1e-06,
+      "matrix_modified": false,
+      "scope": "acquired near-rigid mapping; generic rigid API tolerance unchanged"
+    },
+    "head_to_MRI_m": [
+      [
+        0.9993095397949219,
+        0.012759342789649963,
+        0.034894198179244995,
+        0.0020699098240584135
+      ],
+      [
+        0.009984787553548813,
+        0.8124047517776489,
+        -0.5830085277557373,
+        0.011302143335342407
+      ],
+      [
+        -0.03578702360391617,
+        0.5829542875289917,
+        0.8117163777351379,
+        -0.02755521982908249
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "reference": "MEG SSP, no EEG average reference",
+    "raw_matrix_condition_reported": false,
+    "reason": "mixed magnetometer/gradiometer units require whitening before cross-channel norm comparisons",
+    "anatomical_certification": false,
+    "wall_s": 6.286228416953236,
+    "cpu_s": 5.928895,
+    "stages": {
+      "surface_QC": {
+        "wall_s": 1.5885010838974267,
+        "cpu_s": 1.430136
+      },
+      "BEM_and_MEG_forward": {
+        "wall_s": 4.685960042057559,
+        "cpu_s": 4.487007999999999
+      }
+    },
+    "process_peak_RSS_MiB": 422.140625,
+    "memory_scope": "process high-water including libraries, not incremental allocation"
+  },
+  "profile": {
+    "bem": {
+      "wall_s": 1.9138609579531476,
+      "cpu_s": 1.886997,
+      "stages": {
+        "surface_QC": {
+          "wall_s": 1.6381376249482855,
+          "cpu_s": 1.6218989999999998
+        }
+      },
+      "process_peak_RSS_MiB": 250.59375,
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "coreg": {
+      "wall_s": 2.2200187919661403,
+      "cpu_s": 2.08439,
+      "stages": {
+        "asset_surface_source_preparation": {
+          "wall_s": 1.8170295000309125,
+          "cpu_s": 1.6858229999999998
+        },
+        "fiducials_and_ICP": {
+          "wall_s": 0.03939200006425381,
+          "cpu_s": 0.037500999999999785
+        }
+      },
+      "process_peak_RSS_MiB": 320.0,
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "individual": {
+      "wall_s": 3.0713424580171704,
+      "cpu_s": 2.9136859999999993,
+      "stages": {
+        "prepare_and_QC": {
+          "wall_s": 1.8375537920510396,
+          "cpu_s": 1.7333510000000003
+        },
+        "coregistration_comparison": {
+          "wall_s": 0.03867504105437547,
+          "cpu_s": 0.03790300000000002
+        },
+        "BEM_and_forward": {
+          "wall_s": 0.0848885839805007,
+          "cpu_s": 0.0843910000000001
+        },
+        "real_EEG_inverse": {
+          "wall_s": 0.34163754200562835,
+          "cpu_s": 0.3016019999999999
+        },
+        "figures": {
+          "wall_s": 0.7399529999820516,
+          "cpu_s": 0.7271490000000003
+        }
+      },
+      "process_peak_RSS_MiB": 540.84375,
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "meg": {
+      "wall_s": 6.286228416953236,
+      "cpu_s": 5.928895,
+      "stages": {
+        "surface_QC": {
+          "wall_s": 1.5885010838974267,
+          "cpu_s": 1.430136
+        },
+        "BEM_and_MEG_forward": {
+          "wall_s": 4.685960042057559,
+          "cpu_s": 4.487007999999999
+        }
+      },
+      "process_peak_RSS_MiB": 422.140625,
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "synthetic": {
+      "wall_s": 2.825726250070147,
+      "cpu_s": 2.7576739999999997,
+      "stages": {
+        "surface_readiness": {
+          "wall_s": 0.08651404199190438,
+          "cpu_s": 0.08290300000000017
+        },
+        "BEM_analytical_reference": {
+          "wall_s": 0.11997450003400445,
+          "cpu_s": 0.10143599999999986
+        },
+        "coregistration_and_measurement_propagation": {
+          "wall_s": 0.13245520798955113,
+          "cpu_s": 0.13213199999999992
+        },
+        "synthetic_headshape_ICP_propagation": {
+          "wall_s": 0.09930775000248104,
+          "cpu_s": 0.09925699999999993
+        },
+        "finite_difference_sweeps": {
+          "wall_s": 0.7805067090084776,
+          "cpu_s": 0.774526
+        },
+        "local_Monte_Carlo": {
+          "wall_s": 0.6663945830659941,
+          "cpu_s": 0.6587810000000003
+        }
+      },
+      "process_peak_RSS_MiB": 199.625,
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "uncertainty": {
+      "wall_s": 25.762011291924864,
+      "cpu_s": 25.718403,
+      "stages": {
+        "prepare": {
+          "wall_s": 1.5744075840339065,
+          "cpu_s": 1.571528
+        },
+        "baseline_forward": {
+          "wall_s": 0.09727908298373222,
+          "cpu_s": 0.0931169999999999
+        },
+        "physical_perturbation_sweep": {
+          "wall_s": 23.498700042022392,
+          "cpu_s": 23.480451
+        }
+      },
+      "process_peak_RSS_MiB": 701.265625,
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    }
+  },
+  "preparation_wall_s": {
+    "surface_preparation": 0.7870299579808488,
+    "surface_QC": 0.7653013750677928,
+    "source_space_cache": 0.022161416010931134
+  },
+  "artifacts": {
+    "root": "reports/milestone8-verified",
+    "figures": 20,
+    "checked_output_hashes": 92,
+    "checked_NPZ_arrays": 137,
+    "manifests": {
+      "bem": "14e48d2947cb4b5091ecfacbf8ddcb46f521a44bde57422fd1b9c0c5d7ad8ae2",
+      "coreg": "e592705e766dd97d7b9fe289ebd0ae96979281e80b9830def550c17562836210",
+      "individual": "0b69838ef278cf05e1edfc5f3a9c5fd664f8830b4f226c0dbc6b78f42025896f",
+      "meg": "a46acc5cc393413089bf2058cf92683a7994f4ab5dd5b995e4a56b358ca81ff0",
+      "synthetic": "4c12b5d23a2f3152407fe1ee5911109d7fa0106ccaa00db01a0bf3cf6b147fb4",
+      "uncertainty": "34764ceabf8d933c5073f21c3083fa0757aff6900845592e4013ffb414bc0bd3"
+    }
+  },
+  "limitations": [
+    "No independent measured MRI fiducial truth or anatomical/clinical certification",
+    "Native meshes inventoried; full geometry QC is for ico3 solver surfaces",
+    "Piecewise homogeneous isotropic conductivity assumptions, not measurements",
+    "Substantial spherical BEM discretization error and severe inverse amplitude bias",
+    "One participant; no population claim",
+    "No independent alternate validated anatomy",
+    "No ds000117 participant downloads/reconstruction",
+    "FreeSurfer watershed not executed",
+    "M7 SPM foreground remains ineligible for BEM; template M6 API preserved"
+  ]
+}

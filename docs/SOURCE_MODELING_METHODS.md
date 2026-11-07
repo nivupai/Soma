@@ -176,3 +176,17 @@ electrodes and a head↔participant-MRI transform to the MNE boundary while reta
 vertex IDs, units, covariance/projector contracts and inverse APIs. Template MRI
 cannot be silently substituted for participant MRI. Registration, segmentation,
 FreeSurfer reconstruction, FEM and anatomical validation remain future work.
+
+## Participant extension (v0.8.0)
+
+The formerly prospective participant boundary is now implemented conditionally
+by `source.individual`; the original template APIs and sealed M6 protocol remain
+unchanged. The matched sample uses individually digitized retained electrodes,
+participant white ico3, three FLASH-derived conductor boundaries, and the
+existing fixed-normal MNE inverse. No fsaverage substitution is allowed.
+The audiovisual signal example uses code 1/2/3/4, not EEGBCI task labels.
+Prestimulus covariance includes background activity; short-epoch trialwise power
+is separate from phase-locked power. Conductivity and geometry sweeps recompute
+physical forwards with fixed inverse settings and independent noise training.
+See INDIVIDUAL_SOURCE_VALIDATION.md and ANATOMICAL_UNCERTAINTY.md for the
+unfavorable recovery, substantial BEM discretization error and anatomical limits.

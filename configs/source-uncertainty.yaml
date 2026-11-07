@@ -1,0 +1,26 @@
+individual_config: configs/individual-source.yaml
+seed: 42
+primary_lambda2: 0.1111111111111111
+translation_m: [0.001, 0.003, 0.005]
+rotation_deg: [1.0, 3.0, 5.0]
+electrode_sigma_m: [0.001, 0.003, 0.005]
+fiducial_sigma_m: [0.001, 0.003, 0.005]
+headshape_sigma_m: [0.001, 0.003]
+conductivity_configurations_S_m:
+  baseline: [0.3, 0.006, 0.3]
+  scalp_low: [0.24, 0.006, 0.3]
+  skull_low: [0.3, 0.003, 0.3]
+  skull_high: [0.3, 0.012, 0.3]
+  brain_high: [0.3, 0.006, 0.36]
+finite_difference_translation_steps_m: [0.001, 0.0005, 0.00025]
+finite_difference_rotation_steps_deg: [1.0, 0.5, 0.25]
+finite_difference_electrode_steps_m: [0.001, 0.0005, 0.00025]
+finite_difference_skull_steps_S_m: [0.0006, 0.0003, 0.00015]
+monte_carlo_repetitions: 20
+monte_carlo_translation_std_m: 0.0002
+synthetic_bem_subdivisions: [1, 2]
+synthetic_sources_m: [[-0.025, 0.01, 0.035], [0.025, 0.015, 0.025], [0.0, -0.02, 0.045], [0.0, 0.02, 0.01]]
+synthetic_source_amplitude_Am: 0.00000001
+synthetic_sensor_SNR_db: 10
+noise_covariance_samples: 10000
+alternative_anatomy_policy: only_corresponding_validated_geometry_else_not_available

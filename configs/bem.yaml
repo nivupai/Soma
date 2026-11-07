@@ -1,0 +1,4 @@
+individual_config: configs/individual-source.yaml
+require_explicit_subject: true
+unsupported_anatomical_truth: INDETERMINATE
+optional_watershed_generation: explicit_only

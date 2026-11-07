@@ -75,3 +75,15 @@ and sampling-rate compatibility. Failure summaries retain missing, incomplete,
 unsupported-annotation, geometry and sampling errors. No outside exclusion list
 is applied; any future exclusion must appear with its reason and identity.
 Optional expansion to 1–10 requires explicit configuration and fetch.
+
+## Matched anatomy in v0.8.0
+
+`datasets.matched.SampleAssets` explicitly fetches/inspects the curated MNE sample
+EEG/MEG/MRI participant. It records MRI geometry, file hashes, digitization kinds,
+measured electrode label correspondence and the distributed head→MRI transform.
+The full public sample archive is required by MNE's fetcher; no fetch happens on
+import or source construction. Default conductor surfaces resolve to FLASH.
+`datasets.openneuro` discovers ds000117 metadata and optionally downloads only
+explicit selected-subject files with a byte budget. Empty-room recordings are
+not participants. Secondary metadata discovery does not establish a usable head
+model. See INDIVIDUAL_SOURCE_VALIDATION.md for identity and license limitations.

@@ -12,8 +12,9 @@ src/soma/
   signal/         NeuroDSP Welch, band integration, synthetic generator and lab
   eeg/            whole-record real EEG experiment
   visualization/  headless Matplotlib exports
-  imaging/        documented future boundary only
-  source/         documented future boundary only
+  imaging/        MRI grids, registration, labels, meshes and candidate geometry
+  source/         template/participant MNE forwards, inverse and resolution
+  anatomy/        participant contracts, readiness, uncertainty and reports
   cli.py          Typer commands and readable failure codes
  tests/           unit, numerical, opt-in integration
  experiments/     executable workflow examples
@@ -214,3 +215,24 @@ ranges, requiring an explicit download request. `experiments.mri_geometry`
 coordinates analytic benchmarks, real-image controlled recovery and figures;
 rendering is separate. The fsaverage source modules are unchanged and remain
 operational. See MRI_TO_SOURCE_ARCHITECTURE.md for future individual MRI boundaries.
+
+## v0.8.0 participant pathway
+
+`datasets.matched.SampleAssets` binds participant assets, digitization identities,
+MRI geometry and checksums. `anatomy.contracts.IndividualModel` requires matching
+source/sensor/surface subjects, measured EEG provenance and explicit head→MRI
+geometry. `source.individual` prepares MNE sources/conductors and reuses the
+Milestone 6 `ForwardModel`/`CorticalInverse`. Template mode remains separate.
+`geometry.coregistration` supplies weighted SVD/robust fitting and labeled ICP;
+`anatomy.surfaces` adds three-state readiness over the existing imaging mesh QC.
+`anatomy.sensitivity` and the synthetic/participant orchestrators implement physical
+perturbations, numerical derivatives and independent uncertainty controls.
+
+Physical source/BEM/forward caches have distinct fingerprints, atomic receipts
+and fail-closed checksum validation. Conductivity changes require a new BEM;
+unrelated inverse settings do not. Forward keys include sensor integration
+locations, projector state, transforms, source positions/normals and identities,
+geometry and software/code versions. `AnatomyReport` saves nested artifact hashes,
+source-tree identity and stage wall/CPU time/RSS. CLI downloads remain explicit.
+See INDIVIDUAL_SOURCE_VALIDATION.md; this is conditional research, not anatomy
+certification. Earlier architecture sections describe their milestone's scope.
