@@ -124,3 +124,28 @@ PyYAML is the only new runtime dependency; its types are included in development
 dependencies. Statistical arrays remain NumPy/Pandas, not an additional modeling
 framework. Template coordinate provenance and future measured DigMontage boundary
 remain intact; no source/MRI algorithms were introduced.
+
+
+## Milestone 4 extensions
+
+`experiments/replication.py` layers sealed protocols and thin resumable per-run
+checkpoints over the existing `cohort._compute` backend and content cache.
+It holds one continuous recording at a time, streams combined CSVs, and loads
+only small spectral feature tables for population aggregation. Existing cohort,
+burst, motor-imagery and statistical APIs retain their behavior.
+
+`statistics/inference.py` isolates independent-subject mean inference and explicit
+method failure states. `statistics/robustness.py` reads saved subject/run tables.
+`simulations/hierarchical.py` defines data-generating models;
+`simulations/calibration.py` bounds worker count and in-flight chunk tasks.
+Each dataset gets a stream derived from global seed, scenario index, N and
+replicate index; data and bootstrap substreams are separate. Scheduling cannot
+change the experiment. CSV chunks are atomically published before their checksum
+receipts. Only verified chunks enter aggregation. Generation directories retain
+prior summaries; a final atomic pointer publishes the new generation.
+
+Cache identity includes EDF hashes, scientific settings, source code and numerical
+dependencies. Calibration restricts the code digest to its inference, model and
+calibration modules, permitting unrelated CLI changes without resimulation.
+Reference audits are exclusively created reports; interruption leaves an explicit
+partial directory, requiring a new output path.

@@ -159,3 +159,40 @@ RSS. Native allocations may not all appear in tracemalloc; RSS is not a per-stag
 memory delta. No absolute-time thresholds run in CI. Separate 200-replication
 normal-subject coverage experiments at n=40 and n=5 expose the limitations of
 nominal percentile intervals; their results are not replaced by a favorable seed.
+
+
+## Milestone 4 protocol and execution
+
+The frozen protocol's canonical SHA-256 is
+`9995060c58ffb3a896d725ef9641f27fb7645950b76fbbf59b6ee97f3488ab61`.
+`configs/replication-freeze.json` also seals the document and raw configuration
+bytes, timestamped before fetching new subjects. Do not edit these artifacts;
+a scientifically revised protocol requires a separately named analysis.
+Explicit subset overrides are recorded as deviations from the frozen cohort.
+
+Replicate and calibrate support `--resume`. Reuse requires matching code,
+environment and parameters. Replication rechecks source fingerprints and per-run
+artifact checksums, preserves failed attempts, and atomically rewrites progress.
+Calibration validates chunk checksums and derives separate deterministic data
+and inference streams. Both publish new immutable aggregation generations.
+Interrupted publication cannot turn a half-written chunk into a valid checkpoint.
+Concurrent writers to the same output/cache key are unsupported.
+
+Local outputs: `reports/m4-replication-main`, `reports/m4-sensitivity-main`,
+`reports/m4-reference-audit-main`, `reports/m4-calibration-main`; their manifests,
+CSV tables and figures contain provenance. Reports/data remain Git-ignored;
+`docs/MILESTONE4_RESULTS.md` preserves compact scientific findings in Git.
+Early development manifests honestly identify a dirty v0.3.0 parent tree;
+post-commit calibration and freshly generated replication/audit reports
+record the clean v0.4.0 revision without rewriting the original experiment.
+The exact development sweep source is preserved as a checksummed archive at
+`reports/m4-execution-source`; final edge-case aggregation corrections do not
+change successful-record scientific computations. Final outputs are under
+`reports/milestone4-committed/`. Calibration's scientific code digest remains
+independent of unrelated report/CLI edits.
+
+The final sensitivity report recomputes robustness and figures from the completed
+900-analysis saved sweep. Its manifest hashes all input tables, the original
+scientific manifest and exact-source archive. It explicitly records this as
+saved-table aggregation, rather than claiming a second raw-data sweep. The
+self-contained `reaggregate.py` is retained alongside that report.

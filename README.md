@@ -19,9 +19,9 @@ soma eeg inspect --subject 1 --run 4 --data-dir data/raw
 soma eeg analyze --subject 1 --run 4 --data-dir data/raw --output reports/eeg-s001-r04
 ```
 
-Fetch is the only command that downloads. Repeat `--subjects` and `--runs` to
+Downloads require `datasets fetch` or the explicit `eeg replicate --fetch` flag. Repeat `--subjects` and `--runs` to
 select multiple recordings. `SOMA_DATA_DIR` sets the raw data root. Output
-directories must be new: reruns require a different `--output`. Raw EDF and
+directories must be new except resumable replication/calibration with `--resume`. Raw EDF and
 reports are excluded from Git. `requirements-resolved.txt` captures the verified
 environment; use it in addition to the editable install for exact versions.
 
@@ -115,3 +115,35 @@ intervals and retention. Sensitivity adds effect-change and missingness figures.
 A nominal 95% percentile interval is not a guarantee at five subjects: the
 recorded normal simulation covered only 80.5% at n=5. No population significance
 or causal burst-mechanism claim is made.
+
+
+## Milestone 4 — replication and statistical calibration (v0.4.0)
+
+The [sealed research protocol](docs/REPLICATION_PROTOCOL.md) was frozen before
+fetching subjects 6–35. Its checksum and timestamped freeze receipt live beside
+`configs/replication.yaml`. Primary effects are equal-subject left-minus-right
+mean log powers, with at least two paired runs and prespecified t intervals.
+Initial-five-informed hypotheses remain exploratory.
+
+```bash
+# Uses cached EDFs; repeat --runs rather than space-separated values.
+soma eeg replicate --subjects 6:35 --runs 4 --runs 8 --runs 12 --output reports/replication
+soma eeg replicate --subjects 6:35 --runs 4 --runs 8 --runs 12 --output reports/replication --resume
+soma eeg replicate --sensitivity --output reports/replication-sensitivity
+soma eeg audit-reference --subjects 1:5 --output reports/reference-audit
+soma stats calibrate --config configs/calibration.yaml --workers 4 --output reports/calibration
+soma stats calibrate --config configs/calibration-smoke.yaml --workers 2 --output reports/calibration-smoke
+soma stats influence --input reports/replication --output reports/influence
+# Explicit expansion only; fetching is a separate opt-in:
+# soma eeg replicate --subjects all --expand-all --fetch --output reports/expanded
+```
+
+`current.json` points to an immutable aggregation generation. Completed record
+checkpoints and Monte Carlo chunks are checksum-validated on resume. Parameter,
+source code or environment mismatches reject reuse. Incomplete/failed recording
+attempts retain their identities and errors. No command implicitly fetches all
+109 subjects. Original EDFs and original M1–M3 outputs remain intact.
+
+See [statistical methodology](docs/STATISTICS.md),
+[Milestone 4 results](docs/MILESTONE4_RESULTS.md), and
+[verification](docs/VERIFICATION.md). All figures derive from saved CSV tables.

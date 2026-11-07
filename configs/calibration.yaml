@@ -1,0 +1,8 @@
+scenarios: [normal, correlated_unequal, heteroscedastic, heavy_tail, contaminated, nonrandom_missing, preprocessing_shift]
+subject_counts: [5, 10, 20, 30, 50, 100]
+methods: [percentile, basic, studentized, bca, t]
+repetitions: 2000
+n_resamples: 1999
+seed: 20261106
+confidence: 0.95
+chunk_size: 25

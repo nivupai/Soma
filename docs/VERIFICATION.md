@@ -442,3 +442,58 @@ than implementing speculative layered optimization. Percentile coverage is poor
 at five subjects, reference choice changes conclusions, and detector definitions
 change occupancy. These are findings to retain, not failures to hide by selecting
 another configuration. Milestone 4 was not started.
+
+# Milestone 4 verification — v0.4.0
+
+The preceding sections are the preserved Milestone 3 historical record.
+All 205 baseline tests were first verified unchanged (202 offline, 3 cached-data
+integration). No baseline test file was edited for Milestone 4.
+
+New verification covers tabulated t limits, basic reflection, translation/scaling
+metamorphisms, missing/empty/degenerate groups, reproducible bootstrap streams,
+unreliable studentized pivots, robust location targets, every generative scenario,
+known normal and heavy/MNAR targets, perfect within-subject correlation, unequal
+counts, independent-subject grouping, analytical reference variance/PSD identities,
+minimum-run/trial eligibility, per-channel robustness flags, and explicit expansion.
+Serial/two-worker chunk CSVs are byte-identical; resume does not duplicate chunks,
+and altered parameters/corrupted checksums reject reuse. A simulated keyboard
+interrupt preserves a completed recording and resumes the remaining three;
+corrupt recording artifacts become explicit failures. Cached real subject 6
+runs 4/8 confirm the new engine and resume without network access.
+
+The full main simulation ran: 84,000 independent datasets, 420,000 intervals,
+210 scenario/N/method summaries, 3,360 completed chunks. Coverage uncertainty
+uses exact binomial 95% limits plus MCSE. See `MILESTONE4_RESULTS.md` for actual
+coverage, targets, timings and scientific limits. CI uses only the small smoke
+configuration. New CLI workflows were exercised on actual outputs.
+
+The sealed 30-subject replication completed 90/90 recordings, retaining all 30
+subjects and 1,258/1,350 imagery proposals. Initial-subject reference audit
+completed 15/15. Figures were generated from saved tables; initial/replication,
+forest, heatmap, QC, weighting, influence, calibration, correlation and artifact
+examples were visually inspected. Rendering at font size 8 fits full replication
+axis descriptions. Failed development audit directories are preserved separately;
+the successful main audit is unambiguous. No result was inferred from a failed run.
+
+Static verification: Ruff check, Ruff formatting, strict mypy (50 source files)
+and installed-dependency compatibility checks pass. Only Python 3.12.2/macOS
+ARM64 was executed locally; the CI matrix declares Python 3.11 and 3.12 but
+remote CI execution is not claimed. Source/raw hashes and manifests retain the
+actual software environment. Original EDFs and prior milestone outputs were
+preserved. No GitHub push or Milestone 5 work was performed.
+
+Final edge-case verification found and corrected empty-cohort Pandas object
+columns before influence aggregation. The completed 30-subject results were
+unaffected. Numeric empty columns and explicit empty influence-table schemas
+now preserve a machine-readable all-failed result. Regression tests also reject
+empty covariance inputs and non-imagery reference-audit runs. Missing
+configuration estimates count against sign agreement and trigger an explicit
+incomplete-evidence flag. These corrections do not change the frozen primary
+analysis or its successful numerical backend.
+
+The complete suite has **255 tests: 251 offline plus 4 cached-data integration**,
+including all 205 baseline tests unchanged and 50 new tests. The exact source
+used for the completed development sensitivity sweep is archived locally in
+`reports/m4-execution-source/source.zip` with a checksum and software digest;
+this makes its dirty-tree provenance recoverable. Final clean-commit replication
+and audit reports are separately generated, preserving development generations.

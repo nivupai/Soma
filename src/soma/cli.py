@@ -328,5 +328,146 @@ def run_coverage(
         _structured_fail(exc)
 
 
+stats = typer.Typer(help="Subject-level inference, influence and simulation calibration")
+app.add_typer(stats, name="stats")
+
+
+def _subject_selection(value: str | None, expand_all: bool = False) -> tuple[int, ...] | None:
+    if value is None:
+        return None
+    if value == "all":
+        if not expand_all:
+            raise ValueError("Selecting all subjects requires --expand-all")
+        return tuple(range(1, 110))
+    if ":" in value:
+        start, stop = map(int, value.split(":"))
+        result = tuple(range(start, stop + 1))
+    else:
+        result = tuple(map(int, value.split(",")))
+    if not result or len(set(result)) != len(result) or min(result) < 1 or max(result) > 109:
+        raise ValueError("Subjects must be unique IDs in 1..109")
+    if len(result) == 109 and not expand_all:
+        raise ValueError("Selecting all subjects requires --expand-all")
+    return result
+
+
+@eeg.command("replicate")
+def eeg_replicate(
+    subjects: str | None = None,
+    runs: Annotated[list[int] | None, typer.Option()] = None,
+    config: Path = Path("configs/replication.yaml"),
+    output: Path = Path("reports/m4-replication"),
+    data_dir: DataDir = Path("data/raw"),
+    cache_dir: Path = Path("data/derived/cohort-cache"),
+    resume: bool = False,
+    sensitivity: bool = False,
+    expand_all: bool = False,
+    fetch_data: Annotated[bool, typer.Option("--fetch")] = False,
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Run the sealed protocol; subject ranges are inclusive, e.g. 6:35."""
+    from soma.experiments.replication import load_protocol, replicate, replication_sensitivity
+
+    try:
+        selected = _subject_selection(subjects, expand_all)
+        protocol, _ = load_protocol(config)
+        if fetch_data:
+            fetch(
+                data_dir,
+                list(selected or protocol["cohort"]["subjects"]),
+                runs or protocol["cohort"]["runs"],
+            )
+        runner = replication_sensitivity if sensitivity else replicate
+        result = runner(
+            data_dir,
+            output,
+            config,
+            subjects=selected,
+            runs=tuple(runs) if runs else None,
+            cache_root=cache_dir,
+            resume=resume,
+            plots=not no_plots,
+        )
+        typer.echo(json.dumps(result))
+        if result["status"] == "failed":
+            raise typer.Exit(1)
+    except typer.Exit:
+        raise
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@stats.command("calibrate")
+def stats_calibrate(
+    config: Path = Path("configs/calibration.yaml"),
+    output: Path = Path("reports/m4-calibration"),
+    workers: int = 1,
+    resume: bool = False,
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Calibrate interval coverage with deterministic independent simulated datasets."""
+    from soma.experiments.config import read_config
+    from soma.simulations.calibration import CalibrationConfig, calibrate
+
+    try:
+        values = read_config(config)
+        for key in ("scenarios", "subject_counts", "methods"):
+            if key in values:
+                values[key] = tuple(values[key])
+        typer.echo(
+            json.dumps(
+                calibrate(
+                    output,
+                    CalibrationConfig(**values),
+                    workers=workers,
+                    resume=resume,
+                    plots=not no_plots,
+                )
+            )
+        )
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@eeg.command("audit-reference")
+def eeg_audit_reference(
+    subjects: str = "1:5",
+    runs: Annotated[list[int] | None, typer.Option()] = None,
+    output: Path = Path("reports/m4-reference-audit"),
+    data_dir: DataDir = Path("data/raw"),
+    no_plots: Annotated[bool, typer.Option("--no-plots")] = False,
+) -> None:
+    """Audit cached reference covariance, shared trials, PSD and artifact examples."""
+    from soma.eeg.reference_audit import audit_reference
+
+    try:
+        selected = _subject_selection(subjects)
+        assert selected is not None
+        typer.echo(
+            json.dumps(
+                audit_reference(
+                    data_dir, output, selected, tuple(runs or (4, 8, 12)), plots=not no_plots
+                )
+            )
+        )
+    except Exception as exc:
+        _structured_fail(exc)
+
+
+@stats.command("influence")
+def stats_influence(
+    input_path: Annotated[Path, typer.Option("--input")],
+    output: Path = Path("reports/m4-influence"),
+    minimum_paired_runs: int | None = None,
+) -> None:
+    """Recompute subject/run influence and distinct weighting targets from saved tables."""
+    from soma.statistics.robustness import run_influence
+
+    try:
+        typer.echo(json.dumps(run_influence(input_path, output, minimum_paired_runs)))
+    except Exception as exc:
+        _structured_fail(exc)
+
+
 if __name__ == "__main__":
     app()

@@ -24,3 +24,4 @@ jobs:
       - run: soma experiments synthetic-spectrum --output reports/ci-synthetic
       - run: soma experiments event-locked --no-plots --output reports/ci-event-locked
       - run: soma experiments cohort-synthetic --no-plots --output reports/ci-cohort --cache-dir data/derived/ci-cache
+      - run: soma stats calibrate --config configs/calibration-smoke.yaml --workers 2 --no-plots --output reports/ci-calibration

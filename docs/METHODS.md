@@ -331,3 +331,28 @@ Additional authoritative API references:
 
 Soma's subject resampling is its own small NumPy implementation; citing SciPy's
 interval documentation does not imply that SciPy performs the cohort grouping.
+
+
+## Milestone 4
+
+The immutable `REPLICATION_PROTOCOL.md` and sealed configuration define the
+primary analysis. Subjects 6–35 are disjoint from the initial five; all requested
+runs and failures appear in QC. Equal-subject log-power contrasts use at least
+two paired runs. The ten inherited one-factor settings are all retained, including
+unchanged primary log-power results under changes affecting only normalization
+or burst definitions. This is not ten independent replications.
+
+Reference auditing filters acquisition-referenced voltages once, then applies
+linear reference transforms. The same channel filters commute with these linear
+transforms. Compare both reference-specific accepted trials and the identical
+intersection across all three reference choices. The retained-set difference
+minus the common-trial transform difference is an accounting remainder, not a
+causal decomposition of artifact mechanisms. Trial-deletion changes are exact
+within-condition contributions to the run contrast. Largest peak-to-peak excerpts
+are visual review candidates, without automated physiological artifact diagnosis.
+
+The inference and simulation assumptions, failure rules and target definitions
+are specified in `STATISTICS.md`. Nominal 95% intervals are pointwise; the two
+primary sign-flip tests alone receive Holm correction. Secondary intervals and
+sensitivity analyses are exploratory. No mixed-effects, classification, ICA,
+source reconstruction or MRI model is introduced.

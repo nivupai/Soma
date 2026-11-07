@@ -1,0 +1,8 @@
+{
+  "protocol_sha256": "9995060c58ffb3a896d725ef9641f27fb7645950b76fbbf59b6ee97f3488ab61",
+  "document_sha256": "381d547fb33f4016f8254c203da1c93fd67aeb88d0a1b1aea9c762bfd2cd65d2",
+  "configuration_file_sha256": "564d0f98a3f55cc1a17b051d530567fc6796a1f30707f45b43741f684a9b2186",
+  "frozen_at_utc": "2026-11-07T03:40:19.020651+00:00",
+  "informed_by_revision": "d92a93b76c14df3514cb6f5530af1dcdd37a7dfb",
+  "new_cohort_analyzed": false
+}

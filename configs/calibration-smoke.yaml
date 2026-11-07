@@ -1,0 +1,8 @@
+scenarios: [normal, correlated_unequal]
+subject_counts: [5, 30]
+methods: [percentile, basic, studentized, bca, t]
+repetitions: 20
+n_resamples: 199
+seed: 20261106
+confidence: 0.95
+chunk_size: 10

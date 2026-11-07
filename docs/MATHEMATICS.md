@@ -183,3 +183,28 @@ with occupied fraction; changing burst count and changing duration can produce
 similar band power. Hilbert/filter smearing, noise, thresholds and censoring
 prevent identifying a unique underlying burst mechanism from band power alone.
 Subject-level associations do not resolve causality.
+
+
+## Reference and uncertainty identities
+
+For an acquisition-referenced channel x and an explicit reference r,
+Var(x−r)=Var(x)+Var(r)−2Cov(x,r), and the Welch spectral identity is
+P(x−r)=P(x)+P(r)−2 Re S(x,r), using identical windows, detrending and scaling.
+These identities explain reference-dependent power; they do not imply invariant
+sensor power or recover absolute physical potentials. Covariance uses population
+normalization consistently. Template coordinates remain templates.
+
+For subject s, run r, calculate d_sr = mean(log P_left) − mean(log P_right).
+The primary d_s is the unweighted mean of eligible paired-run d_sr, and the
+population estimate is mean_s d_s. The standard error is sd(d_s)/sqrt(N).
+A t interval uses t_(N−1,1−alpha/2). Bootstrap indices select whole subjects;
+studentized pivots use (mean(d*)−mean(d))/[sd(d*)/sqrt(N)]. Invalid zero-SE
+pivots count toward the declared failure fraction. Basic limits reflect percentile
+limits about the observed estimate. SciPy computes BCa bias and acceleration.
+No failed interval is silently replaced.
+
+Simulation coverage is sum(contains declared target)/R, with procedure failures
+counted as noncoverage. MCSE=sqrt(p(1−p)/R); exact binomial confidence limits
+also appear in saved data and plots. Conditional-success coverage is separately
+labeled. Coverage of the structural clean effect and of the observed-data target
+are distinct in contamination, MNAR and preprocessing-shift scenarios.
