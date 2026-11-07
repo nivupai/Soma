@@ -170,3 +170,57 @@ def uncertainty_command(
         _echo_result(uncertainty_workflow(config, output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("audit-coreg")
+def audit_coreg_command(
+    dataset: str = "mne-sample", output: Path = Path("reports/coreg-audit")
+) -> None:
+    """Audit cached participant transforms and known asymmetric phantoms; no fetch."""
+    from soma.reliability.workflows import audit_coreg
+
+    try:
+        _echo_result(audit_coreg(output, dataset), output)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("audit-inverse")
+def audit_inverse_command(
+    config: Path = Path("configs/inverse-audit.yaml"), output: Path = Path("reports/inverse-audit")
+) -> None:
+    """Reproduce historical attenuation and compare unit-aware MNE estimators."""
+    from soma.reliability.workflows import inverse_study
+
+    try:
+        _echo_result(inverse_study(config, output), output)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("resolution-study")
+def resolution_study_command(
+    config: Path = Path("configs/resolution-study.yaml"),
+    output: Path = Path("reports/resolution-study"),
+) -> None:
+    """Selected-column MNE resolution and regularization without full dense K."""
+    from soma.reliability.workflows import inverse_study
+
+    try:
+        _echo_result(inverse_study(config, output, resolution_only=True), output)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("uncertainty-study")
+def uncertainty_study_command(
+    config: Path = Path("configs/uncertainty-study.yaml"),
+    output: Path = Path("reports/uncertainty-study"),
+) -> None:
+    """Paired one-factor and limited factorial simulated source uncertainty."""
+    from soma.reliability.workflows import uncertainty_study
+
+    try:
+        _echo_result(uncertainty_study(config, output), output)
+    except Exception as exc:
+        _fail(exc)

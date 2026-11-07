@@ -1,0 +1,2910 @@
+{
+  "milestone": 9,
+  "version": "0.9.0",
+  "verified_at_utc": "2026-11-07T20:22:45.192375+00:00",
+  "baseline_revision": "e7cf639",
+  "source_tree_sha256": "d107cb3508c16983e00cec15167f60de1d34f54157b49eb4fa700a3359d1f61b",
+  "execution_note": "Runs precede local release commit; source-tree hash binds exact implementation. No push.",
+  "tests": {
+    "baseline_passed": 461,
+    "baseline_seconds": 48.06,
+    "final_passed": 495,
+    "added": 34,
+    "final_seconds": 47.05,
+    "warnings": 56,
+    "existing_test_files_unchanged": 36,
+    "integration_tests_included": 13
+  },
+  "static_checks": {
+    "ruff": "pass",
+    "format": "212 files formatted",
+    "strict_mypy": "127 source files pass",
+    "pip_check": "no broken requirements"
+  },
+  "environment": {
+    "python": "3.12.2",
+    "libraries": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mne": "1.13.2",
+      "neurodsp": "2.3.0",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.2",
+      "typer": "0.28.0",
+      "nibabel": "5.4.2",
+      "SimpleITK": "2.5.7",
+      "scikit-image": "0.26.0"
+    },
+    "platform": "macOS-15.7-arm64-arm-64bit",
+    "machine": "arm64",
+    "BLAS_workers": 1,
+    "MNE_workers": 1,
+    "installed_MNE_source_sha256": {
+      "surface.py": "f876f0b3948988bfa5a150cfe80730dd858f59d24847fd14230b148e94154c49",
+      "coreg.py": "10fae16034c5220ae053e92c6e803eddf960ace36d389799e9f64c8b132e2b6e",
+      "source_space/_source_space.py": "51236eacc9281df7fc367118d6d0ff7760d364efea4dfadfe4b15115767f2997",
+      "minimum_norm/inverse.py": "a2211229be7d474ef82f2e073a2b6ccf5537b7323a2404aaa5637f91807de76b"
+    }
+  },
+  "protocol_receipt": {
+    "frozen_at_utc": "2026-11-07T19:25:36.303407+00:00",
+    "baseline_revision": "e7cf639",
+    "new_reliability_algorithms_implemented": false,
+    "files_sha256": {
+      "docs/MODEL_RELIABILITY_PROTOCOL.md": "ed3b4a34c7c21ff61906e348532e646a5a817731b16cfc85e085a661f4e7524f",
+      "configs/inverse-audit.yaml": "b53655bc5a6e547bd206fbe0081ddf098c73c61db95af0e3090efd5da77fb7ff",
+      "configs/resolution-study.yaml": "98b15001e9fb7f0678107e0e18530ba22cb974f0e9e03b068f41e5c07a59bd82",
+      "configs/anatomical-evidence.yaml": "9429441e2f834926f819ca7e0884be88ebad83dba00a813c9ecf7abb2aec1cd9",
+      "configs/uncertainty-study.yaml": "8eb93c19af24f30236223bf72f2a1fad1b73b049ee1d1bdba457df2c8c8b2982"
+    }
+  },
+  "additional_findings": {
+    "document": "docs/MODEL_RELIABILITY_ADDITIONAL_FINDINGS.md",
+    "sha256": "84b7195b5b76290cbe3ded68fdc2edfa219ba15f8461164803dcab2baedcd1a5",
+    "primary_protocol_unchanged": true,
+    "source_filtering_unchanged": true
+  },
+  "historical_preservation": {
+    "old_reports_unchanged": 98,
+    "all_21_case_metrics_exactly_reproduced": true,
+    "reproduction_manifest_sha256": "58e8b7e8aa0f37b0edc70324fd032010c7cb8414a6d71d3c66f335831361f688"
+  },
+  "coregistration": {
+    "status": "complete_audit",
+    "dataset": "mne-sample",
+    "subject": "sample",
+    "registration_coverage": {
+      "independent": {
+        "covered": 92,
+        "count": 100,
+        "coverage": 0.92,
+        "Wilson_95_interval": [
+          0.8500189229905127,
+          0.9589065385156194
+        ],
+        "predicted_target_covariance_m2": [
+          [
+            1.7698031359300608e-06,
+            4.1690788561674235e-08,
+            1.2970961326554707e-07
+          ],
+          [
+            4.1690788561674235e-08,
+            1.6734487746842964e-06,
+            -2.1894467834760324e-07
+          ],
+          [
+            1.297096132655471e-07,
+            -2.1894467834760327e-07,
+            1.09793270420985e-06
+          ]
+        ],
+        "scope": "first held-out target; assigned Gaussian noise model; trials independent"
+      },
+      "correlated": {
+        "covered": 98,
+        "count": 100,
+        "coverage": 0.98,
+        "Wilson_95_interval": [
+          0.929988209271456,
+          0.9944980324498376
+        ],
+        "predicted_target_covariance_m2": [
+          [
+            3.1079212543455998e-06,
+            1.667631544340473e-08,
+            5.188384523127886e-08
+          ],
+          [
+            1.6676315443404706e-08,
+            3.0693795098535393e-06,
+            -8.757787174288498e-08
+          ],
+          [
+            5.188384523127877e-08,
+            -8.757787174288506e-08,
+            2.8391730811225266e-06
+          ]
+        ],
+        "scope": "first held-out target; assigned Gaussian noise model; trials independent"
+      },
+      "anisotropic": {
+        "covered": 94,
+        "count": 100,
+        "coverage": 0.94,
+        "Wilson_95_interval": [
+          0.8752318455410406,
+          0.9722138760368118
+        ],
+        "predicted_target_covariance_m2": [
+          [
+            2.709629414799411e-06,
+            8.352925923444258e-08,
+            4.311657718588231e-07
+          ],
+          [
+            8.352925923444258e-08,
+            3.2874885592820746e-06,
+            -7.545300185527535e-07
+          ],
+          [
+            4.311657718588229e-07,
+            -7.545300185527534e-07,
+            4.334538935499699e-06
+          ]
+        ],
+        "scope": "first held-out target; assigned Gaussian noise model; trials independent"
+      }
+    },
+    "simulation_failures": [
+      {
+        "case": "wrong_correspondence",
+        "repeat": 0,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 1,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 2,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 3,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 4,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 5,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 6,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 7,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 8,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 9,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 10,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 11,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 12,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 13,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 14,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 15,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 16,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 17,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 18,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 19,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 20,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 21,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 22,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 23,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 24,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 25,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 26,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 27,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 28,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 29,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 30,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 31,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 32,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 33,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 34,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 35,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 36,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 37,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 38,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 39,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 40,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 41,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 42,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 43,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 44,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 45,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 46,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 47,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 48,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 49,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 50,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 51,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 52,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 53,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 54,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 55,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 56,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 57,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 58,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 59,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 60,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 61,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 62,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 63,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 64,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 65,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 66,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 67,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 68,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 69,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 70,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 71,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 72,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 73,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 74,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 75,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 76,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 77,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 78,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 79,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 80,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 81,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 82,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 83,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 84,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 85,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 86,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 87,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 88,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 89,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 90,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 91,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 92,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 93,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 94,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 95,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 96,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 97,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 98,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      },
+      {
+        "case": "wrong_correspondence",
+        "repeat": 99,
+        "error": "Mirrored full-rank correspondences require a reflection, not a rigid rotation"
+      }
+    ],
+    "repetitions_per_scenario": 100,
+    "true_real_transform_error": null,
+    "residual_definitions": {
+      "fiducial_fit": "Euclidean residual to the same MNI-derived MRI targets used in fit",
+      "proxy_discrepancy": "distributed transform of measured head cardinals versus derived MRI estimates; no truth",
+      "headshape": "EXTRA points to common ico3 scalp triangles, not EEG or HPI",
+      "reference_difference": "matrix/point differences against distributed transform, not independent anatomical error"
+    },
+    "MNE_vs_Soma_fiducial_matrix_max_difference": 7.771561172376096e-16,
+    "MNE_ICP_scope": "headshape only, starts at MNE fiducial fit; MNE loaded scalp differs from Soma ico3 nearest-vertex trimmed objective",
+    "anatomical_readiness": "INDETERMINATE",
+    "wall_s": 5.031358540989459,
+    "cpu_s": 4.63552,
+    "process_peak_RSS_MiB": 492.03125,
+    "memory_scope": "process high-water including libraries, not incremental allocation"
+  },
+  "coregistration_comparisons": {
+    "distributed": {
+      "proxy_fiducials_mm": [
+        23.508468941186827,
+        10.030402991114695,
+        27.356721010014557
+      ],
+      "headshape_triangle_RMS_mm": 4.6510719719333675,
+      "difference_from_reference_not_truth": {
+        "rotation_difference_deg": 2.2423199159254247e-15,
+        "translation_difference_mm": 0.0,
+        "point_displacement_RMS_mm": 0.0
+      },
+      "HEAD_to_MRI_m": [
+        [
+          0.9993095397949219,
+          0.012759342789649963,
+          0.034894198179244995,
+          0.0020699098240584135
+        ],
+        [
+          0.009984787553548813,
+          0.8124047517776489,
+          -0.5830085277557373,
+          0.011302143335342407
+        ],
+        [
+          -0.03578702360391617,
+          0.5829542875289917,
+          0.8117163777351379,
+          -0.02755521982908249
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "MNE_fiducials": {
+      "proxy_fiducials_mm": [
+        7.20161306464812,
+        7.478027089869487,
+        9.34363569421174
+      ],
+      "headshape_triangle_RMS_mm": 11.56069519522083,
+      "difference_from_reference_not_truth": {
+        "rotation_difference_deg": 10.39965307774043,
+        "translation_difference_mm": 23.480127754733356,
+        "point_displacement_RMS_mm": 27.055972016458092
+      },
+      "HEAD_to_MRI_m": [
+        [
+          0.9984296119077671,
+          0.0558605091992175,
+          0.004232443467978872,
+          -0.0020580813754915175
+        ],
+        [
+          -0.04846005391209012,
+          0.8991170996090199,
+          -0.43501731501803614,
+          0.0008752327419008334
+        ],
+        [
+          -0.028105751022572206,
+          0.4341290645679785,
+          0.9004121401096219,
+          -0.006926220252966009
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "MNE_ICP_headshape_only": {
+      "proxy_fiducials_mm": [
+        19.258637646232113,
+        22.75223193701326,
+        21.518127198551475
+      ],
+      "headshape_triangle_RMS_mm": 3.652888521063904,
+      "difference_from_reference_not_truth": {
+        "rotation_difference_deg": 9.335450874454503,
+        "translation_difference_mm": 9.878961142710024,
+        "point_displacement_RMS_mm": 13.100241430091883
+      },
+      "HEAD_to_MRI_m": [
+        [
+          0.9984301863358072,
+          0.03721032661104744,
+          0.041863523584911376,
+          0.0005716061353131135
+        ],
+        [
+          -0.014644578813899845,
+          0.8948529999464713,
+          -0.4461206617028224,
+          0.0015880822980340412
+        ],
+        [
+          -0.05406199519818643,
+          0.4448072617216358,
+          0.8939931770404579,
+          -0.026562255842366836
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Soma_fiducials": {
+      "proxy_fiducials_mm": [
+        7.201613064648138,
+        7.478027089869528,
+        9.343635694211756
+      ],
+      "headshape_triangle_RMS_mm": 11.560695195220775,
+      "difference_from_reference_not_truth": {
+        "rotation_difference_deg": 10.39965307774042,
+        "translation_difference_mm": 23.48012775473335,
+        "point_displacement_RMS_mm": 27.05597201645804
+      },
+      "HEAD_to_MRI_m": [
+        [
+          0.9984296119077669,
+          0.055860509199217534,
+          0.004232443467978856,
+          -0.0020580813754915175
+        ],
+        [
+          -0.04846005391209017,
+          0.8991170996090193,
+          -0.4350173150180359,
+          0.0008752327419008464
+        ],
+        [
+          -0.028105751022572217,
+          0.4341290645679785,
+          0.9004121401096211,
+          -0.006926220252966011
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "Soma_ICP": {
+      "proxy_fiducials_mm": [
+        23.53670453961399,
+        9.746263700366129,
+        23.84221431287599
+      ],
+      "headshape_triangle_RMS_mm": 4.59811650386979,
+      "difference_from_reference_not_truth": {
+        "rotation_difference_deg": 1.0004337025641408,
+        "translation_difference_mm": 2.8982862611281726,
+        "point_displacement_RMS_mm": 2.4508596049783278
+      },
+      "HEAD_to_MRI_m": [
+        [
+          0.9997997366300648,
+          0.005591658601614263,
+          0.01921412690448892,
+          0.003841809953427996
+        ],
+        [
+          0.006611238965686239,
+          0.8139568217939354,
+          -0.580887857821458,
+          0.009802263839556362
+        ],
+        [
+          -0.01888760227898835,
+          0.5808984493841965,
+          0.8137568066374864,
+          -0.025820055663620046
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "registration": {
+    "base_scenario_attempts": 800,
+    "extra_robust_attempts": 100,
+    "successful_records": 800,
+    "failures_or_negative_control_rejections": 100,
+    "coverage": {
+      "independent": {
+        "covered": 92,
+        "count": 100,
+        "coverage": 0.92,
+        "Wilson_95_interval": [
+          0.8500189229905127,
+          0.9589065385156194
+        ],
+        "predicted_target_covariance_m2": [
+          [
+            1.7698031359300608e-06,
+            4.1690788561674235e-08,
+            1.2970961326554707e-07
+          ],
+          [
+            4.1690788561674235e-08,
+            1.6734487746842964e-06,
+            -2.1894467834760324e-07
+          ],
+          [
+            1.297096132655471e-07,
+            -2.1894467834760327e-07,
+            1.09793270420985e-06
+          ]
+        ],
+        "scope": "first held-out target; assigned Gaussian noise model; trials independent"
+      },
+      "correlated": {
+        "covered": 98,
+        "count": 100,
+        "coverage": 0.98,
+        "Wilson_95_interval": [
+          0.929988209271456,
+          0.9944980324498376
+        ],
+        "predicted_target_covariance_m2": [
+          [
+            3.1079212543455998e-06,
+            1.667631544340473e-08,
+            5.188384523127886e-08
+          ],
+          [
+            1.6676315443404706e-08,
+            3.0693795098535393e-06,
+            -8.757787174288498e-08
+          ],
+          [
+            5.188384523127877e-08,
+            -8.757787174288506e-08,
+            2.8391730811225266e-06
+          ]
+        ],
+        "scope": "first held-out target; assigned Gaussian noise model; trials independent"
+      },
+      "anisotropic": {
+        "covered": 94,
+        "count": 100,
+        "coverage": 0.94,
+        "Wilson_95_interval": [
+          0.8752318455410406,
+          0.9722138760368118
+        ],
+        "predicted_target_covariance_m2": [
+          [
+            2.709629414799411e-06,
+            8.352925923444258e-08,
+            4.311657718588231e-07
+          ],
+          [
+            8.352925923444258e-08,
+            3.2874885592820746e-06,
+            -7.545300185527535e-07
+          ],
+          [
+            4.311657718588229e-07,
+            -7.545300185527534e-07,
+            4.334538935499699e-06
+          ]
+        ],
+        "scope": "first held-out target; assigned Gaussian noise model; trials independent"
+      }
+    },
+    "parameter_covariance_rad_m": {
+      "independent": [
+        [
+          0.0002918107243448002,
+          -3.559048087987681e-06,
+          2.107745974903132e-05,
+          1.0984063554652236e-07,
+          7.083039537165816e-06,
+          -7.192627599451691e-07
+        ],
+        [
+          -3.559048087987681e-06,
+          0.0003001274713473558,
+          -2.1237261514103304e-05,
+          -8.973627803066342e-06,
+          1.508219591497388e-07,
+          1.518682366835417e-06
+        ],
+        [
+          2.107745974903132e-05,
+          -2.1237261514103304e-05,
+          0.00013397360613535048,
+          1.1368122377174368e-06,
+          -4.063293927756124e-07,
+          4.4137910038882747e-07
+        ],
+        [
+          1.0984063554652236e-07,
+          -8.973627803066342e-06,
+          1.1368122377174368e-06,
+          1.3509705308372109e-06,
+          -7.255880020614779e-08,
+          -2.7191500547480956e-07
+        ],
+        [
+          7.083039537165816e-06,
+          1.508219591497388e-07,
+          -4.063293927756124e-07,
+          -7.255880020614779e-08,
+          1.1642902151525568e-06,
+          5.389276972289075e-08
+        ],
+        [
+          -7.192627599451691e-07,
+          1.518682366835417e-06,
+          4.4137910038882747e-07,
+          -2.7191500547480956e-07,
+          5.389276972289075e-08,
+          1.1786942514431588e-06
+        ]
+      ],
+      "correlated": [
+        [
+          0.000100739253448058,
+          7.13867531979162e-06,
+          1.2660640880560727e-05,
+          1.275160308611996e-06,
+          1.3309718553057149e-06,
+          -1.9750313487876156e-06
+        ],
+        [
+          7.13867531979162e-06,
+          8.305568601125501e-05,
+          -1.085257369533107e-05,
+          -1.7805574680612689e-06,
+          -1.6057940854006385e-06,
+          -1.2263674274504093e-06
+        ],
+        [
+          1.2660640880560727e-05,
+          -1.085257369533107e-05,
+          5.630987802589094e-05,
+          7.625132574434188e-08,
+          -1.0006351222593153e-06,
+          1.4370262929286355e-06
+        ],
+        [
+          1.275160308611996e-06,
+          -1.7805574680612689e-06,
+          7.625132574434188e-08,
+          2.8090707294679763e-06,
+          3.134065551872066e-07,
+          9.43177020935388e-08
+        ],
+        [
+          1.3309718553057149e-06,
+          -1.6057940854006385e-06,
+          -1.0006351222593153e-06,
+          3.134065551872066e-07,
+          2.5043893386487415e-06,
+          -4.0791415479961096e-08
+        ],
+        [
+          -1.9750313487876156e-06,
+          -1.2263674274504093e-06,
+          1.4370262929286355e-06,
+          9.43177020935388e-08,
+          -4.0791415479961096e-08,
+          2.747251135749347e-06
+        ]
+      ],
+      "anisotropic": [
+        [
+          0.0009729600079686714,
+          1.3284262153903966e-05,
+          4.6862963767319416e-05,
+          5.130025587877233e-07,
+          1.641901745708175e-05,
+          8.972703427808989e-06
+        ],
+        [
+          1.3284262153903966e-05,
+          0.0008685230562004214,
+          -9.514868186822222e-05,
+          -1.8957191600803276e-05,
+          3.133607830645288e-06,
+          -2.4667663560275364e-06
+        ],
+        [
+          4.6862963767319416e-05,
+          -9.514868186822222e-05,
+          0.00010719353533847655,
+          3.252610494555242e-06,
+          1.002966485602314e-06,
+          -5.937373348259819e-07
+        ],
+        [
+          5.130025587877233e-07,
+          -1.8957191600803276e-05,
+          3.252610494555242e-06,
+          6.340726063870097e-07,
+          -5.432059469440312e-08,
+          4.6637060116904683e-08
+        ],
+        [
+          1.641901745708175e-05,
+          3.133607830645288e-06,
+          1.002966485602314e-06,
+          -5.432059469440312e-08,
+          1.2828513891424148e-06,
+          -9.676446807891177e-08
+        ],
+        [
+          8.972703427808989e-06,
+          -2.4667663560275364e-06,
+          -5.937373348259819e-07,
+          4.6637060116904683e-08,
+          -9.676446807891177e-08,
+          4.5151531033545996e-06
+        ]
+      ],
+      "outlier": [
+        [
+          0.00021199016801809782,
+          -2.0321049365642403e-05,
+          -2.266368261267721e-05,
+          -1.7351770561215119e-06,
+          2.873000031753814e-06,
+          -2.4704195186994993e-06
+        ],
+        [
+          -2.0321049365642403e-05,
+          0.0003841035359264499,
+          -3.051248198044806e-05,
+          -5.81298274872876e-06,
+          -1.7628869951382235e-06,
+          1.112177177581123e-07
+        ],
+        [
+          -2.266368261267721e-05,
+          -3.051248198044806e-05,
+          0.00021119594070397672,
+          3.7709061641293907e-06,
+          -3.3497551089817865e-06,
+          1.416314986396459e-06
+        ],
+        [
+          -1.7351770561215119e-06,
+          -5.81298274872876e-06,
+          3.7709061641293907e-06,
+          1.4467406987156764e-06,
+          -3.330878218423873e-07,
+          7.1338858690466e-08
+        ],
+        [
+          2.873000031753814e-06,
+          -1.7628869951382235e-06,
+          -3.3497551089817865e-06,
+          -3.330878218423873e-07,
+          9.608399785781514e-07,
+          -3.356692170717682e-07
+        ],
+        [
+          -2.4704195186994993e-06,
+          1.112177177581123e-07,
+          1.416314986396459e-06,
+          7.1338858690466e-08,
+          -3.356692170717682e-07,
+          9.573781988588766e-07
+        ]
+      ],
+      "headshape": [
+        [
+          1.1004499261429873e-05,
+          -1.47036659167449e-06,
+          -1.7906534972997955e-06,
+          1.7675193796566126e-07,
+          -3.198603283264283e-08,
+          -9.9589352288333e-08
+        ],
+        [
+          -1.47036659167449e-06,
+          1.4748837986229219e-05,
+          2.3244646431643122e-06,
+          1.1657623304303372e-07,
+          1.6383988492712173e-08,
+          -1.1678509269150301e-07
+        ],
+        [
+          -1.7906534972997955e-06,
+          2.3244646431643122e-06,
+          1.5891010560999145e-05,
+          -4.1648135796645634e-08,
+          1.9108923574540935e-07,
+          2.210636546332291e-08
+        ],
+        [
+          1.7675193796566126e-07,
+          1.1657623304303372e-07,
+          -4.1648135796645634e-08,
+          6.048298257962601e-08,
+          -7.334002465968317e-09,
+          4.8277180975983735e-09
+        ],
+        [
+          -3.198603283264283e-08,
+          1.6383988492712173e-08,
+          1.9108923574540935e-07,
+          -7.334002465968317e-09,
+          8.194460327316366e-08,
+          5.709296068391635e-10
+        ],
+        [
+          -9.9589352288333e-08,
+          -1.1678509269150301e-07,
+          2.210636546332291e-08,
+          4.8277180975983735e-09,
+          5.709296068391635e-10,
+          6.745111936519305e-08
+        ]
+      ],
+      "partial_headshape": [
+        [
+          2.0414267750549828e-05,
+          -1.4355593040192296e-07,
+          8.710135138867325e-07,
+          1.5777299938336533e-08,
+          1.892598942295028e-07,
+          -1.4637472027963808e-07
+        ],
+        [
+          -1.4355593040192296e-07,
+          4.8103106112735023e-05,
+          1.3287954799874658e-06,
+          5.325867768466173e-07,
+          1.0515036530921066e-07,
+          2.2586469643028147e-06
+        ],
+        [
+          8.710135138867325e-07,
+          1.3287954799874658e-06,
+          3.818088828388449e-05,
+          1.5658060524811e-07,
+          -1.79883544448784e-06,
+          -1.0403207936913864e-07
+        ],
+        [
+          1.5777299938336533e-08,
+          5.325867768466173e-07,
+          1.5658060524811e-07,
+          1.311290435396434e-07,
+          -3.075546833391434e-08,
+          2.7037814517814207e-08
+        ],
+        [
+          1.892598942295028e-07,
+          1.0515036530921066e-07,
+          -1.79883544448784e-06,
+          -3.075546833391434e-08,
+          2.1015881881995587e-07,
+          1.3452364557342062e-08
+        ],
+        [
+          -1.4637472027963808e-07,
+          2.2586469643028147e-06,
+          -1.0403207936913864e-07,
+          2.7037814517814207e-08,
+          1.3452364557342062e-08,
+          2.487126626890007e-07
+        ]
+      ],
+      "incorrect_initial_orientation": [
+        [
+          0.0009957716209994078,
+          -6.831378367686359e-05,
+          0.0006135207787127183,
+          -3.3561331852349804e-06,
+          4.987686826167522e-06,
+          -1.5789959675833475e-06
+        ],
+        [
+          -6.831378367686359e-05,
+          0.00019163379757100856,
+          -5.8950534092176176e-05,
+          -5.395250822731491e-06,
+          -7.128407419216176e-06,
+          -2.4856059861007515e-06
+        ],
+        [
+          0.0006135207787127183,
+          -5.8950534092176176e-05,
+          0.0006449128780171567,
+          4.537812997435099e-06,
+          9.168607983845807e-06,
+          -1.0750408032339054e-06
+        ],
+        [
+          -3.3561331852349804e-06,
+          -5.395250822731491e-06,
+          4.537812997435099e-06,
+          1.4032250399095987e-06,
+          2.6560028520506654e-07,
+          1.871100046157886e-07
+        ],
+        [
+          4.987686826167522e-06,
+          -7.128407419216176e-06,
+          9.168607983845807e-06,
+          2.6560028520506654e-07,
+          1.2163766392009043e-06,
+          -2.0233733498176681e-07
+        ],
+        [
+          -1.5789959675833475e-06,
+          -2.4856059861007515e-06,
+          -1.0750408032339054e-06,
+          1.871100046157886e-07,
+          -2.0233733498176681e-07,
+          5.350511812966567e-07
+        ]
+      ]
+    }
+  },
+  "inverse_audit": {
+    "status": "complete_inverse_audit",
+    "historical": {
+      "original_bias": -0.989671361410299,
+      "reproduced_bias": -0.989671361410299,
+      "historical_metric_valid": true,
+      "units": "A m",
+      "definition": "unsigned temporal L2 amplitude at generating fixed-normal source / truth L2 - 1",
+      "true_index": 281,
+      "true_source_id": [
+        "lh",
+        71803
+      ],
+      "resolution_diagonal_gain": 0.01024462555288556,
+      "noiseless_amplitude_ratio": 0.010244625552885562,
+      "signed_waveform_transfer": 0.010242249506272482,
+      "noise_coherent_transfer": -2.3760466130802155e-06,
+      "orthogonal_noise_energy_ratio": 1.7771001679211451e-06,
+      "RMS_ratio_squared_identity_error": 6.3527471044072525e-21,
+      "kernel_vs_direct_MNE_relative_error": 0.0,
+      "noiseless_WL_prediction_relative_error": 8.663784015773977e-16,
+      "noise_free_source_relative_error": 0.9939866249251992,
+      "interpretation": "historical RMS metric valid; distributed resolution attenuation and realized noise are separate",
+      "inverse_cache": {
+        "cache_key": "5ba3d58122b9ffb52890821e",
+        "path": "data/derived/reliability/inverse-5ba3d58122b9ffb52890821e.npz",
+        "sha256": "91c863c33f4250b3ff2598112fa383a2be202a517081efb3a5a7bfbfc156e8f1",
+        "hit": true,
+        "wall_s": 0.003242416074499488,
+        "singular_values": [
+          4.401177090311079,
+          3.8163604906413475,
+          2.826269228499617,
+          2.017812064760451,
+          1.6493503766382043,
+          1.4368501054350198,
+          1.1038555874686315,
+          1.0495192894428527,
+          0.8747719980485948,
+          0.8673743984363207,
+          0.7272661356587494,
+          0.6649897793177602,
+          0.557770491089676,
+          0.5158506589543563,
+          0.4715393173559506,
+          0.4502329372934337,
+          0.4172858515287311,
+          0.3915335495153114,
+          0.35433888155950977,
+          0.3248272295517979,
+          0.2974634679646472,
+          0.29402999768712307,
+          0.2762375682126698,
+          0.24868530945736075,
+          0.2302566938074844,
+          0.21813787589835923,
+          0.20817474457655785,
+          0.19412179856470982,
+          0.18931612579403148,
+          0.18073014931178494,
+          0.17210141597990608,
+          0.16632726835614262,
+          0.15703547170475562,
+          0.1501681586668482,
+          0.1415167437632776,
+          0.13255611173210713,
+          0.1264512362323236,
+          0.12254753225422298,
+          0.1148515132252309,
+          0.10858553810954773,
+          0.10578347109825813,
+          0.10132104614810258,
+          0.09455770011487923,
+          0.08751117689499488,
+          0.08651252961735698,
+          0.08429280547726492,
+          0.07975140098509302,
+          0.07565984629489034,
+          0.07259082001907553,
+          0.06387127592904787,
+          0.060200535400354645,
+          0.05608680388872107,
+          0.05000578193735599,
+          0.04424017712901673,
+          0.04138386009433333,
+          0.03625222031924596,
+          0.03170419108162358,
+          0.026362740213052967,
+          1.9869699582275114e-16
+        ],
+        "singular_attenuation": [
+          0.9942965748463984,
+          0.9924289150770769,
+          0.9862807307762537,
+          0.973435404962044,
+          0.9607584758506451,
+          0.9489296784909449,
+          0.9164331978872347,
+          0.9083696671673924,
+          0.873209631836733,
+          0.8713171801090694,
+          0.8263962516373684,
+          0.7991928621099282,
+          0.736840116783712,
+          0.7054419992208502,
+          0.6667937238079416,
+          0.6459409065696132,
+          0.6104625606808621,
+          0.5797766122294296,
+          0.5305173988526447,
+          0.48707810264919,
+          0.4433189073225709,
+          0.4375964804197812,
+          0.40714909895985235,
+          0.35757397247032274,
+          0.3230267795360139,
+          0.2998459922194151,
+          0.28059133473712194,
+          0.25325735903720337,
+          0.24389370028894022,
+          0.227184843827396,
+          0.21046610953397188,
+          0.19934848859304025,
+          0.18163005264744034,
+          0.1687132136126098,
+          0.1527167831791518,
+          0.13654660965452944,
+          0.12580476818891143,
+          0.11906775299140437,
+          0.10611954823769272,
+          0.09593680967888804,
+          0.09149654973782083,
+          0.08457902940680853,
+          0.07447721453939675,
+          0.06447966749799992,
+          0.0631087685237763,
+          0.060103993747722836,
+          0.05414327332196828,
+          0.048995478191997115,
+          0.04527756298198391,
+          0.035415546777381755,
+          0.03158667933268107,
+          0.02753208955968854,
+          0.022009867485738688,
+          0.017309831283647322,
+          0.01517964173494467,
+          0.01168974486824929,
+          0.008965297904053475,
+          0.006216065485919065,
+          3.5532446534087748e-31
+        ],
+        "basis": "fixed signed normal",
+        "parameters_sha256": "5ba3d58122b9ffb52890821e4652d59ba9a65f94e1b6798359e7ae0a72928766",
+        "full_parameters_receipt": "data/derived/reliability/inverse-5ba3d58122b9ffb52890821e.npz.json"
+      }
+    },
+    "selected_indices": [
+      281,
+      858,
+      621
+    ],
+    "settings": 90,
+    "metric_rows": 270,
+    "failures": [],
+    "source_count": 1239,
+    "shape": [
+      59,
+      1239
+    ],
+    "rank": 58,
+    "readiness": "INDETERMINATE",
+    "full_dense_K_allocated": false,
+    "source_clearance_audit": {
+      "minimum_triangle_distance_m": 0.0006759253893990509,
+      "count_triangle_distance_below_5mm": 104,
+      "count_triangle_distance_below_1mm": 1,
+      "shallowest_index": 621,
+      "shallowest_nearest_vertex_distance_m": 0.006591712009793586,
+      "scope": "post-protocol diagnostic: MNE mindist uses nearest vertices, not exact triangles; no sources changed"
+    },
+    "forward_diagnostics": {
+      "rank": 58,
+      "retained_condition": 267.4368909196562,
+      "underdetermined": true
+    },
+    "units_policy": "MNE A m; dSPM/sLORETA dimensionless statistics, no physical amplitude/residual claims",
+    "forward_cache": {
+      "BEM": {
+        "cache_key": "f29a11b95abbf0450ee0b1c9",
+        "path": "data/derived/individual/BEM-f29a11b95abbf0450ee0b1c9-bem-sol.fif",
+        "sha256": "f09442ecacbeb78545731b6e2c398ee630c49dc10781fac7635f30b6ade82a26",
+        "hit": true,
+        "wall_s": 0.02344520902261138,
+        "parameters_sha256": "f29a11b95abbf0450ee0b1c924069b585d4a3384128dc7f026c373b1bbbc2e6d",
+        "full_parameters_receipt": "data/derived/individual/BEM-f29a11b95abbf0450ee0b1c9-bem-sol.fif.json"
+      },
+      "forward": {
+        "cache_key": "79e7de68d329f9c6bae59886",
+        "path": "data/derived/individual/forward-79e7de68d329f9c6bae59886-fwd.fif",
+        "sha256": "5ed5b3a5775ecf71561d0f7dc61cbb0fbb0d28739ffface04881ba0bcd067cce",
+        "hit": true,
+        "wall_s": 0.03443741600494832,
+        "parameters_sha256": "79e7de68d329f9c6bae59886cb39831a5f3088cbe956cdc4ad8b9894589d1a4d",
+        "full_parameters_receipt": "data/derived/individual/forward-79e7de68d329f9c6bae59886-fwd.fif.json"
+      }
+    },
+    "wall_s": 5.488772041979246,
+    "cpu_s": 5.515131,
+    "stages": {
+      "prepare": {
+        "wall_s": 1.6376826670020819,
+        "cpu_s": 1.616151
+      },
+      "historical_reproduction": {
+        "wall_s": 0.05102829204406589,
+        "cpu_s": 0.048264000000000085
+      },
+      "source_depth": {
+        "wall_s": 0.11522083298768848,
+        "cpu_s": 0.11513000000000018
+      },
+      "inverse_regularization_selected_resolution": {
+        "wall_s": 2.3621481670998037,
+        "cpu_s": 2.438562
+      }
+    },
+    "process_peak_RSS_MiB": 419.1875,
+    "memory_scope": "process high-water including libraries, not incremental allocation"
+  },
+  "resolution_study": {
+    "status": "complete_resolution_study",
+    "historical": {
+      "original_bias": -0.989671361410299,
+      "reproduced_bias": -0.989671361410299,
+      "historical_metric_valid": true,
+      "units": "A m",
+      "definition": "unsigned temporal L2 amplitude at generating fixed-normal source / truth L2 - 1",
+      "true_index": 281,
+      "true_source_id": [
+        "lh",
+        71803
+      ],
+      "resolution_diagonal_gain": 0.01024462555288556,
+      "noiseless_amplitude_ratio": 0.010244625552885562,
+      "signed_waveform_transfer": 0.010242249506272482,
+      "noise_coherent_transfer": -2.3760466130802155e-06,
+      "orthogonal_noise_energy_ratio": 1.7771001679211451e-06,
+      "RMS_ratio_squared_identity_error": 6.3527471044072525e-21,
+      "kernel_vs_direct_MNE_relative_error": 0.0,
+      "noiseless_WL_prediction_relative_error": 8.663784015773977e-16,
+      "noise_free_source_relative_error": 0.9939866249251992,
+      "interpretation": "historical RMS metric valid; distributed resolution attenuation and realized noise are separate",
+      "inverse_cache": {
+        "cache_key": "5ba3d58122b9ffb52890821e",
+        "path": "data/derived/reliability/inverse-5ba3d58122b9ffb52890821e.npz",
+        "sha256": "91c863c33f4250b3ff2598112fa383a2be202a517081efb3a5a7bfbfc156e8f1",
+        "hit": true,
+        "wall_s": 0.002925666980445385,
+        "singular_values": [
+          4.401177090311079,
+          3.8163604906413475,
+          2.826269228499617,
+          2.017812064760451,
+          1.6493503766382043,
+          1.4368501054350198,
+          1.1038555874686315,
+          1.0495192894428527,
+          0.8747719980485948,
+          0.8673743984363207,
+          0.7272661356587494,
+          0.6649897793177602,
+          0.557770491089676,
+          0.5158506589543563,
+          0.4715393173559506,
+          0.4502329372934337,
+          0.4172858515287311,
+          0.3915335495153114,
+          0.35433888155950977,
+          0.3248272295517979,
+          0.2974634679646472,
+          0.29402999768712307,
+          0.2762375682126698,
+          0.24868530945736075,
+          0.2302566938074844,
+          0.21813787589835923,
+          0.20817474457655785,
+          0.19412179856470982,
+          0.18931612579403148,
+          0.18073014931178494,
+          0.17210141597990608,
+          0.16632726835614262,
+          0.15703547170475562,
+          0.1501681586668482,
+          0.1415167437632776,
+          0.13255611173210713,
+          0.1264512362323236,
+          0.12254753225422298,
+          0.1148515132252309,
+          0.10858553810954773,
+          0.10578347109825813,
+          0.10132104614810258,
+          0.09455770011487923,
+          0.08751117689499488,
+          0.08651252961735698,
+          0.08429280547726492,
+          0.07975140098509302,
+          0.07565984629489034,
+          0.07259082001907553,
+          0.06387127592904787,
+          0.060200535400354645,
+          0.05608680388872107,
+          0.05000578193735599,
+          0.04424017712901673,
+          0.04138386009433333,
+          0.03625222031924596,
+          0.03170419108162358,
+          0.026362740213052967,
+          1.9869699582275114e-16
+        ],
+        "singular_attenuation": [
+          0.9942965748463984,
+          0.9924289150770769,
+          0.9862807307762537,
+          0.973435404962044,
+          0.9607584758506451,
+          0.9489296784909449,
+          0.9164331978872347,
+          0.9083696671673924,
+          0.873209631836733,
+          0.8713171801090694,
+          0.8263962516373684,
+          0.7991928621099282,
+          0.736840116783712,
+          0.7054419992208502,
+          0.6667937238079416,
+          0.6459409065696132,
+          0.6104625606808621,
+          0.5797766122294296,
+          0.5305173988526447,
+          0.48707810264919,
+          0.4433189073225709,
+          0.4375964804197812,
+          0.40714909895985235,
+          0.35757397247032274,
+          0.3230267795360139,
+          0.2998459922194151,
+          0.28059133473712194,
+          0.25325735903720337,
+          0.24389370028894022,
+          0.227184843827396,
+          0.21046610953397188,
+          0.19934848859304025,
+          0.18163005264744034,
+          0.1687132136126098,
+          0.1527167831791518,
+          0.13654660965452944,
+          0.12580476818891143,
+          0.11906775299140437,
+          0.10611954823769272,
+          0.09593680967888804,
+          0.09149654973782083,
+          0.08457902940680853,
+          0.07447721453939675,
+          0.06447966749799992,
+          0.0631087685237763,
+          0.060103993747722836,
+          0.05414327332196828,
+          0.048995478191997115,
+          0.04527756298198391,
+          0.035415546777381755,
+          0.03158667933268107,
+          0.02753208955968854,
+          0.022009867485738688,
+          0.017309831283647322,
+          0.01517964173494467,
+          0.01168974486824929,
+          0.008965297904053475,
+          0.006216065485919065,
+          3.5532446534087748e-31
+        ],
+        "basis": "fixed signed normal",
+        "parameters_sha256": "5ba3d58122b9ffb52890821e4652d59ba9a65f94e1b6798359e7ae0a72928766",
+        "full_parameters_receipt": "data/derived/reliability/inverse-5ba3d58122b9ffb52890821e.npz.json"
+      }
+    },
+    "selected_indices": [
+      281,
+      858,
+      621
+    ],
+    "settings": 30,
+    "metric_rows": 90,
+    "failures": [],
+    "source_count": 1239,
+    "shape": [
+      59,
+      1239
+    ],
+    "rank": 58,
+    "readiness": "INDETERMINATE",
+    "full_dense_K_allocated": false,
+    "source_clearance_audit": {
+      "minimum_triangle_distance_m": 0.0006759253893990509,
+      "count_triangle_distance_below_5mm": 104,
+      "count_triangle_distance_below_1mm": 1,
+      "shallowest_index": 621,
+      "shallowest_nearest_vertex_distance_m": 0.006591712009793586,
+      "scope": "post-protocol diagnostic: MNE mindist uses nearest vertices, not exact triangles; no sources changed"
+    },
+    "forward_diagnostics": {
+      "rank": 58,
+      "retained_condition": 267.4368909196562,
+      "underdetermined": true
+    },
+    "units_policy": "MNE A m; dSPM/sLORETA dimensionless statistics, no physical amplitude/residual claims",
+    "forward_cache": {
+      "BEM": {
+        "cache_key": "f29a11b95abbf0450ee0b1c9",
+        "path": "data/derived/individual/BEM-f29a11b95abbf0450ee0b1c9-bem-sol.fif",
+        "sha256": "f09442ecacbeb78545731b6e2c398ee630c49dc10781fac7635f30b6ade82a26",
+        "hit": true,
+        "wall_s": 0.019798583001829684,
+        "parameters_sha256": "f29a11b95abbf0450ee0b1c924069b585d4a3384128dc7f026c373b1bbbc2e6d",
+        "full_parameters_receipt": "data/derived/individual/BEM-f29a11b95abbf0450ee0b1c9-bem-sol.fif.json"
+      },
+      "forward": {
+        "cache_key": "79e7de68d329f9c6bae59886",
+        "path": "data/derived/individual/forward-79e7de68d329f9c6bae59886-fwd.fif",
+        "sha256": "5ed5b3a5775ecf71561d0f7dc61cbb0fbb0d28739ffface04881ba0bcd067cce",
+        "hit": true,
+        "wall_s": 0.03431937494315207,
+        "parameters_sha256": "79e7de68d329f9c6bae59886cb39831a5f3088cbe956cdc4ad8b9894589d1a4d",
+        "full_parameters_receipt": "data/derived/individual/forward-79e7de68d329f9c6bae59886-fwd.fif.json"
+      }
+    },
+    "wall_s": 3.7310853339731693,
+    "cpu_s": 3.741302,
+    "stages": {
+      "prepare": {
+        "wall_s": 1.6492272909963503,
+        "cpu_s": 1.632924
+      },
+      "historical_reproduction": {
+        "wall_s": 0.04943104099947959,
+        "cpu_s": 0.04938500000000001
+      },
+      "source_depth": {
+        "wall_s": 0.11502529203426093,
+        "cpu_s": 0.11499799999999993
+      },
+      "inverse_regularization_selected_resolution": {
+        "wall_s": 0.7532536250073463,
+        "cpu_s": 0.8003650000000002
+      }
+    },
+    "process_peak_RSS_MiB": 425.6875,
+    "memory_scope": "process high-water including libraries, not incremental allocation"
+  },
+  "anatomical_evidence": {
+    "status": "INDETERMINATE",
+    "anatomical_certification": false,
+    "evidence_records": [
+      {
+        "property": "MRI_provenance",
+        "category": "external_reference",
+        "status": "PASS",
+        "definition": "Curated sample paths and selected asset hashes agree; not authenticated clinical identity",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "MRI_provenance",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "surface_generation",
+        "category": "external_reference",
+        "status": "PASS",
+        "definition": "Distributed participant FLASH surfaces; generation independently unvalidated",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "surface_generation",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "topology",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "M8 scoped ico3 solver checks and stated tolerances; not anatomical truth",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "topology",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "geometry",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "M8 scoped ico3 solver checks and stated tolerances; not anatomical truth",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "geometry",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "coordinate_consistency",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "M8 scoped ico3 solver checks and stated tolerances; not anatomical truth",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "coordinate_consistency",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "sensor_compatibility",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "M8 scoped ico3 solver checks and stated tolerances; not anatomical truth",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "sensor_compatibility",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "numerical_mesh_quality",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "M8 scoped ico3 solver checks and stated tolerances; not anatomical truth",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "numerical_mesh_quality",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "surface_nesting",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "Solid-angle containment, no crossing and minimum 0.1-mm separation",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "surface_nesting",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "self_intersections",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "Nonadjacent triangle intersections at tolerance 1e-8 m",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "self_intersections",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "mesh_orientation",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "Positive global signed volume and consistently oriented adjacent faces",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "mesh_orientation",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "transform_chain",
+        "category": "computationally_verified",
+        "status": "PASS",
+        "definition": "Explicit rigid HEAD\u2192MRI and stored MGH voxel\u2192surface-RAS; source/sensor identity checked",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "transform_chain",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "brainmask.mgz",
+        "category": "heuristically_assessed",
+        "status": "INDETERMINATE",
+        "definition": "Same-pipeline foreground derivative consistency, not independent reference segmentation",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "brainmask.mgz",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "seghead.mgz",
+        "category": "heuristically_assessed",
+        "status": "INDETERMINATE",
+        "definition": "Same-pipeline foreground derivative consistency, not independent reference segmentation",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "seghead.mgz",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "independent_tissue_reference",
+        "category": "not_assessed",
+        "status": "INDETERMINATE",
+        "definition": "No independent validated tissue/landmark evidence available",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "independent_tissue_reference",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "MRI_anatomical_plausibility",
+        "category": "not_assessed",
+        "status": "INDETERMINATE",
+        "definition": "No independent validated tissue/landmark evidence available",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "MRI_anatomical_plausibility",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "independent_registration_truth",
+        "category": "not_assessed",
+        "status": "INDETERMINATE",
+        "definition": "No independent validated tissue/landmark evidence available",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "independent_registration_truth",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      },
+      {
+        "property": "segmentation_source",
+        "category": "heuristically_assessed",
+        "status": "INDETERMINATE",
+        "definition": "Supplied FreeSurfer aseg label inventory, not independently validated tissue truth",
+        "provenance": {
+          "full_evidence_record": "reports/milestone9-validated/evidence/evidence.json",
+          "record_property": "segmentation_source",
+          "file_sha256": "aaef20cba9822ba45c9f0e4916e793d2915ff3f6471aae529891b325f8239500"
+        }
+      }
+    ],
+    "derivative_summary": {
+      "brainmask.mgz": {
+        "surface_vertices_inside_mask_fraction": 0.9501557632398754,
+        "sampled_mask_centers_inside_surface_fraction": 0.85815,
+        "mask_sample_count": 20000,
+        "mask_components_6_connected": 248,
+        "voxel_to_MRI_m": [
+          [
+            -0.001,
+            0.0,
+            0.0,
+            0.128
+          ],
+          [
+            0.0,
+            0.0,
+            0.001,
+            -0.128
+          ],
+          [
+            0.0,
+            -0.001,
+            0.0,
+            0.128
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "voxel_center_discretization_bound_m": 0.0015,
+        "distance_definition": "nearest foreground boundary voxel center; not exact continuous tissue boundary",
+        "sampling": "deterministic equal-spaced foreground flat indices; descriptive, no binomial interval",
+        "Dice": null,
+        "independent_anatomical_ground_truth": false,
+        "sha256": "cfed1634446cd0dcce903ece98acd270d2b7c60661b26259811e0f428be3966a"
+      },
+      "seghead.mgz": {
+        "surface_vertices_inside_mask_fraction": 0.16199376947040497,
+        "sampled_mask_centers_inside_surface_fraction": 0.9721,
+        "mask_sample_count": 20000,
+        "mask_components_6_connected": 1,
+        "voxel_to_MRI_m": [
+          [
+            -0.001,
+            0.0,
+            0.0,
+            0.128
+          ],
+          [
+            0.0,
+            0.0,
+            0.001,
+            -0.128
+          ],
+          [
+            0.0,
+            -0.001,
+            0.0,
+            0.128
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "voxel_center_discretization_bound_m": 0.0015,
+        "distance_definition": "nearest foreground boundary voxel center; not exact continuous tissue boundary",
+        "sampling": "deterministic equal-spaced foreground flat indices; descriptive, no binomial interval",
+        "Dice": null,
+        "independent_anatomical_ground_truth": false,
+        "sha256": "2067d0b3d58ad4b853f02dc66540dfe54f44b984881b5f67315a7c4d733d83d7"
+      }
+    },
+    "source_subject": "sample",
+    "wall_s": 8.927973208017647,
+    "cpu_s": 8.903326,
+    "stages": {
+      "surface_QC_and_assets": {
+        "wall_s": 1.586511458037421,
+        "cpu_s": 1.582875
+      },
+      "surface_volume_evidence": {
+        "wall_s": 6.98281783296261,
+        "cpu_s": 6.971377
+      }
+    },
+    "process_peak_RSS_MiB": 435.25,
+    "memory_scope": "process high-water including libraries, not incremental allocation"
+  },
+  "uncertainty_attribution": {
+    "status": "complete_paired_attribution",
+    "cases": [
+      {
+        "mean": 1.037820571335042,
+        "low95": 1.0347963371167135,
+        "high95": 1.0408448055533703,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 68.3716055794865,
+          "low95": 59.81839046123483,
+          "high95": 76.92482069773817,
+          "repetitions": 40
+        },
+        "snr_db": 0,
+        "lambda2": 0.1111111111111111,
+        "case": "noise_SNR_0",
+        "baseline_change": {
+          "mean": 0.03945348465672786,
+          "low95": 0.03679626641158094,
+          "high95": 0.042110702901874776,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.04383394640985139
+      },
+      {
+        "mean": 0.9983670866783141,
+        "low95": 0.9979725084440982,
+        "high95": 0.9987616649125299,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 40.35235021638217,
+          "low95": 32.825658365420026,
+          "high95": 47.879042067344315,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "noise_SNR_10",
+        "baseline_change": {
+          "mean": 0.0,
+          "low95": 0.0,
+          "high95": 0.0,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.004380461753123566
+      },
+      {
+        "mean": 0.994396006858679,
+        "low95": 0.9943170583253643,
+        "high95": 0.9944749553919937,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 27.461897561648716,
+          "low95": 26.188750373900866,
+          "high95": 28.735044749396565,
+          "repetitions": 40
+        },
+        "snr_db": 20,
+        "lambda2": 0.1111111111111111,
+        "case": "noise_SNR_20",
+        "baseline_change": {
+          "mean": -0.0039710798196350375,
+          "low95": -0.00429632314343999,
+          "high95": -0.0036458364958300844,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.00040938193348849516
+      },
+      {
+        "mean": 0.9983670866783141,
+        "low95": 0.9979725084440982,
+        "high95": 0.9987616649125299,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 40.35235021638217,
+          "low95": 32.825658365420026,
+          "high95": 47.879042067344315,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "correct",
+        "baseline_change": {
+          "mean": 0.0,
+          "low95": 0.0,
+          "high95": 0.0,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.004380461753123566
+      },
+      {
+        "mean": 0.9984555593630633,
+        "low95": 0.9980535698396777,
+        "high95": 0.9988575488864488,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 45.705996794906014,
+          "low95": 37.01438324388643,
+          "high95": 54.3976103459256,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "registration",
+        "baseline_change": {
+          "mean": 8.847268474923564e-05,
+          "low95": 5.348210832618923e-05,
+          "high95": 0.00012346326117228205,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0044689344378727736
+      },
+      {
+        "mean": 0.9990282738843856,
+        "low95": 0.9986395279790907,
+        "high95": 0.9994170197896806,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 40.13244958607904,
+          "low95": 34.26782214200638,
+          "high95": 45.9970770301517,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "electrode",
+        "baseline_change": {
+          "mean": 0.0006611872060716644,
+          "low95": 0.0005221498202170118,
+          "high95": 0.0008002245919263171,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.005041648959195122
+      },
+      {
+        "mean": 1.0042237965152079,
+        "low95": 1.003489399267104,
+        "high95": 1.0049581937633119,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 40.04205385167353,
+          "low95": 32.568373347327906,
+          "high95": 47.51573435601915,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "conductivity",
+        "baseline_change": {
+          "mean": 0.005856709836893745,
+          "low95": 0.005427024665902272,
+          "high95": 0.006286395007885219,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.010237171590017358
+      },
+      {
+        "mean": 0.9983899318737391,
+        "low95": 0.9979847027362051,
+        "high95": 0.9987951610112732,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 43.06605302037636,
+          "low95": 34.68590113013158,
+          "high95": 51.446204910621134,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "forward_rotation_mismatch",
+        "baseline_change": {
+          "mean": 2.2845195425008623e-05,
+          "low95": -7.988637656144735e-05,
+          "high95": 0.0001255767674114646,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.004403306948548624
+      },
+      {
+        "mean": 0.9959851877451438,
+        "low95": 0.9958881654324493,
+        "high95": 0.9960822100578383,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 27.614111956322336,
+          "low95": 26.014466146042125,
+          "high95": 29.213757766602548,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 1,
+        "case": "regularization",
+        "baseline_change": {
+          "mean": -0.0023818989331702094,
+          "low95": -0.002724008380781687,
+          "high95": -0.002039789485558732,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0019985628199532535
+      },
+      {
+        "mean": 0.9983670866783141,
+        "low95": 0.9979725084440982,
+        "high95": 0.9987616649125299,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 40.35235021638217,
+          "low95": 32.825658365420026,
+          "high95": 47.879042067344315,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "factorial_000",
+        "baseline_change": {
+          "mean": 0.0,
+          "low95": 0.0,
+          "high95": 0.0,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.004380461753123566
+      },
+      {
+        "mean": 0.9959851877451438,
+        "low95": 0.9958881654324493,
+        "high95": 0.9960822100578383,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 27.614111956322336,
+          "low95": 26.014466146042125,
+          "high95": 29.213757766602548,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 1,
+        "case": "factorial_001",
+        "baseline_change": {
+          "mean": -0.0023818989331702094,
+          "low95": -0.002724008380781687,
+          "high95": -0.002039789485558732,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0019985628199532535
+      },
+      {
+        "mean": 1.0042237965152079,
+        "low95": 1.003489399267104,
+        "high95": 1.0049581937633119,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 40.04205385167353,
+          "low95": 32.568373347327906,
+          "high95": 47.51573435601915,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "factorial_010",
+        "baseline_change": {
+          "mean": 0.005856709836893745,
+          "low95": 0.005427024665902272,
+          "high95": 0.006286395007885219,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.010237171590017358
+      },
+      {
+        "mean": 0.9963033018613808,
+        "low95": 0.996167768661213,
+        "high95": 0.9964388350615486,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 28.515446455459283,
+          "low95": 26.33893650435053,
+          "high95": 30.691956406568035,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 1,
+        "case": "factorial_011",
+        "baseline_change": {
+          "mean": -0.002063784816933217,
+          "low95": -0.0023998508141423076,
+          "high95": -0.0017277188197241267,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0023166769361903095
+      },
+      {
+        "mean": 0.9984555593630633,
+        "low95": 0.9980535698396777,
+        "high95": 0.9988575488864488,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 45.705996794906014,
+          "low95": 37.01438324388643,
+          "high95": 54.3976103459256,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "factorial_100",
+        "baseline_change": {
+          "mean": 8.847268474923564e-05,
+          "low95": 5.348210832618923e-05,
+          "high95": 0.00012346326117228205,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0044689344378727736
+      },
+      {
+        "mean": 0.9960314916303936,
+        "low95": 0.9959303801457767,
+        "high95": 0.9961326031150105,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 28.503029220538146,
+          "low95": 26.65381829469135,
+          "high95": 30.35224014638494,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 1,
+        "case": "factorial_101",
+        "baseline_change": {
+          "mean": -0.0023355950479203385,
+          "low95": -0.0026761677098571524,
+          "high95": -0.0019950223859835246,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0020448667052030967
+      },
+      {
+        "mean": 1.0041351019446818,
+        "low95": 1.0034045135077645,
+        "high95": 1.0048656903815991,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 42.874717001893984,
+          "low95": 34.86128830718124,
+          "high95": 50.88814569660673,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 0.1111111111111111,
+        "case": "factorial_110",
+        "baseline_change": {
+          "mean": 0.005768015266367804,
+          "low95": 0.0053525001088517345,
+          "high95": 0.006183530423883874,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.010148477019491287
+      },
+      {
+        "mean": 0.9963485470970358,
+        "low95": 0.996209992595692,
+        "high95": 0.9964871015983796,
+        "repetitions": 40,
+        "correct_model_noiseless_relative_error": 0.9939866249251905,
+        "peak_error_mm": {
+          "mean": 29.3350980292295,
+          "low95": 27.119429856423825,
+          "high95": 31.550766202035174,
+          "repetitions": 40
+        },
+        "snr_db": 10,
+        "lambda2": 1,
+        "case": "factorial_111",
+        "baseline_change": {
+          "mean": -0.0020185395812781976,
+          "low95": -0.0023523952260389894,
+          "high95": -0.001684683936517406,
+          "repetitions": 40
+        },
+        "total_error_change_from_noiseless_baseline": 0.0023619221718452765
+      }
+    ],
+    "interactions": {
+      "0,1": {
+        "mean": -0.00017716725527516797,
+        "low95": -0.00021006387707773571,
+        "high95": -0.00014427063347260022,
+        "repetitions": 40
+      },
+      "0,2": {
+        "mean": -4.2168799499364695e-05,
+        "low95": -7.098533152511263e-05,
+        "high95": -1.3352267473616762e-05,
+        "repetitions": 40
+      },
+      "1,2": {
+        "mean": -0.005538595720656745,
+        "low95": -0.005937317882865532,
+        "high95": -0.005139873558447958,
+        "repetitions": 40
+      },
+      "0,1,2": {
+        "mean": 0.0001761086056802974,
+        "low95": 0.0001448753602552376,
+        "high95": 0.00020734185110535722,
+        "repetitions": 40
+      }
+    },
+    "failures": [],
+    "independent_noise_realizations": 40,
+    "evaluations": 680,
+    "truth_index": 281,
+    "baseline_noiseless_error": 0.9939866249251905,
+    "noise_assumptions": "Fixed independent 1-uV training covariance and lambda; evaluation noise rescaled to each SNR, not refitted",
+    "forward_shape": [
+      59,
+      1239
+    ],
+    "scope": "paired conditional simulation; fixed selected perturbations, not additive biological variance decomposition",
+    "factors": [
+      "3mm registration x",
+      "skull conductivity .003 S/m",
+      "lambda2 1"
+    ],
+    "anatomical_readiness": "INDETERMINATE",
+    "baseline_forward_cache": {
+      "BEM": {
+        "cache_key": "f29a11b95abbf0450ee0b1c9",
+        "path": "data/derived/individual/BEM-f29a11b95abbf0450ee0b1c9-bem-sol.fif",
+        "sha256": "f09442ecacbeb78545731b6e2c398ee630c49dc10781fac7635f30b6ade82a26",
+        "hit": true,
+        "wall_s": 0.018693917081691325,
+        "parameters_sha256": "f29a11b95abbf0450ee0b1c924069b585d4a3384128dc7f026c373b1bbbc2e6d",
+        "full_parameters_receipt": "data/derived/individual/BEM-f29a11b95abbf0450ee0b1c9-bem-sol.fif.json"
+      },
+      "forward": {
+        "cache_key": "79e7de68d329f9c6bae59886",
+        "path": "data/derived/individual/forward-79e7de68d329f9c6bae59886-fwd.fif",
+        "sha256": "5ed5b3a5775ecf71561d0f7dc61cbb0fbb0d28739ffface04881ba0bcd067cce",
+        "hit": true,
+        "wall_s": 0.030585709027945995,
+        "parameters_sha256": "79e7de68d329f9c6bae59886cb39831a5f3088cbe956cdc4ad8b9894589d1a4d",
+        "full_parameters_receipt": "data/derived/individual/forward-79e7de68d329f9c6bae59886-fwd.fif.json"
+      }
+    },
+    "wall_s": 3.814833333948627,
+    "cpu_s": 3.7471069999999997,
+    "stages": {
+      "prepare": {
+        "wall_s": 1.6959503339603543,
+        "cpu_s": 1.678326
+      },
+      "one_factor_and_SNR_simulations": {
+        "wall_s": 0.40118487493600696,
+        "cpu_s": 0.3840969999999997
+      },
+      "paired_factorial_interactions": {
+        "wall_s": 0.6859512079972774,
+        "cpu_s": 0.6736680000000002
+      }
+    },
+    "process_peak_RSS_MiB": 771.8125,
+    "memory_scope": "process high-water including libraries, not incremental allocation"
+  },
+  "profiles": {
+    "coreg": {
+      "wall_s": 5.031358540989459,
+      "cpu_s": 4.63552,
+      "process_peak_RSS_MiB": 492.03125,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "assets_and_surface_QC": {
+          "wall_s": 1.9457320000510663,
+          "cpu_s": 1.6228699999999998
+        },
+        "Soma_comparison": {
+          "wall_s": 0.036614042008295655,
+          "cpu_s": 0.034894999999999676
+        },
+        "MNE_supported_coregistration": {
+          "wall_s": 1.599477625102736,
+          "cpu_s": 1.5745270000000002
+        },
+        "asymmetric_registration_simulations": {
+          "wall_s": 0.7493470420595258,
+          "cpu_s": 0.745215
+        }
+      }
+    },
+    "evidence": {
+      "wall_s": 8.927973208017647,
+      "cpu_s": 8.903326,
+      "process_peak_RSS_MiB": 435.25,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "surface_QC_and_assets": {
+          "wall_s": 1.586511458037421,
+          "cpu_s": 1.582875
+        },
+        "surface_volume_evidence": {
+          "wall_s": 6.98281783296261,
+          "cpu_s": 6.971377
+        }
+      }
+    },
+    "inverse": {
+      "wall_s": 5.488772041979246,
+      "cpu_s": 5.515131,
+      "process_peak_RSS_MiB": 419.1875,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "prepare": {
+          "wall_s": 1.6376826670020819,
+          "cpu_s": 1.616151
+        },
+        "historical_reproduction": {
+          "wall_s": 0.05102829204406589,
+          "cpu_s": 0.048264000000000085
+        },
+        "source_depth": {
+          "wall_s": 0.11522083298768848,
+          "cpu_s": 0.11513000000000018
+        },
+        "inverse_regularization_selected_resolution": {
+          "wall_s": 2.3621481670998037,
+          "cpu_s": 2.438562
+        }
+      }
+    },
+    "resolution": {
+      "wall_s": 3.7310853339731693,
+      "cpu_s": 3.741302,
+      "process_peak_RSS_MiB": 425.6875,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "prepare": {
+          "wall_s": 1.6492272909963503,
+          "cpu_s": 1.632924
+        },
+        "historical_reproduction": {
+          "wall_s": 0.04943104099947959,
+          "cpu_s": 0.04938500000000001
+        },
+        "source_depth": {
+          "wall_s": 0.11502529203426093,
+          "cpu_s": 0.11499799999999993
+        },
+        "inverse_regularization_selected_resolution": {
+          "wall_s": 0.7532536250073463,
+          "cpu_s": 0.8003650000000002
+        }
+      }
+    },
+    "uncertainty": {
+      "wall_s": 3.814833333948627,
+      "cpu_s": 3.7471069999999997,
+      "process_peak_RSS_MiB": 771.8125,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "prepare": {
+          "wall_s": 1.6959503339603543,
+          "cpu_s": 1.678326
+        },
+        "one_factor_and_SNR_simulations": {
+          "wall_s": 0.40118487493600696,
+          "cpu_s": 0.3840969999999997
+        },
+        "paired_factorial_interactions": {
+          "wall_s": 0.6859512079972774,
+          "cpu_s": 0.6736680000000002
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "root": "reports/milestone9-validated",
+    "figures": 18,
+    "checked_output_hashes": 58,
+    "checked_NPZ_arrays": 208,
+    "manifest_sha256": {
+      "inverse": "1db4999ac042497298ddb5a2e026caf28a10ca392721bfee6b3839cda5462a52",
+      "evidence": "68de1a17bca8ff829d45325b624c7215df15a15bdcd82d6a1614d5f3025a20a2",
+      "resolution": "0dc8e39514ea97387052557f0b6e100102076782615628dcd507cb2b5c585068",
+      "uncertainty": "0b254d4afa09a7412aacb2032bff8b795c30f831c295cc001a8ed7d49edfd9b3",
+      "coreg": "f72e15b9ad96005801ece37c7ded91dbd4425a9ed03b755eb91a52c9248690c6"
+    }
+  },
+  "limitations": [
+    "No independent MRI fiducial or tissue boundary truth; anatomical state remains INDETERMINATE",
+    "Historical current RMS bias is valid and unresolved as unbiased reconstruction; resolution explains attenuation",
+    "On-grid single-participant synthetic sources do not establish population or clinical performance",
+    "Assigned fixed geometry/conductivity settings and Gaussian noise are not measured biological variation",
+    "Delta intervals are local known-noise synthetic approximations",
+    "Derivative foreground masks are same-pipeline heuristics, no independent Dice",
+    "Vertex-based mindist is not exact triangle clearance; 104 retained sources below 5 mm",
+    "No new segmentation algorithm, no automatic source repair or transform replacement",
+    "No automatic Milestone 10 or remote push"
+  ],
+  "dataset": {
+    "MRI_geometry": {
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "voxel_size_mm": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "voxel_to_scanner_RAS_mm": [
+        [
+          -1.0,
+          1.1548402056860141e-07,
+          -1.918524645816433e-07,
+          122.72639465332031
+        ],
+        [
+          8.568169107547874e-08,
+          1.5716082657490915e-08,
+          1.0,
+          -118.96092987060547
+        ],
+        [
+          1.4901164746561335e-08,
+          -1.0,
+          6.402840924124575e-09,
+          100.7120361328125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "voxel_to_MNE_MRI_mm": [
+        [
+          -1.0,
+          0.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -128.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "MNE_MRI_units_in_models": "m"
+    },
+    "native_surface_inspection": {
+      "inner_skull": {
+        "vertex_count": 2562,
+        "face_count": 5120,
+        "finite_vertices": true,
+        "coordinate_units_on_disk": "mm",
+        "frame": "FreeSurfer MRI surface RAS",
+        "scope": "inventory only; full geometry QC applies to solver ico3 surfaces"
+      },
+      "outer_skull": {
+        "vertex_count": 2562,
+        "face_count": 5120,
+        "finite_vertices": true,
+        "coordinate_units_on_disk": "mm",
+        "frame": "FreeSurfer MRI surface RAS",
+        "scope": "inventory only; full geometry QC applies to solver ico3 surfaces"
+      },
+      "outer_skin": {
+        "vertex_count": 2562,
+        "face_count": 5120,
+        "finite_vertices": true,
+        "coordinate_units_on_disk": "mm",
+        "frame": "FreeSurfer MRI surface RAS",
+        "scope": "inventory only; full geometry QC applies to solver ico3 surfaces"
+      }
+    },
+    "dataset": "mne-sample",
+    "subject": "sample",
+    "mode": "participant_matched",
+    "identity_evidence": "official curated matching MEG/sample and subjects/sample; distributed source subject_his_id=sample",
+    "raw_subject_info": null,
+    "identity_limitation": "recording subject_info absent; not independently authenticated identity",
+    "source_URL": "https://osf.io/download/86qa2?version=6",
+    "archive_MD5": "e8f30c4516abdc12a0c08e6bae57409c",
+    "version": "0.12",
+    "license_scope": "official MNE sample educational/tutorial data; not hardware/MRI system performance evaluation",
+    "license_source": "https://mne.tools/stable/documentation/datasets.html#sample",
+    "assets_sha256": {
+      "MEG/sample/sample_audvis_filt-0-40_raw.fif": "327e163c9d4ee6855d41d887d86cec3fa7d6dea3c870e8263edf802889b4f844",
+      "MEG/sample/sample_audvis_raw-trans.fif": "cc3cace84721aaa30b4d277a387b00a19e84890fa897bd548a153bc588e9ad47",
+      "subjects/sample/mri/T1.mgz": "93ad7e7de63375511af08c5a123e7bf1de69d043e16250ede8179294ce43dd91",
+      "subjects/sample/mri/transforms/talairach.xfm": "cb91021e61481f6160f6951f04af5aadc47142bd8d2806809d82a4a02f23b3e1",
+      "subjects/sample/bem/sample-oct-6-src.fif": "3df68067b1b55179f6dad57583be342d2f23e4990d9b2b4954969b110491e648",
+      "subjects/sample/bem/inner_skull.surf": "de11c0e08ed1249d0651c6aad70207302b8ff80cef62dc8d152f4ccd30b45f6a",
+      "subjects/sample/bem/outer_skull.surf": "6e6a10a6319887c8447875fc5daf0bc50be4c28435da254e95ad26f823bee7d6",
+      "subjects/sample/bem/outer_skin.surf": "6abd0d0093297bd76686928f386542ab2d3c94bc5c800e262550d7e1099b91f2",
+      "subjects/sample/surf/lh.white": "2146ad8a31cc34fab5c108432d13f301173ed82a071ff78c74395d2dc0e1ea42",
+      "subjects/sample/surf/rh.white": "582d1220ab57212390f345d44e1c2de925efb89cbb9624c118a1d5adc668b2ba"
+    },
+    "digitization_counts": {
+      "cardinal": 3,
+      "HPI": 4,
+      "EEG": 61,
+      "headshape_EXTRA": 78
+    },
+    "EEG_total": 60,
+    "EEG_retained": 59,
+    "EEG_digitization_correspondence_max_m": 0.0,
+    "EEG_names": [
+      "EEG 001",
+      "EEG 002",
+      "EEG 003",
+      "EEG 004",
+      "EEG 005",
+      "EEG 006",
+      "EEG 007",
+      "EEG 008",
+      "EEG 009",
+      "EEG 010",
+      "EEG 011",
+      "EEG 012",
+      "EEG 013",
+      "EEG 014",
+      "EEG 015",
+      "EEG 016",
+      "EEG 017",
+      "EEG 018",
+      "EEG 019",
+      "EEG 020",
+      "EEG 021",
+      "EEG 022",
+      "EEG 023",
+      "EEG 024",
+      "EEG 025",
+      "EEG 026",
+      "EEG 027",
+      "EEG 028",
+      "EEG 029",
+      "EEG 030",
+      "EEG 031",
+      "EEG 032",
+      "EEG 033",
+      "EEG 034",
+      "EEG 035",
+      "EEG 036",
+      "EEG 037",
+      "EEG 038",
+      "EEG 039",
+      "EEG 040",
+      "EEG 041",
+      "EEG 042",
+      "EEG 043",
+      "EEG 044",
+      "EEG 045",
+      "EEG 046",
+      "EEG 047",
+      "EEG 048",
+      "EEG 049",
+      "EEG 050",
+      "EEG 051",
+      "EEG 052",
+      "EEG 054",
+      "EEG 055",
+      "EEG 056",
+      "EEG 057",
+      "EEG 058",
+      "EEG 059",
+      "EEG 060"
+    ],
+    "bad_channels": [
+      "MEG 2443",
+      "EEG 053"
+    ],
+    "surface_origin": "FLASH-derived participant surfaces via default symlinks",
+    "surface_products": {
+      "inner_skull": {
+        "resolved_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mne-sample/MNE-sample-data/subjects/sample/bem/flash/inner_skull.surf",
+        "default_equals_FLASH": true
+      },
+      "outer_skull": {
+        "resolved_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mne-sample/MNE-sample-data/subjects/sample/bem/flash/outer_skull.surf",
+        "default_equals_FLASH": true
+      },
+      "outer_skin": {
+        "resolved_path": "<LOCAL_HOME>/Documents/Soma/data/raw/mne-sample/MNE-sample-data/subjects/sample/bem/flash/outer_skin.surf",
+        "default_equals_FLASH": true
+      }
+    },
+    "MRI_fiducial_file_present": false,
+    "MRI_fiducial_comparison": "MNI-derived initialization estimate only, no manually digitized MRI fiducial truth",
+    "head_to_MRI_m": [
+      [
+        0.9993095397949219,
+        0.012759342789649963,
+        0.034894198179244995,
+        0.0020699098240584135
+      ],
+      [
+        0.009984787553548813,
+        0.8124047517776489,
+        -0.5830085277557373,
+        0.011302143335342407
+      ],
+      [
+        -0.03578702360391617,
+        0.5829542875289917,
+        0.8117163777351379,
+        -0.02755521982908249
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "available_modalities": [
+      "EEG",
+      "MEG",
+      "structural MRI"
+    ],
+    "used_modality": "EEG"
+  },
+  "receipt_scope": "Compact scientific metrics and content references; full cache parameters, point arrays and evidence provenance remain in checksummed reports/cache receipts."
+}

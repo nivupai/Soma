@@ -285,3 +285,20 @@ For fixed linear inverse W, source-noise covariance is W Cε Wᵀ. Model mismatc
 bias is (W_alt L_true−I)j, distinct from measurement variance. Vector norms are
 nonlinear and cannot substitute for signed linear resolution operators.
 See ANATOMICAL_UNCERTAINTY.md for units, steps and local-smoothness limits.
+
+## Reliability calibration (v0.9.0)
+
+For a fixed signed linear inverse, K=W L, with diagonal gain Kᵢᵢ, PSF W L[:,i]
+and CTF W[i,:] L. Noise-free jhatᵢ=Kᵢᵢ jᵢ for single-source truth; noise adds Wε.
+With waveform q, signed transfer a=<jhatᵢ,q>/<q,q> and residual orthogonal to q,
+||jhatᵢ||²/||q||²=a²+||jhatᵢ−a q||²/||q||². Thus unsigned RMS recovery is not signed
+transfer and may rise with noise even when the coherent component attenuates.
+For Tikhonov, singular attenuation is s²/(s²+lambda²); this exact small-matrix
+oracle does not imply arbitrary anatomical peak errors are monotone in lambda.
+
+The target-registration delta method propagates the known landmark covariance
+through independent finite-input perturbations of the SVD fit, evaluated at held-out
+points. Nominal 95% ellipsoid coverage uses chi-square(3), assessed over independent
+simulations with a Wilson interval. Factor interactions are paired differences of
+differences, including a three-way contrast, not an exact additive decomposition
+of nonlinear metrics. See MODEL_RELIABILITY_PROTOCOL.md for distributions and scope.

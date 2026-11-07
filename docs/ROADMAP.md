@@ -58,3 +58,9 @@ physical geometry/conductivity sensitivity and independent spherical controls.
 Overall anatomical readiness remains INDETERMINATE; no independent MRI fiducial
 truth or conductivity measurements exist. See INDIVIDUAL_SOURCE_VALIDATION.md.
 Future work requires separately authorized scope; Milestone 9 was not started.
+
+Milestone 9 adds model reliability audits, selected resolution calibration,
+unit-aware inverse comparisons, anatomical evidence and paired uncertainty
+attribution. It explains severe historical attenuation rather than promising to
+fix an underdetermined estimator. Proposed Milestone 10 would require independent
+anatomical references and a separate prospective study; it was not started.

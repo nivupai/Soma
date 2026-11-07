@@ -1,0 +1,12 @@
+{
+  "frozen_at_utc": "2026-11-07T19:25:36.303407+00:00",
+  "baseline_revision": "e7cf639",
+  "new_reliability_algorithms_implemented": false,
+  "files_sha256": {
+    "docs/MODEL_RELIABILITY_PROTOCOL.md": "ed3b4a34c7c21ff61906e348532e646a5a817731b16cfc85e085a661f4e7524f",
+    "configs/inverse-audit.yaml": "b53655bc5a6e547bd206fbe0081ddf098c73c61db95af0e3090efd5da77fb7ff",
+    "configs/resolution-study.yaml": "98b15001e9fb7f0678107e0e18530ba22cb974f0e9e03b068f41e5c07a59bd82",
+    "configs/anatomical-evidence.yaml": "9429441e2f834926f819ca7e0884be88ebad83dba00a813c9ecf7abb2aec1cd9",
+    "configs/uncertainty-study.yaml": "8eb93c19af24f30236223bf72f2a1fad1b73b049ee1d1bdba457df2c8c8b2982"
+  }
+}

@@ -290,3 +290,20 @@ tests never fetch MRI/anatomy. A real experiment without --fetch requires the
 verified local cache. For bounded profiling, set OPENBLAS_NUM_THREADS=1 and
 ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1. Benchmark lazy/eager memory in isolated
 processes; process high-water RSS is not an incremental stage allocation.
+
+## Reliability studies (v0.9.0)
+
+`configs/model-reliability-freeze.json` binds the protocol and four prospective
+YAML files. Old M8 report hashes are captured in the initial diagnostic audit and
+verified after the new work. Named `SeedSequence([42, stream_id])` streams isolate
+registration scenarios, training covariance, electrode geometry and evaluation
+noise. Common evaluation draws pair perturbation/factorial cells; intervals use
+independent draws within each setting, not cells as independent participants.
+
+Inverse caches bind actual forward arrays/basis/source IDs, covariance, projector
+state, channels, method, orientation, depth, lambda, code and versions. Changed
+physical inputs invalidate the corresponding stage; corrupt/incomplete caches fail.
+Every final report records the source-tree hash in addition to Git revision/dirty
+state, recursive output hashes, wall/CPU time and process high-water RSS. See the
+Milestone 9 receipt and run script. Reports and large public assets remain ignored;
+committed receipts do not imply the historical report arrays are bundled in Git.

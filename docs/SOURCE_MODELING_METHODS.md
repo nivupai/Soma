@@ -190,3 +190,15 @@ is separate from phase-locked power. Conductivity and geometry sweeps recompute
 physical forwards with fixed inverse settings and independent noise training.
 See INDIVIDUAL_SOURCE_VALIDATION.md and ANATOMICAL_UNCERTAINTY.md for the
 unfavorable recovery, substantial BEM discretization error and anatomical limits.
+
+## v0.9.0 inverse reliability
+
+The historical true-vertex RMS amplitude ratio is valid for signed MNE currents
+in A m. Selected W L columns explain its strong attenuation; peak amplitude,
+signed waveform transfer, pooled vector magnitude and distributed energy are
+separate definitions. The new `reliability.inverse` adapter supports MNE/dSPM/
+sLORETA without changing `CorticalInverse`. Normalized-statistic transfers have
+statistic/(A m) units; no physical amplitude/residual comparison is made for them.
+Fixed/loose/free vectors retain their basis, channel and source identities.
+See INVERSE_CALIBRATION.md for regularization/depth, independent exact oracles,
+selected PSF/CTF operations and the unfavorable recovery retained in full.

@@ -62,3 +62,12 @@ The source pathway runs only after computational checks pass; independent
 anatomical evidence remains unavailable, so overall readiness is INDETERMINATE.
 This conditional participant research pathway does not upgrade generic M7 masks
 or the failed SPM foreground to anatomical conductor boundaries.
+
+## Reliability evidence (Milestone 9)
+
+A subject contract is necessary but does not prove anatomy. `reliability.evidence`
+now attaches explicit evidence categories/check definitions to provenance, transform
+chains, conductor topology/nesting/orientation/intersections, sensor geometry and
+surface-to-volume comparisons. Independent tissue and MRI-fiducial truth remain
+missing. The resulting anatomical state is INDETERMINATE even when computational
+geometry passes. No uncertain mask is upgraded by an arbitrary score.

@@ -236,3 +236,16 @@ geometry and software/code versions. `AnatomyReport` saves nested artifact hashe
 source-tree identity and stage wall/CPU time/RSS. CLI downloads remain explicit.
 See INDIVIDUAL_SOURCE_VALIDATION.md; this is conditional research, not anatomy
 certification. Earlier architecture sections describe their milestone's scope.
+
+## v0.9.0 reliability boundary
+
+`reliability.config` seals the prospective audit settings and named random streams.
+`registration` supplies asymmetric known-truth/held-out experiments and delta-method
+covariance. `inverse` extracts unit-aware MNE fixed/loose/free linear kernels with
+physical fingerprints and selected resolution contractions. `evidence` preserves
+categorical provenance/check definitions and bounded surface/volume consistency.
+`workflows` orchestrates historical reproduction, 90 inverse settings and paired
+factorial simulations; `plots` saves headless figures with numeric companions.
+The old M6/M8 inverse and surface APIs remain unchanged. No full dense cortical K
+or new segmentation backend is introduced. Source audit commands require cached
+assets; the historical inverse audit additionally requires the M8 arrays.

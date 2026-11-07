@@ -1,0 +1,34 @@
+mode: resolution
+seed: 42
+individual_config: configs/individual-source.yaml
+historical_reports: reports/milestone8-verified
+methods:
+- MNE
+- dSPM
+- sLORETA
+lambda2:
+- 0.0001
+- 0.001
+- 0.01
+- 0.1111111111111111
+- 1.0
+loose:
+- 0.0
+- 0.2
+- 1.0
+depth:
+- 0.0
+- 0.8
+registration_repetitions: 100
+noise_repetitions: 40
+snr_db:
+- 0
+- 10
+- 20
+landmark_sd_m: 0.002
+translation_m: 0.003
+electrode_sd_m: 0.003
+skull_sigma_S_m: 0.003
+rotation_deg: 3.0
+mask_sample_limit: 20000
+maximum_selected: 3

@@ -3,7 +3,7 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.8.0 includes template and participant-matched EEG source modeling,
+v0.9.0 includes template and participant-matched EEG source modeling,
 structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
 experiments. Participant results remain conditional research computations:
 independent anatomical readiness is INDETERMINATE. See
@@ -289,3 +289,16 @@ The [sealed protocol](docs/INDIVIDUAL_HEAD_MODEL_PROTOCOL.md),
 [coregistration methods](docs/COREGISTRATION_METHODS.md),
 [BEM checks](docs/BEM_GEOMETRY_VALIDATION.md) and
 [uncertainty methods](docs/ANATOMICAL_UNCERTAINTY.md) define scope and limitations.
+
+## Model reliability (v0.9.0)
+
+With explicitly cached sample assets and the original M8 reports:
+
+```bash
+sh experiments/milestone9/run.sh reports/my-reliability-run
+```
+
+The new source audit/calibration commands explain the historical current
+attenuation through W L, compare signed MNE currents with separately labeled
+normalized statistics, and quantify paired uncertainty interactions. Anatomical
+evidence remains INDETERMINATE. See [Milestone 9 results](docs/MILESTONE9_RESULTS.md).

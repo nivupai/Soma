@@ -658,3 +658,57 @@ Milestone 6 integration and Milestone 7 SPM-foreground rejection passed unchange
 FreeSurfer watershed generation and ds000117 participant reconstruction were not
 executed; secondary metadata discovery was. No Milestone 9 or remote push.
 See [scientific validation and limitations](INDIVIDUAL_SOURCE_VALIDATION.md).
+
+## Milestone 9 — model reliability (v0.9.0)
+
+Baseline e7cf639 passed all 461 tests in 48.06 s before implementation. Final
+`pytest -o addopts='' -q` passed **495 tests in 47.05 s**, including 34 added
+geometry, calibration, unit, adversarial, CLI and opt-in MNE tests (13 integration
+cases total). All 36 existing test files are byte-identical to the baseline.
+The 56 dependency deprecation warnings remain; no tests failed. Ruff and formatting
+passed (212 files), strict mypy passed (127 source files), and dependency checking
+found no broken requirements. Installed and source versions both equal 0.9.0.
+Python 3.12.2/macOS ARM64 were executed; Python 3.11/remote CI were not rerun.
+
+The unchanged M8 coregistration and 21-case uncertainty commands were executed
+before new numerical behavior; every historical case metric reproduced exactly.
+All 98 original M8 report files remain byte-identical. The historical true-vertex
+RMS current bias is valid in A m; resolution diagonal 0.0102446256 explains its
+noise-free attenuation. Direct MNE agrees with the extracted kernel, and independent
+small-matrix oracles verify Tikhonov gains/variance/regularization and interactions.
+
+All five new commands completed under `reports/milestone9-validated`. The inverse
+audit has 90 settings/270 source rows, selected resolution has 30/90, registration
+has 800 base scenario attempts plus 100 explicitly separate robust fits, and paired
+attribution has 680 source evaluations. The 100 rejected correspondence controls
+are intentional; inverse/factorial experiments have no numerical failures.
+Anatomical evidence remains INDETERMINATE, with same-pipeline derivative
+discrepancies and unsupported independent truth documented. MNE nearest-vertex
+`mindist` semantics explain the separately flagged submillimetre triangle clearance;
+no source model, transform or old result was silently changed.
+
+Representative final wall time / peak process RSS (cache state and CPU stages in
+receipts):
+
+| Workflow | Wall time | Peak RSS |
+| --- | ---: | ---: |
+| coreg | 5.03 s | 492.0 MiB |
+| inverse | 5.49 s | 419.2 MiB |
+| resolution | 3.73 s | 425.7 MiB |
+| evidence | 8.93 s | 435.2 MiB |
+| uncertainty | 3.81 s | 771.8 MiB |
+
+Peak memory is process high-water including libraries, not incremental allocation.
+No full dense cortical resolution matrix is allocated. Eighteen scientific figures
+were visually inspected; all 58 listed output hashes and 208 NPZ arrays were checked
+without pickle/object arrays or nonfinite numeric values. Every final manifest
+records 0.9.0 and the same exact final Python source-tree hash. A stale editable
+metadata installation was detected during artifact checks, corrected, regression
+checked and all five reports rerun into the new validated directory; earlier report
+attempts were not relabeled.
+
+See the [verification receipt](../experiments/milestone9/verification.json),
+[frozen protocol](MODEL_RELIABILITY_PROTOCOL.md) and
+[scientific findings](MILESTONE9_RESULTS.md). The full suite includes unchanged
+M6–8 source/geometry/integration regressions. No independent anatomical/clinical
+certification, population guarantee, remote push or Milestone 10 implementation.

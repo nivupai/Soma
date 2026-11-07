@@ -137,3 +137,17 @@ def synthetic_command(
         result(run_synthetic(output, seed=seed, config_path=config), output)
     except Exception as exc:
         failure(exc)
+
+
+@app.command("audit-evidence")
+def audit_evidence_command(
+    config: Path = Path("configs/anatomical-evidence.yaml"),
+    output: Path = Path("reports/anatomical-audit"),
+) -> None:
+    """Categorical anatomical evidence; unavailable truth remains INDETERMINATE."""
+    from soma.reliability.workflows import evidence_study
+
+    try:
+        result(evidence_study(config, output), output)
+    except Exception as exc:
+        failure(exc)

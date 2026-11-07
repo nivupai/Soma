@@ -239,3 +239,14 @@ reconstruction, new BEM solver, deep-learning segmentation or fMRI GLM is added.
 Proposed Milestone 8: participant-matched sensor/MRI coregistration and independent
 validation of anatomical conductor boundaries using established tools, before
 individual EEG forward inference. That proposal has not been started.
+
+## Milestone 9 evidence audit
+
+The matched sample's ico3 geometry remains computationally checked while anatomical
+readiness remains INDETERMINATE. New evidence records distinguish verified geometry,
+external asset provenance, same-pipeline derivative heuristics and missing independent
+tissue/landmark truth. Brainmask/seghead foreground comparisons expose discrepancies,
+not invented reference Dice values. Exact source-to-triangle clearance differs from a vertex
+`mindist` setting; the additional finding is documented without altering M8 sources.
+The original SPM foreground rejection is preserved. See ANATOMICAL_EVIDENCE.md and
+MODEL_RELIABILITY_ADDITIONAL_FINDINGS.md.
