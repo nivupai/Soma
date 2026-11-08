@@ -336,5 +336,7 @@ all six CLI actions offline after acquisition into a new root, with one worker.
 AnatomyReport fingerprints source tree, package version, outputs and runtime/RSS.
 M11 numerical reports are reports/milestone11-final; earlier attempts remain
 separate. The verification receipt preserves all 42 earlier test-file hashes and
-168 prior report-file hashes. Source/installed 0.11.0 intentionally exposes the
-unchanged M10 version-test conflict, recorded rather than bypassed.
+168 prior report-file hashes. The user-authorized one-line version expectation
+update to 0.11.0 is recorded separately with its before/after test-file hashes;
+the other 41 baseline test files are byte-identical. Source code and scientific
+reports are unchanged by this verification correction.

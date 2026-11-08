@@ -2,7 +2,7 @@
   "milestone": 11,
   "version": "0.11.0",
   "baseline_revision": "0a4761d",
-  "verified_at_utc": "2026-11-08T20:10:10.858175+00:00",
+  "verified_at_utc": "2026-11-08T20:42:53.038380+00:00",
   "source_tree_sha256": "4bb97b19ef10ba910f603a1b9bc97c39d0ab9895f331683a52c4904be4a233b9",
   "protocol": {
     "baseline_revision": "0a4761d",
@@ -20,14 +20,21 @@
   "tests": {
     "baseline_passed": 541,
     "baseline_seconds": 73.34,
-    "final_passed": 611,
-    "final_failed": 1,
+    "final_passed": 612,
+    "final_failed": 0,
     "added_cases": 71,
     "warnings": 60,
-    "seconds": 70.02,
-    "old_test_files_unchanged": 42,
-    "known_failure": "Unchanged M10 assertion requires installed/source version == 0.10.0, incompatible with required 0.11.0. No test modified; user clarification requested.",
-    "all_tests_green": false
+    "seconds": 74.23,
+    "old_test_files_unchanged": 41,
+    "known_failure": null,
+    "all_tests_green": true,
+    "authorized_change": {
+      "path": "tests/benchmarks/test_offgrid_references.py",
+      "change": "Version expectation 0.10.0 -> 0.11.0 only",
+      "authorization": "Explicit user reply authorizes updating only the version assertion",
+      "before_sha256": "fd173827b70d9d32443aa48a5ea6801a9fa95c8c405d2836d040a1b7616c6a28",
+      "after_sha256": "6ae6c2da33c9616be43d28bfdbc1a745da9a1c56a5ea9e906db3ff82df4315f4"
+    }
   },
   "checks": {
     "ruff": "pass",
@@ -146,7 +153,8 @@
     "MRBrainS13": "authorized local-only adapter; no files",
     "IBSR": "registered login at selected official release; not downloaded",
     "population_inference": false,
-    "per_subject_metrics": null
+    "per_subject_metrics": null,
+    "user_confirmed_no_file_access": true
   },
   "priors": {
     "source_rows": 2520,
@@ -500,7 +508,8 @@
     "genuine_human_tissue_reference": "incomplete: authorized labels unavailable",
     "external_anatomical_BEM_sensitivity": "incomplete: reference boundaries not validated",
     "multi_subject_generalization": "not established",
-    "all_541_tests_unchanged": "yes; version test now fails"
+    "all_541_tests_unchanged": "One authorized version assertion update; all remaining earlier tests unchanged",
+    "all_541_baseline_cases_pass": "yes"
   },
   "limitations": [
     "No independent human tissue scores or inter-rater uncertainty",
@@ -508,8 +517,25 @@
     "No FEM-to-BEM aggregation",
     "Shared spherical physics and borrowed radial orientation prior",
     "Normalization changes effective regularization and can severely attenuate moments",
-    "Noise intervals are conditional simulations, not human-population uncertainty",
-    "One unchanged legacy version test conflicts with required 0.11.0"
+    "Noise intervals are conditional simulations, not human-population uncertainty"
   ],
-  "execution_note": "Reports produced before local commit; exact source tree identifies executed code. No push or M12 implementation."
+  "execution_note": "Scientific source and reports are unchanged from cf99ab5; authorized version assertion correction verified with 612 passing tests. No push or M12 implementation.",
+  "verification_history": [
+    {
+      "commit": "cf99ab5",
+      "verified_at_utc": "2026-11-08T20:10:10.858175+00:00",
+      "tests": {
+        "baseline_passed": 541,
+        "baseline_seconds": 73.34,
+        "final_passed": 611,
+        "final_failed": 1,
+        "added_cases": 71,
+        "warnings": 60,
+        "seconds": 70.02,
+        "old_test_files_unchanged": 42,
+        "known_failure": "Unchanged M10 assertion requires installed/source version == 0.10.0, incompatible with required 0.11.0. No test modified; user clarification requested.",
+        "all_tests_green": false
+      }
+    }
+  ]
 }

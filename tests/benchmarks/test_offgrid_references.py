@@ -211,7 +211,7 @@ def test_protocol_and_installed_version_match_source():
     import soma
     from soma.benchmarks.config import configuration
 
-    assert version("soma-neuro") == soma.__version__ == "0.10.0"
+    assert version("soma-neuro") == soma.__version__ == "0.11.0"
     assert configuration(Path("configs/offgrid.yaml"))["offgrid_tolerance_m"] == 0.0005
     with pytest.raises(ValueError):
         configuration(Path("configs/inverse-audit.yaml"))

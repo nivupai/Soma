@@ -755,15 +755,13 @@ INDETERMINATE. No remote push or Milestone 11 implementation is included.
 ## Milestone 11 — external evidence and source covariance
 
 The actual 0a4761d/0.10.0 baseline passes 541 tests in 73.34 s. Final source and
-installed metadata are 0.11.0. All 42 original test files remain byte-identical.
-The final suite reports **611 passed, 1 failed**, 60 warnings, in **70.02 s**;
-71 new tests pass. The sole failure is M10's unchanged literal version assertion:
-`test_protocol_and_installed_version_match_source` requires 0.10.0. Preserving
-that assertion and requiring 0.11.0 cannot both produce a green suite. It is
-recorded explicitly; no xfail, runtime test patch, or special version equality is
-used to conceal the conflict. All other M6–10 regressions pass, including cached
-large integration cases. Ruff, formatting (251 files), strict mypy (146 modules)
-and pip dependency checks pass.
+installed metadata are 0.11.0. Following the user's explicit authorization, the
+sole baseline assertion requiring 0.10.0 now requires 0.11.0; the other 41 baseline
+test files remain byte-identical. The final suite reports **612 passed**, 60 warnings,
+in **74.23 s**; all 71 new tests pass. The previous 611-pass/1-failure run is
+preserved in the receipt, with the authorized one-line change and before/after
+hashes. All M6–10 regressions pass, including cached large integration cases.
+Ruff, formatting (251 files), strict mypy (146 modules) and dependency checks pass.
 
 All six requested CLI actions ran under `reports/milestone11-final`. The tissue
 and holdout commands report incomplete authorized-reference evaluation, with no
@@ -799,5 +797,6 @@ See the [verification receipt](../experiments/milestone11/verification.json),
 [sealed protocol](MILESTONE11_PROTOCOL.md),
 [external access and geometry evidence](EXTERNAL_HEAD_MODEL_REFERENCES.md), and
 [results](MILESTONE11_RESULTS.md). Genuine human tissue evaluation, external
-anatomical sensitivity, multi-subject generalization, and the contradictory legacy
-version assertion remain incomplete acceptance items. No remote push or M12 work.
+anatomical sensitivity and multi-subject generalization remain incomplete acceptance
+items. The user confirmed no access to the registered tissue-reference files.
+No remote push or M12 work.

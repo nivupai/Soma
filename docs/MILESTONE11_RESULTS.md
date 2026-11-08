@@ -2,7 +2,9 @@
 
 Baseline `0a4761d` passed 541 tests in 73.34 s. The M11 protocol and five
 configurations were sealed before new reference scoring or holdout inspection.
-All 42 baseline test files and 168 saved M9/M10 report files remain byte-identical.
+All 168 saved M9/M10 report files remain byte-identical. Of 42 baseline test
+files, 41 are byte-identical; the sole authorized edit changes the version
+assertion from 0.10.0 to 0.11.0.
 
 ## External reference and human evaluation
 
@@ -68,13 +70,11 @@ human conductor-to-forward sensitivity remains incomplete.
 
 ## Verification, cost and incomplete criteria
 
-Final full suite: **611 passed, 1 failed**, 60 warnings, 70.02 s; **71 new tests**
-pass. The sole failure is the unchanged M10 test
-`test_protocol_and_installed_version_match_source`, which explicitly requires
-version `0.10.0`, incompatible with the requested installed/source `0.11.0`.
-That assertion is retained under the strict requirement to preserve earlier tests.
-No test is skipped, monkeypatched or weakened to conceal this conflict. All other
-baseline tests, including cached M6–10 integration regressions, pass. Strict mypy
+Final full suite: **612 passed**, 60 warnings, 74.23 s; **71 new tests**
+pass. The user authorized changing only the M10 version assertion to 0.11.0.
+Every other baseline test remains unchanged. The earlier 611-pass/1-failure run
+is retained in the verification receipt as historical evidence; the version
+conflict is resolved. Cached M6–10 integration regressions pass. Strict mypy
 passes 146 modules; Ruff, formatting and dependency checks pass.
 
 | Workflow | Wall time | Peak process RSS |
@@ -95,7 +95,7 @@ executed source tree, inputs, manifests, artifact hashes and checked arrays.
 
 Incomplete acceptance: genuine human tissue scoring, multi-subject generalization,
 SCI anatomical boundary/ontology/frame validation, external anatomical forward
-sensitivity, and the incompatible legacy version assertion. No anatomical or
+sensitivity. The user confirmed no access to the registered tissue files. No anatomical or
 clinical certification is implied. No remote push or M12 implementation.
 
 Proposed M12: authorized subject-disjoint human tissue cohorts, documented SCI

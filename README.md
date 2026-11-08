@@ -321,9 +321,9 @@ skull/scalp truth. See [Milestone 10 results](docs/MILESTONE10_RESULTS.md).
 Milestone 11 adds external SCI computational-reference inspection, authorized-local
 human tissue adapters, subject-disjoint cohort evaluation and block source-prior
 calibration. [Results and incomplete criteria](docs/MILESTONE11_RESULTS.md) distinguish
-missing human references from completed synthetic experiments. All earlier tests
-are unchanged; one legacy assertion hard-codes 0.10.0 and therefore fails under
-required 0.11.0. See [verification](docs/VERIFICATION.md).
+missing human references from completed synthetic experiments. The authorized
+version assertion now targets 0.11.0; every other earlier test is unchanged.
+See [verification](docs/VERIFICATION.md).
 
 ```bash
 soma mri references inspect --dataset sci-head

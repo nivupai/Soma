@@ -27,4 +27,4 @@ M11: `milestone11/fetch_sci.py` verifies pinned explicit SCI acquisition;
 The protocol is sealed before evaluation; external-discovery, initial-inspection
 and verification receipts preserve access limits, old results and source identity.
 Tissue/holdout CLI reports explicitly unavailable registered data, not success.
-See docs/MILESTONE11_RESULTS.md for numerical results and the old version-test conflict.
+See docs/MILESTONE11_RESULTS.md for numerical results and the authorized version-test correction.
