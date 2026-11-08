@@ -1,0 +1,13 @@
+{
+  "baseline_revision": "0a4761d",
+  "frozen_at_utc": "2026-11-08T19:45:51.870149+00:00",
+  "heldout_results_inspected": false,
+  "files_sha256": {
+    "docs/MILESTONE11_PROTOCOL.md": "2c1c5e614a00b888fbc3f7549960873befb7d71dd03099a4b20f0c4399f245a3",
+    "configs/tissue-benchmark.yaml": "a61eb25fa86afa0dcfa0ec91f155d2335f28c537f0bba8beb9e68ba6018e9613",
+    "configs/anatomical-holdout.yaml": "6326b426a2435dd4114915ba59f711625a9a7316a27f08f05cc31a634296499f",
+    "configs/conductor-comparison.yaml": "371d79676074b03f6a54bbb70906908e2e0865e4b1b14863b7e028505ccf8fee",
+    "configs/source-priors.yaml": "f4b81fd6de5ef283463b4296059ab2b4729e5f8e03c199ef4db5362da292a851",
+    "configs/grid-priors.yaml": "30e1afcb2370b6ca7cf51c478e748fd563f31d02996011bc2a4a3e691744909d"
+  }
+}

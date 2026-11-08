@@ -323,3 +323,18 @@ lambda comparisons. Manifests and supplemental analysis bind exact source/data/c
 hashes; output directories are exclusive. Report assumptions, cache state and
 process RSS scope when reproducing timings. Data licenses and transport containers
 are not a promise that the whole reference distribution is bundled with the code.
+
+
+## Milestone 11
+
+M11's protocol/config seal is configs/milestone11-freeze.json. It precedes reference
+scoring and held-out label inspection. IBSR registered access prevented actual
+human evaluation; no post-hoc subject substitution is presented as prospective.
+SCI archives/selected members are pinned in experiments/milestone11/external-discovery.json;
+fetch_sci.py explicitly verifies or retrieves only those resources. run.sh executes
+all six CLI actions offline after acquisition into a new root, with one worker.
+AnatomyReport fingerprints source tree, package version, outputs and runtime/RSS.
+M11 numerical reports are reports/milestone11-final; earlier attempts remain
+separate. The verification receipt preserves all 42 earlier test-file hashes and
+168 prior report-file hashes. Source/installed 0.11.0 intentionally exposes the
+unchanged M10 version-test conflict, recorded rather than bypassed.

@@ -28,6 +28,10 @@ def sealed_config(path: Path) -> dict[str, Any]:
         from soma.anatomy.config import frozen_config
 
         frozen_config(path)
+    elif config.get("milestone") == 11:
+        from soma.validation.config import configuration
+
+        configuration(path)
     elif "protocol" in config:
         sealed_config(Path(config["protocol"]))
     else:

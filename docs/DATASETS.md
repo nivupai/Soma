@@ -97,3 +97,14 @@ are manual DKT31 cortex, not a tissue-segmentation standard. Explicit selected
 fetches use verified official forms/ranges and preserve raw label IDs, metadata,
 license/source attribution and SHA256. The unavoidable NKI cohort transport is
 separate from the one-subject retained subset. See MILESTONE10_DATA_PROVENANCE.md.
+
+
+## External anatomy (M11)
+
+SCI Head Model is an external computational reference, not error-free manual
+anatomy. Corrected T1 and Seg3D labels are inspected from actual official files;
+label frame/units/ontology gaps keep anatomical BEM readiness INDETERMINATE.
+MRBrainS13 is authorized-local-only; the IBSR substitute currently requires
+registered NITRC access. No tissue scores are fabricated. See
+EXTERNAL_HEAD_MODEL_REFERENCES.md and TISSUE_SEGMENTATION_VALIDATION.md for exact
+provenance, native geometry, usage conditions and local backend contracts.

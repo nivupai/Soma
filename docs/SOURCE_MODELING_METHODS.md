@@ -213,3 +213,14 @@ solver-specific scalp projection remain. Participant BEM uses actual independent
 continuous-location forward evaluations with the unchanged MNE fixed/free inverse;
 its anatomical readiness is still INDETERMINATE. See OFFGRID_SOURCE_MODELING.md
 and DISCRETIZATION_ERROR.md for quantization bounds, prior scaling and limitations.
+
+
+## M11 source-prior calibration
+
+Block uniform/depth/area/orientation covariances preserve moment units and source
+ordering. Three non-nested grid spacings use independently evaluated continuous
+truth, matched noise and explicitly fixed physical alpha. Scalar sensor-trace
+normalization changes prior scale; amplitude loss and non-monotone peak error are
+retained. Equivalent depth=None uniform MNE kernels are tested independently; custom
+policies do not claim MNE depth-weight equivalence or full physical independence.
+See SOURCE_PRIOR_NORMALIZATION.md and MILESTONE11_RESULTS.md.

@@ -750,3 +750,54 @@ See the [verification receipt](../experiments/milestone10/verification.json),
 metrics do not certify tissue/skull anatomy; large unchecked meshes retain
 unassessed intersection status, and participant anatomical BEM readiness remains
 INDETERMINATE. No remote push or Milestone 11 implementation is included.
+
+
+## Milestone 11 — external evidence and source covariance
+
+The actual 0a4761d/0.10.0 baseline passes 541 tests in 73.34 s. Final source and
+installed metadata are 0.11.0. All 42 original test files remain byte-identical.
+The final suite reports **611 passed, 1 failed**, 60 warnings, in **70.02 s**;
+71 new tests pass. The sole failure is M10's unchanged literal version assertion:
+`test_protocol_and_installed_version_match_source` requires 0.10.0. Preserving
+that assertion and requiring 0.11.0 cannot both produce a green suite. It is
+recorded explicitly; no xfail, runtime test patch, or special version equality is
+used to conceal the conflict. All other M6–10 regressions pass, including cached
+large integration cases. Ruff, formatting (251 files), strict mypy (146 modules)
+and pip dependency checks pass.
+
+All six requested CLI actions ran under `reports/milestone11-final`. The tissue
+and holdout commands report incomplete authorized-reference evaluation, with no
+scores or cohort inference. Actual SCI archives provide corrected T1 and eight
+native label codes; frame/units/ontology and FEM/BEM correspondence gaps retain
+external BEM INDETERMINATE. Known synthetic shells pass the existing readiness
+machinery; independently recomputed physical perturbations are labeled synthetic.
+
+The source-prior sweep completes 420 operators, 2,520 rows and 52,920 evaluations,
+with 300 correlated-pair cases and 1,260 paired contrasts, without numerical
+failures. The grid study repeats a 180-operator/1,080-row subset on 146/340/1,188
+points; this is not independent extra evidence. Public MNE uniform-prior kernels
+agree within 7.13e-14 over three ridge levels. Normalized sensor prior traces are
+within 6.66e-16 of 1; severe moment attenuation under the frozen fixed alpha is
+preserved, not hidden by retuning.
+
+Sixteen final figures were visually inspected. Verification checks 49 output
+hashes and 33,684 NPZ arrays without pickle/object arrays or nonfinite numeric
+values. All 168 historical M9/M10 report files and original protocol/config seals
+remain unchanged. Five final manifests share the exact executed Python tree hash
+and 0.11.0 metadata. Representative costs exclude acquisition and initial cache
+construction; peak RSS includes libraries, rather than incremental allocation:
+
+| Workflow | Wall time | Peak process RSS |
+| --- | ---: | ---: |
+| tissue unavailable-data inventory | .080 s | 184.0 MiB |
+| external conductor inventory / synthetic sensitivity | 2.339 s | 386.3 MiB |
+| full priors | 4.056 s | 280.7 MiB |
+| grid-prior subset | 1.945 s | 244.7 MiB |
+| holdout unavailable-data inventory | .065 s | 182.9 MiB |
+
+See the [verification receipt](../experiments/milestone11/verification.json),
+[sealed protocol](MILESTONE11_PROTOCOL.md),
+[external access and geometry evidence](EXTERNAL_HEAD_MODEL_REFERENCES.md), and
+[results](MILESTONE11_RESULTS.md). Genuine human tissue evaluation, external
+anatomical sensitivity, multi-subject generalization, and the contradictory legacy
+version assertion remain incomplete acceptance items. No remote push or M12 work.

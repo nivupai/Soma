@@ -1,0 +1,19 @@
+milestone: 11
+seed: 11042
+reference_root: data/raw/references
+development_subjects:
+- IBSR_01
+- brainweb-normal
+- NKI-RS-22-11
+holdout_subjects:
+- IBSR_02
+- IBSR_03
+- IBSR_04
+cohort_manifest: configs/tissue-subjects.local.json
+bootstrap_repetitions: 2000
+tolerances_mm:
+- 1.0
+- 2.0
+split: development
+baseline: global three-class multi-Otsu on supplied skull-stripped T1; no reference
+  mask; no tuning

@@ -262,3 +262,13 @@ are verified integral before conversion. Manual cortical labels do not validate
 CSF/gray/white tissue or conductor boundaries. Original VTK coordinates remain
 unmapped where their volume chain is unverified. See SEGMENTATION_BENCHMARKS.md,
 SURFACE_TOPOLOGY_VALIDATION.md and MILESTONE10_DATA_PROVENANCE.md.
+
+
+## M11 external evidence
+
+SCI native array integrity/connectivity is checked separately from anatomical
+alignment and conductivity/interface evidence. Generic handedness is insufficient
+for Volume anatomical conversion. Eight-tissue FEM is not three-layer BEM.
+Human tissue evaluation retains missing/failing subjects and incompatible
+ontologies; no cortical-parcellation-to-skull substitution or self-reference score.
+See MILESTONE11_RESULTS.md for completed numerical and incomplete human criteria.

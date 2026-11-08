@@ -1,0 +1,9 @@
+milestone: 11
+seed: 11042
+reference_root: data/raw/references
+dataset: sci-head
+surface_face_limit: 20000
+segmentation_analysis: native labels; diagnostic 2mm nearest-neighbor sampling for
+  bounded surface QC
+FEM_to_BEM_conversion: false
+synthetic_control: true

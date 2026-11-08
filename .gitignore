@@ -15,3 +15,6 @@ reports/*
 !reports/.gitkeep
 .DS_Store
 data/anatomy/
+
+# Authorized local reference paths are not release artifacts.
+configs/tissue-subjects.local.json

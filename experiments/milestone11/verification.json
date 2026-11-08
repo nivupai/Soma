@@ -1,0 +1,515 @@
+{
+  "milestone": 11,
+  "version": "0.11.0",
+  "baseline_revision": "0a4761d",
+  "verified_at_utc": "2026-11-08T20:10:10.858175+00:00",
+  "source_tree_sha256": "4bb97b19ef10ba910f603a1b9bc97c39d0ab9895f331683a52c4904be4a233b9",
+  "protocol": {
+    "baseline_revision": "0a4761d",
+    "frozen_at_utc": "2026-11-08T19:45:51.870149+00:00",
+    "heldout_results_inspected": false,
+    "files_sha256": {
+      "docs/MILESTONE11_PROTOCOL.md": "2c1c5e614a00b888fbc3f7549960873befb7d71dd03099a4b20f0c4399f245a3",
+      "configs/tissue-benchmark.yaml": "a61eb25fa86afa0dcfa0ec91f155d2335f28c537f0bba8beb9e68ba6018e9613",
+      "configs/anatomical-holdout.yaml": "6326b426a2435dd4114915ba59f711625a9a7316a27f08f05cc31a634296499f",
+      "configs/conductor-comparison.yaml": "371d79676074b03f6a54bbb70906908e2e0865e4b1b14863b7e028505ccf8fee",
+      "configs/source-priors.yaml": "f4b81fd6de5ef283463b4296059ab2b4729e5f8e03c199ef4db5362da292a851",
+      "configs/grid-priors.yaml": "30e1afcb2370b6ca7cf51c478e748fd563f31d02996011bc2a4a3e691744909d"
+    }
+  },
+  "tests": {
+    "baseline_passed": 541,
+    "baseline_seconds": 73.34,
+    "final_passed": 611,
+    "final_failed": 1,
+    "added_cases": 71,
+    "warnings": 60,
+    "seconds": 70.02,
+    "old_test_files_unchanged": 42,
+    "known_failure": "Unchanged M10 assertion requires installed/source version == 0.10.0, incompatible with required 0.11.0. No test modified; user clarification requested.",
+    "all_tests_green": false
+  },
+  "checks": {
+    "ruff": "pass",
+    "format_files": 251,
+    "strict_mypy": "146 modules pass",
+    "pip_check": "no broken requirements"
+  },
+  "historical_reports_preserved": 168,
+  "external_reference": {
+    "dataset": "SCI Head Model",
+    "subject": "single published female participant",
+    "version": "Warner et al. 2019; official archives modified 2019-02-19",
+    "reference_type": "external computational segmentation, Seg3D; annotation process not specified by archive README",
+    "assets": {
+      "T1": {
+        "path": "data/raw/references/sci-head/T1/T1_Corrected.nrrd",
+        "sha256": "e26ee96a8ee888c75a2e4a25d1ac9473ce46aa67c77bb14f63fd42236114b319",
+        "shape": [
+          208,
+          256,
+          256
+        ],
+        "dtype": "float32",
+        "header": {
+          "type": "float",
+          "dimension": "3",
+          "space": "left-posterior-superior",
+          "sizes": "208 256 256",
+          "space directions": "(1,0,0) (0,1,0) (0,0,1)",
+          "kinds": "domain domain domain",
+          "endian": "little",
+          "encoding": "gzip",
+          "space origin": "(-101.67818450927734,-108.63245391845703,-171.80877685546875)"
+        },
+        "finite": true,
+        "range": [
+          0.0,
+          1591.833251953125
+        ]
+      },
+      "segmentation": {
+        "path": "data/raw/references/sci-head/Segmentation/HeadSegmentation.nrrd",
+        "sha256": "7e9ce6ee21d7b216c1d103b40fd0e54d5370aad29d67a6bee8f67cb8d283187a",
+        "shape": [
+          208,
+          256,
+          256
+        ],
+        "dtype": "uint8",
+        "header": {
+          "type": "unsigned char",
+          "dimension": "3",
+          "space": "3D-right-handed",
+          "sizes": "208 256 256",
+          "space directions": "(1,0,0) (0,1,0) (0,0,1)",
+          "centerings": "cell cell cell",
+          "kinds": "space space space",
+          "encoding": "gzip",
+          "space origin": "(-101.67818450927734,-108.63245391845703,-171.80877685546875)",
+          "measurement frame": "(1,0,0) (0,1,0) (0,0,1)"
+        },
+        "finite": true,
+        "range": [
+          1.0,
+          8.0
+        ],
+        "label_counts": {
+          "1": 12009,
+          "2": 738976,
+          "3": 674779,
+          "4": 259870,
+          "5": 101364,
+          "6": 797620,
+          "7": 1691700,
+          "8": 9355170
+        }
+      }
+    },
+    "archive_receipts": {
+      "AcquisitionReports.zip": {
+        "bytes": 422539,
+        "sha256": "9d319f4e073736f7b16362792a9eb290b10df202e94d50a08038607baa657652"
+      },
+      "Simulations.zip": {
+        "bytes": 17727,
+        "sha256": "ca375ae4cb6d289a2e8d68dfb9754bad83312bee7f4127f3df18be642d2ccf79"
+      },
+      "Segmentation.zip": {
+        "bytes": 593032,
+        "sha256": "31b7f32628a887bb8e5e089bc98e355cbb30f94b8d4cf52685a58449068ec021"
+      },
+      "T1.zip": {
+        "bytes": 63732613,
+        "sha256": "54b6e3f3ade3f5a9d321cf93fe69be796f09513e3c24a079731fbe93594f75fd"
+      }
+    },
+    "BEM_readiness": "INDETERMINATE",
+    "blocked_checks": [
+      "segmentation anatomical frame and units",
+      "verified ID-to-tissue ontology",
+      "three-layer conductor interface correspondence",
+      "sensor/source transform chain",
+      "independent anatomical boundary evidence"
+    ]
+  },
+  "human_tissue_evaluation": {
+    "status": "unavailable",
+    "development_missing": [
+      "IBSR_01"
+    ],
+    "holdout_missing": [
+      "IBSR_02",
+      "IBSR_03",
+      "IBSR_04"
+    ],
+    "MRBrainS13": "authorized local-only adapter; no files",
+    "IBSR": "registered login at selected official release; not downloaded",
+    "population_inference": false,
+    "per_subject_metrics": null
+  },
+  "priors": {
+    "source_rows": 2520,
+    "source_evaluations": 52920,
+    "operators": 420,
+    "paired_contrasts": 1260,
+    "correlated_pair_cases": 300,
+    "failures": 0,
+    "normalized_sensor_trace_max_abs_error": 6.661338147750939e-16,
+    "MNE_agreement": [
+      {
+        "relative_kernel_error": 7.123646535568869e-14,
+        "lambda2": 0.01,
+        "alpha": 325.7921843606932,
+        "MNE_depth": null,
+        "loose": 1,
+        "rank": 23,
+        "reference": "average",
+        "equivalence": "Q=I; alpha=lambda2*trace(W L L^T W^T)/rank; MNE source covariance trace/rank scaling",
+        "units": "A m",
+        "physical_independence": false,
+        "source_count": 3
+      },
+      {
+        "relative_kernel_error": 6.473324648276916e-15,
+        "lambda2": 0.1111111111111111,
+        "alpha": 3619.9131595632575,
+        "MNE_depth": null,
+        "loose": 1,
+        "rank": 23,
+        "reference": "average",
+        "equivalence": "Q=I; alpha=lambda2*trace(W L L^T W^T)/rank; MNE source covariance trace/rank scaling",
+        "units": "A m",
+        "physical_independence": false,
+        "source_count": 3
+      },
+      {
+        "relative_kernel_error": 2.193923562742145e-15,
+        "lambda2": 1,
+        "alpha": 32579.21843606932,
+        "MNE_depth": null,
+        "loose": 1,
+        "rank": 23,
+        "reference": "average",
+        "equivalence": "Q=I; alpha=lambda2*trace(W L L^T W^T)/rank; MNE source covariance trace/rank scaling",
+        "units": "A m",
+        "physical_independence": false,
+        "source_count": 3
+      }
+    ],
+    "representative_source0_normal_free_uniform_lambda2_one_ninth": [
+      {
+        "spacing_m": 0.02,
+        "normalization": "none",
+        "noisefree": {
+          "peak_error_mm": 11.789402020458894,
+          "nearest_grid_mm": 11.789402020458894,
+          "dispersion_mm": 34.06228542982074,
+          "nearest_vertex_amplitude_ratio": 0.08614203079778834,
+          "off_nearest_energy_fraction": 0.8253677152702786,
+          "sensor_residual_relative": 0.1775465227994663,
+          "peak_index": 108.0,
+          "peak_current_norm_Am": 8.614203079778834e-10
+        },
+        "nearest_grid_mm": 11.789402020458894
+      },
+      {
+        "spacing_m": 0.02,
+        "normalization": "sensor_trace",
+        "noisefree": {
+          "peak_error_mm": 11.789402020458894,
+          "nearest_grid_mm": 11.789402020458894,
+          "dispersion_mm": 57.816724803372225,
+          "nearest_vertex_amplitude_ratio": 3.342917450772692e-08,
+          "off_nearest_energy_fraction": 0.966418848350503,
+          "sensor_residual_relative": 0.9999988071838526,
+          "peak_index": 108.0,
+          "peak_current_norm_Am": 3.342917450772692e-16
+        },
+        "nearest_grid_mm": 11.789402020458894
+      },
+      {
+        "spacing_m": 0.015,
+        "normalization": "none",
+        "noisefree": {
+          "peak_error_mm": 9.949371839468057,
+          "nearest_grid_mm": 9.949371839468057,
+          "dispersion_mm": 30.75324843547411,
+          "nearest_vertex_amplitude_ratio": 0.04509394578585012,
+          "off_nearest_energy_fraction": 0.921834824118836,
+          "sensor_residual_relative": 0.12846065423084563,
+          "peak_index": 241.0,
+          "peak_current_norm_Am": 4.5093945785850117e-10
+        },
+        "nearest_grid_mm": 9.949371839468057
+      },
+      {
+        "spacing_m": 0.015,
+        "normalization": "sensor_trace",
+        "noisefree": {
+          "peak_error_mm": 12.123943252918995,
+          "nearest_grid_mm": 9.949371839468057,
+          "dispersion_mm": 57.799475389335576,
+          "nearest_vertex_amplitude_ratio": 1.3504651508189917e-08,
+          "off_nearest_energy_fraction": 0.9872969738261603,
+          "sensor_residual_relative": 0.9999988080760569,
+          "peak_index": 232.0,
+          "peak_current_norm_Am": 1.3673711576997114e-16
+        },
+        "nearest_grid_mm": 9.949371839468057
+      },
+      {
+        "spacing_m": 0.01,
+        "normalization": "none",
+        "noisefree": {
+          "peak_error_mm": 21.885840171215744,
+          "nearest_grid_mm": 3.3151168908501467,
+          "dispersion_mm": 28.187167000499,
+          "nearest_vertex_amplitude_ratio": 0.013424153571792614,
+          "off_nearest_energy_fraction": 0.9841925734204767,
+          "sensor_residual_relative": 0.061244447018600615,
+          "peak_index": 1081.0,
+          "peak_current_norm_Am": 2.1851667524476862e-10
+        },
+        "nearest_grid_mm": 3.3151168908501467
+      },
+      {
+        "spacing_m": 0.01,
+        "normalization": "sensor_trace",
+        "noisefree": {
+          "peak_error_mm": 11.789402020458894,
+          "nearest_grid_mm": 3.3151168908501467,
+          "dispersion_mm": 57.875842930482804,
+          "nearest_vertex_amplitude_ratio": 3.551298187160714e-09,
+          "off_nearest_energy_fraction": 0.9969043461018242,
+          "sensor_residual_relative": 0.9999988081264771,
+          "peak_index": 865.0,
+          "peak_current_norm_Am": 4.095766132946916e-17
+        },
+        "nearest_grid_mm": 3.3151168908501467
+      }
+    ],
+    "normalization_is_not_amplitude_calibration": true,
+    "area_scope": "declared spherical quadrature on volume points, not measured cortical areas",
+    "primary_noise_peak_contrast_range_mm": [
+      -16.13605532350489,
+      59.99384782056965
+    ]
+  },
+  "grid_priors": {
+    "source_rows": 1080,
+    "source_evaluations": 22680,
+    "operators": 180,
+    "source_counts_20_15_10mm": [
+      146,
+      340,
+      1188
+    ],
+    "nested_grids": false
+  },
+  "synthetic_conductor_sensitivity": {
+    "boundary_1mm": {
+      "relative_lead_Frobenius": 0.052136519921853225,
+      "per_source_range": [
+        0.01912537586673196,
+        0.06401372693019829
+      ],
+      "singular_values": [
+        7821.795331547726,
+        7490.564259486599,
+        3967.0767451151155,
+        2560.6707612038413,
+        2482.0641089123205,
+        1536.6427645540978,
+        1407.5439651564916,
+        995.5650429787883,
+        936.942771132612,
+        707.5710638791339,
+        588.7748318812345,
+        554.5080778082721,
+        465.8938135384995,
+        397.0501773068302,
+        340.64120623631646,
+        286.40556342295565,
+        282.4866853518459,
+        260.9466000240825,
+        179.5043194348476,
+        156.9293790576299,
+        137.21696256163037,
+        119.30776635407146,
+        108.30378617480787,
+        1.7054066811570739e-12
+      ]
+    },
+    "skull_half": {
+      "relative_lead_Frobenius": 0.285813994711071,
+      "per_source_range": [
+        0.18158369562457974,
+        0.32346323644591407
+      ],
+      "singular_values": [
+        5565.431014602189,
+        5317.869615630648,
+        2685.545944212229,
+        1469.7087931607425,
+        1422.090032267449,
+        863.4244907836793,
+        789.0724951791901,
+        520.5386861305991,
+        486.81047095151035,
+        384.94057172199683,
+        303.0773885670587,
+        284.06583413754737,
+        232.55081330322585,
+        199.45985528356204,
+        171.78497629972733,
+        142.49297448895953,
+        139.60649717490784,
+        128.49433750314822,
+        88.03910026881202,
+        77.172680749892,
+        66.78581102826692,
+        57.96332360707149,
+        52.59283301502276,
+        1.844791604393499e-12
+      ]
+    }
+  },
+  "profiles": {
+    "conductors": {
+      "status": "external_inventory_complete_BEM_indeterminate",
+      "wall_s": 2.338781207916327,
+      "cpu_s": 2.309463,
+      "process_peak_RSS_MiB": 386.3125,
+      "stages": {
+        "external_inventory_and_connectivity": {
+          "wall_s": 1.2533034579828382,
+          "cpu_s": 1.2470819999999998
+        },
+        "synthetic_mesh_validation": {
+          "wall_s": 0.4957184159429744,
+          "cpu_s": 0.4846189999999999
+        },
+        "physical_forward_recomputation": {
+          "wall_s": 0.04796100000385195,
+          "cpu_s": 0.04405800000000015
+        }
+      },
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "grid-priors": {
+      "status": "complete",
+      "wall_s": 1.9448735000332817,
+      "cpu_s": 1.937402,
+      "process_peak_RSS_MiB": 244.6875,
+      "stages": {
+        "continuous_truth_forward": {
+          "wall_s": 0.0447679579956457,
+          "cpu_s": 0.044716999999999896
+        },
+        "forward_prior_inverse_sweep": {
+          "wall_s": 0.7948719579726458,
+          "cpu_s": 0.8028550000000001
+        },
+        "paired_noise_contrasts": {
+          "wall_s": 0.05476079205982387,
+          "cpu_s": 0.0547089999999999
+        }
+      },
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "holdout": {
+      "status": "incomplete_reference_evaluation",
+      "wall_s": 0.06516391597688198,
+      "cpu_s": 0.06500700000000004,
+      "process_peak_RSS_MiB": 182.890625,
+      "stages": {
+        "tissue_scoring": {
+          "wall_s": 1.1249212548136711e-06,
+          "cpu_s": 9.999999999177334e-07
+        }
+      },
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "priors": {
+      "status": "complete",
+      "wall_s": 4.055881874985062,
+      "cpu_s": 3.997585,
+      "process_peak_RSS_MiB": 280.671875,
+      "stages": {
+        "continuous_truth_forward": {
+          "wall_s": 0.050961458939127624,
+          "cpu_s": 0.04626599999999992
+        },
+        "forward_prior_inverse_sweep": {
+          "wall_s": 2.041192499920726,
+          "cpu_s": 2.0435550000000005
+        },
+        "paired_noise_contrasts": {
+          "wall_s": 0.1301846249261871,
+          "cpu_s": 0.12970700000000024
+        }
+      },
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    },
+    "tissues": {
+      "status": "incomplete_reference_evaluation",
+      "wall_s": 0.07948633295018226,
+      "cpu_s": 0.06746399999999997,
+      "process_peak_RSS_MiB": 184.03125,
+      "stages": {
+        "tissue_scoring": {
+          "wall_s": 1.750071533024311e-06,
+          "cpu_s": 2.0000000000575113e-06
+        }
+      },
+      "memory_scope": "process high-water including libraries, not incremental allocation"
+    }
+  },
+  "artifacts": {
+    "root": "reports/milestone11-final",
+    "figures_visually_reviewed": 16,
+    "checked_output_hashes": 49,
+    "checked_NPZ_arrays": 33684,
+    "manifests_sha256": {
+      "conductors": "183b86d46fe7cec91913a231de7020086bc76c8ac6c5b6b463b29d12bcc1afe9",
+      "grid-priors": "62c424b3754d06d05066b7733536ccac8fbe812a3109db8b52d0fee64e36ea96",
+      "holdout": "b3c6e5d42d97483876ce87162e2acda7d45b324c494c223cc6bc37b2e972fbb0",
+      "priors": "94eb2157c1c67210a7f77739bbf59651c20d1e825619de566cb9f7f5eb892dd3",
+      "tissues": "2d3e11220ad2adf71927260c414d8f27264bd4ab1e623a6e359d362170457b20"
+    },
+    "MNE_equivalence_sha256": "f0c2588701480a29f0096cd5054801cdf6fee33d5e41d49b9b17e342e8d873c8"
+  },
+  "environment": {
+    "python": "3.12.2",
+    "platform": "macOS-15.7-arm64-arm-64bit",
+    "threads": 1,
+    "libraries": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mne": "1.13.2",
+      "nibabel": "5.4.2",
+      "scikit-image": "0.26.0",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "acceptance": {
+    "numerical_prior_validation": "complete",
+    "three_grid_offgrid_comparison": "complete",
+    "external_reference_file_validation": "complete with unresolved geometry/evidence",
+    "genuine_human_tissue_reference": "incomplete: authorized labels unavailable",
+    "external_anatomical_BEM_sensitivity": "incomplete: reference boundaries not validated",
+    "multi_subject_generalization": "not established",
+    "all_541_tests_unchanged": "yes; version test now fails"
+  },
+  "limitations": [
+    "No independent human tissue scores or inter-rater uncertainty",
+    "SCI label frame, units and ontology unresolved",
+    "No FEM-to-BEM aggregation",
+    "Shared spherical physics and borrowed radial orientation prior",
+    "Normalization changes effective regularization and can severely attenuate moments",
+    "Noise intervals are conditional simulations, not human-population uncertainty",
+    "One unchanged legacy version test conflicts with required 0.11.0"
+  ],
+  "execution_note": "Reports produced before local commit; exact source tree identifies executed code. No push or M12 implementation."
+}

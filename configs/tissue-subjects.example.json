@@ -1,0 +1,23 @@
+{
+  "dataset": "ibsr-v2",
+  "authorization": false,
+  "subjects": [
+    {
+      "subject": "IBSR_01",
+      "split": "development",
+      "image_subject": "IBSR_01",
+      "reference_subject": "IBSR_01",
+      "space": "IBSR_01-native",
+      "image": "/authorized/local/IBSR_01/T1.nii.gz",
+      "reference": "/authorized/local/IBSR_01/verified-tissue-labels.nii.gz",
+      "modality": "T1",
+      "reference_ontology": {"1": "CSF", "2": "gray matter", "3": "white matter"},
+      "acquisition": {"scanner": "unknown", "protocol": "unknown"},
+      "reference_provenance": {
+        "evidence_type": "CMA manually guided expert segmentation; verify release README",
+        "version": "IBSR v2.0",
+        "source": "https://www.nitrc.org/projects/ibsr/"
+      }
+    }
+  ]
+}

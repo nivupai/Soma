@@ -20,3 +20,11 @@ The supplemental `interaction_analysis.py` processes all prespecified groups,
 retaining input/code hashes and paired intervals. Initial inspection and final
 verification receipts are committed; raw references and generated reports are not.
 See docs/MILESTONE10_RESULTS.md for scientific scope and unresolved limitations.
+
+
+M11: `milestone11/fetch_sci.py` verifies pinned explicit SCI acquisition;
+`milestone11/run.sh` executes six real CLI actions and a public MNE comparison.
+The protocol is sealed before evaluation; external-discovery, initial-inspection
+and verification receipts preserve access limits, old results and source identity.
+Tissue/holdout CLI reports explicitly unavailable registered data, not success.
+See docs/MILESTONE11_RESULTS.md for numerical results and the old version-test conflict.

@@ -65,3 +65,32 @@ REFERENCE_REGISTRY = {
         "CC BY 4.0 current author release; separate assets have separate terms",
     ),
 }
+
+REFERENCE_REGISTRY.update(
+    {
+        "sci-head": ReferenceDataset(
+            "sci-head",
+            "T1/T2 MRI and FEM materials",
+            "https://sci.utah.edu/sci-head-model/",
+            "Seg3D computational eight-tissue model; evidence gaps explicit",
+            "public institutional resource; attribution and NIH acknowledgment requested",
+        ),
+        "mrbrains13": ReferenceDataset(
+            "mrbrains13",
+            "T1/T1-IR/FLAIR",
+            "https://mrbrains13.isi.uu.nl/",
+            "authorized local training tissue labels only",
+            "registration and dataset access conditions apply; no automatic fetch",
+        ),
+        "ibsr-v2": ReferenceDataset(
+            "ibsr-v2",
+            "T1 MRI",
+            "https://www.nitrc.org/projects/ibsr/",
+            "CMA manually guided expert tissue labels",
+            (
+                "release 2316 notice and original CMA "
+                "research restrictions; authorized local ingestion"
+            ),
+        ),
+    }
+)

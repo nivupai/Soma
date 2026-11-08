@@ -1,0 +1,64 @@
+milestone: 11
+seed: 11042
+spacings_m:
+- 0.02
+- 0.015
+- 0.01
+lambda2:
+- 0.01
+- 0.1111111111111111
+- 1.0
+policies:
+- uniform
+- depth
+- area
+- orientation
+- depth_area
+normalizations:
+- none
+- sensor_trace
+orientations:
+- fixed
+- free
+depth_exponent: 0.8
+depth_cap: 10.0
+loose_tangential_variance: 0.2
+repetitions: 20
+snr: 10
+signal_frequency_Hz: 10
+sample_rate_Hz: 100
+samples: 100
+positions_MRI_m:
+- - 0.0183
+  - 0.0091
+  - 0.0527
+- - -0.0231
+  - 0.0173
+  - 0.0309
+- - 0.0117
+  - -0.0131
+  - 0.0153
+angles_deg:
+- 0
+- 30
+offgrid_tolerance_m: 0.0005
+truth_moment_Am: 1.0e-08
+truth_conductor: analytical
+reconstruction_models:
+- analytical
+- BEM
+- boundary_1mm
+- skull_half
+noise_models:
+- matched
+- diagonal_mismatch
+multiple_source_cases:
+- single
+- correlated_pair
+fixed_source_surface_radius_m: 0.065
+area_definition: declared quadrature measure 4*pi*R^2/N on volumetric samples, not
+  cortical patch area
+normalization_target_sensor_trace: 1.0
+regularization_scale: fixed analytical 20mm uniform prior trace/rank; same alpha across
+  grids/policies for each noise/representation
+grid_mode: false

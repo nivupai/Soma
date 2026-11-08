@@ -1,0 +1,108 @@
+{
+  "recorded_at_utc": "2026-11-08T20:03:49.907563+00:00",
+  "source": "https://sci.utah.edu/sci-head-model/",
+  "archives": {
+    "Segmentation.zip": {
+      "url": "https://sci.utah.edu/~datasets/SCI_headmodel/Segmentation.zip",
+      "bytes": 593032,
+      "sha256": "31b7f32628a887bb8e5e089bc98e355cbb30f94b8d4cf52685a58449068ec021"
+    },
+    "T1.zip": {
+      "url": "https://sci.utah.edu/~datasets/SCI_headmodel/T1.zip",
+      "bytes": 63732613,
+      "sha256": "54b6e3f3ade3f5a9d321cf93fe69be796f09513e3c24a079731fbe93594f75fd"
+    },
+    "AcquisitionReports.zip": {
+      "url": "https://sci.utah.edu/~datasets/SCI_headmodel/Acquitisition%20Reports.zip",
+      "bytes": 422539,
+      "sha256": "9d319f4e073736f7b16362792a9eb290b10df202e94d50a08038607baa657652"
+    },
+    "Simulations.zip": {
+      "url": "https://sci.utah.edu/~datasets/SCI_headmodel/Simulations.zip",
+      "bytes": 17727,
+      "sha256": "ca375ae4cb6d289a2e8d68dfb9754bad83312bee7f4127f3df18be642d2ccf79"
+    }
+  },
+  "selected_assets": {
+    "AcquisitionReports.zip": {
+      "bytes": 422539,
+      "sha256": "9d319f4e073736f7b16362792a9eb290b10df202e94d50a08038607baa657652"
+    },
+    "Simulations.zip": {
+      "bytes": 17727,
+      "sha256": "ca375ae4cb6d289a2e8d68dfb9754bad83312bee7f4127f3df18be642d2ccf79"
+    },
+    "official.html": {
+      "bytes": 70092,
+      "sha256": "a283e526e0d0192b638d4ad55e3ea673bc5390f7d34e16edcabd400efe672ab6"
+    },
+    "Segmentation.zip": {
+      "bytes": 593032,
+      "sha256": "31b7f32628a887bb8e5e089bc98e355cbb30f94b8d4cf52685a58449068ec021"
+    },
+    "T1.zip": {
+      "bytes": 63732613,
+      "sha256": "54b6e3f3ade3f5a9d321cf93fe69be796f09513e3c24a079731fbe93594f75fd"
+    },
+    "Segmentation/README.txt": {
+      "bytes": 519,
+      "sha256": "d0188ec98c9459612865f3c76cf87d9d473d6baaca3f3c313ebf095c61ec0837"
+    },
+    "Segmentation/HeadSegmentation.nrrd": {
+      "bytes": 624234,
+      "sha256": "7e9ce6ee21d7b216c1d103b40fd0e54d5370aad29d67a6bee8f67cb8d283187a"
+    },
+    "Simulations/LeadFieldMatrix.srn": {
+      "bytes": 57850,
+      "sha256": "6c8591a3b4c38a630a9b2db2441200e26b0794a7c1038fa6d6c3066a4ea1ac41"
+    },
+    "Simulations/LeadFieldMatrix_anisotropic.srn": {
+      "bytes": 61099,
+      "sha256": "e8728811d1fbca3b863e193d8f33eb06011274597a308f8055de50124542f811"
+    },
+    "Simulations/forward_problem.srn": {
+      "bytes": 28642,
+      "sha256": "48ec2937609572cc7f67265407b4755566b2aaae67f9ef9eeab94d681da4df5c"
+    },
+    "Simulations/README.txt": {
+      "bytes": 567,
+      "sha256": "aac67e45b48a81ecee353abc5f3d45ad3d2ea33527661268c89cdb2d1540e71f"
+    },
+    "Acquitisition Reports/README.txt": {
+      "bytes": 1237,
+      "sha256": "f62b809425dc5cfb35146d502f0222a86935be917835106d1219ea9f7d37c788"
+    },
+    "T1/metadata-slice.dcm": {
+      "bytes": 231254,
+      "sha256": "b9bd5937b43ac4e327450b2726f9fbb3c757836dfed8dc10190c0a46b5ab4c80"
+    },
+    "T1/T1_Corrected.nrrd": {
+      "bytes": 46995560,
+      "sha256": "e26ee96a8ee888c75a2e4a25d1ac9473ce46aa67c77bb14f63fd42236114b319"
+    },
+    "T1/README.txt": {
+      "bytes": 387,
+      "sha256": "7829e8bbb93d8ce2322727610e4f69ef3f7ea2d9dd94c008ba20599bac18e21b"
+    }
+  },
+  "selection": "Corrected T1/segmentation, READMEs, SCIRun networks and one DICOM metadata slice. No full DICOM extraction or tetrahedral mesh download.",
+  "T1_DICOM_spacing_evidence": {
+    "tags": {
+      "0018|0050": "1 mm slice thickness",
+      "0028|0030": "1\\1 mm pixel spacing",
+      "0018|0087": "3 T"
+    },
+    "supports": "T1 acquisition units; does not establish segmentation anatomical frame"
+  },
+  "IBSR": {
+    "release": "2316",
+    "URL": "https://www.nitrc.org/frs/download.php/5731/IBSR_V2.0_nifti_stripped.tgz",
+    "status": "redirects to login; no bypass attempted",
+    "downloaded": false
+  },
+  "MRBrainS13": {
+    "status": "no authorized local files",
+    "download_attempted": false
+  },
+  "annotation_status": "Seg3D computational segmentation; no manual/expert certainty inferred from archive README"
+}

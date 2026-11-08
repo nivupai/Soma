@@ -3,7 +3,7 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.10.0 includes template and participant-matched EEG source modeling,
+v0.11.0 includes template and participant-matched EEG source modeling,
 structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
 experiments. Participant results remain conditional research computations:
 independent anatomical readiness is INDETERMINATE. See
@@ -316,3 +316,26 @@ The methods study compares actual provided tissue/manual cortical references,
 checks topology and conservative repair, and evaluates continuous dipoles against
 separate reconstruction grids. Downloads are explicit; cortical labels are not
 skull/scalp truth. See [Milestone 10 results](docs/MILESTONE10_RESULTS.md).
+
+
+Milestone 11 adds external SCI computational-reference inspection, authorized-local
+human tissue adapters, subject-disjoint cohort evaluation and block source-prior
+calibration. [Results and incomplete criteria](docs/MILESTONE11_RESULTS.md) distinguish
+missing human references from completed synthetic experiments. All earlier tests
+are unchanged; one legacy assertion hard-codes 0.10.0 and therefore fails under
+required 0.11.0. See [verification](docs/VERIFICATION.md).
+
+```bash
+soma mri references inspect --dataset sci-head
+soma mri benchmark-tissues --config configs/tissue-benchmark.yaml --output reports/m11-tissues
+soma anatomy compare-conductors --config configs/conductor-comparison.yaml --output reports/m11-conductors
+soma source priors --config configs/source-priors.yaml --output reports/m11-priors
+soma source grid-priors --config configs/grid-priors.yaml --output reports/m11-grid-priors
+soma experiments anatomical-holdout --config configs/anatomical-holdout.yaml --output reports/m11-holdout
+```
+
+Each output directory must be new. SCI acquisition is explicit through
+`python experiments/milestone11/fetch_sci.py`; registered datasets and segmentation
+model weights are never automatically fetched. Tissue reports retain missing-data
+status until authorized labels are supplied. Reproduce all actions with
+`sh experiments/milestone11/run.sh` after activating the environment.

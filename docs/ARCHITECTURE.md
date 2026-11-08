@@ -263,3 +263,15 @@ truth from reconstruction grids, using established MNE forwards and existing
 inverse machinery. Existing data models, APIs and commands remain operational.
 The new imaging/anatomy/source CLI methods are additive. No grid interpolation is
 misrepresented as independent forward physics and no repaired mesh certifies anatomy.
+
+
+## Milestone 11
+
+`datasets.external_anatomy` reads bounded NRRD payloads without guessing anatomical
+frames, inspects SCI reference evidence and ingests authorized MRBrainS13 training
+labels. `validation.cohort` retains subjects, backend provenance, holdout integrity,
+missingness and subject-level statistics while reusing Volume/LabelVolume.
+`source.priors` implements ordered block covariances and sensor-space inverse
+solves; `validation.source_priors` reuses M10's physical continuous-source forwards.
+Existing source seal API accepts the separately sealed M11 source-priors config;
+old protocol seals and results are unchanged. See MILESTONE11_RESULTS.md.

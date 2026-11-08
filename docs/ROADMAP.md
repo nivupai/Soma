@@ -70,3 +70,13 @@ boundary metrics, topology and conservative repair, analytic convergence and
 continuous off-grid source studies. Anatomical/clinical claims remain constrained.
 A proposed Milestone 11 would add independent human tissue/conductor references,
 multi-subject holdouts and justified frame/source-prior studies; it was not started.
+
+
+## Milestone 11 implemented with explicit acceptance gaps
+
+External computational-reference inspection, authorized-local tissue/cohort
+adapters, block source priors and three-grid off-grid studies are implemented.
+Human tissue and anatomical conductor/generalization criteria remain incomplete;
+one unchanged legacy version assertion conflicts with required 0.11.0.
+Proposed M12 requires authorized multi-subject human references, verified SCI
+coordinate/interface chains and prospective cortical prior calibration. Not started.

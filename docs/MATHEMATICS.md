@@ -320,3 +320,15 @@ peak obeys ||r_peak−r_true||≥minᵢ||rᵢ−r_true||. This is a geometric lo
 additive attribution formula. The Tikhonov scale ||L_grid||F/sqrt(rank) and fixed
 lambda policy are reported for every grid. Source moments are not implicitly
 converted into volume-normalized current density as the number of vertices changes.
+
+
+## Block source priors (M11)
+
+For G=W L and block PSD source covariance Q,
+K=Q Gᵀ(G Q Gᵀ+alpha I)⁻¹ W. Zero alpha uses a sensor pseudoinverse.
+Sensor-trace calibration rescales Q to target tr(G Q Gᵀ)=1; with fixed alpha it
+changes effective regularization and does not guarantee unbiased moment recovery.
+Moment-white-noise, patch-integrated density white noise (variance proportional
+to area), and smooth density coefficients (A Q_density A) are different models.
+See SOURCE_PRIOR_NORMALIZATION.md for dimensions, basis, units, area/depth policies
+and independently tested MNE equivalence. No dense source resolution is allocated.

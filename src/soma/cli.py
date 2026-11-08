@@ -653,3 +653,16 @@ def decode_benchmark(
 
 if __name__ == "__main__":
     app()
+
+
+@experiments.command("anatomical-holdout")
+def anatomical_holdout(
+    config: Path = Path("configs/anatomical-holdout.yaml"), output: Path = Path("reports/holdout")
+) -> None:
+    from soma.validation.cohort import cohort_benchmark
+
+    try:
+        result = cohort_benchmark(config, output)
+        typer.echo(json.dumps({"status": result["status"], "output": str(output)}, indent=2))
+    except (ValueError, OSError) as exc:
+        fail(exc)

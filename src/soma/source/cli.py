@@ -249,3 +249,27 @@ def grid_convergence_command(
         _echo_result(source_benchmark(config, output, grid_only=True), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("priors")
+def priors_command(
+    config: Path = Path("configs/source-priors.yaml"), output: Path = Path("reports/priors")
+) -> None:
+    from soma.validation.source_priors import source_prior_study
+
+    try:
+        _echo_result(source_prior_study(config, output), output)
+    except (ValueError, OSError) as exc:
+        _fail(exc)
+
+
+@app.command("grid-priors")
+def grid_priors_command(
+    config: Path = Path("configs/grid-priors.yaml"), output: Path = Path("reports/grid-priors")
+) -> None:
+    from soma.validation.source_priors import source_prior_study
+
+    try:
+        _echo_result(source_prior_study(config, output), output)
+    except (ValueError, OSError) as exc:
+        _fail(exc)

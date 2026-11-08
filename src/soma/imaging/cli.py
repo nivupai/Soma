@@ -282,3 +282,31 @@ def benchmark_surfaces(
         _done(surface_benchmark(config, output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@references.command("inspect")
+def inspect_external(dataset: str = "sci-head") -> None:
+    import json
+
+    from soma.datasets.external_anatomy import inspect_sci
+
+    if dataset != "sci-head":
+        _fail(ValueError("Supported external inspection dataset: sci-head"))
+        return
+    try:
+        typer.echo(json.dumps(inspect_sci(), indent=2))
+    except (ValueError, OSError) as exc:
+        _fail(exc)
+
+
+@app.command("benchmark-tissues")
+def benchmark_tissues(
+    config: Path = Path("configs/tissue-benchmark.yaml"),
+    output: Path = Path("reports/tissue-benchmark"),
+) -> None:
+    from soma.validation.cohort import cohort_benchmark
+
+    try:
+        _done(cohort_benchmark(config, output), output)
+    except (ValueError, OSError) as exc:
+        _fail(exc)

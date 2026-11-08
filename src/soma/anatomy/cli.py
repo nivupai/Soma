@@ -163,3 +163,16 @@ def repair_audit_command(
         result(repair_audit(config, output), output)
     except Exception as exc:
         failure(exc)
+
+
+@app.command("compare-conductors")
+def compare_conductors_command(
+    config: Path = Path("configs/conductor-comparison.yaml"),
+    output: Path = Path("reports/conductors"),
+) -> None:
+    from soma.validation.conductors import compare_conductors
+
+    try:
+        result(compare_conductors(config, output), output)
+    except (ValueError, OSError) as exc:
+        failure(exc)
