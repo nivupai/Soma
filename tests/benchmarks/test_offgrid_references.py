@@ -206,12 +206,14 @@ def test_float_reference_codes_are_verified_not_thresholded(tmp_path):
 
 
 def test_protocol_and_installed_version_match_source():
+    import tomllib
     from importlib.metadata import version
 
     import soma
     from soma.benchmarks.config import configuration
 
-    assert version("soma-neuro") == soma.__version__ == "0.11.0"
+    project = tomllib.loads(Path("pyproject.toml").read_text(encoding="utf-8"))["project"]
+    assert version("soma-neuro") == soma.__version__ == project["version"]
     assert configuration(Path("configs/offgrid.yaml"))["offgrid_tolerance_m"] == 0.0005
     with pytest.raises(ValueError):
         configuration(Path("configs/inverse-audit.yaml"))
