@@ -14,18 +14,15 @@ import pandas as pd
 from mne.time_frequency import tfr_array_morlet
 from neurodsp.filt import filter_signal
 
-from soma.core.signal import Signal
 from soma.datasets.eegbci import event_meanings
 from soma.experiments.fmri_simulation import simulate
 from soma.experiments.source_simulation import source_waveforms
-from soma.fmri.design import Contrast, ModelConfig
-from soma.fmri.glm import contrast, fit
 from soma.geometry import Frame, Points, Transform
-from soma.imaging.nifti import load_nifti
 from soma.imaging.phantoms import asymmetric, ellipsoid
-from soma.imaging.surfaces import extract_surface
+from soma.sdk.eeg import BANDS, Signal, WelchConfig, welch
+from soma.sdk.fmri import Contrast, ModelConfig, contrast, fit
+from soma.sdk.imaging import extract_surface, load_nifti
 from soma.signal.bursts import calibrated_detector, intervals
-from soma.signal.spectral import BANDS, WelchConfig, welch
 from soma.signal.synthetic import synthetic
 from soma.source.resolution import Resolution, spatial_metrics
 

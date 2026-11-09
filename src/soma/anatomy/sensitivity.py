@@ -42,7 +42,7 @@ def central_differences(
             if not derivatives
             else float(
                 np.linalg.norm(derivative - derivatives[-1])
-                / max(np.linalg.norm(derivative), 1e-300)
+                / max(float(np.linalg.norm(derivative)), 1e-300)
             )
         )
         derivatives.append(derivative)

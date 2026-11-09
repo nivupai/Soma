@@ -17,6 +17,7 @@ from soma.experiments.cache import canonical_id, software_identity
 from soma.experiments.config import CohortConfig, config_from_dict, read_config, scientific_dict
 from soma.experiments.records import cached_record, input_identity
 from soma.experiments.sensitivity import sensitivity_design
+from soma.resources import protocol_document_sha256
 from soma.simulations.calibration import atomic_json
 from soma.statistics.hierarchical import holm, sign_flip_pvalue, subject_contrasts
 from soma.statistics.inference import InferenceConfig, infer_mean
@@ -55,8 +56,7 @@ def load_protocol(path: Path) -> tuple[dict[str, Any], str]:
         ) != sha256(path):
             raise ValueError("Protocol freeze receipt does not match the configuration")
         if path.name == "replication.yaml" and "document_sha256" in info:
-            document = Path(__file__).resolve().parents[3] / "docs/REPLICATION_PROTOCOL.md"
-            if sha256(document) != info["document_sha256"]:
+            if protocol_document_sha256("REPLICATION_PROTOCOL.md") != info["document_sha256"]:
                 raise ValueError("Frozen protocol document changed")
     config_from_dict(values["cohort"])
     minimum = values["eligibility"]["minimum_paired_runs"]

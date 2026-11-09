@@ -11,6 +11,7 @@ from typing import Any
 
 from bids import BIDSLayout
 
+from soma.core.paths import output_repository
 from soma.core.provenance import sha256, write_json
 from soma.imaging.nifti import load_nifti, save_nifti
 from soma.pipeline.contracts import InputRecord
@@ -25,9 +26,9 @@ TISSUE_LUT = (
 
 
 def private_output(path: Path) -> None:
-    repo = Path(__file__).resolve().parents[3]
+    repo = output_repository(path)
     resolved = path.resolve()
-    if resolved.is_relative_to(repo):
+    if repo is not None:
         if not any(
             resolved.is_relative_to(repo / p) for p in ["reports", "data/derived", "derivatives"]
         ):

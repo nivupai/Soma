@@ -26,6 +26,8 @@ def manifest(
 ) -> dict[str, Any]:
     try:
         repo = Path(__file__).resolve().parents[3]
+        if not (repo / "src/soma/core/provenance.py").is_file():
+            raise OSError("Installed artifact has no source-checkout Git context")
         revision = subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=repo, stderr=subprocess.DEVNULL, text=True
         ).strip()

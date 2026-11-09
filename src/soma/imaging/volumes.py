@@ -49,7 +49,7 @@ class Volume:
 
     @property
     def spacing_m(self) -> NDArray[np.float64]:
-        return np.linalg.norm(self.affine_m[:3, :3], axis=0)
+        return np.asarray(np.linalg.norm(self.affine_m[:3, :3], axis=0), dtype=np.float64)
 
     @property
     def grid_id(self) -> str:

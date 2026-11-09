@@ -1,0 +1,94 @@
+{
+  "mri_geometry": {
+    "spacing_mm": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "world_m": [
+      [
+        -0.048,
+        -0.048,
+        -0.048
+      ],
+      [
+        -0.046,
+        -0.044,
+        -0.042
+      ]
+    ],
+    "roundtrip_voxels": 1.7763568394002505e-15,
+    "synthetic": true
+  },
+  "segmentation": {
+    "Dice": 0.9005083514887436,
+    "Jaccard": 0.8190224570673712,
+    "ASSD_mm": 1.1038027628964218,
+    "HD95_mm": 2.828427124746185,
+    "signed_volume_error_mm3": -1487.9999999999989
+  },
+  "surface_qc": {
+    "euler_characteristic": 2,
+    "surface_area_m2": 0.00023660254037844388,
+    "enclosed_volume_m3": 1.666666666666667e-07
+  },
+  "eeg_analysis": {
+    "peak_hz": 10.0,
+    "mu_power_V2": 7.999999999999997e-12,
+    "burst_intervals_half_open_samples": [
+      [
+        0,
+        1598
+      ]
+    ],
+    "synthetic": true
+  },
+  "source_diagnostics": {
+    "estimate": [
+      0.9090909090909091,
+      0.0,
+      0.0
+    ],
+    "resolution_diagonal": [
+      0.9090909090909091,
+      0.9090909090909091,
+      0.9090909090909091
+    ],
+    "diagnostics": {
+      "residual_norm": 0.09090909090909094,
+      "penalty_norm": 0.9090909090909091,
+      "noise_amplification": 0.9090909090909091,
+      "forward_consistency_relative": 0.09090909090909094,
+      "relative_source_error": 0.09090909090909094
+    },
+    "units": "dimensionless toy"
+  },
+  "fmri_contrast": {
+    "positive_effect": 3.032471158035951,
+    "negative_effect": -2.9391169591746515,
+    "policy": {
+      "mode": "descriptive",
+      "correction": "bh",
+      "confirmatory_claim_allowed": false,
+      "status": "experimental nominal tests; descriptive effects retained",
+      "scope": "synthetic iid Gaussian OLS, fixed X/mask; tested n100/families only",
+      "assumptions_verified_from_data": false,
+      "declaration_source": "explicit synthetic contract, not a noise classifier"
+    },
+    "units": "input BOLD units per modeled regressor unit",
+    "residual_dof": 96
+  },
+  "provenance": {
+    "application_version": "0.16.0",
+    "input_fingerprint": "9fb0d6576833b66c488c19e709c0beecacd00b485c0d980e7a934855c3f4061d",
+    "method": "synthetic-summary-v1",
+    "units": "dimensionless",
+    "interpretation": "synthetic",
+    "confirmatory_claim_allowed": false
+  },
+  "explorer": {
+    "status": 200,
+    "demo_available": true,
+    "local_only": true
+  }
+}

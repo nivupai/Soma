@@ -39,7 +39,7 @@ class Tikhonov:
             factors[keep] = 1 / s[keep]
         else:
             factors = s / (s * s + self.lambda2)
-        return (vt.T * factors) @ u.T @ q
+        return np.asarray((vt.T * factors) @ u.T @ q, dtype=np.float64)
 
     def solve(self, measurements: Array) -> Array:
         y = np.asarray(measurements, dtype=float)
@@ -55,12 +55,12 @@ class Tikhonov:
             "penalty_norm": float(np.linalg.norm(estimate)),
             "noise_amplification": float(np.linalg.norm(self.kernel, 2)),
             "forward_consistency_relative": float(
-                np.linalg.norm(residual) / max(np.linalg.norm(measurements), 1e-300)
+                np.linalg.norm(residual) / max(float(np.linalg.norm(measurements)), 1e-300)
             ),
         }
         if truth is not None:
             result["relative_source_error"] = float(
-                np.linalg.norm(estimate - truth) / max(np.linalg.norm(truth), 1e-300)
+                np.linalg.norm(estimate - truth) / max(float(np.linalg.norm(truth)), 1e-300)
             )
         return result
 

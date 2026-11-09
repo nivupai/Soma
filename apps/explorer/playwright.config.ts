@@ -15,7 +15,9 @@ export default defineConfig({
     {
       cwd: "../..",
       command:
-        "MPLBACKEND=Agg OPENBLAS_NUM_THREADS=1 .venv/bin/python -m uvicorn services.explorer_api.app:app --host 127.0.0.1 --port 8000",
+        process.env.SOMA_EXPLORER_INSTALLED === "1"
+          ? "MPLBACKEND=Agg OPENBLAS_NUM_THREADS=1 .venv/bin/python -I -m soma.sdk.explorer --port 8000"
+          : "MPLBACKEND=Agg OPENBLAS_NUM_THREADS=1 .venv/bin/python -m uvicorn services.explorer_api.app:app --host 127.0.0.1 --port 8000",
       url: "http://127.0.0.1:8000/api/catalog",
       reuseExistingServer: !process.env.CI,
     },

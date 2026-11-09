@@ -1,5 +1,11 @@
 # Soma
 
+Soma v0.16.0 provides a documented [scientific SDK](docs/SDK_OVERVIEW.md),
+[eight executable examples](examples/README.md), reviewed wheel/source artifacts
+and an optional local Explorer. See [installation](docs/SDK_INSTALLATION.md) and
+[Milestone 16 verification](docs/MILESTONE16_RESULTS.md). Human anatomical and
+fMRI interpretation limitations remain in force.
+
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.

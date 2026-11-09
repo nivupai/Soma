@@ -6,6 +6,7 @@ import io
 import json
 import threading
 from contextlib import asynccontextmanager
+from importlib.resources import files
 from pathlib import Path
 from typing import Any, Literal
 
@@ -365,10 +366,8 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
 
     def artifact(identity: str) -> Artifact:
         if identity == "demo-calibration":
-            receipt_path = (
-                Path(__file__).resolve().parents[2] / "experiments/milestone141/verification.json"
-            )
-            receipt = read_json(receipt_path)
+            receipt_bytes = files("soma.resources").joinpath("calibration-demo.json").read_bytes()
+            receipt = json.loads(receipt_bytes)
             row = next(
                 r
                 for r in receipt["calibration"]
@@ -391,7 +390,8 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
                     "processing": "iid-OLS-fixed-X-m343",
                 },
                 checksums={
-                    "receipt_sha256": hashlib.sha256(receipt_path.read_bytes()).hexdigest(),
+                    "receipt_sha256": receipt["source_receipt_sha256"],
+                    "packaged_excerpt_sha256": hashlib.sha256(receipt_bytes).hexdigest(),
                     "protocol_sha256": receipt["protocol_sha256"],
                 },
                 figures=[],

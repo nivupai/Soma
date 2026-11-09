@@ -1,0 +1,15 @@
+{
+  "description": "Two manually reviewed baseline generic-api-key false positives: public archive filename metadata and performance-receipt SHA256. Exact complete-file hashes; no scanner suppressions.",
+  "files": {
+    "experiments/milestone10/verification.json": "bd437103a051c7e1380423d2735e5d395db836ea42141e89256ccfdd99ec75fc",
+    "experiments/milestone15/verification.json": "7368d2226166de2294e6a8ff936d0f3df82b21e7b28712da8b252faa2e583ba0"
+  },
+  "synthetic_png_sha256": {
+    "docs/assets/explorer/eeg-dark.png": "e9297c8502bc7eb28c60e9cff257edb70753da60cc42c455d08e3a3759095f16",
+    "docs/assets/explorer/fmri-dark.png": "55ce71cef9579d1cb09b9f70b33f3b6b6519fb35284cb632fa2226fa6ee85d42",
+    "docs/assets/explorer/mri-dark.png": "cb18cdfdd9241604f0ba3b15abfb000f1797d17540863fd165dc525e2f976438",
+    "docs/assets/explorer/overview-dark.png": "fd499cbb1a6a7a22a5f45920262b3a4491b12a2a4e862cda89ed69d2f76af866",
+    "docs/assets/explorer/overview-light.png": "d098a565bb948c561a32c0fd2411b2ab9cf700263bd5b5dd76d4e406612ba548",
+    "docs/assets/explorer/source-dark.png": "42ea4fbc293a4321e72a67f7f1a45c4c0177ebc2c578f85d27ccd7e1f179b102"
+  }
+}
