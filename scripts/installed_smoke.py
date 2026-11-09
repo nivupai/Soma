@@ -1,5 +1,6 @@
 """Run with installed Python from an isolated cwd, with no repository import path."""
 
+import argparse
 import importlib
 import json
 import sys
@@ -12,7 +13,11 @@ import soma
 from soma.resources import inference_policy_text
 from soma.sdk.provenance import manifest
 
-assert soma.__version__ == version("soma-neuro") == "0.16.0"
+parser = argparse.ArgumentParser()
+parser.add_argument("--expected-version", required=True)
+parser.add_argument("--explorer", action="store_true")
+args = parser.parse_args()
+assert soma.__version__ == version("soma-neuro") == args.expected_version
 assert Path(soma.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
 assert SpecifierSet(metadata("soma-neuro")["Requires-Python"]) == SpecifierSet(">=3.11,<3.13")
 for module in ["imaging", "eeg", "source", "fmri", "provenance", "synthetic"]:

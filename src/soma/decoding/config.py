@@ -10,6 +10,7 @@ import yaml
 
 from soma.core.provenance import sha256
 from soma.experiments.cache import software_identity
+from soma.resources import protocol_document_sha256
 
 MODELS = (
     "motor_mu_lr",
@@ -48,10 +49,9 @@ def read_protocol(path: Path) -> tuple[dict[str, Any], str]:
         raise ValueError("Decoding protocol seal mismatch")
     if path.name == "decoding.yaml":
         receipt = json.loads(path.with_name("decoding-freeze.json").read_text())
-        document = Path(__file__).resolve().parents[3] / "docs/DECODING_PROTOCOL.md"
         if (
             receipt["protocol_sha256"] != checksum
-            or receipt["document_sha256"] != sha256(document)
+            or receipt["document_sha256"] != protocol_document_sha256("DECODING_PROTOCOL.md")
             or receipt["configuration_file_sha256"] != sha256(path)
         ):
             raise ValueError("Decoding protocol freeze receipt mismatch")

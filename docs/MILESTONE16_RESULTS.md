@@ -4,7 +4,7 @@ Soma v0.16.0 stabilizes the explicit `soma.sdk` namespaces, installable local
 Explorer gateway, result semantics and private-repository release verification.
 It introduces no new neuroimaging experiment or human validation claim. All 106
 pre-existing test/experiment files are byte-identical to the sanitized baseline.
-The 892 existing tests remain intact; 45 SDK/package tests are added.
+The 892 existing tests remain intact; 48 SDK/package tests are added.
 
 ## Executed local checks
 
@@ -15,14 +15,14 @@ separate GitHub Actions evidence; local macOS success is not a substitute for th
 
 | Check | Actual result |
 |---|---|
-| Full Python selection | 937 passed, 0 skipped, 105 warnings |
-| Offline selection | 920 passed, 17 integration tests explicitly deselected, 103 warnings |
+| Full Python selection | 940 passed, 0 skipped, 105 warnings |
+| Offline selection | 923 passed, 17 integration tests explicitly deselected, 103 warnings |
 | Frontend | 14 passed |
 | Playwright | 8 passed, including actual configured local adapters |
 | CLI compatibility | all 13 documented checks passed |
 | Synthetic public-SDK examples | all 8 executed |
 | Ruff / format | passed |
-| Strict mypy | 200 source files passed |
+| Strict mypy | 201 source files passed |
 | TypeScript / frontend lint / format / production build | passed |
 | pip check / Python vulnerability audit | passed / zero known vulnerabilities |
 | npm audit | zero findings after scoped development-dependency remediation |
@@ -79,20 +79,20 @@ algorithmic speedups. No timing threshold is enforced in CI.
 
 | Operation | SDK ms | Implementation ms | SDK serialized bytes |
 |---|---:|---:|---:|
-| MRI_metadata | 0.866 | 0.772 | 547 |
+| MRI_metadata | 0.965 | 1.098 | 547 |
 | geometry_check | 0.010 | 0.010 | 19 |
-| segmentation_metrics | 5.871 | 6.010 | 2717 |
-| EEG_PSD | 0.102 | 0.079 | 4739 |
-| surface_QC | 0.368 | 0.294 | 1131 |
-| synthetic_GLM | 6.529 | 6.781 | 7410 |
-| provenance_read | 0.026 | 0.020 | 44 |
+| segmentation_metrics | 9.138 | 5.965 | 2717 |
+| EEG_PSD | 0.226 | 0.118 | 4739 |
+| surface_QC | 0.387 | 0.556 | 1131 |
+| synthetic_GLM | 9.678 | 9.080 | 7410 |
+| provenance_read | 0.022 | 0.019 | 44 |
 
-Cold imports: root 0.0013 s,
-imaging 0.671 s,
-EEG 1.219 s,
-fMRI 1.368 s.
-Installed loopback Explorer catalog ready in 1.934 s.
-Whole-process high-water RSS 306.1 MiB includes imports
+Cold imports: root 0.0012 s,
+imaging 0.493 s,
+EEG 1.568 s,
+fMRI 2.057 s.
+Installed loopback Explorer catalog ready in 2.365 s.
+Whole-process high-water RSS 260.8 MiB includes imports
 and preceding analyses; it is not per-call allocation. Vite reported 301 ms dev
 startup and unchanged main/source chunks of 267.69/527.41 kB (gzip84.04/133.14 kB).
 The source-chunk warning remains; no bundle-size improvement is claimed.
@@ -117,8 +117,23 @@ compatible with the supported Node runtime, cleared the audit; lint/build/tests
 were rerun. Python auditing was explicitly bound to the sanitized interpreter.
 The Python audit checked 112 third-party packages; the private, unregistered
 `soma-neuro` package has no PyPI advisory entry and is explicitly skipped by that
-database lookup. Its source and artifacts are covered by the tests/manual/privacy
-checks instead. No private-history import or history rewrite was performed.
+database lookup. Source/artifact checks cover it separately.
+No private-history import or history rewrite was performed.
+
+The first Milestone16 Linux scientific runs exposed additional installed-package
+assumptions: frozen protocol documents were looked up relative to site-packages,
+and MRI output guards used the package location rather than the destination's
+repository. Captured help also contained forced ANSI styles that split option
+names. Exact unchanged replication/decoding protocol documents are now packaged,
+while source runs still check the actual source documents for tampering. Output
+guards find the destination's nearest Soma source tree or Git worktree, preserving
+strict ignored-directory policies. Standard NO_COLOR/TERM=dumb settings make CI
+help capture deterministic. Three new regressions cover the corrections, and the
+entire noneditable installed offline suite passes 923 tests without dependency
+skips when the documented developer validator is installed. Without that optional
+validator, schema status correctly remains INDETERMINATE; it is not forced to PASS.
+Version smoke tests compare with the current project metadata rather than a fixed
+release literal. No original test or scientific assertion was modified.
 
 The baseline GitHub run failed strict typing on Python3.11 NumPy stubs; explicit
 float64 returns/Python scalar boundaries correct those reports without changing

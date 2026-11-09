@@ -24,7 +24,8 @@ The scientific dependency graph is unchanged. Core includes the existing MRI/EEG
 fMRI stack; `explorer` adds FastAPI/Pydantic/Uvicorn/HTTPX and `dev` adds test/build
 tools. No external preprocessing executable, model weights or datasets are installed.
 The wheel includes `soma`, the compatible `services` API gateway, `py.typed` and the
-small preserved descriptive-only policy resource and a content-hashed synthetic
+unchanged sealed replication/decoding protocol documents, the preserved
+descriptive-only policy resource and a content-hashed synthetic
 calibration excerpt used by the demo experiment browser. The sdist includes reviewed
 source, examples, tests, documentation, configurations and the unchanged calibration
 verification record required by the resource-integrity regression; no local registrations,
@@ -69,3 +70,10 @@ remain validated. Servers bind to loopback; no telemetry or public deployment wa
 added. Human fMRI confirmation remains unavailable because independent preprocessing
 and inferential calibration evidence is insufficient. Unavailable data are not
 silently replaced with synthetic participant results.
+
+Installed legacy protocol checks use the bundled, sealed documents; source runs
+continue to detect edits to the actual protocol documents. MRI output guards
+identify the destination repository independently of installation location and
+require allowed ignored output trees. Complete test-suite schema verification
+requires the developer BIDS validator extra; without it, schema output remains
+INDETERMINATE. Fresh SDK core imports/examples do not require that developer tool.

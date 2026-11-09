@@ -14,6 +14,9 @@ env:
   ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS: '1'
   LOKY_MAX_CPU_COUNT: '1'
   PYTHONDONTWRITEBYTECODE: '1'
+  # Prevent forced ANSI styles from splitting literal CLI options in captured help.
+  NO_COLOR: '1'
+  TERM: dumb
 jobs:
   quality:
     runs-on: ubuntu-latest

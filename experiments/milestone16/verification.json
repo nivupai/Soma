@@ -2,66 +2,47 @@
   "version": "0.16.0",
   "baseline": "468b56123ccb1dacfa707dc65a73164e6e7dd978",
   "scope": "SDK and release engineering; no new human validation experiment",
-  "scientific_source_tree_sha256": "70d61283a090b0861f5d106863abb5dfbb0d28476130705e1da68d1e0de7053b",
+  "scientific_source_tree_sha256": "9f494453240ea48fb9fa69f1eaa3ef33a0bd0c4a4fe019a04ae3d68408e110c4",
   "baseline_test_and_experiment_files_byte_identical": 106,
   "tests": {
     "preserved_python": 892,
-    "new_python": 45,
-    "full_passed": 937,
+    "new_python": 48,
+    "full_passed": 940,
     "full_skipped": 0,
-    "offline_passed": 920,
+    "offline_passed": 923,
     "offline_deselected": 17,
     "frontend_passed": 14,
     "e2e_passed": 8,
     "CLI_smoke_passed": 13,
-    "examples": 8
+    "examples": 8,
+    "noneditable_installed_offline_passed": 923,
+    "noneditable_installed_offline_dependency_skips": 0
   },
   "quality": {
     "ruff": "passed",
     "format": "passed",
-    "strict_mypy_source_files": 200,
+    "strict_mypy_source_files": 201,
     "TypeScript": "passed",
     "frontend_lint_format_build": "passed",
     "dependency_checks": "passed"
   },
   "fresh_installation": {
-    ".venv-wheel": {
-      "environment": ".venv-wheel",
+    ".venv-ci-fixed-wheel": {
+      "environment": ".venv-ci-fixed-wheel",
       "artifact": "soma_neuro-0.16.0-py3-none-any.whl",
       "core_and_explorer": true,
       "noneditable": true,
       "isolated_cwd": true
     },
-    ".venv-sdist": {
-      "environment": ".venv-sdist",
+    ".venv-ci-fixed-sdist": {
+      "environment": ".venv-ci-fixed-sdist",
       "artifact": "soma_neuro-0.16.0.tar.gz",
       "core_and_explorer": true,
       "noneditable": true,
       "isolated_cwd": true
     },
-    ".venv-source": {
-      "environment": ".venv-source",
-      "artifact": "",
-      "core_and_explorer": true,
-      "noneditable": true,
-      "isolated_cwd": true
-    },
-    ".venv-offline": {
-      "environment": ".venv-offline",
-      "artifact": "soma_neuro-0.16.0-py3-none-any.whl",
-      "core_and_explorer": true,
-      "noneditable": true,
-      "isolated_cwd": true
-    },
-    ".venv-sdist-offline": {
-      "environment": ".venv-sdist-offline",
-      "artifact": "soma_neuro-0.16.0.tar.gz",
-      "core_and_explorer": true,
-      "noneditable": true,
-      "isolated_cwd": true
-    },
-    ".venv-source-offline": {
-      "environment": ".venv-source-offline",
+    ".venv-ci-fixed-source": {
+      "environment": ".venv-ci-fixed-source",
       "artifact": "",
       "core_and_explorer": true,
       "noneditable": true,
@@ -88,7 +69,7 @@
     "reviewed_synthetic_PNGs": 6,
     "history_rewritten": false,
     "Python_registry_packages_audited": 112,
-    "Python_registry_skip": "soma-neuro 0.16.0 is private/unregistered, absent from PyPI advisory database"
+    "Python_registry_skip": "private soma-neuro has no PyPI advisory entry"
   },
   "UI_visual_review": "Synthetic MRI physical navigation and experiment browser inspected; images kept ignored",
   "CI_scope": "Linux Python 3.11/3.12; authoritative run conclusions belong to PR checks, separate from macOS local evidence",
@@ -102,14 +83,24 @@
     "Metadata declarations do not anonymize or validate data"
   ],
   "log_sha256": {
-    "pytest-full.log": "91e63cdb344e8f2f04cd7142c0c5544d32d7552bade429b45a49191edea5bea7",
-    "pytest-offline.log": "ef5ecae1ca7f142cbaffbc8eb55680c13087f781b759aa6067239be2d1514a08",
-    "playwright.log": "db5b263aa0d5c3423f7b030f88a4dbbbeebcaefb812d0042186cbd99d94a62a1",
+    "pytest-full.log": "fa37ea4cf0d96bc89cf22c813879f97beeb5a20cf50cab6404e0291a34a821e6",
+    "pytest-offline.log": "75ad18a97e69eece2b05fe87fae5a29ae7b883462ca7139eb4f33a33a2a2c0b2",
+    "playwright.log": "d335c6f0d7869267967acba10f776ef892d923aa41638e2095ac1c425c56b729",
     "frontend-tests.log": "4eda582e15281e23677517f822d99132219a6e2d38145a0fcd494df50c580fc1",
     "cli-smoke.log": "9688793661b24cb3f2b4571b1c450202851e9e1a0c124c901f64b08d2d98ce8c",
-    "mypy.log": "9eb7839fca713ce57122ddc97fcef4c7dfd9b2387720a0dd5092e67e66450689",
+    "mypy.log": "66d1e1376914aebd3df98f2d92a3227b07bafb60b2327103183c309404bb2ce0",
     "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
     "pip-check.log": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
     "pip-audit.log": "15950a68a7ed99c59779717acefdceb3f69cfd31bde67d2c954f2a3cea4d7955"
+  },
+  "CI_corrections": {
+    "initial_run": 42686733090,
+    "categories": [
+      "installed protocol resource lookup",
+      "destination repository output privacy",
+      "forced ANSI CLI presentation"
+    ],
+    "existing_tests_modified": false,
+    "scientific_or_numerical_assertions_weakened": false
   }
 }

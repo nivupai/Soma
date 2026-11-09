@@ -11,6 +11,7 @@ from typing import Any, Literal
 import nibabel as nib
 import numpy as np
 
+from soma.core.paths import output_repository
 from soma.core.provenance import sha256
 from soma.datasets.external_anatomy import TISSUES
 from soma.imaging.nifti import load_nifti
@@ -33,10 +34,10 @@ MR_MAPPING = {0: 0, 1: 2, 2: 2, 3: 3, 4: 3, 5: 1, 6: 1, 7: 0, 8: 0}
 
 
 def safe_local_output(path: Path) -> None:
-    """Participant outputs within this checkout must remain in ignored trees."""
-    repo = Path(__file__).resolve().parents[3]
+    """Participant outputs in a source/Git tree must remain in ignored trees."""
+    repo = output_repository(path)
     target = path.resolve()
-    if target.is_relative_to(repo):
+    if repo is not None:
         allowed = [(repo / "reports").resolve(), (repo / "data/derived").resolve()]
         if not any(target.is_relative_to(p) for p in allowed):
             raise ValueError(

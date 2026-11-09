@@ -11,6 +11,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+import tomllib
 import venv
 from pathlib import Path
 
@@ -29,6 +30,7 @@ def main():
     python = env / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
     cli = env / ("Scripts/soma.exe" if os.name == "nt" else "bin/soma")
     artifact = str(args.artifact.resolve())
+    expected_version = tomllib.loads((root / "pyproject.toml").read_text())["project"]["version"]
     clean_env = {
         k: v
         for k, v in os.environ.items()
@@ -47,11 +49,28 @@ def main():
             subprocess.run([str(x) for x in cmd], cwd=cwd, env=clean_env, check=True)
 
         run([*pip, artifact])
-        run([python, "-I", root / "scripts/installed_smoke.py"])
+        run(
+            [
+                python,
+                "-I",
+                root / "scripts/installed_smoke.py",
+                "--expected-version",
+                expected_version,
+            ]
+        )
         run([cli, "--help"])
         run([cli, "datasets", "list"])
         run([*pip, artifact + "[explorer]"])
-        run([python, "-I", root / "scripts/installed_smoke.py", "--explorer"])
+        run(
+            [
+                python,
+                "-I",
+                root / "scripts/installed_smoke.py",
+                "--expected-version",
+                expected_version,
+                "--explorer",
+            ]
+        )
         shutil.copytree(
             root / "examples", cwd / "examples", ignore=shutil.ignore_patterns("__pycache__")
         )

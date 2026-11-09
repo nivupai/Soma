@@ -291,3 +291,48 @@ def test_packaged_calibration_preserves_historical_values():
     for row in excerpt["calibration"]:
         assert row in historical["calibration"]
         assert row["case"] == "spatial-iid-independent-m343" and row["model"] == "ols"
+
+
+def test_packaged_protocol_documents_match_source():
+    import hashlib
+    from importlib.resources import files
+    from pathlib import Path
+
+    from soma.resources import protocol_document_sha256
+
+    for name in ["REPLICATION_PROTOCOL.md", "DECODING_PROTOCOL.md"]:
+        content = Path("docs", name).read_bytes()
+        assert files("soma.resources").joinpath(name).read_bytes() == content
+        assert protocol_document_sha256(name) == hashlib.sha256(content).hexdigest()
+
+
+def test_output_privacy_uses_destination_repository(tmp_path):
+    import subprocess
+
+    from soma.datasets.human_mri import safe_local_output
+    from soma.pipeline.derivatives import private_output
+
+    repo = tmp_path / "other-repository"
+    repo.mkdir()
+    subprocess.run(["git", "init", "--quiet", str(repo)], check=True)
+    (repo / ".gitignore").write_text("reports/\ndata/derived/\nderivatives/\n")
+    for guard in [safe_local_output, private_output]:
+        with pytest.raises(ValueError, match="ignored"):
+            guard(repo / "docs/private-image")
+        guard(repo / "reports/permitted")
+    private_output(repo / "derivatives/permitted")
+    with pytest.raises(ValueError):
+        safe_local_output(repo / "derivatives/stricter-human-policy")
+
+
+def test_source_archive_privacy_without_git(tmp_path):
+    from soma.core.paths import output_repository
+    from soma.pipeline.derivatives import private_output
+
+    root = tmp_path / "source-archive"
+    (root / "src/soma").mkdir(parents=True)
+    (root / "src/soma/__init__.py").write_text("")
+    (root / "pyproject.toml").write_text('[project]\nname = "soma-neuro"\n')
+    assert output_repository(root / "docs/private") == root
+    with pytest.raises(ValueError, match="ignored"):
+        private_output(root / "docs/private")
