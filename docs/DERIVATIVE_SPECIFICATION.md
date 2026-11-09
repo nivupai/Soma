@@ -37,3 +37,19 @@ PyBIDS plus the optional full official schema validator. Filename checks alone a
 insufficient. Compliance is claimed only for actually validated supported outputs,
 with exact schema/tool and warnings retained. Missing validator means INDETERMINATE,
 not compliance. No anatomical or clinical certification follows from schema PASS.
+
+## Milestone 13 addendum: functional analysis products
+
+fmri.outputs reuses the private-output guard and official offline validator.
+Supported functional analysis masks use sub/ses/task/run entities, desc-analysis,
+Type ROI, SpatialReference orig, exact internal space identity and BIDS source URI
+relationships. They are heuristic analysis domains, not certified brain extraction.
+Dataset description records Soma version, source dataset links and derivative type.
+
+BIDS1.11.2 supplies no general statistical-map suffix here. Effect/variance/t/z,
+explicit two-sided p/BH q/rejection maps and contrast metadata stay in a separate
+Soma custom-report directory. They retain source identity, affine, native effect
+units, model/contrast/tail/DOF and correction family, without pretending a custom
+statistics suffix passed standardized BIDS validation. The unused Nilearn upper-
+tail p output is not exported under the two-sided policy. No unrelated derivatives
+are overwritten. See [M13 results](MILESTONE13_RESULTS.md).

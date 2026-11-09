@@ -1,0 +1,7 @@
+dataset: spm-auditory
+data_root: data/external/spm-auditory
+model_config: configs/fmri-design.yaml
+smoothing_fwhm: 6.0
+initial_spikes: 4
+allow_unvalidated_demo: true
+contrast: listening

@@ -353,3 +353,23 @@ Transform receipts preserve direction, units, grids and valid affine inversion;
 nonlinear objects are rejected rather than approximated as matrices. The existing
 area-weighted tissue boundary metrics are unchanged. See
 [M12 results](MILESTONE12_RESULTS.md) for reference evidence and uncertainty limits.
+
+## Milestone 13 addendum: fMRI estimation and spatial sampling
+
+BOLD Y=X beta+epsilon uses event boxcars convolved with a declared HRF, drift,
+intercept and selected nuisances. Production beta/variance/t/z use Nilearn OLS or
+feasible AR(1) whitening; these are different temporal covariance assumptions.
+Native residuals are Y-X beta using the unwhitened design; whitened residuals
+are W Y-W X beta. Nilearn's AR predicted accessor uses a whitened design, so it
+is not used to define native residuals. Rank/condition/DOF and contrast row-space
+estimability precede inference. A separate small QR oracle validates effects and
+variance, not a new production GLM solver. Two-sided p-values use signed t-to-z
+conversion; BH correction controls a specified mask family under its assumptions.
+Only the explicitly two-sided p map is exported for this policy.
+
+ROI labels use nearest-neighbor pull resampling with identified subject/space/
+direction. Linear fields provide independent trilinear point/surface oracles.
+Sparse nearest-voxel source projection publishes contribution counts and is not
+the inverse of sampling. Fixed effects are within-subject; two-session map metrics
+are not population ICC or decomposition of physiological and registration error.
+See [numerical validation](FMIRI_NUMERICAL_VALIDATION.md).

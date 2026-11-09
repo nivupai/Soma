@@ -1,0 +1,12 @@
+{
+  "baseline": "73b9ed0",
+  "frozen_before_real_outcomes": true,
+  "files_sha256": {
+    "docs/FMIRI_PROTOCOL.md": "6adf1654cc94d83f7883c4757a86754ff914f748d6e590c90f1f2c00105d31a2",
+    "configs/fmri-design.yaml": "3ccbe3f1354af654f362451a56065b574d638a9229311d9d5671f47de045d793",
+    "configs/fmri-firstlevel.yaml": "1179dda4f0aba3f8f21ca1f0af9d8ca853c3e1b5f1984e53f19731f204f8a86e",
+    "configs/fmri-retest.yaml": "afced881e0eaf6cd060b2363fbfe74d677554b77d055a218ec79a6ff9100891f",
+    "configs/eeg-fmri-roi.yaml": "91cf345f9750163088e8f6e89514d58a3622e052cf52e87fd31acb8e5e62c5f0",
+    "configs/fmri-contrasts.yaml": "58fac15a7c9b59712434d5701b07bc467ce270fbf54a9cae09a61dd2b38fcf97"
+  }
+}

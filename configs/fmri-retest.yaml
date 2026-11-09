@@ -1,0 +1,6 @@
+dataset: ds000114
+version: 1.0.2
+subject: '01'
+task: fingerfootlips
+input: data/external/ds000114
+require_preprocessed: true

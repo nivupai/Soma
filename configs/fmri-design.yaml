@@ -1,0 +1,10 @@
+hrf_model: spm
+drift_model: cosine
+high_pass: 0.0078125
+slice_time_ref: 0.0
+noise_model: ar1
+smoothing_fwhm: 0.0
+confound_columns: []
+fd_threshold: null
+initial_spikes: 0
+q: 0.05

@@ -368,3 +368,16 @@ into original MRI roots or publish individual output receipts. See
 [experiment commands](../experiments/milestone12/README.md). The full test command
 retains the one user-directed historical version assertion failure; all other
 cases pass. M11 outputs and original tests are byte-identical.
+
+## Milestone 13 addendum: frozen task models
+
+The fMRI protocol/configs and separate SPM input amendment are sealed before real
+model outcomes. Actual archive/input hashes, event origins, model parameters,
+software/source identity and output hashes stay in private reports. No raw BIDS
+image is implicitly preprocessed; SPM's raw educational exception is explicit.
+Only supported masks enter standardized derivatives, while statistics/design/QC
+are custom reports. Full-report verified reuse is distinct from resumable fitting;
+changed content/config/source or corrupted products fail closed. Default CI remains
+offline; optional human data are never fetched in pytest. See
+[commands/Python use](../experiments/milestone13/README.md) and
+[results](MILESTONE13_RESULTS.md). No original test/report was rewritten.

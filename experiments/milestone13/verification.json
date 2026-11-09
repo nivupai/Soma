@@ -1,0 +1,365 @@
+{
+  "milestone": 13,
+  "version": "0.13.0",
+  "baseline_revision": "73b9ed0",
+  "source_tree_sha256": "abe7e79ea0dbbb1cef3de78b7856ede6c021b915fb50788e7d35bbf1f2b841e0",
+  "AnatomyReport_source_tree_sha256": "465bedf52bba6215e0e28bdfb96abb189db3bf99363b2a74833d52daf3daed96",
+  "hash_algorithms": "pipeline: src/soma-relative paths; AnatomyReport: repository-relative",
+  "baseline_test_files_unchanged": 47,
+  "historical_report_files_unchanged": 652,
+  "audited_output_hashes": 97,
+  "audited_figure_arrays": 60,
+  "inspected_primary_PNGs": 9,
+  "nilearn": "0.14.1",
+  "libraries": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "nibabel": "5.4.2",
+    "pybids": "0.22.0",
+    "bids-validator-deno": "3.0.2"
+  },
+  "SPM": {
+    "n_runs": 1,
+    "shape": [
+      64,
+      64,
+      64,
+      84
+    ],
+    "TR_s": 7,
+    "supplied_listening_blocks": 7,
+    "rank": 15,
+    "residual_dof": 69,
+    "condition_number": 27.534353631423922,
+    "analysis_voxels": 61335,
+    "FDR_rejections": 9630,
+    "positive": 7788,
+    "negative": 1842,
+    "ROI_mean_effect_native_units": 1.1244835996626121,
+    "preprocessing": "raw educational, not validated",
+    "schema": "supported analysis mask PASS; custom statistics not standardized",
+    "wall_s": 2.5297335840296,
+    "peak_RSS_MiB": 907.015625,
+    "native_lag1": -0.035425303206975615,
+    "whitened_lag1": -0.005788327490814621,
+    "review_fix_and_contrast_refit_change_to_statistical_maps": 0.0,
+    "completed_output_verified_reuse_wall_s": 0.2908540000207722
+  },
+  "synthetic": {
+    "oracle": {
+      "max_effect_error": 4.8405723873656825e-14,
+      "max_variance_error": 7.632783294297951e-17
+    },
+    "null": {
+      "AR0.0-ols": {
+        "n": 20,
+        "uncorrected_p05_fraction_mean": 0.05,
+        "FDR_any_rejection_fraction": 0.05,
+        "scope": "20 finite simulations, Monte Carlo uncertainty; not proof of calibrated FDR"
+      },
+      "AR0.6-ols": {
+        "n": 20,
+        "uncorrected_p05_fraction_mean": 0.18192419825072886,
+        "FDR_any_rejection_fraction": 1.0,
+        "scope": "20 finite simulations, Monte Carlo uncertainty; not proof of calibrated FDR"
+      },
+      "AR0.6-ar1": {
+        "n": 20,
+        "uncorrected_p05_fraction_mean": 0.06778425655976675,
+        "FDR_any_rejection_fraction": 0.2,
+        "scope": "20 finite simulations, Monte Carlo uncertainty; not proof of calibrated FDR"
+      }
+    },
+    "spatial_oracle_max_error": 0.0,
+    "test_retest": {
+      "map_correlation": 0.982292583918753,
+      "activation_Dice": 0.972972972972973,
+      "voxel_RMSE": 0.22634290236337723,
+      "mean_two_session_sample_variance": 0.02561555472513866
+    },
+    "sensitivity": [
+      {
+        "setting": "primary",
+        "positive_mean_beta": 2.9659464353067966,
+        "negative_mean_beta": -3.0111823764035783,
+        "rejected_voxels": 55,
+        "lag1": -0.026307450291043692,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "no-confounds",
+        "positive_mean_beta": 3.1144948469075278,
+        "negative_mean_beta": -2.8821249295574543,
+        "rejected_voxels": 54,
+        "lag1": 0.5725270880502247,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "cosine-drift",
+        "positive_mean_beta": 2.9709520134086507,
+        "negative_mean_beta": -3.007887294545904,
+        "rejected_voxels": 55,
+        "lag1": -0.045840064304545826,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": "cosine",
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "HRF-derivative",
+        "positive_mean_beta": 2.9679442813082733,
+        "negative_mean_beta": -3.011875048317796,
+        "rejected_voxels": 55,
+        "lag1": -0.033798454978017145,
+        "config": {
+          "hrf_model": "spm + derivative",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "HRF-mismatch",
+        "positive_mean_beta": 2.5478735678338635,
+        "negative_mean_beta": -2.593109584567283,
+        "rejected_voxels": 55,
+        "lag1": 0.03641525348468755,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "AR-noise-OLS",
+        "positive_mean_beta": 2.9493879409689856,
+        "negative_mean_beta": -3.061146548170445,
+        "rejected_voxels": 76,
+        "lag1": 0.5387307920186658,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "AR-noise-AR1",
+        "positive_mean_beta": 2.9787160015730616,
+        "negative_mean_beta": -3.041703365042684,
+        "rejected_voxels": 58,
+        "lag1": 0.5474775922149233,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ar1",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "spatial-noise",
+        "positive_mean_beta": 2.97411260224119,
+        "negative_mean_beta": -3.0102200160836983,
+        "rejected_voxels": 57,
+        "lag1": -0.036463804589990656,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "TR1",
+        "positive_mean_beta": 3.0426805994204233,
+        "negative_mean_beta": -3.030286935382699,
+        "rejected_voxels": 56,
+        "lag1": -0.012691304128958261,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 0.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      },
+      {
+        "setting": "smoothing",
+        "positive_mean_beta": 2.698839787996336,
+        "negative_mean_beta": -2.741525182492768,
+        "rejected_voxels": 64,
+        "lag1": -0.027411840471941062,
+        "config": {
+          "hrf_model": "spm",
+          "drift_model": null,
+          "high_pass": 0.0078125,
+          "slice_time_ref": 0.0,
+          "noise_model": "ols",
+          "smoothing_fwhm": 3.0,
+          "confound_columns": [
+            "motion",
+            "trend"
+          ],
+          "motion_derivatives": false,
+          "fd_threshold": null,
+          "initial_spikes": 0,
+          "q": 0.05
+        }
+      }
+    ],
+    "wall_s": 1.8974231670144945,
+    "peak_RSS_MiB": 338.359375
+  },
+  "component_performance": {
+    "functional_load_materialize_s": 0.03688316699117422,
+    "confounds_s": 0.0007309580687433481,
+    "design_s": 0.0030719588976353407,
+    "design_and_glm_s": 1.2531512909336016,
+    "contrast_s": 0.08271683403290808,
+    "ROI_s": 0.0015369580360129476,
+    "same_grid_resampling_s": 0.012246959027834237
+  },
+  "supplemental_peak_RSS_MiB": 1162.125,
+  "optional_data": {
+    "ds000114": {
+      "dataset_DOI": "doi:10.18112/openneuro.ds000114.v1.0.2",
+      "subjects": 10,
+      "selected_sessions": [
+        "ses-retest",
+        "ses-test"
+      ],
+      "selected_BOLD_files": 10,
+      "selected_MEG_files": 0,
+      "preprocessed_BOLD_files": 0,
+      "confounds_tables": 0,
+      "real_analysis_ready": false
+    },
+    "ds000117": {
+      "dataset_DOI": "doi:10.18112/openneuro.ds000117.v1.1.0",
+      "subjects": 16,
+      "selected_sessions": [
+        "ses-meg",
+        "ses-mri"
+      ],
+      "selected_BOLD_files": 9,
+      "selected_MEG_files": 6,
+      "preprocessed_BOLD_files": 0,
+      "confounds_tables": 0,
+      "real_analysis_ready": false
+    }
+  },
+  "real_test_retest_completed": false,
+  "real_multimodal_completed": false,
+  "tests": {
+    "baseline": 691,
+    "new": 71,
+    "full": 762,
+    "offline": 745,
+    "integration_deselected_offline": 17
+  },
+  "privacy": "aggregate only; no participant IDs, image hashes or voxel data",
+  "limitations": [
+    "raw SPM preprocessing and motion evidence unavailable",
+    "AR1 finite-sample null miscalibration",
+    "no independent clinical/anatomical certification",
+    "no real registered multimodal comparison"
+  ]
+}

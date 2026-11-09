@@ -92,3 +92,15 @@ instruction;690 other cases pass. This supersedes the earlier prospective M12
 scope above while preserving that historical text. Independent conductor anatomy,
 fresh holdouts and clinical/anatomical certification remain unresolved. Milestone13
 has not begun. See [M12 results](MILESTONE12_RESULTS.md).
+
+## Milestone 13 implemented with explicit human-data gaps
+
+Soma0.13.0 implements a task-fMRI modeling and spatial-interface foundation,
+independent synthetic validation, raw SPM educational demonstration and optional
+external-preprocessing adapters. All762 cases pass, including691 unchanged baseline
+cases. Real ds000114 retest and ds000117 EEG/fMRI integration remain unavailable;
+metadata discovery is not participant-matched analysis. Feasible AR(1) null
+miscalibration, missing preprocessing/motion evidence and anatomical certification
+remain explicit limitations. Proposed M14 would obtain/audit appropriate derivatives
+and transform chains, then prospectively assess multi-session inference/calibration.
+Milestone14 has not begun. See [M13 results](MILESTONE13_RESULTS.md).

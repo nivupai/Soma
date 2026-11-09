@@ -3,7 +3,7 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.12.0 includes template and participant-matched EEG source modeling,
+v0.13.0 includes template and participant-matched EEG source modeling,
 structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
 experiments. Participant results remain conditional research computations:
 independent anatomical readiness is INDETERMINATE. See
@@ -381,3 +381,25 @@ and conductor readiness remain INDETERMINATE. Full tests: 690 pass, one historic
 [measured results and limits](docs/MILESTONE12_RESULTS.md) and
 [reproduction](experiments/milestone12/README.md). No raw MRI or identifiable
 outputs belong in Git. No remote push or Milestone 13 is included.
+
+
+## Milestone 13 task-fMRI and spatial interfaces
+
+Soma0.13 adds explicit4D BOLD records, PyBIDS task ingestion, Nilearn first-level
+OLS/AR(1), design/contrast validation, FDR maps, ROI/surface utilities and guarded
+regional EEG/fMRI comparison. See [methods](docs/FMIRI_GLM_METHODS.md),
+[spatial requirements](docs/FMIRI_SPATIAL_MODELING.md) and
+[reproduction/Python examples](experiments/milestone13/README.md).
+
+```bash
+soma fmri simulate --seed 13042 --output reports/fmri-synthetic
+soma fmri inspect --input /local/bids
+```
+
+The real SPM auditory demonstration is explicitly raw educational data with
+incomplete preprocessing evidence. ds000114 retest and ds000117 matched EEG/fMRI
+results remain unavailable without appropriate preprocessing/transforms. Statistical
+maps are custom reports; supported mask derivatives pass official BIDS validation.
+No clinical/anatomical certification or joint multimodal model is claimed. See
+[measured results and limitations](docs/MILESTONE13_RESULTS.md). Historical M12
+reports retain their original test counts; the current full suite is green.

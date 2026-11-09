@@ -302,3 +302,17 @@ source/dependency hashes conservatively invalidate stages. See the sealed
 [M12 decision record](MRI_PIPELINE_ARCHITECTURE.md),
 [derivative specification](DERIVATIVE_SPECIFICATION.md) and
 [reproducibility contract](PIPELINE_REPRODUCIBILITY.md).
+
+## Milestone 13 addendum: functional modeling
+
+fmri.records introduces distinct4D FunctionalRun; anatomical Volume remains3D.
+PyBIDS selection reuses M12 discovery and strict NIfTI geometry, with explicit
+preprocessing/mask/confound/space requirements. fmri.design constructs diagnosed
+Nilearn matrices; fmri.glm delegates voxel fitting, contrast testing and fixed
+effects, retaining native/whitened diagnostics. Typed regional/spatial interfaces
+reuse VoxelMap, Points, Transform and pull resampling; no new geometry authority.
+Custom statistical reports are separate from supported BIDS mask derivatives.
+AnatomyReport supplies stage timing/provenance/output hashes; completed-report
+reuse binds content, parameters, source and software. Clinical/anatomical and real
+matched-multimodal capabilities remain distinct from software numerical validation.
+See [methods](FMIRI_GLM_METHODS.md) and [spatial modeling](FMIRI_SPATIAL_MODELING.md).

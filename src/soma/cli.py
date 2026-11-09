@@ -11,6 +11,8 @@ from soma.anatomy.cli import app as anatomy_app
 from soma.datasets.eegbci import fetch, load_recording
 from soma.datasets.registry import REGISTRY
 from soma.eeg.analysis import analyze_recording
+from soma.fmri.cli import app as fmri_app
+from soma.fmri.cli import multimodal as multimodal_app
 from soma.imaging.cli import app as mri_app
 from soma.signal.experiments import synthetic_spectrum
 from soma.source.cli import app as source_app
@@ -24,6 +26,8 @@ eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
 app.add_typer(source_app, name="source")
 app.add_typer(mri_app, name="mri")
+app.add_typer(fmri_app, name="fmri")
+app.add_typer(multimodal_app, name="multimodal")
 app.add_typer(anatomy_app, name="anatomy")
 app.add_typer(datasets, name="datasets")
 app.add_typer(eeg, name="eeg")

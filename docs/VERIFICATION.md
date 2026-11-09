@@ -865,3 +865,23 @@ remain ignored. Aggregate receipt:
 [verification.json](../experiments/milestone12/verification.json).
 See [results](MILESTONE12_RESULTS.md) for warnings, performance, visual inspection,
 poor segmentation findings, data restrictions and unsupported conductor claims.
+
+## Milestone 13 verification addendum (v0.13.0)
+
+Verified corrected baseline73b9ed0:691 tests passed,62 warnings,74.44s.
+71 new cases validate fMRI timing, independent HRF/QR oracles, noise/contrast
+behavior, BIDS/preprocessing identity, confounds, spatial geometry and adversarial
+multimodal safeguards. Final including integrations:762 passed,80 warnings,75.58s; offline:745 passed,
+17 deselected,78 warnings,52.61s. All47 original test files and652 inspected
+historical report files remain byte-identical. Ruff lint/format, strict
+mypy172 source files and dependency checks pass.
+
+Executed the real SPM auditory educational pipeline, synthetic null/recovery/
+sensitivity/retest lab, spatial oracle, performance measurements, actual contrast
+CLI refit and design CLI. Supported real/synthetic mask derivatives pass official
+offline BIDS1.11.2 validation; custom statistics are not standardized derivatives.
+Verified source/config/output hashes, finite pickle-free arrays, immutable earlier
+reports, exact refit effects and completed-output reuse. Full numerical results,
+warnings, timings, actual metadata availability, reviewed figures and unresolved
+human-preprocessing/multimodal limitations are in [M13 results](MILESTONE13_RESULTS.md)
+and [aggregate receipt](../experiments/milestone13/verification.json).
