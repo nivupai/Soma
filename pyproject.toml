@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling>=1.25"]
+requires = ["hatchling==1.27.0"]
 build-backend = "hatchling.build"
 
 [project]
 name = "soma-neuro"
-version = "0.15.0"
+version = "0.16.0"
 description = "Transparent numerical foundations for computational neuroscience"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
@@ -12,13 +12,18 @@ dependencies = ["numpy>=1.26,<3", "scipy>=1.12,<2", "mne>=1.13,<2", "nibabel>=5.
 
 [project.optional-dependencies]
 explorer = ["fastapi>=0.162,<0.163", "pydantic>=2.14,<3", "uvicorn>=0.54,<0.55", "httpx>=0.28,<0.29"]
-dev = ["pytest>=8", "ruff>=0.9", "mypy>=1.13", "pandas-stubs", "types-PyYAML", "bids-validator-deno==3.0.2"]
+dev = ["pytest>=8", "ruff>=0.9", "mypy>=1.13", "pandas-stubs", "types-PyYAML", "bids-validator-deno==3.0.2", "build>=1.2,<2"]
 
 [project.scripts]
 soma = "soma.cli:app"
+soma-explorer = "soma.sdk.explorer:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/soma"]
+packages = ["src/soma", "services"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/services", "/configs", "/docs", "/examples", "/scripts", "/tests", "/experiments/milestone141/verification.json", "/README.md", "/CHANGELOG.md", "/pyproject.toml"]
+exclude = ["*.local.json", "__pycache__", "*.pyc", ".env*", "*.nii*", "*.edf", "*.fif", "*.npz", "*.png"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

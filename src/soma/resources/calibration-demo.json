@@ -1,0 +1,60 @@
+{
+  "calibration": [
+    {
+      "case": "spatial-iid-independent-m343",
+      "model": "ols",
+      "n_realizations": 128,
+      "marginal": {
+        "n": 128,
+        "p05": 0.0703125,
+        "p05_Wilson95": [
+          0.03742976830393997,
+          0.12823480349360633
+        ],
+        "KS_D": 0.08746990819639555,
+        "KS_p_diagnostic_only": 0.2655091951328621,
+        "DKW95_halfwidth": 0.12004034891499009,
+        "quantiles": [
+          0.012025475491416826,
+          0.018238728232920467,
+          0.02773435711632927,
+          0.03571186780907009,
+          0.44417623610166246,
+          0.9066336294028509
+        ]
+      },
+      "mean_null_p05": 0.04753553206997085,
+      "global_null": true,
+      "bh": {
+        "any_rejection": 0.0546875,
+        "Wilson95": [
+          0.026740201381346355,
+          0.10858490029974707
+        ],
+        "empirical_FDR": 0.0546875,
+        "mean_max_false_cluster": 0.0546875
+      },
+      "by": {
+        "any_rejection": 0.0,
+        "Wilson95": [
+          0.0,
+          0.029136956273508416
+        ],
+        "empirical_FDR": 0.0,
+        "mean_max_false_cluster": 0.0
+      },
+      "bonferroni": {
+        "any_rejection": 0.0546875,
+        "Wilson95": [
+          0.026740201381346355,
+          0.10858490029974707
+        ],
+        "empirical_FDR": 0.0546875,
+        "mean_max_false_cluster": 0.0546875
+      }
+    }
+  ],
+  "protocol_sha256": "3d1714b9beececf7ccad060f167f77728336b1cd82d50e0ab1a1ef1a26cbcf31",
+  "source_receipt_sha256": "582b81d11cf3ed90d7cea9286999dbac06b608d5eed3b71a2e10b9dd177c8fa2",
+  "scope": "Exact synthetic calibration excerpt from unchanged Milestone14.1 receipt; not human calibration"
+}

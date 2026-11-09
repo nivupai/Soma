@@ -58,7 +58,7 @@ class NoiseModel:
 
     @property
     def eigenvalues(self) -> Array:
-        return np.linalg.eigvalsh(self.covariance)
+        return np.asarray(np.linalg.eigvalsh(self.covariance), dtype=np.float64)
 
     @property
     def whitener(self) -> Array:

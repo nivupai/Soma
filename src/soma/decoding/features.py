@@ -159,7 +159,7 @@ class TrainingBursts(TransformerMixin, BaseEstimator):  # type: ignore[misc]
                         self.fs,
                         self.low * calibration,
                         self.high * calibration,
-                        self.minimum_cycles / np.mean(limits),
+                        float(self.minimum_cycles / np.mean(limits)),
                     )
                     observed = mask[a:b]
                     events = intervals(mask)

@@ -31,7 +31,7 @@ def trial_spectra(epochs: EpochSet, cfg: WelchConfig | None = None) -> TrialSpec
     config = cfg or WelchConfig(int(round(epochs.fs)), int(round(epochs.fs)) // 2)
     if epochs.data.shape[-1] < config.nperseg:
         raise ValueError("Trials are shorter than the requested Welch segment")
-    frequencies = np.fft.rfftfreq(config.nperseg, 1 / epochs.fs)
+    frequencies = np.asarray(np.fft.rfftfreq(config.nperseg, 1 / epochs.fs), dtype=np.float64)
     result = np.empty((*epochs.data.shape[:2], len(frequencies)))
     for t, trial in enumerate(epochs.data):
         for c, channel in enumerate(epochs.channels):

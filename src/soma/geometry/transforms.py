@@ -45,7 +45,10 @@ class Transform:
 
     def inverse(self) -> "Transform":
         return Transform(
-            self.destination, self.source, np.linalg.solve(self.matrix, np.eye(4)), self.rigid
+            self.destination,
+            self.source,
+            np.asarray(np.linalg.solve(self.matrix, np.eye(4)), dtype=np.float64),
+            self.rigid,
         )
 
     def then(self, following: "Transform") -> "Transform":

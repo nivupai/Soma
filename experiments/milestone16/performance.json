@@ -1,0 +1,123 @@
+{
+  "platform": "Darwin arm64",
+  "python": "3.12.2",
+  "versions": {
+    "soma-neuro": "0.16.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "nibabel": "5.4.2",
+    "nilearn": "0.14.1",
+    "SimpleITK": "2.5.7"
+  },
+  "measurements": {
+    "MRI_metadata": {
+      "SDK": {
+        "median_wall_s": 0.0008658749284222722,
+        "min_wall_s": 0.0007817919831722975,
+        "repeats": 5,
+        "serialized_bytes": 547
+      },
+      "implementation": {
+        "median_wall_s": 0.0007715419633314013,
+        "min_wall_s": 0.0007576659554615617,
+        "repeats": 5,
+        "serialized_bytes": 547
+      }
+    },
+    "geometry_check": {
+      "SDK": {
+        "median_wall_s": 1.0292045772075653e-05,
+        "min_wall_s": 9.790994226932526e-06,
+        "repeats": 5,
+        "serialized_bytes": 19
+      },
+      "implementation": {
+        "median_wall_s": 9.833020158112049e-06,
+        "min_wall_s": 9.624985978007317e-06,
+        "repeats": 5,
+        "serialized_bytes": 19
+      }
+    },
+    "segmentation_metrics": {
+      "SDK": {
+        "median_wall_s": 0.005871167057193816,
+        "min_wall_s": 0.005751667078584433,
+        "repeats": 5,
+        "serialized_bytes": 2717
+      },
+      "implementation": {
+        "median_wall_s": 0.006010083016008139,
+        "min_wall_s": 0.0058626249665394425,
+        "repeats": 5,
+        "serialized_bytes": 2717
+      }
+    },
+    "EEG_PSD": {
+      "SDK": {
+        "median_wall_s": 0.00010158296208828688,
+        "min_wall_s": 8.329201955348253e-05,
+        "repeats": 5,
+        "serialized_bytes": 4739
+      },
+      "implementation": {
+        "median_wall_s": 7.90830235928297e-05,
+        "min_wall_s": 6.491702515631914e-05,
+        "repeats": 5,
+        "serialized_bytes": 4739
+      }
+    },
+    "surface_QC": {
+      "SDK": {
+        "median_wall_s": 0.00036829104647040367,
+        "min_wall_s": 0.00033599999733269215,
+        "repeats": 5,
+        "serialized_bytes": 1131
+      },
+      "implementation": {
+        "median_wall_s": 0.0002940000267699361,
+        "min_wall_s": 0.0002823749091476202,
+        "repeats": 5,
+        "serialized_bytes": 1131
+      }
+    },
+    "synthetic_GLM": {
+      "SDK": {
+        "median_wall_s": 0.006529250065796077,
+        "min_wall_s": 0.006488165934570134,
+        "repeats": 5,
+        "serialized_bytes": 7410
+      },
+      "implementation": {
+        "median_wall_s": 0.006781457923352718,
+        "min_wall_s": 0.00634466705378145,
+        "repeats": 5,
+        "serialized_bytes": 7410
+      }
+    },
+    "provenance_read": {
+      "SDK": {
+        "median_wall_s": 2.604199107736349e-05,
+        "min_wall_s": 2.1458021365106106e-05,
+        "repeats": 5,
+        "serialized_bytes": 44
+      },
+      "implementation": {
+        "median_wall_s": 1.9666971638798714e-05,
+        "min_wall_s": 1.766590867191553e-05,
+        "repeats": 5,
+        "serialized_bytes": 44
+      }
+    }
+  },
+  "cold_import_s": {
+    "soma.sdk": 0.0012803329154849052,
+    "soma.sdk.imaging": 0.6707694580545649,
+    "soma.sdk.eeg": 1.2194892920088023,
+    "soma.sdk.fmri": 1.3679026250028983
+  },
+  "installed_Explorer_startup_s": 1.9338024579919875,
+  "process_high_water_RSS_MiB": 306.140625,
+  "RSS_scope": "whole process including imports, not attributable per call",
+  "comparison_limits": "same process sequential warm samples; shared algorithms; no speedup or clinical claim; no machine-specific threshold"
+}

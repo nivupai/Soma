@@ -1,0 +1,115 @@
+{
+  "version": "0.16.0",
+  "baseline": "468b56123ccb1dacfa707dc65a73164e6e7dd978",
+  "scope": "SDK and release engineering; no new human validation experiment",
+  "scientific_source_tree_sha256": "70d61283a090b0861f5d106863abb5dfbb0d28476130705e1da68d1e0de7053b",
+  "baseline_test_and_experiment_files_byte_identical": 106,
+  "tests": {
+    "preserved_python": 892,
+    "new_python": 45,
+    "full_passed": 937,
+    "full_skipped": 0,
+    "offline_passed": 920,
+    "offline_deselected": 17,
+    "frontend_passed": 14,
+    "e2e_passed": 8,
+    "CLI_smoke_passed": 13,
+    "examples": 8
+  },
+  "quality": {
+    "ruff": "passed",
+    "format": "passed",
+    "strict_mypy_source_files": 200,
+    "TypeScript": "passed",
+    "frontend_lint_format_build": "passed",
+    "dependency_checks": "passed"
+  },
+  "fresh_installation": {
+    ".venv-wheel": {
+      "environment": ".venv-wheel",
+      "artifact": "soma_neuro-0.16.0-py3-none-any.whl",
+      "core_and_explorer": true,
+      "noneditable": true,
+      "isolated_cwd": true
+    },
+    ".venv-sdist": {
+      "environment": ".venv-sdist",
+      "artifact": "soma_neuro-0.16.0.tar.gz",
+      "core_and_explorer": true,
+      "noneditable": true,
+      "isolated_cwd": true
+    },
+    ".venv-source": {
+      "environment": ".venv-source",
+      "artifact": "",
+      "core_and_explorer": true,
+      "noneditable": true,
+      "isolated_cwd": true
+    },
+    ".venv-offline": {
+      "environment": ".venv-offline",
+      "artifact": "soma_neuro-0.16.0-py3-none-any.whl",
+      "core_and_explorer": true,
+      "noneditable": true,
+      "isolated_cwd": true
+    },
+    ".venv-sdist-offline": {
+      "environment": ".venv-sdist-offline",
+      "artifact": "soma_neuro-0.16.0.tar.gz",
+      "core_and_explorer": true,
+      "noneditable": true,
+      "isolated_cwd": true
+    },
+    ".venv-source-offline": {
+      "environment": ".venv-source-offline",
+      "artifact": "",
+      "core_and_explorer": true,
+      "noneditable": true,
+      "isolated_cwd": true
+    }
+  },
+  "packaging": {
+    "wheel": "built and inspected",
+    "sdist": "built and inspected",
+    "core_and_explorer_tested": true,
+    "offline_index_disabled": true,
+    "reproducibility": "identical wheel and sdist under fixed SOURCE_DATE_EPOCH; see ignored build receipts"
+  },
+  "security": {
+    "scanner": "Gitleaks 8.30.1",
+    "rules_suppressed": false,
+    "baseline_reviewed_false_positive_categories": [
+      "public archive filename metadata",
+      "performance receipt SHA256"
+    ],
+    "material_findings": 0,
+    "Python_known_vulnerabilities": 0,
+    "Node_known_vulnerabilities": 0,
+    "reviewed_synthetic_PNGs": 6,
+    "history_rewritten": false,
+    "Python_registry_packages_audited": 112,
+    "Python_registry_skip": "soma-neuro 0.16.0 is private/unregistered, absent from PyPI advisory database"
+  },
+  "UI_visual_review": "Synthetic MRI physical navigation and experiment browser inspected; images kept ignored",
+  "CI_scope": "Linux Python 3.11/3.12; authoritative run conclusions belong to PR checks, separate from macOS local evidence",
+  "limitations": [
+    "No new human anatomical validation",
+    "Tissue overlap does not validate skull/scalp/BEM or source localization",
+    "Human/feasible-AR fMRI remains descriptive",
+    "Offline wheelhouse is platform/Python specific",
+    "Vite lazy source chunk remains 527.41 kB, gzip 133.14 kB",
+    "No public package/release/deployment or license grant",
+    "Metadata declarations do not anonymize or validate data"
+  ],
+  "log_sha256": {
+    "pytest-full.log": "91e63cdb344e8f2f04cd7142c0c5544d32d7552bade429b45a49191edea5bea7",
+    "pytest-offline.log": "ef5ecae1ca7f142cbaffbc8eb55680c13087f781b759aa6067239be2d1514a08",
+    "playwright.log": "db5b263aa0d5c3423f7b030f88a4dbbbeebcaefb812d0042186cbd99d94a62a1",
+    "frontend-tests.log": "4eda582e15281e23677517f822d99132219a6e2d38145a0fcd494df50c580fc1",
+    "cli-smoke.log": "9688793661b24cb3f2b4571b1c450202851e9e1a0c124c901f64b08d2d98ce8c",
+    "mypy.log": "9eb7839fca713ce57122ddc97fcef4c7dfd9b2387720a0dd5092e67e66450689",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "pip-check.log": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "pip-audit.log": "15950a68a7ed99c59779717acefdceb3f69cfd31bde67d2c954f2a3cea4d7955"
+  }
+}

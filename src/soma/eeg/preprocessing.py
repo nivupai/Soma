@@ -60,10 +60,12 @@ def rereference(
             or any(i < 0 or i >= data.shape[0] for i in indices)
         ):
             raise ValueError("Explicit reference requires unique available EEG channel indices")
-        return data - np.mean(data[list(indices)], axis=0, keepdims=True)
+        return np.asarray(
+            data - np.mean(data[list(indices)], axis=0, keepdims=True), dtype=np.float64
+        )
     if reference != "average" or data.shape[0] < 2:
         raise ValueError("Reference must be none, or average with at least two EEG channels")
-    return data - np.mean(data, axis=0, keepdims=True)
+    return np.asarray(data - np.mean(data, axis=0, keepdims=True), dtype=np.float64)
 
 
 def design_filter(
