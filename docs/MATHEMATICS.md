@@ -332,3 +332,24 @@ Moment-white-noise, patch-integrated density white noise (variance proportional
 to area), and smooth density coefficients (A Q_density A) are different models.
 See SOURCE_PRIOR_NORMALIZATION.md for dimensions, basis, units, area/depth policies
 and independently tested MNE equivalence. No dense source resolution is allocated.
+
+## Milestone 12 addendum: coordinate-preserving orchestration
+
+Existing physical geometry remains authoritative. Voxel coordinates map to RAS
+metres by homogeneous affine A. Pull resampling evaluates source voxels at
+`inverse(A_source) @ T_reference_to_source @ A_reference @ v_reference`.
+The optional grid change uses identity T in physical space; it estimates no
+registration. Labels require nearest-neighbor interpolation, intensities linear
+by default. LPS/RAS conversion uses diag(-1,-1,1) on physical axes and is tested
+against independent voxel/world coordinates across NiBabel and SimpleITK.
+Physical voxel volume is abs(det(A[:3,:3])); volumes in mm³ multiply m³ by 10^9.
+
+N4 estimates a smooth multiplicative field using SimpleITK on positive support;
+geometry must round-trip unchanged. Iteration limits and convergence measurements
+are diagnostics, not proof of anatomical improvement. Soma CSF1/GM2/WM3 is mapped
+explicitly in each derivative LUT to BIDS CSF3/GM1/WM2 semantics. Ontology equality,
+subject identity and grid compatibility precede scoring; no silent label repair.
+Transform receipts preserve direction, units, grids and valid affine inversion;
+nonlinear objects are rejected rather than approximated as matrices. The existing
+area-weighted tissue boundary metrics are unchanged. See
+[M12 results](MILESTONE12_RESULTS.md) for reference evidence and uncertainty limits.

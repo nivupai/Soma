@@ -1,0 +1,213 @@
+{
+  "milestone": 12,
+  "version": "0.12.0",
+  "baseline_revision": "0148813",
+  "environment": {
+    "python": "3.12.2",
+    "system": "Darwin",
+    "libraries": {
+      "soma-neuro": "0.12.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "nibabel": "5.4.2",
+      "SimpleITK": "2.5.7",
+      "scikit-image": "0.26.0",
+      "pybids": "0.22.0",
+      "bidsschematools": "2.0.1",
+      "bids-validator-deno": "3.0.2"
+    }
+  },
+  "supplemental_complete_runs_verified": 5,
+  "source_tree_sha256": "f7e59ad4c4a4f6fa5319796e81df5b37b2d259c6febf014704bb5840c0ef1bad",
+  "source_hash_algorithm": "pipeline relative paths under src/soma plus file contents",
+  "anatomy_report_source_sha256": "a7fcc4545a84e77e3b52c51bde89da65105fb947f536b7c605475733ea4a1518",
+  "anatomy_hash_algorithm": "repository-relative src/soma paths plus file contents",
+  "baseline_test_files_unchanged": 45,
+  "historical_report_files_unchanged": 405,
+  "derivative_files_verified": 115,
+  "numerically_valid_runs": 23,
+  "stages_per_run": 11,
+  "figure_npz_verified": 143,
+  "human_figure_count": 116,
+  "datasets": {
+    "ibsr": {
+      "completed": 18,
+      "expected": 18,
+      "macro_Dice": {
+        "n_subjects": 18,
+        "mean": 0.5873451580127979,
+        "SD": 0.023805967143618666,
+        "CI95": [
+          0.5762934309718606,
+          0.5986023861086042
+        ],
+        "unit": "subject",
+        "scope": "selected small cohort, not broad population certification"
+      },
+      "max_absolute_baseline_difference": 0.0,
+      "qc_anatomical": "INDETERMINATE",
+      "tissue_mean_metrics": {
+        "CSF": {
+          "Dice": 0.11128100918687636,
+          "Jaccard": 0.05957554969096562,
+          "ASSD_mm": 26.78490488608292,
+          "HD95_mm": 43.372420923867075,
+          "signed_volume_error_mm3": 273709.1984704097
+        },
+        "gray matter": {
+          "Dice": 0.7849526576187649,
+          "Jaccard": 0.647584345637107,
+          "ASSD_mm": 1.0971491867462886,
+          "HD95_mm": 3.2961032856368586,
+          "signed_volume_error_mm3": -234534.88890883312
+        },
+        "white matter": {
+          "Dice": 0.8658018072327525,
+          "Jaccard": 0.7643723726638805,
+          "ASSD_mm": 0.8222874253742632,
+          "HD95_mm": 3.1948740838115657,
+          "signed_volume_error_mm3": 55360.38766901175
+        }
+      }
+    },
+    "mrbrains": {
+      "completed": 5,
+      "expected": 5,
+      "macro_Dice": {
+        "n_subjects": 5,
+        "mean": 0.4556826170896741,
+        "SD": 0.12312596538343627,
+        "CI95": [
+          0.36194593138221764,
+          0.5468503234724182
+        ],
+        "unit": "subject",
+        "scope": "selected small cohort, not broad population certification"
+      },
+      "max_absolute_baseline_difference": 0.0,
+      "qc_anatomical": "INDETERMINATE",
+      "tissue_mean_metrics": {
+        "CSF": {
+          "Dice": 0.47815929491408626,
+          "Jaccard": 0.31453372471134566,
+          "ASSD_mm": 5.61068099933866,
+          "HD95_mm": 21.202464905712223,
+          "signed_volume_error_mm3": 531876.5570344116
+        },
+        "gray matter": {
+          "Dice": 0.5263559244357128,
+          "Jaccard": 0.3583476945096888,
+          "ASSD_mm": 7.719519055487794,
+          "HD95_mm": 32.546513883637445,
+          "signed_volume_error_mm3": 599530.6076951015
+        },
+        "white matter": {
+          "Dice": 0.36253263191922336,
+          "Jaccard": 0.25923613146440294,
+          "ASSD_mm": 11.705540732899614,
+          "HD95_mm": 38.94061552841913,
+          "signed_volume_error_mm3": 168662.60026709316
+        }
+      }
+    }
+  },
+  "BIDS_validation": {
+    "ibsr": {
+      "status": "PASS",
+      "images": 36,
+      "validator": "3.0.2",
+      "schema": "1.11.2",
+      "warning_codes": [
+        "README_FILE_MISSING",
+        "SIDECAR_KEY_RECOMMENDED",
+        "TOO_FEW_AUTHORS"
+      ]
+    },
+    "mrbrains": {
+      "status": "PASS",
+      "images": 10,
+      "validator": "3.0.2",
+      "schema": "1.11.2",
+      "warning_codes": [
+        "README_FILE_MISSING",
+        "SIDECAR_KEY_RECOMMENDED",
+        "TOO_FEW_AUTHORS"
+      ]
+    }
+  },
+  "cache_and_recovery": {
+    "cross_run_stage_hits": 11,
+    "interrupted_resume_stage_hits": 4,
+    "corruption_detected": true,
+    "repair": "explicit quarantine and rebuild",
+    "completed_human_runs_verified_reused": 23,
+    "completed_resume_reads_stage_cache": false
+  },
+  "human_performance": {
+    "wall_s": 155.22533599997405,
+    "cpu_s": 150.603292,
+    "peak_RSS_MiB": 820.15625,
+    "dataset_timings": {
+      "ibsr": {
+        "initial_wall_s": 109.14734395907726,
+        "verified_resume_wall_s": 1.1850182079942897,
+        "first_stage_hits": 17,
+        "resume_verified_runs": 18
+      },
+      "mrbrains": {
+        "initial_wall_s": 43.22009470895864,
+        "verified_resume_wall_s": 0.39721529209055007,
+        "first_stage_hits": 5,
+        "resume_verified_runs": 5
+      }
+    }
+  },
+  "component_performance": {
+    "scope": "single synthetic 25 cubed image; no cache, no figures; not human timings",
+    "shape": [
+      25,
+      25,
+      25
+    ],
+    "times": {
+      "load_and_materialize_s": 0.0010649169562384486,
+      "n4_s": 0.010644208057783544,
+      "segmentation_s": 0.0008087499300017953,
+      "resampling_s": 0.0010718749836087227,
+      "surface_generation_s": 0.001490791910327971,
+      "intensity_qc_s": 0.00039525004103779793,
+      "topology_qc_s": 0.04884187504649162,
+      "nifti_serialization_s": 0.000796958920545876
+    },
+    "topology_status": null,
+    "peak_RSS_MiB": 179.703125,
+    "memory_scope": "whole process high-water including imported libraries",
+    "source_tree_sha256": "f7e59ad4c4a4f6fa5319796e81df5b37b2d259c6febf014704bb5840c0ef1bad",
+    "orchestration_sha256": "a7519cd3e43c420e77e1e3176df117c24985777e25d7b1b435039271e69c61ba"
+  },
+  "supplemental_performance": {
+    "synthetic_wall_s": 1.0059296250110492,
+    "cross_run_hit_wall_s": 0.7138470420613885,
+    "all_stages_wall_s": 0.8851352919591591,
+    "development_n4_wall_s": 2.9010989170055836
+  },
+  "supplemental_BIDS_status": "raw and all three derivative datasets PASS",
+  "tests": {
+    "baseline_passed": 636,
+    "new_passed": 55,
+    "offline": {
+      "passed": 673,
+      "failed": 1,
+      "deselected": 17
+    },
+    "including_integration": {
+      "passed": 690,
+      "failed": 1
+    },
+    "known_failure": "unchanged test_protocol_and_installed_version_match_source asserts 0.11.0; user explicitly required retain and report its failure"
+  },
+  "acceptance": "implemented with one user-directed historical version-test failure",
+  "anatomical_certification": false,
+  "fresh_external_holdout": false,
+  "privacy": "aggregate receipt only; individual manifests, source hashes and images ignored"
+}

@@ -1,0 +1,10 @@
+{
+  "baseline_revision": "0148813",
+  "frozen_at_utc": "2026-11-09T01:26:14.426028+00:00",
+  "pipeline_results_inspected": false,
+  "files_sha256": {
+    "docs/MRI_PIPELINE_ARCHITECTURE.md": "d9f6e327d115f475f0d8a935c571e11f6b72f8f7c5fa19de2bd8b95f59252412",
+    "configs/mri-pipeline.yaml": "062ca3cff0a6059485c5822f960f9a73007f47a1fd9d3d7be4bf51a2df6414ab",
+    "configs/pipeline-benchmark.yaml": "6cf3b4b317b58e6a99f522cc905ad1e81a0a616320de3727a62738558b566d61"
+  }
+}

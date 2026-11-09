@@ -1,0 +1,6 @@
+seed: 12042
+pipeline_config: configs/mri-pipeline.yaml
+ibsr_root: data/external/ibsr
+mrbrains_root: data/external/mrbrains
+prior_results_root: reports/milestone11-human-validated
+workers: 1

@@ -1,0 +1,19 @@
+schema_version: 1
+seed: 12042
+affine_policy: error
+n4:
+  enabled: false
+  iterations: [20, 10]
+  shrink_factor: 2
+mask:
+  policy: none
+  apply_to_segmentation: false
+resampling:
+  enabled: false
+backend:
+  name: multiotsu
+  mapping: {0: 0, 1: 1, 2: 2, 3: 3}
+surfaces:
+  labels: []
+  intersection_face_limit: 20000
+visualization: true

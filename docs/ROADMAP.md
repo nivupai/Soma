@@ -80,3 +80,15 @@ Human tissue and anatomical conductor/generalization criteria remain incomplete.
 The authorized version assertion update resolves the prior test-version conflict.
 Proposed M12 requires authorized multi-subject human references, verified SCI
 coordinate/interface chains and prospective cortical prior calibration. Not started.
+
+## Milestone 12 implemented with explicit acceptance limits
+
+Soma0.12.0 adds a serial BIDS-compatible structural MRI engine, legacy bridges,
+backend interface, optional preprocessing, transform receipts, private derivatives,
+QC and recoverable stage caching. The18 IBSR and5 MRBrainS training cases preserve
+prior metrics exactly. Supported exports pass official offline schema validation.
+The historical version assertion remains unchanged and fails by explicit user
+instruction;690 other cases pass. This supersedes the earlier prospective M12
+scope above while preserving that historical text. Independent conductor anatomy,
+fresh holdouts and clinical/anatomical certification remain unresolved. Milestone13
+has not begun. See [M12 results](MILESTONE12_RESULTS.md).

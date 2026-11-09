@@ -338,3 +338,121 @@ def benchmark_human_command(
         _done(benchmark_human(config, inventory, output, phase=phase), output)
     except (ValueError, OSError) as exc:
         _fail(exc)
+
+
+@app.command("bids-inspect")
+def bids_inspect_command(input: Annotated[Path, typer.Option()]) -> None:
+    import json
+
+    from soma.pipeline.ingestion import inspect_bids
+
+    try:
+        typer.echo(json.dumps(inspect_bids(input), indent=2))
+    except (ValueError, OSError) as exc:
+        _fail(exc)
+
+
+@app.command("pipeline")
+def pipeline_command(
+    input: Annotated[Path, typer.Option()],
+    participant_label: Annotated[str, typer.Option()],
+    config: Path = Path("configs/mri-pipeline.yaml"),
+    output: Path = Path("derivatives/soma"),
+    session: str | None = None,
+    selection: str = "error",
+    resume: bool = False,
+    dry_run: bool = False,
+    report_root: Path = Path("reports/mri-pipeline"),
+    repair_cache: bool = False,
+) -> None:
+    from soma.pipeline.engine import configuration, run_pipeline
+    from soma.pipeline.ingestion import select_bids
+
+    try:
+        result = run_pipeline(
+            select_bids(input, participant_label, session=session, selection=selection),
+            configuration(config),
+            output,
+            report_root=report_root,
+            resume=resume,
+            dry_run=dry_run,
+            repair_cache=repair_cache,
+        )
+        typer.echo(
+            str(
+                {
+                    "status": result["status"],
+                    "cache_hits": result.get("cache_hits"),
+                    "report": str(report_root),
+                }
+            )
+        )
+    except (ValueError, OSError, RuntimeError) as exc:
+        _fail(exc)
+
+
+@app.command("pipeline-legacy")
+def pipeline_legacy_command(
+    dataset: Annotated[str, typer.Option()],
+    data_root: Annotated[Path, typer.Option()],
+    config: Path = Path("configs/mri-pipeline.yaml"),
+    output: Path = Path("reports/legacy-pipeline"),
+    resume: bool = False,
+    dry_run: bool = False,
+) -> None:
+    from soma.pipeline.engine import configuration
+    from soma.pipeline.workflows import run_legacy
+
+    try:
+        result = run_legacy(
+            dataset, data_root, configuration(config), output, resume=resume, dry_run=dry_run
+        )
+        typer.echo(
+            str(
+                {
+                    "status": result["status"],
+                    "completed": result["completed"],
+                    "failures": result["failures"],
+                    "cache_hits": result["cache_hits"],
+                }
+            )
+        )
+    except (ValueError, OSError, RuntimeError) as exc:
+        _fail(exc)
+
+
+@app.command("qc")
+def pipeline_qc_command(
+    input: Annotated[Path, typer.Option()], output: Path = Path("reports/mri-qc")
+) -> None:
+    from soma.pipeline.workflows import qc_reports
+
+    try:
+        typer.echo(str(qc_reports(input, output)))
+    except (ValueError, OSError) as exc:
+        _fail(exc)
+
+
+@app.command("validate-derivatives")
+def validate_derivatives_command(input: Annotated[Path, typer.Option()]) -> None:
+    import json
+
+    from soma.pipeline.derivatives import validate_derivatives
+
+    try:
+        typer.echo(json.dumps(validate_derivatives(input), indent=2))
+    except (ValueError, OSError) as exc:
+        _fail(exc)
+
+
+@app.command("benchmark-pipeline")
+def benchmark_pipeline_command(
+    config: Path = Path("configs/pipeline-benchmark.yaml"),
+    output: Path = Path("reports/pipeline-benchmark"),
+) -> None:
+    from soma.pipeline.workflows import benchmark_pipeline
+
+    try:
+        _done(benchmark_pipeline(config, output), output)
+    except (ValueError, OSError, RuntimeError) as exc:
+        _fail(exc)

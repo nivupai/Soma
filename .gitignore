@@ -21,3 +21,6 @@ configs/tissue-subjects.local.json
 
 # External medical imaging datasets
 /data/external/
+
+# Local anatomical pipeline derivatives contain private MRI data.
+/derivatives/

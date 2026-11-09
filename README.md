@@ -3,7 +3,7 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.11.0 includes template and participant-matched EEG source modeling,
+v0.12.0 includes template and participant-matched EEG source modeling,
 structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
 experiments. Participant results remain conditional research computations:
 independent anatomical readiness is INDETERMINATE. See
@@ -357,3 +357,27 @@ soma mri benchmark-human-tissues --inventory reports/human-inventory-new/invento
 Run `python experiments/milestone11-human/run.py` for ordered reproduction with
 an explicit code/input freeze before external evaluation. No test-partition label
 contents, downloads, new models or conductor validation are involved.
+
+
+## Milestone 12 anatomical MRI pipelines
+
+Soma now provides PyBIDS discovery, an eleven-stage serial MRI DAG, optional N4,
+explicit masking/resampling, backend-neutral segmentation, geometry/ontology QC,
+private BIDS derivatives and content-derived stage recovery. Python examples are
+in [BIDS integration](docs/BIDS_INTEGRATION.md); contracts are in the
+[accepted architecture record](docs/MRI_PIPELINE_ARCHITECTURE.md).
+
+```bash
+soma mri bids-inspect --input /local/bids
+soma mri pipeline --input /local/bids --participant-label 01 --config configs/mri-pipeline.yaml --output derivatives/soma --dry-run
+soma mri pipeline-legacy --dataset ibsr --data-root data/external/ibsr --config configs/mri-pipeline.yaml --output reports/ibsr-pipeline
+soma mri validate-derivatives --input reports/ibsr-pipeline/derivatives/soma
+```
+
+All 18 IBSR and five permitted MRBrainS training cases reproduce the fixed prior
+metrics exactly; their derivatives pass the official offline validator. Anatomical
+and conductor readiness remain INDETERMINATE. Full tests: 690 pass, one historical
+0.11.0 version assertion fails as explicitly requested by the user. See
+[measured results and limits](docs/MILESTONE12_RESULTS.md) and
+[reproduction](experiments/milestone12/README.md). No raw MRI or identifiable
+outputs belong in Git. No remote push or Milestone 13 is included.

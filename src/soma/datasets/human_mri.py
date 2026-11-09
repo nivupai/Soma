@@ -84,7 +84,7 @@ def nifti_metadata(path: Path) -> dict[str, Any]:
     }
 
 
-def access_metadata(mrbrains_root: Path, ibsr_root: Path) -> dict[str, Any]:
+def access_metadata(mrbrains_root: Path, ibsr_root: Path | None) -> dict[str, Any]:
     readmes = [p for p in mrbrains_root.iterdir() if p.name.lower() == "readme.txt"]
     manifests = [p for p in mrbrains_root.iterdir() if p.name.lower() == "manifest.txt"]
     if len(readmes) != 1 or len(manifests) != 1:
@@ -128,8 +128,14 @@ def access_metadata(mrbrains_root: Path, ibsr_root: Path) -> dict[str, Any]:
             and checks[name]["actual_bytes"] != checks[name]["declared_bytes"]
         ):
             raise ValueError("Local archive size differs from distribution manifest: " + name)
-    ibsr_readmes = [p for p in ibsr_root.rglob("*") if p.name.lower() == "readme.txt"]
-    if not ibsr_readmes or not any("Rohlfing" in p.read_text() for p in ibsr_readmes):
+    ibsr_readmes = (
+        []
+        if ibsr_root is None
+        else [p for p in ibsr_root.rglob("*") if p.name.lower() == "readme.txt"]
+    )
+    if ibsr_root is not None and (
+        not ibsr_readmes or not any("Rohlfing" in p.read_text() for p in ibsr_readmes)
+    ):
         raise ValueError("Local IBSR release notice required")
     return {
         "MRBrainS": {

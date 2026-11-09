@@ -288,3 +288,17 @@ segmentation score gains optional explicit validity-domain support, including
 unobserved/void boundary handling, while retaining the unmasked API. Participant
 artifacts remain in ignored trees; only code and aggregate documentation are
 release artifacts. See HUMAN_TISSUE_REFERENCE_METHODS.md.
+
+## Milestone 12 addendum: local MRI engine
+
+`pipeline` adds orchestration around existing `imaging` Volume/NIfTI/resampling,
+`geometry` Frame/Transform, `benchmarks` tissue/topology and core provenance/cache
+interfaces. It does not replace their numerical definitions. InputRecord binds
+source identity and origin (BIDS, legacy or standalone); StageSpec validates a
+serial DAG. Backends expose segmentation plus tool/model/ontology receipts.
+Derivatives contain standardized supported outputs; custom reports remain separate.
+Cache NPZ encoding is pickle-free and aliases unchanged upstream volumes. Whole
+source/dependency hashes conservatively invalidate stages. See the sealed
+[M12 decision record](MRI_PIPELINE_ARCHITECTURE.md),
+[derivative specification](DERIVATIVE_SPECIFICATION.md) and
+[reproducibility contract](PIPELINE_REPRODUCIBILITY.md).

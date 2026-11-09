@@ -845,3 +845,23 @@ input preflight; RSS includes process libraries. See the
 [results addendum](MILESTONE11_RESULTS.md#human-mri-reference-integration-addendum),
 [methods](HUMAN_TISSUE_REFERENCE_METHODS.md), and
 [aggregate receipt](../experiments/milestone11-human/verification.json).
+
+## Milestone 12 verification addendum (v0.12.0)
+
+Baseline0148813: 636 tests passed. Final offline: 673 passed, 1 failed,
+17 deselected (48.17 s); including cached integrations: 690 passed, 1 failed
+(73.52 s). All 55 added cases pass. The unchanged historical installed-version
+assertion requires0.11.0; the user explicitly directed retention/reporting of its
+failure at0.12.0. No skip, xfail or baseline test modification was introduced.
+This is an explicit acceptance gap, not an all-green claim.
+
+Ruff lint/format, strict mypy159 modules and pip check pass. PyBIDS indexing,
+official offline BIDS1.11.2 validation (bundle3.0.2), synthetic optional stages,
+23 real human pipelines and cache/interruption/corruption recovery were executed.
+All original45 test files and405 historical report files are unchanged. Audit
+checks input/cache/output hashes, exact baseline metric equality, finite pickle-free
+figure arrays and source identity. Medical files and individual report metadata
+remain ignored. Aggregate receipt:
+[verification.json](../experiments/milestone12/verification.json).
+See [results](MILESTONE12_RESULTS.md) for warnings, performance, visual inspection,
+poor segmentation findings, data restrictions and unsupported conductor claims.

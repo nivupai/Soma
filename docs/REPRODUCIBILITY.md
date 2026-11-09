@@ -355,3 +355,16 @@ policy and aggregate verification; individual data hashes/paths, per-subject met
 MRI pictures and prediction files remain private local report artifacts. Frozen
 models are unchanged between development and external scoring. No network access,
 weight download, test-label payload read, remote push or Milestone 12 is required.
+
+## Milestone 12 addendum: MRI execution and immutable derivatives
+
+Use configs/mri-pipeline.yaml and configs/pipeline-benchmark.yaml with the sealed
+ADR/config hashes in configs/milestone12-freeze.json. Private manifests bind input
+content/geometry, source tree, software, transforms, backend and parameters.
+Explicit resume verifies final output hashes; compatible new-output runs reuse
+stages. Corrupt committed caches require explicit quarantine/rebuild. Never write
+into original MRI roots or publish individual output receipts. See
+[recovery semantics](PIPELINE_REPRODUCIBILITY.md) and the
+[experiment commands](../experiments/milestone12/README.md). The full test command
+retains the one user-directed historical version assertion failure; all other
+cases pass. M11 outputs and original tests are byte-identical.
