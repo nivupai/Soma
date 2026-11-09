@@ -1,0 +1,7 @@
+raw: data/external/ds000114
+preprocessed: data/external/ds000114/derivatives/fmriprep
+subject: '01'
+sessions: [test, retest]
+task: fingerfootlips
+space: T1w
+require_numerical_landmarks: true

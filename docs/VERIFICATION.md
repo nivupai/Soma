@@ -885,3 +885,20 @@ reports, exact refit effects and completed-output reuse. Full numerical results,
 warnings, timings, actual metadata availability, reviewed figures and unresolved
 human-preprocessing/multimodal limitations are in [M13 results](MILESTONE13_RESULTS.md)
 and [aggregate receipt](../experiments/milestone13/verification.json).
+
+## Milestone14 verification addendum (v0.14.0)
+
+Baseline0312635:762 passed,80 warnings,79.28s. Final full suite:815 passed,
+87 warnings,78.11s; offline:798 passed,17 deselected,85 warnings,54.83s.
+All53 added numerical/adversarial cases pass. All50 baseline test files and709
+historical report files remain unchanged. Ruff lint/format, strict mypy180 source
+modules and dependency checks pass. The full suite retains prior MRI/EEG/fMRI
+integration and official BIDS smoke checks.
+
+Executed final100-seed/scenario calibration, synthetic audited import/10-subject
+reliability, real raw-input inspection and explicit unavailable pilot/cohort/
+sensitivity commands. Verified annex identities, source hashes,52 output hashes,
+26 finite pickle-free figure arrays and five reviewed PNGs. The synthetic label-
+array dtype correction changes no estimates. Actual metrics, uncertainty, data
+restrictions and incomplete real acceptance are in [M14 results](MILESTONE14_RESULTS.md)
+and the [aggregate receipt](../experiments/milestone14/verification.json).

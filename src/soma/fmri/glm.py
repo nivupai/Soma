@@ -95,7 +95,7 @@ def fit(run: FunctionalRun, config: ModelConfig, *, allow_unvalidated_demo: bool
             "noise_model": config.noise_model,
             "estimator": "OLS"
             if config.noise_model == "ols"
-            else "feasible AR(1), voxel AR bins=100",
+            else f"feasible {config.noise_model.upper()}, voxel AR bins/clusters=100",
             "native_residual_definition": "original modeled Y - unwhitened X @ beta",
             "mean_native_residual_lag1": float(np.mean(native_lags)),
             "residual_variance_mean": float(np.mean(native_variances)),

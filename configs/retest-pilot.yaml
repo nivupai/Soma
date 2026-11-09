@@ -1,0 +1,11 @@
+audit_config: configs/fmri-audit.yaml
+subjects: ['01']
+primary: Finger
+contrasts:
+  Finger: {Finger: 1.0}
+  Foot: {Foot: 1.0}
+  Lips: {Lips: 1.0}
+  FingerOthers: {Finger: 1.0, Foot: -0.5, Lips: -0.5}
+confounds: minimal
+noise_model: ar1
+smoothing_fwhm: 6.0

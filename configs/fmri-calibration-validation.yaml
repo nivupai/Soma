@@ -1,0 +1,15 @@
+seed: 15142
+replicates: 100
+models:
+- ols
+- ar1
+- ar2
+scenarios:
+- gaussian-null
+- ar1-null
+- ar1-effect
+- ar2-null
+- hrf-delay
+- omitted-nuisance
+- smoothing
+q: 0.05

@@ -44,3 +44,14 @@ For unambiguous non-default acquisitions use `filters={'run':2}` in Python or th
 documented explicit first-sorted policy in CLI. Dry runs list contracts/dependencies
 without cache/output writes and do not certify input intensities. Dataset-wide
 inspection may index metadata across subjects; execution uses the selected image.
+
+## Milestone14 addendum: legacy functional sources and external derivatives
+
+The ds000114v1.0.2 source advertises BIDS1.0.0rc2. New discovery deliberately indexes
+it without claiming current BIDS validation. External fMRIPrep outputs require
+GeneratedBy/version, resolvable source dataset relationships, explicit space/mask,
+confound metadata, T1 sources, transforms and reviewed QC. Metadata consistency and
+numerical geometry are separately labeled; filename patterns do not establish
+preprocessing or anatomy. No new statistical suffix or original-BIDS staging claim
+is introduced. Baseline official schema tests remain operational. See
+[preprocessing audit](FMIRI_PREPROCESSING_AUDIT.md).

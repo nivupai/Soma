@@ -373,3 +373,22 @@ Sparse nearest-voxel source projection publishes contribution counts and is not
 the inverse of sampling. Fixed effects are within-subject; two-session map metrics
 are not population ICC or decomposition of physiological and registration error.
 See [numerical validation](FMIRI_NUMERICAL_VALIDATION.md).
+
+## Milestone14 addendum: covariance and repeatability
+
+For known temporal covariance shape C=LL.T, the small reference whitens X,Y by
+solve(L,.), solves QR, and estimates residual scale SSE/(n-p). Contrast variance
+is scale*norm(solve(R.T,c))². Independent tests use (X.T C^-1 X)^-1 X.T C^-1 Y,
+stationary Toeplitz AR1 covariance, AR2 recurrences and rho0 limiting OLS. This is
+restricted oracle arithmetic; production voxel fits remain Nilearn OLS/feasible
+AR1/AR2.100 seeded realizations per scenario quantify coverage and tail rates with
+Wilson intervals; voxel and family error are distinct. Excess empirical BH
+rejections remain a limitation, not a numerical-test failure hidden by tuning.
+
+ICC(A,1)=(MS_subject-MS_error)/(MS_subject+(k-1)MS_error+
+k*(MS_session-MS_error)/n), with k=2, independent subjects and explicit two-way
+random absolute-agreement assumptions. Bootstrap/delete-one resample subjects;
+voxels cannot be treated as participants. Negative ICC is retained. ROI mean
+standard error requires spatial covariance and is unavailable here. Nonlinear
+transforms retain ITK reference grids/direction; controlled point composition is
+not proof of anatomical correctness. See [methods](FMIRI_RETEST_METHODS.md).

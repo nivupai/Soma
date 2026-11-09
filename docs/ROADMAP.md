@@ -104,3 +104,15 @@ miscalibration, missing preprocessing/motion evidence and anatomical certificati
 remain explicit limitations. Proposed M14 would obtain/audit appropriate derivatives
 and transform chains, then prospectively assess multi-session inference/calibration.
 Milestone14 has not begun. See [M13 results](MILESTONE13_RESULTS.md).
+
+## Milestone14 implemented; human acceptance remains incomplete
+
+Soma0.14.0 implements preprocessing/transform evidence audits, conservative confound
+policies, seeded OLS/AR1/AR2 calibration, independent GLS oracles and paired/cohort
+reliability.815 cases pass, including762 unchanged prior cases. The selected
+participant's two raw motor runs/T1w references are inspected, but adequate
+fMRIPrep assets are unavailable. Real pilot, cohort ICC, registered motor ROI and
+cross-cohort EEG/fMRI evidence remain blocked. Feasible temporal models retain
+excess null family rejections. Proposed M15 should obtain/audit proper external
+derivatives and execute the frozen pilot before expanding or making stronger
+inference claims. It has not begun. See [results](MILESTONE14_RESULTS.md).

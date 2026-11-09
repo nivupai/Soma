@@ -381,3 +381,15 @@ changed content/config/source or corrupted products fail closed. Default CI rema
 offline; optional human data are never fetched in pytest. See
 [commands/Python use](../experiments/milestone13/README.md) and
 [results](MILESTONE13_RESULTS.md). No original test/report was rewritten.
+
+## Milestone14 addendum: sealed calibration and staged human access
+
+configs/milestone14-freeze.json seals the original protocol; the separate validation
+amendment seals fresh seeds15142–15241 without changing models/thresholds. Exactly
+one ds000114 raw pilot was fetched with annex/SHA verification; no cohort expansion
+or external preprocessing ran. Audit identity includes source files, inherited
+metadata, transforms/reference grids, confounds, code and reviewed evidence.
+Stale pilot outputs or inputs cannot authorize cohort reuse. Clinical inputs and
+individual outputs remain ignored. See [commands](../experiments/milestone14/README.md)
+and [measured results](MILESTONE14_RESULTS.md). Human-data gaps are not filled by
+raw fitting or by simulated subjects. Historical results remain byte-identical.

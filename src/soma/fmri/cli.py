@@ -155,3 +155,120 @@ def comparing(
         )
     except (ValueError, OSError, KeyError) as exc:
         failure(exc)
+
+
+@app.command("audit-preproc")
+def audit_preproc(
+    config: Annotated[Path, typer.Option()],
+    output: Annotated[Path, typer.Option()],
+    dry_run: bool = False,
+) -> None:
+    from soma.fmri.audit_workflows import audit_workflow
+
+    try:
+        result = audit_workflow(config, output, dry_run=dry_run)
+        emit(
+            {
+                "status": result["status"],
+                "output": str(output),
+                "eligible_sessions": result.get("eligible_sessions"),
+            }
+        )
+        if result["status"] not in {"complete", "dry-run"}:
+            raise typer.Exit(1)
+    except (ValueError, OSError, KeyError) as exc:
+        failure(exc)
+
+
+@app.command("calibrate")
+def calibrate(
+    config: Annotated[Path, typer.Option()],
+    output: Annotated[Path, typer.Option()],
+    dry_run: bool = False,
+) -> None:
+    from soma.fmri.audit_workflows import frozen_protocol
+    from soma.fmri.calibration import calibration_experiment
+
+    try:
+        frozen_protocol()
+        settings = yaml.safe_load(config.read_text())
+        if dry_run:
+            emit({"status": "dry-run", "settings": settings})
+            return
+        result = calibration_experiment(settings, output)
+        emit(
+            {"status": result["status"], "output": str(output), "failures": len(result["failures"])}
+        )
+        if result["status"] != "complete":
+            raise typer.Exit(1)
+    except (ValueError, OSError, KeyError) as exc:
+        failure(exc)
+
+
+@app.command("pilot-retest")
+def pilot(
+    config: Annotated[Path, typer.Option()],
+    output: Annotated[Path, typer.Option()],
+    dry_run: bool = False,
+) -> None:
+    from soma.fmri.audit_workflows import pilot_retest
+
+    try:
+        result = pilot_retest(config, output, dry_run=dry_run)
+        emit(
+            {
+                "status": result["status"],
+                "output": str(output),
+                "subjects_completed": result.get("subjects_completed"),
+            }
+        )
+        if result["status"] not in {"complete", "dry-run"}:
+            raise typer.Exit(1)
+    except (ValueError, OSError, KeyError) as exc:
+        failure(exc)
+
+
+@app.command("cohort-retest")
+def cohort(
+    config: Annotated[Path, typer.Option()],
+    output: Annotated[Path, typer.Option()],
+    dry_run: bool = False,
+) -> None:
+    from soma.fmri.audit_workflows import cohort_retest
+
+    try:
+        result = cohort_retest(config, output, dry_run=dry_run)
+        emit(
+            {
+                "status": result["status"],
+                "output": str(output),
+                "subjects_completed": result.get("subjects_completed"),
+            }
+        )
+        if result["status"] not in {"complete", "dry-run"}:
+            raise typer.Exit(1)
+    except (ValueError, OSError, KeyError) as exc:
+        failure(exc)
+
+
+@app.command("sensitivity")
+def audit_sensitivity(
+    config: Annotated[Path, typer.Option()],
+    output: Annotated[Path, typer.Option()],
+    dry_run: bool = False,
+) -> None:
+    from soma.fmri.audit_workflows import sensitivity_workflow
+
+    try:
+        result = sensitivity_workflow(config, output, dry_run=dry_run)
+        emit(
+            {
+                "status": result["status"],
+                "output": str(output),
+                "settings_fitted": result.get("settings_fitted"),
+            }
+        )
+        if result["status"] not in {"complete", "dry-run"}:
+            raise typer.Exit(1)
+    except (ValueError, OSError, KeyError) as exc:
+        failure(exc)

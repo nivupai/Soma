@@ -316,3 +316,16 @@ AnatomyReport supplies stage timing/provenance/output hashes; completed-report
 reuse binds content, parameters, source and software. Clinical/anatomical and real
 matched-multimodal capabilities remain distinct from software numerical validation.
 See [methods](FMIRI_GLM_METHODS.md) and [spatial modeling](FMIRI_SPATIAL_MODELING.md).
+
+## Milestone14 addendum: audited imports and reliability
+
+PreprocessingBundle binds raw/derivative identities and explicit external evidence;
+preprocessing_audit checks metadata/geometry/source links/confounds/QC/transforms.
+transform_audit reads ITK representations through SimpleITK and existing RAS/LPS
+geometry; it does not replace nonlinear fields with affine matrices. Confounds
+configure existing diagnosed designs without volume deletion. Calibration extends
+Nilearn with supported AR2 and small independent GLS references. Reliability
+separates paired maps, atlas ROI means and subject-resampled ICC(A,1). Cohort gates
+rehash pilot products and preprocessing inputs. Existing APIs/tests are preserved.
+See [audit](FMIRI_PREPROCESSING_AUDIT.md), [calibration](FMIRI_NOISE_CALIBRATION.md)
+and [results](MILESTONE14_RESULTS.md); anatomical certification is separate.

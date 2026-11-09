@@ -1,0 +1,3 @@
+source: configs/retest-pilot.yaml
+one_factor: [expanded-motion, compcor, fd-spikes, ols, ar2, hrf-derivative, no-smoothing]
+select_best: false

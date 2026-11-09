@@ -1,0 +1,1153 @@
+{
+  "milestone": 14,
+  "version": "0.14.0",
+  "baseline": "0312635",
+  "source_tree_sha256": "0f94b960c16cfacc071cf052fe6e60d202d5cb6b240bf0280ed5d919233cf3ae",
+  "AnatomyReport_source_tree_sha256": "e943d3862fdb0b323c2a70008bd6feee2142666cff0afa632ac21cf5d1a6ebdd",
+  "hash_algorithms": "pipeline: src-relative; AnatomyReport: repository-relative paths",
+  "libraries": {
+    "nilearn": "0.14.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "nibabel": "5.4.2",
+    "SimpleITK": "2.5.7",
+    "pybids": "0.22.0"
+  },
+  "baseline_test_files_unchanged": 50,
+  "historical_report_files_unchanged": 709,
+  "verified_output_hashes": 52,
+  "finite_figure_arrays": 26,
+  "inspected_PNGs": 5,
+  "dataset_coverage": {
+    "dataset": "ds000114v1.0.2",
+    "license": "CC0",
+    "raw_subjects_fetched": 1,
+    "raw_motor_runs": 2,
+    "raw_T1s": 2,
+    "raw_bytes": 65429728,
+    "raw_shapes": [
+      [
+        64,
+        64,
+        30,
+        184
+      ],
+      [
+        64,
+        64,
+        30,
+        184
+      ]
+    ],
+    "TR_s": 2.5,
+    "adequate_preprocessed_sessions": 0,
+    "human_models_fitted": 0,
+    "human_retest_completed": false,
+    "cohort_subjects_attempted": 0
+  },
+  "SPM_development": "prior raw educational case re-inspected; no new confirmatory fit",
+  "preprocessing": "fMRIPrep and Docker runtime unavailable; no external preprocessing",
+  "calibration": {
+    "scenarios": 7,
+    "realizations_per_scenario": 100,
+    "seeds": [
+      15142,
+      15241
+    ],
+    "pairing": "paired scenarios/estimators;100 independent seeds per scenario",
+    "image_fits": 2100,
+    "small_known_covariance_references": 400,
+    "failures": 0,
+    "summary": [
+      {
+        "scenario": "gaussian-null",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": 0.02023723285957524,
+        "empirical_beta_SD": 0.14564788139751794,
+        "mean_estimated_SE": 0.16316141565901046,
+        "SE_to_empirical_SD": 1.1202457192885127,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.98,
+          "Wilson95": [
+            0.929988209271456,
+            0.9944980324498376
+          ],
+          "successes": 98,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.02,
+          "Wilson95": [
+            0.00550196755016235,
+            0.07001179072854388
+          ],
+          "successes": 2,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.01,
+          "Wilson95": [
+            0.0017674320641406505,
+            0.054486196178705315
+          ],
+          "successes": 1,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.05291545189504372,
+        "BH_false_discovery_fraction": 0.01,
+        "whitened_lag1": -0.037875731599454315,
+        "native_lag1": -0.037875731599454315,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "gaussian-null",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": 0.02012792703344585,
+        "empirical_beta_SD": 0.1453726309416921,
+        "mean_estimated_SE": 0.15815417368494664,
+        "SE_to_empirical_SD": 1.087922621063253,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.04,
+          "Wilson95": [
+            0.01566330399154762,
+            0.0983707143588792
+          ],
+          "successes": 4,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.15,
+          "Wilson95": [
+            0.0930598528365663,
+            0.23283559590832364
+          ],
+          "successes": 15,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.062128279883381904,
+        "BH_false_discovery_fraction": 0.15,
+        "whitened_lag1": -0.003427075216634369,
+        "native_lag1": -0.03801400140330625,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "gaussian-null",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": 0.02012624843551972,
+        "empirical_beta_SD": 0.14420499229996764,
+        "mean_estimated_SE": 0.15463129763988054,
+        "SE_to_empirical_SD": 1.0723019721690679,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.04,
+          "Wilson95": [
+            0.01566330399154762,
+            0.0983707143588792
+          ],
+          "successes": 4,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.23,
+          "Wilson95": [
+            0.15843265880303448,
+            0.3215438302287378
+          ],
+          "successes": 23,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07102040816326531,
+        "BH_false_discovery_fraction": 0.23,
+        "whitened_lag1": -0.0018836775983951165,
+        "native_lag1": -0.03810837415506394,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "gaussian-null",
+        "model": "known-covariance-GLS-reference",
+        "n_realizations": 100,
+        "beta_bias": 0.02023723285958445,
+        "empirical_beta_SD": 0.14564788139751314,
+        "mean_estimated_SE": 0.16316141565901038,
+        "SE_to_empirical_SD": 1.1202457192885489,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.98,
+          "Wilson95": [
+            0.929988209271456,
+            0.9944980324498376
+          ],
+          "successes": 98,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.02,
+          "Wilson95": [
+            0.00550196755016235,
+            0.07001179072854388
+          ],
+          "successes": 2,
+          "n": 100
+        }
+      },
+      {
+        "scenario": "ar1-null",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": 0.03144016379219899,
+        "empirical_beta_SD": 0.25118191075243845,
+        "mean_estimated_SE": 0.19484406025227344,
+        "SE_to_empirical_SD": 0.7757089659386704,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.85,
+          "Wilson95": [
+            0.7671644040916763,
+            0.9069401471634337
+          ],
+          "successes": 85,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.15,
+          "Wilson95": [
+            0.0930598528365663,
+            0.23283559590832364
+          ],
+          "successes": 15,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.18848396501457723,
+        "BH_false_discovery_fraction": 1.0,
+        "whitened_lag1": 0.5328850500296238,
+        "native_lag1": 0.5328850500296238,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar1-null",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": 0.02718133043771893,
+        "empirical_beta_SD": 0.23225720323905827,
+        "mean_estimated_SE": 0.24938436986715115,
+        "SE_to_empirical_SD": 1.0737422408831134,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.04,
+          "Wilson95": [
+            0.01566330399154762,
+            0.0983707143588792
+          ],
+          "successes": 4,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.23,
+          "Wilson95": [
+            0.15843265880303448,
+            0.3215438302287378
+          ],
+          "successes": 23,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07020408163265306,
+        "BH_false_discovery_fraction": 0.23,
+        "whitened_lag1": 0.028657444042128447,
+        "native_lag1": 0.5416437809176994,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar1-null",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": 0.02793619860345112,
+        "empirical_beta_SD": 0.2250332273637079,
+        "mean_estimated_SE": 0.2517439121637272,
+        "SE_to_empirical_SD": 1.1186966258847117,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.04,
+          "Wilson95": [
+            0.01566330399154762,
+            0.0983707143588792
+          ],
+          "successes": 4,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.24,
+          "Wilson95": [
+            0.16691325556948772,
+            0.33232336349814473
+          ],
+          "successes": 24,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07096209912536444,
+        "BH_false_discovery_fraction": 0.24,
+        "whitened_lag1": 0.006753217199262881,
+        "native_lag1": 0.5414505160799633,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar1-null",
+        "model": "known-covariance-GLS-reference",
+        "n_realizations": 100,
+        "beta_bias": 0.030049109354114832,
+        "empirical_beta_SD": 0.23194204712306038,
+        "mean_estimated_SE": 0.2632508808696792,
+        "SE_to_empirical_SD": 1.1349855885768199,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.98,
+          "Wilson95": [
+            0.929988209271456,
+            0.9944980324498376
+          ],
+          "successes": 98,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.02,
+          "Wilson95": [
+            0.00550196755016235,
+            0.07001179072854388
+          ],
+          "successes": 2,
+          "n": 100
+        }
+      },
+      {
+        "scenario": "ar1-effect",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": 0.02743708326295826,
+        "empirical_beta_SD": 0.2511741793257221,
+        "mean_estimated_SE": 0.19483190143306264,
+        "SE_to_empirical_SD": 0.7756844352237539,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.85,
+          "Wilson95": [
+            0.7671644040916763,
+            0.9069401471634337
+          ],
+          "successes": 85,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.18823529411764706,
+        "BH_false_discovery_fraction": 0.3227753326172234,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.5328885063628359,
+        "native_lag1": 0.5328885063628359,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar1-effect",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": 0.02290147188421207,
+        "empirical_beta_SD": 0.2322462055050141,
+        "mean_estimated_SE": 0.24931488641707272,
+        "SE_to_empirical_SD": 1.0734939064986795,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07051903114186851,
+        "BH_false_discovery_fraction": 0.07815178875492687,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.028668345846407327,
+        "native_lag1": 0.5416468657796529,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar1-effect",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": 0.023625381854557127,
+        "empirical_beta_SD": 0.2250677809346668,
+        "mean_estimated_SE": 0.25189685449822513,
+        "SE_to_empirical_SD": 1.119204416785654,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07107266435986159,
+        "BH_false_discovery_fraction": 0.0827249134233077,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.006752829862041498,
+        "native_lag1": 0.5414532714483433,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar1-effect",
+        "model": "known-covariance-GLS-reference",
+        "n_realizations": 100,
+        "beta_bias": 0.025632207902227536,
+        "empirical_beta_SD": 0.23194814800280225,
+        "mean_estimated_SE": 0.2632300039505844,
+        "SE_to_empirical_SD": 1.1348657284705037,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.98,
+          "Wilson95": [
+            0.929988209271456,
+            0.9944980324498376
+          ],
+          "successes": 98,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        }
+      },
+      {
+        "scenario": "ar2-null",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": 0.029885097667013746,
+        "empirical_beta_SD": 0.23732592459875748,
+        "mean_estimated_SE": 0.19908603065538802,
+        "SE_to_empirical_SD": 0.8388718214918116,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.89,
+          "Wilson95": [
+            0.8136870349691969,
+            0.9374580364293543
+          ],
+          "successes": 89,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.11,
+          "Wilson95": [
+            0.06254196357064568,
+            0.18631296503080313
+          ],
+          "successes": 11,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.97,
+          "Wilson95": [
+            0.9154806357094724,
+            0.9897454759759611
+          ],
+          "successes": 97,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.15871720116618077,
+        "BH_false_discovery_fraction": 0.97,
+        "whitened_lag1": 0.5339837514947403,
+        "native_lag1": 0.5339837514947403,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar2-null",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": 0.02105803652161323,
+        "empirical_beta_SD": 0.2107680964581786,
+        "mean_estimated_SE": 0.2523118148806584,
+        "SE_to_empirical_SD": 1.197106294171628,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.98,
+          "Wilson95": [
+            0.929988209271456,
+            0.9944980324498376
+          ],
+          "successes": 98,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.02,
+          "Wilson95": [
+            0.00550196755016235,
+            0.07001179072854388
+          ],
+          "successes": 2,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.14,
+          "Wilson95": [
+            0.08526343659939134,
+            0.22137188210963837
+          ],
+          "successes": 14,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.04746355685131195,
+        "BH_false_discovery_fraction": 0.14,
+        "whitened_lag1": -0.06947151825163765,
+        "native_lag1": 0.54290564327223,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar2-null",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": 0.0254225857579224,
+        "empirical_beta_SD": 0.20236223811515153,
+        "mean_estimated_SE": 0.22988123689931902,
+        "SE_to_empirical_SD": 1.1359888042378152,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.98,
+          "Wilson95": [
+            0.929988209271456,
+            0.9944980324498376
+          ],
+          "successes": 98,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.02,
+          "Wilson95": [
+            0.00550196755016235,
+            0.07001179072854388
+          ],
+          "successes": 2,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 0.14,
+          "Wilson95": [
+            0.08526343659939134,
+            0.22137188210963837
+          ],
+          "successes": 14,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.06402332361516035,
+        "BH_false_discovery_fraction": 0.14,
+        "whitened_lag1": 0.00916821612574647,
+        "native_lag1": 0.5460344145228242,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "ar2-null",
+        "model": "known-covariance-GLS-reference",
+        "n_realizations": 100,
+        "beta_bias": 0.028665782542699268,
+        "empirical_beta_SD": 0.20949210946698416,
+        "mean_estimated_SE": 0.23552124517233541,
+        "SE_to_empirical_SD": 1.1242487641733994,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.99,
+          "Wilson95": [
+            0.9455138038212946,
+            0.9982325679358593
+          ],
+          "successes": 99,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 0.01,
+          "Wilson95": [
+            0.0017674320641406505,
+            0.054486196178705315
+          ],
+          "successes": 1,
+          "n": 100
+        }
+      },
+      {
+        "scenario": "hrf-delay",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": -0.3892552405461981,
+        "empirical_beta_SD": 0.2528812913331886,
+        "mean_estimated_SE": 0.26520317960767453,
+        "SE_to_empirical_SD": 1.0487259781438358,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.75,
+          "Wilson95": [
+            0.656955364519384,
+            0.8245478863771232
+          ],
+          "successes": 75,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.18823529411764706,
+        "BH_false_discovery_fraction": 0.3227753326172234,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.5457454449932804,
+        "native_lag1": 0.5457454449932804,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "hrf-delay",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": -0.6650232652238535,
+        "empirical_beta_SD": 0.23098951066618528,
+        "mean_estimated_SE": 0.3349131534351632,
+        "SE_to_empirical_SD": 1.4499063289465264,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.49,
+          "Wilson95": [
+            0.3942199893044113,
+            0.5865198806597283
+          ],
+          "successes": 49,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07051903114186851,
+        "BH_false_discovery_fraction": 0.07815178875492687,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.055159584947346935,
+        "native_lag1": 0.5555718374874,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "hrf-delay",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": -0.5490741874270639,
+        "empirical_beta_SD": 0.251384874245477,
+        "mean_estimated_SE": 0.37554366591333194,
+        "SE_to_empirical_SD": 1.4938992134690412,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.8,
+          "Wilson95": [
+            0.7111708344068411,
+            0.8666330666689676
+          ],
+          "successes": 80,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07069204152249135,
+        "BH_false_discovery_fraction": 0.08269513040052394,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.0016995672176685456,
+        "native_lag1": 0.5545639878002914,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "omitted-nuisance",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": 0.16659513314774763,
+        "empirical_beta_SD": 0.2500755723670752,
+        "mean_estimated_SE": 0.25532472165276765,
+        "SE_to_empirical_SD": 1.02099025201065,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.91,
+          "Wilson95": [
+            0.837737871472837,
+            0.9519274599974348
+          ],
+          "successes": 91,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.11294117647058823,
+        "BH_false_discovery_fraction": 0.1548390452816623,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.7628790136369438,
+        "native_lag1": 0.7628790136369438,
+        "condition_number": 3.086322279050782
+      },
+      {
+        "scenario": "omitted-nuisance",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": 0.1724419377488107,
+        "empirical_beta_SD": 0.22668534928557796,
+        "mean_estimated_SE": 0.29586661656109586,
+        "SE_to_empirical_SD": 1.3051863188051178,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.97,
+          "Wilson95": [
+            0.9154806357094724,
+            0.9897454759759611
+          ],
+          "successes": 97,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.05027681660899654,
+        "BH_false_discovery_fraction": 0.039356119367939243,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": -0.040191077064363465,
+        "native_lag1": 0.7707772674185358,
+        "condition_number": 3.086322279050782
+      },
+      {
+        "scenario": "omitted-nuisance",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": 0.17358599058808316,
+        "empirical_beta_SD": 0.22680497887149495,
+        "mean_estimated_SE": 0.27848684740482627,
+        "SE_to_empirical_SD": 1.2278691975391496,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.97,
+          "Wilson95": [
+            0.9154806357094724,
+            0.9897454759759611
+          ],
+          "successes": 97,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07027681660899654,
+        "BH_false_discovery_fraction": 0.0702755687018883,
+        "BH_true_positive_fraction": 1.0,
+        "whitened_lag1": 0.005817643791562778,
+        "native_lag1": 0.7734694730212514,
+        "condition_number": 3.086322279050782
+      },
+      {
+        "scenario": "smoothing",
+        "model": "ols",
+        "n_realizations": 100,
+        "beta_bias": 0.019398304643047544,
+        "empirical_beta_SD": 0.18141157619274845,
+        "mean_estimated_SE": 0.13799543999496106,
+        "SE_to_empirical_SD": 0.7606760433432425,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.83,
+          "Wilson95": [
+            0.7445199523239887,
+            0.8910643388594006
+          ],
+          "successes": 83,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.20142857142857143,
+        "BH_false_discovery_fraction": 0.05563658059986933,
+        "BH_true_positive_fraction": 0.28268707482993194,
+        "whitened_lag1": 0.5330127604276668,
+        "native_lag1": 0.5330127604276668,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "smoothing",
+        "model": "ar1",
+        "n_realizations": 100,
+        "beta_bias": 0.016585164395099473,
+        "empirical_beta_SD": 0.16758288143160308,
+        "mean_estimated_SE": 0.17664057085758267,
+        "SE_to_empirical_SD": 1.054049013530516,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.96,
+          "Wilson95": [
+            0.9016292856411208,
+            0.9843366960084523
+          ],
+          "successes": 96,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07387755102040815,
+        "BH_false_discovery_fraction": 0.013346147679948102,
+        "BH_true_positive_fraction": 0.20690476190476192,
+        "whitened_lag1": 0.028596703506051157,
+        "native_lag1": 0.541758755947818,
+        "condition_number": 3.5382007032687937
+      },
+      {
+        "scenario": "smoothing",
+        "model": "ar2",
+        "n_realizations": 100,
+        "beta_bias": 0.017270802746485986,
+        "empirical_beta_SD": 0.16333071131531912,
+        "mean_estimated_SE": 0.1783636883294447,
+        "SE_to_empirical_SD": 1.09204011231607,
+        "statistical_unit": "independent seeded realization, not voxel",
+        "CI95_covers": {
+          "estimate": 0.97,
+          "Wilson95": [
+            0.9154806357094724,
+            0.9897454759759611
+          ],
+          "successes": 97,
+          "n": 100
+        },
+        "voxel_p05": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "BH_any_rejection": {
+          "estimate": 1.0,
+          "Wilson95": [
+            0.9630065017930143,
+            1.0
+          ],
+          "successes": 100,
+          "n": 100
+        },
+        "null_voxel_fraction_p05": 0.07591836734693878,
+        "BH_false_discovery_fraction": 0.01408055904114719,
+        "BH_true_positive_fraction": 0.20734693877551028,
+        "whitened_lag1": 0.006728449465721065,
+        "native_lag1": 0.5415691164375382,
+        "condition_number": 3.5382007032687937
+      }
+    ],
+    "wall_s": 55.19700587494299,
+    "peak_RSS_MiB": 321.328125
+  },
+  "independent_GLS_oracle": {
+    "max_beta_error": 2.220446049250313e-16,
+    "contrast_variance_error": 6.938893903907228e-18
+  },
+  "synthetic_reliability": {
+    "model": "ICC(A,1), two-way random, absolute agreement, single measurement",
+    "assumptions": "independent subjects; two exchangeable random sessions, balanced sample",
+    "n_subjects": 10,
+    "n_sessions": 2,
+    "ICC": 0.9496026198908818,
+    "subject_bootstrap_CI95": [
+      0.8479541588060694,
+      0.9764914957310874
+    ],
+    "undefined_bootstrap_draws": 0,
+    "delete_one_ICC": [
+      0.9562461816217375,
+      0.9538293632946916,
+      0.9477056283392964,
+      0.9568580612325136,
+      0.9554543343821542,
+      0.9454786349984188,
+      0.9513561968464771,
+      0.9515902059523698,
+      0.9486092721798856,
+      0.9131145405206648
+    ],
+    "mean_paired_effect_change": {
+      "n_subjects": 10,
+      "estimate": 0.1778157788660535,
+      "ci_low": 0.14223431938474843,
+      "ci_high": 0.214127627042557,
+      "sd_subjects": 0.062789760136529
+    },
+    "between_subject_mean_variance": 0.33229688587553446,
+    "mean_within_subject_two_session_variance": 0.017583374896971902,
+    "voxel_independence_assumed": false,
+    "negative_ICC_clamped": false,
+    "uncertainty_scope": "participant resampling; not registration or clinical validity"
+  },
+  "synthetic_confound_sensitivity": [
+    {
+      "strategy": "minimal",
+      "BH_rejections": 93,
+      "residual_dof": 89
+    },
+    {
+      "strategy": "expanded",
+      "BH_rejections": 94,
+      "residual_dof": 83
+    },
+    {
+      "strategy": "compcor",
+      "BH_rejections": 95,
+      "residual_dof": 88
+    },
+    {
+      "strategy": "fd-spikes",
+      "BH_rejections": 91,
+      "residual_dof": 88
+    }
+  ],
+  "synthetic_lab_wall_s": 1.5608461659867316,
+  "synthetic_lab_peak_RSS_MiB": 388.984375,
+  "tests": {
+    "baseline_passed": 762,
+    "added_passed": 53,
+    "full_passed": 815,
+    "offline_passed": 798,
+    "offline_deselected": 17
+  },
+  "complete_acceptance": false,
+  "blocked_real_criteria": [
+    "audited human preprocessing",
+    "two-session motor pilot",
+    "bounded human cohort reliability",
+    "registered motor ROIs",
+    "real cross-cohort EEG/fMRI comparison"
+  ],
+  "scientific_scope": "software/numerical evidence; no anatomical or clinical certification",
+  "privacy": "aggregate receipt; images, identities and medical fingerprints ignored"
+}

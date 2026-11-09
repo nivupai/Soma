@@ -30,8 +30,8 @@ class ModelConfig:
             raise ValueError("Unsupported HRF model")
         if self.drift_model not in {None, "cosine", "polynomial"}:
             raise ValueError("Unsupported drift model")
-        if self.noise_model not in {"ols", "ar1"}:
-            raise ValueError("Noise model must be OLS or feasible AR(1)")
+        if self.noise_model not in {"ols", "ar1", "ar2"}:
+            raise ValueError("Noise model must be OLS or supported feasible AR(1)/AR(2)")
         numbers = [self.high_pass, self.slice_time_ref, self.smoothing_fwhm, self.q]
         if (
             not np.isfinite(numbers).all()

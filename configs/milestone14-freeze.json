@@ -1,0 +1,12 @@
+{
+  "baseline": "0312635",
+  "frozen_before_evaluation": true,
+  "files_sha256": {
+    "docs/MILESTONE14_PROTOCOL.md": "8075966cb1b2eaae5cb84732b10dfe147a8f830b4cec3a2f9cc72f153bcd8133",
+    "configs/fmri-calibration.yaml": "c12d45d1518a9eabb8300a95cc82cb1a413b3caad85edc7379e13efafda8c7fc",
+    "configs/fmri-audit.yaml": "44c14f11fc1b72a9f21b164a271d9acc37d925f758eefd95198976b59f2e87ea",
+    "configs/retest-pilot.yaml": "d2331cd0e6bb6cc4ac0307cdd987e21371f45f4bd588420e0390e591b8d6f8ec",
+    "configs/retest-cohort.yaml": "85ae7351bf3a932a280fc6032eb62cc7436ef7324d99d8fb0bda94e4125bc354",
+    "configs/fmri-sensitivity.yaml": "288462e67a52a0b06a5c4c2789fe4582eac1d2a5c22dda7f4d2f0e4a5b270715"
+  }
+}

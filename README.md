@@ -3,7 +3,7 @@
 Research-oriented scientific Python foundations for EEG analysis. Milestone 1
 provides explicit EEGBCI ingestion, validated one-dimensional signal arrays,
 NeuroDSP Welch spectra, absolute mu/beta power, and reproducible experiments.
-v0.13.0 includes template and participant-matched EEG source modeling,
+v0.14.0 includes template and participant-matched EEG source modeling,
 structural MRI geometry, registration, conductor QC and MNE BEM sensitivity
 experiments. Participant results remain conditional research computations:
 independent anatomical readiness is INDETERMINATE. See
@@ -403,3 +403,24 @@ maps are custom reports; supported mask derivatives pass official BIDS validatio
 No clinical/anatomical certification or joint multimodal model is claimed. See
 [measured results and limitations](docs/MILESTONE13_RESULTS.md). Historical M12
 reports retain their original test counts; the current full suite is green.
+
+
+## Milestone14 preprocessing audit and reliability
+
+Soma0.14 adds audited fMRIPrep imports, measured-confound policies, ITK nonlinear
+transform evidence, independent GLS references, AR2 calibration and subject-level
+reliability/ICC. Full suite:815 passed; offline:798 passed,17 deselected.
+
+```bash
+soma fmri audit-preproc --config configs/fmri-audit.yaml --output reports/preproc-audit --dry-run
+soma fmri calibrate --config configs/fmri-calibration-validation.yaml --output reports/calibration
+```
+
+Only one ds000114 participant's two raw motor runs/T1w references were fetched.
+Compatible preprocessing is unavailable, so no real pilot/cohort was modeled.
+Complete acceptance remains false. Synthetic calibration retains excess family
+rejections under feasible AR models; numerical correctness is not an inference
+certificate. See [actual results](docs/MILESTONE14_RESULTS.md),
+[import requirements](docs/FMIRI_PREPROCESSING_AUDIT.md) and
+[reproduction](experiments/milestone14/README.md). No raw MRI/private results are
+committed, no push, and no Milestone15 work.
