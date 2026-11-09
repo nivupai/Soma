@@ -1,0 +1,668 @@
+{
+  "addendum": "Milestone 11 human MRI reference integration",
+  "baseline_revision": "10ead8c",
+  "verified_at_utc": "2026-11-09T00:49:10.535239+00:00",
+  "version": "0.11.0",
+  "source_tree_sha256": "f2fb5af06d50d84f93544a3be7eb0a3a7f7df8e4ed23ad0ffe0aa2cca1997435",
+  "protocol_seal": {
+    "baseline_revision": "10ead8c",
+    "frozen_at_utc": "2026-11-09T00:30:20.765201+00:00",
+    "human_metrics_inspected": false,
+    "files_sha256": {
+      "docs/MILESTONE11_HUMAN_PROTOCOL.md": "e20c7ffd90e7687b06291915c5647adbb5108aca2a2508c8d6d76d99f4469e80",
+      "configs/human-tissues.yaml": "92bf903388554414739096faf97b100d5f5a0dcbb8959a7fd65ac071b3ac0405"
+    }
+  },
+  "privacy": {
+    "external_tree_ignored": true,
+    "raw_files_tracked": 0,
+    "participant_artifacts_committed": false,
+    "private_data_hashes_and_subject_records": "kept only in ignored local report trees",
+    "user_added_gitignore_exclusion_preserved": true
+  },
+  "coverage": {
+    "IBSR_development_subjects": 18,
+    "MRBrainS_labeled_training_external_subjects": 5,
+    "MRBrainS_test_subjects_inventory_only": 15,
+    "test_payloads_read": false,
+    "inventoried_native_NIfTI_files": 151,
+    "archive_verified_training_NIfTI_files": 30,
+    "subject_tissue_rows": 69,
+    "failures": 0,
+    "native_label_targets": [
+      "CSF",
+      "GM",
+      "WM"
+    ],
+    "MRBrainS_native_reference_classes": 8,
+    "MRBrainS_excluded_native_codes": [
+      7,
+      8
+    ]
+  },
+  "reference_access": {
+    "local_Readme_and_manifest_consistent": true,
+    "manifest_archive_and_Readme_sizes_match": true,
+    "local_documents_grant_MRBrainS_license": false,
+    "use": "user-authorized local segmentation methods research",
+    "restrictions": "No redistribution or commercial rights inferred; portal provenance/agreements not independently established",
+    "IBSR_notice": "local public-domain release statement and requested Rohlfing citation"
+  },
+  "prediction": {
+    "method": "existing global T1 multi-Otsu, 256-bin histogram, foreground>2%max, ascending CSF/GM/WM",
+    "reference_used_in_fit": false,
+    "trained_weights": false,
+    "external_tuning": false,
+    "preprocessing": "IBSR supplied skull stripping; MRBrainS registered full-head T1; separate cohort summaries"
+  },
+  "geometry": {
+    "coded_sform_policy": true,
+    "IBSR_singleton_frame0_and_documented_mm_override": true,
+    "MRBrainS_identity_world_linear_intensity_resamples": 2,
+    "labels_resampled": false,
+    "fitted_registration": false,
+    "MRBrainS_max_allowed_qform_sform_corner_mm": 0.5,
+    "MRBrainS_max_allowed_alignment_corner_mm": 0.05,
+    "valid_domain_boundary_policy": "only observed faces between two valid in-volume voxels"
+  },
+  "cohort_aggregate_statistics": {
+    "development": {
+      "subjects": 18,
+      "macro_Dice": {
+        "n_subjects": 18,
+        "mean": 0.5873451580127979,
+        "SD": 0.023805967143618666,
+        "CI95": [
+          0.5770410705012845,
+          0.5984647280386827
+        ],
+        "unit": "subject",
+        "scope": "selected small cohort, not broad population certification"
+      },
+      "tissues": {
+        "CSF": {
+          "Dice": {
+            "n_subjects": 18,
+            "mean": 0.11128100918687639,
+            "SD": 0.04784450881973225,
+            "CI95": [
+              0.09165377166739559,
+              0.13363881691077162
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "Jaccard": {
+            "n_subjects": 18,
+            "mean": 0.059575549690965665,
+            "SD": 0.027461159705797492,
+            "CI95": [
+              0.048424790546406526,
+              0.07240902285081892
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "ASSD_mm": {
+            "n_subjects": 18,
+            "mean": 26.784904886082924,
+            "SD": 1.6177763176430031,
+            "CI95": [
+              26.048021036658795,
+              27.488672682825342
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "HD95_mm": {
+            "n_subjects": 18,
+            "mean": 43.37242092386707,
+            "SD": 2.186401890702001,
+            "CI95": [
+              42.39541629357598,
+              44.33133465694196
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "absolute_volume_error_mm3": {
+            "n_subjects": 18,
+            "mean": 273709.1984704097,
+            "SD": 66778.26203389853,
+            "CI95": [
+              245851.3611967227,
+              303796.30097401683
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_volume_error_mm3": {
+            "n_subjects": 18,
+            "mean": 273709.1984704097,
+            "SD": 66778.26203389853,
+            "CI95": [
+              245851.3611967227,
+              303796.30097401683
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_relative_volume_error": {
+            "n_subjects": 18,
+            "mean": 15.72023416663849,
+            "SD": 6.840902347054786,
+            "CI95": [
+              12.819532390591672,
+              18.902459001165468
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          }
+        },
+        "gray matter": {
+          "Dice": {
+            "n_subjects": 18,
+            "mean": 0.7849526576187648,
+            "SD": 0.03851273954107681,
+            "CI95": [
+              0.7687644740402739,
+              0.8010949775344542
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "Jaccard": {
+            "n_subjects": 18,
+            "mean": 0.6475843456371071,
+            "SD": 0.05206544818266777,
+            "CI95": [
+              0.6255198595952726,
+              0.6694650722121405
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "ASSD_mm": {
+            "n_subjects": 18,
+            "mean": 1.0971491867462886,
+            "SD": 0.16414670491246866,
+            "CI95": [
+              1.0296357635785125,
+              1.1782269312753584
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "HD95_mm": {
+            "n_subjects": 18,
+            "mean": 3.2961032856368586,
+            "SD": 0.5037441563179956,
+            "CI95": [
+              3.082398337274534,
+              3.5401808970625175
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "absolute_volume_error_mm3": {
+            "n_subjects": 18,
+            "mean": 234534.88890883315,
+            "SD": 38881.23608171319,
+            "CI95": [
+              217183.68175598016,
+              251513.6804147692
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_volume_error_mm3": {
+            "n_subjects": 18,
+            "mean": -234534.88890883315,
+            "SD": 38881.23608171319,
+            "CI95": [
+              -251513.68041476922,
+              -217183.68175598016
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_relative_volume_error": {
+            "n_subjects": 18,
+            "mean": -0.2702035842818275,
+            "SD": 0.04814136401337031,
+            "CI95": [
+              -0.29182110312051807,
+              -0.24972084244214302
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          }
+        },
+        "white matter": {
+          "Dice": {
+            "n_subjects": 18,
+            "mean": 0.8658018072327525,
+            "SD": 0.028181694652476146,
+            "CI95": [
+              0.852614204521794,
+              0.8772783176587146
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "Jaccard": {
+            "n_subjects": 18,
+            "mean": 0.7643723726638805,
+            "SD": 0.04314035553336073,
+            "CI95": [
+              0.7443933023445551,
+              0.781964119133637
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "ASSD_mm": {
+            "n_subjects": 18,
+            "mean": 0.8222874253742631,
+            "SD": 0.17759385756982704,
+            "CI95": [
+              0.7482010648404823,
+              0.9030664009867558
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "HD95_mm": {
+            "n_subjects": 18,
+            "mean": 3.1948740838115657,
+            "SD": 0.6743964282138158,
+            "CI95": [
+              2.898754496839509,
+              3.516343848548295
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "absolute_volume_error_mm3": {
+            "n_subjects": 18,
+            "mean": 63848.751336315094,
+            "SD": 48637.15976216461,
+            "CI95": [
+              44361.40465739411,
+              87869.31900298964
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_volume_error_mm3": {
+            "n_subjects": 18,
+            "mean": 55360.38766901175,
+            "SD": 58625.8203020977,
+            "CI95": [
+              29536.903992399846,
+              83315.81967621765
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_relative_volume_error": {
+            "n_subjects": 18,
+            "mean": 0.11897954121897238,
+            "SD": 0.12247132014670635,
+            "CI95": [
+              0.06401120927765284,
+              0.17683028781302781
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          }
+        }
+      },
+      "statistical_unit": "subject",
+      "population_certification": false
+    },
+    "external": {
+      "subjects": 5,
+      "macro_Dice": {
+        "n_subjects": 5,
+        "mean": 0.4556826170896741,
+        "SD": 0.12312596538343627,
+        "CI95": [
+          0.36191244393661015,
+          0.5468503234724182
+        ],
+        "unit": "subject",
+        "scope": "selected small cohort, not broad population certification"
+      },
+      "tissues": {
+        "CSF": {
+          "Dice": {
+            "n_subjects": 5,
+            "mean": 0.47815929491408626,
+            "SD": 0.027028921759412006,
+            "CI95": [
+              0.45840031936502273,
+              0.5024703747512115
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "Jaccard": {
+            "n_subjects": 5,
+            "mean": 0.31453372471134566,
+            "SD": 0.023631196772781148,
+            "CI95": [
+              0.297361089996129,
+              0.33583273630931976
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "ASSD_mm": {
+            "n_subjects": 5,
+            "mean": 5.61068099933866,
+            "SD": 0.5155668194621694,
+            "CI95": [
+              5.204413508573196,
+              6.0169484901041255
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "HD95_mm": {
+            "n_subjects": 5,
+            "mean": 21.202464905712223,
+            "SD": 1.959644398688116,
+            "CI95": [
+              19.648105215310025,
+              22.756824596114416
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "absolute_volume_error_mm3": {
+            "n_subjects": 5,
+            "mean": 531876.5570344116,
+            "SD": 171993.95215608587,
+            "CI95": [
+              397181.0544181386,
+              668015.8523581044
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_volume_error_mm3": {
+            "n_subjects": 5,
+            "mean": 531876.5570344116,
+            "SD": 171993.95215608587,
+            "CI95": [
+              397181.0544181386,
+              668015.8523581044
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_relative_volume_error": {
+            "n_subjects": 5,
+            "mean": 1.3114861457941642,
+            "SD": 0.4354877291671921,
+            "CI95": [
+              0.9742166844451132,
+              1.6487556071432157
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          }
+        },
+        "gray matter": {
+          "Dice": {
+            "n_subjects": 5,
+            "mean": 0.5263559244357128,
+            "SD": 0.04817516350959316,
+            "CI95": [
+              0.4891620050736609,
+              0.5628112111509566
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "Jaccard": {
+            "n_subjects": 5,
+            "mean": 0.3583476945096889,
+            "SD": 0.044661818082761325,
+            "CI95": [
+              0.323900328914182,
+              0.3923618758580861
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "ASSD_mm": {
+            "n_subjects": 5,
+            "mean": 7.719519055487794,
+            "SD": 0.982174048726857,
+            "CI95": [
+              7.04124103908863,
+              8.526000243153671
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "HD95_mm": {
+            "n_subjects": 5,
+            "mean": 32.546513883637445,
+            "SD": 4.043420625859884,
+            "CI95": [
+              30.022741982747117,
+              36.05247393929626
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "absolute_volume_error_mm3": {
+            "n_subjects": 5,
+            "mean": 599530.6076951015,
+            "SD": 136771.67198488634,
+            "CI95": [
+              500705.2431000856,
+              714431.7196167981
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_volume_error_mm3": {
+            "n_subjects": 5,
+            "mean": 599530.6076951015,
+            "SD": 136771.67198488634,
+            "CI95": [
+              500705.2431000856,
+              714431.7196167981
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_relative_volume_error": {
+            "n_subjects": 5,
+            "mean": 1.1731302575420663,
+            "SD": 0.2578164526994127,
+            "CI95": [
+              0.9795339399919438,
+              1.3671605673624425
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          }
+        },
+        "white matter": {
+          "Dice": {
+            "n_subjects": 5,
+            "mean": 0.36253263191922336,
+            "SD": 0.32803625428900784,
+            "CI95": [
+              0.11850374640112907,
+              0.6055433832093082
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "Jaccard": {
+            "n_subjects": 5,
+            "mean": 0.259236131464403,
+            "SD": 0.23624496634900097,
+            "CI95": [
+              0.08296581545390577,
+              0.4349951582608139
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "ASSD_mm": {
+            "n_subjects": 5,
+            "mean": 11.705540732899612,
+            "SD": 3.8307759727644672,
+            "CI95": [
+              8.845329635075798,
+              14.862118028979916
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "HD95_mm": {
+            "n_subjects": 5,
+            "mean": 38.94061552841913,
+            "SD": 4.053290704392984,
+            "CI95": [
+              36.32859643933615,
+              42.422079270766034
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "absolute_volume_error_mm3": {
+            "n_subjects": 5,
+            "mean": 243791.5865424523,
+            "SD": 138217.3008231461,
+            "CI95": [
+              137528.84262170744,
+              348923.95944349054
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_volume_error_mm3": {
+            "n_subjects": 5,
+            "mean": 168662.60026709316,
+            "SD": 240495.5372182029,
+            "CI95": [
+              -12729.129929010815,
+              348923.95944349054
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          },
+          "signed_relative_volume_error": {
+            "n_subjects": 5,
+            "mean": 0.5268543041387577,
+            "SD": 0.7228548954500515,
+            "CI95": [
+              -0.021762774190331402,
+              1.0754713824678468
+            ],
+            "unit": "subject",
+            "scope": "selected small cohort, not broad population certification"
+          }
+        }
+      },
+      "statistical_unit": "subject",
+      "population_certification": false
+    }
+  },
+  "profiles": {
+    "inventory": {
+      "status": "inventory_complete",
+      "wall_s": 0.9743774170055985,
+      "cpu_s": 0.813968,
+      "process_peak_RSS_MiB": 311.828125,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "discovery_metadata_and_training_archive_checks": {
+          "wall_s": 0.9692616659449413,
+          "cpu_s": 0.8088759999999999
+        }
+      }
+    },
+    "development": {
+      "status": "complete",
+      "wall_s": 83.67636154207867,
+      "cpu_s": 81.821236,
+      "process_peak_RSS_MiB": 628.859375,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "load_alignment_prediction_scoring_and_figures": {
+          "wall_s": 83.33664133399725,
+          "cpu_s": 81.544264
+        }
+      }
+    },
+    "external": {
+      "status": "complete",
+      "wall_s": 37.764867792022415,
+      "cpu_s": 37.413069,
+      "process_peak_RSS_MiB": 440.984375,
+      "memory_scope": "process high-water including libraries, not incremental allocation",
+      "stages": {
+        "load_alignment_prediction_scoring_and_figures": {
+          "wall_s": 37.442236999981105,
+          "cpu_s": 37.103956999999994
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "private_root": "reports/milestone11-human-validated",
+    "verified_output_hashes": 174,
+    "verified_finite_NPZ_arrays": 290,
+    "figures_visually_reviewed": 25,
+    "individual_data": "not committed"
+  },
+  "tests": {
+    "baseline_passed": 612,
+    "baseline_seconds": 71.44,
+    "final_passed": 636,
+    "warnings": 62,
+    "seconds": 70.81,
+    "added": 24,
+    "original_test_files_byte_identical": 44
+  },
+  "checks": {
+    "ruff": "pass",
+    "format": "258 files pass",
+    "strict_mypy": "149 source modules pass",
+    "pip_check": "no broken requirements",
+    "plot_only_regeneration_preserved_all_69_metric_rows": true,
+    "historical_results_verification_docs_retained_as_prefix": true
+  },
+  "historical_report_files_byte_identical": 224,
+  "environment": {
+    "python": "3.12.2",
+    "platform": "macOS-15.7-arm64-arm-64bit",
+    "workers": 1,
+    "libraries": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "nibabel": "5.4.2",
+      "scikit-image": "0.26.0",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "limitations": [
+    "Simple baseline with large retained errors",
+    "Manual annotations not error-free anatomy",
+    "IBSR supplied stripping and non-filled CSF reference conventions",
+    "MRBrainS full-head extracranial confounds and anisotropic FOV",
+    "Small selected cohorts; no inter-rater uncertainty or broad population guarantee",
+    "Tissue results do not validate skull/scalp conductors; BEM anatomical readiness remains INDETERMINATE",
+    "Training-data evaluation is not an official hidden-test challenge score"
+  ],
+  "execution_note": "Scientific source frozen before external evaluation; reports precede local integration commit. No push or M12."
+}

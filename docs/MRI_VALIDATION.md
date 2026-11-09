@@ -272,3 +272,16 @@ for Volume anatomical conversion. Eight-tissue FEM is not three-layer BEM.
 Human tissue evaluation retains missing/failing subjects and incompatible
 ontologies; no cortical-parcellation-to-skull substitution or self-reference score.
 See MILESTONE11_RESULTS.md for completed numerical and incomplete human criteria.
+
+
+## Milestone 11 human tissue integration addendum
+
+New local IBSR/MRBrainS reference scoring validates a limited intensity baseline
+against provided manual tissue annotations, with subject-level uncertainty and
+native-grid provenance. MRBrainS cerebellum/brainstem exclusions affect overlap and
+observable tissue faces, never prediction threshold fitting. A validity boundary
+must not become an artificial matching tissue surface. The original MRI and labels
+remain unchanged; small documented grid differences receive explicit intensity-only
+resampling. Numerical tissue metrics do not establish independent skull/scalp
+boundaries, head-model nesting, conductivity or BEM readiness. Earlier missing-data
+reports remain unchanged; see MILESTONE11_RESULTS.md's human integration addendum.

@@ -310,3 +310,31 @@ def benchmark_tissues(
         _done(cohort_benchmark(config, output), output)
     except (ValueError, OSError) as exc:
         _fail(exc)
+
+
+@app.command("inventory-human")
+def inventory_human_command(
+    config: Path = Path("configs/human-tissues.yaml"),
+    output: Path = Path("reports/human-reference-inventory"),
+) -> None:
+    from soma.validation.human_tissues import inventory_human
+
+    try:
+        _done(inventory_human(config, output), output)
+    except (ValueError, OSError) as exc:
+        _fail(exc)
+
+
+@app.command("benchmark-human-tissues")
+def benchmark_human_command(
+    config: Path = Path("configs/human-tissues.yaml"),
+    inventory: Path = Path("reports/human-reference-inventory/inventory.json"),
+    phase: str = "development",
+    output: Path = Path("reports/human-tissues-development"),
+) -> None:
+    from soma.validation.human_tissues import benchmark_human
+
+    try:
+        _done(benchmark_human(config, inventory, output, phase=phase), output)
+    except (ValueError, OSError) as exc:
+        _fail(exc)

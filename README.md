@@ -339,3 +339,21 @@ Each output directory must be new. SCI acquisition is explicit through
 model weights are never automatically fetched. Tissue reports retain missing-data
 status until authorized labels are supplied. Reproduce all actions with
 `sh experiments/milestone11/run.sh` after activating the environment.
+
+
+Milestone 11 human MRI integration is documented in the
+[human-reference methods addendum](docs/HUMAN_TISSUE_REFERENCE_METHODS.md) and the
+[results addendum](docs/MILESTONE11_RESULTS.md#human-mri-reference-integration-addendum).
+User-provided local IBSR and MRBrainS training references now support a separate
+frozen evaluation; earlier missing-data reports remain historical and unchanged.
+Raw data, participant records and all MRI-derived images stay outside Git.
+
+```sh
+soma mri inventory-human --output reports/human-inventory-new
+soma mri benchmark-human-tissues --inventory reports/human-inventory-new/inventory.json --phase development --output reports/human-development-new
+soma mri benchmark-human-tissues --inventory reports/human-inventory-new/inventory.json --phase external --output reports/human-external-new
+```
+
+Run `python experiments/milestone11-human/run.py` for ordered reproduction with
+an explicit code/input freeze before external evaluation. No test-partition label
+contents, downloads, new models or conductor validation are involved.

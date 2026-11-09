@@ -42,10 +42,13 @@ def corresponding(prediction: LabelVolume, reference: LabelVolume) -> None:
         )
 
 
-def surfels(mask: Any, affine_m: Any) -> tuple[Any, Any]:
+def surfels(mask: Any, affine_m: Any, *, valid_mask: Any = None) -> tuple[Any, Any]:
     """Exposed voxel-face centers and physical parallelogram areas (mm, mm²)."""
     x = np.asarray(mask, dtype=bool)
     a = np.asarray(affine_m, dtype=float)
+    valid = None if valid_mask is None else np.asarray(valid_mask, dtype=bool)
+    if valid is not None and valid.shape != x.shape:
+        raise ValueError("Boundary observation mask shape mismatch")
     points = []
     areas = []
     for axis in range(3):
@@ -56,7 +59,12 @@ def surfels(mask: Any, affine_m: Any) -> tuple[Any, Any]:
             edge: list[Any] = [slice(None)] * 3
             edge[axis] = -1 if direction == 1 else 0
             neighbor[tuple(edge)] = False
-            indices = np.argwhere(x & ~neighbor).astype(float)
+            observed = x & ~neighbor
+            if valid is not None:
+                adjacent_valid = np.roll(valid, -direction, axis=axis)
+                adjacent_valid[tuple(edge)] = False
+                observed &= valid & adjacent_valid
+            indices = np.argwhere(observed).astype(float)
             indices[:, axis] += direction * 0.5
             points.append((indices @ a[:3, :3].T + a[:3, 3]) * 1000)
             areas.append(np.full(len(indices), area))
@@ -75,20 +83,33 @@ def score(
     reference: LabelVolume,
     *,
     tolerances_mm: tuple[float, ...] = (1.0, 2.0),
+    valid_mask: Volume | None = None,
 ) -> dict[str, Any]:
     corresponding(prediction, reference)
     if not tolerances_mm or any(not np.isfinite(x) or x <= 0 for x in tolerances_mm):
         raise ValueError("Positive finite physical tolerances required")
     a, b = require_labels(prediction.volume), require_labels(reference.volume)
+    valid = np.ones(a.shape, dtype=bool)
+    if valid_mask is not None:
+        if not reference.volume.same_grid(valid_mask):
+            raise ValueError("Scoring mask and reference grid differ")
+        raw_mask = require_labels(valid_mask)
+        if not np.isin(raw_mask, [0, 1]).all():
+            raise ValueError("Scoring validity mask must be binary")
+        if valid_mask.metadata.get("subject") != reference.subject:
+            raise ValueError("Scoring mask subject identity mismatch")
+        valid = raw_mask.astype(bool)
+        if not valid.any():
+            raise ValueError("No valid scoring voxels")
     voxel_mm3 = abs(float(np.linalg.det(reference.volume.affine_m[:3, :3]))) * 1e9
     rows: list[dict[str, Any]] = []
     for label, name in reference.ontology.items():
-        p, r = a == label, b == label
+        p, r = (a == label) & valid, (b == label) & valid
         npred, nref = int(p.sum()), int(r.sum())
         tp = int(np.count_nonzero(p & r))
         fp = npred - tp
         fn = nref - tp
-        tn = p.size - tp - fp - fn
+        tn = int(valid.sum()) - tp - fp - fn
         both = npred + nref
         row: dict[str, Any] = {
             "label": label,
@@ -107,6 +128,7 @@ def score(
             "reference_volume_mm3": nref * voxel_mm3,
             "prediction_volume_mm3": npred * voxel_mm3,
             "absolute_volume_error_mm3": abs(npred - nref) * voxel_mm3,
+            "signed_volume_error_mm3": (npred - nref) * voxel_mm3,
             "relative_volume_error": abs(npred - nref) / nref if nref else None,
             "signed_relative_volume_error": (npred - nref) / nref if nref else None,
             "ASSD_mm": None,
@@ -115,8 +137,19 @@ def score(
             "boundaries": {},
         }
         if npred and nref:
-            pp, ap = surfels(p, prediction.volume.affine_m)
-            rr, ar = surfels(r, reference.volume.affine_m)
+            observed = valid if valid_mask is not None else None
+            pp, ap = surfels(p, prediction.volume.affine_m, valid_mask=observed)
+            rr, ar = surfels(r, reference.volume.affine_m, valid_mask=observed)
+            if not len(pp) or not len(rr):
+                row["boundary_case"] = "unobserved_prediction_or_reference_boundary"
+                row["prediction_surface_area_mm2"] = float(ap.sum())
+                row["reference_surface_area_mm2"] = float(ar.sum())
+                row["boundaries"] = {
+                    str(t): {"surface_Dice": None, "precision": None, "recall": None}
+                    for t in tolerances_mm
+                }
+                rows.append(row)
+                continue
             dp = cKDTree(rr).query(pp)[0]
             dr = cKDTree(pp).query(rr)[0]
             distances = np.r_[dp, dr]
@@ -160,6 +193,14 @@ def score(
             "voxel representation, not exact continuous tissue boundary"
         ),
         "HD95_definition": "pooled physical-surface-area weighted empirical 95th percentile",
+        "scoring_domain": {
+            "valid_voxels": int(valid.sum()),
+            "excluded_voxels": int(valid.size - valid.sum()),
+            "explicit_mask": valid_mask is not None,
+            "masked_boundaries": "faces require two valid in-volume neighbors"
+            if valid_mask is not None
+            else "native whole-grid boundary",
+        },
         "registration_performed": False,
         "automatic_resampling": False,
         "prediction_provenance": prediction.provenance,

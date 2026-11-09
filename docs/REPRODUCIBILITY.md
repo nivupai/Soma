@@ -340,3 +340,18 @@ separate. The verification receipt preserves all 42 earlier test-file hashes and
 update to 0.11.0 is recorded separately with its before/after test-file hashes;
 the other 41 baseline test files are byte-identical. Source code and scientific
 reports are unchanged by this verification correction.
+
+
+## Milestone 11 human MRI integration addendum
+
+The new seal configs/human-tissues-freeze.json precedes scoring, and the new
+protocol is docs/MILESTONE11_HUMAN_PROTOCOL.md. Data discovery, exact input hashes,
+archive member checks, geometry and phase outputs are local ignored artifacts.
+`experiments/milestone11-human/run.py` executes inventory, development, a source/
+input binding freeze and external evaluation with one worker and exclusive output
+roots. `reports/milestone11-human-validated` is the final reviewed run. Earlier
+new attempts and all historical reports remain distinct. Commit only generic code,
+policy and aggregate verification; individual data hashes/paths, per-subject metrics,
+MRI pictures and prediction files remain private local report artifacts. Frozen
+models are unchanged between development and external scoring. No network access,
+weight download, test-label payload read, remote push or Milestone 12 is required.

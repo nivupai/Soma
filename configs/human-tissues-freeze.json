@@ -1,0 +1,9 @@
+{
+  "baseline_revision": "10ead8c",
+  "frozen_at_utc": "2026-11-09T00:30:20.765201+00:00",
+  "human_metrics_inspected": false,
+  "files_sha256": {
+    "docs/MILESTONE11_HUMAN_PROTOCOL.md": "e20c7ffd90e7687b06291915c5647adbb5108aca2a2508c8d6d76d99f4469e80",
+    "configs/human-tissues.yaml": "92bf903388554414739096faf97b100d5f5a0dcbb8959a7fd65ac071b3ac0405"
+  }
+}

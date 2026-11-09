@@ -108,3 +108,16 @@ MRBrainS13 is authorized-local-only; the IBSR substitute currently requires
 registered NITRC access. No tissue scores are fabricated. See
 EXTERNAL_HEAD_MODEL_REFERENCES.md and TISSUE_SEGMENTATION_VALIDATION.md for exact
 provenance, native geometry, usage conditions and local backend contracts.
+
+
+## Milestone 11 local human integration addendum
+
+Actual user-extracted IBSR and MRBrainS training data now support a new frozen
+analysis, independent of the earlier unavailable-data reports. Inventory reports
+native roles, duplicates, coded affine forms and label availability. IBSR supplied
+stripped T1/non-filled segTRI is development input; MRBrainS registered T1/eight-class
+manual training reference is external input. Test-partition filenames are counted
+without opening labels or other payloads. Local Readme/manifest consistency does
+not establish an unrestricted MRI license. All individual metadata and images stay
+in Git-ignored trees; see HUMAN_TISSUE_REFERENCE_METHODS.md for source conventions,
+terms and the explicit CSF/GM/WM mapping and exclusion policy.

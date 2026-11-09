@@ -1,0 +1,19 @@
+milestone: 11
+addendum: human-reference-integration
+seed: 11042
+ibsr_root: data/external/ibsr
+mrbrains_root: data/external/mrbrains
+IBSR_role_image: ana_strip
+IBSR_role_reference: segTRI_ana
+MRBrainS_partition: training
+MRBrainS_image: T1.nii
+MRBrainS_reference: LabelsForTraining.nii
+baseline: global-multiotsu-M10-frozen
+qform_sform_max_corner_mm: 0.5
+mrbrains_alignment_max_corner_mm: 0.05
+tolerances_mm:
+- 1.0
+- 2.0
+bootstrap_repetitions: 2000
+workers: 1
+commit_individual_data: false

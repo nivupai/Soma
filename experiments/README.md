@@ -28,3 +28,10 @@ The protocol is sealed before evaluation; external-discovery, initial-inspection
 and verification receipts preserve access limits, old results and source identity.
 Tissue/holdout CLI reports explicitly unavailable registered data, not success.
 See docs/MILESTONE11_RESULTS.md for numerical results and the authorized version-test correction.
+
+
+M11 human integration: `milestone11-human/run.py` reproduces the explicit local
+inventory/development/freeze/external sequence with the new human-tissues seal.
+Its MRI inputs and all participant outputs stay ignored. The committed verification
+receipt is aggregate only; full per-subject tables, pictures and hashes are private
+local artifacts. Historical M11 experiments remain unchanged.

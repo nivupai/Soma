@@ -94,3 +94,13 @@ REFERENCE_REGISTRY.update(
         ),
     }
 )
+
+
+# The local human adapters reuse Volume and the existing reference identities;
+# keep callable loaders separate from JSON-serializable registry descriptions.
+def load_human_reference(path: Any, *, dataset: str, subject: str, role: Any) -> Any:
+    from soma.datasets.human_mri import load_human
+
+    if dataset not in REFERENCE_REGISTRY:
+        raise ValueError("Unknown reference registry identity")
+    return load_human(path, dataset=dataset, subject=subject, role=role)

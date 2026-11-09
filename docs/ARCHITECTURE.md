@@ -275,3 +275,16 @@ missingness and subject-level statistics while reusing Volume/LabelVolume.
 solves; `validation.source_priors` reuses M10's physical continuous-source forwards.
 Existing source seal API accepts the separately sealed M11 source-priors config;
 old protocol seals and results are unchanged. See MILESTONE11_RESULTS.md.
+
+
+## Milestone 11 human reference integration addendum
+
+`datasets.human_mri` discovers local release layouts, audits selected training
+archives, validates native NIfTI geometry and maps documented tissue ontologies.
+Registry identities and the loader adapter connect these to existing Volume and
+LabelVolume APIs. `validation.human_tissues` runs development/external phases under
+a new seal; `validation.human_plots` guards private output locations. The existing
+segmentation score gains optional explicit validity-domain support, including
+unobserved/void boundary handling, while retaining the unmasked API. Participant
+artifacts remain in ignored trees; only code and aggregate documentation are
+release artifacts. See HUMAN_TISSUE_REFERENCE_METHODS.md.

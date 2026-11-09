@@ -800,3 +800,48 @@ See the [verification receipt](../experiments/milestone11/verification.json),
 anatomical sensitivity and multi-subject generalization remain incomplete acceptance
 items. The user confirmed no access to the registered tissue-reference files.
 No remote push or M12 work.
+
+
+## Milestone 11 human MRI integration addendum
+
+The new human-tissues protocol/config seal precedes scoring. The 10ead8c baseline
+passes 612 tests in 71.44 s. After integration, **636 tests pass**, including 24
+new numerical/adversarial/dataset cases, in **70.81 s** (62 warnings). All 44
+baseline test files remain byte-identical. Ruff, formatting (258 files), strict
+mypy (149 modules) and dependency checks pass. No version or old test edits.
+
+Actual coverage is 18 IBSR development subjects and five MRBrainS labeled training
+subjects, with 69 per-subject tissue rows and zero failures. All 30 extracted
+training NIfTIs match their archive members. Fifteen test folders are filename-only
+inventory; no test header/payload/hash reads. Source and inputs were bound after
+development and before external scoring. Model parameters remained frozen.
+
+The supplied `/data/external/` Git exclusion was verified before changes and is
+preserved. No external file is tracked. Participant paths/metadata, source hashes,
+individual tables, predicted NIfTIs, masks and images remain only in ignored trees;
+the committed verification receipt is aggregate only. Local Readme/manifest text
+establishes release/label conventions but does not grant broad MRBrainS data rights.
+No raw redistribution, registration bypass or image publication occurred.
+
+Final reports under `reports/milestone11-human-validated` share the exact executed
+Python source-tree hash and 0.11.0 package identity. Verification checked all 174
+listed outputs and 290 finite, pickle-free NPZ arrays, with 25 scientific figures
+visually reviewed. All 224 historical report files and original protocol seals
+are preserved; prior unavailable-data reports were not rewritten. A plot-only
+missing-marker correction was followed by report regeneration; all 69 tissue
+metric rows remain exactly equal to the first new runs.
+
+IBSR mean subject macro Dice is .58735 (bootstrap95% .57704–.59846); MRBrainS is
+.45568 (.36191–.54685). Unfavorable CSF/WM cases remain visible. Small cohorts,
+manual-reference uncertainty, supplied skull stripping, full-head confounds,
+annotation scope and anisotropic/FOV boundaries limit generalization. These results
+validate a limited tissue baseline; skull/scalp conductor anatomy and BEM readiness
+remain INDETERMINATE. No hidden-test challenge performance, clinical certification,
+remote push or Milestone12 is claimed.
+
+Final workload wall time / peak RSS: inventory .974 s / 311.8 MiB; IBSR 83.676 s /
+628.9 MiB; MRBrainS 37.765 s /441.0 MiB. Benchmark stage times exclude startup and
+input preflight; RSS includes process libraries. See the
+[results addendum](MILESTONE11_RESULTS.md#human-mri-reference-integration-addendum),
+[methods](HUMAN_TISSUE_REFERENCE_METHODS.md), and
+[aggregate receipt](../experiments/milestone11-human/verification.json).
