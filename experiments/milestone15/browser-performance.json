@@ -1,0 +1,13 @@
+{
+  "browser": "chromium",
+  "overview_ready_ms": 149,
+  "EEG Laboratory_ready_ms": 120,
+  "MRI Anatomy_ready_ms": 113,
+  "MRI_navigation_ms": 17,
+  "Source Models_ready_ms": 1108,
+  "source_selection_ms": 19,
+  "orbit_12_steps_ms": 204,
+  "JS_heap_used_bytes": 29400000,
+  "animation_frame_median_ms": 16.699999928474426,
+  "scope": "Headless Chromium synthetic views; wall-clock UI readiness, not scientific numerical runtime; heap is renderer process estimate"
+}

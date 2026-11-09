@@ -424,3 +424,24 @@ certificate. See [actual results](docs/MILESTONE14_RESULTS.md),
 [import requirements](docs/FMIRI_PREPROCESSING_AUDIT.md) and
 [reproduction](experiments/milestone14/README.md). No raw MRI/private results are
 committed, no push, and no Milestone15 work.
+
+## Soma Explorer (v0.15.0)
+
+The local React/TypeScript workstation and FastAPI scientific API are in
+`apps/explorer` and `services/explorer_api`. It includes deterministic synthetic
+EEG, MRI, source and fMRI views and explicit adapters for permitted local data.
+
+```sh
+.venv/bin/python -m pip install -e '.[dev,explorer]'
+npm --prefix apps/explorer ci
+.venv/bin/python -m uvicorn services.explorer_api.app:app --host 127.0.0.1 --port 8000
+# In another terminal:
+npm --prefix apps/explorer run dev
+```
+
+Open `http://127.0.0.1:5173`. No medical data download or preprocessing is launched.
+Human fMRI confirmation and unavailable preprocessing/retest remain restricted.
+See [user guide](docs/EXPLORER_USER_GUIDE.md),
+[architecture](docs/EXPLORER_ARCHITECTURE.md),
+[security](docs/EXPLORER_SECURITY.md) and
+[results](docs/MILESTONE15_RESULTS.md).

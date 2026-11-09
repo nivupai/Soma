@@ -1,0 +1,2141 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Soma Explorer",
+    "version": "0.15.0"
+  },
+  "paths": {
+    "/api/catalog": {
+      "get": {
+        "summary": "Catalog",
+        "operationId": "catalog_api_catalog_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Catalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eeg/{identity}/metadata": {
+      "get": {
+        "summary": "Eeg Meta",
+        "operationId": "eeg_meta_api_eeg__identity__metadata_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_EEGMeta_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eeg/{identity}/window": {
+      "get": {
+        "summary": "Eeg Window",
+        "operationId": "eeg_window_api_eeg__identity__window_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "channels",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "C3",
+              "title": "Channels"
+            }
+          },
+          {
+            "name": "start_s",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "default": 0,
+              "title": "Start S"
+            }
+          },
+          {
+            "name": "duration_s",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 30,
+              "minimum": 0.1,
+              "default": 10,
+              "title": "Duration S"
+            }
+          },
+          {
+            "name": "points",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 2048,
+              "minimum": 32,
+              "default": 1200,
+              "title": "Points"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_EEGWindow_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/eeg/{identity}/analysis": {
+      "get": {
+        "summary": "Eeg Analysis",
+        "operationId": "eeg_analysis_api_eeg__identity__analysis_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "channel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "C3",
+              "title": "Channel"
+            }
+          },
+          {
+            "name": "start_s",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "default": 0,
+              "title": "Start S"
+            }
+          },
+          {
+            "name": "duration_s",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 30,
+              "minimum": 2,
+              "default": 10,
+              "title": "Duration S"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_EEGAnalysis_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/volumes/{identity}": {
+      "get": {
+        "summary": "Volume Meta",
+        "operationId": "volume_meta_api_volumes__identity__get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_VolumeMeta_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/volumes/{identity}/slice": {
+      "get": {
+        "summary": "Volume Slice",
+        "operationId": "volume_slice_api_volumes__identity__slice_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "plane",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "axial",
+              "title": "Plane"
+            }
+          },
+          {
+            "name": "x",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "X"
+            }
+          },
+          {
+            "name": "y",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Y"
+            }
+          },
+          {
+            "name": "z",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Z"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_Slice_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sources/{identity}/mesh": {
+      "get": {
+        "summary": "Mesh",
+        "operationId": "mesh_api_sources__identity__mesh_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_MeshData_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sources/{identity}/series": {
+      "get": {
+        "summary": "Source Series",
+        "operationId": "source_series_api_sources__identity__series_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "index",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 9999,
+              "minimum": 0,
+              "default": 0,
+              "title": "Index"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_SourceSeries_"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/fmri/{identity}": {
+      "get": {
+        "summary": "Fmri",
+        "operationId": "fmri_api_fmri__identity__get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "inference",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "const": "descriptive",
+              "type": "string",
+              "default": "descriptive",
+              "title": "Inference"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result_dict_str__Any__"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/experiments": {
+      "get": {
+        "summary": "Experiments",
+        "operationId": "experiments_api_experiments_get",
+        "parameters": [
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Artifact"
+                  },
+                  "title": "Response Experiments Api Experiments Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/experiments/compare": {
+      "post": {
+        "summary": "Compare",
+        "operationId": "compare_api_experiments_compare_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompareRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comparison"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/experiments/{identity}/figures/{index}": {
+      "get": {
+        "summary": "Figure",
+        "operationId": "figure_api_experiments__identity__figures__index__get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "index",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Index"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Figure Api Experiments  Identity  Figures  Index  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/experiments/{identity}/export": {
+      "get": {
+        "summary": "Export",
+        "operationId": "export_api_experiments__identity__export_get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(json|csv)$",
+              "default": "json",
+              "title": "Format"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Export Api Experiments  Identity  Export Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/qc": {
+      "get": {
+        "summary": "Qc",
+        "operationId": "qc_api_qc_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QCReport"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jobs": {
+      "post": {
+        "summary": "Submit",
+        "operationId": "submit_api_jobs_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JobRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jobs/{identity}": {
+      "get": {
+        "summary": "Job",
+        "operationId": "job_api_jobs__identity__get",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Cancel",
+        "operationId": "cancel_api_jobs__identity__delete",
+        "parameters": [
+          {
+            "name": "identity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Identity"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Artifact": {
+        "properties": {
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "metrics": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metrics"
+          },
+          "parameters": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Parameters"
+          },
+          "compatibility": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Compatibility"
+          },
+          "checksums": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Checksums"
+          },
+          "figures": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Figures"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "state",
+          "id",
+          "title",
+          "metrics",
+          "parameters",
+          "compatibility",
+          "checksums",
+          "figures",
+          "warnings"
+        ],
+        "title": "Artifact"
+      },
+      "Catalog": {
+        "properties": {
+          "datasets": {
+            "items": {
+              "$ref": "#/components/schemas/Dataset"
+            },
+            "type": "array",
+            "title": "Datasets"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "inference_policy": {
+            "type": "string",
+            "title": "Inference Policy"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "datasets",
+          "version",
+          "inference_policy"
+        ],
+        "title": "Catalog"
+      },
+      "CompareRequest": {
+        "properties": {
+          "ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 2,
+            "title": "Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ids"
+        ],
+        "title": "CompareRequest"
+      },
+      "Comparison": {
+        "properties": {
+          "compatible": {
+            "type": "boolean",
+            "title": "Compatible"
+          },
+          "artifacts": {
+            "items": {
+              "$ref": "#/components/schemas/Artifact"
+            },
+            "type": "array",
+            "title": "Artifacts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "compatible",
+          "artifacts"
+        ],
+        "title": "Comparison"
+      },
+      "Dataset": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "available": {
+            "type": "boolean",
+            "title": "Available"
+          },
+          "subjects": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Subjects",
+            "default": []
+          },
+          "sessions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sessions",
+            "default": []
+          },
+          "runs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Runs",
+            "default": []
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "kind",
+          "synthetic",
+          "state",
+          "available"
+        ],
+        "title": "Dataset"
+      },
+      "EEGAnalysis": {
+        "properties": {
+          "channel": {
+            "type": "string",
+            "title": "Channel"
+          },
+          "frequencies_hz": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Frequencies Hz"
+          },
+          "density_V2_Hz": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Density V2 Hz"
+          },
+          "band_power_V2": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Band Power V2"
+          },
+          "tf_times_s": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Tf Times S"
+          },
+          "tf_frequencies_hz": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Tf Frequencies Hz"
+          },
+          "tf_power_V2": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Tf Power V2"
+          },
+          "bursts_s": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Bursts S"
+          },
+          "n_analysis_samples": {
+            "type": "integer",
+            "title": "N Analysis Samples"
+          },
+          "edge_guard_s": {
+            "type": "number",
+            "title": "Edge Guard S"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "channel",
+          "frequencies_hz",
+          "density_V2_Hz",
+          "band_power_V2",
+          "tf_times_s",
+          "tf_frequencies_hz",
+          "tf_power_V2",
+          "bursts_s",
+          "n_analysis_samples",
+          "edge_guard_s"
+        ],
+        "title": "EEGAnalysis"
+      },
+      "EEGMeta": {
+        "properties": {
+          "channels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Channels"
+          },
+          "fs_hz": {
+            "type": "number",
+            "title": "Fs Hz"
+          },
+          "duration_s": {
+            "type": "number",
+            "title": "Duration S"
+          },
+          "units": {
+            "type": "string",
+            "title": "Units",
+            "default": "V"
+          },
+          "reference": {
+            "type": "string",
+            "title": "Reference"
+          },
+          "events": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Events"
+          },
+          "quality": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Quality"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "channels",
+          "fs_hz",
+          "duration_s",
+          "reference",
+          "events",
+          "quality"
+        ],
+        "title": "EEGMeta"
+      },
+      "EEGWindow": {
+        "properties": {
+          "times_s": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Times S"
+          },
+          "channels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Channels"
+          },
+          "values_V": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Values V"
+          },
+          "lower_V": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Lower V"
+          },
+          "upper_V": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Upper V"
+          },
+          "fs_hz": {
+            "type": "number",
+            "title": "Fs Hz"
+          },
+          "display_only": {
+            "type": "boolean",
+            "title": "Display Only",
+            "default": true
+          },
+          "start_sample": {
+            "type": "integer",
+            "title": "Start Sample"
+          },
+          "stop_sample": {
+            "type": "integer",
+            "title": "Stop Sample"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "times_s",
+          "channels",
+          "values_V",
+          "lower_V",
+          "upper_V",
+          "fs_hz",
+          "start_sample",
+          "stop_sample"
+        ],
+        "title": "EEGWindow"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Job": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "progress": {
+            "type": "number",
+            "title": "Progress"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Result_EEGAnalysis_"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "manifest": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Manifest"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "progress"
+        ],
+        "title": "Job"
+      },
+      "JobRequest": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{1,80}$",
+            "title": "Dataset Id"
+          },
+          "channel": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "Channel"
+          },
+          "start_s": {
+            "type": "number",
+            "maximum": 86400.0,
+            "minimum": 0.0,
+            "title": "Start S"
+          },
+          "duration_s": {
+            "type": "number",
+            "maximum": 30.0,
+            "minimum": 2.0,
+            "title": "Duration S"
+          },
+          "kind": {
+            "type": "string",
+            "pattern": "^eeg-analysis$",
+            "title": "Kind",
+            "default": "eeg-analysis"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "channel",
+          "start_s",
+          "duration_s"
+        ],
+        "title": "JobRequest"
+      },
+      "MeshData": {
+        "properties": {
+          "vertices_mm": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Vertices Mm"
+          },
+          "faces": {
+            "items": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Faces"
+          },
+          "values": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Values"
+          },
+          "points_mm": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Points Mm"
+          },
+          "electrode_points_mm": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Electrode Points Mm"
+          },
+          "frame": {
+            "type": "string",
+            "title": "Frame"
+          },
+          "units": {
+            "type": "string",
+            "title": "Units"
+          },
+          "layers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Layers"
+          },
+          "qc": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Qc"
+          },
+          "render_geometry": {
+            "type": "string",
+            "title": "Render Geometry"
+          },
+          "diagnostics": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Diagnostics"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "vertices_mm",
+          "faces",
+          "values",
+          "points_mm",
+          "electrode_points_mm",
+          "frame",
+          "units",
+          "layers",
+          "qc",
+          "render_geometry",
+          "diagnostics"
+        ],
+        "title": "MeshData"
+      },
+      "QCReport": {
+        "properties": {
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "human_preprocessing": {
+            "$ref": "#/components/schemas/State"
+          },
+          "human_retest": {
+            "$ref": "#/components/schemas/State"
+          },
+          "clinical_validity": {
+            "type": "boolean",
+            "title": "Clinical Validity"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "inference_policy": {
+            "type": "string",
+            "title": "Inference Policy"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "state",
+          "human_preprocessing",
+          "human_retest",
+          "clinical_validity",
+          "warnings",
+          "inference_policy"
+        ],
+        "title": "QCReport"
+      },
+      "Result_EEGAnalysis_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/EEGAnalysis"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[EEGAnalysis]"
+      },
+      "Result_EEGMeta_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/EEGMeta"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[EEGMeta]"
+      },
+      "Result_EEGWindow_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/EEGWindow"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[EEGWindow]"
+      },
+      "Result_MeshData_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/MeshData"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[MeshData]"
+      },
+      "Result_Slice_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/Slice"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[Slice]"
+      },
+      "Result_SourceSeries_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SourceSeries"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[SourceSeries]"
+      },
+      "Result_VolumeMeta_": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "$ref": "#/components/schemas/VolumeMeta"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[VolumeMeta]"
+      },
+      "Result_dict_str__Any__": {
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
+          "synthetic": {
+            "type": "boolean",
+            "title": "Synthetic"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "data": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Data"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "state",
+          "synthetic",
+          "warnings",
+          "provenance",
+          "data"
+        ],
+        "title": "Result[dict[str, Any]]"
+      },
+      "Slice": {
+        "properties": {
+          "plane": {
+            "type": "string",
+            "title": "Plane"
+          },
+          "index": {
+            "type": "integer",
+            "title": "Index"
+          },
+          "width": {
+            "type": "integer",
+            "title": "Width"
+          },
+          "height": {
+            "type": "integer",
+            "title": "Height"
+          },
+          "values": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Values"
+          },
+          "labels": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Labels"
+          },
+          "voxel": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Voxel"
+          },
+          "world_mm": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "World Mm"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "pixel_to_world_mm": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Pixel To World Mm"
+          },
+          "horizontal_labels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Horizontal Labels"
+          },
+          "vertical_labels": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Vertical Labels"
+          },
+          "stride": {
+            "type": "integer",
+            "title": "Stride"
+          },
+          "overlay_units": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overlay Units"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "plane",
+          "index",
+          "width",
+          "height",
+          "values",
+          "labels",
+          "voxel",
+          "world_mm",
+          "label",
+          "pixel_to_world_mm",
+          "horizontal_labels",
+          "vertical_labels",
+          "stride"
+        ],
+        "title": "Slice"
+      },
+      "SourceSeries": {
+        "properties": {
+          "source_index": {
+            "type": "integer",
+            "title": "Source Index"
+          },
+          "times_s": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Times S"
+          },
+          "values": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Values"
+          },
+          "units": {
+            "type": "string",
+            "title": "Units"
+          },
+          "point_mm": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Point Mm"
+          },
+          "point_spread": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Point Spread"
+          },
+          "diagnostics": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Diagnostics",
+            "default": {}
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source_index",
+          "times_s",
+          "values",
+          "units",
+          "point_mm",
+          "point_spread"
+        ],
+        "title": "SourceSeries"
+      },
+      "State": {
+        "type": "string",
+        "enum": [
+          "VALIDATED_NUMERICAL",
+          "DESCRIPTIVE_ONLY",
+          "EXPLORATORY",
+          "INDETERMINATE",
+          "INVALID",
+          "NOT_AVAILABLE"
+        ],
+        "title": "State"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VolumeMeta": {
+        "properties": {
+          "shape": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Shape"
+          },
+          "affine_mm": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Affine Mm"
+          },
+          "spacing_mm": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Spacing Mm"
+          },
+          "orientation": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Orientation"
+          },
+          "frame": {
+            "type": "string",
+            "title": "Frame"
+          },
+          "units": {
+            "type": "string",
+            "title": "Units"
+          },
+          "intensity_range": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "title": "Intensity Range"
+          },
+          "oblique": {
+            "type": "boolean",
+            "title": "Oblique"
+          },
+          "labels": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Labels"
+          },
+          "transforms": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Transforms",
+            "default": []
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "shape",
+          "affine_mm",
+          "spacing_mm",
+          "orientation",
+          "frame",
+          "units",
+          "intensity_range",
+          "oblique",
+          "labels"
+        ],
+        "title": "VolumeMeta"
+      }
+    }
+  }
+}

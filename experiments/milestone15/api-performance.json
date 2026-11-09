@@ -1,0 +1,115 @@
+{
+  "scope": "TestClient in-process, serialized responses; no network latency;9 calls/case",
+  "libraries": {
+    "soma-neuro": "0.15.0",
+    "fastapi": "0.162.2",
+    "pydantic": "2.14.3",
+    "uvicorn": "0.54.0",
+    "numpy": "2.5.4",
+    "nilearn": "0.14.1",
+    "mne": "1.13.2"
+  },
+  "platform": "Darwin/arm64",
+  "measurements": {
+    "catalog": {
+      "first_ms": 14.356084051541984,
+      "warm_median_ms": 2.184270997531712,
+      "warm_p95_ms": 2.455327205825597,
+      "response_bytes": 2107,
+      "JSON_parse_median_ms": 0.021875021047890186
+    },
+    "EEG_window_demo": {
+      "first_ms": 6.7798750242218375,
+      "warm_median_ms": 5.544624989852309,
+      "warm_p95_ms": 5.943687498802319,
+      "response_bytes": 166766,
+      "JSON_parse_median_ms": 1.4954999787732959
+    },
+    "PSD_TFR_bursts_demo": {
+      "first_ms": 3.3788749715313315,
+      "warm_median_ms": 1.2329375022090971,
+      "warm_p95_ms": 1.3250936230178922,
+      "response_bytes": 47373,
+      "JSON_parse_median_ms": 0.4420829936861992
+    },
+    "MRI_slice_demo": {
+      "first_ms": 8.119249949231744,
+      "warm_median_ms": 1.4727499801665545,
+      "warm_p95_ms": 1.7384872306138277,
+      "response_bytes": 39137,
+      "JSON_parse_median_ms": 0.40245905984193087
+    },
+    "mesh_demo": {
+      "first_ms": 5.897208931855857,
+      "warm_median_ms": 2.065312466584146,
+      "warm_p95_ms": 2.384275523945689,
+      "response_bytes": 67565,
+      "JSON_parse_median_ms": 0.8215840207412839
+    },
+    "source_series_demo": {
+      "first_ms": 1.3648329768329859,
+      "warm_median_ms": 1.2046659830957651,
+      "warm_p95_ms": 1.4157919562421737,
+      "response_bytes": 12286,
+      "JSON_parse_median_ms": 0.11395895853638649
+    },
+    "experiment_discovery": {
+      "first_ms": 4.985625040717423,
+      "warm_median_ms": 4.359270504210144,
+      "warm_p95_ms": 4.6865938464179635,
+      "response_bytes": 64456,
+      "JSON_parse_median_ms": 0.5279589677229524
+    },
+    "fmri_demo": {
+      "first_ms": 15.394625021144748,
+      "warm_median_ms": 1.3149789883755147,
+      "warm_p95_ms": 1.4081294590141624,
+      "response_bytes": 10210,
+      "JSON_parse_median_ms": 0.10900001507252455
+    },
+    "EEG_window_local": {
+      "first_ms": 22.33970898669213,
+      "warm_median_ms": 7.59220850886777,
+      "warm_p95_ms": 8.089093345915899,
+      "response_bytes": 37100,
+      "JSON_parse_median_ms": 0.3112920094281435
+    },
+    "PSD_TFR_bursts_local": {
+      "first_ms": 5.227165995165706,
+      "warm_median_ms": 3.347104473505169,
+      "warm_p95_ms": 3.635239665163681,
+      "response_bytes": 46278,
+      "JSON_parse_median_ms": 0.4407920641824603
+    },
+    "MRI_slice_local": {
+      "first_ms": 69.55008301883936,
+      "warm_median_ms": 7.260687474627048,
+      "warm_p95_ms": 7.720173243433237,
+      "response_bytes": 50330,
+      "JSON_parse_median_ms": 0.5719580221921206
+    },
+    "mesh_template_artifact": {
+      "first_ms": 54.815375013276935,
+      "warm_median_ms": 8.818479487672448,
+      "warm_p95_ms": 12.475356354843825,
+      "response_bytes": 236453,
+      "JSON_parse_median_ms": 2.6309159584343433
+    },
+    "source_PSF_artifact": {
+      "first_ms": 7.244708016514778,
+      "warm_median_ms": 6.132833543233573,
+      "warm_p95_ms": 6.577067036414519,
+      "response_bytes": 49134,
+      "JSON_parse_median_ms": 0.4417499294504523
+    },
+    "fmri_existing_artifact": {
+      "first_ms": 4.629499977454543,
+      "warm_median_ms": 2.1637915051542222,
+      "warm_p95_ms": 2.5348872935865074,
+      "response_bytes": 1083,
+      "JSON_parse_median_ms": 0.012542004697024822
+    }
+  },
+  "process_peak_RSS_MiB": 427.421875,
+  "limits": "No timing SLA; RSS includes caches/libraries; local data stays private"
+}

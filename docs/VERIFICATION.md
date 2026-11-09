@@ -927,3 +927,25 @@ all3 figures; raw MRI/individual results are excluded. Detailed evidence and
 incomplete criteria: `MILESTONE14_1_RESULTS.md`, `FMIRI_NULL_CALIBRATION_AUDIT.md`,
 `FMIRI_PREPROCESSING_SETUP.md`, `FMIRI_HUMAN_PILOT.md`. Historical sections above
 remain unchanged.
+
+## Milestone15 addendum — interactive local research Explorer
+
+Soma0.15.0 adds a separate FastAPI service and React/TypeScript application.
+All851 baseline tests and historical artifacts are preserved; no scientific
+method, baseline test or historical report was modified. Full Python suite892
+passes (41 new API tests); ordinary offline suite875 passes/17 deselected.
+Frontend14 unit tests and8 Playwright checks pass, including explicitly
+configured local EEG, MRI, sealed template-source and descriptive synthetic fMRI
+artifacts. Strict mypy covers191 source modules including the service. Ruff,
+Python/frontend formatting, TypeScript, frontend lint/build and dependency checks
+pass. Actual synthetic screenshots are in `docs/assets/explorer/`.
+
+Affine tests include axis permutation/reflection, anisotropy, pixel-to-world
+mapping, aligned categorical labels and rejection of mismatches/unknown units.
+Browser checks verify neurological labels, physical pixel aspect, shared
+crosshairs and picking after zoom. Signed design colormaps have regression tests.
+Security tests cover roots/traversal/symlinks, CORS/Host, request bounds, restricted
+execution, sealed source bundles, changed-file invalidation and fMRI policy.
+Existing human preprocessing/retest remain unavailable; no inference guard was
+weakened. Measured API/browser costs and remaining limits are documented in
+`MILESTONE15_RESULTS.md` and aggregate `experiments/milestone15/` receipts.

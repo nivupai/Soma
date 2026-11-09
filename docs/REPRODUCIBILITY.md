@@ -412,3 +412,20 @@ metadata-only inspection does not establish local availability or executed
 software. No human derivative/transform chain was produced. Reproduction and
 new-source hash algorithms are documented explicitly rather than equated.
 Existing output directories must be preserved and fresh runs named separately.
+
+## Milestone15 addendum
+
+Explorer demo reuses seeded Soma generators; no private data are required.
+The frontend lockfile pins its dependency tree and project-local supported Node
+runtime. Python service versions are recorded in the aggregate performance and
+verification receipts. Install dependencies/browser separately; ordinary
+scientific, component and synthetic E2E tests do not fetch datasets.
+
+Run `python -m experiments.milestone15.benchmark` from the repository root for
+bounded in-process API timings. Optional ignored local configuration is created
+by `python -m experiments.milestone15.configure_local` only for the existing
+permitted cache. `BENCHMARK_EXPLORER=1` records synthetic browser measurements;
+`CAPTURE_EXPLORER=1` deliberately refreshes synthetic screenshots during Playwright.
+Private job manifests and participant imagery stay ignored. Original reports are
+read-only and their checksum ledger is verified before commit. Setup and exact
+commands are in `EXPLORER_USER_GUIDE.md`.

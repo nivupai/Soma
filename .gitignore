@@ -24,3 +24,12 @@ configs/tissue-subjects.local.json
 
 # Local anatomical pipeline derivatives contain private MRI data.
 /derivatives/
+
+# Local research Explorer resources and frontend build/cache
+node_modules/
+apps/explorer/dist/
+apps/explorer/test-results/
+apps/explorer/playwright-report/
+configs/explorer.local.json
+.env
+*.tsbuildinfo
