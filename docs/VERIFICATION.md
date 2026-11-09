@@ -902,3 +902,28 @@ sensitivity commands. Verified annex identities, source hashes,52 output hashes,
 array dtype correction changes no estimates. Actual metrics, uncertainty, data
 restrictions and incomplete real acceptance are in [M14 results](MILESTONE14_RESULTS.md)
 and the [aggregate receipt](../experiments/milestone14/verification.json).
+
+## Milestone 14.1 addendum — null calibration and preprocessing readiness
+
+Baseline `8e24b6e`:815 tests pass. All54 baseline test files and885 recorded
+historical report files retain their original SHA256. No scientific assertion
+was weakened. Full suite:851 passed (36 new); ordinary offline suite:834 passed,
+17 integration tests deselected. Ruff check, Ruff formatting, strict mypy
+(184 source modules) and pip dependency check pass. See aggregate receipt
+`experiments/milestone141/verification.json` for numerical and preservation checks.
+
+The exact historical100%/23%/24% OLS/AR1/AR2 null family errors reproduce before
+implementation. New independent staged simulations preserve failures and Monte
+Carlo uncertainty. Independent QR, exact GLS, signed-t/z conversion, correction
+examples and actual full image GLM comparisons agree. Default inference is
+explicitly descriptive; unsupported confirmatory requests fail. Newly added
+BY/Bonferroni outputs use method-specific names, never mislabeled BH probabilities.
+
+Read-only ds000114 input validation passes; no eligible fMRIPrep derivatives,
+zero human fits. Docker daemon, local image/VM verification, license and template
+assets block execution. No anatomical registration or human reliability criterion
+passes by implication. The audit inspects generated synthetic tables/arrays and
+all3 figures; raw MRI/individual results are excluded. Detailed evidence and
+incomplete criteria: `MILESTONE14_1_RESULTS.md`, `FMIRI_NULL_CALIBRATION_AUDIT.md`,
+`FMIRI_PREPROCESSING_SETUP.md`, `FMIRI_HUMAN_PILOT.md`. Historical sections above
+remain unchanged.

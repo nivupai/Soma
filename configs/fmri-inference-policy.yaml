@@ -1,0 +1,16 @@
+version: 0.14.1
+default: descriptive
+feasible_ar1_ar2: experimental_nominal_tests
+human: descriptive_only
+confirmatory_supported_class:
+  data: explicitly_declared_synthetic
+  errors: iid_Gaussian_temporal_independent_voxels
+  design_and_mask: fixed_independent_of_errors
+  estimator: ols
+  samples: 100
+  voxel_families: [1, 27, 343]
+  correction: bh
+  q: 0.05
+  smoothing_fwhm_mm: 0
+known_covariance_gls: diagnostic_reference_only
+by_bonferroni: do_not_repair_invalid_marginal_p_values

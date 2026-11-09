@@ -393,3 +393,22 @@ Stale pilot outputs or inputs cannot authorize cohort reuse. Clinical inputs and
 individual outputs remain ignored. See [commands](../experiments/milestone14/README.md)
 and [measured results](MILESTONE14_RESULTS.md). Human-data gaps are not filled by
 raw fitting or by simulated subjects. Historical results remain byte-identical.
+
+## Milestone 14.1 addendum
+
+Protocol/config freeze: `configs/milestone141-freeze.json`. Final inference
+policy/evidence/source freeze before attempted human analysis:
+`configs/milestone141-policy-freeze.json`. Scripts, environment/command details
+and aggregate result receipt: `experiments/milestone141/README.md`.
+Independent SeedSequence streams use seed1411000; exact historical repetition
+uses15142–15241. Do not mix repeated historical seeds with new validation.
+
+Ignored synthetic reports preserve exact X/c, temporal/spatial covariance,
+estimator diagnostics, individual realizations, probability/plot arrays, versions,
+source hashes, runtime/RSS and output hashes. Private raw inventories preserve
+MRI acquisition metadata and source hashes. The aggregate audit exports no
+individual medical hashes or paths. Image25.2.7 is pinned by registry digest;
+metadata-only inspection does not establish local availability or executed
+software. No human derivative/transform chain was produced. Reproduction and
+new-source hash algorithms are documented explicitly rather than equated.
+Existing output directories must be preserved and fresh runs named separately.

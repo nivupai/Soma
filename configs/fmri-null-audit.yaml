@@ -1,0 +1,21 @@
+seed: 1411000
+single_replications: 512
+spatial_replications: 128
+single_conditions:
+  - [iid, 100]
+  - [ar1, 100]
+  - [ar2, 100]
+  - [ar1, 40]
+  - [ar1, 200]
+spatial_conditions:
+  - [iid, independent, 3]
+  - [iid, independent, 7]
+  - [ar1, independent, 3]
+  - [ar1, independent, 7]
+  - [ar1, independent, 10]
+  - [ar2, independent, 7]
+  - [ar1, correlated, 7]
+  - [ar1, smoothed, 7]
+  - [ar1, mixture, 7]
+models: [ols, ar1, ar2]
+q: 0.05

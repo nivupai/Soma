@@ -1,0 +1,9 @@
+{
+  "baseline": "8e24b6e",
+  "before_new_validation": true,
+  "files_sha256": {
+    "docs/MILESTONE14_1_PROTOCOL.md": "3d1714b9beececf7ccad060f167f77728336b1cd82d50e0ab1a1ef1a26cbcf31",
+    "configs/fmri-null-audit.yaml": "a6cc458d05a98f18f198157fc548c047eceb140abb1f493308330ad90f26e9d8",
+    "configs/fmri-preprocessing-plan.yaml": "635b8135f06fc5936bbfedb0b8c0acc9ab5a0f170fad2f7c07a63cdf0aabfa45"
+  }
+}

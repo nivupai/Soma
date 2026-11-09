@@ -8,9 +8,10 @@ import numpy as np
 import pandas as pd
 from nilearn.glm.contrasts import compute_fixed_effects
 from nilearn.glm.first_level import FirstLevelModel
-from scipy.stats import false_discovery_control, norm
+from scipy.stats import norm
 
 from soma.fmri.design import Contrast, ModelConfig, build_design
+from soma.fmri.inference import InferencePolicy, adjust_probabilities
 from soma.fmri.records import FunctionalRun
 from soma.imaging.volumes import Volume
 
@@ -109,7 +110,10 @@ def fit(run: FunctionalRun, config: ModelConfig, *, allow_unvalidated_demo: bool
     return Fit(run, config, design, report, model)
 
 
-def contrast(fitted: Fit, definition: Contrast) -> Estimate:
+def contrast(
+    fitted: Fit, definition: Contrast, *, policy: InferencePolicy | None = None
+) -> Estimate:
+    decision = (policy or InferencePolicy()).evaluate(fitted.run, fitted.config, fitted.design)
     vector = definition.vector(fitted.design)
     maps = dict(fitted.model.compute_contrast(vector, stat_type="t", output_type="all"))
     # Nilearn also returns an upper-tail p_value; this API exports only the
@@ -120,9 +124,13 @@ def contrast(fitted: Fit, definition: Contrast) -> Estimate:
     if not np.isfinite(z).all():
         raise ValueError("Nonfinite statistical map")
     p = 2 * norm.sf(np.abs(z))
-    adjusted = false_discovery_control(p, method="bh")
+    adjusted = adjust_probabilities(p, method=decision["correction"])
     rejected = adjusted <= fitted.config.q
-    for name, values in [("p_two_sided", p), ("q_bh", adjusted), ("fdr_reject", rejected)]:
+    adjusted_name = {"bh": "q_bh", "by": "q_by", "bonferroni": "p_bonferroni"}[
+        decision["correction"]
+    ]
+    rejection_name = "fwe_reject" if decision["correction"] == "bonferroni" else "fdr_reject"
+    for name, values in [("p_two_sided", p), (adjusted_name, adjusted), (rejection_name, rejected)]:
         array = np.zeros(mask.shape, np.float32)
         array[mask] = values
         maps[name] = nib.Nifti1Image(array, fitted.run.image.affine)
@@ -143,7 +151,13 @@ def contrast(fitted: Fit, definition: Contrast) -> Estimate:
             "noise_model": fitted.config.noise_model,
             "hrf_model": fitted.config.hrf_model,
             "smoothing_fwhm_mm": fitted.config.smoothing_fwhm,
-            "correction": "Benjamini-Hochberg FDR",
+            "correction": {
+                "bh": "Benjamini-Hochberg FDR",
+                "by": "Benjamini-Yekutieli FDR",
+                "bonferroni": "Bonferroni FWE",
+            }[decision["correction"]],
+            "inference_policy": decision,
+            "confirmatory_claim_allowed": decision["confirmatory_claim_allowed"],
             "q": fitted.config.q,
             "family_voxels": int(mask.sum()),
             "rejected_voxels": int(rejected.sum()),

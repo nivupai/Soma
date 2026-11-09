@@ -1,0 +1,8 @@
+{
+  "before_new_human_contrasts": true,
+  "files_sha256": {
+    "configs/fmri-inference-policy.yaml": "e56f0e3b6279fd47f38e60619ad70de7836cd077bbf2bf824f321ded61c38ab1"
+  },
+  "calibration_summary_sha256": "df21a497b680c33515d0c79e7a85bdd33f919f15b2122f5efb461d8b064f1c57",
+  "source_tree_sha256": "f0b72c749394666c012d2bfbcf0b034bb7784fb358e2b6b7f216fd7fcdb4036f"
+}

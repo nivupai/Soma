@@ -1,0 +1,11 @@
+raw: data/external/ds000114
+subject: '01'
+sessions: [test, retest]
+task: fingerfootlips
+image: nipreps/fmriprep:25.2.7
+platform: linux/amd64
+output: derivatives/ds000114-fmriprep-25.2.7
+work: data/derived/ds000114-fmriprep-work
+output_spaces: [T1w, 'MNI152NLin2009cAsym:res-2']
+threads: 4
+memory_mb: 12000
