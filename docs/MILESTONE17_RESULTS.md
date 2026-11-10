@@ -56,8 +56,7 @@ cases. Frozen tolerances are bundled and hash-bound; they were not widened in
 response to observed failures. The CI comparator checks actual outputs across
 Linux x86_64/macOS arm64 and Python 3.11/3.12, with twice the per-oracle bounds by
 the triangle inequality. Exact input-hash identity is reported separately.
-Actual platform CI evidence will be appended before merging; configuration alone
-is not execution evidence.
+Actual platform evidence is recorded below and in platform-comparison.json.
 
 ## Performance and limits
 
@@ -83,3 +82,32 @@ Machine-readable inventory, migration receipts, local numerical errors/environme
 performance and security evidence are in experiments/milestone17. Proposed next
 Milestone 18: reviewed workflow-level provenance graphs and cache invalidation,
 subject to a separate user-approved scope. It has not been started.
+
+## Executed cross-platform CI addendum
+
+[CI run 42725087662](https://github.com/nivupai/Soma/actions/runs/42725087662)
+executed all four required numerical jobs on feature commit 4534b7f. Each passed
+all 79 schema tests and all 12 numerical cases. Downloaded reports were inspected
+and independently compared locally using the same frozen protocol.
+
+| Actual OS / architecture | Python | NumPy | SciPy |
+|---|---|---|---|
+| macOS / arm64 | 3.11.9 | 2.4.6 | 1.17.1 |
+| macOS / arm64 | 3.12.10 | 2.5.4 | 1.18.1 |
+| Linux / x86_64 | 3.11.18 | 2.4.6 | 1.17.1 |
+| Linux / x86_64 | 3.12.16 | 2.5.4 | 1.18.1 |
+
+All 36 comparisons against the macOS/Python 3.11 baseline passed, with maximum
+observed absolute difference 2.365e-14 (GLM effect). Exact affine, voxel index,
+label, GLM image and serialization input hashes agree across all four runs.
+Generated EEG values and GLM design input hashes differ; their numerical outputs
+still agree within declared tolerances. Thus equivalent generator configuration
+and numerical agreement do not imply universal byte-identical inputs.
+Linux reports identify single-thread OpenBLAS variants; macOS threadpoolctl
+reports OpenMP but does not identify every linked math backend. That observation
+is retained without guessing an unreported backend. All reported environments
+and per-case differences are in the durable synthetic-only comparison table.
+
+The first CI run caught Prettier formatting in one newly added frontend test.
+Prettier was applied without assertion changes and frontend gates rerun. This
+formatting correction and this evidence addendum require green CI before merge.

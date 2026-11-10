@@ -68,24 +68,22 @@ describe("versioned artifact presentation", () => {
 it("retains structured scientific incompatibility explanations", async () => {
   vi.stubGlobal(
     "fetch",
-    vi
-      .fn()
-      .mockResolvedValue({
-        ok: false,
-        status: 409,
-        json: async () => ({
-          detail: {
-            scientific_compatibility: [
-              {
-                issues: [
-                  { field: "subject_identity", reason: "Different subjects" },
-                ],
-                unknown: [],
-              },
-            ],
-          },
-        }),
+    vi.fn().mockResolvedValue({
+      ok: false,
+      status: 409,
+      json: async () => ({
+        detail: {
+          scientific_compatibility: [
+            {
+              issues: [
+                { field: "subject_identity", reason: "Different subjects" },
+              ],
+              unknown: [],
+            },
+          ],
+        },
       }),
+    }),
   );
   await expect(api("/experiments/compare")).rejects.toThrow(
     "subject_identity: Different subjects",

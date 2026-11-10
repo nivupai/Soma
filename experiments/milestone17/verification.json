@@ -3884,5 +3884,20 @@
     },
     "limitation": "Manual review plus pattern scanners cannot prove the absence of all sensitive information"
   },
-  "cross_platform_ci": "PENDING; actual runner artifacts required before merge"
+  "cross_platform_ci": {
+    "evidence_run": 42725087662,
+    "actual_numerical_jobs_passed": 4,
+    "cases_per_job": 12,
+    "cross_platform_comparisons_passed": 36,
+    "exact_input_hash_identity": {
+      "EEG_values": false,
+      "GLM_design": false,
+      "GLM_image": true,
+      "affine": true,
+      "labels": true,
+      "serialization": true,
+      "voxel_indices": true
+    },
+    "remaining_merge_gates": "full CI must pass on final PR head"
+  }
 }
