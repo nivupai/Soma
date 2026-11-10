@@ -50,3 +50,12 @@ comparable result, and retain the original method-specific metadata alongside it
 NumPy typing portability fixes add explicit float64 return conversion and Python
 float scalars at existing boundaries. Formulas are unchanged. The SDK root is
 lightweight; domain imports load their scientific dependencies.
+
+## Versioned results (v0.17)
+
+`soma.sdk.results` exports create_result, validate_result, inspect_result, save_result,
+load_result, verify_integrity, verify_provenance, compare_results, require_compatible,
+convert_units, upgrade_schema and migrate_legacy. All paths are explicit Path
+objects. Metadata inspection does not read arrays; numerical loading verifies
+linked bytes. See RESULT_SCHEMA_SPECIFICATION.md, ARTIFACT_INTEGRITY.md and
+SCIENTIFIC_RESULT_COMPATIBILITY.md for complete contracts and limits.

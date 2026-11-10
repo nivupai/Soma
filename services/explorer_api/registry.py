@@ -108,6 +108,8 @@ def sanitize(value: Any) -> Any:
             "subject",
             "subjects",
             "subject_id",
+            "subject_identity",
+            "participant_identity",
             "participant",
             "participants",
             "participant_id",

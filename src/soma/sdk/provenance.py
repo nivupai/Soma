@@ -77,6 +77,11 @@ def require_comparable(left: dict[str, Any], right: dict[str, Any]) -> None:
     Different fingerprints may describe independent predictions, but matching
     identity, semantics, methods and parameters are mandatory. No pooling implied.
     """
+    if "schema_name" in left or "schema_name" in right:
+        from soma.results.compatibility import require_compatible
+
+        require_compatible(left, right)
+        return
     for key in [
         "sdk_schema_version",
         "application_version",

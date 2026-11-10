@@ -1,5 +1,9 @@
 # Soma
 
+Soma v0.17.0 adds [versioned scientific artifacts](docs/RESULT_SCHEMA_SPECIFICATION.md),
+[compatibility checks](docs/SCIENTIFIC_RESULT_COMPATIBILITY.md), read-only migration
+and cross-platform reproducibility evidence. See [Milestone17 results](docs/MILESTONE17_RESULTS.md).
+
 Soma v0.16.0 provides a documented [scientific SDK](docs/SDK_OVERVIEW.md),
 [eight executable examples](examples/README.md), reviewed wheel/source artifacts
 and an optional local Explorer. See [installation](docs/SDK_INSTALLATION.md) and

@@ -113,3 +113,14 @@ Then `npm --prefix apps/explorer run e2e` starts/reuses local servers. Local-dat
 E2E coverage is explicitly skipped when the optional allowlist is absent; all
 synthetic checks remain offline. Set `CAPTURE_EXPLORER=1` only for deliberate
 synthetic screenshot recapture; participant views are never captured into docs.
+
+## Versioned scientific artifacts
+
+Register an experiment entry pointing to result.json under an explicit permitted
+root. Arrays must remain in its arrays/ directory. The browser displays schema,
+validation and migration status; invalid/future/corrupt records show reasons and
+no figures. Original payloads are never edited. Comparisons of versioned records
+use the scientific compatibility engine; legacy four-field declarations retain
+their narrower historical meaning. Metadata on the wire is sanitized; checksums
+identify the original artifact, not a sanitized display copy. Schema validation
+does not grant statistical or anatomical validity.

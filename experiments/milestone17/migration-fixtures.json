@@ -1,0 +1,27 @@
+{
+  "policy": "explicit read-only sources; no guessed units or timestamps; generic records remain INDETERMINATE",
+  "fixtures": [
+    {
+      "id": "M1-synthetic-Welch",
+      "path": "reports/synthetic-spectrum/manifest.json",
+      "format": "welch-manifest-v1",
+      "channel": "sine10",
+      "availability": "local permitted synthetic output; never committed"
+    },
+    {
+      "id": "M6-verification",
+      "path": "experiments/milestone6/verification.json",
+      "format": "milestone-verification-json"
+    },
+    {
+      "id": "M7-verification",
+      "path": "experiments/milestone7/verification.json",
+      "format": "milestone-verification-json"
+    },
+    {
+      "id": "M16-SDK-examples",
+      "path": "experiments/milestone16/examples.json",
+      "format": "milestone-verification-json"
+    }
+  ]
+}

@@ -118,6 +118,11 @@ export interface SourceSeries {
   diagnostics: Record<string, unknown>;
 }
 export interface Artifact {
+  schema_name?: string | null;
+  schema_version?: string | null;
+  validation_status?: string;
+  migration_status?: string;
+  result_envelope?: Record<string, unknown> | null;
   state: Interpretation;
   id: string;
   title: string;
@@ -159,6 +164,26 @@ export async function api<T>(
     const body = await response
       .json()
       .catch(() => ({ detail: "Service unavailable" }));
+    if (
+      body.detail &&
+      typeof body.detail === "object" &&
+      Array.isArray(body.detail.scientific_compatibility)
+    ) {
+      const reasons: string[] = [];
+      for (const judgment of body.detail.scientific_compatibility) {
+        for (const issue of [
+          ...(judgment.issues ?? []),
+          ...(judgment.unknown ?? []),
+        ]) {
+          if (
+            typeof issue.field === "string" &&
+            typeof issue.reason === "string"
+          )
+            reasons.push(`${issue.field}: ${issue.reason}`);
+        }
+      }
+      throw new Error(`Scientific incompatibility: ${reasons.join("; ")}`);
+    }
     throw new Error(
       typeof body.detail === "string"
         ? body.detail

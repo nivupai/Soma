@@ -77,3 +77,11 @@ identify the destination repository independently of installation location and
 require allowed ignored output trees. Complete test-suite schema verification
 requires the developer BIDS validator extra; without it, schema output remains
 INDETERMINATE. Fresh SDK core imports/examples do not require that developer tool.
+
+## v0.17 result schemas
+
+Use current0.17.0 wheel/sdist names. Run `python -m examples.result_schemas` and
+`soma results --help`. Existing examples remain available; run_sdk_examples adds
+the eight result-schema demonstrations. `configs/reproducibility-floor.txt` is a
+tested compatible floor, not a cross-platform binary lock. Fresh installation
+receipts are written under the current milestone reports directory.

@@ -14,6 +14,7 @@ NAMES = (
     "fmri_contrast",
     "provenance",
     "explorer",
+    "result_schemas",
 )
 
 
