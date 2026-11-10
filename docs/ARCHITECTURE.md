@@ -336,3 +336,11 @@ and [results](MILESTONE14_RESULTS.md); anatomical certification is separate.
 adapters, CLI and analytical reproducibility. `soma.sdk.results` is the supported
 facade. Existing estimators/result classes remain unchanged. Explorer delegates
 versioned validation/comparison and never treats array shape as scientific meaning.
+
+## Opt-in workflow provenance
+
+`soma.workflow` extends existing StageSpec ordering, pipeline encoding and staged
+publication with a bipartite artifact/stage DAG, logical/environment/cache/content
+identities, verified immutable entries and bounded serial execution. Existing
+MRI/cohort engines remain intact. Public SDK/CLI share these contracts; Explorer
+projects metadata only. Details: WORKFLOW_PROVENANCE_SPECIFICATION.md.

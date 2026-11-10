@@ -437,3 +437,11 @@ identity, logical dataset identity, backend/environment identity and tolerance-b
 numerical equivalence are separate records. Unsupported schema/method semantics
 require a named adapter or recomputation. Never use private old filesystem paths
 as required reproducibility inputs.
+
+## Workflow replay (Milestone 18)
+
+Exact-environment cache identities bind declared semantics and observed dependencies.
+Resume revalidates schemas, linked bytes, producer versions and lineage. Four real
+synthetic DAG replays accompany the unchanged M17 numerical oracles on supported
+platforms. Numerical equivalence does not authorize cache interchange. See
+WORKFLOW_REPLAY.md, WORKFLOW_RECOVERY.md and WORKFLOW_CI.md.

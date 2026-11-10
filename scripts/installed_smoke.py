@@ -20,7 +20,16 @@ args = parser.parse_args()
 assert soma.__version__ == version("soma-neuro") == args.expected_version
 assert Path(soma.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
 assert SpecifierSet(metadata("soma-neuro")["Requires-Python"]) == SpecifierSet(">=3.11,<3.13")
-for module in ["imaging", "eeg", "source", "fmri", "provenance", "synthetic", "results"]:
+for module in [
+    "imaging",
+    "eeg",
+    "source",
+    "fmri",
+    "provenance",
+    "synthetic",
+    "results",
+    "workflow",
+]:
     importlib.import_module("soma.sdk." + module)
 assert "descriptive_only" in inference_policy_text()
 assert manifest({"synthetic": True}, {}, {})["git_revision"] is None

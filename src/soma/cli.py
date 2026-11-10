@@ -17,6 +17,7 @@ from soma.imaging.cli import app as mri_app
 from soma.results.cli import app as results_app
 from soma.signal.experiments import synthetic_spectrum
 from soma.source.cli import app as source_app
+from soma.workflow.cli import app as workflow_app
 
 if TYPE_CHECKING:
     from soma.eeg.motor_imagery import MotorImageryConfig
@@ -26,6 +27,7 @@ datasets = typer.Typer(help="List metadata or fetch explicitly selected recordin
 eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
 app.add_typer(results_app, name="results")
+app.add_typer(workflow_app, name="workflow")
 app.add_typer(source_app, name="source")
 app.add_typer(mri_app, name="mri")
 app.add_typer(fmri_app, name="fmri")

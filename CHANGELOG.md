@@ -22,3 +22,10 @@
   and read-only permissions. No public release, PyPI upload or deployment.
 
 Historical scientific reports and original release records are preserved.
+
+## 0.18.0
+
+- Add opt-in typed workflow lineage, exact-environment identities and verified caches.
+- Add atomic publication, fault-tested recovery and four existing-method synthetic DAGs.
+- Add metadata-only interactive workflow inspection and actual cross-platform replay.
+- Preserve existing scientific algorithms, result schemas and historical tests/artifacts.

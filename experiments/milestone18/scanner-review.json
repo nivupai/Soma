@@ -1,0 +1,12 @@
+{
+  "scope": "proposed synthetic-only Milestone 18 verification report",
+  "rule": "generic-api-key",
+  "reviewed_file": "experiments/milestone18/verification.json",
+  "reviewed_file_sha256": "80a0659adb593e924ebeb01cb24e6719c37c8a6681e1a32c219eccd6cdf23c7f",
+  "raw_findings": 63,
+  "distinct_cache_fingerprints": 32,
+  "classification": "deterministic SHA-256 stage cache identities, not authentication material",
+  "verification": "Every flagged line is a cache_key SHA-256 and matches an executed local stage receipt",
+  "scanner_rules_suppressed": false,
+  "new_data_or_binary_exceptions": false
+}
