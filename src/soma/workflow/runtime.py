@@ -14,11 +14,12 @@ import threading
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
-from importlib.metadata import version
+from importlib.metadata import distribution, version
 from pathlib import Path
 from typing import Any
 
 import numpy as np
+import scipy
 from threadpoolctl import threadpool_info, threadpool_limits
 
 from soma import __version__
@@ -143,25 +144,49 @@ class Registry:
 
 
 def environment() -> dict[str, Any]:
+    names = [
+        "soma-neuro",
+        "numpy",
+        "scipy",
+        "nilearn",
+        "mne",
+        "nibabel",
+        "SimpleITK",
+        "scikit-image",
+        "neurodsp",
+        "pandas",
+        "scikit-learn",
+        "joblib",
+        "threadpoolctl",
+    ]
+    records = {}
+    for name in names:
+        if name == "soma-neuro":
+            continue  # Soma uses the actual Python source digest, including editable installs.
+        record = distribution(name).read_text("RECORD")
+        if not record:
+            raise WorkflowError(
+                "Scientific dependency installation record unavailable; reuse unsafe"
+            )
+        records[name] = hashlib.sha256(record.encode()).hexdigest()
+    builds = {}
+    for name, module in [("numpy", np), ("scipy", scipy)]:
+        config = getattr(module.__config__, "CONFIG", None)
+        if not isinstance(config, dict):
+            raise WorkflowError("Numerical build metadata unavailable; reuse unsafe")
+        builds[name] = hashlib.sha256(canonical(config)).hexdigest()
     return {
         "python": platform.python_version(),
         "system": platform.system(),
         "machine": platform.machine(),
         "byteorder": sys.byteorder,
-        "libraries": {
-            n: version(n)
-            for n in [
-                "soma-neuro",
-                "numpy",
-                "scipy",
-                "nilearn",
-                "mne",
-                "nibabel",
-                "SimpleITK",
-                "scikit-image",
-                "neurodsp",
-            ]
-        },
+        "os_build": platform.platform(),
+        "kernel_build": platform.version(),
+        "python_implementation": platform.python_implementation(),
+        "python_compiler": platform.python_compiler(),
+        "libraries": {n: version(n) for n in names},
+        "installation_records_sha256": records,
+        "numerical_build_metadata_sha256": builds,
         "backends": [
             {
                 k: v
@@ -172,6 +197,7 @@ def environment() -> dict[str, Any]:
         ],
         "numerical_limits": {"workers": 1, "threads": 1},
         "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
     }
 
 

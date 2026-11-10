@@ -134,6 +134,15 @@ def test_selective_invalidation_and_key_agreement(family, expected, tmp_path):
 def test_environment_distinct_from_logical_and_result_bytes(tmp_path):
     e = Executor(builtins(), tmp_path / "cache")
     g = example("source")
+    assert {"pandas", "scikit-learn", "joblib"} <= e.environment["libraries"].keys()
+    assert all(len(v) == 64 for v in e.environment["installation_records_sha256"].values())
+    assert set(e.environment["numerical_build_metadata_sha256"]) == {"numpy", "scipy"}
+    build = copy.deepcopy(e.environment)
+    build["numerical_build_metadata_sha256"]["numpy"] = "0" * 64
+    old = identities(g, e.registry, e.environment)
+    different = identities(g, e.registry, build)
+    assert all(old[n]["logical_key"] == different[n]["logical_key"] for n in old)
+    assert all(old[n]["cache_key"] != different[n]["cache_key"] for n in old)
     a = identities(g, e.registry, e.environment)
     env = copy.deepcopy(e.environment)
     env["machine"] = "other-architecture"

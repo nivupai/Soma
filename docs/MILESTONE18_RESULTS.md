@@ -104,3 +104,35 @@ the downloaded synthetic-only artifacts; configuration is not evidence.
 No new neural estimator, MRI tissue algorithm, fMRI confirmation model or clinical
 readiness claim is introduced. Proposed Milestone 19: reviewed workflow protocol
 versioning and controlled longitudinal replay. Milestone 19 has not been started.
+
+## Executed first platform run and review corrections
+
+[Run 42738321766](https://github.com/nivupai/Soma/actions/runs/42738321766) executed
+all four actual replay jobs and their comparison on commit c5ff535. All four
+workflows passed cold/warm/changed runs on each platform, alongside all 12 M17
+oracles. The 12 cross-workflow-summary comparisons passed; maximum absolute
+difference was 3.03e-14 (fMRI). This establishes agreement of selected summaries,
+not equality of every intermediate voxel/array. Exact content and file identities
+are recorded separately; numerical agreement does not permit cache interchange.
+
+| Actual OS / architecture | Python | NumPy | SciPy |
+|---|---|---|---|
+| macOS / arm64 | 3.11.9 | 2.4.6 | 1.17.1 |
+| macOS / arm64 | 3.12.10 | 2.5.4 | 1.18.1 |
+| Linux / x86_64 | 3.11.18 | 2.4.6 | 1.17.1 |
+| Linux / x86_64 | 3.12.16 | 2.5.4 | 1.18.1 |
+
+The environment review then added pandas/scikit-learn/joblib/threadpoolctl versions,
+OS/kernel/compiler builds, scientific installation-record digests and NumPy/SciPy
+build-configuration digests. Local full tests remain 1,090 passing and all workflows
+and M17 oracles pass with this stronger identity. Missing build evidence fails
+closed. Installation/build records are not authentication of a hostile runtime.
+The initial local verification JSON is immutable capture evidence, with its exact
+SHA-bound scanner review; this addendum records subsequent identity hardening.
+
+First-run Explorer CI exposed five accidental external ESLint lockfile edits made
+during the Soma release-number update. They were restored to their original values;
+Soma remains 0.18.0. A real clean npm ci, all 21 frontend tests, TypeScript, lint,
+format, production build and dependency audit then passed. No test assertion was
+weakened. Final-head CI must be entirely green before merge; the PR records its
+actual workflow run and merge decision.

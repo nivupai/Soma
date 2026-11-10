@@ -47,3 +47,10 @@ A code change can invalidate more than a parameter change; this favors correctne
 over hit rate. Exact dependency versions are included. Changing a graph's separate
 presentation preferences does not change numerical keys. No universal semantic
 proof of third-party algorithms or malicious runtime modifications is claimed.
+
+The final environment audit also binds pandas/scikit-learn/joblib/threadpoolctl,
+OS/kernel/Python compiler builds, scientific installation RECORD digests and NumPy/
+SciPy build-configuration digests. Build paths are hashed, not exported. Missing
+installation/build evidence fails closed. These records distinguish different
+wheel/build installations with identical version labels; they do not authenticate
+a hostile process or prove that external operators never modified an installation.
