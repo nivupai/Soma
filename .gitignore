@@ -98,3 +98,8 @@ id_ed25519*
 *.swp
 *.swo
 *~
+
+# Local research-use evidence and authorization must never enter Git.
+*.local.json
+*.local.yaml
+*.local.yml

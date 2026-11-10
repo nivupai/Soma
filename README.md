@@ -472,3 +472,11 @@ Explorer's Protocols page compares registered execution evidence without running
 workflows. See [the protocol specification](docs/RESEARCH_PROTOCOL_SPECIFICATION.md)
 and [Milestone 19 evidence](docs/MILESTONE19_RESULTS.md). Local seals are not
 independent preregistration, and synthetic replay does not establish human validity.
+
+### Human data audit (0.20.0)
+
+`soma.sdk.human`, the `data`/`human-pilot`/`registration` CLI groups and Explorer's
+Data Audit view add scoped identity/session checks and content-bound use evidence.
+Adapters inspect explicit cached data only. Unknown rights or missing preprocessing
+produce blocked records, not fabricated human scientific results. See
+[Milestone 20](docs/MILESTONE20_RESULTS.md) for actual coverage and remaining gaps.

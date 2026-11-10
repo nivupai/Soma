@@ -1,0 +1,20 @@
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  text-align: left;
+}
+.audit-table th,
+.audit-table td {
+  padding: 0.8rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.audit-table td:first-child {
+  max-width: 18rem;
+  overflow-wrap: anywhere;
+}
+.audit-table th {
+  color: var(--muted);
+  font-weight: 500;
+}

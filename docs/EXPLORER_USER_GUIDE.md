@@ -145,3 +145,17 @@ method changes; EXPLORATORY requires an explicit amendment. Inspect snapshot/QC,
 conformance, deviations, drift values and upstream/downstream lineage. Numerical
 plots cover aligned selected summaries only. No page action executes a workflow.
 Local seal status is never displayed as external preregistration.
+
+## Research data audit (0.20.0 addendum)
+
+**Data Audit** shows dataset-scoped participant/session structure, task/modality,
+use-evidence status, protocol eligibility, execution readiness, missing preprocessing,
+deviations and registration warnings. The default is an explicitly fictional,
+unexecuted metadata fixture. Reading it never starts science or contacts providers.
+
+Register actual ignored native human execution artifacts explicitly as `human-audit`
+entries under allowed roots. Optional `metadata_file` can reference a local registration
+receipt; it is labeled not revalidated, never automatically external preregistration.
+Audit responses contain selected metadata/lineage, not metric arrays, images, private
+mappings or keys. Scoped pseudonyms still require controlled access; the configured
+local boundary is not a general publication authorization.

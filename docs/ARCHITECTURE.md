@@ -352,3 +352,11 @@ requirements into allowlisted M18 DAGs; `replay.py` delegates execution/cache wo
 and compares verified records; `history.py` audits historical evidence without
 inventing missing study identities. M17 finite envelopes and M18 scientific methods
 remain the foundation. Explorer routes read explicit registered metadata only.
+
+## Human adapters (0.20.0 addendum)
+
+`human/model.py` defines immutable scoped identities; `adapters.py` inspects explicit
+cached resources; `permissions.py` checks content-bound purpose/action evidence;
+`workflow.py` binds frozen M19 cohorts to registered M18 execution and M17 native
+metadata records. `registration.py` provides opt-in read-only public metadata evidence.
+No estimator, existing preprocessing pipeline or cache semantics is replaced.

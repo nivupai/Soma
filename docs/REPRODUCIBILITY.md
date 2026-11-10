@@ -454,3 +454,12 @@ outputs, artifact content and existing schema oracles. M19 uses unchanged frozen
 bounds; numerical agreement does not prove biological validity or authorize cache
 interchange. Local sealing is not independent preregistration, and repeated runs
 are not automatically a human longitudinal study. See the seven protocol guides.
+
+## Human identity/evidence (0.20.0 addendum)
+
+Four actual CI environments check deterministic fictional identity serialization,
+dataset-scoped pseudonyms, permissions, frozen cohorts, registration schema and
+synthetic lineage. CI requires no human data and makes no claim of equivalent real
+access across platforms. Existing M17/M18/M19 numerical checks remain mandatory.
+Human pilot records stay local, bind actual input hashes and permissions, and are
+not automatically prospective, confirmatory or longitudinal biological evidence.

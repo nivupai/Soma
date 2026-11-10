@@ -1,0 +1,66 @@
+{
+  "schema": "soma.milestone20.verification/1.0.0",
+  "version": "0.20.0",
+  "baseline_main": "459474dcff90d369a0f3473148f5d700abd96c54",
+  "python": {
+    "passed": 1234,
+    "baseline_preserved": 1161,
+    "new": 73,
+    "warnings": 117,
+    "integration_included": true
+  },
+  "frontend": {
+    "passed": 26,
+    "typescript": true,
+    "eslint": true,
+    "prettier": true,
+    "build": true,
+    "dependency_vulnerabilities": 0
+  },
+  "browser": {
+    "passed": 13,
+    "preserved": 12,
+    "installed_wheel_backend": true,
+    "screenshots_inspected": true
+  },
+  "ruff": true,
+  "format": true,
+  "strict_mypy_source_files": 238,
+  "pip_check": true,
+  "pip_audit_known_vulnerabilities": 0,
+  "package_checks": {
+    "wheel": true,
+    "sdist": true,
+    "source_noneditable": true,
+    "core_and_explorer_isolated": true,
+    "sdk_examples_per_installation": 12,
+    "distribution_contents_inspected": true,
+    "reproducible_builds": true
+  },
+  "preserved_file_hashes": 229,
+  "human_pilot": {
+    "dataset_scoped_identities": 10,
+    "cross_dataset_people_distinctness_verified": false,
+    "explicit_sessions": 2,
+    "scheduled_records": 11,
+    "complete": 4,
+    "blocked": 7,
+    "selected_records_retained": true,
+    "human_confirmation_authorized": false,
+    "longitudinal_reliability_established": false
+  },
+  "registration": {
+    "provided": false,
+    "independent_content_timestamp_attestation": false,
+    "immutable_attachment_verification_supported": false
+  },
+  "privacy": {
+    "material_secrets": 0,
+    "restricted_data_files": 0,
+    "personal_home_paths": 0,
+    "new_scanner_exceptions": 0,
+    "human_artifacts_published": false
+  },
+  "cross_platform": "pending actual private PR matrix; no human data in CI",
+  "milestone21_started": false
+}
