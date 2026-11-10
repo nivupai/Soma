@@ -31,3 +31,12 @@ comparison job requires all four platforms and compares against frozen protocol
 bounds without widening; records exact agreement separately. Existing M17/M18
 oracles remain required. Explorer CI explicitly prepares synthetic histories before
 browser testing; GET requests never create histories.
+
+## Human metadata matrix (0.20.0 addendum)
+
+All 13 existing jobs are retained. The four macOS arm64/Linux x86_64 Python 3.11/3.12
+jobs add human adversarial tests and `human-identity.json`, using fictional metadata
+and tiny generated NIfTI fixtures only. The dependent comparison requires exactly
+those four actual environments and identical identity/permission/protocol/registration
+schema/declared-lineage invariants. Real-data availability and rights are not inferred
+from CI. The M17/M18/M19 checks remain unchanged.

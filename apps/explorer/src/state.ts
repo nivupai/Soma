@@ -8,6 +8,7 @@ export type Page =
   | "Experiments"
   | "Workflows"
   | "Protocols"
+  | "Data Audit"
   | "Validation"
   | "Settings";
 export interface Selection {

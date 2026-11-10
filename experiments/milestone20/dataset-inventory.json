@@ -1,0 +1,22 @@
+{
+  "reviewed_at": "2026-11-10T08:41:05.354818+00:00",
+  "automatic_dataset_download": false,
+  "datasets": {
+    "eegmmidb": {
+      "available_subject_directories": 65
+    },
+    "ibsr-v2": {
+      "available_subject_directories": 18
+    },
+    "mrbrains13": {
+      "training_subjects": 5,
+      "test_files_names_only": 75,
+      "hidden_test_payload_reads": false
+    },
+    "mne-sample": {
+      "cached": true,
+      "use_permission": "NOT_ESTABLISHED",
+      "analysis": "NOT_REQUESTED"
+    }
+  }
+}

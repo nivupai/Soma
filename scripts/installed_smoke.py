@@ -30,6 +30,7 @@ for module in [
     "results",
     "workflow",
     "protocol",
+    "human",
 ]:
     importlib.import_module("soma.sdk." + module)
 assert "descriptive_only" in inference_policy_text()

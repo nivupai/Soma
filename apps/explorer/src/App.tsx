@@ -40,6 +40,7 @@ import {
 } from "./components/Common";
 import EEG from "./features/EEG";
 import MRI from "./features/MRI";
+const DataAudit = lazy(() => import("./features/DataAudit"));
 const Protocols = lazy(() => import("./features/Protocols"));
 const Workflows = lazy(() => import("./features/Workflows"));
 const Source = lazy(() => import("./features/Source"));
@@ -55,6 +56,7 @@ const pages: [Page, typeof Activity][] = [
   ["Experiments", FlaskConical],
   ["Workflows", Workflow],
   ["Protocols", ShieldCheck],
+  ["Data Audit", Database],
   ["Validation", ShieldCheck],
   ["Settings", Settings],
 ];
@@ -69,6 +71,8 @@ const descriptions: Record<Page, string> = {
   Workflows: "Inspect scientific dependencies and verified cache lineage.",
   Protocols:
     "Inspect sealed methods, execution histories and scientific drift.",
+  "Data Audit":
+    "Inspect dataset identity, session integrity and research-use evidence.",
   Validation: "Evidence, limitations and anatomical readiness.",
   Settings: "Local preferences and data boundaries.",
 };
@@ -459,6 +463,11 @@ export default function App() {
               {state.page === "Protocols" && (
                 <Suspense fallback={<p>Loading protocol evidence…</p>}>
                   <Protocols />
+                </Suspense>
+              )}
+              {state.page === "Data Audit" && (
+                <Suspense fallback={<p>Loading data audit…</p>}>
+                  <DataAudit mode={state.mode} />
                 </Suspense>
               )}
               {state.page === "Validation" && (

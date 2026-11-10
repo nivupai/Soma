@@ -13,6 +13,7 @@ from soma.datasets.registry import REGISTRY
 from soma.eeg.analysis import analyze_recording
 from soma.fmri.cli import app as fmri_app
 from soma.fmri.cli import multimodal as multimodal_app
+from soma.human.cli import data_app, human_app, registration_app
 from soma.imaging.cli import app as mri_app
 from soma.protocol.cli import protocol_app, replay_app
 from soma.results.cli import app as results_app
@@ -27,6 +28,9 @@ app = typer.Typer(help="Soma scientific computing foundation", no_args_is_help=T
 datasets = typer.Typer(help="List metadata or fetch explicitly selected recordings")
 eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
+app.add_typer(data_app, name="data")
+app.add_typer(registration_app, name="registration")
+app.add_typer(human_app, name="human-pilot")
 app.add_typer(results_app, name="results")
 app.add_typer(protocol_app, name="protocol")
 app.add_typer(replay_app, name="replay")

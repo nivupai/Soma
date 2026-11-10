@@ -45,3 +45,14 @@ misaligned segmentation, sealed source hashes, changed-file invalidation,
 comparison incompatibility and inference-policy refusal. No API exposes a
 confirmatory inference bypass. No raw patient image, local allowlist, participant
 screenshot or individual job manifest is staged in Git.
+
+## Human evidence boundary (0.20.0 addendum)
+
+Local authorization configurations (`*.local.json/yaml/yml`), keys, agreements and
+participant outputs must remain ignored. New audit endpoints are read-only and use
+existing explicit-root/symlink/origin checks. They never upload data, run pilots or
+retrieve registration metadata. Export of raw/participant records is unsupported.
+A key-passing design was rejected during automatic review; the implemented design
+verifies private mappings in memory before dispatch and never puts the key into
+workflow inputs, caches, graph metadata or execution records. Regression tests check
+that boundary. No rejected key-passing change was applied.

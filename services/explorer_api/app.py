@@ -189,6 +189,9 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     from .protocols import router as protocol_router
 
     app.include_router(protocol_router(registry))
+    from .human import router as human_router
+
+    app.include_router(human_router(registry))
     app.state.science, app.state.jobs, app.state.registry = science, jobs, registry
     app.add_middleware(
         CORSMiddleware,

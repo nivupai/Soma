@@ -50,3 +50,12 @@ See [API reference](SDK_API_REFERENCE.md), [installation](SDK_INSTALLATION.md),
 registered graph conformance, three replay modes, drift and append-only local history.
 See CONTROLLED_WORKFLOW_REPLAY.md and `examples/research_protocol.py`. Replay is
 synthetic/descriptive; it grants no confirmation or cross-environment cache reuse.
+
+## Human data (0.20.0 addendum)
+
+`soma.sdk.human` exposes cached EEG/MRI/BIDS identity inspection, scoped pseudonyms,
+private mapping validation, permission evidence/checks, frozen cohort planning,
+registered execution, replay/lineage reading, aggregate audit export and optional
+registration inspection. `examples/human_data_audit.py` uses fictional metadata only.
+See HUMAN_DATA_IDENTITY.md and HUMAN_PROTOCOL_CONFORMANCE.md. No API grants legal,
+consent, human confirmation or anatomical authority.

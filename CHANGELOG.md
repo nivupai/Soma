@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.20.0
+
+- Add dataset-scoped human identities, explicit absent sessions, purpose-scoped use
+  evidence and frozen-cohort conformance over existing scientific pipelines.
+- Add bounded cached EEGBCI/IBSR pilots, blocked MRBrainS/ds000114 records, native
+  lineage, SDK/CLI and read-only research-data audit views.
+- Add opt-in public registration metadata inspection with explicit mutable-metadata
+  limits; no automatic registration, preregistration or inference promotion.
+- Preserve existing scientific algorithms, schemas, cache semantics and historical tests.
+
 ## 0.19.0
 
 - Add strict versioned scientific protocol declarations, immutable local seals and

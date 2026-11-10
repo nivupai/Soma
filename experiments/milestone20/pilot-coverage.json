@@ -1,0 +1,62 @@
+{
+  "eegmmidb": {
+    "subjects_inspected": 2,
+    "sessions_explicit": 0,
+    "selected_records": 2,
+    "eligible_records": 2,
+    "complete_records": 2,
+    "blocked_or_failed_records": 0,
+    "permission_status": "SUPPORTED",
+    "status": "COMPLETE",
+    "limitations": [
+      "previously inspected human data; not a fresh holdout",
+      "permission check is not legal authorization or individual consent verification",
+      "descriptive only; no clinical or skull/scalp conductor validation"
+    ]
+  },
+  "ibsr-v2": {
+    "subjects_inspected": 2,
+    "sessions_explicit": 0,
+    "selected_records": 2,
+    "eligible_records": 2,
+    "complete_records": 2,
+    "blocked_or_failed_records": 0,
+    "permission_status": "SUPPORTED",
+    "status": "COMPLETE",
+    "limitations": [
+      "previously inspected human data; not a fresh holdout",
+      "permission check is not legal authorization or individual consent verification",
+      "descriptive only; no clinical or skull/scalp conductor validation"
+    ]
+  },
+  "mrbrains13": {
+    "subjects_inspected": 5,
+    "sessions_explicit": 0,
+    "selected_records": 5,
+    "eligible_records": 0,
+    "complete_records": 0,
+    "blocked_or_failed_records": 5,
+    "permission_status": "UNKNOWN",
+    "status": "BLOCKED_OR_PARTIAL",
+    "limitations": [
+      "previously inspected human data; not a fresh holdout",
+      "permission check is not legal authorization or individual consent verification",
+      "descriptive only; no clinical or skull/scalp conductor validation"
+    ]
+  },
+  "ds000114": {
+    "subjects_inspected": 1,
+    "sessions_explicit": 2,
+    "selected_records": 2,
+    "eligible_records": 0,
+    "complete_records": 0,
+    "blocked_or_failed_records": 2,
+    "permission_status": "SUPPORTED",
+    "status": "BLOCKED_OR_PARTIAL",
+    "limitations": [
+      "previously inspected human data; not a fresh holdout",
+      "permission check is not legal authorization or individual consent verification",
+      "descriptive only; no clinical or skull/scalp conductor validation"
+    ]
+  }
+}

@@ -80,3 +80,16 @@ validate, plan, run/resume, explain-cache, lineage, verify and example generatio
 and `redact_export` are exposed by `soma.sdk.protocol`. Validation raises
 `ProtocolError`; methods return immutable records or copied finite JSON summaries.
 See the protocol guides for exact mode preconditions and scientific limits.
+
+## Human API (0.20.0 addendum)
+
+`Identity`, `Selection`, `PermissionEvidence`, `create_identity`, `pseudonym`,
+`session_match`, `chronology`, `validate_cohort`, `eeg`, `mri`, `bids_fmri`,
+`check_permission`, `template`, `freeze_cohort`, `conformance`, `plan`, `run`,
+`graph_for`, `read_execution`, `compare`, `export_audit`, `RegistrationProvider`,
+`inspect_registration` and `verify_registration` are public through `soma.sdk.human`.
+Creation of declared identity metadata is distinct from source-adapter validation.
+Actual planning requires a consistent private mapping key and fresh source evidence.
+CLI groups: `data inspect/validate-identity/permissions/protocol-check`,
+`human-pilot plan/run`, `registration inspect/verify`. Registration network access
+requires `--network`; raw datasets are never fetched by these commands.
