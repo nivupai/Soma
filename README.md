@@ -463,3 +463,12 @@ publication/resume and a read-only interactive Explorer. Start with
 `python -m examples.workflow_provenance` or `soma workflow --help`. See
 [workflow specification](docs/WORKFLOW_PROVENANCE_SPECIFICATION.md) and
 [Milestone 18 results](docs/MILESTONE18_RESULTS.md).
+
+### Research protocol replay (0.19.0)
+
+Use `soma.sdk.protocol` or `soma protocol` / `soma replay` for immutable local
+scientific declarations, structural amendments and controlled descriptive replay.
+Explorer's Protocols page compares registered execution evidence without running
+workflows. See [the protocol specification](docs/RESEARCH_PROTOCOL_SPECIFICATION.md)
+and [Milestone 19 evidence](docs/MILESTONE19_RESULTS.md). Local seals are not
+independent preregistration, and synthetic replay does not establish human validity.

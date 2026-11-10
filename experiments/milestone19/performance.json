@@ -1,0 +1,63 @@
+{
+  "platform": "macOS-15.7-arm64-arm-64bit",
+  "graphs": {
+    "4": {
+      "validation": {
+        "median_s": 0.0006067499052733183,
+        "repeats": 3
+      },
+      "sealing": {
+        "median_s": 0.0008340839995071292,
+        "repeats": 3
+      },
+      "protocol_comparison": {
+        "median_s": 0.0016302079893648624,
+        "repeats": 3
+      },
+      "conformance": {
+        "median_s": 0.02181425003800541,
+        "repeats": 3
+      },
+      "replay_planning": {
+        "median_s": 0.09808383299969137,
+        "repeats": 3
+      }
+    },
+    "100": {
+      "validation": {
+        "median_s": 0.010561584029346704,
+        "repeats": 3
+      },
+      "sealing": {
+        "median_s": 0.014886582968756557,
+        "repeats": 3
+      },
+      "protocol_comparison": {
+        "median_s": 0.07696679199580103,
+        "repeats": 3
+      },
+      "conformance": {
+        "median_s": 0.030298875062726438,
+        "repeats": 3
+      },
+      "replay_planning": {
+        "median_s": 0.2340181249892339,
+        "repeats": 3
+      }
+    }
+  },
+  "execution_history_2": {
+    "median_s": 0.20720924995839596,
+    "repeats": 3
+  },
+  "drift_classification": {
+    "median_s": 0.11047470895573497,
+    "repeats": 3
+  },
+  "explorer_comparison": {
+    "median_s": 0.2199932080693543,
+    "repeats": 3
+  },
+  "scientific_computation_included": false,
+  "timing_acceptance_threshold": null
+}

@@ -186,6 +186,9 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
         science.close()
 
     app = FastAPI(title="Soma Explorer", version=__version__, lifespan=lifespan)
+    from .protocols import router as protocol_router
+
+    app.include_router(protocol_router(registry))
     app.state.science, app.state.jobs, app.state.registry = science, jobs, registry
     app.add_middleware(
         CORSMiddleware,

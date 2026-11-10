@@ -1,0 +1,145 @@
+[
+  {
+    "study": "EEG motor imagery",
+    "configuration": "configs/replication.yaml",
+    "freeze_receipt": "configs/replication-freeze.json",
+    "document": "docs/REPLICATION_PROTOCOL.md",
+    "scope": "Explicit subject-balanced units, eligibility and exploratory informed hypothesis; local hashes not preregistration.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "configs/replication.yaml": "MATCH",
+      "docs/REPLICATION_PROTOCOL.md": "MATCH"
+    },
+    "receipt_observed_sha256": "a52fc65ad1d58aa841c1e7a2e519754bcd8f52e1d9b4b28497f0ba1f82425690"
+  },
+  {
+    "study": "EEG decoding",
+    "configuration": "configs/decoding.yaml",
+    "freeze_receipt": "configs/decoding-freeze.json",
+    "document": "docs/DECODING_PROTOCOL.md",
+    "scope": "Development/heldout declarations; prevent leakage and pooled-trial participant inference.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "docs/DECODING_PROTOCOL.md": "MATCH",
+      "configs/decoding.yaml": "MATCH"
+    },
+    "receipt_observed_sha256": "c56794ee54ae9f5b1c190c93b4a99bd74e9a623fe0f2ab8ab7470b3a021b59e3",
+    "development_freeze_artifact": {
+      "path": "configs/decoding-frozen.yaml",
+      "observed_sha256": "d91dc8aa0fcf06e476b2c12fbc4bc40c3381c30cdcb30de3064f84f66edfcb6c",
+      "relationship": "separate development-selected configuration; not the initial receipt target"
+    }
+  },
+  {
+    "study": "MRI segmentation",
+    "configuration": "configs/segmentation-benchmark.yaml",
+    "freeze_receipt": "configs/milestone10-freeze.json",
+    "document": "docs/MILESTONE10_PROTOCOL.md",
+    "scope": "Ontology/geometry/independent predictions; missing participant/execution details remain unknown.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "docs/MILESTONE10_PROTOCOL.md": "MATCH",
+      "configs/segmentation-benchmark.yaml": "MATCH",
+      "configs/surface-benchmark.yaml": "MATCH",
+      "configs/mesh-repair.yaml": "MATCH",
+      "configs/offgrid.yaml": "MATCH",
+      "configs/grid-convergence.yaml": "MATCH"
+    },
+    "receipt_observed_sha256": "ab42efb59bab168e664cf04ae67b15dec68c5e2eb1665711c2583d900b5dcc2f"
+  },
+  {
+    "study": "Individual geometry/source",
+    "configuration": "configs/individual-source.yaml",
+    "freeze_receipt": "configs/individual-head-model-freeze.json",
+    "document": "docs/INDIVIDUAL_HEAD_MODEL_PROTOCOL.md",
+    "scope": "Conditional readiness and physical assumptions; no anatomical certification.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "docs/INDIVIDUAL_HEAD_MODEL_PROTOCOL.md": "MATCH",
+      "configs/individual-source.yaml": "MATCH",
+      "configs/coregistration.yaml": "MATCH",
+      "configs/bem.yaml": "MATCH",
+      "configs/source-uncertainty.yaml": "MATCH"
+    },
+    "receipt_observed_sha256": "e97c093291be0557fdd6f70309a3cbc349ab9705910360221090108db254d81b"
+  },
+  {
+    "study": "fMRI GLM",
+    "configuration": "configs/fmri-firstlevel.yaml",
+    "freeze_receipt": "configs/fmri-freeze.json",
+    "document": "docs/FMIRI_PROTOCOL.md",
+    "scope": "Model/design/contrasts frozen locally; human results descriptive.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "docs/FMIRI_PROTOCOL.md": "MATCH",
+      "configs/fmri-design.yaml": "MATCH",
+      "configs/fmri-firstlevel.yaml": "MATCH",
+      "configs/fmri-retest.yaml": "MATCH",
+      "configs/eeg-fmri-roi.yaml": "MATCH",
+      "configs/fmri-contrasts.yaml": "MATCH"
+    },
+    "receipt_observed_sha256": "9b626470a38be2499456ebb117fff27f27c76faabe658ff95b74e699ac023019"
+  },
+  {
+    "study": "fMRI null calibration",
+    "configuration": "configs/fmri-inference-policy.yaml",
+    "freeze_receipt": "configs/milestone141-policy-freeze.json",
+    "document": "docs/MILESTONE14_1_PROTOCOL.md",
+    "scope": "Narrow synthetic OLS class; no general AR/human confirmation authorization.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "configs/fmri-inference-policy.yaml": "MATCH"
+    },
+    "receipt_observed_sha256": "f281abe5b7b4f67a57e8d12525c26fcc8571825a300c00f4696659faffd88921"
+  },
+  {
+    "study": "Human tissues",
+    "configuration": "configs/human-tissues.yaml",
+    "freeze_receipt": "configs/human-tissues-freeze.json",
+    "document": "docs/MILESTONE11_HUMAN_PROTOCOL.md",
+    "scope": "Development IBSR, selected MRBrainS training; no hidden-test or redistribution claim.",
+    "adapter": "read-only evidence; INDETERMINATE historical study identity",
+    "missing": [
+      "independent registration/timing verification",
+      "complete historical execution binding"
+    ],
+    "recorded_file_hash_checks": {
+      "docs/MILESTONE11_HUMAN_PROTOCOL.md": "MATCH",
+      "configs/human-tissues.yaml": "MATCH"
+    },
+    "receipt_observed_sha256": "5a913dd4274f1c47a21a41ba445415b42eaeeb3a5f9af2fec0047ffe71fba3fa"
+  },
+  {
+    "study": "M18 synthetic DAGs",
+    "configuration": "src/soma/workflow/examples.py",
+    "freeze_receipt": null,
+    "document": "docs/WORKFLOW_PROVENANCE_SPECIFICATION.md",
+    "scope": "New prospective local protocols can bind all declared stages; synthetic-only, no independent preregistration.",
+    "adapter": "complete new local synthetic protocol, not historical backfill",
+    "missing": []
+  }
+]

@@ -445,3 +445,12 @@ Resume revalidates schemas, linked bytes, producer versions and lineage. Four re
 synthetic DAG replays accompany the unchanged M17 numerical oracles on supported
 platforms. Numerical equivalence does not authorize cache interchange. See
 WORKFLOW_REPLAY.md, WORKFLOW_RECOVERY.md and WORKFLOW_CI.md.
+
+## Research protocol replay (0.19.0 addendum)
+
+Frozen scientific identity differs from execution/cache identity. Actual four-platform
+CI runs compare protocol fingerprints, environment evidence, selected numerical
+outputs, artifact content and existing schema oracles. M19 uses unchanged frozen
+bounds; numerical agreement does not prove biological validity or authorize cache
+interchange. Local sealing is not independent preregistration, and repeated runs
+are not automatically a human longitudinal study. See the seven protocol guides.

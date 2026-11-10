@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.19.0
+
+- Add strict versioned scientific protocol declarations, immutable local seals and
+  explicit parent amendments; no external preregistration or confirmation claim.
+- Bind registered workflow requirements to exact, controlled and exploratory replay;
+  retain missing units and classify seven drift categories with frozen tolerances.
+- Add SDK/CLI, read-only Explorer comparisons, four synthetic execution histories,
+  independent synthetic MRI reference metrics and actual cross-platform CI checks.
+- Preserve historical scientific reports, algorithms, result schemas and cache policy.
+
 ## 0.17.0
 
 - Add strict versioned scientific envelopes, domain contracts and bounded non-pickle arrays.

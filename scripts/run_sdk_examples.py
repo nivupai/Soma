@@ -16,6 +16,7 @@ NAMES = (
     "explorer",
     "result_schemas",
     "workflow_provenance",
+    "research_protocol",
 )
 
 
