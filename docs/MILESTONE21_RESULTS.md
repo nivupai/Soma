@@ -83,10 +83,25 @@ is retained without fabricated fresh validation. No longitudinal reliability is 
   a single panel. The runner rejects readiness-only policies before any dispatch,
   preventing new evidence requirements from being bypassed by the legacy entry point.
 
-The existing thirteen-job/four-runner CI architecture is retained. Actual PR runner
-artifacts and publication evidence will be added after the private checks pass.
-All CI fixtures are synthetic; no human datasets/private agreements are needed.
-Existing numerical tolerances and historical scientific assertions are retained.
+The existing thirteen-job/four-runner CI architecture is retained. Implementation
+commit `07277fb59cf8214f5da2589ccb6dd2a9cdeed223` passed **13/13 jobs** in
+[PR run42866196384](https://github.com/nivupai/Soma/actions/runs/42866196384).
+
+Actual runner artifacts were downloaded and independently compared locally: macOS
+arm64 Python3.11.9/3.12.10 and Linux x86_64 Python3.11.18/3.12.16. Fictional canonical
+bundles, session relations, registration schema/status and blocked-gate invariants
+are identical across all four runners and the local example. Existing numerical,
+workflow, protocol and human-identity comparisons also pass their unchanged rules.
+Generated numerical input-byte differences remain separately reported by the
+inherited comparison; no cache interchangeability/full-study equivalence is claimed.
+
+Compact evidence is retained in `experiments/milestone21/ci-evidence.json` and
+`cross-platform-readiness.json`. No human datasets, actual registrations or private
+agreements were accessed by CI. Existing numerical tolerances and historical
+scientific assertions are retained. This documentation/evidence addendum must pass
+all thirteen checks again on its exact feature head before merge. Final merge,
+post-merge CI and synchronization receipts remain in ignored local reports and the
+completion message.
 
 ## Scientific limitations and next evidence
 
