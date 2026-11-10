@@ -463,3 +463,7 @@ synthetic lineage. CI requires no human data and makes no claim of equivalent re
 access across platforms. Existing M17/M18/M19 numerical checks remain mandatory.
 Human pilot records stay local, bind actual input hashes and permissions, and are
 not automatically prospective, confirmatory or longitudinal biological evidence.
+
+## Milestone 21 addendum
+
+M21 retains the macOS arm64/Linux x86_64 Python 3.11/3.12 matrix and existing numerical tolerances. Each runner executes offline synthetic readiness tests and emits fictional canonical-bundle/session/registration/gate invariants for exact comparison. This cannot establish equivalent real human data access or validated longitudinal results.

@@ -1,0 +1,68 @@
+{
+  "schema": "soma.milestone21.verification/1.0.0",
+  "version": "0.21.0",
+  "baseline_main": "7ed815b72015416ba76cc470a942a837b3f677b9",
+  "python": {
+    "passed": 1331,
+    "baseline_preserved": 1234,
+    "new": 97,
+    "warnings": 117,
+    "integration_included": true,
+    "new_tests_network_forbidden": true
+  },
+  "frontend": {
+    "passed": 30,
+    "baseline_preserved": 26,
+    "typescript": true,
+    "eslint": true,
+    "prettier": true,
+    "build": true,
+    "npm_audit_vulnerabilities": 0
+  },
+  "browser": {
+    "passed": 14,
+    "baseline_preserved": 13,
+    "installed_noneditable_backend": true,
+    "skipped": 0
+  },
+  "strict_mypy_source_files": 243,
+  "ruff": true,
+  "format": true,
+  "pip_check": true,
+  "pip_audit_known_vulnerabilities": 0,
+  "packages": {
+    "wheel": true,
+    "sdist": true,
+    "source_noneditable": true,
+    "core_and_explorer_isolated": true,
+    "sdk_examples_per_installation": 13,
+    "distribution_contents_inspected": true,
+    "reproducible_fixed_epoch_builds": true
+  },
+  "preserved_file_hashes": 239,
+  "human_evidence": {
+    "dataset_scoped_identities": 10,
+    "cross_dataset_distinct_humans_verified": false,
+    "EEG_recordings_inspected": 4,
+    "EEG_descriptive_analyses_complete": 4,
+    "explicit_EEG_visits": 0,
+    "IBSR_prior_results_reviewed": 2,
+    "MRBrainS_cases_still_blocked": 5,
+    "ds000114_sessions_still_blocked": 2,
+    "preprocessed_BOLD_candidates": 0,
+    "configured_derivative_roots_checked": 2,
+    "actual_verified_external_registrations": 0,
+    "new_authoritative_agreements": 0,
+    "newly_unblocked_records": 0,
+    "new_human_GLMs": 0
+  },
+  "security": {
+    "material_secrets": 0,
+    "restricted_data_files": 0,
+    "private_home_paths": 0,
+    "new_scanner_exceptions": 0,
+    "private_documents_or_human_artifacts_published": false
+  },
+  "cross_platform": "pending actual private PR runners; synthetic data only",
+  "milestone22_started": false
+}

@@ -3,7 +3,12 @@
 import hashlib
 import json
 from dataclasses import dataclass
-from typing import Any
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+    from soma.human.evidence import EvidenceBundle
 
 from soma.human.model import checksum, now, timestamp
 from soma.protocol.model import ProtocolError, closed
@@ -194,4 +199,60 @@ def check_permission(
         "evidence_fingerprint": record.fingerprint,
         "legal_authorization_established": False,
         "consent_verified": False,
+    }
+
+
+def permission_readiness(
+    record: PermissionEvidence,
+    source_content: bytes | None,
+    bundle: "EvidenceBundle",
+    references: dict[str, tuple["Path", str]],
+    *,
+    purpose: str = "methods_research",
+    action: str = "analyze",
+    at: str | None = None,
+) -> dict[str, Any]:
+    """Existing policy plus content-bound review; neither establishes legal consent."""
+    from soma.human.evidence import verify_bundle
+
+    d, b = record.document(), bundle.document()
+    policy = check_permission(
+        record,
+        dataset=b["dataset"],
+        version=b["version"],
+        purpose=purpose,
+        action=action,
+        source_content=source_content,
+        at=at,
+    )
+    integrity = verify_bundle(bundle, references, at=at)
+    entries = [e for e in b["entries"] if e["kind"] in {"license", "agreement", "irb", "consent"}]
+    reasons = list(policy["reasons"])
+    if not any(e["sha256"] == d["source_sha256"] for e in entries):
+        reasons.append("permission source is not bound to reviewed bundle")
+    for e in entries:
+        if (
+            e["sha256"] == d["source_sha256"]
+            and d["agreement_version"] is not None
+            and e["document_version"] != d["agreement_version"]
+        ):
+            reasons.append("agreement version does not match reviewed evidence")
+        row = next(r for r in integrity["entries"] if r["id"] == e["id"])
+        if row["status"] != "READY":
+            reasons.extend(e["id"] + ": " + text for text in row["reasons"])
+        if purpose != e["purpose"] or action not in e["actions"]:
+            reasons.append("conflicting evidence purpose/action scope")
+        if e["distribution"] == "UNKNOWN" or (
+            action == "export_aggregate" and e["distribution"] != "AGGREGATE_ONLY"
+        ):
+            reasons.append("distribution scope unsupported")
+    return {
+        "schema": "soma.human.permission-readiness/1.0.0",
+        "status": "READY" if not reasons else "BLOCKED",
+        "reasons": sorted(set(reasons)),
+        "policy": policy,
+        "bundle_fingerprint": bundle.fingerprint,
+        "legal_authorization_established": False,
+        "consent_verified": False,
+        "issuer_authentication": "LOCAL_REVIEW_ASSERTIONS_ONLY",
     }

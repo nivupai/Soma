@@ -23,7 +23,7 @@ def router(registry: Registry) -> APIRouter:
         ] + [
             {"id": e.id, "label": e.label, "synthetic": e.synthetic}
             for e in registry.entries.values()
-            if e.kind == "human-audit"
+            if e.kind in {"human-audit", "human-readiness"}
         ]
 
     @routes.get("/human-audits/{identity}")
@@ -42,6 +42,31 @@ def router(registry: Registry) -> APIRouter:
                     "Fictional declarations only; no human data or scientific execution",
                     "Session identity does not establish chronology or reliability",
                 ],
+                "readiness": {
+                    "status": "BLOCKED",
+                    "bundle_integrity": "NOT_AVAILABLE",
+                    "gates": [
+                        {
+                            "name": "preprocessing",
+                            "status": "BLOCKED",
+                            "reasons": ["Audited derivatives and transforms not provided"],
+                            "evidence": [],
+                        },
+                        {
+                            "name": "chronology",
+                            "status": "INDETERMINATE",
+                            "reasons": ["Session labels do not establish visit intervals"],
+                            "evidence": [],
+                        },
+                        {
+                            "name": "registration",
+                            "status": "NOT_APPLICABLE",
+                            "reasons": ["No external registration supplied"],
+                            "evidence": [],
+                        },
+                    ],
+                    "interpretation": "Fictional readiness fixture only; not an executed study",
+                },
                 "units": [
                     {
                         "participant_key": "fixture-only:fictional-person",
@@ -57,7 +82,58 @@ def router(registry: Registry) -> APIRouter:
                     for s in ["session-a", "session-b"]
                 ],
             }
-        entry = registry.get(identity, "human-audit")
+        entry = registry.get(identity)
+        if entry.kind == "human-readiness":
+            from soma.human.readiness import read_readiness
+
+            report = read_readiness(registry.path(entry))
+            return sanitize(
+                {
+                    "schema": "soma.human.audit-view/1.0.0",
+                    "dataset": report["dataset"],
+                    "status": report["status"],
+                    "synthetic": entry.synthetic,
+                    "registration": {
+                        "status": "HISTORICAL_RECEIPT_NOT_REVALIDATED",
+                        "claimed_status": report["registration"]["status"],
+                        "external_preregistration_verified": False,
+                    },
+                    "readiness": {
+                        "status": report["status"],
+                        "gates": report["gates"],
+                        "bundle_integrity": report["evidence_integrity"]["status"],
+                        "interpretation": report["interpretation"],
+                    },
+                    "units": [
+                        {
+                            "participant_key": u["participant_key"],
+                            "session": u["session"],
+                            "run": u["run"],
+                            "acquisition": u["acquisition"],
+                            "task": u["task"],
+                            "modality": u["modality"],
+                            "status": "NOT_EXECUTED",
+                            "permission": report["permission"]["status"],
+                            "eligibility": u["status"],
+                            "missing_preprocessing": "see gates; no inferred pipeline execution",
+                            "deviations": [
+                                reason
+                                for g in u["gates"]
+                                if g["status"] in {"BLOCKED", "INDETERMINATE"}
+                                for reason in g["reasons"]
+                            ],
+                            "lineage": {"protocol_fingerprint": report["protocol_fingerprint"]},
+                        }
+                        for u in report["units"]
+                    ],
+                    "warnings": [
+                        "Historical receipt; current use requires live evidence revalidation",
+                        "Readiness does not establish consent, confirmation or reliability",
+                        "Individual metrics and private document contents are not exposed",
+                    ],
+                }
+            )
+        registry.get(identity, "human-audit")
         record = read_execution(registry.path(entry))
         units = []
         for u in record["units"]:
@@ -68,6 +144,7 @@ def router(registry: Registry) -> APIRouter:
                     "session": d["session"],
                     "task": d["task"],
                     "run": d["run"],
+                    "acquisition": d["acquisition"],
                     "modality": d["modality"],
                     "status": u["status"],
                     "permission": u["eligibility"]["permission"]["status"],

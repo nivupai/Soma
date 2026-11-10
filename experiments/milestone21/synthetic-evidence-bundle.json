@@ -1,0 +1,34 @@
+{
+  "bundle": {
+    "created_at": "2020-01-02T00:00:00Z",
+    "dataset": "ibsr-v2",
+    "entries": [
+      {
+        "actions": [
+          "metadata"
+        ],
+        "distribution": "UNKNOWN",
+        "document_version": "1",
+        "expires_at": null,
+        "id": "fictional-notice",
+        "issued_at": "2020-01-01T00:00:00Z",
+        "issuer": "fictional-issuer",
+        "kind": "license",
+        "purpose": "methods_research",
+        "review": {
+          "reviewed_at": null,
+          "reviewer": null,
+          "status": "REQUIRED"
+        },
+        "revoked_at": null,
+        "sha256": "75d7aac0a29a122845176274a864a90b2f093d3051a69fb391d8ab57f53532ab",
+        "source": "fictional-source",
+        "valid_from": null
+      }
+    ],
+    "protocol_fingerprint": "7cfa1bc5a8d2603c6b881e5f55045d0623b3651ac2fe7adab4ad2dd5481c3175",
+    "schema": "soma.evidence.bundle/1.0.0",
+    "version": "fictional"
+  },
+  "sha256": "fa3f415548d21f09a8ac628c42a95be8d27a59d342312bf036700f51762c90c9"
+}

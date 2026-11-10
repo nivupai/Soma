@@ -1,0 +1,60 @@
+{
+  "reviewed_at": "2026-11-10T17:20:48.006829+00:00",
+  "datasets": {
+    "eegmmidb": {
+      "dataset_scoped_subjects": 2,
+      "recordings_inspected": 4,
+      "explicit_sessions": 0,
+      "permission_software_policy": "SUPPORTED_FOR_SOFTWARE_POLICY",
+      "new_human_review_evidence": "NOT_AVAILABLE",
+      "research_readiness": "BLOCKED",
+      "newly_unblocked_records": 0,
+      "existing_descriptive_analyses_complete": 4,
+      "same_task_event_semantics": true,
+      "independent_participants": 2,
+      "repeated_relationship": "REPEATED_RUN",
+      "visit_timing_available": false,
+      "longitudinal_reliability_established": false
+    },
+    "ibsr-v2": {
+      "dataset_scoped_subjects": 2,
+      "recordings_inspected": 2,
+      "explicit_sessions": 0,
+      "permission_software_policy": "SUPPORTED_FOR_SOFTWARE_POLICY",
+      "new_human_review_evidence": "NOT_AVAILABLE",
+      "research_readiness": "BLOCKED",
+      "newly_unblocked_records": 0,
+      "previous_fixed_prediction_results_reviewed": 2,
+      "new_segmentation_analyses": 0,
+      "CSF_performance": "POOR_PRESERVED",
+      "conductor_model_validation": false
+    },
+    "ds000114": {
+      "dataset_scoped_subjects": 1,
+      "recordings_inspected": 2,
+      "explicit_sessions": 2,
+      "permission_software_policy": "SUPPORTED_FOR_SOFTWARE_POLICY",
+      "new_human_review_evidence": "NOT_AVAILABLE",
+      "research_readiness": "BLOCKED",
+      "newly_unblocked_records": 0,
+      "preprocessing_status": "NOT_AVAILABLE",
+      "configured_derivative_roots_checked": 2,
+      "derivative_BOLD_candidates": 0,
+      "blocked_sessions": 2,
+      "new_human_GLMs": 0
+    },
+    "mrbrains13": {
+      "dataset_scoped_subjects": 5,
+      "records_retained": 5,
+      "blocked": 5,
+      "new_authoritative_permission_source": "NOT_AVAILABLE",
+      "research_readiness": "BLOCKED",
+      "newly_unblocked_records": 0,
+      "new_MRI_or_hidden_test_payload_reads": false,
+      "partition": "previously inspected training, not fresh holdout"
+    }
+  },
+  "actual_verified_external_registrations": 0,
+  "newly_unblocked_records": 0,
+  "large_downloads_or_external_pipeline_execution": false
+}

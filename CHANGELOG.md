@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.21.0
+
+- Exact current-revision OSF attachment evidence, sealed private-document references and reviewed permission readiness.
+- Content-bound preprocessing imports reuse established geometry/ITK/confound QC; no pipeline launch or human inference.
+- Explicit session/readiness gates, typed SDK/CLI and read-only Explorer extension.
+- Bounded cached pilots retain missing evidence and prior restrictions; no newly unblocked human analyses.
+
+
 ## 0.20.0
 
 - Add dataset-scoped human identities, explicit absent sessions, purpose-scoped use

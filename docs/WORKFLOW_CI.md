@@ -1,7 +1,7 @@
 # Workflow CI and packaging verification
 
 Milestone 18 extends the existing 13-job scientific SDK workflow rather than
-replacing its gates. Python3.11/3.12 scientific, distribution, quality, security,
+replacing its gates. Python 3.11/3.12 scientific, distribution, quality, security,
 Explorer, feasible dependency-floor and four actual platform reproducibility lanes
 remain. The platform lanes additionally execute workflow adversarial tests and
 all four cold/warm/invalidation replays. The comparison job verifies both the
@@ -40,3 +40,7 @@ and tiny generated NIfTI fixtures only. The dependent comparison requires exactl
 those four actual environments and identical identity/permission/protocol/registration
 schema/declared-lineage invariants. Real-data availability and rights are not inferred
 from CI. The M17/M18/M19 checks remain unchanged.
+
+## Milestone 21 addendum
+
+M21 retains thirteen jobs and adds synthetic readiness tests plus `readiness-evidence.json` to the existing four-runner artifacts. The dependent comparison reuses M20 actual-platform validation. Packaging checks include thirteen SDK examples. No restricted data/provider account/runtime container is needed.

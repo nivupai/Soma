@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./DataAudit.css";
+import ReadinessGates, { type Readiness } from "./ReadinessGates";
 import { Panel, Warning, Json, Async, useResource } from "../components/Common";
 type Item = { id: string; label: string; synthetic: boolean };
 export type AuditUnit = {
   participant_key: string;
   session: string | null;
+  run?: string | null;
+  acquisition?: string | null;
   task: string;
   modality: string;
   status: string;
@@ -20,6 +23,7 @@ type Audit = {
   synthetic: boolean;
   units: AuditUnit[];
   registration: unknown;
+  readiness?: Readiness;
   warnings: string[];
 };
 export function UnitTable({ units }: { units: AuditUnit[] }) {
@@ -30,6 +34,7 @@ export function UnitTable({ units }: { units: AuditUnit[] }) {
           <tr>
             <th>Dataset-scoped participant</th>
             <th>Session</th>
+            <th>Run / acquisition</th>
             <th>Task / modality</th>
             <th>Use evidence</th>
             <th>Eligibility / execution</th>
@@ -40,6 +45,9 @@ export function UnitTable({ units }: { units: AuditUnit[] }) {
             <tr key={i}>
               <td>{u.participant_key}</td>
               <td>{u.session ?? "NOT PROVIDED"}</td>
+              <td>
+                {u.run ?? "NOT PROVIDED"} / {u.acquisition ?? "NOT PROVIDED"}
+              </td>
               <td>
                 {u.task} / {u.modality}
               </td>
@@ -114,6 +122,9 @@ export default function DataAudit({
           )}
         </Async>
       </Panel>
+      {report.data?.readiness && (
+        <ReadinessGates value={report.data.readiness} />
+      )}
       {report.data && (
         <>
           <Panel

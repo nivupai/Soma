@@ -438,6 +438,10 @@ def run(
 ) -> dict[str, Any]:
     from soma.datasets.human_mri import safe_local_output
 
+    if "research_readiness" in sealed.protocol.document().get("optional_metadata", {}):
+        raise ValueError(
+            "Readiness protocols are read-only; legacy dispatch cannot bypass evidence gates"
+        )
     safe_local_output(output)
     safe_local_output(cache)
     for selection in selections:

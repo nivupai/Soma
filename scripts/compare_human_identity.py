@@ -7,8 +7,8 @@ from pathlib import Path
 from soma.results.io import read_json
 
 
-def compare(root):
-    reports = [read_json(p) for p in sorted(root.rglob("human-identity.json"))]
+def compare(root, filename="human-identity.json"):
+    reports = [read_json(p) for p in sorted(root.rglob(filename))]
     if len(reports) != 4:
         raise ValueError("Exactly four actual runner reports required")
     assert {

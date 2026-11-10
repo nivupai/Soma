@@ -93,3 +93,15 @@ Actual planning requires a consistent private mapping key and fresh source evide
 CLI groups: `data inspect/validate-identity/permissions/protocol-check`,
 `human-pilot plan/run`, `registration inspect/verify`. Registration network access
 requires `--network`; raw datasets are never fetched by these commands.
+
+## Milestone 21 addendum
+
+`soma.sdk.readiness` exports typed evidence bundles, immutable attachment verification, preprocessing imports/audits, session audits, readiness gates and native read/write helpers. `execution_readiness` rechecks live inputs; reports do not authorize execution. Existing SDK contracts remain. See [evidence bundles](RESEARCH_EVIDENCE_BUNDLES.md) and the fictional `examples/research_readiness.py`.
+
+### CLI readiness reference (0.21.0)
+
+The existing Typer groups are extended with `registration verify-attachment`,
+`evidence inspect/verify`, `preprocessing audit`, `sessions validate` and
+`research readiness`. Each command accepts explicit local files/roots. Provider
+retrieval requires `--network`. No command executes fMRIPrep or a shell. See
+[command syntax and policy](HUMAN_DATA_READINESS_GATES.md).
