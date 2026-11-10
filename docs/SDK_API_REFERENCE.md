@@ -59,3 +59,15 @@ convert_units, upgrade_schema and migrate_legacy. All paths are explicit Path
 objects. Metadata inspection does not read arrays; numerical loading verifies
 linked bytes. See RESULT_SCHEMA_SPECIFICATION.md, ARTIFACT_INTEGRITY.md and
 SCIENTIFIC_RESULT_COMPATIBILITY.md for complete contracts and limits.
+
+## Workflow provenance (0.18.0)
+
+`soma.sdk.workflow` exports Artifact, Stage, Graph, WorkflowError, Registry,
+Operation, Executor, builtins, example, changed, identities, content, digest,
+invalidation, opaque_subject and redact_export. Create an explicit graph, validate
+with the code-owned registry, inspect dependencies/lineage, plan, run or resume.
+Executor.run accepts input_root, snapshotted in-memory inputs, cancellation/fault
+callbacks, a run-journal path and optional previous Graph for invalidation evidence.
+Cache internals remain private. See WORKFLOW_PROVENANCE_SPECIFICATION.md and the
+public examples/workflow_provenance.py. CLI `soma workflow --help` lists inspect,
+validate, plan, run/resume, explain-cache, lineage, verify and example generation.

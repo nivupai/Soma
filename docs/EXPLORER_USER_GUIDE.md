@@ -124,3 +124,10 @@ use the scientific compatibility engine; legacy four-field declarations retain
 their narrower historical meaning. Metadata on the wire is sanitized; checksums
 identify the original artifact, not a sanitized display copy. Schema validation
 does not grant statistical or anatomical validity.
+
+## Workflow lineage
+
+Open Workflows to inspect synthetic or explicitly registered saved DAGs. Navigation
+is read-only and does not start computations. Use node selection, lineage direction,
+node search, zoom/pan, fit and keyboard navigator. Cache labels are recorded
+observations, not fresh verification. See WORKFLOW_EXPLORER.md.

@@ -1,8 +1,9 @@
 {
-  "description": "Two manually reviewed baseline generic-api-key false positives: public archive filename metadata and performance-receipt SHA256. Exact complete-file hashes; no scanner suppressions.",
+  "description": "Reviewed false positives bound to exact complete-file SHA256: two unchanged baseline records and the synthetic Milestone 18 workflow cache-identity report. Every new flagged line was verified against executed stage receipts; see experiments/milestone18/scanner-review.json. No scanner rule suppression.",
   "files": {
     "experiments/milestone10/verification.json": "bd437103a051c7e1380423d2735e5d395db836ea42141e89256ccfdd99ec75fc",
-    "experiments/milestone15/verification.json": "7368d2226166de2294e6a8ff936d0f3df82b21e7b28712da8b252faa2e583ba0"
+    "experiments/milestone15/verification.json": "7368d2226166de2294e6a8ff936d0f3df82b21e7b28712da8b252faa2e583ba0",
+    "experiments/milestone18/verification.json": "80a0659adb593e924ebeb01cb24e6719c37c8a6681e1a32c219eccd6cdf23c7f"
   },
   "synthetic_png_sha256": {
     "docs/assets/explorer/eeg-dark.png": "e9297c8502bc7eb28c60e9cff257edb70753da60cc42c455d08e3a3759095f16",

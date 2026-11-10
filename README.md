@@ -455,3 +455,11 @@ See [user guide](docs/EXPLORER_USER_GUIDE.md),
 [architecture](docs/EXPLORER_ARCHITECTURE.md),
 [security](docs/EXPLORER_SECURITY.md) and
 [results](docs/MILESTONE15_RESULTS.md).
+
+## Soma 0.18.0 workflow provenance
+
+Explicit scientific DAGs support verified caching, selective invalidation, atomic
+publication/resume and a read-only interactive Explorer. Start with
+`python -m examples.workflow_provenance` or `soma workflow --help`. See
+[workflow specification](docs/WORKFLOW_PROVENANCE_SPECIFICATION.md) and
+[Milestone 18 results](docs/MILESTONE18_RESULTS.md).

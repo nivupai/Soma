@@ -236,6 +236,46 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     async def missing(request: Request, exc: Exception) -> JSONResponse:
         return JSONResponse({"detail": "Configured resource not available"}, status_code=404)
 
+    def workflow_record(identity: str) -> tuple[Any, Any]:
+        from soma.results.io import read_json as bounded_json
+        from soma.workflow.examples import example
+        from soma.workflow.model import Graph
+        from soma.workflow.operations import builtins
+
+        if identity in {"demo-workflow-" + f for f in ["eeg", "mri", "fmri", "source"]}:
+            return example(identity.removeprefix("demo-workflow-")), None
+        entry = registry.get(identity, "workflow")
+        value = bounded_json(registry.path(entry))
+        record = value if value.get("schema") == "soma.workflow.run/1" else None
+        graph = Graph.from_dict(record["graph"] if record else value)
+        builtins().validate(graph)
+        return graph, record
+
+    @app.get("/api/workflows")
+    def workflows() -> Any:
+        return [
+            {"id": "demo-workflow-" + f, "label": "Synthetic " + f.upper(), "status": "NOT_RUN"}
+            for f in ["eeg", "mri", "fmri", "source"]
+        ] + [
+            {"id": e.id, "label": e.label, "status": "RECORDED"}
+            for e in registry.entries.values()
+            if e.kind == "workflow"
+        ]
+
+    @app.get("/api/workflows/{identity}")
+    def workflow_graph(identity: str) -> Any:
+        from soma.workflow.view import graph_view
+
+        graph, record = workflow_record(identity)
+        return graph_view(graph, record)
+
+    @app.get("/api/workflows/{identity}/lineage/{node}")
+    def workflow_lineage(identity: str, node: str, downstream: bool = False) -> Any:
+        from soma.workflow.privacy import redact_export
+
+        graph, _ = workflow_record(identity)
+        return redact_export(graph.lineage(node, downstream=downstream))
+
     @app.get("/api/catalog", response_model=Catalog)
     def catalog() -> Any:
         demos = [

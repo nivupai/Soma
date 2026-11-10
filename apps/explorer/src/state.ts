@@ -6,6 +6,7 @@ export type Page =
   | "Source Models"
   | "fMRI Laboratory"
   | "Experiments"
+  | "Workflows"
   | "Validation"
   | "Settings";
 export interface Selection {

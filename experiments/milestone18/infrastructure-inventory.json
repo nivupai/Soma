@@ -1,0 +1,67 @@
+[
+  {
+    "system": "MRI eleven-stage executor",
+    "source": "src/soma/pipeline/engine.py",
+    "decision": "Serial executor, StageSpec ordering, journaling, verified resume; retain existing algorithm path."
+  },
+  {
+    "system": "Typed ordering",
+    "source": "src/soma/pipeline/contracts.py",
+    "decision": "Reuse ordered_graph; extend with separate artifact nodes and typed producer links."
+  },
+  {
+    "system": "MRI serialization/cache",
+    "source": "src/soma/pipeline/cache.py",
+    "decision": "Reuse encode/decode and source_hash; legacy 24-hex cache identities remain historical."
+  },
+  {
+    "system": "Physical cache",
+    "source": "src/soma/anatomy/cache.py",
+    "decision": "File then receipt publication; do not silently reinterpret as new atomic directory cache."
+  },
+  {
+    "system": "EEG cohort/cache",
+    "source": "src/soma/experiments/cache.py",
+    "decision": "Reuse staged-directory publication pattern; expand integrity and environment checks."
+  },
+  {
+    "system": "Experiment orchestration",
+    "source": "src/soma/experiments/cohort.py",
+    "decision": "Retain cohort numerical behavior; opt-in workflows use explicit selected stages."
+  },
+  {
+    "system": "Source modeling",
+    "source": "src/soma/source/workflow.py",
+    "decision": "Existing forward/inverse and resolution operators; wrap bounded synthetic example."
+  },
+  {
+    "system": "fMRI GLM",
+    "source": "src/soma/fmri/glm.py",
+    "decision": "Existing Nilearn fits and inference guards; cache OLS sufficient statistics without executable models."
+  },
+  {
+    "system": "Scientific manifests",
+    "source": "src/soma/core/provenance.py",
+    "decision": "Existing SHA-256 helpers and manifests; preserve historical schemas."
+  },
+  {
+    "system": "Result envelopes",
+    "source": "src/soma/results/io.py",
+    "decision": "Reuse bounded nonpickle serialization and full checksum validation; schema versions unchanged."
+  },
+  {
+    "system": "Explorer registry",
+    "source": "services/explorer_api/registry.py",
+    "decision": "Reuse explicit allowed-root resources; graph inspection reads graph metadata only."
+  },
+  {
+    "system": "Bounded local jobs",
+    "source": "services/explorer_api/jobs.py",
+    "decision": "One worker and cooperative cancellation; provenance navigation never submits work."
+  },
+  {
+    "system": "Recovery journals",
+    "source": "src/soma/pipeline/engine.py",
+    "decision": "Published verified artifacts are truth; journals are observations, not cache validity evidence."
+  }
+]
