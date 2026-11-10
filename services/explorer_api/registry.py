@@ -23,6 +23,7 @@ class Entry(Strict):
         "protocol",
         "execution",
         "human-audit",
+        "human-readiness",
     ]
     label: str = Field(max_length=120)
     root: str

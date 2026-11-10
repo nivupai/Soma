@@ -56,3 +56,7 @@ A key-passing design was rejected during automatic review; the implemented desig
 verifies private mappings in memory before dispatch and never puts the key into
 workflow inputs, caches, graph metadata or execution records. Regression tests check
 that boundary. No rejected key-passing change was applied.
+
+## Milestone 21 addendum
+
+Readiness GET requests do not run audits, science or provider retrieval. Only explicitly registered native metadata receipts are served; private agreements/import manifests, absolute paths and individual scientific metric rows are excluded. Current use needs live evidence revalidation. Existing pseudonym keys remain outside workflow contexts and caches.

@@ -1,0 +1,72 @@
+{
+  "schema": "soma.milestone21.ci-evidence/1.0.0",
+  "implementation_commit": "07277fb59cf8214f5da2589ccb6dd2a9cdeed223",
+  "run_id": 42866196384,
+  "url": "https://github.com/nivupai/Soma/actions/runs/42866196384",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "dependency-floor",
+      "conclusion": "success"
+    },
+    {
+      "name": "quality",
+      "conclusion": "success"
+    },
+    {
+      "name": "scientific (3.11)",
+      "conclusion": "success"
+    },
+    {
+      "name": "explorer",
+      "conclusion": "success"
+    },
+    {
+      "name": "reproducibility (macos-15, 3.11)",
+      "conclusion": "success"
+    },
+    {
+      "name": "scientific (3.12)",
+      "conclusion": "success"
+    },
+    {
+      "name": "reproducibility (ubuntu-24.04, 3.11)",
+      "conclusion": "success"
+    },
+    {
+      "name": "distributions (3.12)",
+      "conclusion": "success"
+    },
+    {
+      "name": "reproducibility (macos-15, 3.12)",
+      "conclusion": "success"
+    },
+    {
+      "name": "security",
+      "conclusion": "success"
+    },
+    {
+      "name": "reproducibility (ubuntu-24.04, 3.12)",
+      "conclusion": "success"
+    },
+    {
+      "name": "distributions (3.11)",
+      "conclusion": "success"
+    },
+    {
+      "name": "cross-platform-comparison",
+      "conclusion": "success"
+    }
+  ],
+  "downloaded_reports_independently_compared": {
+    "numerical": true,
+    "workflow": true,
+    "protocol": true,
+    "human_identity": true,
+    "readiness": true
+  },
+  "fictional_readiness_invariants_match_local": true,
+  "human_data_accessed": false,
+  "real_registration_attested": false,
+  "tolerances_widened": false
+}

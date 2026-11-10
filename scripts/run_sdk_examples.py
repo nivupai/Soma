@@ -18,6 +18,7 @@ NAMES = (
     "workflow_provenance",
     "research_protocol",
     "human_data_audit",
+    "research_readiness",
 )
 
 

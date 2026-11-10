@@ -1,6 +1,6 @@
 # Soma Explorer user guide
 
-From the repository root, use the existing Python3.11/3.12 environment:
+From the repository root, use the existing Python 3.11/3.12 environment:
 
 ```sh
 .venv/bin/python -m pip install -e '.[dev,explorer]'
@@ -159,3 +159,7 @@ receipt; it is labeled not revalidated, never automatically external preregistra
 Audit responses contain selected metadata/lineage, not metric arrays, images, private
 mappings or keys. Scoped pseudonyms still require controlled access; the configured
 local boundary is not a general publication authorization.
+
+## Milestone 21 addendum
+
+Data Audit now shows immutable registration claims, bundle integrity/review, preprocessing and session requirements with per-gate READY/BLOCKED/INDETERMINATE/NOT_APPLICABLE states. Configured `human-readiness` entries read metadata-only native results. Historical receipts are not revalidated by GET. The session table preserves explicit labels and nulls; no override/run/upload controls are provided.

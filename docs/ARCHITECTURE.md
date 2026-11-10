@@ -360,3 +360,7 @@ cached resources; `permissions.py` checks content-bound purpose/action evidence;
 `workflow.py` binds frozen M19 cohorts to registered M18 execution and M17 native
 metadata records. `registration.py` provides opt-in read-only public metadata evidence.
 No estimator, existing preprocessing pipeline or cache semantics is replaced.
+
+## Milestone 21 addendum
+
+M21 adds content-addressed evidence references and read-only readiness gates over M19 seals/M20 plans. Existing M14 preprocessing/ITK/confound methods and M17 native result I/O are reused; no second workflow/provenance engine or new estimator is introduced. See [readiness gates](HUMAN_DATA_READINESS_GATES.md).

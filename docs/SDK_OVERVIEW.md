@@ -59,3 +59,7 @@ registered execution, replay/lineage reading, aggregate audit export and optiona
 registration inspection. `examples/human_data_audit.py` uses fictional metadata only.
 See HUMAN_DATA_IDENTITY.md and HUMAN_PROTOCOL_CONFORMANCE.md. No API grants legal,
 consent, human confirmation or anatomical authority.
+
+## Milestone 21 addendum
+
+The thirteenth SDK example demonstrates fictional evidence hashing, explicit session relationships and blocked-gate retention without I/O/network/human data. New APIs live in `soma.sdk.readiness`; data access, document integrity, authorization, preprocessing quality and inference remain separate.

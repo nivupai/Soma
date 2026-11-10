@@ -14,6 +14,7 @@ from soma.eeg.analysis import analyze_recording
 from soma.fmri.cli import app as fmri_app
 from soma.fmri.cli import multimodal as multimodal_app
 from soma.human.cli import data_app, human_app, registration_app
+from soma.human.readiness_cli import evidence_app, preprocessing_app, research_app, sessions_app
 from soma.imaging.cli import app as mri_app
 from soma.protocol.cli import protocol_app, replay_app
 from soma.results.cli import app as results_app
@@ -31,6 +32,10 @@ experiments = typer.Typer(help="Reproducible signal laboratories")
 app.add_typer(data_app, name="data")
 app.add_typer(registration_app, name="registration")
 app.add_typer(human_app, name="human-pilot")
+app.add_typer(evidence_app, name="evidence")
+app.add_typer(preprocessing_app, name="preprocessing")
+app.add_typer(sessions_app, name="sessions")
+app.add_typer(research_app, name="research")
 app.add_typer(results_app, name="results")
 app.add_typer(protocol_app, name="protocol")
 app.add_typer(replay_app, name="replay")

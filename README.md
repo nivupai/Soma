@@ -480,3 +480,7 @@ Data Audit view add scoped identity/session checks and content-bound use evidenc
 Adapters inspect explicit cached data only. Unknown rights or missing preprocessing
 produce blocked records, not fabricated human scientific results. See
 [Milestone 20](docs/MILESTONE20_RESULTS.md) for actual coverage and remaining gaps.
+
+### Research readiness — v0.21.0
+
+Read-only immutable registration attachments, sealed evidence bundles, preprocessing/QC and session gates extend existing protocols. Real preprocessing and permission gaps stay blocked. See [Milestone21 results](docs/MILESTONE21_RESULTS.md).
