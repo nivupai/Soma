@@ -43,3 +43,10 @@ a claim that its model has been validated on human anatomy.
 
 See [API reference](SDK_API_REFERENCE.md), [installation](SDK_INSTALLATION.md),
 [examples](../examples/README.md) and [results](MILESTONE16_RESULTS.md).
+
+## Research protocols (0.19.0 addendum)
+
+`soma.sdk.protocol` adds immutable declarations/seals, structural revision comparison,
+registered graph conformance, three replay modes, drift and append-only local history.
+See CONTROLLED_WORKFLOW_REPLAY.md and `examples/research_protocol.py`. Replay is
+synthetic/descriptive; it grants no confirmation or cross-environment cache reuse.

@@ -13,7 +13,7 @@ from .models import Strict
 
 class Entry(Strict):
     id: str = Field(pattern=r"^[a-zA-Z0-9_-]{1,80}$")
-    kind: Literal["eeg", "mri", "source", "fmri", "experiment", "workflow"]
+    kind: Literal["eeg", "mri", "source", "fmri", "experiment", "workflow", "protocol", "execution"]
     label: str = Field(max_length=120)
     root: str
     file: str

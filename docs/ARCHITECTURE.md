@@ -344,3 +344,11 @@ publication with a bipartite artifact/stage DAG, logical/environment/cache/conte
 identities, verified immutable entries and bounded serial execution. Existing
 MRI/cohort engines remain intact. Public SDK/CLI share these contracts; Explorer
 projects metadata only. Details: WORKFLOW_PROVENANCE_SPECIFICATION.md.
+
+## Protocol/replay layer (0.19.0 addendum)
+
+`protocol/model.py` validates declarations and canonical seals; `binding.py` maps
+requirements into allowlisted M18 DAGs; `replay.py` delegates execution/cache work
+and compares verified records; `history.py` audits historical evidence without
+inventing missing study identities. M17 finite envelopes and M18 scientific methods
+remain the foundation. Explorer routes read explicit registered metadata only.

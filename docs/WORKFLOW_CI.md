@@ -21,3 +21,13 @@ the existing local-data integration lane/browser test; this remains a documented
 scope limit, not a claim to human-data verification on GitHub runners. Changes go
 through feature/milestone18-provenance-dag and a private green PR; never force-push,
 rewrite published history or merge failing checks. No PyPI release is performed.
+
+## Protocol matrix (0.19.0 addendum)
+
+The existing 13 jobs are retained. The four actual macOS arm64/Linux x86_64 Python
+3.11/3.12 jobs additionally run protocol tests and all four controlled demonstrations.
+They upload `protocol-replay.json` with actual environment evidence. The dependent
+comparison job requires all four platforms and compares against frozen protocol
+bounds without widening; records exact agreement separately. Existing M17/M18
+oracles remain required. Explorer CI explicitly prepares synthetic histories before
+browser testing; GET requests never create histories.

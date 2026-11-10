@@ -131,3 +131,17 @@ Open Workflows to inspect synthetic or explicitly registered saved DAGs. Navigat
 is read-only and does not start computations. Use node selection, lineage direction,
 node search, zoom/pan, fit and keyboard navigator. Cache labels are recorded
 observations, not fresh verification. See WORKFLOW_EXPLORER.md.
+
+## Protocols (0.19.0 addendum)
+
+Open **Protocols** to inspect four local synthetic declarations without executing
+them. Empty execution histories are explicit. To prepare actual synthetic histories,
+run `scripts/prepare_protocol_explorer.py --root reports/protocol-histories --config
+reports/protocol-explorer.local.json`, optionally with `--base` for an existing
+ignored allowlist. Start Explorer with that explicit SOMA_EXPLORER_CONFIG.
+
+Select a registered protocol/revision and two execution records. EXACT rejects
+method changes; EXPLORATORY requires an explicit amendment. Inspect snapshot/QC,
+conformance, deviations, drift values and upstream/downstream lineage. Numerical
+plots cover aligned selected summaries only. No page action executes a workflow.
+Local seal status is never displayed as external preregistration.

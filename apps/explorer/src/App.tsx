@@ -40,6 +40,7 @@ import {
 } from "./components/Common";
 import EEG from "./features/EEG";
 import MRI from "./features/MRI";
+const Protocols = lazy(() => import("./features/Protocols"));
 const Workflows = lazy(() => import("./features/Workflows"));
 const Source = lazy(() => import("./features/Source"));
 import FMRI from "./features/FMRI";
@@ -53,6 +54,7 @@ const pages: [Page, typeof Activity][] = [
   ["fMRI Laboratory", Box],
   ["Experiments", FlaskConical],
   ["Workflows", Workflow],
+  ["Protocols", ShieldCheck],
   ["Validation", ShieldCheck],
   ["Settings", Settings],
 ];
@@ -65,6 +67,8 @@ const descriptions: Record<Page, string> = {
   "fMRI Laboratory": "Task models, effect maps and calibrated interpretation.",
   Experiments: "Trace every result back to its scientific definition.",
   Workflows: "Inspect scientific dependencies and verified cache lineage.",
+  Protocols:
+    "Inspect sealed methods, execution histories and scientific drift.",
   Validation: "Evidence, limitations and anatomical readiness.",
   Settings: "Local preferences and data boundaries.",
 };
@@ -450,6 +454,11 @@ export default function App() {
               {state.page === "Workflows" && (
                 <Suspense fallback={<p>Loading workflow view…</p>}>
                   <Workflows />
+                </Suspense>
+              )}
+              {state.page === "Protocols" && (
+                <Suspense fallback={<p>Loading protocol evidence…</p>}>
+                  <Protocols />
                 </Suspense>
               )}
               {state.page === "Validation" && (

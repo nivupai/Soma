@@ -71,3 +71,12 @@ callbacks, a run-journal path and optional previous Graph for invalidation evide
 Cache internals remain private. See WORKFLOW_PROVENANCE_SPECIFICATION.md and the
 public examples/workflow_provenance.py. CLI `soma workflow --help` lists inspect,
 validate, plan, run/resume, explain-cache, lineage, verify and example generation.
+
+## Protocol API (0.19.0 addendum)
+
+`Protocol.from_dict`, `Snapshot.from_dict`, `seal/read_seal/write_seal`, `amend`,
+`compare_protocols`, `graph_for`, `conformance`, `plan`, `run`, `compare`,
+`read_execution/write_execution`, `history/append_history`, `historical_evidence`
+and `redact_export` are exposed by `soma.sdk.protocol`. Validation raises
+`ProtocolError`; methods return immutable records or copied finite JSON summaries.
+See the protocol guides for exact mode preconditions and scientific limits.
