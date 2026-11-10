@@ -1,0 +1,413 @@
+{
+  "schema": "soma.workflow.replay-comparison/1",
+  "environments": [
+    {
+      "python": "3.11.9",
+      "system": "Darwin",
+      "machine": "arm64",
+      "byteorder": "little",
+      "os_build": "macOS-15.8.2-arm64-arm-64bit",
+      "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+      "python_implementation": "CPython",
+      "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+      "libraries": {
+        "soma-neuro": "0.18.0",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "nilearn": "0.14.1",
+        "mne": "1.13.2",
+        "nibabel": "5.5.0",
+        "SimpleITK": "2.5.7",
+        "scikit-image": "0.26.0",
+        "neurodsp": "2.3.0",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0"
+      },
+      "installation_records_sha256": {
+        "numpy": "63e686272197162fa681e5449362a86d3bca74b4b7efe1bca06cfb9691543e42",
+        "scipy": "29b612a0adc16b2e362c799b4026a4a12cc293df0a065aa5648d290fa862c689",
+        "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+        "mne": "7d745c6a2c4a48727cf2f020b17f3c670215adb79e74181b5cfc225d65b9ed99",
+        "nibabel": "fbafc4a67336c292b2c8f9e61cd8e843d1edcc63a718a11794d8cb5681c671ea",
+        "SimpleITK": "323d03e1c9b98d681912f786948be14a57c54aefaf14aa8964ee6f64f6f0162c",
+        "scikit-image": "e0620b2df1c4689e332fc7d9ad533cc011d92662a1f776a0c13b725e6cbbcf3d",
+        "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+        "pandas": "39cd81fac655de5250c70abcb2047a107aec83196b557dac8fe2980374c5f888",
+        "scikit-learn": "4c4ffb45fcf601fa15f6d3917b5aa07974e437d30eaf97e14c3d72e4e7b19f60",
+        "joblib": "af9cf32323e8998e4ffafdad5a6d2950047c7fa7923da0fcad8c6058ee51932b",
+        "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+      },
+      "numerical_build_metadata_sha256": {
+        "numpy": "1045914180665c0f3c545a364afc1375b10973a090e15108751bd50047d180ba",
+        "scipy": "40ac304cc017fe7363466293a5e577b378ddbe0e5e8ff575d0461c2c40fc8d92"
+      },
+      "backends": [
+        {
+          "internal_api": "openmp",
+          "version": null
+        }
+      ],
+      "numerical_limits": {
+        "workers": 1,
+        "threads": 1
+      },
+      "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+      "evidence_limit": "installation/build metadata are not authentication of a hostile runtime"
+    },
+    {
+      "python": "3.12.10",
+      "system": "Darwin",
+      "machine": "arm64",
+      "byteorder": "little",
+      "os_build": "macOS-15.8.2-arm64-arm-64bit",
+      "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+      "python_implementation": "CPython",
+      "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+      "libraries": {
+        "soma-neuro": "0.18.0",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "nilearn": "0.14.1",
+        "mne": "1.13.2",
+        "nibabel": "5.5.0",
+        "SimpleITK": "2.5.7",
+        "scikit-image": "0.26.0",
+        "neurodsp": "2.3.0",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0"
+      },
+      "installation_records_sha256": {
+        "numpy": "b8b3712c93efc6398b55c56d4a1fc897dc90e327542a22218d756e473ec652af",
+        "scipy": "61d22c9bedf5f4fac80e7a789bb71fdbb101f74fd5a2062ed89365267cbb7035",
+        "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+        "mne": "f085eba02b5a63226a369f8357ba29a25490330c0ca7c04e7c5819c5f272fb01",
+        "nibabel": "8463e44b048d02d04efd3bd78fde95b677fa16f558b596c8548be2273664a5fe",
+        "SimpleITK": "af5def5c47133a1a9c4673eae52ebb8ecb0676e4871c6e81fde9d11d27bce4a1",
+        "scikit-image": "ceb11cb7d275c5fd0c1d62d3b696c2b3f5da7f98f1608444298da984cefd3a94",
+        "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+        "pandas": "8a32c1f03f21a54d015e33cfb810880168498d4c08617de1b59af1bfc6fe184d",
+        "scikit-learn": "6459042372324dcc737364887cb0290fd7ac9761c2f16ff3b7c4433f8fc80b8d",
+        "joblib": "138e6137e322e7c2108337643bc43afbcf3dffa85969fdafe1b1ff810196c95d",
+        "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+      },
+      "numerical_build_metadata_sha256": {
+        "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+        "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+      },
+      "backends": [
+        {
+          "internal_api": "openmp",
+          "version": null
+        }
+      ],
+      "numerical_limits": {
+        "workers": 1,
+        "threads": 1
+      },
+      "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+      "evidence_limit": "installation/build metadata are not authentication of a hostile runtime"
+    },
+    {
+      "python": "3.11.18",
+      "system": "Linux",
+      "machine": "x86_64",
+      "byteorder": "little",
+      "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+      "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+      "python_implementation": "CPython",
+      "python_compiler": "GCC 13.3.0",
+      "libraries": {
+        "soma-neuro": "0.18.0",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "nilearn": "0.14.1",
+        "mne": "1.13.2",
+        "nibabel": "5.5.0",
+        "SimpleITK": "2.5.7",
+        "scikit-image": "0.26.0",
+        "neurodsp": "2.3.0",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0"
+      },
+      "installation_records_sha256": {
+        "numpy": "6512aa53dca6ff8724df041b46de070cb23d2095e3b670e6e2b1c118d449d758",
+        "scipy": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4",
+        "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+        "mne": "6b7876230873b40cca6e0b6078e9eb2f7fb76fd4357ce75551fbd7151c714d37",
+        "nibabel": "7ca3db5792d17114127f206180285953833373683961ef039e0bc40f2ea5b820",
+        "SimpleITK": "f5779980d98938a55a0f023fb11effd33c0b58aea7b906f4cbd67904aa15ac84",
+        "scikit-image": "59abc95a43e79276411a683c38e994aa8fdffb888a28663dd1d865376efdab9c",
+        "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+        "pandas": "c8b30467b85c46682202be1a209471e97877c2f9ec8ff3a9e55c3eab74652374",
+        "scikit-learn": "2672b1a04580bb22ac31fd50cf2c22733b112a9da8ff3abc2310888ed4fd75c9",
+        "joblib": "a77b6d0136afb30f8c62758f2c1177a5d1a63f50e1dfeeb83bc6ffa638f54392",
+        "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+      },
+      "numerical_build_metadata_sha256": {
+        "numpy": "d4be266556fe97be34505d19fd07970d24c86c83a528ad126cc4bc5792380ea6",
+        "scipy": "ddf783c46c5ff888ce3e371f459752218df6d315e4336eedaf647cb5995f18d3"
+      },
+      "backends": [
+        {
+          "internal_api": "openblas",
+          "version": "0.3.31.188.0",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "internal_api": "openmp",
+          "version": null
+        },
+        {
+          "internal_api": "openblas",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "numerical_limits": {
+        "workers": 1,
+        "threads": 1
+      },
+      "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+      "evidence_limit": "installation/build metadata are not authentication of a hostile runtime"
+    },
+    {
+      "python": "3.12.16",
+      "system": "Linux",
+      "machine": "x86_64",
+      "byteorder": "little",
+      "os_build": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.39",
+      "kernel_build": "#14~24.04.1-Ubuntu SMP PREEMPT Fri Sep 18 21:24:59 UTC 2026",
+      "python_implementation": "CPython",
+      "python_compiler": "GCC 13.3.0",
+      "libraries": {
+        "soma-neuro": "0.18.0",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "nilearn": "0.14.1",
+        "mne": "1.13.2",
+        "nibabel": "5.5.0",
+        "SimpleITK": "2.5.7",
+        "scikit-image": "0.26.0",
+        "neurodsp": "2.3.0",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0"
+      },
+      "installation_records_sha256": {
+        "numpy": "bbd547855c118118849ed562a26c5404192359c1855000fa866728724b7b2d5c",
+        "scipy": "d6b3eaac3b4dd2e8015eabd3f360d7dcdd1de46b8168e51ea55607fbe82dd9e5",
+        "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+        "mne": "6fdd45ec50b777bbd71c4b29633f66aab8c00560530a4d5967a122c463f638ef",
+        "nibabel": "7de7aea7127d85d39a852e1ef6bb683ed06ada7c8d52b86896828dd97aa204df",
+        "SimpleITK": "5bc47c5366e3550a2f8d7e078e9f1317f15fb521be4115cc36f94d6e60d72634",
+        "scikit-image": "d102ba30b1e4266c26dd22bcf7051f950802f8ddb0bd79ba637ff3d5bb06db2b",
+        "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+        "pandas": "ffb9de79cd2b938b347d4fcc8eaf96413d1cadcba49f6eb178eb7f069660c55f",
+        "scikit-learn": "534144efcac3896ec94874c09c7171f1a0329ad31e997c86a1801262439e1414",
+        "joblib": "9b06152b2a05394fbf50fdac57b4571de465b2306f5ea8ac47c5a581b23fa0e4",
+        "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+      },
+      "numerical_build_metadata_sha256": {
+        "numpy": "2c2c253e332c53368d229b8835f5c143a27760258230c0d30a4efdaba819679a",
+        "scipy": "7165310f887fa170cee59bbb09cd5fe778ad8cbb50b104d0b22cfc8dbdb300b1"
+      },
+      "backends": [
+        {
+          "internal_api": "openblas",
+          "version": "0.3.31.dev",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "internal_api": "openmp",
+          "version": null
+        },
+        {
+          "internal_api": "openblas",
+          "version": "0.3.34.106.0",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        }
+      ],
+      "numerical_limits": {
+        "workers": 1,
+        "threads": 1
+      },
+      "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+      "evidence_limit": "installation/build metadata are not authentication of a hostile runtime"
+    }
+  ],
+  "comparisons": [
+    {
+      "family": "eeg",
+      "left": "Darwin 3.11.9",
+      "right": "Darwin 3.12.10",
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "atol": 2e-23,
+      "rtol": 2e-10,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "mri",
+      "left": "Darwin 3.11.9",
+      "right": "Darwin 3.12.10",
+      "maximum_absolute_difference": 0.0,
+      "atol": 2e-18,
+      "rtol": 2e-12,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": true,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "fmri",
+      "left": "Darwin 3.11.9",
+      "right": "Darwin 3.12.10",
+      "maximum_absolute_difference": 1.1268763699945339e-14,
+      "atol": 2e-09,
+      "rtol": 2e-08,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "source",
+      "left": "Darwin 3.11.9",
+      "right": "Darwin 3.12.10",
+      "maximum_absolute_difference": 0.0,
+      "atol": 2e-14,
+      "rtol": 2e-13,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": true,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "eeg",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.11.18",
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "atol": 2e-23,
+      "rtol": 2e-10,
+      "passed": true,
+      "logical_identity_equal": true,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "mri",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.11.18",
+      "maximum_absolute_difference": 0.0,
+      "atol": 2e-18,
+      "rtol": 2e-12,
+      "passed": true,
+      "logical_identity_equal": true,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "fmri",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.11.18",
+      "maximum_absolute_difference": 2.2870594307278225e-14,
+      "atol": 2e-09,
+      "rtol": 2e-08,
+      "passed": true,
+      "logical_identity_equal": true,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "source",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.11.18",
+      "maximum_absolute_difference": 0.0,
+      "atol": 2e-14,
+      "rtol": 2e-13,
+      "passed": true,
+      "logical_identity_equal": true,
+      "content_fingerprints_equal": true,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "eeg",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.12.16",
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "atol": 2e-23,
+      "rtol": 2e-10,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "mri",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.12.16",
+      "maximum_absolute_difference": 0.0,
+      "atol": 2e-18,
+      "rtol": 2e-12,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "fmri",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.12.16",
+      "maximum_absolute_difference": 3.02848024436031e-14,
+      "atol": 2e-09,
+      "rtol": 2e-08,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": false,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    },
+    {
+      "family": "source",
+      "left": "Darwin 3.11.9",
+      "right": "Linux 3.12.16",
+      "maximum_absolute_difference": 0.0,
+      "atol": 2e-14,
+      "rtol": 2e-13,
+      "passed": true,
+      "logical_identity_equal": false,
+      "content_fingerprints_equal": true,
+      "file_fingerprints_equal": false,
+      "cache_keys_equal": false
+    }
+  ],
+  "all_passed": true,
+  "cache_interchangeability": "NOT_AUTHORIZED_BY_REPLAY",
+  "tolerance_protocol_sha256": "c51d8ba76fdd760daaecc2bf1a2f9132e8a645f1b1a5b7ce854150902d792236",
+  "evidence_run": "https://github.com/nivupai/Soma/actions/runs/42739912666",
+  "tested_feature_commit": "71fa42f3c82d62804588a94b83078e9a5188f893",
+  "M17_oracle_comparisons_passed": 36
+}

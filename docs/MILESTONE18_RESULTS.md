@@ -136,3 +136,26 @@ Soma remains 0.18.0. A real clean npm ci, all 21 frontend tests, TypeScript, lin
 format, production build and dependency audit then passed. No test assertion was
 weakened. Final-head CI must be entirely green before merge; the PR records its
 actual workflow run and merge decision.
+
+## Verified build-aware platform results
+
+[Run 42739912666](https://github.com/nivupai/Soma/actions/runs/42739912666) passed
+**all 13 jobs** on corrected feature commit
+71fa42f3c82d62804588a94b83078e9a5188f893. This includes clean frontend installation,
+Explorer tests, both scientific/package lanes, security, quality, dependency floor,
+all four actual build-aware platform replays and their comparison.
+
+Downloaded reports were independently recomputed locally. All **12 workflow-summary
+comparisons** and **36 M17 oracle comparisons** passed; both locally recomputed
+aggregates exactly match CI artifacts. Maximum workflow-summary difference remains
+3.02848024436031e-14 (fMRI). `platform-comparison-verified.json` retains the actual
+OS/kernel/compiler, package versions, installation/build digests, numerical
+backends and per-comparison identity/equivalence observations. These are selected
+summary comparisons, not a claim of equality for every intermediate MRI voxel.
+Exact file identities differ across environments. Cross-platform cache interchange
+remains unauthorized even when a selected summary or content fingerprint agrees.
+
+This evidence addendum changes documentation and synthetic metadata only. The
+scientific implementation is the tested corrected-head source. Final-head checks
+must still pass before merge; PR #3 records the final verification and merge SHA.
+No medical data, participant artifact, model weight or new binary is included.
