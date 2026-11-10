@@ -6,6 +6,7 @@ from pathlib import Path
 
 import numpy as np
 
+from soma.pipeline.cache import source_hash
 from soma.protocol.binding import example_protocol
 from soma.protocol.replay import Execution
 from soma.protocol.replay import compare as compare_executions
@@ -35,6 +36,7 @@ def compare(root):
             )
             assert assessment["authorized"], assessment
             bounds = protocol.document()["tolerances"]
+            assert right["baseline_execution"]["implementation_fingerprint"] == source_hash()
             assert right["protocol_fingerprint"] == protocol.fingerprint
             assert right["scientific_fingerprint"] == protocol.scientific_fingerprint
             assert right["tolerances"] == bounds == left["tolerances"]

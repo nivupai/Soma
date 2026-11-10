@@ -215,11 +215,13 @@ def test_snapshot_and_sampling_integrity(mutation):
         Snapshot.from_dict(s)
 
 
-def test_outcome_axes_cannot_be_relabeled_as_another_quantity():
+@pytest.mark.parametrize("field", ["axes", "units"])
+def test_outcome_axes_cannot_be_relabeled_as_another_quantity(field):
     p = example_protocol("eeg")
     d = p.document()
-    d["tolerances"]["axes"][0] = "different-outcome"
-    d["scientific"]["primary_outcomes"][0] = "different-outcome"
+    d["tolerances"][field][0] = "different-outcome"
+    if field == "axes":
+        d["scientific"]["primary_outcomes"][0] = "different-outcome"
     q = Protocol.from_dict(d)
     s = example_snapshot(q)
     m = s.document()["members"][0]

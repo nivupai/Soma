@@ -67,7 +67,7 @@ participant artifacts are committed.
 
 ## Local verification
 
-- Full suite: 1,160 passed (1,090 preserved + 70 new); 117 dependency/model warnings.
+- Full suite: 1,161 passed (1,090 preserved + 71 new); 117 dependency/model warnings.
 - Frontend: 24 passed (21 preserved + 3 new); TypeScript, ESLint, Prettier and build pass.
 - Browser: 12 passed (11 preserved + 1 new) against a fresh noneditable wheel
   backend launched outside the checkout.
@@ -90,8 +90,24 @@ observations, environment and timings are in the machine-readable table.
 
 ## Cross-platform and publication verification addendum
 
-Actual four-runner PR evidence and final publication state will be appended after
-GitHub Actions completes; local evidence does not substitute for those runs.
+Actual PR run [42767440824](https://github.com/nivupai/Soma/actions/runs/42767440824)
+executed macOS arm64 and Linux x86_64 with Python 3.11/3.12 at source commit
+`0cdc29436dce23e50871fbc0740739bb55b66339`. All 13 jobs passed, including all four runner jobs. Downloaded
+artifacts were independently compared locally, and source fingerprints were checked
+against that exact Git tree. All four protocol identities and workflow semantics
+matched. All 20 selected unit-vector comparisons met the original frozen bounds:
+five baseline self-comparisons and 15 comparisons across different environments.
+Eleven were numerically identical; nine required tolerance-based agreement. File
+bytes and input content identities are reported separately in
+`experiments/milestone19/platform-comparison.json`; differing bytes do not imply
+failed numerical validation or permit cache interchange.
+
+This evidence validates the scientific protocol demonstrations at the named commit.
+A subsequent conformance guard rejects falsely relabeled physical units and requires
+runner implementation fingerprints to match the comparison checkout. It changes no
+scientific algorithms, parameters or tolerances. The final PR head must pass the
+entire 13-job matrix before merge. PR: [#4](https://github.com/nivupai/Soma/pull/4).
+Final merge/main identity is reported in the completion receipt after successful CI.
 
 ## Scientific limitations
 

@@ -1,0 +1,3713 @@
+{
+  "schema": "soma.protocol.platform-comparison/1.0.0",
+  "comparisons": [
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": true,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "323d03e1c9b98d681912f786948be14a57c54aefaf14aa8964ee6f64f6f0162c",
+          "joblib": "af9cf32323e8998e4ffafdad5a6d2950047c7fa7923da0fcad8c6058ee51932b",
+          "mne": "7d745c6a2c4a48727cf2f020b17f3c670215adb79e74181b5cfc225d65b9ed99",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "fbafc4a67336c292b2c8f9e61cd8e843d1edcc63a718a11794d8cb5681c671ea",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "63e686272197162fa681e5449362a86d3bca74b4b7efe1bca06cfb9691543e42",
+          "pandas": "39cd81fac655de5250c70abcb2047a107aec83196b557dac8fe2980374c5f888",
+          "scikit-image": "e0620b2df1c4689e332fc7d9ad533cc011d92662a1f776a0c13b725e6cbbcf3d",
+          "scikit-learn": "4c4ffb45fcf601fa15f6d3917b5aa07974e437d30eaf97e14c3d72e4e7b19f60",
+          "scipy": "29b612a0adc16b2e362c799b4026a4a12cc293df0a065aa5648d290fa862c689",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "1045914180665c0f3c545a364afc1375b10973a090e15108751bd50047d180ba",
+          "scipy": "40ac304cc017fe7363466293a5e577b378ddbe0e5e8ff575d0461c2c40fc8d92"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.9",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": true,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": true,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-002--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "323d03e1c9b98d681912f786948be14a57c54aefaf14aa8964ee6f64f6f0162c",
+          "joblib": "af9cf32323e8998e4ffafdad5a6d2950047c7fa7923da0fcad8c6058ee51932b",
+          "mne": "7d745c6a2c4a48727cf2f020b17f3c670215adb79e74181b5cfc225d65b9ed99",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "fbafc4a67336c292b2c8f9e61cd8e843d1edcc63a718a11794d8cb5681c671ea",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "63e686272197162fa681e5449362a86d3bca74b4b7efe1bca06cfb9691543e42",
+          "pandas": "39cd81fac655de5250c70abcb2047a107aec83196b557dac8fe2980374c5f888",
+          "scikit-image": "e0620b2df1c4689e332fc7d9ad533cc011d92662a1f776a0c13b725e6cbbcf3d",
+          "scikit-learn": "4c4ffb45fcf601fa15f6d3917b5aa07974e437d30eaf97e14c3d72e4e7b19f60",
+          "scipy": "29b612a0adc16b2e362c799b4026a4a12cc293df0a065aa5648d290fa862c689",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "1045914180665c0f3c545a364afc1375b10973a090e15108751bd50047d180ba",
+          "scipy": "40ac304cc017fe7363466293a5e577b378ddbe0e5e8ff575d0461c2c40fc8d92"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.9",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": true,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "mri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "background_m3",
+              "foreground_m3"
+            ],
+            "units": [
+              "m^3",
+              "m^3"
+            ],
+            "left_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "right_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-18,
+            "rtol": 1e-12,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": true,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "323d03e1c9b98d681912f786948be14a57c54aefaf14aa8964ee6f64f6f0162c",
+          "joblib": "af9cf32323e8998e4ffafdad5a6d2950047c7fa7923da0fcad8c6058ee51932b",
+          "mne": "7d745c6a2c4a48727cf2f020b17f3c670215adb79e74181b5cfc225d65b9ed99",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "fbafc4a67336c292b2c8f9e61cd8e843d1edcc63a718a11794d8cb5681c671ea",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "63e686272197162fa681e5449362a86d3bca74b4b7efe1bca06cfb9691543e42",
+          "pandas": "39cd81fac655de5250c70abcb2047a107aec83196b557dac8fe2980374c5f888",
+          "scikit-image": "e0620b2df1c4689e332fc7d9ad533cc011d92662a1f776a0c13b725e6cbbcf3d",
+          "scikit-learn": "4c4ffb45fcf601fa15f6d3917b5aa07974e437d30eaf97e14c3d72e4e7b19f60",
+          "scipy": "29b612a0adc16b2e362c799b4026a4a12cc293df0a065aa5648d290fa862c689",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "1045914180665c0f3c545a364afc1375b10973a090e15108751bd50047d180ba",
+          "scipy": "40ac304cc017fe7363466293a5e577b378ddbe0e5e8ff575d0461c2c40fc8d92"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.9",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": true,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-18,
+        "axes": [
+          "background_m3",
+          "foreground_m3"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-12,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "m^3",
+          "m^3"
+        ]
+      }
+    },
+    {
+      "family": "fmri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "mean_effect",
+              "mean_variance"
+            ],
+            "units": [
+              "BOLD/regressor",
+              "(BOLD/regressor)^2"
+            ],
+            "left_values": [
+              -0.00037917335311324265,
+              0.06564925209027779
+            ],
+            "right_values": [
+              -0.00037917335311324265,
+              0.06564925209027779
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-09,
+            "rtol": 1e-08,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": true,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "323d03e1c9b98d681912f786948be14a57c54aefaf14aa8964ee6f64f6f0162c",
+          "joblib": "af9cf32323e8998e4ffafdad5a6d2950047c7fa7923da0fcad8c6058ee51932b",
+          "mne": "7d745c6a2c4a48727cf2f020b17f3c670215adb79e74181b5cfc225d65b9ed99",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "fbafc4a67336c292b2c8f9e61cd8e843d1edcc63a718a11794d8cb5681c671ea",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "63e686272197162fa681e5449362a86d3bca74b4b7efe1bca06cfb9691543e42",
+          "pandas": "39cd81fac655de5250c70abcb2047a107aec83196b557dac8fe2980374c5f888",
+          "scikit-image": "e0620b2df1c4689e332fc7d9ad533cc011d92662a1f776a0c13b725e6cbbcf3d",
+          "scikit-learn": "4c4ffb45fcf601fa15f6d3917b5aa07974e437d30eaf97e14c3d72e4e7b19f60",
+          "scipy": "29b612a0adc16b2e362c799b4026a4a12cc293df0a065aa5648d290fa862c689",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "1045914180665c0f3c545a364afc1375b10973a090e15108751bd50047d180ba",
+          "scipy": "40ac304cc017fe7363466293a5e577b378ddbe0e5e8ff575d0461c2c40fc8d92"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.9",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": true,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-09,
+        "axes": [
+          "mean_effect",
+          "mean_variance"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-08,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "BOLD/regressor",
+          "(BOLD/regressor)^2"
+        ]
+      }
+    },
+    {
+      "family": "source",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "estimate0",
+              "estimate1",
+              "estimate2",
+              "resolution0",
+              "resolution1",
+              "resolution2"
+            ],
+            "units": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "left_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "right_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-14,
+            "rtol": 1e-13,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": true,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "323d03e1c9b98d681912f786948be14a57c54aefaf14aa8964ee6f64f6f0162c",
+          "joblib": "af9cf32323e8998e4ffafdad5a6d2950047c7fa7923da0fcad8c6058ee51932b",
+          "mne": "7d745c6a2c4a48727cf2f020b17f3c670215adb79e74181b5cfc225d65b9ed99",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "fbafc4a67336c292b2c8f9e61cd8e843d1edcc63a718a11794d8cb5681c671ea",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "63e686272197162fa681e5449362a86d3bca74b4b7efe1bca06cfb9691543e42",
+          "pandas": "39cd81fac655de5250c70abcb2047a107aec83196b557dac8fe2980374c5f888",
+          "scikit-image": "e0620b2df1c4689e332fc7d9ad533cc011d92662a1f776a0c13b725e6cbbcf3d",
+          "scikit-learn": "4c4ffb45fcf601fa15f6d3917b5aa07974e437d30eaf97e14c3d72e4e7b19f60",
+          "scipy": "29b612a0adc16b2e362c799b4026a4a12cc293df0a065aa5648d290fa862c689",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "1045914180665c0f3c545a364afc1375b10973a090e15108751bd50047d180ba",
+          "scipy": "40ac304cc017fe7363466293a5e577b378ddbe0e5e8ff575d0461c2c40fc8d92"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.9",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": true,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-14,
+        "axes": [
+          "estimate0",
+          "estimate1",
+          "estimate2",
+          "resolution0",
+          "resolution1",
+          "resolution2"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-13,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "NUMERICAL_DRIFT",
+            "observed": {
+              "within_frozen_bounds": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136728e-11,
+              1.1709735211136728e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.2818183748790963e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": false,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "af5def5c47133a1a9c4673eae52ebb8ecb0676e4871c6e81fde9d11d27bce4a1",
+          "joblib": "138e6137e322e7c2108337643bc43afbcf3dffa85969fdafe1b1ff810196c95d",
+          "mne": "f085eba02b5a63226a369f8357ba29a25490330c0ca7c04e7c5819c5f272fb01",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "8463e44b048d02d04efd3bd78fde95b677fa16f558b596c8548be2273664a5fe",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "b8b3712c93efc6398b55c56d4a1fc897dc90e327542a22218d756e473ec652af",
+          "pandas": "8a32c1f03f21a54d015e33cfb810880168498d4c08617de1b59af1bfc6fe184d",
+          "scikit-image": "ceb11cb7d275c5fd0c1d62d3b696c2b3f5da7f98f1608444298da984cefd3a94",
+          "scikit-learn": "6459042372324dcc737364887cb0290fd7ac9761c2f16ff3b7c4433f8fc80b8d",
+          "scipy": "61d22c9bedf5f4fac80e7a789bb71fdbb101f74fd5a2062ed89365267cbb7035",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+          "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.10",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "NUMERICAL_DRIFT",
+            "observed": {
+              "within_frozen_bounds": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136728e-11,
+              1.1709735211136728e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.2818183748790963e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": false,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-002--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "af5def5c47133a1a9c4673eae52ebb8ecb0676e4871c6e81fde9d11d27bce4a1",
+          "joblib": "138e6137e322e7c2108337643bc43afbcf3dffa85969fdafe1b1ff810196c95d",
+          "mne": "f085eba02b5a63226a369f8357ba29a25490330c0ca7c04e7c5819c5f272fb01",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "8463e44b048d02d04efd3bd78fde95b677fa16f558b596c8548be2273664a5fe",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "b8b3712c93efc6398b55c56d4a1fc897dc90e327542a22218d756e473ec652af",
+          "pandas": "8a32c1f03f21a54d015e33cfb810880168498d4c08617de1b59af1bfc6fe184d",
+          "scikit-image": "ceb11cb7d275c5fd0c1d62d3b696c2b3f5da7f98f1608444298da984cefd3a94",
+          "scikit-learn": "6459042372324dcc737364887cb0290fd7ac9761c2f16ff3b7c4433f8fc80b8d",
+          "scipy": "61d22c9bedf5f4fac80e7a789bb71fdbb101f74fd5a2062ed89365267cbb7035",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+          "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.10",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "mri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "background_m3",
+              "foreground_m3"
+            ],
+            "units": [
+              "m^3",
+              "m^3"
+            ],
+            "left_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "right_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-18,
+            "rtol": 1e-12,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "af5def5c47133a1a9c4673eae52ebb8ecb0676e4871c6e81fde9d11d27bce4a1",
+          "joblib": "138e6137e322e7c2108337643bc43afbcf3dffa85969fdafe1b1ff810196c95d",
+          "mne": "f085eba02b5a63226a369f8357ba29a25490330c0ca7c04e7c5819c5f272fb01",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "8463e44b048d02d04efd3bd78fde95b677fa16f558b596c8548be2273664a5fe",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "b8b3712c93efc6398b55c56d4a1fc897dc90e327542a22218d756e473ec652af",
+          "pandas": "8a32c1f03f21a54d015e33cfb810880168498d4c08617de1b59af1bfc6fe184d",
+          "scikit-image": "ceb11cb7d275c5fd0c1d62d3b696c2b3f5da7f98f1608444298da984cefd3a94",
+          "scikit-learn": "6459042372324dcc737364887cb0290fd7ac9761c2f16ff3b7c4433f8fc80b8d",
+          "scipy": "61d22c9bedf5f4fac80e7a789bb71fdbb101f74fd5a2062ed89365267cbb7035",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+          "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.10",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-18,
+        "axes": [
+          "background_m3",
+          "foreground_m3"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-12,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "m^3",
+          "m^3"
+        ]
+      }
+    },
+    {
+      "family": "fmri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "NUMERICAL_DRIFT",
+            "observed": {
+              "within_frozen_bounds": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "mean_effect",
+              "mean_variance"
+            ],
+            "units": [
+              "BOLD/regressor",
+              "(BOLD/regressor)^2"
+            ],
+            "left_values": [
+              -0.00037917335311324265,
+              0.06564925209027779
+            ],
+            "right_values": [
+              -0.0003791733531156456,
+              0.06564925209027775
+            ],
+            "maximum_absolute_error": 2.4029714849882478e-15,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-09,
+            "rtol": 1e-08,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": false,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "af5def5c47133a1a9c4673eae52ebb8ecb0676e4871c6e81fde9d11d27bce4a1",
+          "joblib": "138e6137e322e7c2108337643bc43afbcf3dffa85969fdafe1b1ff810196c95d",
+          "mne": "f085eba02b5a63226a369f8357ba29a25490330c0ca7c04e7c5819c5f272fb01",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "8463e44b048d02d04efd3bd78fde95b677fa16f558b596c8548be2273664a5fe",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "b8b3712c93efc6398b55c56d4a1fc897dc90e327542a22218d756e473ec652af",
+          "pandas": "8a32c1f03f21a54d015e33cfb810880168498d4c08617de1b59af1bfc6fe184d",
+          "scikit-image": "ceb11cb7d275c5fd0c1d62d3b696c2b3f5da7f98f1608444298da984cefd3a94",
+          "scikit-learn": "6459042372324dcc737364887cb0290fd7ac9761c2f16ff3b7c4433f8fc80b8d",
+          "scipy": "61d22c9bedf5f4fac80e7a789bb71fdbb101f74fd5a2062ed89365267cbb7035",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+          "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.10",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 2.4029714849882478e-15,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-09,
+        "axes": [
+          "mean_effect",
+          "mean_variance"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-08,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "BOLD/regressor",
+          "(BOLD/regressor)^2"
+        ]
+      }
+    },
+    {
+      "family": "source",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "estimate0",
+              "estimate1",
+              "estimate2",
+              "resolution0",
+              "resolution1",
+              "resolution2"
+            ],
+            "units": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "left_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "right_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-14,
+            "rtol": 1e-13,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "af5def5c47133a1a9c4673eae52ebb8ecb0676e4871c6e81fde9d11d27bce4a1",
+          "joblib": "138e6137e322e7c2108337643bc43afbcf3dffa85969fdafe1b1ff810196c95d",
+          "mne": "f085eba02b5a63226a369f8357ba29a25490330c0ca7c04e7c5819c5f272fb01",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "8463e44b048d02d04efd3bd78fde95b677fa16f558b596c8548be2273664a5fe",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "b8b3712c93efc6398b55c56d4a1fc897dc90e327542a22218d756e473ec652af",
+          "pandas": "8a32c1f03f21a54d015e33cfb810880168498d4c08617de1b59af1bfc6fe184d",
+          "scikit-image": "ceb11cb7d275c5fd0c1d62d3b696c2b3f5da7f98f1608444298da984cefd3a94",
+          "scikit-learn": "6459042372324dcc737364887cb0290fd7ac9761c2f16ff3b7c4433f8fc80b8d",
+          "scipy": "61d22c9bedf5f4fac80e7a789bb71fdbb101f74fd5a2062ed89365267cbb7035",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "Darwin Kernel Version 24.6.0: Sun Oct 11 23:44:11 PDT 2026; root:xnu-11417.140.69.713.47~2/RELEASE_ARM64_VMAPPLE",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "arm64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+          "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "macOS-15.8.2-arm64-arm-64bit",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.10",
+        "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+        "python_implementation": "CPython",
+        "system": "Darwin"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-14,
+        "axes": [
+          "estimate0",
+          "estimate1",
+          "estimate2",
+          "resolution0",
+          "resolution1",
+          "resolution2"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-13,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "CONTROLLED_DATA_CHANGE",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "DATA_DRIFT",
+            "observed": {
+              "added_units": [],
+              "removed_units": [],
+              "snapshot_identity_changed": false,
+              "input_content_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": false
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136727e-11,
+              1.1709735211136725e-11,
+              1.2659099679968486e-11,
+              1.2659099679968489e-11
+            ],
+            "maximum_absolute_error": 3.2311742677852644e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.281818374879096e-11,
+              1.3150380106499167e-11,
+              1.3150380106499167e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": null,
+        "numerically_equivalent": null,
+        "numerical_equivalence_applicable": false,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.188.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.30"
+          },
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "f5779980d98938a55a0f023fb11effd33c0b58aea7b906f4cbd67904aa15ac84",
+          "joblib": "a77b6d0136afb30f8c62758f2c1177a5d1a63f50e1dfeeb83bc6ffa638f54392",
+          "mne": "6b7876230873b40cca6e0b6078e9eb2f7fb76fd4357ce75551fbd7151c714d37",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "7ca3db5792d17114127f206180285953833373683961ef039e0bc40f2ea5b820",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "6512aa53dca6ff8724df041b46de070cb23d2095e3b670e6e2b1c118d449d758",
+          "pandas": "c8b30467b85c46682202be1a209471e97877c2f9ec8ff3a9e55c3eab74652374",
+          "scikit-image": "59abc95a43e79276411a683c38e994aa8fdffb888a28663dd1d865376efdab9c",
+          "scikit-learn": "2672b1a04580bb22ac31fd50cf2c22733b112a9da8ff3abc2310888ed4fd75c9",
+          "scipy": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "ec4731f4874b204355ea3809c9d872d5847142c1293e479e1cc54c0ae6beaf32",
+          "scipy": "ddf783c46c5ff888ce3e371f459752218df6d315e4336eedaf647cb5995f18d3"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.18",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 3.2311742677852644e-27,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": false,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "CONTROLLED_DATA_CHANGE",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "DATA_DRIFT",
+            "observed": {
+              "added_units": [],
+              "removed_units": [],
+              "snapshot_identity_changed": false,
+              "input_content_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": false
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136727e-11,
+              1.1709735211136725e-11,
+              1.2659099679968486e-11,
+              1.2659099679968489e-11
+            ],
+            "maximum_absolute_error": 3.2311742677852644e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.281818374879096e-11,
+              1.3150380106499167e-11,
+              1.3150380106499167e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": null,
+        "numerically_equivalent": null,
+        "numerical_equivalence_applicable": false,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-002--session-1",
+      "environment": {
+        "backends": [
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.188.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.30"
+          },
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "f5779980d98938a55a0f023fb11effd33c0b58aea7b906f4cbd67904aa15ac84",
+          "joblib": "a77b6d0136afb30f8c62758f2c1177a5d1a63f50e1dfeeb83bc6ffa638f54392",
+          "mne": "6b7876230873b40cca6e0b6078e9eb2f7fb76fd4357ce75551fbd7151c714d37",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "7ca3db5792d17114127f206180285953833373683961ef039e0bc40f2ea5b820",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "6512aa53dca6ff8724df041b46de070cb23d2095e3b670e6e2b1c118d449d758",
+          "pandas": "c8b30467b85c46682202be1a209471e97877c2f9ec8ff3a9e55c3eab74652374",
+          "scikit-image": "59abc95a43e79276411a683c38e994aa8fdffb888a28663dd1d865376efdab9c",
+          "scikit-learn": "2672b1a04580bb22ac31fd50cf2c22733b112a9da8ff3abc2310888ed4fd75c9",
+          "scipy": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "ec4731f4874b204355ea3809c9d872d5847142c1293e479e1cc54c0ae6beaf32",
+          "scipy": "ddf783c46c5ff888ce3e371f459752218df6d315e4336eedaf647cb5995f18d3"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.18",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": false,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "mri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": false
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "background_m3",
+              "foreground_m3"
+            ],
+            "units": [
+              "m^3",
+              "m^3"
+            ],
+            "left_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "right_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-18,
+            "rtol": 1e-12,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.188.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.30"
+          },
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "f5779980d98938a55a0f023fb11effd33c0b58aea7b906f4cbd67904aa15ac84",
+          "joblib": "a77b6d0136afb30f8c62758f2c1177a5d1a63f50e1dfeeb83bc6ffa638f54392",
+          "mne": "6b7876230873b40cca6e0b6078e9eb2f7fb76fd4357ce75551fbd7151c714d37",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "7ca3db5792d17114127f206180285953833373683961ef039e0bc40f2ea5b820",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "6512aa53dca6ff8724df041b46de070cb23d2095e3b670e6e2b1c118d449d758",
+          "pandas": "c8b30467b85c46682202be1a209471e97877c2f9ec8ff3a9e55c3eab74652374",
+          "scikit-image": "59abc95a43e79276411a683c38e994aa8fdffb888a28663dd1d865376efdab9c",
+          "scikit-learn": "2672b1a04580bb22ac31fd50cf2c22733b112a9da8ff3abc2310888ed4fd75c9",
+          "scipy": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "ec4731f4874b204355ea3809c9d872d5847142c1293e479e1cc54c0ae6beaf32",
+          "scipy": "ddf783c46c5ff888ce3e371f459752218df6d315e4336eedaf647cb5995f18d3"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.18",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-18,
+        "axes": [
+          "background_m3",
+          "foreground_m3"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-12,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "m^3",
+          "m^3"
+        ]
+      }
+    },
+    {
+      "family": "fmri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": false
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "NUMERICAL_DRIFT",
+            "observed": {
+              "within_frozen_bounds": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "mean_effect",
+              "mean_variance"
+            ],
+            "units": [
+              "BOLD/regressor",
+              "(BOLD/regressor)^2"
+            ],
+            "left_values": [
+              -0.00037917335311324265,
+              0.06564925209027779
+            ],
+            "right_values": [
+              -0.0003791733530821279,
+              0.06564925209027798
+            ],
+            "maximum_absolute_error": 3.111475920664075e-14,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-09,
+            "rtol": 1e-08,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": false,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.188.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.30"
+          },
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "f5779980d98938a55a0f023fb11effd33c0b58aea7b906f4cbd67904aa15ac84",
+          "joblib": "a77b6d0136afb30f8c62758f2c1177a5d1a63f50e1dfeeb83bc6ffa638f54392",
+          "mne": "6b7876230873b40cca6e0b6078e9eb2f7fb76fd4357ce75551fbd7151c714d37",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "7ca3db5792d17114127f206180285953833373683961ef039e0bc40f2ea5b820",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "6512aa53dca6ff8724df041b46de070cb23d2095e3b670e6e2b1c118d449d758",
+          "pandas": "c8b30467b85c46682202be1a209471e97877c2f9ec8ff3a9e55c3eab74652374",
+          "scikit-image": "59abc95a43e79276411a683c38e994aa8fdffb888a28663dd1d865376efdab9c",
+          "scikit-learn": "2672b1a04580bb22ac31fd50cf2c22733b112a9da8ff3abc2310888ed4fd75c9",
+          "scipy": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "ec4731f4874b204355ea3809c9d872d5847142c1293e479e1cc54c0ae6beaf32",
+          "scipy": "ddf783c46c5ff888ce3e371f459752218df6d315e4336eedaf647cb5995f18d3"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.18",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 3.111475920664075e-14,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-09,
+        "axes": [
+          "mean_effect",
+          "mean_variance"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-08,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "BOLD/regressor",
+          "(BOLD/regressor)^2"
+        ]
+      }
+    },
+    {
+      "family": "source",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": false
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "estimate0",
+              "estimate1",
+              "estimate2",
+              "resolution0",
+              "resolution1",
+              "resolution2"
+            ],
+            "units": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "left_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "right_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-14,
+            "rtol": 1e-13,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.188.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.30"
+          },
+          {
+            "internal_api": "openmp",
+            "version": null
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "f5779980d98938a55a0f023fb11effd33c0b58aea7b906f4cbd67904aa15ac84",
+          "joblib": "a77b6d0136afb30f8c62758f2c1177a5d1a63f50e1dfeeb83bc6ffa638f54392",
+          "mne": "6b7876230873b40cca6e0b6078e9eb2f7fb76fd4357ce75551fbd7151c714d37",
+          "neurodsp": "b9b29fba6e685d25c4c738a344e0f4901fce89e4ada5f507544cb968918f74a1",
+          "nibabel": "7ca3db5792d17114127f206180285953833373683961ef039e0bc40f2ea5b820",
+          "nilearn": "05020b0b8afd6e4feeaf2b9432777d98c5f1063de5df73f8d62b2caf3adcc27c",
+          "numpy": "6512aa53dca6ff8724df041b46de070cb23d2095e3b670e6e2b1c118d449d758",
+          "pandas": "c8b30467b85c46682202be1a209471e97877c2f9ec8ff3a9e55c3eab74652374",
+          "scikit-image": "59abc95a43e79276411a683c38e994aa8fdffb888a28663dd1d865376efdab9c",
+          "scikit-learn": "2672b1a04580bb22ac31fd50cf2c22733b112a9da8ff3abc2310888ed4fd75c9",
+          "scipy": "485fe4ad92e86f03501d939dff29a16350947458d449264d313e506b3a47fde4",
+          "threadpoolctl": "9a2f58ecf1ab695d8bb3647971bd89d48dea5393639bf77e88383a1758f745ab"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.4.6",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "ec4731f4874b204355ea3809c9d872d5847142c1293e479e1cc54c0ae6beaf32",
+          "scipy": "ddf783c46c5ff888ce3e371f459752218df6d315e4336eedaf647cb5995f18d3"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.11.18",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-14,
+        "axes": [
+          "estimate0",
+          "estimate1",
+          "estimate2",
+          "resolution0",
+          "resolution1",
+          "resolution2"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-13,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "CONTROLLED_DATA_CHANGE",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "DATA_DRIFT",
+            "observed": {
+              "added_units": [],
+              "removed_units": [],
+              "snapshot_identity_changed": false,
+              "input_content_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136727e-11,
+              1.1709735211136725e-11,
+              1.2659099679968486e-11,
+              1.2659099679968489e-11
+            ],
+            "maximum_absolute_error": 3.2311742677852644e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.281818374879096e-11,
+              1.3150380106499167e-11,
+              1.3150380106499167e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": null,
+        "numerically_equivalent": null,
+        "numerical_equivalence_applicable": false,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.34.106.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.dev"
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "5bc47c5366e3550a2f8d7e078e9f1317f15fb521be4115cc36f94d6e60d72634",
+          "joblib": "9b06152b2a05394fbf50fdac57b4571de465b2306f5ea8ac47c5a581b23fa0e4",
+          "mne": "6fdd45ec50b777bbd71c4b29633f66aab8c00560530a4d5967a122c463f638ef",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "7de7aea7127d85d39a852e1ef6bb683ed06ada7c8d52b86896828dd97aa204df",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "bbd547855c118118849ed562a26c5404192359c1855000fa866728724b7b2d5c",
+          "pandas": "ffb9de79cd2b938b347d4fcc8eaf96413d1cadcba49f6eb178eb7f069660c55f",
+          "scikit-image": "d102ba30b1e4266c26dd22bcf7051f950802f8ddb0bd79ba637ff3d5bb06db2b",
+          "scikit-learn": "534144efcac3896ec94874c09c7171f1a0329ad31e997c86a1801262439e1414",
+          "scipy": "d6b3eaac3b4dd2e8015eabd3f360d7dcdd1de46b8168e51ea55607fbe82dd9e5",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "af2324f7d76498d7d6bd3fea80398fb97db9c9a4ab4dd08998319e294cadd818",
+          "scipy": "7165310f887fa170cee59bbb09cd5fe778ad8cbb50b104d0b22cfc8dbdb300b1"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.16",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 3.2311742677852644e-27,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": false,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "eeg",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "CONTROLLED_DATA_CHANGE",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "DATA_DRIFT",
+            "observed": {
+              "added_units": [],
+              "removed_units": [],
+              "snapshot_identity_changed": false,
+              "input_content_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.1709735211136728e-11,
+              1.1709735211136727e-11,
+              1.2659099679968486e-11,
+              1.2659099679968486e-11
+            ],
+            "right_values": [
+              1.1709735211136727e-11,
+              1.1709735211136725e-11,
+              1.2659099679968486e-11,
+              1.2659099679968489e-11
+            ],
+            "maximum_absolute_error": 3.2311742677852644e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          },
+          {
+            "unit_id": "realization-002",
+            "session": "session-1",
+            "same_inputs": false,
+            "axes": [
+              "C3.mu",
+              "C4.mu",
+              "C3.beta",
+              "C4.beta"
+            ],
+            "units": [
+              "V^2",
+              "V^2",
+              "V^2",
+              "V^2"
+            ],
+            "left_values": [
+              1.2818183748790963e-11,
+              1.2818183748790962e-11,
+              1.3150380106499169e-11,
+              1.3150380106499169e-11
+            ],
+            "right_values": [
+              1.2818183748790963e-11,
+              1.281818374879096e-11,
+              1.3150380106499167e-11,
+              1.3150380106499167e-11
+            ],
+            "maximum_absolute_error": 1.6155871338926322e-27,
+            "numerically_identical": false,
+            "numerically_equivalent": null,
+            "equivalence_applicable": false,
+            "atol": 1e-23,
+            "rtol": 1e-10,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": null,
+        "numerically_equivalent": null,
+        "numerical_equivalence_applicable": false,
+        "unit_counts": {
+          "left": 2,
+          "right": 2,
+          "shared": 2,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-002--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.34.106.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.dev"
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "5bc47c5366e3550a2f8d7e078e9f1317f15fb521be4115cc36f94d6e60d72634",
+          "joblib": "9b06152b2a05394fbf50fdac57b4571de465b2306f5ea8ac47c5a581b23fa0e4",
+          "mne": "6fdd45ec50b777bbd71c4b29633f66aab8c00560530a4d5967a122c463f638ef",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "7de7aea7127d85d39a852e1ef6bb683ed06ada7c8d52b86896828dd97aa204df",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "bbd547855c118118849ed562a26c5404192359c1855000fa866728724b7b2d5c",
+          "pandas": "ffb9de79cd2b938b347d4fcc8eaf96413d1cadcba49f6eb178eb7f069660c55f",
+          "scikit-image": "d102ba30b1e4266c26dd22bcf7051f950802f8ddb0bd79ba637ff3d5bb06db2b",
+          "scikit-learn": "534144efcac3896ec94874c09c7171f1a0329ad31e997c86a1801262439e1414",
+          "scipy": "d6b3eaac3b4dd2e8015eabd3f360d7dcdd1de46b8168e51ea55607fbe82dd9e5",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "af2324f7d76498d7d6bd3fea80398fb97db9c9a4ab4dd08998319e294cadd818",
+          "scipy": "7165310f887fa170cee59bbb09cd5fe778ad8cbb50b104d0b22cfc8dbdb300b1"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.16",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 1.6155871338926322e-27,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": false,
+      "tolerance": {
+        "atol": 1e-23,
+        "axes": [
+          "C3.mu",
+          "C4.mu",
+          "C3.beta",
+          "C4.beta"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-10,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "V^2",
+          "V^2",
+          "V^2",
+          "V^2"
+        ]
+      }
+    },
+    {
+      "family": "mri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "background_m3",
+              "foreground_m3"
+            ],
+            "units": [
+              "m^3",
+              "m^3"
+            ],
+            "left_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "right_values": [
+              2.835199999999998e-05,
+              4.415999999999996e-06
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-18,
+            "rtol": 1e-12,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.34.106.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.dev"
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "5bc47c5366e3550a2f8d7e078e9f1317f15fb521be4115cc36f94d6e60d72634",
+          "joblib": "9b06152b2a05394fbf50fdac57b4571de465b2306f5ea8ac47c5a581b23fa0e4",
+          "mne": "6fdd45ec50b777bbd71c4b29633f66aab8c00560530a4d5967a122c463f638ef",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "7de7aea7127d85d39a852e1ef6bb683ed06ada7c8d52b86896828dd97aa204df",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "bbd547855c118118849ed562a26c5404192359c1855000fa866728724b7b2d5c",
+          "pandas": "ffb9de79cd2b938b347d4fcc8eaf96413d1cadcba49f6eb178eb7f069660c55f",
+          "scikit-image": "d102ba30b1e4266c26dd22bcf7051f950802f8ddb0bd79ba637ff3d5bb06db2b",
+          "scikit-learn": "534144efcac3896ec94874c09c7171f1a0329ad31e997c86a1801262439e1414",
+          "scipy": "d6b3eaac3b4dd2e8015eabd3f360d7dcdd1de46b8168e51ea55607fbe82dd9e5",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "af2324f7d76498d7d6bd3fea80398fb97db9c9a4ab4dd08998319e294cadd818",
+          "scipy": "7165310f887fa170cee59bbb09cd5fe778ad8cbb50b104d0b22cfc8dbdb300b1"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.16",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-18,
+        "axes": [
+          "background_m3",
+          "foreground_m3"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-12,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "m^3",
+          "m^3"
+        ]
+      }
+    },
+    {
+      "family": "fmri",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "NUMERICAL_DRIFT",
+            "observed": {
+              "within_frozen_bounds": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          },
+          {
+            "category": "MEASUREMENT_OR_OUTCOME_DRIFT",
+            "observed": {
+              "biological_interpretation": "NOT_ESTABLISHED"
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "mean_effect",
+              "mean_variance"
+            ],
+            "units": [
+              "BOLD/regressor",
+              "(BOLD/regressor)^2"
+            ],
+            "left_values": [
+              -0.00037917335311324265,
+              0.06564925209027779
+            ],
+            "right_values": [
+              -0.0003791733530833294,
+              0.06564925209027796
+            ],
+            "maximum_absolute_error": 2.9913246359092316e-14,
+            "numerically_identical": false,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-09,
+            "rtol": 1e-08,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": false,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.34.106.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.dev"
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "5bc47c5366e3550a2f8d7e078e9f1317f15fb521be4115cc36f94d6e60d72634",
+          "joblib": "9b06152b2a05394fbf50fdac57b4571de465b2306f5ea8ac47c5a581b23fa0e4",
+          "mne": "6fdd45ec50b777bbd71c4b29633f66aab8c00560530a4d5967a122c463f638ef",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "7de7aea7127d85d39a852e1ef6bb683ed06ada7c8d52b86896828dd97aa204df",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "bbd547855c118118849ed562a26c5404192359c1855000fa866728724b7b2d5c",
+          "pandas": "ffb9de79cd2b938b347d4fcc8eaf96413d1cadcba49f6eb178eb7f069660c55f",
+          "scikit-image": "d102ba30b1e4266c26dd22bcf7051f950802f8ddb0bd79ba637ff3d5bb06db2b",
+          "scikit-learn": "534144efcac3896ec94874c09c7171f1a0329ad31e997c86a1801262439e1414",
+          "scipy": "d6b3eaac3b4dd2e8015eabd3f360d7dcdd1de46b8168e51ea55607fbe82dd9e5",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "af2324f7d76498d7d6bd3fea80398fb97db9c9a4ab4dd08998319e294cadd818",
+          "scipy": "7165310f887fa170cee59bbb09cd5fe778ad8cbb50b104d0b22cfc8dbdb300b1"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.16",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 2.9913246359092316e-14,
+      "numerically_identical": false,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": false,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-09,
+        "axes": [
+          "mean_effect",
+          "mean_variance"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-08,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "BOLD/regressor",
+          "(BOLD/regressor)^2"
+        ]
+      }
+    },
+    {
+      "family": "source",
+      "controlled_replay_assessment": {
+        "schema": "soma.protocol.comparison/1.0.0",
+        "mode": "CONTROLLED",
+        "authorized": true,
+        "status": "NUMERICALLY_EQUIVALENT",
+        "reasons": [],
+        "protocol_comparison": {
+          "status": "IDENTICAL",
+          "changed_fields": [],
+          "scientific_change": false,
+          "required_revision": "none",
+          "major_revision_required": false,
+          "version_declaration_valid": true,
+          "explicit_parent_amendment": false,
+          "compatible_scientific_methods": true,
+          "confirmatory_replication_authorized": false
+        },
+        "drift": [
+          {
+            "category": "EXECUTION_ENVIRONMENT_DRIFT",
+            "observed": {
+              "versions_changed": true
+            },
+            "evidence_scope": "declared protocols and verified execution records"
+          }
+        ],
+        "numerical_comparisons": [
+          {
+            "unit_id": "realization-001",
+            "session": "session-1",
+            "same_inputs": true,
+            "axes": [
+              "estimate0",
+              "estimate1",
+              "estimate2",
+              "resolution0",
+              "resolution1",
+              "resolution2"
+            ],
+            "units": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "left_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "right_values": [
+              0.9090909090909091,
+              0.0,
+              0.0,
+              0.9090909090909091,
+              0.9090909090909091,
+              0.9090909090909091
+            ],
+            "maximum_absolute_error": 0.0,
+            "numerically_identical": true,
+            "numerically_equivalent": true,
+            "equivalence_applicable": true,
+            "atol": 1e-14,
+            "rtol": 1e-13,
+            "comparison_scope": "selected summaries only, not statistical significance or biological drift"
+          }
+        ],
+        "artifact_byte_identical": false,
+        "numerically_identical": true,
+        "numerically_equivalent": true,
+        "numerical_equivalence_applicable": true,
+        "unit_counts": {
+          "left": 1,
+          "right": 1,
+          "shared": 1,
+          "added": 0,
+          "removed": 0
+        },
+        "cache_interchangeability": false,
+        "confirmatory_replication_authorized": false,
+        "interpretation": "descriptive; repeated executions are not automatically human longitudinal measurements"
+      },
+      "unit": "realization-001--session-1",
+      "environment": {
+        "backends": [
+          {
+            "internal_api": "openmp",
+            "version": null
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.34.106.0"
+          },
+          {
+            "architecture": "SkylakeX",
+            "internal_api": "openblas",
+            "threading_layer": "pthreads",
+            "version": "0.3.31.dev"
+          }
+        ],
+        "byteorder": "little",
+        "evidence_limit": "installation/build metadata are not authentication of a hostile runtime",
+        "installation_records_sha256": {
+          "SimpleITK": "5bc47c5366e3550a2f8d7e078e9f1317f15fb521be4115cc36f94d6e60d72634",
+          "joblib": "9b06152b2a05394fbf50fdac57b4571de465b2306f5ea8ac47c5a581b23fa0e4",
+          "mne": "6fdd45ec50b777bbd71c4b29633f66aab8c00560530a4d5967a122c463f638ef",
+          "neurodsp": "bdfb4843ac27d2f1ee2fcaae02ba377f94159ee472b6def22efb0cfdb253697a",
+          "nibabel": "7de7aea7127d85d39a852e1ef6bb683ed06ada7c8d52b86896828dd97aa204df",
+          "nilearn": "2ab48a87ba6ae9a6bccc286fa852c1abd3e42d1d3e5471868d1ccb9023e9efb5",
+          "numpy": "bbd547855c118118849ed562a26c5404192359c1855000fa866728724b7b2d5c",
+          "pandas": "ffb9de79cd2b938b347d4fcc8eaf96413d1cadcba49f6eb178eb7f069660c55f",
+          "scikit-image": "d102ba30b1e4266c26dd22bcf7051f950802f8ddb0bd79ba637ff3d5bb06db2b",
+          "scikit-learn": "534144efcac3896ec94874c09c7171f1a0329ad31e997c86a1801262439e1414",
+          "scipy": "d6b3eaac3b4dd2e8015eabd3f360d7dcdd1de46b8168e51ea55607fbe82dd9e5",
+          "threadpoolctl": "4dd07cef19c10e9acba62bbd7cd4252e787594e1fb80d5bb8c45b934affa33f3"
+        },
+        "kernel_build": "#17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026",
+        "libraries": {
+          "SimpleITK": "2.5.7",
+          "joblib": "1.6.0",
+          "mne": "1.13.2",
+          "neurodsp": "2.3.0",
+          "nibabel": "5.5.0",
+          "nilearn": "0.14.1",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-image": "0.26.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "soma-neuro": "0.19.0",
+          "threadpoolctl": "3.8.0"
+        },
+        "machine": "x86_64",
+        "numerical_build_metadata_sha256": {
+          "numpy": "af2324f7d76498d7d6bd3fea80398fb97db9c9a4ab4dd08998319e294cadd818",
+          "scipy": "7165310f887fa170cee59bbb09cd5fe778ad8cbb50b104d0b22cfc8dbdb300b1"
+        },
+        "numerical_limits": {
+          "threads": 1,
+          "workers": 1
+        },
+        "os_build": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+        "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+        "python": "3.12.16",
+        "python_compiler": "GCC 13.3.0",
+        "python_implementation": "CPython",
+        "system": "Linux"
+      },
+      "maximum_absolute_difference": 0.0,
+      "numerically_identical": true,
+      "numerically_equivalent": true,
+      "artifact_bytes_identical": false,
+      "artifact_content_identical": true,
+      "input_content_identical": true,
+      "tolerance": {
+        "atol": 1e-14,
+        "axes": [
+          "estimate0",
+          "estimate1",
+          "estimate2",
+          "resolution0",
+          "resolution1",
+          "resolution2"
+        ],
+        "missing_policy": "indeterminate",
+        "rtol": 1e-13,
+        "scope": "selected_numerical_summaries",
+        "units": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      }
+    }
+  ],
+  "all_passed": true,
+  "cache_interchangeability": false,
+  "confirmatory_replication_authorized": false,
+  "scope": "selected synthetic summaries only; not full study equivalence",
+  "evidence": {
+    "github_actions_run": 42767440824,
+    "tested_head": "0cdc29436dce23e50871fbc0740739bb55b66339",
+    "actual_runner_reports": 4,
+    "source_hashes_independently_verified_against_tested_head": true
+  }
+}

@@ -539,56 +539,56 @@
       "baseline_file_fingerprints": {
         "realization-001": {
           "bands": {
-            "bands/result.json": "ce9b6abcd4f7bb4d26b44db6a5d49fc2cbf1c7f87207ae8de7495d66d6573919",
-            "receipt.json": "d5c3653372fd3bc700d601a563abbda532bde077ef59e1a4deb8ad7efb4daa06"
+            "bands/result.json": "bdee2e01a92da438bbcca554f4cd17ad8ee194264452205375c4a062ff600950",
+            "receipt.json": "5c85c7013d1594c3325245a19f1d7d0b0dbc885fd9c49c9e4e8cb58d158036da"
           },
           "generate": {
-            "receipt.json": "41567c014c54e79ac78b8de3a4e3b5f624b1eb691b15f58004f38d4907900ef1",
+            "receipt.json": "f70441f672e9a1cf8a32a4507f10e3bb3bcf78479daadb5467384aacdf456cb9",
             "recording/arrays/a0.npy": "04fced2c4b91447e01b6c2c006cf9da6b344734e4836d5c4754bff1f9a15142f",
-            "recording/result.json": "aaf6fc58cb10c070211339e1e4ea65d12291fe64fe87547bb377fda6e8a6453a"
+            "recording/result.json": "6f5b6d25cc411e6674d23f57c3b42677efd1194c0f6e4c00e12140a4db5df60d"
           },
           "psd": {
             "psd/arrays/a0.npy": "2db7a887ffe145b7c0969e549a8ea84a47c337a5c01fe116c36da2896168c250",
             "psd/arrays/a1.npy": "157e00ca01cc0a0a355ad761459f40691bbef099f232ab2711ea38ff67e6d7f5",
-            "psd/result.json": "b524fc58ecad031d684eb82294063efa4dab908375f7342874759ee6cff144db",
-            "receipt.json": "ceb1499f8296d914908b6cec48ca10291d5e5fb8a243a0bd71180a5c4f4e97c9"
+            "psd/result.json": "c684a9a080e9d8d6e999b903866a7995279b220deb2e93564e09f39fa2179854",
+            "receipt.json": "1cdb8ab89d83e1f5ab061497b59ffa485996e3de6160a2862cf81a5b4ed20b61"
           },
           "reference": {
-            "receipt.json": "4f8568dd7ca3407413c9eff4136e549050ee9a8a9aed16d5d912e539cc10e029",
+            "receipt.json": "c6041972a80a4bb97933f65c7764e5810f8dfd548c5bd950006ce2b818a04694",
             "referenced/arrays/a0.npy": "a998ec37a2fb0e87f919d3f67cef44163a06df135ad65ed230c024344e5beff2",
-            "referenced/result.json": "289063912d71f97be13205a57d0b296c03b0868d6759e7311b9a82d34f312ce1"
+            "referenced/result.json": "006311aefe464ae6c97ce6bf351c157cf546563834de3644b6f4bb1b77342ff7"
           },
           "validate": {
-            "receipt.json": "e9d297a24fc443371f7d9d1bede85035d2481695f0cc1885006484737d6c4509",
+            "receipt.json": "fcba19360de4b905abed0cfce222a5d141cd944e49a7c3e5732aedd3abdb8104",
             "validated/arrays/a0.npy": "04fced2c4b91447e01b6c2c006cf9da6b344734e4836d5c4754bff1f9a15142f",
-            "validated/result.json": "61e4a5b595a93d2a33d704cdbc7017c7049b0fb417df41d5742dbe4c14a386d6"
+            "validated/result.json": "91b763b5c83aa45373dd532ab67def629f12b2f79288406beb17a71352b83095"
           }
         },
         "realization-002": {
           "bands": {
-            "bands/result.json": "d64335d2b7e090d44b3a64fca033b7d5ead976123a032a44ca9b459b6d144de9",
-            "receipt.json": "be460919c18f7641d4acb2894d4c5f711ea5bbdd423c1f8761c50330a32c8f0c"
+            "bands/result.json": "d198cff2b346c514763971aef771d614f703d102845eb0672ae6fbe7f8f495a0",
+            "receipt.json": "9713341789b37184e54c77156074c3ad17221049591c6c62fed90b318ad6a293"
           },
           "generate": {
-            "receipt.json": "434c88337e70a86a6efc3041b429b8554e0662cfef2b139847aecfa0ff58ab63",
+            "receipt.json": "25ae3e47f2dd393ae8fe48072b75071a3f709cf7f8e2d1f162f77659793e4e4b",
             "recording/arrays/a0.npy": "f20f48af7a956d28cc79d77bf919d130581ca453442ac3728227a46dc3185534",
-            "recording/result.json": "85b25ab81012d3b61a72107f7494393c6f6b2520834e0d9228204c6b268e5f67"
+            "recording/result.json": "a881a87e33d2b20a3a43b7d3288aca2ce2de471950811671356909cc84ed1776"
           },
           "psd": {
             "psd/arrays/a0.npy": "2db7a887ffe145b7c0969e549a8ea84a47c337a5c01fe116c36da2896168c250",
             "psd/arrays/a1.npy": "c63075f34483f05469c976c8f97b05f6e5c72845602fb1262f39df307ffc780f",
-            "psd/result.json": "917d3f844d35425639071eb1de7b38d907000318c6f54bb2d71efb8697f76152",
-            "receipt.json": "241f2698d584b89df4e9f268b651e026cdba35c2ee7d6364d6a3e69e730807c4"
+            "psd/result.json": "04d5a8de20d187f5d73af4f4feda9251e52090f17eee99352fddc86ecec6d22f",
+            "receipt.json": "202c03066832a892311c7c9e34ef5cfa406c3a3ed688cdeafbb9451480a3dea3"
           },
           "reference": {
-            "receipt.json": "172e69581a0a9fed262b676c6c3a36112aaa69ed9d4ec0208284e889d075dae1",
+            "receipt.json": "aa428c4e3acb008f0ea367dcd23439e28b698952a0cede957826119d241a6f9b",
             "referenced/arrays/a0.npy": "63e7fa29712837ee6ca1574f88c4163eb86e9a4ba5433254e8e91c819211f296",
-            "referenced/result.json": "00c59ea126fb21f4eb7ea7e45aa2c59b02ed4d261ebc51a2cefa347fa83af2f4"
+            "referenced/result.json": "59692c32d7d4b3b5970925403949bb6488bed2c2c672d54d9ad221aea89e2413"
           },
           "validate": {
-            "receipt.json": "5a145293c0327ed4e8bd7d0626a12cecac51404646f54c5ec472f4da833baeca",
+            "receipt.json": "c1efe739b61c52782167c8fe0583432d08b8525488058f99dfa5ccc8a35f2900",
             "validated/arrays/a0.npy": "f20f48af7a956d28cc79d77bf919d130581ca453442ac3728227a46dc3185534",
-            "validated/result.json": "d418f10acd5e040412d51e3aa26fecbed03237920028c9e82b3988ffc7cb5a6c"
+            "validated/result.json": "6cf9001ba465ca64d439e6a32c546d3866a58fca6d6ece18c788c5b60285881f"
           }
         }
       },
@@ -700,7 +700,10 @@
           "V^2"
         ]
       },
-      "interpretation": "synthetic descriptive histories, not human longitudinal validation"
+      "interpretation": "synthetic descriptive histories, not human longitudinal validation",
+      "baseline_execution_record_sha256": "93a5b3fe2421872c25b29f661e9a113cdac71bf6c6773c4ce263d5f51436bbff",
+      "implementation_fingerprint": "8cd9186f1a0a74a2cccc9a0160b16c21123627b3408802d6874c2a597c57b600",
+      "protocol_seal_sha256": "ffa44bb377dfc1608de77ae026d4dd22dc0bbf8ea8f0966dcd71b9b1757ef40e"
     },
     "mri": {
       "protocol_fingerprint": "fa47c56e434a19bd8c7a8327d7c7a1e60e4c8da7bf134f28b4c4850a20e3681f",
@@ -1039,33 +1042,33 @@
         "realization-001": {
           "generate": {
             "image/arrays/a0.npy": "0391bda86ba3d6316d72dcfdcb92e186f5afd76c55d9be086bc22d1fc51cc064",
-            "image/result.json": "27b5ef7b99b4f3984f0a08a73a513a74abf9078b72ae23bbb6c2e462b20333ca",
-            "receipt.json": "6c445d83c466ffe326c2b0f8773f50cd5c3354ea232ce80ded82c194475d4dcd"
+            "image/result.json": "e5f60ffa6bc9802e3ef190fc5c41fcf1ee3978b416a5a902cc8989ace8e46c5e",
+            "receipt.json": "88814c680732e3a9c36eb0be633d043ef45fac2e2b4a98074800bde8b3b5db05"
           },
           "geometry": {
-            "receipt.json": "1b611c7ff4f4c741251a92e94b4c5c9f9f7699d2240ca36deab0a2a335932072",
+            "receipt.json": "a5b82b35350ea223f997dbf761fb8af95181700dcd65f9059b6fd507008e830d",
             "validated/arrays/a0.npy": "0391bda86ba3d6316d72dcfdcb92e186f5afd76c55d9be086bc22d1fc51cc064",
-            "validated/result.json": "db4e644b91a2d6b5ee83bd1dda240a0994ddaf00338f2375dcc6556a388426ce"
+            "validated/result.json": "ae00150080b45a9f1060adbd351a868c01372b2777e59f30b80a9f67efcf7753"
           },
           "preprocess": {
             "processed/arrays/a0.npy": "43bde09e88132d6899e63840fbbdb2e66c9f4351d4952e0dd06cf62fe01c0d71",
-            "processed/result.json": "fef63513847eff470ddaab4737c4695f29580d2a07a6ec252c5e54d67c72c287",
-            "receipt.json": "c59b398b501f973beb83e54dee3fccc60d499ac02daad74c159702d00b9c006d"
+            "processed/result.json": "fa8ace45545d41c9359a4c7dfa76b3dc3f1e5c3886e3fac0337bfbeea8e099fa",
+            "receipt.json": "07a2693ebf51a1aab6e944b8307afb1ca0c9156f3da4637f49ebb33db3e64915"
           },
           "qc": {
-            "qc/result.json": "6159cd55ec4ec4f7b0be43885d0d0b391be47fdd2c971814fcd431ff5f01505a",
-            "receipt.json": "1079342750ea200fd286b73cef71ad0a7bf11ca19bb7482d4a536a508d130dfd"
+            "qc/result.json": "b32ad789b2468dafb23ba05f315f219ea898af22ad477c45f1c5f310779752c3",
+            "receipt.json": "ef75d81a48749355a41a95b92cf8436de5f90ca4cc856cba40fc55dbbef3eca6"
           },
           "segment": {
             "labels/arrays/a0.npy": "bf692f80b1e69db0bd4c26d3bc2f90849c5b44654dac35afe9145fedb07dfee0",
-            "labels/result.json": "1637edcb75b1b53f7141321a365108cef8fbc1548a86ef86a02e5e98af76d13f",
-            "receipt.json": "2884fc520884eee4943b708074d657edd6760b004081626420c201f1fe68d164"
+            "labels/result.json": "f405a85b362ca56da59bf85221a0c20a06b19656f3a9e1a3acfd3b6b2f432c2c",
+            "receipt.json": "bc1c6a64fd4bc4ce321a3c03de87fb227251019223628c3273b419e6a3ca518b"
           },
           "surface": {
-            "receipt.json": "ccbec7c0120013e3c3508175f1a7d27f556207848f0a4cf517b8544cae7fee0e",
+            "receipt.json": "774834cba3fd92545f17ab2d6f6f92054a2b18d411bec1257d6828f7537622ab",
             "surface/arrays/a0.npy": "643ba176240531806fdd5d7fae553357dedda66516e73d9f72dbe2a96f4cca28",
             "surface/arrays/a1.npy": "b13ac1780d6f0bb00a2a03c0525650f6c47ea75c965dc46c9bc05c361433b170",
-            "surface/result.json": "fd09fa1985b602ac80b7a8815db39746037748e36f4a40b9613e758e2fa25bea"
+            "surface/result.json": "96182a45a0cf68e28c29917038c84ca98b41a7c38b3916af6685142fd7724ef4"
           }
         }
       },
@@ -1170,7 +1173,10 @@
           "m^3"
         ]
       },
-      "interpretation": "synthetic descriptive histories, not human longitudinal validation"
+      "interpretation": "synthetic descriptive histories, not human longitudinal validation",
+      "baseline_execution_record_sha256": "3e2cb4e2365f77e6c7e8c9cc3502c1d545bbdcda9dd249455d37bbf13f1e6570",
+      "implementation_fingerprint": "8cd9186f1a0a74a2cccc9a0160b16c21123627b3408802d6874c2a597c57b600",
+      "protocol_seal_sha256": "020b271fe31611b1044cd1ff01cdd4ebe7bbc4a5f8ba3d2bd20ac603341e9529"
     },
     "fmri": {
       "protocol_fingerprint": "2cf3c83eb53f77090855413c7b499548d252f2fa1d4cb2fee7646524e58c7412",
@@ -1512,26 +1518,26 @@
             "bold/arrays/a1.npy": "9d1dd78c212270aa573b11e445fad46bfa3723218d350e7aa5895153f8a06d54",
             "bold/arrays/a2.npy": "26e81c73df0584f413e02fd6aa756c14a1ce4f6f751a86c08c764daeef7d32c3",
             "bold/arrays/a3.npy": "52bbf190a2203309dae753f9f8843ce98a6bead5c37f3778cb61a2201d913de1",
-            "bold/result.json": "f20dbfcd8f5f9028904ddc4091e11cb7a0bb915eb8d354777a060583fc718f72",
-            "receipt.json": "7cf5b4274f8d5a66520caa39f48e5b447d30526197527cd68246d8b62fbc560f"
+            "bold/result.json": "38357563a629c78c3e8d59a1c4bfb590cebf95104a1c7da14fdb62013f01627a",
+            "receipt.json": "f3725a7ab379f825398c0a2fe55299162705bda049410df2ef6b5373156aa27c"
           },
           "model": {
             "contrast/arrays/a0.npy": "95f48dae0796bcd8b12901d3830960122e72cceb3d3487810d4fea20adec936f",
             "contrast/arrays/a1.npy": "7bd93bf6680b6c7e26418c7aa448c85b0dae387ef857e6c8ab8b184c86ea1383",
-            "contrast/result.json": "39823117b547c20bff15bec9c68b79be9f475d232254457d78ebf020d9845e8c",
-            "receipt.json": "a61b7b74a1b9562c4ae0559bcbb1c0bd88e8da36836509fa1b4d53296e9dafbf"
+            "contrast/result.json": "2729cfc76ef68597c66a06b889ee04f198516a3589a5a7074f5cd2bba285317b",
+            "receipt.json": "85b7aeb67f82b892522c83c1efcb5a5dcb5c144ee4388bf24e1e4cdd95dc25b2"
           },
           "roi": {
-            "receipt.json": "1df118db7a898a33dc25d82ac3209993f17674d3b7f5ec35ca8f6a04d9196304",
-            "roi/result.json": "4f66e0a7018279e9107e50f454a0f516ceccbb2abd7d1ae08b5932401a769037"
+            "receipt.json": "63594c2cc4ab26d0dce121a3c2314c9566c2fbd02610d1ccdb9777719452806f",
+            "roi/result.json": "d312d500b9cb16f796ef06daabb5c5e67543d31a74e22a498968586606a926df"
           },
           "validate": {
-            "receipt.json": "b6f6dabfb084b8239037ef431c3a8d34f08a33f88b3226c9138539ee86e1acde",
+            "receipt.json": "6a7ede7779f3c089a0722875403658520399c1b488bae24094223fe54106886e",
             "validated/arrays/a0.npy": "9d1dd78c212270aa573b11e445fad46bfa3723218d350e7aa5895153f8a06d54",
             "validated/arrays/a1.npy": "7e0f13abd692501776eb4c2deb06de37af0a2e7a26ec648b3ee08a8b9c3204f7",
             "validated/arrays/a2.npy": "26e81c73df0584f413e02fd6aa756c14a1ce4f6f751a86c08c764daeef7d32c3",
             "validated/arrays/a3.npy": "52bbf190a2203309dae753f9f8843ce98a6bead5c37f3778cb61a2201d913de1",
-            "validated/result.json": "28f5c5e011d66f1a943eb8881f7cdd2afbcc600da443f10c1bdbdc47f0f07bd4"
+            "validated/result.json": "1a7672edeeece4390aacfbadd1af4f7888f1c3ecb0ea4a6975b0548afe4211df"
           }
         }
       },
@@ -1627,7 +1633,10 @@
           "(BOLD/regressor)^2"
         ]
       },
-      "interpretation": "synthetic descriptive histories, not human longitudinal validation"
+      "interpretation": "synthetic descriptive histories, not human longitudinal validation",
+      "baseline_execution_record_sha256": "feb869e1c9d6b33a2e2f11548ca2a9e7965c2a784eafac0eb71dfc4c3aba6800",
+      "implementation_fingerprint": "8cd9186f1a0a74a2cccc9a0160b16c21123627b3408802d6874c2a597c57b600",
+      "protocol_seal_sha256": "b7723afc1772e92c9d99646ba7e47afc0f4add450d210b85f82d31187d0941b5"
     },
     "source": {
       "protocol_fingerprint": "8ef695528ed275dae1aa28aee3043b2720b31212dcdd54a2dc4b21af351d25ab",
@@ -2085,24 +2094,24 @@
         "realization-001": {
           "forward": {
             "forward/arrays/a0.npy": "690cb65306536c48955ec3fa4a50f7c9acd6a53c173b07344729471f4188f443",
-            "forward/result.json": "145e38488508f05fffc01100330f84c9ce39833d451ff4ea9d939d915c759a4d",
-            "receipt.json": "38874b3bed03d563fdc62a50388760be2c4465f3886069ce51ef6ec37ac45ba8"
+            "forward/result.json": "299080bf56bfe0034891a40f335b9412c59b21264ea763517531fa9443ca9515",
+            "receipt.json": "942bbcd4ce1ce940ebae8dce4a9c602736d6fae2049b21d1a62537a501623c36"
           },
           "geometry": {
             "geometry/arrays/a0.npy": "4ee63f704a7a9f1b021e75849daddcb8899a4f2c3321904af1c44a97d348c34b",
-            "geometry/result.json": "ed701ad6127272b0be389360e3877a9d395d7f0b647888cb28cf00b4820922ff",
-            "receipt.json": "813c67045b14ae17465c3ff34c634acb65e925d102b415ec19081498863070a1"
+            "geometry/result.json": "ceaede4673bd838c79e2be9b7fe2985127a1f33aecccbdbfc6a0f629f6b27f7e",
+            "receipt.json": "f0b24244edb47137d67c0d6bbad07153ccab61ee728ab33983dab8ec39e4a88b"
           },
           "inverse": {
             "inverse/arrays/a0.npy": "157b2c6502ff9e283faa7fe9623101e2ef26d626c001bc9801ccebd3d6424674",
-            "inverse/result.json": "c5865419bad797768d4bd3d82ad56f55d835024a47ec642dbd2a3e4c60e61ecf",
-            "receipt.json": "6c5cec9520d70439977c78902c41aa0ba5a30680e8aac1ab452c4711527bfdc7"
+            "inverse/result.json": "377ba5e63854f2f8a144fad1418e279a5e1c0c2fd0b6c6eddbb3f18d87b0b13a",
+            "receipt.json": "33818315cdc886cbc4d60bb5895f3403ebbd3169acf75228c0ab6a29d0e9414f"
           },
           "reconstruct": {
-            "receipt.json": "ac41bdbcc4cb5738c510509cf6e9248efd74376ebf9019264260bd9ac78d43c5",
+            "receipt.json": "c9025edbc0f09c45dd594e595ca295a4c00e772f8effa1ecc4a7e7f095df6b07",
             "source/arrays/a0.npy": "14ba80a76726b3b40d9a5286c82a982896477a1d684d5b17aa2ddfd9f038b8ec",
             "source/arrays/a1.npy": "d3448e77310382b35ed071d4283dab7e43d5d10cb621990190356444ea31986f",
-            "source/result.json": "6a68a32c7060cbfc18fc6b42e1bbdd2587f95b6a7ce73a78b9389a9067b535f6"
+            "source/result.json": "b34f11ddb59bfed4fae2be1706ef6f404992c396368b4700665ef03579fb74d8"
           }
         }
       },
@@ -2207,13 +2216,16 @@
           "1"
         ]
       },
-      "interpretation": "synthetic descriptive histories, not human longitudinal validation"
+      "interpretation": "synthetic descriptive histories, not human longitudinal validation",
+      "baseline_execution_record_sha256": "355ce987daf2fbb7df5aa5b9547ca9c737f999862c13b7fa8e6618ca9b9f7396",
+      "implementation_fingerprint": "8cd9186f1a0a74a2cccc9a0160b16c21123627b3408802d6874c2a597c57b600",
+      "protocol_seal_sha256": "3a790d33b39f4a6d421ad0a36069fddc504e7a40ac1c853bb3b3480e797ebf7e"
     }
   },
   "all_passed": true,
   "cache_interchangeability": false,
   "confirmatory_replication_authorized": false,
-  "scientific_elapsed_s": 19.184398208046332,
+  "scientific_elapsed_s": 19.22259025007952,
   "milestone17_oracles": {
     "benchmark": "soma.synthetic-reproducibility-v1",
     "tolerance_protocol_sha256": "595698d545e6c21ff6acc955e1028ee431c944d3c2381da4fd07c5cf2dbc347f",

@@ -401,13 +401,18 @@ def conformance(
 
     try:
         expected_axes = None
+        expected_units = None
         if "bands" in p["requirements"]["stages"]:
             expected_axes = ["C3.mu", "C4.mu", "C3.beta", "C4.beta"]
+            expected_units = ["V^2"] * 4
         elif "qc" in p["requirements"]["stages"]:
             expected_axes = ["background_m3", "foreground_m3"]
+            expected_units = ["m^3"] * 2
         elif "roi" in p["requirements"]["stages"]:
             expected_axes = ["mean_effect", "mean_variance"]
+            expected_units = ["BOLD/regressor", "(BOLD/regressor)^2"]
         elif "reconstruct" in p["requirements"]["stages"]:
+            expected_units = ["1"] * 6
             expected_axes = [
                 "estimate0",
                 "estimate1",
@@ -418,13 +423,14 @@ def conformance(
             ]
         if (
             expected_axes != p["tolerances"]["axes"]
+            or expected_units != p["tolerances"]["units"]
             or p["scientific"]["primary_outcomes"] != expected_axes
         ):
             deviation(
                 "OUTCOME_CONTRACT_MISMATCH",
                 "outcomes",
-                expected_axes,
-                p["tolerances"]["axes"],
+                {"axes": expected_axes, "units": expected_units},
+                {"axes": p["tolerances"]["axes"], "units": p["tolerances"]["units"]},
                 "unimplemented or mislabeled outcome selector",
             )
         actual = projection(graph)
