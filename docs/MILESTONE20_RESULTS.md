@@ -99,8 +99,22 @@ weights or participant-specific images enter Git.
 The existing 13-job matrix is retained, with actual macOS arm64/Linux x86_64
 Python 3.11/3.12 fictional identity/evidence/schema tests and unchanged M17/M18/M19
 scientific checks. CI requires no human datasets and cannot establish equivalent
-human-data access or rights across platforms. Actual run evidence will be added
-after the private PR checks complete; local tests do not substitute for that matrix.
+human-data access or rights across platforms. Implementation commit `b59b8e595bf218adf3f29d10f4abaded4c685942` passed all
+13 jobs in [PR run 42786264212](https://github.com/nivupai/Soma/actions/runs/42786264212).
+The four actual runner artifacts were downloaded and independently compared locally:
+macOS arm64 Python 3.11.9/3.12.10 and Linux x86_64 Python 3.11.18/3.12.16. Fictional
+identity serialization, scoped pseudonyms, permission checks, protocol fingerprint,
+registration schema/status and declared synthetic lineage were identical. Existing
+numerical, workflow and protocol comparisons also passed their unchanged rules.
+Some generated numerical input bytes differ across platforms, as explicitly recorded
+by the inherited comparison; this does not authorize cache interchangeability or
+claim identical full studies. No human datasets were transferred to CI.
+
+Compact evidence is retained in `experiments/milestone20/ci-evidence.json` and
+`cross-platform-identity.json`. This addendum changes documentation/evidence only;
+all 13 checks must pass again on its exact feature head before merge. The final
+merge/post-merge run and synchronization receipt remain in ignored local reports
+and are reported in the completion message.
 
 ## Remaining limitations
 
