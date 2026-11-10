@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.17.0
+
+- Add strict versioned scientific envelopes, domain contracts and bounded non-pickle arrays.
+- Add explicit semantic compatibility, SI-prefix conversion and read-only legacy migration.
+- Extend Explorer/CLI/SDK with schema, integrity and migration status while retaining inference guards.
+- Add analytical cross-platform cases and dependency-floor verification; no new estimators or human validation claims.
+
 ## 0.16.0
 
 - Add explicit `soma.sdk` imaging, EEG, source, fMRI, provenance, synthetic and

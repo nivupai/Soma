@@ -329,3 +329,10 @@ separates paired maps, atlas ROI means and subject-resampled ICC(A,1). Cohort ga
 rehash pilot products and preprocessing inputs. Existing APIs/tests are preserved.
 See [audit](FMIRI_PREPROCESSING_AUDIT.md), [calibration](FMIRI_NOISE_CALIBRATION.md)
 and [results](MILESTONE14_RESULTS.md); anatomical certification is separate.
+
+## Milestone17 artifact boundary
+
+`soma.results` separates contracts, bounded I/O, compatibility, explicit legacy
+adapters, CLI and analytical reproducibility. `soma.sdk.results` is the supported
+facade. Existing estimators/result classes remain unchanged. Explorer delegates
+versioned validation/comparison and never treats array shape as scientific meaning.

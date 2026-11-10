@@ -17,6 +17,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from soma import __version__
 from soma.pipeline.cache import source_hash
+from soma.sdk.results import SchemaError, compare_results, load_result
 
 from .jobs import Jobs
 from .models import (
@@ -403,6 +404,65 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
         data = read_json(path)
         if not isinstance(data, dict):
             raise ValueError("Experiment receipt must be an object")
+        if "schema_name" in data:
+            try:
+                envelope, _ = load_result(path)
+            except (SchemaError, OSError, ValueError) as error:
+                reason = str(error)
+                status = (
+                    "UNSUPPORTED_VERSION" if "Unsupported schema" in reason else "INVALID_ARTIFACT"
+                )
+                return Artifact(
+                    id=identity,
+                    title=entry.label,
+                    state=State.INVALID,
+                    schema_name=sanitize(str(data.get("schema_name", "unknown"))),
+                    schema_version=sanitize(str(data.get("schema_version", "unknown"))),
+                    validation_status=status,
+                    migration_status="NOT_APPLIED",
+                    metrics={},
+                    parameters={},
+                    compatibility={},
+                    checksums={},
+                    figures=[],
+                    warnings=[status + ": " + reason, "No numerical view or export is permitted"],
+                )
+            domain = envelope["payload"]["domain"]
+            return Artifact(
+                id=identity,
+                title=entry.label,
+                state=State(envelope["interpretation_state"]),
+                schema_name=envelope["schema_name"],
+                schema_version=envelope["schema_version"],
+                validation_status="FORMAT_AND_INTEGRITY_VERIFIED",
+                migration_status="MIGRATED_READ_ONLY"
+                if "migration" in envelope
+                else "NATIVE_SCHEMA",
+                result_envelope=sanitize(envelope),
+                metrics=sanitize(
+                    {
+                        "values": envelope["payload"]["values"],
+                        "domain": domain,
+                        "array_descriptors": envelope["payload"]["arrays"],
+                    }
+                ),
+                parameters=sanitize(envelope.get("parameters", {})),
+                compatibility={
+                    "units": json.dumps(envelope.get("units", {}), sort_keys=True),
+                    "estimand": str(envelope.get("statistical_estimand", "unrecorded")),
+                    "frame": str(envelope.get("spatial_reference")),
+                    "processing": json.dumps(envelope.get("method", {}), sort_keys=True),
+                },
+                checksums={
+                    "receipt_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                    "metadata_sha256": envelope["checksums"]["metadata"],
+                },
+                figures=[],
+                warnings=[
+                    "Schema/integrity checks do not certify scientific validity",
+                    "Display metadata sanitized; checksums identify the original artifact",
+                ],
+            )
         parameters = {}
         if entry.manifest:
             sealed = read_json(registry.path(entry, "manifest"))
@@ -448,6 +508,20 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     @app.post("/api/experiments/compare", response_model=Comparison)
     def compare(request: CompareRequest) -> Any:
         items = [artifact(i) for i in request.ids]
+        if any(a.schema_name is not None for a in items):
+            if not all(a.validation_status == "FORMAT_AND_INTEGRITY_VERIFIED" for a in items):
+                raise HTTPException(
+                    409,
+                    "Invalid, unsupported or legacy metadata cannot be compared "
+                    "as versioned results",
+                )
+            original = [
+                load_result(registry.path(registry.get(a.id, "experiment")))[0] for a in items
+            ]
+            judgments = [compare_results(original[0], value) for value in original[1:]]
+            if any(not j["compatible"] for j in judgments):
+                raise HTTPException(409, {"scientific_compatibility": judgments})
+            return {"compatible": True, "artifacts": items}
         keys = {"units", "estimand", "frame", "processing"}
         if any(set(a.compatibility) != keys for a in items) or any(
             a.compatibility != items[0].compatibility for a in items[1:]
@@ -481,6 +555,8 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     @app.get("/api/experiments/{identity}/export")
     def export(identity: str, format: str = Query("json", pattern="^(json|csv)$")) -> Any:
         a = artifact(identity)
+        if a.state == State.INVALID:
+            raise HTTPException(422, "Invalid or unsupported artifact cannot be exported")
         if format == "json":
             return JSONResponse(
                 a.model_dump(),

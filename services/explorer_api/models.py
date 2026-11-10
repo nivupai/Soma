@@ -139,6 +139,11 @@ class SourceSeries(Strict):
 
 
 class Artifact(Strict):
+    schema_name: str | None = None
+    schema_version: str | None = None
+    validation_status: str = "LEGACY_UNVERSIONED"
+    migration_status: str = "NOT_APPLIED"
+    result_envelope: dict[str, Any] | None = None
     state: State
     id: str
     title: str

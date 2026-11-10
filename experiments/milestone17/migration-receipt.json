@@ -1,0 +1,87 @@
+[
+  {
+    "id": "M1-synthetic-Welch",
+    "source_format": "welch-manifest-v1",
+    "source_sha256": "4a72aad738951eef8ad7461fe7172e97c17eb6c278a47633578205c3884a0f58",
+    "migration_software": "soma-neuro",
+    "migration_version": "0.17.0",
+    "numerical_values_preserved": true,
+    "original_JSON_sha256": "7e936ee1206c4090096cf7e1c1a3a2db094946f750950de4d92e10ca32f93087",
+    "missing_metadata": [
+      "reference montage",
+      "task definition",
+      "absolute time origin",
+      "original array checksum"
+    ],
+    "state": "INDETERMINATE",
+    "source_modified": false,
+    "selection": {
+      "channel": "sine10"
+    },
+    "checksum_scope": "observed now; does not authenticate original execution",
+    "result_kind": "eeg.spectrum",
+    "array_shapes": {
+      "frequencies": [
+        161
+      ],
+      "density": [
+        1,
+        161
+      ]
+    }
+  },
+  {
+    "id": "M6-verification",
+    "source_format": "milestone-verification-json",
+    "source_sha256": "4592efdbea47e239def3bc60de9d24f6afe7ea0f0041457aa10f2166a35da2b1",
+    "migration_software": "soma-neuro",
+    "migration_version": "0.17.0",
+    "numerical_values_preserved": true,
+    "original_JSON_sha256": "a2b773c581a93353970b4122e750180c7858c8aaac8cb19fafa3cbc97f7c3f13",
+    "missing_metadata": [
+      "complete domain-specific numerical contract"
+    ],
+    "state": "INDETERMINATE",
+    "source_modified": false,
+    "selection": null,
+    "checksum_scope": "observed now; does not authenticate original execution",
+    "result_kind": "legacy.record",
+    "array_shapes": {}
+  },
+  {
+    "id": "M7-verification",
+    "source_format": "milestone-verification-json",
+    "source_sha256": "911f8c0e9bccd7fd16233086e0366934106623a972be90b176c02237572a65c2",
+    "migration_software": "soma-neuro",
+    "migration_version": "0.17.0",
+    "numerical_values_preserved": true,
+    "original_JSON_sha256": "b9ddd1dfd9c2ee82df0b2e5bb1655f3c49676592c7d7780d292c744ddcf4a60b",
+    "missing_metadata": [
+      "complete domain-specific numerical contract"
+    ],
+    "state": "INDETERMINATE",
+    "source_modified": false,
+    "selection": null,
+    "checksum_scope": "observed now; does not authenticate original execution",
+    "result_kind": "legacy.record",
+    "array_shapes": {}
+  },
+  {
+    "id": "M16-SDK-examples",
+    "source_format": "milestone-verification-json",
+    "source_sha256": "548eb67dfa8a5773ca42551dd00f2cefc8382d6119e0ac4894a9ad9be649fdd9",
+    "migration_software": "soma-neuro",
+    "migration_version": "0.17.0",
+    "numerical_values_preserved": true,
+    "original_JSON_sha256": "f4eca7ecaafe15cbe79a63d3eaa7c88d506a3c875e5ff35362f6aaca61c1e466",
+    "missing_metadata": [
+      "complete domain-specific numerical contract"
+    ],
+    "state": "INDETERMINATE",
+    "source_modified": false,
+    "selection": null,
+    "checksum_scope": "observed now; does not authenticate original execution",
+    "result_kind": "legacy.record",
+    "array_shapes": {}
+  }
+]

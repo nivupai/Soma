@@ -1,0 +1,5 @@
+# Compatible intersection, not independent nominal minima of every library.
+# MNE>=1.13 requires NumPy>=2.1 and SciPy>=1.14; Nilearn requires pandas>=2.3.
+numpy==2.1.0
+scipy==1.14.0
+pandas==2.3.0

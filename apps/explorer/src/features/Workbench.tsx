@@ -99,6 +99,11 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
                     <span className="badge">
                       {a.state.replaceAll("_", " ")}
                     </span>
+                    <span className="unit">
+                      {a.schema_version
+                        ? `Schema ${a.schema_version}`
+                        : "Legacy / unversioned"}
+                    </span>
                     <span className="spacer" />
                     <a
                       className="button"
@@ -115,6 +120,10 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
                       CSV
                     </a>
                   </div>
+                  <p className="muted small">
+                    {a.validation_status ?? "LEGACY_UNVERSIONED"} ·{" "}
+                    {a.migration_status ?? "NOT_APPLIED"}
+                  </p>
                   <div className="artifact-meta">
                     {Object.entries(a.compatibility).map(([k, v]) => (
                       <span key={k}>
@@ -129,6 +138,7 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
                         metrics: a.metrics,
                         parameters: a.parameters,
                         checksums: a.checksums,
+                        schema: a.result_envelope,
                       }}
                     />
                   </details>

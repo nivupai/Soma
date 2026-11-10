@@ -80,7 +80,7 @@ def main():
         resolved = subprocess.check_output(
             [str(python), "-m", "pip", "freeze"], cwd=cwd, env=clean_env, text=True
         )
-        output = root / "reports/milestone16"
+        output = root / ("reports/milestone" + expected_version.split(".")[1])
         output.mkdir(parents=True, exist_ok=True)
         # Store paths only in ignored local receipts, never in release documentation.
         (output / (env.name + "-resolved.txt")).write_text(resolved)

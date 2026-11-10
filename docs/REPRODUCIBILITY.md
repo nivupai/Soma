@@ -429,3 +429,11 @@ permitted cache. `BENCHMARK_EXPLORER=1` records synthetic browser measurements;
 Private job manifests and participant imagery stay ignored. Original reports are
 read-only and their checksum ledger is verified before commit. Setup and exact
 commands are in `EXPLORER_USER_GUIDE.md`.
+
+## Versioned artifact reproducibility
+
+See CROSS_PLATFORM_REPRODUCIBILITY.md and RESULT_SCHEMA_SPECIFICATION.md. File-byte
+identity, logical dataset identity, backend/environment identity and tolerance-based
+numerical equivalence are separate records. Unsupported schema/method semantics
+require a named adapter or recomputation. Never use private old filesystem paths
+as required reproducibility inputs.
