@@ -1,0 +1,94 @@
+{
+  "schema": "soma.model-release.public-evidence/1",
+  "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+  "model_capsule_ids": {
+    "csp_lda": "ad2ee4fef694552733d1cfadc8faab4725d9be017e5b1c5f7b5101cdacfacc5a",
+    "dummy": "a8964c7ee72828034db28db0f2024124eea81ba3267d2f886401d315422e0f58",
+    "multiband_lr": "576d0db6439d5dccedb5b62c836237d99af5a0d30a5b982690b1c2abbb5941a5",
+    "riemann_mdm": "f57c1de2b2bfb9d05de8fe062c3814c7fa5673dd1393ce035bedc697d31e64c4",
+    "tangent_lr": "ed1cddff67adb6957e97af823549db99a6095604a3e73ffada748bdc77b90c4e"
+  },
+  "protocol_fingerprint": "1728ec7911c62612f4c4735267b5196d881d6e40ab069028c26ee0a9b5a83fcb",
+  "cohort": {
+    "eligible_subjects": 35,
+    "planned_subjects": 35,
+    "recordings": 105,
+    "trials": 1441
+  },
+  "source_fingerprint": "61bdcf304ce61168021d412440da637302efc4ddf3bb11bb8594c61be9bcba9a",
+  "implementation_sha256": "c0235241aaf121e5e42bab10483901ea4195b6fc149f9ca5f8f654d99fff5526",
+  "private_manifest_sha256": "bce8d119c8089b6c5550f6df4585037981744f4e33d867bc160978a32e42b293",
+  "private_probe_sha256": "40cf4304bb0e43e2df8e28913a6848a8f35366094f3cde77ae3bc83cbdf13b25",
+  "soma_version": "0.24.0",
+  "training_wall_seconds": 4.981616833014414,
+  "reload": {
+    "status": "VERIFIED",
+    "models": {
+      "csp_lda": {
+        "labels_exact": true,
+        "probability_max_abs_error": 0.0,
+        "score_max_abs_error": 0.0,
+        "scores_exact": true
+      },
+      "dummy": {
+        "labels_exact": true,
+        "probability_max_abs_error": 0.0,
+        "score_max_abs_error": 0.0,
+        "scores_exact": true
+      },
+      "multiband_lr": {
+        "labels_exact": true,
+        "probability_max_abs_error": 0.0,
+        "score_max_abs_error": 0.0,
+        "scores_exact": true
+      },
+      "riemann_mdm": {
+        "labels_exact": true,
+        "score_max_abs_error": 0.0,
+        "scores_exact": true
+      },
+      "tangent_lr": {
+        "labels_exact": true,
+        "probability_max_abs_error": 0.0,
+        "score_max_abs_error": 0.0,
+        "scores_exact": true
+      }
+    },
+    "fresh_process": true,
+    "noneditable_install": true,
+    "distinct_working_directory": true,
+    "fit_methods_disabled": true,
+    "n_predictions_per_model": 1441
+  },
+  "restart_count": 2,
+  "default_newly_resolved_environment": "BLOCKED_DIFFERENT_DEPENDENCY_AND_INSTALLATION_IDENTITIES",
+  "reload_environment": "faithful dependency snapshot plus fresh noneditable Soma wheel",
+  "original_m22_weights": false,
+  "human_external_evaluation": "BLOCKED",
+  "human_external_subjects": 0,
+  "human_external_trials": 0,
+  "signal_downloads": 0,
+  "weights_exported": false,
+  "participant_rows_exported": false,
+  "source_authorization": "existing notice-bound M20 analyze/export-aggregate policy; consent not verified",
+  "metadata_sources": [
+    {
+      "name": "bnci",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets",
+      "bytes": 145386,
+      "sha256": "a78ad1e839f92b7fae3fa1a314bfb2cc31595caa723b0673bb57f7ca388525ac"
+    },
+    {
+      "name": "cho-datacite",
+      "url": "https://api.datacite.org/dois/10.5524/100295",
+      "bytes": 12406,
+      "sha256": "304bb791655d4c1215e5b0660497ea0447fc116e36528466851d7780343c67dd"
+    },
+    {
+      "name": "moabb-gigadb",
+      "url": "https://raw.githubusercontent.com/NeuroTechX/moabb/develop/moabb/datasets/gigadb.py",
+      "bytes": 16290,
+      "sha256": "f455ad56633d461a24b7fcbb1c7f0629f78dc4747e8739888b0809af2f8bd6b2"
+    }
+  ]
+}

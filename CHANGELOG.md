@@ -77,3 +77,14 @@ Historical scientific reports and original release records are preserved.
 - Extend the SDK, CLI and Explorer with compatibility, shift and blocked-state reporting.
 - Add adversarial/numerical/offline tests and four-platform fictional transfer evidence;
   preserve prior scientific estimators, tests, protocols and outputs.
+
+## 0.24.0 — prospective fitted-model archives
+
+- Add sealed source-only EEG model releases binding complete M23 numeric state,
+  source fingerprints, prediction semantics and private verification probes.
+- Train new EEGBCI source-role models; retain original M22 outputs and distinguish
+  numerical reproduction from independent external validation.
+- Add strict release inspection, prediction-only reload verification, fixed
+  source-fold summaries, focused SDK/CLI and a read-only Explorer model panel.
+- Add metadata-only external acquisition/compatibility plans; acquisition and
+  human external inference remain blocked. No human weights are distributed.

@@ -144,3 +144,25 @@ Human `run` also takes `--bundle BUNDLE --references LOCAL_JSON`. References map
 entry IDs to explicit `root` and root-relative `relative` paths. Existing M21
 content, review, expiry, scope and protocol checks execute before any signal reader
 or classifier. These local reference configurations remain ignored.
+
+## v0.24 model archive
+
+The existing `soma.sdk.eeg_benchmark` API adds `model_training_protocol`,
+`seal_model_training`, `archive_fitted_models`, `inspect_model_archive`,
+`predict_archived_model`, `verify_model_release`, `model_release_summary`,
+`model_acquisition_plan` and `model_transfer_compatibility`. These compose M19/M17
+and M23 numeric kernels; they never deserialize executable Python models.
+
+CLI: `soma model archive REQUEST`, `inspect MANIFEST ID`,
+`verify MANIFEST ID PROBE --permission FILE --notice FILE`,
+`predict MANIFEST ID MODEL FEATURES OUTPUT --permission FILE --notice FILE`,
+and `compare LEFT LEFT_ID RIGHT RIGHT_ID`. Features are an explicit native numeric
+receipt with the exact contract and X/powers/covariances arrays. Prediction calls
+no fit function. Human fitting/prediction and aggregate export check current M20
+evidence. Raw files, manifests, weights, probes and participant predictions stay
+in ignored private storage. The model ID is not authentication of historical origin.
+
+`soma benchmark external acquisition-plan OUTPUT` emits a metadata-only blocked
+plan; `verify-transfer MANIFEST ID --candidate DATASET` inspects actual state and
+metadata differences. Neither command acquires data or accepts terms. The new
+`examples/model_archive.py` is fictional; synthetic results are not human accuracy.

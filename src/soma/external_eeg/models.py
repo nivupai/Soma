@@ -32,6 +32,7 @@ def freeze(
     if model not in MODELS or training.get("origin") not in (
         "SYNTHETIC_SOURCE_FIT",
         "EXTERNAL_SOURCE_REFIT",
+        "EEGBCI_PROSPECTIVE_SOURCE_FIT",
     ):
         raise ValueError("Newly fitted models cannot masquerade as original M22 artifacts")
     arrays: dict[str, Any] = {}

@@ -17,6 +17,7 @@ from soma.fmri.cli import multimodal as multimodal_app
 from soma.human.cli import data_app, human_app, registration_app
 from soma.human.readiness_cli import evidence_app, preprocessing_app, research_app, sessions_app
 from soma.imaging.cli import app as mri_app
+from soma.model_archive.cli import model_app
 from soma.protocol.cli import protocol_app, replay_app
 from soma.results.cli import app as results_app
 from soma.signal.experiments import synthetic_spectrum
@@ -30,6 +31,7 @@ app = typer.Typer(help="Soma scientific computing foundation", no_args_is_help=T
 datasets = typer.Typer(help="List metadata or fetch explicitly selected recordings")
 eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
+app.add_typer(model_app, name="model")
 app.add_typer(data_app, name="data")
 app.add_typer(benchmark_app, name="benchmark")
 app.add_typer(registration_app, name="registration")

@@ -1,0 +1,16 @@
+{
+  "schema": "soma.model-training.freeze/1",
+  "sealed_utc": "2026-11-11T10:25:00.124573+00:00",
+  "protocol_fingerprint": "1728ec7911c62612f4c4735267b5196d881d6e40ab069028c26ee0a9b5a83fcb",
+  "seal_sha256": "fd82ca165e15c4042aaf08572a3dcc807c4e4064e4b1fbf3fc76d4c0f3275f1b",
+  "inventory_fingerprint": "5d36c2df8e5a7243a4e10203eaf14c5caeee04a3d36009904f9cb640e5a39c5a",
+  "permission_fingerprint": "d52dede1b21d0b736cfcd09a829d4f2db0975e7e2717f776f91e482710d01134",
+  "source_recordings": 105,
+  "source_subjects": 35,
+  "source_hash": "c0235241aaf121e5e42bab10483901ea4195b6fc149f9ca5f8f654d99fff5526",
+  "m22_source_recording_hashes_match": true,
+  "old_m22_fitted_state_available": false,
+  "no_external_outcomes_inspected_for_training_choices": true,
+  "external_acquisition_status": "EXTERNAL_DATA_ACQUISITION_BLOCKED",
+  "signal_downloads": 0
+}

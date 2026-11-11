@@ -1,0 +1,51 @@
+{
+  "schema": "soma.model-archive.historical-source-comparison/1",
+  "comparisons": [
+    {
+      "model": "multiband_lr",
+      "parameters": {
+        "classifier__C": 1.0
+      },
+      "historical_source_cv_mean": 0.6049657798342009,
+      "new_source_cv_mean": 0.6049657798342009,
+      "absolute_difference": 0.0,
+      "same_input_recording_hashes": true,
+      "same_three_source_folds": true
+    },
+    {
+      "model": "csp_lda",
+      "parameters": {
+        "csp__n_components": 4,
+        "csp__reg": 0.1
+      },
+      "historical_source_cv_mean": 0.552096036795285,
+      "new_source_cv_mean": 0.552096036795285,
+      "absolute_difference": 0.0,
+      "same_input_recording_hashes": true,
+      "same_three_source_folds": true
+    },
+    {
+      "model": "riemann_mdm",
+      "parameters": {},
+      "historical_source_cv_mean": 0.5176870748299319,
+      "new_source_cv_mean": 0.517687074829932,
+      "absolute_difference": 1.1102230246251565e-16,
+      "same_input_recording_hashes": true,
+      "same_three_source_folds": true
+    },
+    {
+      "model": "tangent_lr",
+      "parameters": {
+        "classifier__C": 0.1
+      },
+      "historical_source_cv_mean": 0.5704452752761023,
+      "new_source_cv_mean": 0.5704452752761023,
+      "absolute_difference": 0.0,
+      "same_input_recording_hashes": true,
+      "same_three_source_folds": true
+    }
+  ],
+  "old_weights_recovered": false,
+  "historical_targets_retested": false,
+  "independent_replication": false
+}
