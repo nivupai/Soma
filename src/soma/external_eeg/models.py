@@ -155,12 +155,14 @@ def predict(
     def backend_inventory(env: dict[str, Any]) -> list[str]:
         return sorted(json.dumps(row, sort_keys=True) for row in env["backends"])
 
+    if "backends" not in archived_environment or "backends" not in current_environment:
+        raise ValueError("Missing numerical backend identity; cache reuse denied")
     expected_static = {k: v for k, v in archived_environment.items() if k != "backends"}
     current_static = {k: v for k, v in current_environment.items() if k != "backends"}
-    if (
-        expected_static != current_static
-        or backend_inventory(archived_environment) != backend_inventory(current_environment)
-    ):
+    backend_matches = backend_inventory(archived_environment) == backend_inventory(
+        current_environment
+    )
+    if expected_static != current_static or not backend_matches:
         differences = sorted(
             key
             for key in set(archived_environment) | set(current_environment)
