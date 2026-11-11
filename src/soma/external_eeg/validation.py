@@ -519,6 +519,7 @@ def execute(
         }
         for m in MODELS
     }
+    report["prediction_failures"] = result["envelope"]["payload"]["values"]["model_failures"]
     report["process_peak_rss_mib"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / (
         2**20 if sys.platform == "darwin" else 1024
     )
