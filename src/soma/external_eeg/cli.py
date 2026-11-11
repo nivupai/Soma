@@ -4,6 +4,7 @@ from pathlib import Path
 
 import typer
 
+from soma.external_eeg import validation_cli
 from soma.external_eeg.contracts import candidate_audit, plan, seal_plan
 from soma.external_eeg.data import inventory
 from soma.external_eeg.models import import_model
@@ -115,3 +116,13 @@ def verification(receipt: Path) -> None:
 
 external_app.command("acquisition-plan")(acquisition_command)
 external_app.command("verify-transfer")(transfer_command)
+
+
+external_app.command("acquisition-manifest")(validation_cli.acquisition_manifest)
+external_app.command("acquire")(validation_cli.acquisition_run)
+external_app.command("snapshot")(validation_cli.snapshot_check)
+external_app.command("validation-plan")(validation_cli.validation_plan)
+external_app.command("validation-run")(validation_cli.validation_run)
+external_app.command("validation-verify")(validation_cli.validation_verify)
+external_app.command("validation-shift")(validation_cli.domain_shift)
+external_app.command("source-runtime-check")(validation_cli.runtime_check)

@@ -88,3 +88,14 @@ Historical scientific reports and original release records are preserved.
   source-fold summaries, focused SDK/CLI and a read-only Explorer model panel.
 - Add metadata-only external acquisition/compatibility plans; acquisition and
   human external inference remain blocked. No human weights are distributed.
+
+## 0.25.0 — controlled external EEG validation readiness
+
+- Add explicit manifest-bound acquisition approval, bounded checksum-verified HTTPS
+  transport, immutable snapshots and candidate-specific frozen harmonization seals.
+- Verify the authentic unchanged M24 release through its preserved runtime without
+  refitting, environment overrides or claims of recovered M22 state.
+- Add independent fictional target evaluation, participant-level failure/missingness
+  controls, focused SDK/CLI and read-only Explorer approval/compatibility states.
+- External acquisition and human inference remain BLOCKED without required evidence.
+  Preserve outstanding billing-blocked CI gates and leave unverified PRs pending.

@@ -1,0 +1,119 @@
+{
+  "schema": "soma.acquisition.manifest/1",
+  "dataset": "bnci2014-004",
+  "version": "upstream-004-2014-unversioned",
+  "license": "CC-BY-ND-4.0",
+  "expected_files": 18,
+  "files": [
+    {
+      "file": "B01T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B01T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B01E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B01E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B02T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B02T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B02E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B02E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B03T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B03T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B03E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B03E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B04T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B04T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B04E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B04E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B05T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B05T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B05E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B05E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B06T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B06T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B06E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B06E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B07T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B07T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B07E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B07E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B08T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B08T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B08E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B08E.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B09T.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B09T.mat",
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "B09E.mat",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets/004-2014/B09E.mat",
+      "sha256": null,
+      "bytes": null
+    }
+  ],
+  "authorization": "REQUIRES_REVIEWED_HUMAN_APPROVAL",
+  "root_policy": "explicit ignored local root; no raw Git export"
+}

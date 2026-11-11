@@ -48,6 +48,7 @@ if "--explorer" in sys.argv:
             "/api/eeg-benchmarks",
             "/api/external-eeg/demo-external-eeg",
             "/api/model-archives/demo-model-archive",
+            "/api/external-validations/demo-external-validation",
             "/api/eeg-benchmarks/demo-eeg-benchmark",
             "/api/experiments",
             "/api/experiments/demo-calibration/export?format=json",

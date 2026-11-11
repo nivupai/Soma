@@ -1,3 +1,4 @@
+import ExternalValidation from "./ExternalValidation";
 import ModelArchive from "./ModelArchive";
 import ExternalEEG from "./ExternalEEG";
 import EEGBenchmark from "./EEGBenchmark";
@@ -57,6 +58,7 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
   }
   return (
     <>
+      <ExternalValidation />
       <ModelArchive />
       <ExternalEEG />
       <EEGBenchmark />

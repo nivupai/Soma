@@ -1,0 +1,31 @@
+{
+  "schema": "soma.external-validation.freeze/1",
+  "recorded_utc": "2026-11-11T17:27:39.895412+00:00",
+  "source_release": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+  "source_model_version": "0.24.0",
+  "harmonization_seals": {
+    "bnci2014-001": "e2a33695cb1b1987acba2a6006b57e2cf05ca38ead98d85583eccaf4a6898cd2",
+    "cho2017": "b672aa776f296028ae66a73d890f6ea5c9a13b622e4685f28c275d0efc8f2b58",
+    "bnci2014-004": "07ec1fbaedd03f0201987fc3fc5447b105a8807ac0c3016b770f0a79c7c98a94"
+  },
+  "manifest_checksums_complete": false,
+  "input_seals_require_new_revision_when_manifest_filled": true,
+  "local_seal_not_external_preregistration": true,
+  "source_documents": [
+    {
+      "name": "bnci",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets",
+      "sha256": "8cda87d215b2081d1c4815fcb5d3bf8466c7b2e6885cdf686cf54613fe2f43a8",
+      "bytes": 145386
+    },
+    {
+      "name": "cho-datacite",
+      "url": "https://api.datacite.org/dois/10.5524/100295",
+      "sha256": "304bb791655d4c1215e5b0660497ea0447fc116e36528466851d7780343c67dd",
+      "bytes": 12406
+    }
+  ],
+  "signal_downloads": 0,
+  "human_external_executions": 0,
+  "approval_status": "NOT_GIVEN"
+}

@@ -1,0 +1,323 @@
+{
+  "schema": "soma.acquisition.manifest/1",
+  "dataset": "cho2017",
+  "version": "gigadb-100295-unversioned",
+  "license": "CC0-1.0",
+  "expected_files": 52,
+  "files": [
+    {
+      "file": "s01.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s02.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s03.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s04.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s05.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s06.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s07.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s08.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s09.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s10.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s11.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s12.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s13.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s14.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s15.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s16.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s17.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s18.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s19.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s20.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s21.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s22.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s23.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s24.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s25.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s26.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s27.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s28.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s29.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s30.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s31.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s32.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s33.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s34.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s35.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s36.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s37.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s38.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s39.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s40.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s41.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s42.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s43.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s44.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s45.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s46.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s47.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s48.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s49.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s50.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s51.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "file": "s52.mat",
+      "url": null,
+      "sha256": null,
+      "bytes": null
+    }
+  ],
+  "authorization": "REQUIRES_REVIEWED_HUMAN_APPROVAL",
+  "root_policy": "explicit ignored local root; no raw Git export"
+}

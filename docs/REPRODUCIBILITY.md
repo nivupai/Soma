@@ -510,3 +510,14 @@ faithful private training-dependency snapshot is separately identified. Existing
 environment/build/cache guards are unchanged. See MODEL_RELOAD_VERIFICATION.md.
 Four actual CI runners independently fit/reload synthetic releases; the eighth
 comparison family adds archive evidence without weakening the prior seven.
+
+## v0.25 preserved-runtime transfer controls
+
+External acquisition and inference require reviewed input-bound M20/M21 evidence
+and an M19 harmonization seal. Missing SHA256/size, URL or approval blocks acquisition.
+Checksum verification is separate from scientific eligibility. Authentic M24 kernels
+run in their preserved isolated v0.24 environment; current-controller code and worker
+identities are recorded separately, without waiving environment/source guards.
+Nine synthetic comparison families retain the previous eight contracts. Real human
+weights and recordings never enter CI. Billing-blocked jobs remain pending; local
+checks do not replace required remote execution.

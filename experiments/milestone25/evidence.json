@@ -1,0 +1,27 @@
+{
+  "schema": "soma.external-validation.evidence/1",
+  "source_release": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+  "human_recordings_acquired": 0,
+  "external_subjects": 0,
+  "external_sessions": 0,
+  "external_trials": 0,
+  "external_accuracy_available": false,
+  "components_refitted": 0,
+  "source_reload_only": true,
+  "files": {
+    "experiments/milestone25/bnci2014-001/result.json": "aee9f07d488c0cba562a155449c44f31e9fff33fdb5b824685581daca520cdd8",
+    "experiments/milestone25/bnci2014-001-acquisition-template.json": "2f133d123cf0dcc0bad96004c41559487ea7d49ed7f509da68d5f60d3de68723",
+    "experiments/milestone25/bnci2014-004/result.json": "b4a666e7206e296dda7a5ddc8cfef0eebeba4e1ac5795c04e098e32109022866",
+    "experiments/milestone25/bnci2014-004-acquisition-template.json": "8872af406217b9573d1c221cb7240961403973b83cfa124e5b70c2320eb1beb2",
+    "experiments/milestone25/candidate-status.csv": "63994c3628f7c25026dec92678335f55bbed3de9857401e2ae39943023ff93c8",
+    "experiments/milestone25/cho2017/result.json": "0abc5412bc29f892bc488ed75a8ad53f0d5b32ad440eedd8dcdc0db426d53656",
+    "experiments/milestone25/cho2017-acquisition-template.json": "51d6b9ba7cbe65a66904a0c381a01388cbc17093d06f0dc6e677435174e96fb9",
+    "experiments/milestone25/compatibility-report.json": "4cbd8db532fcadf36c520ce80ebefd2df96fdc3bf13d7f24c4f30b87c8573f6a",
+    "experiments/milestone25/freeze.json": "2789ffb493dfdf8cfd22769b01b1f7d2e73ab776725e9e53aa228e4f14131862",
+    "experiments/milestone25/selection-audit.json": "a51036a165430cbbb8d58801ae2d04e19979d46c50bc388f3b8590f92d6dd39e",
+    "experiments/milestone25/source-runtime-control.json": "dc63a0e2a81b474064e1bfdd1d0896f48aec95e052adf57500ca93d856c3dbff",
+    "configs/bnci2014-001-harmonization-v25.json": "bb5f116a3562c2a7ece24222081e8329e736e963b667a1088b5442f0c4c26097",
+    "configs/bnci2014-004-harmonization-v25.json": "b4c757eff84cd01e1f4d4e36f61497d9178661a9dca238abd4f2de3f56f90ec6",
+    "configs/cho2017-harmonization-v25.json": "9242f7a9816953e16f90f2660f84449926a3819036d048dbca2eb6dd91e28290"
+  }
+}
