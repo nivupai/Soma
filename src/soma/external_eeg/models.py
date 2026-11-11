@@ -150,13 +150,14 @@ def predict(
         raise ValueError("Incompatible frozen feature contract")
     current_environment = environment_snapshot()
     archived_environment = d["environment"]
+
     # Threadpool enumeration order can change with library load order. The complete
     # set of reported backends still has to match, including versions and threading.
     def backend_inventory(env: dict[str, Any]) -> list[str]:
         return sorted(json.dumps(row, sort_keys=True) for row in env["backends"])
 
     if "backends" not in archived_environment or "backends" not in current_environment:
-        raise ValueError("Missing numerical backend identity; cache reuse denied")
+        raise ValueError("Missing numerical backend environment identity; cache reuse denied")
     expected_static = {k: v for k, v in archived_environment.items() if k != "backends"}
     current_static = {k: v for k, v in current_environment.items() if k != "backends"}
     backend_matches = backend_inventory(archived_environment) == backend_inventory(
