@@ -201,6 +201,9 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     from .model_archive import router as model_archive_router
 
     app.include_router(model_archive_router(registry))
+    from .external_validation import router as external_validation_router
+
+    app.include_router(external_validation_router(registry))
     app.state.science, app.state.jobs, app.state.registry = science, jobs, registry
     app.add_middleware(
         CORSMiddleware,

@@ -14,6 +14,10 @@ from soma.eeg_benchmark.report import read_aggregate as read_aggregate
 from soma.eeg_benchmark.report import save_aggregate as save_aggregate
 from soma.eeg_benchmark.report import verify_execution as verify_execution
 from soma.eeg_benchmark.runner import run_benchmark as run_benchmark
+from soma.external_eeg.acquisition import acquire as acquire_external
+from soma.external_eeg.acquisition import acquisition_template as external_acquisition_manifest
+from soma.external_eeg.acquisition import selection_audit as external_selection_audit
+from soma.external_eeg.acquisition import snapshot as external_snapshot
 from soma.external_eeg.contracts import candidate_audit as external_audit
 from soma.external_eeg.contracts import compatibility as external_compatibility
 from soma.external_eeg.contracts import plan as external_plan
@@ -24,6 +28,12 @@ from soma.external_eeg.models import predict as predict_frozen_external
 from soma.external_eeg.runtime import compare as compare_external
 from soma.external_eeg.runtime import read_receipt as verify_external
 from soma.external_eeg.runtime import run as run_external
+from soma.external_eeg.validation import compare_validation as compare_external_validation
+from soma.external_eeg.validation import execute as execute_external_validation
+from soma.external_eeg.validation import harmonization as external_harmonization
+from soma.external_eeg.validation import read_validation as verify_external_validation
+from soma.external_eeg.validation import seal_validation as seal_external_validation
+from soma.external_eeg.validation_cli import verify_source_runtime as verify_frozen_source_runtime
 from soma.model_archive.acquisition import acquisition_plan as model_acquisition_plan
 from soma.model_archive.acquisition import verify_transfer as model_transfer_compatibility
 from soma.model_archive.archive import aggregate_summary as model_release_summary
@@ -75,4 +85,18 @@ __all__ += [
     "model_training_protocol",
     "archive_fitted_models",
     "model_release_summary",
+]
+
+
+__all__ += [
+    "acquire_external",
+    "external_acquisition_manifest",
+    "external_snapshot",
+    "external_selection_audit",
+    "external_harmonization",
+    "seal_external_validation",
+    "execute_external_validation",
+    "verify_external_validation",
+    "compare_external_validation",
+    "verify_frozen_source_runtime",
 ]

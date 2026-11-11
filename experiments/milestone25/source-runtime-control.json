@@ -1,0 +1,45 @@
+{
+  "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+  "status": "VERIFIED",
+  "scope": "SOURCE_RELOAD_ONLY",
+  "models": {
+    "csp_lda": {
+      "labels_exact": true,
+      "probability_max_abs_error": 0.0,
+      "score_max_abs_error": 0.0,
+      "scores_exact": true
+    },
+    "dummy": {
+      "labels_exact": true,
+      "probability_max_abs_error": 0.0,
+      "score_max_abs_error": 0.0,
+      "scores_exact": true
+    },
+    "multiband_lr": {
+      "labels_exact": true,
+      "probability_max_abs_error": 0.0,
+      "score_max_abs_error": 0.0,
+      "scores_exact": true
+    },
+    "riemann_mdm": {
+      "labels_exact": true,
+      "score_max_abs_error": 0.0,
+      "scores_exact": true
+    },
+    "tangent_lr": {
+      "labels_exact": true,
+      "probability_max_abs_error": 0.0,
+      "score_max_abs_error": 0.0,
+      "scores_exact": true
+    }
+  },
+  "n_predictions_per_model": 1441,
+  "human_external_trials": 0,
+  "schema": "soma.source-runtime-control/1",
+  "worker_sha256": "2a1d34bbe67e749f21678e28dd12b05dae29ca2f34671771bf60b9f3a5e3f635",
+  "source_release_version": "0.24.0",
+  "controller_version": "0.25.0",
+  "archive_files_unchanged": 46,
+  "model_components_refitted": 0,
+  "not_external_accuracy": true
+}

@@ -166,3 +166,22 @@ in ignored private storage. The model ID is not authentication of historical ori
 plan; `verify-transfer MANIFEST ID --candidate DATASET` inspects actual state and
 metadata differences. Neither command acquires data or accepts terms. The new
 `examples/model_archive.py` is fictional; synthetic results are not human accuracy.
+
+## v0.25 permission-bound external validation
+
+The existing EEG benchmark SDK adds `external_acquisition_manifest`, `acquire_external`,
+`external_snapshot`, `external_selection_audit`, `external_harmonization`,
+`seal_external_validation`, `execute_external_validation`, `verify_external_validation`,
+`compare_external_validation` and `verify_frozen_source_runtime`. These compose existing
+M17/M19/M20/M21 contracts and the immutable M24 numeric archive. No new ML framework
+or executable model deserialization is introduced.
+
+Typer: `benchmark external acquisition-manifest OUTPUT --dataset DATASET`,
+`acquire REQUEST`, `snapshot REQUEST`, `validation-plan REQUEST`,
+`validation-run REQUEST`, `validation-verify RECEIPT`, `validation-shift RECEIPT`,
+and `source-runtime-check REQUEST`. Requests are ignored local JSON with explicit
+manifest, seal, raw/output roots, archive, runtime and permission/notice/bundle/reference
+paths. Acquisition requires the exact reviewed manifest-bound approval and expected
+SHA256/lengths. No credential or terms-acceptance path exists. The source-runtime
+control uses the preserved v0.24 install; it never labels source probe parity external
+accuracy. `examples/external_validation.py` uses independently seeded fiction only.

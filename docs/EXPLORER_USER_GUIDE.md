@@ -197,3 +197,11 @@ preview does not claim a human model. Configured `model-archive` entries point o
 to reviewed metadata summaries, never private manifests or arrays. External
 acquisition and human external accuracy remain unavailable. No model fit or signal
 download runs when opening the panel.
+
+## v0.25 frozen external validation
+
+Experiments separates acquisition approval, scientific compatibility, immutable
+source-model identity and actual human coverage. Configured `external-validation`
+entries accept aggregate receipts only. Blocked execution displays no human accuracy.
+Fictional results carry SYNTHETIC TEST ONLY and separate numerical outcomes.
+HTTP views are GET-only; opening the panel cannot acquire data or launch inference.

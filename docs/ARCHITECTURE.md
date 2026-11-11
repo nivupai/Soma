@@ -384,3 +384,13 @@ M5/M22 pipelines, exports M23 numeric capsules and fixed source-fold evidence.
 M23 kernels. `acquisition` is read-only metadata planning. SDK/CLI and the existing
 Explorer expose these contracts, with a dedicated aggregate-only summary method.
 This is not a parallel estimator, workflow or serialization framework.
+
+## v0.25 external acquisition and validation
+
+`external_eeg.acquisition` composes M20/M21 review with bounded opt-in direct-file
+transport and immutable snapshots. `validation` seals candidate-specific proposals,
+checks source artifacts and scientific/permission readiness, retains participant/model
+missingness and writes aggregate M17 receipts. `frozen_worker` is a fixed isolated
+script using the selected installed Soma version; it loads numeric state and denies
+learned-component fitting. SDK/Typer and the existing Explorer expose these contracts.
+Unknown target reference/unit/event metadata is explicitly non-executable.

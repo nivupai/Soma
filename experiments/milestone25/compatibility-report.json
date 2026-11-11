@@ -1,0 +1,35 @@
+{
+  "bnci2014-001": {
+    "status": "BLOCKED",
+    "reason": [
+      "No current reviewed M20/M21 acquisition/use evidence supplied",
+      "Full SHA256 evidence required",
+      "22-channel average is not the EEGBCI64-channel reference operator"
+    ],
+    "protocol_fingerprint": "e2a33695cb1b1987acba2a6006b57e2cf05ca38ead98d85583eccaf4a6898cd2",
+    "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+    "observed_external_trials": 0
+  },
+  "cho2017": {
+    "status": "BLOCKED",
+    "reason": [
+      "No current reviewed M20/M21 acquisition/use evidence supplied",
+      "Original-distribution file URL not yet verified",
+      "Exact distribution, reference pool, cue timing and units not independently validated"
+    ],
+    "protocol_fingerprint": "b672aa776f296028ae66a73d890f6ea5c9a13b622e4685f28c275d0efc8f2b58",
+    "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+    "observed_external_trials": 0
+  },
+  "bnci2014-004": {
+    "status": "BLOCKED",
+    "reason": [
+      "No current reviewed M20/M21 acquisition/use evidence supplied",
+      "Full SHA256 evidence required",
+      "Only3 bipolar channels: six required ROI channels absent"
+    ],
+    "protocol_fingerprint": "07ec1fbaedd03f0201987fc3fc5447b105a8807ac0c3016b770f0a79c7c98a94",
+    "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+    "observed_external_trials": 0
+  }
+}

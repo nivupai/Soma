@@ -1,0 +1,4 @@
+dataset,distribution_version,license,metadata_subjects,metadata_sessions_per_subject,channels,native_fs_hz,acquisition_approved,human_trials_evaluated,human_balanced_accuracy
+bnci2014-001,unversioned upstream MAT; hash snapshot required,CC-BY-ND-4.0,9,2,22,250,False,0,NOT_AVAILABLE
+cho2017,GigaDB DOI10.5524/100295; hash snapshot required,CC0-1.0 in primary DataCite; MOABB catalog CC-BY-4.0 discrepancy retained,52,1,64,512,False,0,NOT_AVAILABLE
+bnci2014-004,unversioned upstream MAT; hash snapshot required,CC-BY-ND-4.0,9,5,3,250,False,0,NOT_AVAILABLE
