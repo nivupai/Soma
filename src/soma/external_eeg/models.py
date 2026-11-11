@@ -1,5 +1,6 @@
 """Bounded M17 numeric model capsules; no pickle, fitting on import, or M22 forgery."""
 
+import json
 from pathlib import Path
 from typing import Any
 
@@ -148,14 +149,27 @@ def predict(
     if not compatibility(d["contract"], contract)["exact"]:
         raise ValueError("Incompatible frozen feature contract")
     current_environment = environment_snapshot()
-    if d["environment"] != current_environment:
+    archived_environment = d["environment"]
+    # Threadpool enumeration order can change with library load order. The complete
+    # set of reported backends still has to match, including versions and threading.
+    def backend_inventory(env: dict[str, Any]) -> list[str]:
+        return sorted(json.dumps(row, sort_keys=True) for row in env["backends"])
+
+    expected_static = {k: v for k, v in archived_environment.items() if k != "backends"}
+    current_static = {k: v for k, v in current_environment.items() if k != "backends"}
+    if expected_static != current_static or backend_inventory(archived_environment) != backend_inventory(current_environment):
         differences = sorted(
-            key for key in set(d["environment"]) | set(current_environment)
-            if d["environment"].get(key) != current_environment.get(key)
+            key
+            for key in set(archived_environment) | set(current_environment)
+            if archived_environment.get(key) != current_environment.get(key)
         )
+        backend_difference = {
+            "archived": backend_inventory(archived_environment),
+            "current": backend_inventory(current_environment),
+        } if "backends" in differences else None
         raise ValueError(
             "Cross-environment import requires independent validation; cache reuse denied "
-            f"(differing fields: {differences})"
+            f"(differing fields: {differences}, backends: {backend_difference})"
         )
     n = len(X)
     if not n or not np.isfinite(X).all() or not np.isfinite(powers).all():
