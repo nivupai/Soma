@@ -147,9 +147,15 @@ def predict(
     d, a = import_model(path, identity)
     if not compatibility(d["contract"], contract)["exact"]:
         raise ValueError("Incompatible frozen feature contract")
-    if d["environment"] != environment_snapshot():
+    current_environment = environment_snapshot()
+    if d["environment"] != current_environment:
+        differences = sorted(
+            key for key in set(d["environment"]) | set(current_environment)
+            if d["environment"].get(key) != current_environment.get(key)
+        )
         raise ValueError(
-            "Cross-environment import requires independent validation; cache reuse denied"
+            "Cross-environment import requires independent validation; cache reuse denied "
+            f"(differing fields: {differences})"
         )
     n = len(X)
     if not n or not np.isfinite(X).all() or not np.isfinite(powers).all():
