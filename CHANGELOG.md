@@ -57,3 +57,13 @@ Historical scientific reports and original release records are preserved.
 - Add atomic publication, fault-tested recovery and four existing-method synthetic DAGs.
 - Add metadata-only interactive workflow inspection and actual cross-platform replay.
 - Preserve existing scientific algorithms, result schemas and historical tests/artifacts.
+
+## 0.22.0
+
+- Add sealed, permission-aware cached EEG decoding evaluation with five existing
+  estimators, source-only selection, run-held-out and subject-disjoint fitting,
+  subject bootstrap intervals, ten prespecified sensitivities and separate adaptation.
+- Add auditable native cells, aggregate-only SDK/CLI/Explorer reporting and actual
+  historically reused EEGBCI results; no independent external replication claim.
+- Add adversarial/numerical/synthetic benchmark tests and four-runner reproducibility
+  artifacts; preserve existing estimators, inference guards and historical reports.

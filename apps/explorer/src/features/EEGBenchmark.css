@@ -1,0 +1,18 @@
+.eeg-benchmark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+.eeg-benchmark-table th,
+.eeg-benchmark-table td {
+  padding: 0.65rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #34444d);
+}
+.eeg-benchmark-table th {
+  font-weight: 600;
+  vertical-align: bottom;
+}
+.eeg-benchmark-table td {
+  font-variant-numeric: tabular-nums;
+}

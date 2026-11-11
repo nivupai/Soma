@@ -32,6 +32,7 @@ for module in [
     "protocol",
     "human",
     "readiness",
+    "eeg_benchmark",
 ]:
     importlib.import_module("soma.sdk." + module)
 assert "descriptive_only" in inference_policy_text()
@@ -44,6 +45,8 @@ if "--explorer" in sys.argv:
     with TestClient(create_app(), base_url="http://127.0.0.1") as c:
         for path in [
             "/api/catalog",
+            "/api/eeg-benchmarks",
+            "/api/eeg-benchmarks/demo-eeg-benchmark",
             "/api/experiments",
             "/api/experiments/demo-calibration/export?format=json",
             "/api/eeg/demo-eeg/analysis",

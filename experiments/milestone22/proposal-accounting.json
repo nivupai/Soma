@@ -1,0 +1,100 @@
+{
+  "schema": "soma.eeg.benchmark-proposal-audit/1.0.0",
+  "timing": "post-execution accounting only; no model selection or scores changed",
+  "scheduled_recordings": 195,
+  "scheduled_imagery_annotations": 2925,
+  "variants": [
+    {
+      "variant": "primary",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "narrow_bands",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "filter_8_30",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "reference_none",
+      "native_known_proposals": 2895,
+      "records_without_published_trial_decisions": 2,
+      "annotations_in_those_records": 30,
+      "fixed_preprocessing_failure_reasons": {
+        "No accepted trials with contained context": 2
+      },
+      "class_count_qc_failures": 21
+    },
+    {
+      "variant": "epoch_long",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "strict_qc",
+      "native_known_proposals": 2820,
+      "records_without_published_trial_decisions": 7,
+      "annotations_in_those_records": 105,
+      "fixed_preprocessing_failure_reasons": {
+        "No accepted trials with contained context": 7
+      },
+      "class_count_qc_failures": 20
+    },
+    {
+      "variant": "motor_channels",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "center_only",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "covariance_lw",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "runs_8_12",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    },
+    {
+      "variant": "source_30",
+      "native_known_proposals": 2925,
+      "records_without_published_trial_decisions": 0,
+      "annotations_in_those_records": 0,
+      "fixed_preprocessing_failure_reasons": {},
+      "class_count_qc_failures": 0
+    }
+  ]
+}
