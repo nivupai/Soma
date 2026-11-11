@@ -157,16 +157,23 @@ def predict(
 
     expected_static = {k: v for k, v in archived_environment.items() if k != "backends"}
     current_static = {k: v for k, v in current_environment.items() if k != "backends"}
-    if expected_static != current_static or backend_inventory(archived_environment) != backend_inventory(current_environment):
+    if (
+        expected_static != current_static
+        or backend_inventory(archived_environment) != backend_inventory(current_environment)
+    ):
         differences = sorted(
             key
             for key in set(archived_environment) | set(current_environment)
             if archived_environment.get(key) != current_environment.get(key)
         )
-        backend_difference = {
-            "archived": backend_inventory(archived_environment),
-            "current": backend_inventory(current_environment),
-        } if "backends" in differences else None
+        backend_difference = (
+            {
+                "archived": backend_inventory(archived_environment),
+                "current": backend_inventory(current_environment),
+            }
+            if "backends" in differences
+            else None
+        )
         raise ValueError(
             "Cross-environment import requires independent validation; cache reuse denied "
             f"(differing fields: {differences}, backends: {backend_difference})"
