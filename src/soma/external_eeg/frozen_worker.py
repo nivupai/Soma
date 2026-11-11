@@ -125,6 +125,8 @@ def main() -> None:
             if probabilities is not None:
                 result[model + "_probabilities"] = probabilities
         except (ValueError, ArithmeticError) as error:
+            if operation == "predict-synthetic":
+                raise  # Synthetic reference failures must reveal the numerical cause in CI.
             failures[model] = type(error).__name__
     numerical_receipt(
         {
