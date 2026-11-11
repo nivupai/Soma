@@ -249,7 +249,8 @@ def test_independent_synthetic_target_predictions_do_not_refit(fixed, tmp_path):
         tmp_path / "evaluation",
         synthetic_data=d,
     )
-    assert report["status"] == "SYNTHETIC_COMPLETE" and report["human_external_trials"] == 0
+    assert report["status"] == "SYNTHETIC_COMPLETE", (report["model_readiness"], report["prediction_failures"])
+    assert report["human_external_trials"] == 0
     assert report["refitted_components"] == 0 and len(report["performance"]) == 5
     assert all(m["complete_subjects"] == 9 for m in report["performance"])
     assert report["performance"][0]["balanced_accuracy"]["mean"] == 0.5
