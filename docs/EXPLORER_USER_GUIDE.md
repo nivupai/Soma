@@ -163,3 +163,18 @@ local boundary is not a general publication authorization.
 ## Milestone 21 addendum
 
 Data Audit now shows immutable registration claims, bundle integrity/review, preprocessing and session requirements with per-gate READY/BLOCKED/INDETERMINATE/NOT_APPLICABLE states. Configured `human-readiness` entries read metadata-only native results. Historical receipts are not revalidated by GET. The session table preserves explicit labels and nulls; no override/run/upload controls are provided.
+
+## v0.22 EEG decoding benchmark
+
+The existing Experiments workbench includes an EEG benchmark receipt selector and
+prespecified sensitivity selector. Default preview is NOT_RUN, with no invented
+human performance. A configured `eeg-benchmark` registry entry points to the native
+aggregate `result.json`, never the private execution/subject table. Existing allowed
+roots and explicit local configuration rules still apply.
+
+The panel shows frozen protocol identity, cohort/trial coverage, five methods in
+both evaluation modes, subject bootstrap intervals, missing counts, anonymous
+subject-distribution bins and expandable leakage/adaptation/null diagnostics.
+GET requests never launch a benchmark. Historical reuse, conditional uncertainty,
+invalid human nominal permutation inference and supervised adaptation remain
+visible. Participant identifiers and local paths are not exposed.

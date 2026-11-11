@@ -11,6 +11,7 @@ from soma.anatomy.cli import app as anatomy_app
 from soma.datasets.eegbci import fetch, load_recording
 from soma.datasets.registry import REGISTRY
 from soma.eeg.analysis import analyze_recording
+from soma.eeg_benchmark.cli import benchmark_app
 from soma.fmri.cli import app as fmri_app
 from soma.fmri.cli import multimodal as multimodal_app
 from soma.human.cli import data_app, human_app, registration_app
@@ -30,6 +31,7 @@ datasets = typer.Typer(help="List metadata or fetch explicitly selected recordin
 eeg = typer.Typer(help="Inspect cached EEG and produce descriptive analyses")
 experiments = typer.Typer(help="Reproducible signal laboratories")
 app.add_typer(data_app, name="data")
+app.add_typer(benchmark_app, name="benchmark")
 app.add_typer(registration_app, name="registration")
 app.add_typer(human_app, name="human-pilot")
 app.add_typer(evidence_app, name="evidence")

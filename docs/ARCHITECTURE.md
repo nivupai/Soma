@@ -364,3 +364,13 @@ No estimator, existing preprocessing pipeline or cache semantics is replaced.
 ## Milestone 21 addendum
 
 M21 adds content-addressed evidence references and read-only readiness gates over M19 seals/M20 plans. Existing M14 preprocessing/ITK/confound methods and M17 native result I/O are reused; no second workflow/provenance engine or new estimator is introduced. See [readiness gates](HUMAN_DATA_READINESS_GATES.md).
+
+## v0.22 focused benchmark integration
+
+`eeg_benchmark` composes existing EEGBCI adapters, permissions, record preprocessing,
+Welch/CSP/Riemannian estimators, FitAudit, M18 cache stages, M19 seals and M17
+receipts. It introduces no generic workflow engine. Protocol, data, evaluation,
+subject statistics, bounded runner, aggregate reporting and plotting are separate
+small modules; `sdk.eeg_benchmark` and the existing Typer CLI expose them. Explorer's
+read-only aggregate router is part of the existing workbench/API allowlist.
+Private participant cells never become HTTP results or package artifacts.

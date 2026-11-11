@@ -105,3 +105,21 @@ The existing Typer groups are extended with `registration verify-attachment`,
 `research readiness`. Each command accepts explicit local files/roots. Provider
 retrieval requires `--network`. No command executes fMRIPrep or a shell. See
 [command syntax and policy](HUMAN_DATA_READINESS_GATES.md).
+
+## v0.22 focused EEG benchmark
+
+`soma.sdk.eeg_benchmark` exposes `design`, `validate_design`, `inventory`,
+`benchmark_protocol`, `inspect_protocol`, `run_benchmark`, `verify_execution`,
+`aggregate_export`, `save_aggregate`, `read_aggregate` and `compare`. No estimator
+is replaced. Use an explicit permitted raw root, scoped pseudonym key, current
+PermissionEvidence/public notice, private output/cache and sealed M19 protocol.
+`examples/eeg_benchmark.py` executes all five methods on a known fictional mixture.
+
+CLI: `soma benchmark eeg plan REQUEST`, `run REQUEST`, `verify PRIVATE_OUTPUT`,
+`results REQUEST --output AGGREGATE_DIRECTORY`, and `compare LEFT_RESULT RIGHT_RESULT`.
+The request contains root, key_file, permission_file, permission_source, seal,
+inventory, output and cache. Keep it ignored (`*.local.json`). Planning writes the
+private inventory and exclusive seal before execution. Results exports only the
+reviewable aggregate whitelist; participant rows are refused. Native cells and
+execution receipts are private, independently integrity-verifiable artifacts.
+Different protocol identities do not authorize direct numeric comparison.

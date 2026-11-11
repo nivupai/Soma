@@ -467,3 +467,19 @@ not automatically prospective, confirmatory or longitudinal biological evidence.
 ## Milestone 21 addendum
 
 M21 retains the macOS arm64/Linux x86_64 Python 3.11/3.12 matrix and existing numerical tolerances. Each runner executes offline synthetic readiness tests and emits fictional canonical-bundle/session/registration/gate invariants for exact comparison. This cannot establish equivalent real human data access or validated longitudinal results.
+
+## v0.22 decoding evaluation
+
+The locally sealed `configs/eeg-benchmark-v22.json` binds the complete cached EEG
+inventory fingerprint before target fitting. M18 verifies preprocessing cache
+content/code/environment; M17 stores each fold/model and aggregate receipt. The
+runner refuses changed cohort/code/permission/environment during resumption.
+Private predictions, subject tables, EDF hashes and FitAudit membership stay in
+ignored reports. Public exports contain aggregate statistics and SVG figures only.
+No human-data CI download is required. See `EEG_BENCHMARK_PROTOCOL.md` and
+`MILESTONE22_RESULTS.md` for historical reuse and actual local execution evidence.
+
+The four actual CI runners retain macOS arm64/Linux x86_64 and Python3.11/3.12.
+`eeg_benchmark_repro.py` emits known-mixture synthetic outcomes; the comparison
+requires all four artifacts and exact declared invariants. These checks do not
+establish cross-platform human-data replication or permit cache interchange.

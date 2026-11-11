@@ -1,3 +1,4 @@
+import EEGBenchmark from "./EEGBenchmark";
 import { useEffect, useState } from "react";
 import { Download, FlaskConical } from "lucide-react";
 import { api, type Artifact, type Dataset, type Job } from "../api/client";
@@ -54,6 +55,7 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
   }
   return (
     <>
+      <EEGBenchmark />
       <Panel
         title="Reproducible experiments"
         eyebrow="ARTIFACT BROWSER / READ ONLY"

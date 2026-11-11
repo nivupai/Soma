@@ -1,0 +1,39 @@
+{
+  "schema": "soma.eeg.benchmark-public-evidence/1.0.0",
+  "status": "PARTIAL",
+  "protocol_fingerprint": "3592c080235d3c459e5204a5fe37f9a8a83bd0ef1ff128fd0bb05b9a3cb60127",
+  "private_inventory_fingerprint": "bfb8273ab69f336a6477d289b76f15ca1c35ebe995244cc647707562755d161d",
+  "execution_identity": "43cd8d7fd1200178438953fffd34d4383143794cb6c20322e1a6f00ad0f3828e",
+  "implementation_source_sha256": "20a528fdb80342673d171e0a0fc626670384397e0fe7d7f7b537282ecc156ec3",
+  "execution_manifest_sha256": "89462baf5775a1cfd8dc40e57e86b4c4c1c713593e8d9d6ed8764cc2591983dd",
+  "variant_manifest_sha256": {
+    "primary": "88cb947559fdd93853855858aba00fa03c55b6eace116411023e8fe1e300c7a8",
+    "narrow_bands": "8d8a454f7a22f4a87c36a669ec3ff58a8d75af9def005080c183dfff1a76a1f2",
+    "filter_8_30": "2953047b6d9364954c930d22a281f5417019a61bcf2bbdcbfb65e726491ab4dd",
+    "reference_none": "5edc64f2b0bbf9ba9e5de3e373609cc5903644dcf671283e6344d0f71640ef56",
+    "epoch_long": "be0f3f8574d7f9acd7cee8d06efb54ca2b527c148b37e826f1c725706ec8ce20",
+    "strict_qc": "2bcd180ab62c10ce0ed725ebadb432adf8281efa1c43a7da8a6d660900debffb",
+    "motor_channels": "facd98e79b29ebe014359db60298e6edb49b91b40fefea9ba6786abbdff10fbc",
+    "center_only": "2aa57059ae551301b9d4b5d3e82b934b440211e548c98da7c2eb6940c078d572",
+    "covariance_lw": "c63f6b1cf835bf7ab5b82871c5b68b66ac60d677ff4646bb4342a35dbc094fa5",
+    "runs_8_12": "9342a8aa46733da53b891cd152f3f9c644823c230bf90692c6e57a14d69c83d5",
+    "source_30": "80f82057b1b855a4bc2599463f4eaaab14149a8a887200a4e550bf8d7bb076ed"
+  },
+  "public_files": {
+    "aggregate/result.json": "95a0ae34101249ad90a332ce103b1ac16f49096f9a4d6287f10abc543f676ca3",
+    "figures/adaptation.svg": "4b391bc3b13e64524f663068071c147c5c991d15b0d4c8745f3ef5a43695862f",
+    "figures/confusion.svg": "62b1b202fe5c6554acd82d832915c66be2463b3bc65feeec02ba4094941adf89",
+    "figures/model-comparison.svg": "656fc85667e26ee472286818706d4d586fd53b2106b3c5173635c79fcb4488b7",
+    "figures/resources.svg": "00b5e1aaad44016984ac817f42bb51c7772c9152907ad9ba528f1ff9ce9cbba6",
+    "figures/sensitivity.svg": "c1c2fc2c630cea87ede7fd7720ca2bb7a312db77318e759bc488caca842e13ee",
+    "figures/subject-distributions.svg": "b772469981de1c781a34d04c59aca4fb384ecdc4d97274a512d43c668281c1b7",
+    "performance.csv": "1edb55fd18518404f861f1293d4a9ff17c6546b3d863080866842f7665a931c5",
+    "proposal-accounting.json": "1ae23790eb2116f2d1ccb20204a7400f395af4577a7dd19dfef128465366e765"
+  },
+  "baseline_files_preserved": 252,
+  "new_external_evidence": "NOT_AVAILABLE",
+  "external_replication": false,
+  "confirmatory_claim_allowed": false,
+  "privacy": "aggregate statistics and text SVG only; individual receipts/signals/keys stay ignored",
+  "verification": "native checksums and all private sealed file hashes verified locally"
+}
