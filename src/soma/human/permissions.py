@@ -188,6 +188,17 @@ def check_permission(
                 )
             except ValueError:
                 recognized = False
+        if dataset == "bnci2014-001" and d["license"] == "CC-BY-ND-4.0":
+            section = text.partition("Four class motor imagery (001-2014)")[2].partition(
+                "Two class motor imagery (002-2014)"
+            )[0]
+            recognized = (
+                d["source"] == "https://bnci-horizon-2020.eu/database/data-sets"
+                and "Four class motor imagery (001-2014)" in text
+                and "CC BY-ND 4.0" in section
+            )
+            if action == "export_aggregate":
+                reasons.append("ND aggregate export requires separate content-bound local review")
         if not recognized:
             reasons.append("license claim inconsistent with recognized source")
     if d["authority"] == "UNKNOWN":

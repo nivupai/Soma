@@ -123,3 +123,24 @@ private inventory and exclusive seal before execution. Results exports only the
 reviewable aggregate whitelist; participant rows are refused. Native cells and
 execution receipts are private, independently integrity-verifiable artifacts.
 Different protocol identities do not authorize direct numeric comparison.
+
+## v0.23 external EEG transfer
+
+`soma.sdk.eeg_benchmark` adds `external_audit`, `external_inventory`, `external_plan`,
+`seal_external_plan`, `external_compatibility`, `import_external_model`,
+`predict_frozen_external`, `run_external`, `verify_external`, `compare_external`
+and `external_domain_shift`. These compose existing M17/M19/M20 contracts and
+unchanged estimators. Model import accepts bounded numeric capsules plus expected
+identity, not arbitrary pickle. It does not authenticate an original M22 origin.
+
+CLI: `soma benchmark external plan ROOT OUTPUT`, `verify-model CAPSULE EXPECTED_ID`,
+`run ROOT PLAN_DIR OUTPUT --permission FILE --notice FILE`, `compare LEFT RIGHT`,
+`domain-shift RECEIPT`, `verify RECEIPT`. Use ignored private output and local access
+configuration. No command acquires EEG or accepts terms. Missing inputs/evidence
+produce an auditable BLOCKED receipt. Refitted and frozen modes are distinct;
+original M22 frozen execution is blocked by absent fitted state. The new
+`examples/external_eeg.py` is fictional and accesses no human data.
+Human `run` also takes `--bundle BUNDLE --references LOCAL_JSON`. References map
+entry IDs to explicit `root` and root-relative `relative` paths. Existing M21
+content, review, expiry, scope and protocol checks execute before any signal reader
+or classifier. These local reference configurations remain ignored.

@@ -1,0 +1,46 @@
+{
+  "schema": "soma.external-eeg.archival-audit/1",
+  "source_milestone": "M22",
+  "zero_shot_audit_models": [
+    "csp_lda",
+    "multiband_lr",
+    "riemann_mdm",
+    "tangent_lr"
+  ],
+  "audit_field_names": {
+    "multiband_lr": [
+      "fold",
+      "model",
+      "partition",
+      "scaler_training_mean"
+    ],
+    "csp_lda": [
+      "fold",
+      "model",
+      "partition"
+    ],
+    "riemann_mdm": [
+      "fold",
+      "model",
+      "partition",
+      "test_trial_covariance_diagnostics"
+    ],
+    "tangent_lr": [
+      "fold",
+      "model",
+      "partition",
+      "scaler_training_mean",
+      "test_trial_covariance_diagnostics",
+      "training_tangent_reference"
+    ]
+  },
+  "original_audit_sha256": "a2e4352fd5be8c78268052fbfe6cc452059a7c1f1ff8bbc8f88a33ced47af637",
+  "complete_fitted_model_available": false,
+  "missing": [
+    "classifier coefficient/intercept state",
+    "scaler scale/variance state",
+    "MDM class means"
+  ],
+  "new_model_fit_performed": false,
+  "original_outputs_modified": false
+}

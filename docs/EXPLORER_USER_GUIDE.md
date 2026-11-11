@@ -178,3 +178,13 @@ subject-distribution bins and expandable leakage/adaptation/null diagnostics.
 GET requests never launch a benchmark. Historical reuse, conditional uncertainty,
 invalid human nominal permutation inference and supervised adaptation remain
 visible. Participant identifiers and local paths are not exposed.
+
+## v0.23 external EEG audit
+
+The existing Experiments workbench shows an external EEG section alongside the
+M22 benchmark. It displays source/target, license/permission, exact/harmonized/refit
+mode, model compatibility, zero observed human coverage, domain-shift availability
+and blocked outcomes. Default evidence contains no human accuracy. An explicitly
+configured `external-eeg` registry entry may point to a validated native aggregate
+receipt. GET never fits a model, downloads data or overrides permissions. No
+participant-level predictions, model arrays or local paths are exposed.

@@ -67,3 +67,13 @@ Historical scientific reports and original release records are preserved.
   historically reused EEGBCI results; no independent external replication claim.
 - Add adversarial/numerical/synthetic benchmark tests and four-runner reproducibility
   artifacts; preserve existing estimators, inference guards and historical reports.
+
+## 0.23.0
+
+- Audit BNCI2014-001 permissions, local availability and original M22 model fidelity;
+  report human external evaluation BLOCKED instead of inventing replication.
+- Add sealed external plans, prediction-only numeric model capsules, explicit MAT
+  handling and separately labeled fixed-parameter external refitting with existing methods.
+- Extend the SDK, CLI and Explorer with compatibility, shift and blocked-state reporting.
+- Add adversarial/numerical/offline tests and four-platform fictional transfer evidence;
+  preserve prior scientific estimators, tests, protocols and outputs.

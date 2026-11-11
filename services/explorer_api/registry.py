@@ -25,6 +25,7 @@ class Entry(Strict):
         "human-audit",
         "human-readiness",
         "eeg-benchmark",
+        "external-eeg",
     ]
     label: str = Field(max_length=120)
     root: str

@@ -1,0 +1,19 @@
+{
+  "schema": "soma.external-eeg.public-evidence/1",
+  "human_status": "BLOCKED",
+  "human_subjects": 0,
+  "human_sessions": 0,
+  "human_trials": 0,
+  "new_signal_downloads": 0,
+  "original_m22_model_available": false,
+  "independent_external_replication": false,
+  "files": {
+    "audit.json": "74f0cefa133ab56a9f027740947d0fd98a964f73b485ad86ae614966408a058d",
+    "figures/synthetic-reference.json": "db7d8779ad43e0a1d46073929f9eaaa8c9cfa8b4211af573e6fccb3922eadf9d",
+    "figures/synthetic-reference.svg": "47c57e37cc94fc20016ee1b874f93d4df03b40fcad1c45d15553d04807345b77",
+    "figures/transfer-feasibility.svg": "5c4647d744d4b811c38ba2a301ac857e74835bcdefe2b828a4e66aeed6e489ee",
+    "freeze.json": "b868bfa872d8ccf4b9f413b81a66708f467eef1b5f5e5f6234a14b975ae6abb6",
+    "model-archive-audit.json": "af4d923f3254bf4277057facb02bcc092809a36f20f59a1bb39b29cadce6029f",
+    "transfer-status.csv": "24004d2ffae1b18e2adb1a0f4b277a76d5f77ff4fc7d0885fafc5893ece4fb20"
+  }
+}

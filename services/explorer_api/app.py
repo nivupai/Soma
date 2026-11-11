@@ -195,6 +195,9 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     from .eeg_benchmark import router as benchmark_router
 
     app.include_router(benchmark_router(registry))
+    from .external_eeg import router as external_router
+
+    app.include_router(external_router(registry))
     app.state.science, app.state.jobs, app.state.registry = science, jobs, registry
     app.add_middleware(
         CORSMiddleware,
