@@ -46,6 +46,7 @@ if "--explorer" in sys.argv:
         for path in [
             "/api/catalog",
             "/api/eeg-benchmarks",
+            "/api/external-eeg/demo-external-eeg",
             "/api/eeg-benchmarks/demo-eeg-benchmark",
             "/api/experiments",
             "/api/experiments/demo-calibration/export?format=json",

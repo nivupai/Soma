@@ -1,0 +1,4 @@
+mode,human_state,observed_subjects,observed_sessions,observed_trials,human_balanced_accuracy,reason
+EXACT_FROZEN,BLOCKED,0,0,0,,Original M22 fitted state unavailable; input contract differs
+HARMONIZED_FROZEN,BLOCKED,0,0,0,,No original model state to hold fixed
+EXTERNAL_REFIT,BLOCKED,0,0,0,,No local signals; aggregate-export review and M21 bundle unavailable

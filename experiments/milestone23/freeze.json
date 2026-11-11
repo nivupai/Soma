@@ -1,0 +1,64 @@
+{
+  "schema": "soma.external-eeg.freeze-evidence/1",
+  "recorded_utc": "2026-11-11T08:07:11.959432+00:00",
+  "protocol_fingerprint": "8ea1b31e368aa2d1fc83ac6e5a1831f0781fac89e4619d63b0fcaa7a0d50e314",
+  "seal_sha256": "607a28ca30e03fb08a35ca5a88c6635c81df90b53f95bfa472e7510f98987d3a",
+  "protocol_file_sha256": "ea16e9d62c9b5fb48f5820258934b48ae1d876a13b33418d2a1c062dcfe372b8",
+  "human_evaluation": "BLOCKED",
+  "observed_subjects": 0,
+  "observed_sessions": 0,
+  "observed_trials": 0,
+  "signal_downloads": 0,
+  "original_m22_model_available": false,
+  "external_preregistration": false,
+  "metadata_sources": [
+    {
+      "id": "bnci",
+      "url": "https://bnci-horizon-2020.eu/database/data-sets",
+      "sha256": "55e20b7eeb6fcc7b21f611f7c5be6e5ad0746e74f32d304bda476144fa9b4966",
+      "bytes": 145386
+    },
+    {
+      "id": "nemar",
+      "url": "https://nemar.org/dataset/nm000139",
+      "status": "HTTPError"
+    },
+    {
+      "id": "cc-by-nd",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.en",
+      "status": "HTTPError"
+    },
+    {
+      "id": "description",
+      "url": "https://www.bbci.de/competition/iv/desc_2a.pdf",
+      "sha256": "7914fdf5c8e04468c97d70486372405da4ed66fb1469160bec7cc27bd1676110",
+      "bytes": 216135
+    },
+    {
+      "id": "cho-datacite",
+      "url": "https://api.datacite.org/dois/10.5524/100295",
+      "sha256": "304bb791655d4c1215e5b0660497ea0447fc116e36528466851d7780343c67dd",
+      "bytes": 12406
+    },
+    {
+      "id": "moabb-loader",
+      "url": "https://raw.githubusercontent.com/NeuroTechX/moabb/develop/moabb/datasets/bnci/bnci_2014.py",
+      "sha256": "c9c6a9d49aa87417240d9fa41605ef4d669abf3176bf877531136699897dfb71",
+      "bytes": 55289
+    },
+    {
+      "id": "moabb-base",
+      "url": "https://raw.githubusercontent.com/NeuroTechX/moabb/develop/moabb/datasets/bnci/base.py",
+      "sha256": "47aaa596f3147550ce051e548eb552f3723ecd429368affd2ef48cea0c36e21a",
+      "bytes": 26932
+    }
+  ],
+  "scope": "metadata/license/frozen-state audit; not an external human replication",
+  "reviewed_execution_utc": "2026-11-11T08:41:13.315162+00:00",
+  "implementation_sha256": "c991f14454314585ef614599c7e968bda512124bab35c7aad1d54b41cdb986ba",
+  "permission_evidence_fingerprint": "8bedfbf569f49c79eba688512c39a2572ca1c90f5d332f26006d9c7c2c7a3d31",
+  "m20_private_analysis_supported": true,
+  "aggregate_export_supported": false,
+  "m21_bundle_available": false,
+  "audit_file_sha256": "74f0cefa133ab56a9f027740947d0fd98a964f73b485ad86ae614966408a058d"
+}

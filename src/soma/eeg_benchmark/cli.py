@@ -16,12 +16,15 @@ from soma.eeg_benchmark.report import (
     verify_execution,
 )
 from soma.eeg_benchmark.runner import run_benchmark
+from soma.external_eeg.cli import external_app
 from soma.human.cli import emit
 from soma.human.permissions import PermissionEvidence
 from soma.protocol.model import closed, read_seal, write_seal
 from soma.results.io import read_json
 
 benchmark_app = typer.Typer(help="Focused scientific benchmarks; no clinical confirmation")
+benchmark_app.add_typer(external_app, name="external")
+
 eeg_app = typer.Typer(help="Permission-aware cached EEGBCI decoding")
 benchmark_app.add_typer(eeg_app, name="eeg")
 

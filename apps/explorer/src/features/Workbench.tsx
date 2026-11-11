@@ -1,3 +1,4 @@
+import ExternalEEG from "./ExternalEEG";
 import EEGBenchmark from "./EEGBenchmark";
 import { useEffect, useState } from "react";
 import { Download, FlaskConical } from "lucide-react";
@@ -55,6 +56,7 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
   }
   return (
     <>
+      <ExternalEEG />
       <EEGBenchmark />
       <Panel
         title="Reproducible experiments"

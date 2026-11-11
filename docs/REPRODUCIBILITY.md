@@ -483,3 +483,18 @@ The four actual CI runners retain macOS arm64/Linux x86_64 and Python3.11/3.12.
 `eeg_benchmark_repro.py` emits known-mixture synthetic outcomes; the comparison
 requires all four artifacts and exact declared invariants. These checks do not
 establish cross-platform human-data replication or permit cache interchange.
+
+## v0.23 external EEG readiness
+
+The new M19 seal binds candidate, source/target roles, cue/label/feature contracts,
+fixed M22 settings, statistical interpretation and exact input inventory. Present
+human execution is BLOCKED, with no acquired signals or original M22 model state.
+M17 numeric capsules preserve complete prediction state without executable pickle;
+code/environment changes require explicit validation, never automatic cache reuse.
+Prior M22 receipts, predictions and protocols remain unchanged.
+
+All four macOS arm64/Linux x86_64 Python3.11/3.12 runners execute fictional
+external-session cases and emit `external-eeg-synthetic.json`. The comparison
+requires all four actual artifacts and identical declared outcomes. No human data
+are uploaded to CI; synthetic agreement cannot authorize human transfer or cache
+interchange. See the dataset audit, feasibility and M23 results documents.

@@ -60,3 +60,12 @@ that boundary. No rejected key-passing change was applied.
 ## Milestone 21 addendum
 
 Readiness GET requests do not run audits, science or provider retrieval. Only explicitly registered native metadata receipts are served; private agreements/import manifests, absolute paths and individual scientific metric rows are excluded. Current use needs live evidence revalidation. Existing pseudonym keys remain outside workflow contexts and caches.
+
+## External EEG v0.23
+
+Only configured aggregate receipts are served. Model capsules and source/trial
+records remain in ignored storage. External endpoints are read-only and cannot
+invoke acquisition, fitting or license acceptance. Current default BLOCKED evidence
+must not be relabeled a successful external replication. Public BNCI ND notice
+supports scoped local analysis in the software policy; aggregate export requires
+separate content-bound review. Neither policy nor availability verifies consent.

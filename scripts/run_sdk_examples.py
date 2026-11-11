@@ -20,6 +20,7 @@ NAMES = (
     "human_data_audit",
     "research_readiness",
     "eeg_benchmark",
+    "external_eeg",
 )
 
 
