@@ -188,3 +188,12 @@ and blocked outcomes. Default evidence contains no human accuracy. An explicitly
 configured `external-eeg` registry entry may point to a validated native aggregate
 receipt. GET never fits a model, downloads data or overrides permissions. No
 participant-level predictions, model arrays or local paths are exposed.
+
+## v0.24 prospective model archive
+
+Experiments includes a model-release selector, protocol/cohort/family evidence,
+fitted-state verification and separately labeled source validation. An unselected
+preview does not claim a human model. Configured `model-archive` entries point only
+to reviewed metadata summaries, never private manifests or arrays. External
+acquisition and human external accuracy remain unavailable. No model fit or signal
+download runs when opening the panel.

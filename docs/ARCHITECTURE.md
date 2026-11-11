@@ -374,3 +374,13 @@ subject statistics, bounded runner, aggregate reporting and plotting are separat
 small modules; `sdk.eeg_benchmark` and the existing Typer CLI expose them. Explorer's
 read-only aggregate router is part of the existing workbench/API allowlist.
 Private participant cells never become HTTP results or package artifacts.
+
+## v0.24 model release composition
+
+`model_archive.protocol` binds a new source-only M19 design. `runtime` uses existing
+M20-authorized EEGBCI adapters and M18 record caches. `training` calls unchanged
+M5/M22 pipelines, exports M23 numeric capsules and fixed source-fold evidence.
+`archive` binds the M17 manifest, validates all state and predicts through existing
+M23 kernels. `acquisition` is read-only metadata planning. SDK/CLI and the existing
+Explorer expose these contracts, with a dedicated aggregate-only summary method.
+This is not a parallel estimator, workflow or serialization framework.

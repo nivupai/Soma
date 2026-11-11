@@ -1,0 +1,16 @@
+{
+  "schema": "soma.model-release.public-files/1",
+  "human_weights_exported": false,
+  "human_external_evaluation": "BLOCKED",
+  "files": {
+    "acquisition-plan.json": "d54282a55ef423575ec8fcaae13c20eec4002e4c998634ce48967baf39e8d03b",
+    "aggregate/result.json": "d635f2c5af1d0befdb65258e067a9e26580a849a4f156faf36650d5176785ccb",
+    "figures/reload-verification.svg": "e7574786b6291cc090a5c45f54f010b69d3f243eb706609e87e8f544a95c8d98",
+    "figures/source-validation.svg": "011cfe862894652e4442eb8399e2f74885d421869dd55d5a5eca363e3abc4f71",
+    "freeze.json": "90d25754018b78f5caa1f19b4fb7cfc3abca2609f5acdb73de9a75353db18579",
+    "historical-source-comparison.json": "d70e4aceedbb02868210dd788d4d022c38879d55e06b8c1493cd597af6a758cb",
+    "release-evidence.json": "c1cc0e9fce067063263c21c65af9659365194cbd50b47785937b586761c60530",
+    "source-metrics.csv": "114ad28ea3aaa2add0b303218d1060af84a1c6eea182c8d0da536fafc0dcbb8c",
+    "transfer-readiness.json": "5d4a66aab44ffb0a53190e5210d5dc2bafba8def2a9b77adb7b26a052651454e"
+  }
+}

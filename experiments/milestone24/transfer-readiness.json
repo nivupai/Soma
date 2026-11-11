@@ -1,0 +1,192 @@
+{
+  "bnci2014-001": {
+    "schema": "soma.model-transfer/1",
+    "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+    "dataset": "bnci2014-001",
+    "authentic_new_state_verified": true,
+    "original_m22": false,
+    "exact_transfer": "NOT_COMPARABLE",
+    "harmonized_transfer": "REQUIRES_NEW_SEALED_HARMONIZATION_AND_REVIEW",
+    "external_refit": "SEPARATE_EXPERIMENT_NOT_EXECUTED",
+    "contract": {
+      "bands": [
+        [
+          8.0,
+          13.0
+        ],
+        [
+          13.0,
+          30.0
+        ]
+      ],
+      "channels": [
+        "FC3",
+        "FCz",
+        "FC4",
+        "C3",
+        "Cz",
+        "C4",
+        "CP3",
+        "CPz",
+        "CP4"
+      ],
+      "covariance": "oas-relative-floor-1e-6-no-trace-normalization",
+      "epoch_s": [
+        1.0,
+        3.0
+      ],
+      "event_origin": "imagery-cue",
+      "feature_order": "channel-major-band-minor",
+      "filter": {
+        "highpass_hz": 1.0,
+        "lowpass_hz": 40.0,
+        "order": 4,
+        "phase": "zero"
+      },
+      "fs_hz": 160.0,
+      "labels": {
+        "left_hand": 0,
+        "right_hand": 1
+      },
+      "reference_scope": "eegbci-average-all-eeg",
+      "units": "V"
+    },
+    "metadata_differences": [
+      "250 to160Hz resampling",
+      "microvolts to volts",
+      "trial-start3\u20135s equals cue-relative1\u20133s",
+      "reference and hardware filters differ"
+    ],
+    "permission_status": "local-analysis notice support only; no acquisition approval or external M21 bundle",
+    "human_evaluation": "BLOCKED",
+    "human_subjects": 0,
+    "performance": null,
+    "no_inference_executed": true
+  },
+  "cho2017": {
+    "schema": "soma.model-transfer/1",
+    "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+    "dataset": "cho2017",
+    "authentic_new_state_verified": true,
+    "original_m22": false,
+    "exact_transfer": "NOT_COMPARABLE",
+    "harmonized_transfer": "REQUIRES_NEW_SEALED_HARMONIZATION_AND_REVIEW",
+    "external_refit": "SEPARATE_EXPERIMENT_NOT_EXECUTED",
+    "contract": {
+      "bands": [
+        [
+          8.0,
+          13.0
+        ],
+        [
+          13.0,
+          30.0
+        ]
+      ],
+      "channels": [
+        "FC3",
+        "FCz",
+        "FC4",
+        "C3",
+        "Cz",
+        "C4",
+        "CP3",
+        "CPz",
+        "CP4"
+      ],
+      "covariance": "oas-relative-floor-1e-6-no-trace-normalization",
+      "epoch_s": [
+        1.0,
+        3.0
+      ],
+      "event_origin": "imagery-cue",
+      "feature_order": "channel-major-band-minor",
+      "filter": {
+        "highpass_hz": 1.0,
+        "lowpass_hz": 40.0,
+        "order": 4,
+        "phase": "zero"
+      },
+      "fs_hz": 160.0,
+      "labels": {
+        "left_hand": 0,
+        "right_hand": 1
+      },
+      "reference_scope": "eegbci-average-all-eeg",
+      "units": "V"
+    },
+    "metadata_differences": [
+      "512 to160Hz",
+      "reference/cue timing and original units require verification",
+      "one session cannot reproduce two-session design"
+    ],
+    "permission_status": "NOT_REVIEWED; no acquisition authorization",
+    "human_evaluation": "BLOCKED",
+    "human_subjects": 0,
+    "performance": null,
+    "no_inference_executed": true
+  },
+  "bnci2014-004": {
+    "schema": "soma.model-transfer/1",
+    "release_id": "8ce2e0952dce6f770a15ae70b99863d8712ec3017de951bba37bf3ef070afe85",
+    "dataset": "bnci2014-004",
+    "authentic_new_state_verified": true,
+    "original_m22": false,
+    "exact_transfer": "NOT_COMPARABLE",
+    "harmonized_transfer": "INCOMPATIBLE",
+    "external_refit": "SEPARATE_EXPERIMENT_NOT_EXECUTED",
+    "contract": {
+      "bands": [
+        [
+          8.0,
+          13.0
+        ],
+        [
+          13.0,
+          30.0
+        ]
+      ],
+      "channels": [
+        "FC3",
+        "FCz",
+        "FC4",
+        "C3",
+        "Cz",
+        "C4",
+        "CP3",
+        "CPz",
+        "CP4"
+      ],
+      "covariance": "oas-relative-floor-1e-6-no-trace-normalization",
+      "epoch_s": [
+        1.0,
+        3.0
+      ],
+      "event_origin": "imagery-cue",
+      "feature_order": "channel-major-band-minor",
+      "filter": {
+        "highpass_hz": 1.0,
+        "lowpass_hz": 40.0,
+        "order": 4,
+        "phase": "zero"
+      },
+      "fs_hz": 160.0,
+      "labels": {
+        "left_hand": 0,
+        "right_hand": 1
+      },
+      "reference_scope": "eegbci-average-all-eeg",
+      "units": "V"
+    },
+    "metadata_differences": [
+      "bipolar reference",
+      "250Hz",
+      "feedback and five sessions"
+    ],
+    "permission_status": "NOT_REVIEWED; no acquisition authorization",
+    "human_evaluation": "BLOCKED",
+    "human_subjects": 0,
+    "performance": null,
+    "no_inference_executed": true
+  }
+}

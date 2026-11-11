@@ -498,3 +498,15 @@ external-session cases and emit `external-eeg-synthetic.json`. The comparison
 requires all four actual artifacts and identical declared outcomes. No human data
 are uploaded to CI; synthetic agreement cannot authorize human transfer or cache
 interchange. See the dataset audit, feasibility and M23 results documents.
+
+## v0.24 fitted-state reproduction
+
+The new EEGBCI source release is distinct from missing historical M22 weights.
+A content-bound M19 seal precedes fitting; M18 verifies record-level preprocessing;
+M17/M23 preserve complete numeric prediction state. Verification uses exact labels
+and frozen score tolerances, then independent restarted processes in a noneditable
+wheel. Ordinary resolved dependencies can differ and remain unsupported; the
+faithful private training-dependency snapshot is separately identified. Existing
+environment/build/cache guards are unchanged. See MODEL_RELOAD_VERIFICATION.md.
+Four actual CI runners independently fit/reload synthetic releases; the eighth
+comparison family adds archive evidence without weakening the prior seven.

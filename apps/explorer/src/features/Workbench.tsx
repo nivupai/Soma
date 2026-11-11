@@ -1,3 +1,4 @@
+import ModelArchive from "./ModelArchive";
 import ExternalEEG from "./ExternalEEG";
 import EEGBenchmark from "./EEGBenchmark";
 import { useEffect, useState } from "react";
@@ -56,6 +57,7 @@ export default function Workbench({ datasets }: { datasets: Dataset[] }) {
   }
   return (
     <>
+      <ModelArchive />
       <ExternalEEG />
       <EEGBenchmark />
       <Panel

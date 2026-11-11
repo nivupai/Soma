@@ -21,6 +21,7 @@ NAMES = (
     "research_readiness",
     "eeg_benchmark",
     "external_eeg",
+    "model_archive",
 )
 
 

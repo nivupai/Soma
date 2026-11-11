@@ -11,6 +11,7 @@ from soma.external_eeg.runtime import compare, read_receipt, run, write_receipt
 from soma.human.cli import emit
 from soma.human.evidence import read_bundle
 from soma.human.permissions import PermissionEvidence
+from soma.model_archive.cli import acquisition_command, transfer_command
 from soma.protocol.model import read_seal, write_seal
 from soma.results.io import read_json
 
@@ -110,3 +111,7 @@ def verification(receipt: Path) -> None:
             "meaning": "native integrity and privacy checks; not external replication",
         }
     )
+
+
+external_app.command("acquisition-plan")(acquisition_command)
+external_app.command("verify-transfer")(transfer_command)
