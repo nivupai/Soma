@@ -394,3 +394,12 @@ missingness and writes aggregate M17 receipts. `frozen_worker` is a fixed isolat
 script using the selected installed Soma version; it loads numeric state and denies
 learned-component fitting. SDK/Typer and the existing Explorer expose these contracts.
 Unknown target reference/unit/event metadata is explicitly non-executable.
+
+## v0.26 focused physical experiment
+
+`source.uncertainty` adapts MNE four-shell forward fields to the existing
+Tikhonov/CorticalInverse operators with explicit MRI/head frames and SI units.
+`experiments.source_uncertainty` executes the fixed paired off-grid design and
+uses existing M19/M17 provenance. It is not a new general workflow framework.
+A packaged, executed synthetic example feeds the GET-only Explorer source view;
+no model calculation or human source localization is triggered over HTTP.

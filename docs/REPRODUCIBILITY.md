@@ -521,3 +521,13 @@ identities are recorded separately, without waiving environment/source guards.
 Nine synthetic comparison families retain the previous eight contracts. Real human
 weights and recordings never enter CI. Billing-blocked jobs remain pending; local
 checks do not replace required remote execution.
+
+## v0.26 physical experiments
+
+The immutable design resource and M19 seal precede final outcome analysis. Run
+`soma source anatomical-uncertainty --output reports/source-v26` in a new root.
+`python scripts/summarize_source_uncertainty.py ROOT FIGURES OUTPUT` verifies
+the executed synthetic table hashes before export. The visualization adapter
+`soma.visualization.source_uncertainty.figures` generates eight vector figures.
+The raw case tables retain all planned failures; paired noise/configurations are
+not additional independent generators. No downloads or participant inputs.

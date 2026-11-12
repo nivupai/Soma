@@ -187,7 +187,9 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
 
     app = FastAPI(title="Soma Explorer", version=__version__, lifespan=lifespan)
     from .protocols import router as protocol_router
+    from .source_uncertainty import router as uncertainty_router
 
+    app.include_router(uncertainty_router())
     app.include_router(protocol_router(registry))
     from .human import router as human_router
 

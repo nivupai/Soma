@@ -45,6 +45,7 @@ if "--explorer" in sys.argv:
     with TestClient(create_app(), base_url="http://127.0.0.1") as c:
         for path in [
             "/api/catalog",
+            "/api/source-uncertainty",
             "/api/eeg-benchmarks",
             "/api/external-eeg/demo-external-eeg",
             "/api/model-archives/demo-model-archive",
