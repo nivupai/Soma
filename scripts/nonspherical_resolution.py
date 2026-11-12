@@ -83,7 +83,7 @@ def run(root, output):
                                 peak_error_mm=float(distance[np.argmax(amplitude)]),
                                 dispersion_mm=float(np.sqrt(energy @ distance**2 / energy.sum())),
                                 self_gain=float(amplitude[seed]),
-                                units="normalized" if method == "dSPM" else "1",
+                                units="1/(A*m)" if method == "dSPM" else "1",
                             )
                         )
     pd.DataFrame(rows).to_csv(output / "resolution.csv", index=False)

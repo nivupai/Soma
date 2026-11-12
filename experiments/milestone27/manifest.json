@@ -79,10 +79,10 @@
   "figures/06-localization-perturbation.svg": "97426c6dc2b614cc587eea5403977e8d9c0604f44813b1f5f9774c21fd3b48a4",
   "figures/03-forward-convergence.svg": "a131685202303bb14edb75bacf1188153afcc47a4750a50d7a6411c25e73024a",
   "repeat-verification.json": "3538893d642f7cd3ed46b290c4b4c65bf301490d1cf2114c93023e8e45f605b5",
-  "resolution.csv": "fe7c8034ec9c6c1a450e73f6846a0f898024b14fb981bccf0ab2cddbee39257b",
+  "resolution.csv": "be448b9f8c3126175a49d000bee0e30afca50146609e2eb4566c7e84fac8bc5c",
   "field-attribution.csv": "fafc3ce4d8ef066e5469e39112ea8ec70f876f28a2b09e39dc06f5cef054dc86",
   "implementation/nonspherical_experiment.py": "9d3e790b88fab1c95728a7ba9ddc78c57b651ee4f728013f460dbdf9eac3efb3",
   "implementation/nonspherical_worker.py": "ca85eec94ffa21c91b5b10cd925addca25ca79ff0bc80fad9ef0d93380e35285",
   "implementation/spherical_reference_worker.py": "428f731eb5e89765dc56986e35686a0e864e3d3f677bbae91149486f77098d4f",
-  "verification.json": "8c44f1b05f392081d02a3601d569254b2df120bedb212a568c2c1eac0dea06f4"
+  "verification.json": "0413a9aec1663a7ba98a31e6433965fc32b4bd3aa34eb76607549e7c326ca68c"
 }

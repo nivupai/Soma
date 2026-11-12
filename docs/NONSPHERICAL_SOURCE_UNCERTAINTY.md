@@ -54,3 +54,8 @@ agreement gates, the earlier geometric design amendment or unsupported compariso
 No human MRI, EEG, skull segmentation, participant surfaces or phantom recordings
 were used. Real geometry, anisotropic conductivity, realistic source priors,
 external four-layer solutions and physical phantom validation remain open.
+
+For linear resolution matrices K G, MNE/Tikhonov self-gain has unit 1. dSPM
+self-gain has unit 1/(A m), because the input is a unit physical current moment
+and the output is normalized. Applying the kernel to actual measured voltages
+instead gives dimensionless dSPM source estimates; these are different quantities.

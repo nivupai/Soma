@@ -43,7 +43,7 @@
   "reproducible_builds": true,
   "artifacts": {
     "soma_neuro-0.27.0-py3-none-any.whl": "38831f541cb2e379fbf4dae482ac7eb75cf08598f9201d26b2c9bd9373bbf5d8",
-    "soma_neuro-0.27.0.tar.gz": "b396909c05ac69c7da4911544104fe978f0b7f697191ce4014241fa6eeecebee"
+    "soma_neuro-0.27.0.tar.gz": "cdedf50d64732f10f35350156b14d452553f795cd140af3644c72e082386f35b"
   },
   "preserved": {
     "baseline354": 354,
@@ -180,5 +180,12 @@
   },
   "packaged_example_sha256": "54efb45c457d822e8eadfbd2e5050c5e94b6e9baf5d79c9e9611f32cbd0418f4",
   "fresh_wheel_physical_reference_error": 0.032173566815402524,
-  "remote_gate": "Require PR and separate postmerge 13/13 jobs and ten actual four-platform comparison families; actual run links in PR/final completion receipt"
+  "remote_gate": "Require PR and separate postmerge 13/13 jobs and ten actual four-platform comparison families; actual run links in PR/final completion receipt",
+  "resolution_unit_audit": {
+    "rows": 28512,
+    "numerical_columns_unchanged": true,
+    "dSPM_self_gain_unit": "1/(A*m)",
+    "MNE_Tikhonov_self_gain_unit": "1",
+    "measured_dSPM_estimate_unit": "1"
+  }
 }
