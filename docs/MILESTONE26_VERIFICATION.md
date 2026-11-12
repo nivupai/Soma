@@ -61,3 +61,16 @@ The existing 13-job workflow is preserved. An open PR or local success does not
 constitute remote success. Actual PR/run URLs, merge SHA, synchronized main and
 post-merge results belong in the final completion receipt and PR record. Repository
 visibility must remain PUBLIC. No force push, history rewrite or M27 execution.
+
+## Cross-version typing correction
+
+The first PR run, 43153617215, identified a Python 3.11 / NumPy 2.4.6 overload
+error in an unpacked `Generator.uniform` range. Explicit finite float lower/upper
+arguments preserve the same frozen 35–65 mm bounds and random stream. Strict
+mypy passes against both the local NumPy and NumPy 2.4.6 stubs, with no ignores,
+weaker settings or dependency pin used to hide the error. The corrected experiment
+was repeated: all truth locations/moments and all scalar values/failure statuses
+in the eight case tables are bit-identical. The full source test and fresh-package
+gates are repeated on the corrected source. Original public scientific receipts
+retain their actual executed implementation hashes, available in commit f91b9f1;
+those historical run hashes are not retrospectively replaced by the typing edit.

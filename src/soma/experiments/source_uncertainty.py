@@ -40,7 +40,9 @@ def known_truth() -> tuple[Points, Array]:
     xyz = rng.normal(size=(c["truth_cases"], 3))
     xyz[:, 2] = np.abs(xyz[:, 2])
     xyz /= np.linalg.norm(xyz, axis=1)[:, None]
-    xyz *= rng.uniform(*c["truth_radius_mm"], size=(len(xyz), 1)) / 1000
+    low_mm = float(c["truth_radius_mm"][0])
+    high_mm = float(c["truth_radius_mm"][1])
+    xyz *= rng.uniform(low_mm, high_mm, size=(len(xyz), 1)) / 1000
     moments = rng.normal(size=xyz.shape)
     moments *= c["truth_amplitude_Am"] / np.linalg.norm(moments, axis=1)[:, None]
     return Points(xyz, Frame.MRI), moments

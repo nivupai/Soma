@@ -28,9 +28,14 @@
   "scanner_exceptions_unchanged": true,
   "independent_reproducible_builds": 2,
   "artifacts": {
-    "soma_neuro-0.26.0-py3-none-any.whl": "b3e6a8285866035a1795740a1cdf82c345c2d8bdfe41749d75cfef379a347a67",
-    "soma_neuro-0.26.0.tar.gz": "55a4c0005cf2fe8b8d6a1e25000222bbc655f84ad0a44005466f450c16d3e971"
+    "soma_neuro-0.26.0-py3-none-any.whl": "ff3cc4658f0f6b4f5cb5a591fc3bc3765d7425ba6e38579baa5dbd06d6cd0802",
+    "soma_neuro-0.26.0.tar.gz": "03a57684c11a14a1a1acb5d812d835fe87a20dfcfcc5f2fef2bfde06404a111b"
   },
   "human_subjects": 0,
-  "remote_ci": "recorded separately at the actual PR head; local success does not establish remote success"
+  "remote_ci": "recorded separately at the actual PR head; local success does not establish remote success",
+  "full_python_tests_after_typing_fix": 1521,
+  "mypy_numpy246_files": 280,
+  "typing_control_results_exact": true,
+  "primary_scientific_run_commit": "f91b9f1c796236304ce950f822761a1347cdca19",
+  "corrected_experiment_sha256": "f97ad282bd1761b8e5a70f9664cd817c5ef1aa26bea565a9a8c71badbccdb371"
 }
