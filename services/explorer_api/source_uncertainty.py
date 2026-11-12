@@ -32,4 +32,31 @@ def router() -> APIRouter:
     def uncertainty() -> Any:
         return example()
 
+    @routes.get("/nonspherical")
+    def nonspherical() -> Any:
+        return nonspherical_example()
+
     return routes
+
+
+def nonspherical_example() -> dict[str, Any]:
+    from soma.source.nonspherical import DESIGN_SHA
+    from soma.source.nonspherical import protocol as nonspherical_protocol
+
+    raw = files("soma.resources").joinpath("nonspherical-example-v27.json").read_bytes()
+    if (
+        hashlib.sha256(raw).hexdigest()
+        != "54efb45c457d822e8eadfbd2e5050c5e94b6e9baf5d79c9e9611f32cbd0418f4"
+    ):
+        raise ValueError("Nonspherical example integrity failure")
+    value = dict(json.loads(raw))
+    if (
+        value["schema"] != "soma.nonspherical.explorer/1"
+        or value["synthetic_only"] is not True
+        or value["human_subjects"] != 0
+        or value["design_sha256"] != DESIGN_SHA
+    ):
+        raise ValueError("Only reviewed synthetic nonspherical examples accepted")
+    value["protocol_fingerprint"] = nonspherical_protocol().protocol.fingerprint
+    value["content_sha256"] = hashlib.sha256(raw).hexdigest()
+    return value

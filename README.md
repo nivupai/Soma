@@ -484,3 +484,14 @@ produce blocked records, not fabricated human scientific results. See
 ### Research readiness — v0.21.0
 
 Read-only immutable registration attachments, sealed evidence bundles, preprocessing/QC and session gates extend existing protocols. Real preprocessing and permission gaps stay blocked. See [Milestone21 results](docs/MILESTONE21_RESULTS.md).
+
+
+### Milestone 27: nonspherical physical validation
+
+Version 0.27.0 adds a frozen six-head four-interface BEM study, mesh convergence,
+conditional source uncertainty and the existing Explorer workbench extension.
+Independent matched three-layer controls disagreed beyond the frozen tolerance;
+four-layer independent validation, FEM and physical phantom validation remain
+unestablished. See [measured results](docs/MILESTONE27_RESULTS.md).
+Install optional `soma-neuro[conductor]` for OpenMEEG computation; core-only geometry
+and packaged synthetic Explorer examples do not require the solver.

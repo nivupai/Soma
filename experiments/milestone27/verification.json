@@ -1,0 +1,184 @@
+{
+  "version": "0.27.0",
+  "tests": {
+    "full_python": 1559,
+    "offline_python": 1542,
+    "cached_integration": 17,
+    "new_python": 38,
+    "frontend": 42,
+    "browser_configured": 20,
+    "browser_demo_only_passed": 19,
+    "browser_demo_only_skipped": 1
+  },
+  "quality": {
+    "ruff": true,
+    "formatting": true,
+    "strict_mypy_source_files": 284,
+    "typescript": true,
+    "eslint": true,
+    "prettier": true,
+    "npm_build": true
+  },
+  "dependencies": {
+    "pip_check": true,
+    "known_vulnerabilities": 0,
+    "project_pypi_audit": "NO_PYPI_RECORD",
+    "bootstrap_pip": "26.3",
+    "fresh_install_audits": 3
+  },
+  "installations": {
+    "wheel": {
+      "payload_files_verified": 297,
+      "sdk_examples": 19
+    },
+    "sdist": {
+      "payload_files_verified": 297,
+      "sdk_examples": 19
+    },
+    "source": {
+      "payload_files_verified": 297,
+      "sdk_examples": 19
+    }
+  },
+  "reproducible_builds": true,
+  "artifacts": {
+    "soma_neuro-0.27.0-py3-none-any.whl": "38831f541cb2e379fbf4dae482ac7eb75cf08598f9201d26b2c9bd9373bbf5d8",
+    "soma_neuro-0.27.0.tar.gz": "b396909c05ac69c7da4911544104fe978f0b7f697191ce4014241fa6eeecebee"
+  },
+  "preserved": {
+    "baseline354": 354,
+    "M26_41": 41,
+    "historical317": 317,
+    "M24_archive46": 46
+  },
+  "privacy": {
+    "scanner": "Gitleaks 8.30.1",
+    "rules_suppressed": false,
+    "current_files": 1031,
+    "commits": 65,
+    "blobs": 1385,
+    "material_secrets": 0,
+    "restricted_data_files": 0,
+    "personal_home_paths": 0,
+    "scopes": {
+      "history": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "blobs": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "tree": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "metadata": {
+        "raw_findings": 0,
+        "scanner_exit": 0,
+        "reviewed_false_positives": 0
+      }
+    },
+    "limitation": "Manual review plus pattern scanners cannot prove the absence of all sensitive information"
+  },
+  "ignored_exclusions": {
+    "data/external/example.nii.gz": true,
+    "data/anatomy/example.fif": true,
+    "reports/example/measurement.csv": true,
+    "derivatives/example/surface.nii.gz": true,
+    ".env": true,
+    ".env.private": true,
+    ".aws/credentials": true,
+    "credentials.json": true,
+    "example.safetensors": true
+  },
+  "scientific_receipt": {
+    "design_sha256": "a42e459d0938c53e6bba99fa0f59522c3fbf585f5bd157984933a5c0b8a78744",
+    "protocol_fingerprint": "8f36c19cfc34e9d51e87bf8e9001544467d931ae4eb8db7fa9e19234e8307a79",
+    "environment": {
+      "python": "3.12.2",
+      "system": "Darwin",
+      "machine": "arm64",
+      "byteorder": "little",
+      "os_build": "macOS-15.7-arm64-arm-64bit",
+      "kernel_build": "Darwin Kernel Version 24.6.0: Mon Aug 11 21:16:34 PDT 2025; root:xnu-11417.140.69.701.11~1/RELEASE_ARM64_T6020",
+      "python_implementation": "CPython",
+      "python_compiler": "Clang 13.0.0 (clang-1300.0.29.30)",
+      "libraries": {
+        "soma-neuro": "0.27.0",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "nilearn": "0.14.1",
+        "mne": "1.13.2",
+        "nibabel": "5.4.2",
+        "SimpleITK": "2.5.7",
+        "scikit-image": "0.26.0",
+        "neurodsp": "2.3.0",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0"
+      },
+      "installation_records_sha256": {
+        "numpy": "04f7d12c8acdf6788cef72c11e07c04c5c640026f2c55ef807a8d76ee26d287d",
+        "scipy": "d95b7aa2c03940de0bec301021a5753ff3577b5b7ce28e6342d59f9d8556258a",
+        "nilearn": "8155599fbc6f2200cc17f24132235009017698bb7c29c75526e435790b6c61f2",
+        "mne": "8b5f36f8e83f1ffdc270404d9db10f4b4000acc0c4f367c89883465eb07b8f66",
+        "nibabel": "ab55146102096c3b4f2195ab48d0f034109e02759dcec489d676259591e9337c",
+        "SimpleITK": "df42373bc4e555b09e63deb3ff0aa1ed3d6409045214dc5e951b46c999e7cd27",
+        "scikit-image": "24b66dc1959cea9ba25331d6bce879677d928b2d6bfc3d3f1ba27884148c214e",
+        "neurodsp": "2f4fd455dc2fbb1490d73bd7aae039cd67d5a0275ca3fe1fb505b03ae40beb2b",
+        "pandas": "609536baf444db054cbfd05731bb810f9b1dd4d39d5b20d69283100f6422e41c",
+        "scikit-learn": "70730ccb591b1ca39faef73f40181c32c36253d3d7b75c644c591f8841647285",
+        "joblib": "c1088eee5a30f2c8e5b1611ee43a7ccd8e8a9fcc53ebba0606692431d896a873",
+        "threadpoolctl": "f3ea93e99518e7bc1132af06a71f555473faa79328e0489c7aa92c9fd002b1ae"
+      },
+      "numerical_build_metadata_sha256": {
+        "numpy": "4a151b2acc42239dd45d38eeccf3aca7582051e23c3dcf6c433064ba1528c002",
+        "scipy": "d2b3fd9fc70da6320840aa71e1a82fc0c85b3d00f2eaab8d7693802ce7468739"
+      },
+      "backends": [
+        {
+          "internal_api": "openmp",
+          "version": null
+        }
+      ],
+      "numerical_limits": {
+        "workers": 1,
+        "threads": 1
+      },
+      "policy": "exact-environment-v1; replay equivalence does not authorize cache interchange",
+      "evidence_limit": "installation/build metadata are not authentication of a hostile runtime"
+    },
+    "synthetic_only": true,
+    "human_subjects": 0,
+    "implementation_sha256": {
+      "experiment": "9d3e790b88fab1c95728a7ba9ddc78c57b651ee4f728013f460dbdf9eac3efb3"
+    },
+    "runtime_seconds": 349.04141458400045,
+    "heads": 6,
+    "sources": 72,
+    "unique_vectors": 1224,
+    "reconstruction_rows": 44064,
+    "computed": 44064,
+    "failed": 0,
+    "C_four_layer": "NOT_ESTABLISHED",
+    "FEM": "NOT_PERFORMED",
+    "D": "PHANTOM_NOT_AVAILABLE"
+  },
+  "repeat_verification": {
+    "numerical_tables_identical": 40,
+    "reconstruction_rows_identical": 44064,
+    "convergence_results_identical": 6,
+    "independent_control_results_identical": 6,
+    "protocol_unchanged": true,
+    "first_run_preserved_locally": true,
+    "scope": "metadata correction and stricter preflight/reference guards; no numerical tuning"
+  },
+  "packaged_example_sha256": "54efb45c457d822e8eadfbd2e5050c5e94b6e9baf5d79c9e9611f32cbd0418f4",
+  "fresh_wheel_physical_reference_error": 0.032173566815402524,
+  "remote_gate": "Require PR and separate postmerge 13/13 jobs and ten actual four-platform comparison families; actual run links in PR/final completion receipt"
+}

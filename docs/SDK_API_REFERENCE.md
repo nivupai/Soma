@@ -193,3 +193,8 @@ accuracy. `examples/external_validation.py` uses independently seeded fiction on
 root must be new. `soma source anatomical-uncertainty --output reports/source-v26`
 runs the sweep; `soma source uncertainty-protocol` writes its M19 seal. Existing
 source commands and estimators are preserved. See SOURCE_UNCERTAINTY_PROTOCOL.md.
+
+
+## Milestone 27 addendum
+
+`soma.sdk.source` exports `nonspherical_design()`, `nonspherical_protocol()`, `synthetic_head(id)`, `validate_head_meshes(meshes)` and `run_nonspherical(sealed, output)`. `soma source nonspherical --output reports/nonspherical-v27` runs the full frozen study with optional `[conductor]` (OpenMEEG 2.6.0). Core-only `examples.nonspherical` validates geometry without importing the solver. Results use the native M17 envelope; `read_nonspherical(result.json)` checks synthetic/protocol identity.

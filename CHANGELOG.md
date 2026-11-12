@@ -106,3 +106,10 @@ Historical scientific reports and original release records are preserved.
   controls, focused SDK/CLI and read-only Explorer approval/compatibility states.
 - External acquisition and human inference remain BLOCKED without required evidence.
   Preserve outstanding billing-blocked CI gates and leave unverified PRs pending.
+
+
+## 0.27.0 — Nonspherical BEM validation
+
+- Frozen six-head/four-interface synthetic study with three estimated meshes and finer off-grid truth; independent reference hierarchy and explicit failed three-layer agreement gates.
+- Conditional hierarchical source/head intervals, full retained case accounting, physical/geometry diagnostics and auditable synthetic figures/tables.
+- Optional pinned OpenMEEG adapter, SDK/CLI and existing uncertainty workbench extension; no FEM, human anatomical accuracy or empirical phantom claim.

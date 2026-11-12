@@ -214,3 +214,8 @@ Choose an inverse method/error source to compare baseline and perturbed maps,
 mark truth and amber marks the peak. Maps use their own magnitude scales; the
 XY projection is not a cortical reconstruction of the selected human resource.
 All nine rejected configuration rows remain listed. The API is GET-only.
+
+
+## Milestone 27 addendum
+
+The existing Source Models uncertainty workbench includes Nonspherical conductor validation. Select a synthetic head, display mesh level, tissue surface, XY/XZ projection and inverse method. Sensors, known off-grid source, reconstructed amplitudes, convergence and retained failures remain explicit. Display meshes are examples; the analysis uses its recorded level. The read-only `/api/nonspherical` serves a hash-checked packaged synthetic artifact. It does not execute models or load participant files.

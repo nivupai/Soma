@@ -94,3 +94,13 @@ A new M27 spherical control uses the same grid and per-head source/noise schedul
 It is separate from immutable M26 measurements and does not turn unmatched M26
 headline accuracy into a directly comparable value. Source/noise/head seed
 schedules and the signed warp equation are explicit in the amended resource.
+
+## Coordinate identifier audit
+
+The sealed stage-artifact metadata retains the legacy `synthetic-sphere-native`
+coordinate-chart identifier inherited from the baseline example. It does not
+assert concentric conductor physics: actual boundaries are the frozen deformed
+meshes, identified by their fingerprints. All positions are synthetic MRI/RAS
+metres in the common chart; no human MRI normalization or independent anatomical
+space registration is implied. The seal is retained verbatim rather than
+retrospectively changing its declarations after outcomes.
