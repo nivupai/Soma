@@ -11,6 +11,7 @@ import {
   Warning,
 } from "../components/Common";
 import BrainScene from "../components/BrainScene";
+import SourceUncertainty from "./SourceUncertainty";
 export default function Source({
   id,
   state,
@@ -194,6 +195,7 @@ export default function Source({
           <p className="muted">{data?.render_geometry}</p>
         </Panel>
       </div>
+      <SourceUncertainty />
       <Evidence result={mesh.data} />
     </>
   );

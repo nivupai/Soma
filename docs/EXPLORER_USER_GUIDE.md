@@ -205,3 +205,12 @@ source-model identity and actual human coverage. Configured `external-validation
 entries accept aggregate receipts only. Blocked execution displays no human accuracy.
 Fictional results carry SYNTHETIC TEST ONLY and separate numerical outcomes.
 HTTP views are GET-only; opening the panel cannot acquire data or launch inference.
+
+## v0.26 source uncertainty
+
+Source Models includes a separate known-truth synthetic four-shell experiment.
+Choose an inverse method/error source to compare baseline and perturbed maps,
+3D peak error, dispersion, grid floor and physical amplitude availability. Crosses
+mark truth and amber marks the peak. Maps use their own magnitude scales; the
+XY projection is not a cortical reconstruction of the selected human resource.
+All nine rejected configuration rows remain listed. The API is GET-only.

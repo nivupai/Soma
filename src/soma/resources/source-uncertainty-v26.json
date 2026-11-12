@@ -1,0 +1,108 @@
+{
+  "schema": "soma.source-uncertainty.design/1",
+  "seed": 26042,
+  "sensors": 32,
+  "candidate_sources_per_shell": 24,
+  "candidate_radii_mm": [
+    35,
+    60
+  ],
+  "truth_cases": 12,
+  "truth_radius_mm": [
+    35,
+    65
+  ],
+  "truth_amplitude_Am": 1e-08,
+  "noise_draws": 8,
+  "noise_std_V": [
+    0,
+    5e-08,
+    1.5e-07
+  ],
+  "shell_radii_mm": [
+    81,
+    82.8,
+    87.3,
+    90
+  ],
+  "conductivities_S_m": [
+    0.33,
+    1.0,
+    0.004,
+    0.33
+  ],
+  "inner_skull_delta_mm": [
+    -1,
+    -0.5,
+    0.5,
+    1
+  ],
+  "outer_skull_delta_mm": [
+    -2,
+    -1,
+    1,
+    2
+  ],
+  "skull_S_m": [
+    0.002,
+    0.006,
+    0.01,
+    0.02
+  ],
+  "electrode_rms_mm": [
+    2,
+    5,
+    10
+  ],
+  "electrode_patterns": [
+    0,
+    1,
+    2
+  ],
+  "translation_x_mm": [
+    -10,
+    -5,
+    -2,
+    2,
+    5,
+    10
+  ],
+  "rotation_z_deg": [
+    -10,
+    -5,
+    -2,
+    2,
+    5,
+    10
+  ],
+  "factorial_high": {
+    "outer_skull_mm": 2,
+    "skull_S_m": 0.01,
+    "electrode_rms_mm": 5,
+    "translation_x_mm": 5
+  },
+  "methods": [
+    "Tikhonov",
+    "MNE",
+    "dSPM"
+  ],
+  "tikhonov_lambda2": 0.001,
+  "mne_lambda2": 0.1111111111111111,
+  "mne_depth": null,
+  "bootstrap_repetitions": 1999,
+  "confidence": 0.95,
+  "interval_unit": "independent synthetic generator, averaging noise draws; fixed idealized anatomy",
+  "normal_equation_rtol": 1e-10,
+  "sphere_fit_max_rv": 0.001,
+  "reference_rtol": 1e-12,
+  "derivative_steps_mm": [
+    2,
+    1,
+    0.5
+  ],
+  "convergence_grid_multiplier": 2,
+  "failure_policy": "retain every planned configuration and failed source/method row; no replacement or outcome tuning",
+  "source_pairing": "off-grid independent generator identities; same measurements for every estimated model",
+  "frames": "MRI-to-head is inverse of declared head-to-MRI; evaluation in true MRI metres",
+  "human_execution": false
+}

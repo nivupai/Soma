@@ -273,3 +273,30 @@ def grid_priors_command(
         _echo_result(source_prior_study(config, output), output)
     except (ValueError, OSError) as exc:
         _fail(exc)
+
+
+@app.command("uncertainty-protocol")
+def uncertainty_protocol_command(
+    output: Path = Path("reports/source-uncertainty-protocol.json"),
+) -> None:
+    """Write the frozen synthetic physical experiment seal; no downloads."""
+    from soma.protocol.model import write_seal
+    from soma.source.uncertainty import protocol
+
+    try:
+        write_seal(protocol(), output)
+        typer.echo(protocol().protocol.fingerprint)
+    except Exception as exc:
+        _fail(exc)
+
+
+@app.command("anatomical-uncertainty")
+def physical_uncertainty_command(output: Path = Path("reports/source-uncertainty-v26")) -> None:
+    """Run all frozen synthetic physical cases, retaining failures; no human EEG."""
+    from soma.experiments.source_uncertainty import run_uncertainty
+    from soma.source.uncertainty import protocol
+
+    try:
+        _echo_result(run_uncertainty(protocol(), output), output)
+    except Exception as exc:
+        _fail(exc)

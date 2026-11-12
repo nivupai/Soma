@@ -185,3 +185,11 @@ paths. Acquisition requires the exact reviewed manifest-bound approval and expec
 SHA256/lengths. No credential or terms-acceptance path exists. The source-runtime
 control uses the preserved v0.24 install; it never labels source probe parity external
 accuracy. `examples/external_validation.py` uses independently seeded fiction only.
+
+## v0.26 physical source uncertainty
+
+`soma.sdk.source.uncertainty_design()`, `uncertainty_protocol()` and
+`run_uncertainty(sealed, output)` expose the fixed synthetic study. The output
+root must be new. `soma source anatomical-uncertainty --output reports/source-v26`
+runs the sweep; `soma source uncertainty-protocol` writes its M19 seal. Existing
+source commands and estimators are preserved. See SOURCE_UNCERTAINTY_PROTOCOL.md.

@@ -1,0 +1,41 @@
+{
+  "schema": "soma.milestone26.local-verification/1",
+  "version": "0.26.0",
+  "baseline_sha": "5912057928a305ed0717886cf975512b745f7861",
+  "design_freeze_commit": "948d755",
+  "full_python_tests": 1521,
+  "baseline_tests_preserved": 1487,
+  "new_physical_tests": 34,
+  "frontend_tests": 40,
+  "browser_tests": 19,
+  "strict_mypy_files": 280,
+  "source_sdk_examples": 18,
+  "fresh_installs": {
+    "wheel": 18,
+    "sdist": 18,
+    "source": 18
+  },
+  "installed_code_resource_files_matched": 289,
+  "protected_historical_files_unchanged": 317,
+  "m24_archive_files_unchanged": 46,
+  "ruff_format_typecheck_lint_build_passed": true,
+  "dependency_checks_passed": true,
+  "auditable_dependencies_known_vulnerabilities": 0,
+  "npm_vulnerabilities": 0,
+  "material_secrets": 0,
+  "restricted_data_files": 0,
+  "personal_home_paths": 0,
+  "scanner_exceptions_unchanged": true,
+  "independent_reproducible_builds": 2,
+  "artifacts": {
+    "soma_neuro-0.26.0-py3-none-any.whl": "ff3cc4658f0f6b4f5cb5a591fc3bc3765d7425ba6e38579baa5dbd06d6cd0802",
+    "soma_neuro-0.26.0.tar.gz": "03a57684c11a14a1a1acb5d812d835fe87a20dfcfcc5f2fef2bfde06404a111b"
+  },
+  "human_subjects": 0,
+  "remote_ci": "recorded separately at the actual PR head; local success does not establish remote success",
+  "full_python_tests_after_typing_fix": 1521,
+  "mypy_numpy246_files": 280,
+  "typing_control_results_exact": true,
+  "primary_scientific_run_commit": "f91b9f1c796236304ce950f822761a1347cdca19",
+  "corrected_experiment_sha256": "f97ad282bd1761b8e5a70f9664cd817c5ef1aa26bea565a9a8c71badbccdb371"
+}

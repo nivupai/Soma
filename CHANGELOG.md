@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.26.0
+
+- Frozen four-shell physical source uncertainty experiments with independent off-grid generators, paired noise, source-cluster intervals and retained numerical failures.
+- Quantify skull boundaries/conductivity, electrodes, registration, interactions and grid sensitivity using existing Tikhonov/MNE/dSPM operators.
+- Read-only Explorer compares executed synthetic maps with known truth; no human anatomical validation or new medical-data acquisition.
+- Preserve all prior tests and cross-platform gates; publish only reviewed synthetic tables and vector figures.
+
 ## 0.21.0
 
 - Exact current-revision OSF attachment evidence, sealed private-document references and reviewed permission readiness.
