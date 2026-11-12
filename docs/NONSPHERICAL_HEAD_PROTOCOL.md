@@ -81,3 +81,16 @@ Budget: 240 s per solver, at most 7000 dense unknowns / 2 GiB estimated dense
 storage, 1800 s total. If infeasible, amend the protocol before final accuracy
 inspection; do not silently omit expensive cases. Ordinary CI runs only small
 physical references and adversarial cases. PHANTOM_NOT_AVAILABLE; FEM_NOT_PERFORMED.
+
+## Revision 2, before final outcome inspection
+
+Revision 1 is retained at commit 3687ced. A pure geometry/source-margin check found
+one 60 mm candidate only 1.63 mm from the coarsest oblate boundary. Revision 2
+uses the same 35/55 mm candidate shells for every head, leaving the 2 mm margin
+criterion unchanged and retaining all six heads. No localization or amplitude
+performance was inspected to make this amendment. Original resource/seal files
+remain intact; active files have the `-r2` suffix, with explicit M19 parent links.
+A new M27 spherical control uses the same grid and per-head source/noise schedule.
+It is separate from immutable M26 measurements and does not turn unmatched M26
+headline accuracy into a directly comparable value. Source/noise/head seed
+schedules and the signed warp equation are explicit in the amended resource.
