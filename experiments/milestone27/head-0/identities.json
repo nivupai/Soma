@@ -1,0 +1,1098 @@
+{
+  "head": {
+    "head": 0,
+    "family": "prolate",
+    "seed": 27042,
+    "axes": [
+      0.9715519080583944,
+      0.9805217296974598,
+      1.0595376968852448
+    ],
+    "centres_m": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -5.911459778714904e-06,
+        7.497611057011405e-05,
+        5.2029032042683434e-05
+      ],
+      [
+        -1.3404643071024556e-05,
+        -5.535474745889849e-06,
+        6.540563802899226e-05
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "a": 0.02,
+    "b": 0.012,
+    "bump_direction": [
+      0.6999278217379327,
+      0.6192883828403128,
+      0.35578496769287865
+    ]
+  },
+  "pairing": "3aa53d50b998ec827fb091fae09387fb3579295eb1f80fcebf2696d7fdc59ccc",
+  "measurements": [
+    {
+      "source": 0,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 0,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 0,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 1,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 1,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 1,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 2,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 2,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 2,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 3,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 3,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 3,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 4,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 4,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 4,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 5,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 5,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 5,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 6,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 6,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 6,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 7,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 7,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 7,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 8,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 8,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 8,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 9,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 9,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 9,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 10,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 10,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 10,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    },
+    {
+      "source": 11,
+      "noise_std_V": 0,
+      "draw": 0
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 0
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 1
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 2
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 3
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 4
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 5
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 6
+    },
+    {
+      "source": 11,
+      "noise_std_V": 5e-08,
+      "draw": 7
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 0
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 1
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 2
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 3
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 4
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 5
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 6
+    },
+    {
+      "source": 11,
+      "noise_std_V": 1.5e-07,
+      "draw": 7
+    }
+  ],
+  "projection_mm": [
+    0.1998390381050986,
+    0.3234968847206223,
+    0.3409476721528788,
+    0.17878308777278232,
+    0.31498010485704214,
+    0.2299361777693424,
+    0.29292590290181936,
+    0.2991550265683419,
+    0.380457251482351,
+    0.24992572850121283,
+    0.30959733677515944,
+    0.24859043887778035,
+    0.21366644097407453,
+    0.3250893935765975,
+    0.22366933774027548,
+    0.30486058240441016,
+    0.15485552626033847,
+    0.1870969908037181,
+    0.3690484385994024,
+    0.3145093640500106,
+    0.303868800105702,
+    0.3214775703900704,
+    0.2658944599860955,
+    0.3252729908706276,
+    0.30319649979987534,
+    0.2457846002073952,
+    0.24176146737656412,
+    0.21637259276668097,
+    0.27371190964787456,
+    0.21966107632886966,
+    0.3688741328104106,
+    0.2991536774331265
+  ]
+}

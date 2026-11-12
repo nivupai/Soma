@@ -1,3 +1,4 @@
+import Nonspherical from "./Nonspherical";
 import { useState } from "react";
 import { Async, Panel, Warning, useResource } from "../components/Common";
 
@@ -91,108 +92,113 @@ export default function SourceUncertainty() {
   const options = d?.examples.filter((e) => e.method === method) || [];
   const selected = options.find((e) => e.scenario === scenario) || options[0];
   return (
-    <Panel
-      title="Anatomical uncertainty experiment"
-      eyebrow="KNOWN SYNTHETIC TRUTH / PHYSICAL FOUR-SHELL CONDUCTOR"
-    >
-      <Async loading={result.loading} error={result.error}>
-        {d && selected && (
-          <>
-            <Warning>{d.warning}</Warning>
-            <div className="toolbar">
-              <label>
-                Inverse method{" "}
-                <select
-                  aria-label="Uncertainty inverse method"
-                  value={method}
-                  onChange={(e) => setMethod(e.target.value)}
-                >
-                  {["Tikhonov", "MNE", "dSPM"].map((m) => (
-                    <option key={m}>{m}</option>
+    <>
+      <Panel
+        title="Anatomical uncertainty experiment"
+        eyebrow="KNOWN SYNTHETIC TRUTH / PHYSICAL FOUR-SHELL CONDUCTOR"
+      >
+        <Async loading={result.loading} error={result.error}>
+          {d && selected && (
+            <>
+              <Warning>{d.warning}</Warning>
+              <div className="toolbar">
+                <label>
+                  Inverse method{" "}
+                  <select
+                    aria-label="Uncertainty inverse method"
+                    value={method}
+                    onChange={(e) => setMethod(e.target.value)}
+                  >
+                    {["Tikhonov", "MNE", "dSPM"].map((m) => (
+                      <option key={m}>{m}</option>
+                    ))}
+                  </select>
+                </label>
+                <label>
+                  Error source{" "}
+                  <select
+                    aria-label="Source uncertainty scenario"
+                    value={selected.scenario}
+                    onChange={(e) => setScenario(e.target.value)}
+                  >
+                    {options.map((e) => (
+                      <option key={e.scenario} value={e.scenario}>
+                        {e.scenario}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+              <p>
+                Selected error source: {selected.family}. Cross = known ground
+                truth; amber = estimated peak.
+              </p>
+              <div className="two-col">
+                <div>
+                  <h3>Baseline source estimate</h3>
+                  <Map data={selected} baseline />
+                </div>
+                <div>
+                  <h3>Perturbed source estimate</h3>
+                  <Map data={selected} baseline={false} />
+                </div>
+              </div>
+              <div className="metrics">
+                <div>
+                  <span>3D peak displacement</span>
+                  <strong>
+                    {selected.metrics.localization_mm.toFixed(2)} mm
+                  </strong>
+                </div>
+                <div>
+                  <span>Spatial dispersion</span>
+                  <strong>
+                    {selected.metrics.dispersion_mm.toFixed(2)} mm
+                  </strong>
+                </div>
+                <div>
+                  <span>Nearest possible grid point</span>
+                  <strong>
+                    {selected.metrics.nearest_grid_mm.toFixed(2)} mm
+                  </strong>
+                </div>
+                <div>
+                  <span>Peak amplitude bias</span>
+                  <strong>
+                    {selected.metrics.peak_amplitude_bias_ratio === null
+                      ? "Not physical (dSPM)"
+                      : `${(selected.metrics.peak_amplitude_bias_ratio * 100).toFixed(1)}%`}
+                  </strong>
+                </div>
+              </div>
+              <p>
+                One noiseless off-grid generator example; each map has its own
+                color/size scale. Quantitative differences use the underlying
+                arrays. Ground truth:{" "}
+                {selected.truth_mm.map((v) => v.toFixed(2)).join(" / ")} mm.
+              </p>
+              <details>
+                <summary>
+                  Numerical failures retained: {d.failed_configurations.length}{" "}
+                  / {d.configurations}
+                </summary>
+                <ul>
+                  {d.failed_configurations.map((f) => (
+                    <li key={f}>{f}</li>
                   ))}
-                </select>
-              </label>
-              <label>
-                Error source{" "}
-                <select
-                  aria-label="Source uncertainty scenario"
-                  value={selected.scenario}
-                  onChange={(e) => setScenario(e.target.value)}
-                >
-                  {options.map((e) => (
-                    <option key={e.scenario} value={e.scenario}>
-                      {e.scenario}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            </div>
-            <p>
-              Selected error source: {selected.family}. Cross = known ground
-              truth; amber = estimated peak.
-            </p>
-            <div className="two-col">
-              <div>
-                <h3>Baseline source estimate</h3>
-                <Map data={selected} baseline />
-              </div>
-              <div>
-                <h3>Perturbed source estimate</h3>
-                <Map data={selected} baseline={false} />
-              </div>
-            </div>
-            <div className="metrics">
-              <div>
-                <span>3D peak displacement</span>
-                <strong>
-                  {selected.metrics.localization_mm.toFixed(2)} mm
-                </strong>
-              </div>
-              <div>
-                <span>Spatial dispersion</span>
-                <strong>{selected.metrics.dispersion_mm.toFixed(2)} mm</strong>
-              </div>
-              <div>
-                <span>Nearest possible grid point</span>
-                <strong>
-                  {selected.metrics.nearest_grid_mm.toFixed(2)} mm
-                </strong>
-              </div>
-              <div>
-                <span>Peak amplitude bias</span>
-                <strong>
-                  {selected.metrics.peak_amplitude_bias_ratio === null
-                    ? "Not physical (dSPM)"
-                    : `${(selected.metrics.peak_amplitude_bias_ratio * 100).toFixed(1)}%`}
-                </strong>
-              </div>
-            </div>
-            <p>
-              One noiseless off-grid generator example; each map has its own
-              color/size scale. Quantitative differences use the underlying
-              arrays. Ground truth:{" "}
-              {selected.truth_mm.map((v) => v.toFixed(2)).join(" / ")} mm.
-            </p>
-            <details>
-              <summary>
-                Numerical failures retained: {d.failed_configurations.length} /{" "}
-                {d.configurations}
-              </summary>
-              <ul>
-                {d.failed_configurations.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-            </details>
-            <p className="mono">Protocol {d.protocol_fingerprint}</p>
-          </>
-        )}
-        {result.data && !d && (
-          <Warning>
-            Unverified uncertainty artifact: no source map displayed.
-          </Warning>
-        )}
-      </Async>
-    </Panel>
+                </ul>
+              </details>
+              <p className="mono">Protocol {d.protocol_fingerprint}</p>
+            </>
+          )}
+          {result.data && !d && (
+            <Warning>
+              Unverified uncertainty artifact: no source map displayed.
+            </Warning>
+          )}
+        </Async>
+      </Panel>
+      <Nonspherical />
+    </>
   );
 }

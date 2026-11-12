@@ -300,3 +300,15 @@ def physical_uncertainty_command(output: Path = Path("reports/source-uncertainty
         _echo_result(run_uncertainty(protocol(), output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("nonspherical")
+def nonspherical_command(output: Path = Path("reports/nonspherical-v27")) -> None:
+    """Execute frozen synthetic four-interface BEM study (requires [conductor])."""
+    from soma.experiments.nonspherical import run_nonspherical
+    from soma.source.nonspherical import protocol
+
+    try:
+        _echo_result(run_nonspherical(protocol(), output), output)
+    except Exception as exc:
+        _fail(exc)

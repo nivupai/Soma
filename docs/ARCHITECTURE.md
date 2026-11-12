@@ -403,3 +403,8 @@ Tikhonov/CorticalInverse operators with explicit MRI/head frames and SI units.
 uses existing M19/M17 provenance. It is not a new general workflow framework.
 A packaged, executed synthetic example feeds the GET-only Explorer source view;
 no model calculation or human source localization is triggered over HTTP.
+
+
+## Milestone 27 addendum
+
+M27 adds a bounded synthetic four-interface OpenMEEG child-process adapter and reuses M19 seals, M17 envelopes, existing geometry QC and M26 inverse kernels. There is no parallel workflow engine or FEM solver. See HEAD_MODEL_CONVERGENCE.md and BEM_FEM_REFERENCE_COMPARISON.md.

@@ -1,0 +1,9 @@
+{
+  "numerical_tables_identical": 40,
+  "reconstruction_rows_identical": 44064,
+  "convergence_results_identical": 6,
+  "independent_control_results_identical": 6,
+  "protocol_unchanged": true,
+  "first_run_preserved_locally": true,
+  "scope": "metadata correction and stricter preflight/reference guards; no numerical tuning"
+}

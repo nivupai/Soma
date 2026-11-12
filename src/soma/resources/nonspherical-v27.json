@@ -1,0 +1,142 @@
+{
+  "schema": "soma.nonspherical.design/1",
+  "seed": 27042,
+  "head_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "families": [
+    "prolate",
+    "prolate",
+    "oblate",
+    "oblate",
+    "asymmetric",
+    "asymmetric"
+  ],
+  "axes": {
+    "prolate": [
+      0.97,
+      0.98,
+      1.06
+    ],
+    "oblate": [
+      1.04,
+      1.02,
+      0.95
+    ],
+    "asymmetric": [
+      1.01,
+      0.98,
+      1.02
+    ]
+  },
+  "axis_jitter_sd": 0.004,
+  "warp_xz": 0.02,
+  "warp_y3": 0.012,
+  "csf_center_sd_mm": 0.05,
+  "skull_center_sd_mm": 0.05,
+  "baseline_local_skull_bump_mm": 0.2,
+  "bump_width": 0.35,
+  "radii_mm": [
+    81,
+    82.8,
+    87.3,
+    90
+  ],
+  "conductivities_S_m": [
+    0.33,
+    1,
+    0.004,
+    0.33
+  ],
+  "conductivity_unit": "S/m",
+  "estimated_mesh_levels": [
+    0,
+    1,
+    2
+  ],
+  "reference_mesh_level": 3,
+  "sensors": 32,
+  "sensor_layout": "M26 Fibonacci directions mapped to analytic scalp then radially to each discrete scalp; projection error retained",
+  "candidate_sources_per_shell": 24,
+  "candidate_radii_mm": [
+    35,
+    60
+  ],
+  "sources_per_head": 12,
+  "truth_radius_mm": [
+    35,
+    65
+  ],
+  "source_amplitude_Am": 1e-08,
+  "noise_std_V": [
+    0,
+    5e-08,
+    1.5e-07
+  ],
+  "noise_draws": 8,
+  "methods": [
+    "Tikhonov",
+    "MNE",
+    "dSPM"
+  ],
+  "tikhonov_lambda2": 0.001,
+  "mne_lambda2": 0.1111111111111111,
+  "depth": null,
+  "scale_policy": "one finest-baseline candidate-grid spectral scale per head, fixed for all cases",
+  "perturbations": {
+    "skull_shift_mm": 0.5,
+    "skull_thickness_mm": 0.5,
+    "csf_boundary_mm": -0.5,
+    "local_skull_mm": 0.5,
+    "electrode_tangent_mm": 2.0,
+    "registration_translation_mm": 1.0,
+    "registration_rotation_deg": 1.0,
+    "skull_conductivity_S_m": 0.008,
+    "thickness_conductivity_interaction": true
+  },
+  "min_thickness_mm": 0.4,
+  "min_triangle_quality": 0.2,
+  "max_aspect_ratio": 3.5,
+  "intersection_tolerance_m": 1e-08,
+  "dipole_boundary_margin_mm": 2.0,
+  "sensor_extra_projection_limit_mm": 3.0,
+  "orientation": "free Cartesian; MRI RAS metres; outward stored faces, explicit inward OpenMEEG adapter",
+  "solver": "OpenMEEG 2.6.0 symmetric BEM, direct general geometry API, all four layers",
+  "integrator": {
+    "order": 3,
+    "adaptive_levels": 0,
+    "tolerance": 0.001
+  },
+  "linear_solver": "SciPy pivoted LU on OpenMEEG symmetric assembly, with residual and algebraic reciprocity checks",
+  "solver_residual_rtol": 1e-08,
+  "symmetry_rtol": 1e-12,
+  "reciprocity_rtol": 1e-10,
+  "reference_null_rtol": 1e-12,
+  "inverse_reference_rtol": 1e-10,
+  "sphere_reference_rtol": 0.02,
+  "mesh_reference_rtol": 0.05,
+  "successive_error_ratio_max": 0.8,
+  "independent_three_layer_rtol": 0.1,
+  "reference_hierarchy": {
+    "A": "exact homogeneous central-dipole sphere plus MNE semi-analytical heterogeneous sphere",
+    "B": "whole-model mesh convergence including recorded sensor discretization",
+    "C": "MNE linear-collocation versus OpenMEEG symmetric BEM on matched three-layer controls only; full four-layer independence NOT_ESTABLISHED",
+    "D": "PHANTOM_NOT_AVAILABLE; no empirical phantom acquisition"
+  },
+  "bootstrap_repetitions": 1999,
+  "confidence": 0.95,
+  "resampling": "fixed-family stratified head bootstrap then sources within head; average paired noise; same resamples for contrasts",
+  "missing_policy": "retain every planned head/case/source/method failure; incomplete aggregate never imputed",
+  "per_solver_timeout_s": 240,
+  "max_dense_unknowns": 7000,
+  "max_estimated_dense_bytes": 2147483648,
+  "total_budget_s": 1800,
+  "ordinary_CI": "small reference and adversarial tests only; no full ensemble",
+  "human_subjects": 0,
+  "FEM": "NOT_PERFORMED"
+}

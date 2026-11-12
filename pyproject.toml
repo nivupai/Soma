@@ -4,13 +4,14 @@ build-backend = "hatchling.build"
 
 [project]
 name = "soma-neuro"
-version = "0.26.0"
+version = "0.27.0"
 description = "Transparent numerical foundations for computational neuroscience"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = ["numpy>=1.26,<3", "scipy>=1.12,<2", "mne>=1.13,<2", "nibabel>=5.2,<6", "SimpleITK>=2.4,<3", "scikit-image>=0.24,<1", "neurodsp==2.3.0", "pandas>=2.2,<3", "matplotlib>=3.8,<4", "typer>=0.12,<1", "PyYAML>=6,<7", "scikit-learn>=1.5,<2", "pyriemann>=0.12,<0.13", "pybids>=0.22,<0.23", "bidsschematools>=2,<3", "nilearn>=0.14,<0.15"]
 
 [project.optional-dependencies]
+conductor = ["openmeeg==2.6.0"]
 explorer = ["fastapi>=0.162,<0.163", "pydantic>=2.14,<3", "uvicorn>=0.54,<0.55", "httpx>=0.28,<0.29"]
 dev = ["pytest>=8", "ruff>=0.9", "mypy>=1.13", "pandas-stubs", "types-PyYAML", "bids-validator-deno==3.0.2", "build>=1.2,<2"]
 
@@ -41,5 +42,5 @@ python_version = "3.11"
 strict = true
 untyped_calls_exclude = ["nibabel", "SimpleITK", "skimage"]
 [[tool.mypy.overrides]]
-module = ["mne.*", "neurodsp.*", "scipy.*", "matplotlib.*", "mpl_toolkits.*", "sklearn.*", "pyriemann.*", "threadpoolctl.*", "nibabel.*", "SimpleITK.*", "skimage.*", "bids.*", "bids_validator.*", "bidsschematools.*", "deno.*", "nilearn.*"]
+module = ["openmeeg.*", "mne.*", "neurodsp.*", "scipy.*", "matplotlib.*", "mpl_toolkits.*", "sklearn.*", "pyriemann.*", "threadpoolctl.*", "nibabel.*", "SimpleITK.*", "skimage.*", "bids.*", "bids_validator.*", "bidsschematools.*", "deno.*", "nilearn.*"]
 ignore_missing_imports = true
