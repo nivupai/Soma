@@ -41,3 +41,21 @@ Hierarchical summaries resample heads within fixed families, then sources within
 head; orientations and repeated computations are not independent participants.
 Full four-layer independent verification remains NOT_ESTABLISHED. FEM was not
 performed; measured phantom evidence is unavailable. Human modeling is deferred.
+
+
+## Post-outcome metadata amendment, revision 2
+
+Revision 1 at 61973db is retained verbatim. The original design JSON and all
+actual solver packets specify three layers, but the seal's descriptive
+source_conductivity field inherited M27's four-layer model and values. This is a
+metadata contradiction, not evidence that the executed pair used different
+conductors. Stale generic summary-axis names were inherited too.
+
+Revision 2 explicitly corrects those declarations, records outcome inspection as
+yes and links the original fingerprint. No geometry, conductivity passed to solvers,
+source, sensor, numerical parameter, threshold or inverse policy changes. The
+10% target and original design hash remain fixed. The complete experiment,
+including heldout head5 and every factor, is repeated after this correction.
+Original outcomes and the first seal are preserved; numerical identity is tested
+rather than assumed. This amendment is not represented as pre-outcome registration.
+Active seal: configs/bem-discrepancy-v28-r2.json.
