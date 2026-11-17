@@ -113,3 +113,10 @@ Historical scientific reports and original release records are preserved.
 - Frozen six-head/four-interface synthetic study with three estimated meshes and finer off-grid truth; independent reference hierarchy and explicit failed three-layer agreement gates.
 - Conditional hierarchical source/head intervals, full retained case accounting, physical/geometry diagnostics and auditable synthetic figures/tables.
 - Optional pinned OpenMEEG adapter, SDK/CLI and existing uncertainty workbench extension; no FEM, human anatomical accuracy or empirical phantom claim.
+
+
+## 0.28.0 — Independent BEM discrepancy diagnostics
+
+- Reproduce and preserve M27 disagreement; freeze canonical geometry, source/sensor/reference and numerical factor controls before evaluation.
+- Quantify analytical limits, solver/refinement/source/orientation effects and inverse consequences; retain failed 10% agreement gates without scalar rescue.
+- Extend SDK/CLI and existing synthetic-only Explorer workbench, with auditable tables, figures, native receipts and independent metric checks.

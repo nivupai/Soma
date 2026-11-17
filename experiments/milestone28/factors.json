@@ -1,0 +1,170 @@
+[
+  {
+    "head": 0,
+    "label": "F-0-noIP",
+    "solver": "mne",
+    "change_from_baseline": 0.907090417908405,
+    "difference_from_other_baseline": 0.5277664615156848
+  },
+  {
+    "head": 0,
+    "label": "F-0-integration",
+    "solver": "openmeeg",
+    "change_from_baseline": 3.583504039562158e-05,
+    "difference_from_other_baseline": 0.26515730655444153
+  },
+  {
+    "head": 0,
+    "label": "F-0-interface-0",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.03471542662399089,
+    "difference_from_other_baseline": 0.30706982950838946
+  },
+  {
+    "head": 0,
+    "label": "F-0-interface-0",
+    "solver": "mne",
+    "change_from_baseline": 0.014913724983692358,
+    "difference_from_other_baseline": 0.21902824746882302
+  },
+  {
+    "head": 0,
+    "label": "F-0-interface-1",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.06819793794064812,
+    "difference_from_other_baseline": 0.3493075285965755
+  },
+  {
+    "head": 0,
+    "label": "F-0-interface-1",
+    "solver": "mne",
+    "change_from_baseline": 0.1100191636532543,
+    "difference_from_other_baseline": 0.1320728883744554
+  },
+  {
+    "head": 0,
+    "label": "F-0-interface-2",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.09476211630638919,
+    "difference_from_other_baseline": 0.14843960819610447
+  },
+  {
+    "head": 0,
+    "label": "F-0-interface-2",
+    "solver": "mne",
+    "change_from_baseline": 0.09160799352274618,
+    "difference_from_other_baseline": 0.2837121257745065
+  },
+  {
+    "head": 0,
+    "label": "F-0-sensor",
+    "solver": "openmeeg",
+    "change_from_baseline": 1.4231527372667203,
+    "difference_from_other_baseline": 1.600963664004647
+  },
+  {
+    "head": 0,
+    "label": "F-0-sensor",
+    "solver": "mne",
+    "change_from_baseline": 1.4140860212664146,
+    "difference_from_other_baseline": 1.287144703375506
+  },
+  {
+    "head": 0,
+    "label": "F-0-conductivity",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.1876198781253106,
+    "difference_from_other_baseline": 0.49548971690210675
+  },
+  {
+    "head": 0,
+    "label": "F-0-conductivity",
+    "solver": "mne",
+    "change_from_baseline": 0.24065989068266255,
+    "difference_from_other_baseline": 0.02944970881196905
+  },
+  {
+    "head": 5,
+    "label": "F-5-noIP",
+    "solver": "mne",
+    "change_from_baseline": 0.8962882583249857,
+    "difference_from_other_baseline": 0.5198639735057456
+  },
+  {
+    "head": 5,
+    "label": "F-5-integration",
+    "solver": "openmeeg",
+    "change_from_baseline": 3.2932068660046143e-05,
+    "difference_from_other_baseline": 0.26336549608376364
+  },
+  {
+    "head": 5,
+    "label": "F-5-interface-0",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.034909167914165554,
+    "difference_from_other_baseline": 0.3055866472696396
+  },
+  {
+    "head": 5,
+    "label": "F-5-interface-0",
+    "solver": "mne",
+    "change_from_baseline": 0.014910200003828717,
+    "difference_from_other_baseline": 0.21772988519006384
+  },
+  {
+    "head": 5,
+    "label": "F-5-interface-1",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.06857291278827499,
+    "difference_from_other_baseline": 0.3480011440033768
+  },
+  {
+    "head": 5,
+    "label": "F-5-interface-1",
+    "solver": "mne",
+    "change_from_baseline": 0.11026986382092145,
+    "difference_from_other_baseline": 0.12997718157622548
+  },
+  {
+    "head": 5,
+    "label": "F-5-interface-2",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.09521501556489818,
+    "difference_from_other_baseline": 0.1459548122336992
+  },
+  {
+    "head": 5,
+    "label": "F-5-interface-2",
+    "solver": "mne",
+    "change_from_baseline": 0.09205986832402614,
+    "difference_from_other_baseline": 0.2829357555164748
+  },
+  {
+    "head": 5,
+    "label": "F-5-sensor",
+    "solver": "openmeeg",
+    "change_from_baseline": 1.4141308571983513,
+    "difference_from_other_baseline": 1.5909848188340487
+  },
+  {
+    "head": 5,
+    "label": "F-5-sensor",
+    "solver": "mne",
+    "change_from_baseline": 1.4133487698050824,
+    "difference_from_other_baseline": 1.28548567801804
+  },
+  {
+    "head": 5,
+    "label": "F-5-conductivity",
+    "solver": "openmeeg",
+    "change_from_baseline": 0.18687446682565334,
+    "difference_from_other_baseline": 0.4929309286517846
+  },
+  {
+    "head": 5,
+    "label": "F-5-conductivity",
+    "solver": "mne",
+    "change_from_baseline": 0.24133565633622822,
+    "difference_from_other_baseline": 0.02700516978304414
+  }
+]

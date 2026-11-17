@@ -495,3 +495,13 @@ four-layer independent validation, FEM and physical phantom validation remain
 unestablished. See [measured results](docs/MILESTONE27_RESULTS.md).
 Install optional `soma-neuro[conductor]` for OpenMEEG computation; core-only geometry
 and packaged synthetic Explorer examples do not require the solver.
+
+
+### Milestone 28: independent solver diagnostics
+
+Version 0.28.0 investigates the preserved M27 BEM discrepancy using canonical
+physical contracts, exact homogeneous references and controlled refinement.
+The finest full nonspherical comparisons still differ by 11.7–12.2%, above the
+unchanged 10% target. Software verification does not establish human accuracy,
+four-layer independent agreement, FEM or phantom validation.
+See [measured M28 results](docs/MILESTONE28_RESULTS.md).

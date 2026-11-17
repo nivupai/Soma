@@ -1,0 +1,38 @@
+[
+  {
+    "head": 0,
+    "relative_error": 0.1760966605513768,
+    "historical": 0.1760966605513768,
+    "absolute_difference": 0.0
+  },
+  {
+    "head": 1,
+    "relative_error": 0.17566675543908772,
+    "historical": 0.17566675543908772,
+    "absolute_difference": 0.0
+  },
+  {
+    "head": 2,
+    "relative_error": 0.1608841656676349,
+    "historical": 0.1608841656676349,
+    "absolute_difference": 0.0
+  },
+  {
+    "head": 3,
+    "relative_error": 0.16143543773155006,
+    "historical": 0.16143543773155006,
+    "absolute_difference": 0.0
+  },
+  {
+    "head": 4,
+    "relative_error": 0.16921380144543374,
+    "historical": 0.16921380144543374,
+    "absolute_difference": 0.0
+  },
+  {
+    "head": 5,
+    "relative_error": 0.16912409581412408,
+    "historical": 0.16912409581412408,
+    "absolute_difference": 0.0
+  }
+]

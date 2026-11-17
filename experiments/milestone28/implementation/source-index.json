@@ -1,0 +1,14 @@
+{
+  "bem_discrepancy.py": {
+    "file": "bem_discrepancy.py.txt",
+    "sha256": "4178e115683068e7959b30dcdd0f633d77423cdd18684ceba01a45caa9e91fff"
+  },
+  "experiment.py": {
+    "file": "experiment.py.txt",
+    "sha256": "633200bd8b93d3d69b02034cd55d4602743ef7ecb3106061de419d20008782da"
+  },
+  "bem_worker.py": {
+    "file": "bem_worker.py.txt",
+    "sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3"
+  }
+}
