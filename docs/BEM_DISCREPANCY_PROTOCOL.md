@@ -59,3 +59,20 @@ including heldout head5 and every factor, is repeated after this correction.
 Original outcomes and the first seal are preserved; numerical identity is tested
 rather than assumed. This amendment is not represented as pre-outcome registration.
 Active seal: configs/bem-discrepancy-v28-r2.json.
+
+
+## Completed descriptor audit, revision 3
+
+Revision 2 corrected conductivity descriptions but assigned inherited generic
+summary tolerances to physical-quantity names without corresponding units. Revision
+3 retains both earlier seals, binds these generic summary axes to actual
+dimensionless receipt counts, and explicitly separates generic M19 workflow replay
+policy from the physical PCG64 schedules in the unchanged frozen design. Physical
+field/geometry/solver acceptance tolerances remain exactly those in the original
+design, including .10 independent agreement; count-summary tolerances are not
+physical validation thresholds. Outcome inspection is explicitly yes.
+
+The complete final repetition uses this corrected seal, including heldout head5.
+The producer rejects descriptive conductor/tolerance metadata inconsistent with
+the actual design. Active seal: configs/bem-discrepancy-v28-r3.json. Neither
+correction is claimed to have preceded the original numerical outcomes.

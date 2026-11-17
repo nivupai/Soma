@@ -32,12 +32,32 @@ def protocol() -> SealedProtocol:
     s = SealedProtocol(
         canonical(
             json.loads(
-                files("soma.resources").joinpath("bem-discrepancy-protocol-v28-r2.json").read_text()
+                files("soma.resources").joinpath("bem-discrepancy-protocol-v28-r3.json").read_text()
             )
         )
     )
     if s.protocol.document()["optional_metadata"]["design_sha256"] != DESIGN_SHA:
         raise ValueError("Protocol design mismatch")
+    document = s.protocol.document()
+    conductor = document["scientific"]["source_conductivity"]
+    if (
+        conductor.get("sigmas_S_m") != design()["conductivities_S_m"]
+        or conductor.get("independent_four_layer") != "NOT_ESTABLISHED"
+    ):
+        raise ValueError("Conductor declaration contradicts canonical design")
+    counts = {
+        "models_computed",
+        "models_failed",
+        "inverse_rows",
+        "inverse_computed",
+        "source_count_per_head",
+        "heads",
+    }
+    if (
+        set(document["tolerances"]["axes"]) != counts
+        or document["tolerances"]["units"] != ["1"] * 6
+    ):
+        raise ValueError("Generic summary tolerance declarations must describe receipt counts")
     return s
 
 
