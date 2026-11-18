@@ -1,0 +1,158 @@
+{
+  "version": "0.29.0",
+  "baseline_parent": "e68fa127dc65fbf39d43f574beacf64a9a31c4d1",
+  "parent_pr": 13,
+  "parent_pr_state": "OPEN_UNMERGED",
+  "main": "31e389db42c5cd3bfd2bca0e0a83958257744fcf",
+  "tests": {
+    "full_passed": 1628,
+    "offline_passed": 1611,
+    "offline_deselected": 17,
+    "new_python_tests": 24,
+    "frontend_passed": 46,
+    "browser_passed": 22
+  },
+  "quality": {
+    "ruff": true,
+    "formatting": true,
+    "strict_mypy": true,
+    "strict_source_files": 290,
+    "dependency_check": true
+  },
+  "installations": {
+    "wheel": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 21,
+      "payload_files_verified": 312,
+      "dependency_check": true,
+      "dependency_audit": true
+    },
+    "sdist": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 21,
+      "payload_files_verified": 312,
+      "dependency_check": true,
+      "dependency_audit": true
+    },
+    "source": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 21,
+      "payload_files_verified": 312,
+      "dependency_check": true,
+      "dependency_audit": true
+    }
+  },
+  "reproducible_builds": true,
+  "artifacts": {
+    "soma_neuro-0.29.0-py3-none-any.whl": "60db77836d357f08a9578f871660c1a7be75a095c6e80ddd3e056287c7987ea5",
+    "soma_neuro-0.29.0.tar.gz": "52b6802032a2cb6bb2e93f9992a4f96cd3bd4f7406acbb59cc149688e5c9b763"
+  },
+  "python_dependency_audit": {
+    "known_vulnerabilities": 0,
+    "local_project_skip": "no PyPI audit record"
+  },
+  "npm_security": {
+    "passed": false,
+    "advisory": "GHSA-fc5q-39xc-vjpf",
+    "picomatch": "4.0.7",
+    "high_dependency_entries": 11,
+    "patched_release_available": false,
+    "exceptions_added": false
+  },
+  "privacy": {
+    "scanner": "Gitleaks 8.30.1",
+    "rules_suppressed": false,
+    "current_files": 1380,
+    "commits": 74,
+    "blobs": 1699,
+    "material_secrets": 0,
+    "restricted_data_files": 0,
+    "personal_home_paths": 0,
+    "scopes": {
+      "history": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "blobs": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "tree": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "metadata": {
+        "raw_findings": 0,
+        "scanner_exit": 0,
+        "reviewed_false_positives": 0
+      }
+    },
+    "limitation": "Manual review plus pattern scanners cannot prove the absence of all sensitive information"
+  },
+  "preserved": {
+    "M28_artifact_hashes": 147,
+    "protected_historical_files": 571,
+    "M24_archive_files": 46
+  },
+  "scientific": {
+    "receipt": {
+      "schema": "soma.fem-reference.receipt/1",
+      "protocol_fingerprint": "3872aea2cc7427b8a794e7e9e1968b52aa6ea0172c0bf69199ca81fbf55d18ad",
+      "parent_commit": "e68fa127dc65fbf39d43f574beacf64a9a31c4d1",
+      "parent_pr": 13,
+      "synthetic_only": true,
+      "human_subjects": 0,
+      "models_computed": 62,
+      "models_failed": 1,
+      "inverse_rows": 7344,
+      "seconds": 581.7470886669471,
+      "analytical_limit_pass": true,
+      "independent_four_layer_agreement_pass": true,
+      "threshold": 0.1,
+      "phantom": "NOT_AVAILABLE",
+      "human_validation": "NOT_ESTABLISHED",
+      "finest_head_relative": [
+        0.004288807857556274,
+        0.0033157086864672607,
+        0.006068663897388366,
+        0.004145887020318385,
+        0.003132062248926382,
+        0.00304235378924982
+      ]
+    },
+    "paired_field_matrices_identical": 62,
+    "numerical_csvs_identical": 15,
+    "primary_figures": 12,
+    "supplemental_figures": 1,
+    "supplemental_status": "POST_OUTCOME_DESCRIPTIVE geometric brain-boundary distance audit",
+    "original_seal_preserved": true,
+    "post_outcome_metadata_correction": true,
+    "independent_implementation": "scikit-fem 12.0.2 P1 Galerkin full subtraction / SciPy sparse LU",
+    "license": "scikit-fem BSD-3-Clause; no source vendored",
+    "final_repeat_unique_source_snapshots": 3,
+    "original_helper_snapshot_available": false,
+    "original_helper_snapshot_limitation": "Original basename collision; no independently recorded helper hash claimed. Original numerical outputs preserved; final repeated implementation archived uniquely.",
+    "peak_solver_child_MiB": {
+      "FEM": 989.484375,
+      "OpenMEEG": 1116.59375
+    }
+  },
+  "publication": {
+    "status": "DEPENDENT_PR_BLOCKED_REQUIRED_NPM_SECURITY_GATE",
+    "base_branch": "feature/milestone28-bem-discrepancy",
+    "merge_permitted": false,
+    "postmerge_ci": "NOT_PERFORMED",
+    "expected_ci_jobs": 13,
+    "comparison_families": 12
+  },
+  "milestone30_started": false
+}

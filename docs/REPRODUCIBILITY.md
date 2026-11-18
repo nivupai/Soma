@@ -545,3 +545,9 @@ M28 design SHA is 70aa0942ed36ae6b2b75c1fc64fe13bfb5964d079c2d42811b37746923cbf5
 The final M28 active seal is `configs/bem-discrepancy-v28-r3.json`; revisions 1/2
 are retained. Revisions 2/3 are explicit post-outcome descriptor corrections,
 with physical design/settings and 10% target unchanged.
+
+M29 adds optional pinned scikit-fem12.0.2. `python -m scripts.fem_reference_repro`
+provides a small independent homogeneous physical check for four actual platforms;
+it is not the full four-layer engineering acceptance study. The expensive frozen
+study is opt-in through `soma source fem-reference`. See the M29 protocol, explicit
+post-outcome metadata amendment, original/repeat hashes and preserved M28 artifacts.

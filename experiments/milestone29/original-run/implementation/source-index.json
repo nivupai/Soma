@@ -1,0 +1,14 @@
+{
+  "fem_reference.py.txt": {
+    "sha256": "24b4cd89c23670b22127fe7eff686c9b134a1094779943db883895d089ae1756",
+    "module": "experiments/fem_reference.py"
+  },
+  "fem_worker.py.txt": {
+    "sha256": "b831de1b06e963b23018e62a783536414ae3709c0e2fa12c82f24607aaf71edb",
+    "module": "source/fem_worker.py"
+  },
+  "source/fem_reference.py": {
+    "status": "NOT_SEPARATELY_ARCHIVED",
+    "reason": "basename collision in original local snapshot; no independently recorded original helper hash is claimed; final repeated implementation has unique names and exact numerical identity"
+  }
+}

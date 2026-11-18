@@ -1,0 +1,194 @@
+[
+  {
+    "label": "H-1",
+    "max_boundary_coordinate_difference_m": 0.0,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 1.163713206946934e-15
+  },
+  {
+    "label": "H-2",
+    "max_boundary_coordinate_difference_m": 0.0,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 3.6979687249619496e-16
+  },
+  {
+    "label": "H-3",
+    "max_boundary_coordinate_difference_m": 7.757919228897728e-18,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 3.4236551348955972e-15
+  },
+  {
+    "label": "S-1",
+    "max_boundary_coordinate_difference_m": 0.0,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 1.163713206946934e-15
+  },
+  {
+    "label": "S-2",
+    "max_boundary_coordinate_difference_m": 0.0,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 3.6979687249619496e-16
+  },
+  {
+    "label": "S-3",
+    "max_boundary_coordinate_difference_m": 7.757919228897728e-18,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 3.4236551348955972e-15
+  },
+  {
+    "label": "C-0-1",
+    "max_boundary_coordinate_difference_m": 2.541098841762901e-21,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 9.26325308596882e-16
+  },
+  {
+    "label": "C-0-2",
+    "max_boundary_coordinate_difference_m": 2.541098841762901e-21,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 8.374157732346468e-16
+  },
+  {
+    "label": "C-0-3",
+    "max_boundary_coordinate_difference_m": 1.3904866443919908e-17,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 1.2494078577155733e-15
+  },
+  {
+    "label": "C-1-1",
+    "max_boundary_coordinate_difference_m": 5.082197683525802e-21,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 5.950439268302672e-16
+  },
+  {
+    "label": "C-1-2",
+    "max_boundary_coordinate_difference_m": 5.082197683525802e-21,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.7275381388618083e-15
+  },
+  {
+    "label": "C-1-3",
+    "max_boundary_coordinate_difference_m": 1.3904866443919908e-17,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.6580859021633332e-15
+  },
+  {
+    "label": "C-2-1",
+    "max_boundary_coordinate_difference_m": 1.5105132278640395e-20,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 3.817699634444141e-15
+  },
+  {
+    "label": "C-2-2",
+    "max_boundary_coordinate_difference_m": 1.5105132278640395e-20,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 1.6469630747462464e-15
+  },
+  {
+    "label": "C-2-3",
+    "max_boundary_coordinate_difference_m": 1.2018516789897274e-17,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 8.153829766055735e-16
+  },
+  {
+    "label": "C-3-1",
+    "max_boundary_coordinate_difference_m": 1.3552527156068805e-20,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.199052087957e-15
+  },
+  {
+    "label": "C-3-2",
+    "max_boundary_coordinate_difference_m": 1.3552527156068805e-20,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.1968772344126284e-15
+  },
+  {
+    "label": "C-3-3",
+    "max_boundary_coordinate_difference_m": 1.3877787807814457e-17,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 1.4272915985726127e-15
+  },
+  {
+    "label": "C-4-1",
+    "max_boundary_coordinate_difference_m": 3.3881317890172014e-21,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 6.047805595396589e-16
+  },
+  {
+    "label": "C-4-2",
+    "max_boundary_coordinate_difference_m": 3.3881317890172014e-21,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 6.336797994053871e-16
+  },
+  {
+    "label": "C-4-3",
+    "max_boundary_coordinate_difference_m": 9.813077866773595e-18,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.161223703856784e-15
+  },
+  {
+    "label": "C-5-1",
+    "max_boundary_coordinate_difference_m": 0.0,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.459360581857861e-15
+  },
+  {
+    "label": "C-5-2",
+    "max_boundary_coordinate_difference_m": 0.0,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.541262819361512e-15
+  },
+  {
+    "label": "C-5-3",
+    "max_boundary_coordinate_difference_m": 1.0408340855860843e-17,
+    "source_coordinates_exact": true,
+    "sensor_coordinates_exact": true,
+    "interface_connectivity_exact": true,
+    "max_tissue_volume_relative_difference": 2.8893151105835964e-15
+  }
+]

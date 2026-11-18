@@ -1,0 +1,140 @@
+[
+  {
+    "level": 1,
+    "relative": 0.1056016679321956,
+    "mesh": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.6379566140065616e-07,
+      "min_mean_ratio": 0.14163457851819017,
+      "max_mean_ratio": 0.9635686445079338,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "baaeeea499c957df86ad8c1153b9c525ef9f94b01af7b6cfcea2327575ea31a5",
+      "exact_surface_facets": true,
+      "boundary_hash": "26c8a1b7b6305fe1354d9f9a4fabfc9c70c14e34fad169bfcac227d2e05c8537"
+    },
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.6379566140065616e-07,
+      "min_mean_ratio": 0.14163457851819017,
+      "max_mean_ratio": 0.9635686445079338,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "baaeeea499c957df86ad8c1153b9c525ef9f94b01af7b6cfcea2327575ea31a5",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.849672702811382e-14,
+      "preprojection_current_imbalance": 1.4805596443121087e-05,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.13832108298083767,
+      "reference": "sensor average"
+    }
+  },
+  {
+    "level": 2,
+    "relative": 0.02512912443503393,
+    "mesh": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2286071869921263e-08,
+      "min_mean_ratio": 0.14123609925628652,
+      "max_mean_ratio": 0.9234600236487241,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "228c3d0e0881466bbfa4d112e23ffb52c9587183d95dbdf0502e6fe3ed12b4ab",
+      "exact_surface_facets": true,
+      "boundary_hash": "b77a7da75ff696791809b314b7239bad3a2ba7bbc8608bd1816cda3ba8d34260"
+    },
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2286071869921263e-08,
+      "min_mean_ratio": 0.14123609925628652,
+      "max_mean_ratio": 0.9234600236487241,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "228c3d0e0881466bbfa4d112e23ffb52c9587183d95dbdf0502e6fe3ed12b4ab",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.529563550736296e-13,
+      "preprojection_current_imbalance": 3.571812099165098e-09,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.6760164169827476,
+      "reference": "sensor average"
+    }
+  },
+  {
+    "level": 3,
+    "relative": 0.006081225702275709,
+    "mesh": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.277349557505095e-10,
+      "min_mean_ratio": 0.1651521654589069,
+      "max_mean_ratio": 0.9011129744657127,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "02921a2f1b57313a5fc56edce3fa516c03be3a9a5d5f9d04c74e57cefccb69e6",
+      "exact_surface_facets": true,
+      "boundary_hash": "dbd45fe5d04e5546c88d4a69937ffa3679759e573a0ef425f337c9e91238d3c2"
+    },
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.277349557505095e-10,
+      "min_mean_ratio": 0.1651521654589069,
+      "max_mean_ratio": 0.9011129744657127,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "02921a2f1b57313a5fc56edce3fa516c03be3a9a5d5f9d04c74e57cefccb69e6",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.5410615051225115e-13,
+      "preprojection_current_imbalance": 3.2698639896555884e-13,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 7.021950917027425,
+      "reference": "sensor average"
+    }
+  }
+]

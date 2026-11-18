@@ -203,3 +203,10 @@ source commands and estimators are preserved. See SOURCE_UNCERTAINTY_PROTOCOL.md
 ## Milestone 28 addendum
 
 `soma.sdk.source` exports `bem_diagnostic_design`, `bem_diagnostic_protocol` and `run_bem_diagnostics(sealed, output)`. `soma source bem-discrepancy --output reports/bem-v28` executes the frozen study with `[conductor]`. `soma.experiments.bem_discrepancy.read_diagnostics(result_json)` checks native scientific identity. Core-only `examples.bem_diagnostics` independently calibrates the homogeneous sphere. Scalar alignment is diagnostic only; physical fields and inverse inputs are never rescaled.
+
+M29 `soma.sdk.source` exports `fem_reference_design`, `fem_reference_protocol`,
+`fem_forward`, `layered_sphere_reference` and `run_fem_reference`.
+The analytic helper is core-only; full volume assembly requires `[fem]` and the
+full frozen BEM/FEM experiment requires `[fem,conductor]`. Inputs use MRI/RAS metres,
+S/m and source-major Cartesian moments; outputs use V/(A m). No participant data
+or generalized clinical mesh processing is supported by this synthetic reference.

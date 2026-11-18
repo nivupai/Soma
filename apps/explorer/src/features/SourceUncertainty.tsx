@@ -1,3 +1,4 @@
+import FEMReference from "./FEMReference";
 import BEMDiagnostics from "./BEMDiagnostics";
 import Nonspherical from "./Nonspherical";
 import { useState } from "react";
@@ -201,6 +202,7 @@ export default function SourceUncertainty() {
       </Panel>
       <Nonspherical />
       <BEMDiagnostics />
+      <FEMReference />
     </>
   );
 }

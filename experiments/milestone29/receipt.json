@@ -1,0 +1,25 @@
+{
+  "schema": "soma.fem-reference.receipt/1",
+  "protocol_fingerprint": "3872aea2cc7427b8a794e7e9e1968b52aa6ea0172c0bf69199ca81fbf55d18ad",
+  "parent_commit": "e68fa127dc65fbf39d43f574beacf64a9a31c4d1",
+  "parent_pr": 13,
+  "synthetic_only": true,
+  "human_subjects": 0,
+  "models_computed": 62,
+  "models_failed": 1,
+  "inverse_rows": 7344,
+  "seconds": 581.7470886669471,
+  "analytical_limit_pass": true,
+  "independent_four_layer_agreement_pass": true,
+  "threshold": 0.1,
+  "phantom": "NOT_AVAILABLE",
+  "human_validation": "NOT_ESTABLISHED",
+  "finest_head_relative": [
+    0.004288807857556274,
+    0.0033157086864672607,
+    0.006068663897388366,
+    0.004145887020318385,
+    0.003132062248926382,
+    0.00304235378924982
+  ]
+}

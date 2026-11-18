@@ -224,3 +224,10 @@ The existing Source Models uncertainty workbench includes Nonspherical conductor
 ## Milestone 28 addendum
 
 The Source Models uncertainty workbench now includes Independent BEM diagnostics. Select homogeneous/layered/nonspherical reference, head, mesh level and solver comparison. Physical discrepancy, the original 10% target, source-wise plots, scalar diagnostics and unresolved gates are distinct. `/api/bem-discrepancy` serves a hash-checked packaged synthetic artifact only; GET does not execute models or access participant files. A passing sphere control is not human or nonspherical calibration.
+
+The Source Models workbench includes Independent four-layer FEM reference.
+Select the synthetic head and mesh level to inspect unscaled physical differences,
+source-wise errors, analytical/independent gate status and frozen inverse summaries.
+Alignment is diagnostic only. The finest FEM is approximate, localization uses a
+sparse fixed grid, and passing synthetic fields does not establish human accuracy.
+M28 panels remain historical evidence with their original failed gates.

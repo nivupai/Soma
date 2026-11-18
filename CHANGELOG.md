@@ -120,3 +120,13 @@ Historical scientific reports and original release records are preserved.
 - Reproduce and preserve M27 disagreement; freeze canonical geometry, source/sensor/reference and numerical factor controls before evaluation.
 - Quantify analytical limits, solver/refinement/source/orientation effects and inverse consequences; retain failed 10% agreement gates without scalar rescue.
 - Extend SDK/CLI and existing synthetic-only Explorer workbench, with auditable tables, figures, native receipts and independent metric checks.
+
+## 0.29.0 — independent four-layer FEM reference (dependent PR, not merged)
+
+- Add optional scikit-fem12.0.2 full-subtraction P1 reference, conforming material
+  tetrahedra and independent concentric harmonic transmission controls.
+- Retain the frozen10% gate and all failed configurations; compare six M27 heads
+  at three resolutions and investigate M28 with heldout three-layer controls.
+- Export physical field, mesh, uncertainty, inverse, provenance and figure data;
+  extend the synthetic-only Explorer, SDK/CLI and small cross-platform checks.
+- Preserve all M28 artifacts; keep PR13's npm security audit blocking dependent merges.

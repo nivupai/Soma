@@ -1,0 +1,334 @@
+"""Frozen independent four-layer FEM/BEM experiment, no participant inputs."""
+
+import hashlib
+import itertools
+import json
+import os
+import subprocess
+import sys
+import time
+from importlib.resources import files
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+import pandas as pd
+
+from soma.anatomy.synthetic import sphere_mesh
+from soma.experiments.nonspherical import known_truth
+from soma.experiments.source_uncertainty import source_metrics
+from soma.geometry import Frame, Points
+from soma.imaging.surfaces import Mesh
+from soma.protocol.model import SealedProtocol
+from soma.results.contracts import canonical
+from soma.source.bem_discrepancy import field_metrics, homogeneous_series, sensors, solve
+from soma.source.fem_reference import layered_sphere_series, radial_mesh
+from soma.source.noise import average_projector
+from soma.source.nonspherical import head_parameters, meshes, native_forward, pose, source_grid
+from soma.source.uncertainty import kernels
+
+
+def design() -> dict[str, Any]:
+    raw = files("soma.resources").joinpath("fem-reference-v29.json").read_bytes()
+    if (
+        hashlib.sha256(raw).hexdigest()
+        != "6b9a31b9726d50ce52fcb05d58af9db3557d1ccbf0272d75be4bb526b514d1f8"
+    ):
+        raise ValueError("Frozen FEM design drift")
+    return dict(json.loads(raw))
+
+
+def protocol() -> SealedProtocol:
+    seal = SealedProtocol(
+        files("soma.resources").joinpath("fem-reference-protocol-v29-r2.json").read_bytes()
+    )
+    if (
+        seal.protocol.fingerprint
+        != "3872aea2cc7427b8a794e7e9e1968b52aa6ea0172c0bf69199ca81fbf55d18ad"
+    ):
+        raise ValueError("Frozen FEM seal drift")
+    return seal
+
+
+def run(output: Path) -> dict[str, Any]:
+    c = design()
+    sealed = protocol()
+    output.mkdir(parents=True, exist_ok=False)
+    (output / "protocol.json").write_bytes(canonical(sealed.record()))
+    started = time.perf_counter()
+    models = []
+    comparisons = []
+    source_rows = []
+    fields = {}
+    inverse = []
+    refs = []
+    grid = Points(source_grid().xyz[np.r_[0:6, 24:30]], Frame.MRI)
+
+    def compute(
+        label: str,
+        head: int | None,
+        level: int,
+        sigmas: list[float],
+        *,
+        radial: int | None = None,
+        quadrature: int = 8,
+        solvers: tuple[str, ...] = ("fem", "openmeeg"),
+        merged: bool = False,
+    ) -> None:
+        truth, _ = known_truth(head or 0)
+        points = np.vstack([grid.xyz, truth.xyz])
+        ss = sensors(head)
+        if head is None:
+            bs = []
+            for radius in c["radii_m"]:
+                v, f = sphere_mesh(level, radius)
+                bs.append(Mesh(Points(v, Frame.MRI), f, {"synthetic": True}))
+        else:
+            bs = meshes(head_parameters(head), level)
+        for solver in solvers:
+            row = dict(
+                label=label,
+                head=head,
+                level=level,
+                solver=solver,
+                status="FAILED",
+                radial_steps=radial or level,
+                quadrature=quadrature,
+                sigmas_S_m=sigmas,
+            )
+            target = output / (label + "-" + solver)
+            try:
+                if time.perf_counter() - started > c["budget"]["total_seconds"]:
+                    raise TimeoutError("Whole study resource limit")
+                if solver == "fem":
+                    v, t, tissue_labels, q = radial_mesh(bs, radial or level)
+                    if q["min_mean_ratio"] < 0.01:
+                        raise ValueError("Mesh quality gate failed")
+                    target.mkdir()
+                    np.savez_compressed(
+                        target / "input.npz",
+                        vertices=v,
+                        tetrahedra=t,
+                        labels=tissue_labels,
+                        sources=points,
+                        sensors=ss,
+                    )
+                    (target / "request.local.json").write_text(
+                        json.dumps(dict(sigmas=sigmas, quadrature=quadrature))
+                    )
+                    env = dict(os.environ, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1")
+                    worker = "soma.source.fem_worker"
+                    with (target / "worker.log").open("w") as log:
+                        subprocess.run(
+                            [sys.executable, "-m", worker, str(target)],
+                            env=env,
+                            stdout=log,
+                            stderr=subprocess.STDOUT,
+                            check=True,
+                            timeout=240,
+                        )
+                    g = np.loadtxt(target / "lead.csv", delimiter=",")
+                    d = json.loads((target / "diagnostics.json").read_text())
+                    d.update(surface_audit=q)
+                else:
+                    g, d = solve(
+                        bs[1:] if merged else bs,
+                        points,
+                        ss,
+                        [sigmas[0], *sigmas[2:]] if merged else sigmas,
+                        target,
+                        solver=solver,
+                    )
+                fields[(label, solver)] = g
+                row.update(status="computed", diagnostics=d)
+            except (
+                ValueError,
+                RuntimeError,
+                ArithmeticError,
+                MemoryError,
+                subprocess.SubprocessError,
+            ) as exc:
+                row.update(reason=type(exc).__name__ + ": " + str(exc).split(str(output))[0])
+            models.append(row)
+            print(label, solver, row["status"], flush=True)
+        if (label, "fem") in fields:
+            ref = fields[(label, "fem")]
+            for solver in solvers:
+                if solver != "fem" and (label, solver) in fields:
+                    m = field_metrics(fields[(label, solver)], ref)
+                    comparisons.append(
+                        dict(label=label, head=head, level=level, solver=solver, **m)
+                    )
+                    for i, error in enumerate(m["source_relative"]):
+                        source_rows.append(
+                            dict(
+                                label=label,
+                                head=head,
+                                level=level,
+                                source=i,
+                                independent_draw=i >= 12,
+                                solver=solver,
+                                depth_radius_mm=float(np.linalg.norm(points[i]) * 1000),
+                                relative=error,
+                            )
+                        )
+
+    for reference, sigmas in [("H", [0.33] * 4), ("S", c["sigmas_S_m"])]:
+        for level in c["levels"]:
+            label = f"{reference}-{level}"
+            compute(label, None, level, sigmas)
+            truth, _ = known_truth(0)
+            pp = np.vstack([grid.xyz, truth.xyz])
+            ss = sensors(None)
+            analytical = (
+                average_projector(32) @ homogeneous_series(pp, ss)
+                if reference == "H"
+                else layered_sphere_series(pp, ss, c["radii_m"], sigmas)[0]
+            )
+            if reference == "S":
+                low, diag = layered_sphere_series(pp, ss, c["radii_m"], sigmas, 48)
+                refs.append(
+                    dict(
+                        label=label,
+                        tail_relative=float(
+                            np.linalg.norm(low - analytical) / np.linalg.norm(analytical)
+                        ),
+                        **diag,
+                    )
+                )
+            np.savetxt(output / (label + "-analytical.csv"), analytical, delimiter=",")
+            for solver in ["fem", "openmeeg"]:
+                if (label, solver) in fields:
+                    refs.append(
+                        dict(
+                            label=label,
+                            level=level,
+                            solver=solver,
+                            **field_metrics(fields[(label, solver)], analytical),
+                        )
+                    )
+    for head, level in itertools.product(c["heads"], c["levels"]):
+        compute(f"C-{head}-{level}", head, level, c["sigmas_S_m"])
+    for head, level in itertools.product([0, 5], [2, 3]):
+        compute(
+            f"T-{head}-{level}",
+            head,
+            level,
+            [0.33, 0.33, 0.004, 0.33],
+            solvers=("fem", "openmeeg", "mne"),
+            merged=True,
+        )
+    for radial, quadrature in [(1, 8), (3, 8), (2, 4)]:
+        compute(
+            f"F-0-2-r{radial}-q{quadrature}",
+            0,
+            2,
+            c["sigmas_S_m"],
+            radial=radial,
+            quadrature=quadrature,
+            solvers=("fem",),
+        )
+    refinement = []
+    for head, solver in itertools.product(c["heads"], ["fem", "openmeeg"]):
+        for lo, hi in [(1, 2), (2, 3)]:
+            a = fields.get((f"C-{head}-{lo}", solver))
+            b = fields.get((f"C-{head}-{hi}", solver))
+            if a is not None and b is not None:
+                refinement.append(
+                    dict(
+                        head=head,
+                        solver=solver,
+                        low=lo,
+                        high=hi,
+                        relative=float(np.linalg.norm(a - b) / np.linalg.norm(b)),
+                    )
+                )
+    for head in c["heads"]:
+        finest = fields.get((f"C-{head}-3", "fem"))
+        ss = sensors(head)
+        truth, moments = known_truth(head)
+        if finest is None:
+            continue
+        scale = float(np.linalg.norm(finest[:, :36], 2))
+        clean = np.einsum("ijk,jk->ij", finest[:, 36:].reshape(32, 12, 3), moments)
+        rng = np.random.default_rng(37042 + head)
+        ids = []
+        ys = []
+        for source, std in itertools.product(range(12), [0.0, 5e-8, 1.5e-7]):
+            for draw in range(1 if std == 0 else 8):
+                ids.append(dict(source=source, noise_std_V=std, draw=draw))
+                ys.append(clean[:, source] + std * average_projector(32) @ rng.normal(size=32))
+        y = np.column_stack(ys)
+        np.savetxt(output / f"head-{head}-measurements_V.csv", y, delimiter=",")
+        for solver in ["fem", "openmeeg"]:
+            g = fields.get((f"C-{head}-2", solver))
+            if g is None:
+                continue
+            ops, _ = kernels(native_forward(g[:, :36], grid, ss, pose({})), scale)
+            for method, operator in ops.items():
+                estimates = operator @ y
+                resolution = operator @ g[:, :36]
+                for col, ident in enumerate(ids):
+                    inverse.append(
+                        dict(
+                            head=head,
+                            solver=solver,
+                            method=method,
+                            status="computed",
+                            **ident,
+                            **source_metrics(
+                                estimates[:, col], grid, truth, int(ident["source"]), method
+                            ),
+                            resolution_norm=float(np.linalg.norm(resolution)),
+                        )
+                    )
+    pd.DataFrame(source_rows).to_csv(output / "source-fields.csv", index=False)
+    pd.DataFrame(inverse).to_csv(output / "inverse.csv", index=False)
+    pd.DataFrame(refinement).to_csv(output / "refinement.csv", index=False)
+    for name, rows in [("models", models), ("comparisons", comparisons), ("analytical", refs)]:
+        (output / (name + ".json")).write_text(json.dumps(rows, indent=2) + "\n")
+    final = [r for r in comparisons if r["label"].startswith("C-") and r["level"] == 3]
+    analytic = [r for r in refs if r.get("label") == "H-3" and r.get("solver") == "fem"]
+    receipt = dict(
+        schema="soma.fem-reference.receipt/1",
+        protocol_fingerprint=sealed.protocol.fingerprint,
+        parent_commit=c["parent_commit"],
+        parent_pr=13,
+        synthetic_only=True,
+        human_subjects=0,
+        models_computed=sum(r["status"] == "computed" for r in models),
+        models_failed=sum(r["status"] != "computed" for r in models),
+        inverse_rows=len(inverse),
+        seconds=time.perf_counter() - started,
+        analytical_limit_pass=len(analytic) == 1 and analytic[0]["relative"] <= 0.02,
+        independent_four_layer_agreement_pass=len(final) == 6
+        and all(r["relative"] <= 0.1 for r in final),
+        threshold=0.1,
+        phantom="NOT_AVAILABLE",
+        human_validation="NOT_ESTABLISHED",
+        finest_head_relative=[r["relative"] for r in final],
+    )
+    (output / "receipt.json").write_text(json.dumps(receipt, indent=2) + "\n")
+    return receipt
+
+
+def read_reference(path: Path) -> dict[str, Any]:
+    """Read an intact native result and reject overstated physical evidence."""
+    from soma.results.io import load_result
+
+    envelope, _ = load_result(path)
+    value = dict(envelope["payload"]["values"])
+    fields = value.get("finest_head_relative", [])
+    supported = len(fields) == 6 and all(np.isfinite(x) and 0 <= x <= 0.10 for x in fields)
+    if (
+        value.get("schema") != "soma.fem-reference.receipt/1"
+        or value.get("protocol_fingerprint") != protocol().protocol.fingerprint
+        or value.get("synthetic_only") is not True
+        or value.get("human_subjects") != 0
+        or value.get("threshold") != 0.10
+        or value.get("independent_four_layer_agreement_pass") != supported
+        or value.get("phantom") != "NOT_AVAILABLE"
+        or value.get("human_validation") != "NOT_ESTABLISHED"
+    ):
+        raise ValueError("Unsupported independent FEM evidence or modified protocol")
+    return value

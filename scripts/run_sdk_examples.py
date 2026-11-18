@@ -26,6 +26,7 @@ NAMES = (
     "source_uncertainty",
     "nonspherical",
     "bem_diagnostics",
+    "fem_reference",
 )
 
 
