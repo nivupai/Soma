@@ -38,3 +38,14 @@ homogeneous gate is 2%, independently checked. Failures remain in the tables.
 No four-layer claim follows solely from homogeneous convergence. The finest FEM
 is an approximation, and shared FEM-generated inverse truth cannot establish
 solver superiority. No human, empirical phantom or population accuracy is claimed.
+
+## Explicit post-outcome metadata correction
+
+Revision2 retains the original seal and corrects only generic inverse/reconstruction
+implementation descriptors to `source.uncertainty.kernels` and
+`experiments.source_uncertainty.source_metrics`. The original inherited descriptors
+incorrectly named the forward function. No physical design, tolerance, source,
+noise, inverse grid or regularization changes. Outcomes had already been inspected;
+this is explicitly a post-outcome correction, not a pre-outcome registration.
+The entire frozen study is repeated under revision2 and compared numerically with
+the original, including heldout head5. Original scientific outputs are preserved.
