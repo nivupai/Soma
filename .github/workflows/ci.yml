@@ -152,7 +152,7 @@ jobs:
       - run: python -m pip install '.[dev,explorer,conductor,fem,mesher]'
       - name: Verify actual platform architecture
         run: python -c "import platform; assert platform.machine() == ('arm64' if platform.system() == 'Darwin' else 'x86_64')"
-      - run: pytest tests/results tests/workflow tests/protocol tests/human tests/readiness tests/eeg_benchmark tests/external_eeg tests/model_archive tests/source/test_uncertainty26.py tests/source/test_nonspherical27.py tests/source/test_bem28.py tests/source/test_fem29.py tests/source/test_mesh30.py
+      - run: pytest tests/results tests/workflow tests/protocol tests/human tests/readiness tests/eeg_benchmark tests/external_eeg tests/model_archive tests/source/test_uncertainty26.py tests/source/test_nonspherical27.py tests/source/test_bem28.py tests/source/test_fem29.py tests/source/test_mesh30.py tests/source/test_mesh30_platform.py
       - run: soma results verify-reproducibility reports/cross-platform.json
       - run: python -m examples.result_schemas
       - run: python scripts/replay_workflows.py --cache reports/workflow-cache --output reports/workflow-replay.json
@@ -166,6 +166,7 @@ jobs:
       - run: python -m scripts.bem_diagnostic_repro --output reports/bem-diagnostic-synthetic.json
       - run: python -m scripts.fem_reference_repro --output reports/fem-reference-synthetic.json
       - run: python -m scripts.mesh_grid_repro --output reports/mesh-grid-synthetic.json
+      - run: python -m scripts.mesh_grid_diagnostic --output reports/mesh-grid-diagnostic.json
       - run: python scripts/run_protocol_demonstrations.py --root reports/protocol-histories --output reports/protocol-replay.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
@@ -184,6 +185,7 @@ jobs:
             reports/bem-diagnostic-synthetic.json
             reports/fem-reference-synthetic.json
             reports/mesh-grid-synthetic.json
+            reports/mesh-grid-diagnostic.json
           retention-days: 14
   dependency-floor:
     runs-on: ubuntu-24.04
@@ -197,7 +199,7 @@ jobs:
       - if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libglu1-mesa
       - run: python -m pip install -c configs/reproducibility-floor.txt '.[dev,explorer,conductor,fem,mesher]'
-      - run: pytest tests/results tests/workflow tests/protocol tests/human tests/readiness tests/eeg_benchmark tests/external_eeg tests/model_archive tests/source/test_uncertainty26.py tests/source/test_nonspherical27.py tests/source/test_bem28.py tests/source/test_fem29.py tests/source/test_mesh30.py
+      - run: pytest tests/results tests/workflow tests/protocol tests/human tests/readiness tests/eeg_benchmark tests/external_eeg tests/model_archive tests/source/test_uncertainty26.py tests/source/test_nonspherical27.py tests/source/test_bem28.py tests/source/test_fem29.py tests/source/test_mesh30.py tests/source/test_mesh30_platform.py
       - run: soma results verify-reproducibility reports/dependency-floor.json
 
   cross-platform-comparison:
