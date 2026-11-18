@@ -77,7 +77,7 @@ def diagnose(root, output):
         ),
     ]:
         with (output / name).open("w") as f:
-            w = csv.DictWriter(f, fieldnames=list(all_rows[0]))
+            w = csv.DictWriter(f, fieldnames=list(all_rows[0]), lineterminator="\n")
             w.writeheader()
             w.writerows(selected)
     (output / "entry-summary.json").write_text(

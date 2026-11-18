@@ -1,6 +1,7 @@
 """Post-M30 causal controls; retain native fields and exact shared-mesh arithmetic."""
 
 import argparse
+import ctypes
 import hashlib
 import importlib.metadata
 import json
@@ -9,6 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import numpy as np
+import scipy
 from threadpoolctl import threadpool_info
 
 from soma.geometry import Frame, Points
@@ -207,6 +209,9 @@ def run(output, create_fixture=False):
     m = fixture["mesh"]
     v, t, labels = np.array(m["vertices_m"]), np.array(m["tetrahedra"]), np.array(m["labels"])
     audit_volume(v, t, labels, fixed_bs)
+    native_sources, native_sensors = p.copy(), e.copy()
+    p = np.array(fixture["sources_m"], dtype=np.float64)
+    e = np.array(fixture["sensors_m"], dtype=np.float64)
     results["shared_mesh"] = solve(v, t, labels, p, e)
     results["shared_mesh_natural_lu"] = solve(v, t, labels, p, e, permutation=True)
     results["shared_mesh_q6"] = solve(v, t, labels, p, e, quadrature=6)
@@ -217,6 +222,12 @@ def run(output, create_fixture=False):
     results["shared_mesh_reordered"] = solve(
         v[order], inverse[t[::-1]][:, [1, 2, 0, 3]], labels[::-1], p, e
     )
+    # Probe the process C runtime independently, after all native meshing.
+    libc = ctypes.CDLL(None)
+    libc.srand.argtypes = [ctypes.c_uint]
+    libc.rand.restype = ctypes.c_int
+    libc.srand(30042)
+    c_random_sequence = [int(libc.rand()) for _ in range(8)]
     data = dict(
         schema="soma.mesh-grid.causal-diagnostic/1",
         environment=dict(
@@ -226,6 +237,17 @@ def run(output, create_fixture=False):
             packages={
                 n: importlib.metadata.version(n) for n in ["gmsh", "numpy", "scipy", "scikit-fem"]
             },
+            blas={
+                name: {
+                    k: v
+                    for k, v in module.show_config(mode="dicts")
+                    .get("Build Dependencies", {})
+                    .get("blas", {})
+                    .items()
+                    if k in ["name", "version", "openblas configuration", "has ilp64"]
+                }
+                for name, module in [("numpy", np), ("scipy", scipy)]
+            },
             threadpools=[
                 {k: v for k, v in item.items() if k != "filepath"} for item in threadpool_info()
             ],
@@ -233,8 +255,12 @@ def run(output, create_fixture=False):
         fixture_sha256=hashlib.sha256(FIXTURE.read_bytes()).hexdigest(),
         original_surface_hash=fingerprint(surface_packet(bs)),
         canonical_surface_hash=fingerprint(surface_packet(canonical_surfaces(bs))),
-        sources_m=p.tolist(),
-        sensors_m=e.tolist(),
+        sources_m=native_sources.tolist(),
+        sensors_m=native_sensors.tolist(),
+        shared_sources_m=p.tolist(),
+        shared_sensors_m=e.tolist(),
+        C_runtime_random_seed=30042,
+        C_runtime_random_sequence=c_random_sequence,
         controls=results,
     )
     output.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,1689 @@
+{
+  "schema": "soma.mesh-grid.causal-summary/1",
+  "historical_results_modified": false,
+  "frozen_rtol": 0.02,
+  "frozen_atol_V_per_Am": 0.01,
+  "fixture_sha256": "1392c05d8646c2865487dd61fecf5f8f1181244ca985987e2bca53e16ef2ae2c",
+  "report_hashes": {
+    "synthetic-repro-macos-15-3.11/mesh-grid-diagnostic.json": "201f42c89ac8a5f54a717f4e8599753c591efe2990056bbbb67eb78766d97286",
+    "synthetic-repro-macos-15-3.12/mesh-grid-diagnostic.json": "d6e240ffd2ab67586683afd076eeb1103342ef1f02ba1bd1662788e6b572af37",
+    "synthetic-repro-ubuntu-24.04-3.11/mesh-grid-diagnostic.json": "146e2d89b77c66c3be8ec70bb3548bb22fc38e10e5543d206deb314a4972475d",
+    "synthetic-repro-ubuntu-24.04-3.12/mesh-grid-diagnostic.json": "46c68a87558f84bf2f1531fad7e2bc2466e4809ec9dea74670c04764281ecdbf"
+  },
+  "environments": {
+    "synthetic-repro-macos-15-3.11": {
+      "system": "Darwin",
+      "machine": "arm64",
+      "python": "3.11.9",
+      "packages": {
+        "gmsh": "4.15.2",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "scikit-fem": "12.0.2"
+      },
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libomp",
+          "version": null
+        }
+      ]
+    },
+    "synthetic-repro-macos-15-3.12": {
+      "system": "Darwin",
+      "machine": "arm64",
+      "python": "3.12.10",
+      "packages": {
+        "gmsh": "4.15.2",
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "scikit-fem": "12.0.2"
+      },
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libomp",
+          "version": null
+        }
+      ]
+    },
+    "synthetic-repro-ubuntu-24.04-3.11": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "python": "3.11.18",
+      "packages": {
+        "gmsh": "4.15.2",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "scikit-fem": "12.0.2"
+      },
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "version": "0.3.30",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "version": "0.3.31.188.0",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "version": null
+        }
+      ]
+    },
+    "synthetic-repro-ubuntu-24.04-3.12": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "python": "3.12.16",
+      "packages": {
+        "gmsh": "4.15.2",
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "scikit-fem": "12.0.2"
+      },
+      "threadpools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "version": "0.3.34.237.2",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "version": null
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "version": "0.3.31.dev",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        }
+      ]
+    }
+  },
+  "input_coordinates": {
+    "synthetic-repro-macos-15-3.11": {
+      "sources_identical": true,
+      "sensors_identical": true,
+      "sensor_maximum_absolute_difference_m": 0.0,
+      "original_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6",
+      "canonical_surface_hash": "1b04237c1d5a219c3e25a604d31794914baf01398e1cdc6057d1401fb7164777",
+      "shared_sources_identical": null,
+      "shared_sensors_identical": null,
+      "C_runtime_random_sequence": null
+    },
+    "synthetic-repro-macos-15-3.12": {
+      "sources_identical": true,
+      "sensors_identical": true,
+      "sensor_maximum_absolute_difference_m": 0.0,
+      "original_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6",
+      "canonical_surface_hash": "1b04237c1d5a219c3e25a604d31794914baf01398e1cdc6057d1401fb7164777",
+      "shared_sources_identical": null,
+      "shared_sensors_identical": null,
+      "C_runtime_random_sequence": null
+    },
+    "synthetic-repro-ubuntu-24.04-3.11": {
+      "sources_identical": true,
+      "sensors_identical": false,
+      "sensor_maximum_absolute_difference_m": 1.3877787807814457e-17,
+      "original_surface_hash": "39de98c9ab16c9046b5467482a77fb1b3d92a4dade2b9f10c3c855e76a6afc0d",
+      "canonical_surface_hash": "880e1808a7c8c57daaf82cde77f24b1044e3e7a431eaa74c99f391eace17d371",
+      "shared_sources_identical": null,
+      "shared_sensors_identical": null,
+      "C_runtime_random_sequence": null
+    },
+    "synthetic-repro-ubuntu-24.04-3.12": {
+      "sources_identical": true,
+      "sensors_identical": false,
+      "sensor_maximum_absolute_difference_m": 1.3877787807814457e-17,
+      "original_surface_hash": "39de98c9ab16c9046b5467482a77fb1b3d92a4dade2b9f10c3c855e76a6afc0d",
+      "canonical_surface_hash": "880e1808a7c8c57daaf82cde77f24b1044e3e7a431eaa74c99f391eace17d371",
+      "shared_sources_identical": null,
+      "shared_sensors_identical": null,
+      "C_runtime_random_sequence": null
+    }
+  },
+  "control_comparisons": [
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "native",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "886426f08a3f1f18995728658554ec049d927350faf40a4a245d74f79ebd6ac2",
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "canonical_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 2.4788100314655695e-13,
+      "nodes": 206,
+      "elements": 1042,
+      "canonical_mesh_hash": "2eb3d9685d85b6854571c994db856096c1b36e17e27ef715a2a4fb31d36ccbdd",
+      "mesh_hash": "2ec1153f0d12087d3c03a716cec94e4f5ebfad5c95a5cf843feb8f4b94d3cea2",
+      "input_surface_hash": "1b04237c1d5a219c3e25a604d31794914baf01398e1cdc6057d1401fb7164777"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "shared_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "886426f08a3f1f18995728658554ec049d927350faf40a4a245d74f79ebd6ac2",
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "alternate_seed",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5157604188354847e-13,
+      "nodes": 209,
+      "elements": 1057,
+      "canonical_mesh_hash": "33ccbda8b44dc65664b88c90b79a3f1e3ce7c561a739d444b5ee5370dc6660f9",
+      "mesh_hash": "cae145bc58cd301c8830344054b6578d9975638061f2439554b5dc90ccc72929",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "reproducible_option",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "886426f08a3f1f18995728658554ec049d927350faf40a4a245d74f79ebd6ac2",
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "random_factor_zero",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 2.1098751944177568e-13,
+      "nodes": 205,
+      "elements": 1037,
+      "canonical_mesh_hash": "2ad8e984cc19c325600dcdda44c4e356b94675e6f71c2743bd7f25ea63778206",
+      "mesh_hash": "8d77526405761bb9dbfc1c3eeade488595b67ba425af554f02497cb96ff8ad85",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "shared_mesh",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "shared_mesh_natural_lu",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.9046924773159552e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "shared_mesh_q6",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.0106737177754588e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "python": "3.11.9",
+      "variant": "shared_mesh_reordered",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 2.1201261661971757e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "91a6a7f403ee2538939f2de6a792c2189f9c29efcfc2fd01185db01d49c99091",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "native",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "886426f08a3f1f18995728658554ec049d927350faf40a4a245d74f79ebd6ac2",
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "canonical_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 2.4788100314655695e-13,
+      "nodes": 206,
+      "elements": 1042,
+      "canonical_mesh_hash": "2eb3d9685d85b6854571c994db856096c1b36e17e27ef715a2a4fb31d36ccbdd",
+      "mesh_hash": "2ec1153f0d12087d3c03a716cec94e4f5ebfad5c95a5cf843feb8f4b94d3cea2",
+      "input_surface_hash": "1b04237c1d5a219c3e25a604d31794914baf01398e1cdc6057d1401fb7164777"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "shared_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "886426f08a3f1f18995728658554ec049d927350faf40a4a245d74f79ebd6ac2",
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "alternate_seed",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5157604188354847e-13,
+      "nodes": 209,
+      "elements": 1057,
+      "canonical_mesh_hash": "33ccbda8b44dc65664b88c90b79a3f1e3ce7c561a739d444b5ee5370dc6660f9",
+      "mesh_hash": "cae145bc58cd301c8830344054b6578d9975638061f2439554b5dc90ccc72929",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "reproducible_option",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "886426f08a3f1f18995728658554ec049d927350faf40a4a245d74f79ebd6ac2",
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "random_factor_zero",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004279433205677491,
+      "maximum_absolute": 0.9650553099029224,
+      "failed_entries": 13,
+      "dtype": "float64",
+      "residual": 1.6579327243967397e-13,
+      "nodes": 205,
+      "elements": 1037,
+      "canonical_mesh_hash": "7375ebe5a4a42a4f15e0cab6ed0ff57dcd96f44d1dc38ff0ae9d5f1787258965",
+      "mesh_hash": "b2168f94abd3d88e54b6b1f6836e8ca3564395ab90115ab8257cc17bd1a17874",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "shared_mesh",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.5929116700847317e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "shared_mesh_natural_lu",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.9046924773159552e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "shared_mesh_q6",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.0106737177754588e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "python": "3.12.10",
+      "variant": "shared_mesh_reordered",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0,
+      "maximum_absolute": 0.0,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 2.1201261661971757e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "91a6a7f403ee2538939f2de6a792c2189f9c29efcfc2fd01185db01d49c99091",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "native",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004176368792957427,
+      "maximum_absolute": 0.9606697493309255,
+      "failed_entries": 15,
+      "dtype": "float64",
+      "residual": 1.8226268886204715e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "6ed12c62f6b955debaba6d2f90cca2b451148b3e4c8ee3ac8da66e4995ff038f",
+      "mesh_hash": "ea8e404a72a346c253c49b85a9923bfa1d3d5d0c71f29dbde0e627dff8067c7c",
+      "input_surface_hash": "39de98c9ab16c9046b5467482a77fb1b3d92a4dade2b9f10c3c855e76a6afc0d"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "canonical_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004594897966093678,
+      "maximum_absolute": 1.1909378048794537,
+      "failed_entries": 16,
+      "dtype": "float64",
+      "residual": 2.4530863871282663e-13,
+      "nodes": 208,
+      "elements": 1052,
+      "canonical_mesh_hash": "fd0627a9a92b9e2824b52cd84ad0fd822cc7b97e8e9c9aa889aac8948dd42414",
+      "mesh_hash": "02c9a0fefa573a66b6bd238956d5aa9cd7128c582e7217d7b388738bfc10bcc7",
+      "input_surface_hash": "880e1808a7c8c57daaf82cde77f24b1044e3e7a431eaa74c99f391eace17d371"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "shared_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004394433183658554,
+      "maximum_absolute": 1.1931176346937633,
+      "failed_entries": 10,
+      "dtype": "float64",
+      "residual": 2.1250768207276564e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "abd9fba789a5f4450f3361f248d3de3413f88c002178f17ac166f0f8c6a7f81b",
+      "mesh_hash": "574e17107b13433e7e75a6192b1599720d4a1eaad694c1ce61d180c85f5969e2",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "alternate_seed",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0036934032461219857,
+      "maximum_absolute": 0.8545483182657136,
+      "failed_entries": 14,
+      "dtype": "float64",
+      "residual": 1.8953397328633807e-13,
+      "nodes": 210,
+      "elements": 1062,
+      "canonical_mesh_hash": "8510d80f7bbd15aae458514a4665380f9bd541360b71ea827ec5926018a83d67",
+      "mesh_hash": "dba8618a96f435cbb3f1b1dfb74c06f7e9cbe1d576658afe56a3c8a2f5a36841",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "reproducible_option",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004394433183658554,
+      "maximum_absolute": 1.1931176346937633,
+      "failed_entries": 10,
+      "dtype": "float64",
+      "residual": 2.1250768207276564e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "abd9fba789a5f4450f3361f248d3de3413f88c002178f17ac166f0f8c6a7f81b",
+      "mesh_hash": "574e17107b13433e7e75a6192b1599720d4a1eaad694c1ce61d180c85f5969e2",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "random_factor_zero",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0042889228662455,
+      "maximum_absolute": 1.1015062788114705,
+      "failed_entries": 16,
+      "dtype": "float64",
+      "residual": 1.909433701833068e-13,
+      "nodes": 205,
+      "elements": 1037,
+      "canonical_mesh_hash": "c3c7fd5d22dcbe3cf8e0b438f9733ccce0d6fe3bedfff8b63f4ffc35238f0c2d",
+      "mesh_hash": "97e5abbf766d4f4cffec3dc82682d98e1944983c34fa17e09b80f7c004d55d45",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "shared_mesh",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 1.1169229019612393e-14,
+      "maximum_absolute": 2.9416469260468148e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.9401400301616518e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "shared_mesh_natural_lu",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 1.0980006457942602e-14,
+      "maximum_absolute": 2.360778239562933e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.7760445242641067e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "shared_mesh_q6",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 2.391563959247811e-14,
+      "maximum_absolute": 7.176481631177012e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 4.897427748426432e-14,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "python": "3.11.18",
+      "variant": "shared_mesh_reordered",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 1.598350265500905e-14,
+      "maximum_absolute": 3.439026841078885e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.881221223835171e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "91a6a7f403ee2538939f2de6a792c2189f9c29efcfc2fd01185db01d49c99091",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "native",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004176368792957427,
+      "maximum_absolute": 0.9606697493309255,
+      "failed_entries": 15,
+      "dtype": "float64",
+      "residual": 1.8226268886204715e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "6ed12c62f6b955debaba6d2f90cca2b451148b3e4c8ee3ac8da66e4995ff038f",
+      "mesh_hash": "ea8e404a72a346c253c49b85a9923bfa1d3d5d0c71f29dbde0e627dff8067c7c",
+      "input_surface_hash": "39de98c9ab16c9046b5467482a77fb1b3d92a4dade2b9f10c3c855e76a6afc0d"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "canonical_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004594897966093678,
+      "maximum_absolute": 1.1909378048794537,
+      "failed_entries": 16,
+      "dtype": "float64",
+      "residual": 2.4530863871282663e-13,
+      "nodes": 208,
+      "elements": 1052,
+      "canonical_mesh_hash": "fd0627a9a92b9e2824b52cd84ad0fd822cc7b97e8e9c9aa889aac8948dd42414",
+      "mesh_hash": "02c9a0fefa573a66b6bd238956d5aa9cd7128c582e7217d7b388738bfc10bcc7",
+      "input_surface_hash": "880e1808a7c8c57daaf82cde77f24b1044e3e7a431eaa74c99f391eace17d371"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "shared_input",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004394433183658554,
+      "maximum_absolute": 1.1931176346937633,
+      "failed_entries": 10,
+      "dtype": "float64",
+      "residual": 2.1250768207276564e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "abd9fba789a5f4450f3361f248d3de3413f88c002178f17ac166f0f8c6a7f81b",
+      "mesh_hash": "574e17107b13433e7e75a6192b1599720d4a1eaad694c1ce61d180c85f5969e2",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "alternate_seed",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.0036934032461219857,
+      "maximum_absolute": 0.8545483182657136,
+      "failed_entries": 14,
+      "dtype": "float64",
+      "residual": 1.8953397328633807e-13,
+      "nodes": 210,
+      "elements": 1062,
+      "canonical_mesh_hash": "8510d80f7bbd15aae458514a4665380f9bd541360b71ea827ec5926018a83d67",
+      "mesh_hash": "dba8618a96f435cbb3f1b1dfb74c06f7e9cbe1d576658afe56a3c8a2f5a36841",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "reproducible_option",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004394433183658554,
+      "maximum_absolute": 1.1931176346937633,
+      "failed_entries": 10,
+      "dtype": "float64",
+      "residual": 2.1250768207276564e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": "abd9fba789a5f4450f3361f248d3de3413f88c002178f17ac166f0f8c6a7f81b",
+      "mesh_hash": "574e17107b13433e7e75a6192b1599720d4a1eaad694c1ce61d180c85f5969e2",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "random_factor_zero",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 0.004277496330906485,
+      "maximum_absolute": 0.9626386734515506,
+      "failed_entries": 13,
+      "dtype": "float64",
+      "residual": 2.6202323347427794e-13,
+      "nodes": 205,
+      "elements": 1037,
+      "canonical_mesh_hash": "5fbcde3d8268e5442141be5e82dc0bc28ee5170eeb9ecfe6d08c903001b7299f",
+      "mesh_hash": "5290100137c9de8c6d851b4b81956ecc1b5f3156dffe76412721706e35fe26a5",
+      "input_surface_hash": "9a82b5009971065c914a42b844351befc8d000d8a5b1e3beaa7663351349baf6"
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "shared_mesh",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 1.1169229019612393e-14,
+      "maximum_absolute": 2.9416469260468148e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.9401400301616518e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "shared_mesh_natural_lu",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 1.0980006457942602e-14,
+      "maximum_absolute": 2.360778239562933e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.7760445242641067e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "shared_mesh_q6",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 2.391563959247811e-14,
+      "maximum_absolute": 7.176481631177012e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 4.897427748426432e-14,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "input_surface_hash": null
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "python": "3.12.16",
+      "variant": "shared_mesh_reordered",
+      "reference_platform": "synthetic-repro-macos-15-3.11",
+      "status": "computed",
+      "relative": 1.598350265500905e-14,
+      "maximum_absolute": 3.439026841078885e-12,
+      "failed_entries": 0,
+      "dtype": "float64",
+      "residual": 1.881221223835171e-13,
+      "nodes": 212,
+      "elements": 1072,
+      "canonical_mesh_hash": null,
+      "mesh_hash": "91a6a7f403ee2538939f2de6a792c2189f9c29efcfc2fd01185db01d49c99091",
+      "input_surface_hash": null
+    }
+  ],
+  "mesh_pairs": [
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "native",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "canonical_input",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        240,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "shared_input",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "alternate_seed",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        245,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30043.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "reproducible_option",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 1.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "random_factor_zero",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        240,
+        240,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 0.0,
+        "Mesh.RandomFactor3D": 0.0,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "native",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "canonical_input",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        240,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "shared_input",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "alternate_seed",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        245,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30043.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "reproducible_option",
+      "raw_mesh_identical": true,
+      "numbering_independent_mesh_identical": true,
+      "maximum_bidirectional_vertex_distance_m": 0.0,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 1.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "random_factor_zero",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.024347842646148504,
+      "tissue_counts": [
+        317,
+        240,
+        240,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 0.0,
+        "Mesh.RandomFactor3D": 0.0,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "native",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.029776066076376954,
+      "tissue_counts": [
+        317,
+        240,
+        260,
+        255
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "canonical_input",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.026538093087487984,
+      "tissue_counts": [
+        317,
+        250,
+        245,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "shared_input",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.029805295498456,
+      "tissue_counts": [
+        317,
+        240,
+        260,
+        255
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "alternate_seed",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.0289149949050053,
+      "tissue_counts": [
+        317,
+        255,
+        245,
+        245
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30043.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "reproducible_option",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.029805295498456,
+      "tissue_counts": [
+        317,
+        240,
+        260,
+        255
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 1.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "random_factor_zero",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.028637980322701147,
+      "tissue_counts": [
+        317,
+        240,
+        240,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 0.0,
+        "Mesh.RandomFactor3D": 0.0,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "native",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.029776066076376954,
+      "tissue_counts": [
+        317,
+        240,
+        260,
+        255
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "canonical_input",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.026538093087487984,
+      "tissue_counts": [
+        317,
+        250,
+        245,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "shared_input",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.029805295498456,
+      "tissue_counts": [
+        317,
+        240,
+        260,
+        255
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "alternate_seed",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.0289149949050053,
+      "tissue_counts": [
+        317,
+        255,
+        245,
+        245
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30043.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "reproducible_option",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.029805295498456,
+      "tissue_counts": [
+        317,
+        240,
+        260,
+        255
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 1e-09,
+        "Mesh.RandomFactor3D": 1e-12,
+        "Mesh.Reproducible": 1.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "random_factor_zero",
+      "raw_mesh_identical": false,
+      "numbering_independent_mesh_identical": false,
+      "maximum_bidirectional_vertex_distance_m": 0.024347842646148504,
+      "tissue_counts": [
+        317,
+        240,
+        240,
+        240
+      ],
+      "boundary_coordinate_max_m": 0.0,
+      "material_interfaces_verified": true,
+      "actual_options": {
+        "General.NumThreads": 1.0,
+        "Mesh.Algorithm3D": 1.0,
+        "Mesh.RandomSeed": 30042.0,
+        "Mesh.RandomFactor": 0.0,
+        "Mesh.RandomFactor3D": 0.0,
+        "Mesh.Reproducible": 0.0,
+        "Mesh.Optimize": 1.0,
+        "Mesh.OptimizeNetgen": 0.0,
+        "Mesh.MeshSizeMax": 0.025,
+        "Mesh.MeshSizeMin": 0.001,
+        "Mesh.MeshOnlyEmpty": 1.0
+      }
+    }
+  ],
+  "shared_mesh_arithmetic": [
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "shared_mesh",
+      "stiffness": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      },
+      "RHS": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "shared_mesh_natural_lu",
+      "stiffness": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      },
+      "RHS": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.11",
+      "variant": "shared_mesh_q6",
+      "stiffness": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      },
+      "RHS": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "shared_mesh",
+      "stiffness": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      },
+      "RHS": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "shared_mesh_natural_lu",
+      "stiffness": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      },
+      "RHS": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-macos-15-3.12",
+      "variant": "shared_mesh_q6",
+      "stiffness": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      },
+      "RHS": {
+        "relative": 0.0,
+        "maximum_absolute": 0.0
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "shared_mesh",
+      "stiffness": {
+        "relative": 1.4831061182768262e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      },
+      "RHS": {
+        "relative": 2.0770667524852647e-16,
+        "maximum_absolute": 2.400227791158003e-16
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "shared_mesh_natural_lu",
+      "stiffness": {
+        "relative": 1.4831061182768262e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      },
+      "RHS": {
+        "relative": 2.0770667524852647e-16,
+        "maximum_absolute": 2.400227791158003e-16
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.11",
+      "variant": "shared_mesh_q6",
+      "stiffness": {
+        "relative": 1.6291173712188218e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      },
+      "RHS": {
+        "relative": 2.154572355899845e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "shared_mesh",
+      "stiffness": {
+        "relative": 1.4831061182768262e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      },
+      "RHS": {
+        "relative": 2.0770667524852647e-16,
+        "maximum_absolute": 2.400227791158003e-16
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "shared_mesh_natural_lu",
+      "stiffness": {
+        "relative": 1.4831061182768262e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      },
+      "RHS": {
+        "relative": 2.0770667524852647e-16,
+        "maximum_absolute": 2.400227791158003e-16
+      }
+    },
+    {
+      "platform": "synthetic-repro-ubuntu-24.04-3.12",
+      "variant": "shared_mesh_q6",
+      "stiffness": {
+        "relative": 1.6291173712188218e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      },
+      "RHS": {
+        "relative": 2.154572355899845e-16,
+        "maximum_absolute": 2.220446049250313e-16
+      }
+    }
+  ]
+}

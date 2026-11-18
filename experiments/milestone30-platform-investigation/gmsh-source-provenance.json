@@ -1,0 +1,83 @@
+{
+  "url": "https://gmsh.info/src/gmsh-4.15.2-source.tgz",
+  "sha256": "be3f66f225d27ba9fa014f07e83169285da8a051b0e8ab7103d88066b39bdd3e",
+  "locations": [
+    {
+      "file": "gmsh-4.15.2-source/src/common/gmsh.cpp",
+      "line": 8283
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/common/gmsh.cpp",
+      "line": 8284
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFaceTransfinite.cpp",
+      "line": 913
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFaceBipartiteLabelling.cpp",
+      "line": 251
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshOctreeLibOL.cpp",
+      "line": 618
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGRegionNetgen.cpp",
+      "line": 210
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/Generator.cpp",
+      "line": 1428
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/delaunay3d.cpp",
+      "line": 959
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/delaunay3d.cpp",
+      "line": 1252
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/delaunay3d.cpp",
+      "line": 1254
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/delaunay3d.cpp",
+      "line": 1256
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 1598
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 1600
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 2535
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 2537
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 2617
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 2619
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 2643
+    },
+    {
+      "file": "gmsh-4.15.2-source/src/mesh/meshGFace.cpp",
+      "line": 2645
+    }
+  ],
+  "interpretation": "Official source uses C runtime srand/rand in mesh generation and Delaunay perturbation. Platform-specific random streams and floating-point decisions are plausible mechanisms; no unique internal cause is claimed without an instrumented upstream build."
+}

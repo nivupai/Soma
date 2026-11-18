@@ -1,0 +1,33 @@
+{
+  "schema": "soma.mesh-grid.investigation-verification/1",
+  "historical_head": "beb0fb753593673f049b50012e6713ff0ed6e0a6",
+  "diagnostic_head": "11bb445128fb3bfa7450fb22cfba1830e7f16812",
+  "diagnostic_CI": "https://github.com/nivupai/Soma/actions/runs/44364879928",
+  "diagnostic_CI_passed": 12,
+  "diagnostic_CI_failed": 1,
+  "native_gate": "FAILED_UNCHANGED",
+  "root_layer": "native mesh generation / discretization",
+  "unique_internal_upstream_cause": "NOT_ISOLATED",
+  "final_exact_shared_inputs_and_C_runtime_probe": "REQUIRES_FINAL_FOUR_RUNNER_RECEIPT",
+  "tests": {
+    "full": 1652,
+    "offline": 1635,
+    "offline_deselected": 17,
+    "frontend": 48,
+    "browser_configured": 23,
+    "existing_python_tests_preserved": 1650,
+    "new_tests": 2
+  },
+  "quality": {
+    "ruff": true,
+    "format": true,
+    "strict_mypy_source_files": 294,
+    "pip_check": true,
+    "python_audit": "no known vulnerabilities among auditable packages; local Soma skipped"
+  },
+  "protected_historical_files": 911,
+  "M24_archive_files": 46,
+  "frozen_comparator_sha256": "8fb393251bcebaeed83d382f457f89f237834429fae4bc6fc9a596c7f4808c9d",
+  "merge_permitted": false,
+  "milestone31_started": false
+}
