@@ -219,3 +219,8 @@ All nine rejected configuration rows remain listed. The API is GET-only.
 ## Milestone 27 addendum
 
 The existing Source Models uncertainty workbench includes Nonspherical conductor validation. Select a synthetic head, display mesh level, tissue surface, XY/XZ projection and inverse method. Sensors, known off-grid source, reconstructed amplitudes, convergence and retained failures remain explicit. Display meshes are examples; the analysis uses its recorded level. The read-only `/api/nonspherical` serves a hash-checked packaged synthetic artifact. It does not execute models or load participant files.
+
+
+## Milestone 28 addendum
+
+The Source Models uncertainty workbench now includes Independent BEM diagnostics. Select homogeneous/layered/nonspherical reference, head, mesh level and solver comparison. Physical discrepancy, the original 10% target, source-wise plots, scalar diagnostics and unresolved gates are distinct. `/api/bem-discrepancy` serves a hash-checked packaged synthetic artifact only; GET does not execute models or access participant files. A passing sphere control is not human or nonspherical calibration.

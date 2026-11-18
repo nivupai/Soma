@@ -198,3 +198,8 @@ source commands and estimators are preserved. See SOURCE_UNCERTAINTY_PROTOCOL.md
 ## Milestone 27 addendum
 
 `soma.sdk.source` exports `nonspherical_design()`, `nonspherical_protocol()`, `synthetic_head(id)`, `validate_head_meshes(meshes)` and `run_nonspherical(sealed, output)`. `soma source nonspherical --output reports/nonspherical-v27` runs the full frozen study with optional `[conductor]` (OpenMEEG 2.6.0). Core-only `examples.nonspherical` validates geometry without importing the solver. Results use the native M17 envelope; `read_nonspherical(result.json)` checks synthetic/protocol identity.
+
+
+## Milestone 28 addendum
+
+`soma.sdk.source` exports `bem_diagnostic_design`, `bem_diagnostic_protocol` and `run_bem_diagnostics(sealed, output)`. `soma source bem-discrepancy --output reports/bem-v28` executes the frozen study with `[conductor]`. `soma.experiments.bem_discrepancy.read_diagnostics(result_json)` checks native scientific identity. Core-only `examples.bem_diagnostics` independently calibrates the homogeneous sphere. Scalar alignment is diagnostic only; physical fields and inverse inputs are never rescaled.

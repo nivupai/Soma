@@ -1,7 +1,10 @@
 """Existing forward/inverse operators; synthetic diagnostics do not validate anatomy."""
 
+from soma.experiments.bem_discrepancy import run_diagnostics as _run_bem_diagnostics
 from soma.experiments.nonspherical import run_nonspherical as run_nonspherical
 from soma.experiments.source_uncertainty import run_uncertainty as run_uncertainty
+from soma.source.bem_discrepancy import design as _bem_design
+from soma.source.bem_discrepancy import protocol as _bem_protocol
 from soma.source.forward import ForwardModel as ForwardModel
 from soma.source.forward import build_forward as build_forward
 from soma.source.inverse import CorticalInverse as CorticalInverse
@@ -24,3 +27,8 @@ nonspherical_design = _nonspherical_design
 nonspherical_protocol = _nonspherical_protocol
 synthetic_head = _synthetic_head
 validate_head_meshes = _validate_head_meshes
+
+bem_diagnostic_design = _bem_design
+bem_diagnostic_protocol = _bem_protocol
+
+run_bem_diagnostics = _run_bem_diagnostics

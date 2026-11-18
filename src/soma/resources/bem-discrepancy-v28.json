@@ -1,0 +1,134 @@
+{
+  "acceptance": "physics/geometry/sensors independently audited; analytic gate independent of convergence; three-layer .10 unchanged; no downstream inference from upstream passes",
+  "budget": {
+    "max_dense_estimated_bytes": 2147483648,
+    "max_unknowns": 7000,
+    "per_solver_seconds": 360,
+    "total_seconds": 3600
+  },
+  "canonical_sensors": "first 32 level-1 icosphere vertices mapped to analytic scalp; same nodes at every level; no solver-specific reprojection",
+  "conductivities_S_m": [
+    0.33,
+    0.004,
+    0.33
+  ],
+  "conductivity_unit": "S/m",
+  "controls": {
+    "A": "three equal-conductivity concentric interfaces; exact homogeneous sphere multipole derivative series, 128 terms; 64 vs128 tail check; central and five off-centre sources, all XYZ and signed arbitrary moments; OpenMEEG one-interface control",
+    "B": "concentric matched three-shell conductor; both formulations vs MNE semi-analytic sphere, approximation explicitly measured",
+    "C": "six original nonspherical three-layer heads, fixed nodal sensors, three uniform levels",
+    "D": "retain full four-layer NOT_ESTABLISHED; no independent compatible four-layer numerical reference available; FEM_NOT_PERFORMED; PHANTOM_NOT_AVAILABLE"
+  },
+  "exploration": "original M27 reproduction and source/API inspection only before this seal; no new reference accuracy outcomes inspected",
+  "factor_controls": {
+    "cases": [
+      "MNE isolated-problem OFF",
+      "OpenMEEG order5 adaptive1",
+      "inner interface level3, others2",
+      "middle interface level3, others2",
+      "outer interface level3, others2",
+      "original M27 interior-triangle sensor coordinates for both solvers",
+      "skull conductivity .008 S/m, same geometry"
+    ],
+    "heads": [
+      0,
+      5
+    ],
+    "level": 2,
+    "matching": "all factor variants retain paired canonical arrays except the explicitly changed factor; report rather than select minimum"
+  },
+  "failure": "retain every requested configuration and reason; unsupported comparisons NOT_ESTABLISHED; no target relaxation",
+  "frame": "MRI RAS metres; identity MRI/head for solver comparisons",
+  "geometry": "M27 exact generator; three interfaces M27 indices 1/2/3; source code and M27 files immutable",
+  "heads": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "heldout_head": 5,
+  "homogeneous_S_m": [
+    0.33,
+    0.33,
+    0.33
+  ],
+  "independence": "analytical recurrence independent of BEM; MNE and OpenMEEG distinct formulations; common meshes/generation not independent physics; same OpenMEEG wrappers only integration controls",
+  "inverse": {
+    "draws": 8,
+    "estimated_levels": [
+      1,
+      2
+    ],
+    "grid": "M27 common 35/55 mm 48-position grid",
+    "lambda2": [
+      0.001,
+      0.1111111111111111,
+      0.1111111111111111
+    ],
+    "methods": [
+      "Tikhonov",
+      "MNE",
+      "dSPM"
+    ],
+    "noise": "M27 seeds 27042+10000+head; identical 204 index/noise schedules per head, new canonical sensors and shared clean truth",
+    "noise_std_V": [
+      0,
+      5e-08,
+      1.5e-07
+    ],
+    "scale": "one finest OpenMEEG candidate spectral scale/head; no outcome tuning",
+    "truth": "finer OpenMEEG level3 off-grid sources; shared solver dependence disclosed; no inverse candidate equals truth"
+  },
+  "levels": [
+    1,
+    2,
+    3
+  ],
+  "metrics": [
+    "physical relative Frobenius",
+    "source/orientation relative L2",
+    "10 nA m RMS uV",
+    "signed pattern correlation",
+    "optimal scalar and unscaled residual after alignment",
+    "source depth",
+    "rank/singular spectrum/condition",
+    "within solver refinement",
+    "cross-resolution independent comparison",
+    "discrete algebraic residual and RSS/runtime"
+  ],
+  "moments_Am": 1e-08,
+  "orientation": "free XYZ plus deterministic signed arbitrary unit directions; source-major XYZ ordering",
+  "original_sensor_control": "unchanged M27 Fibonacci cap radial projection at level2; reproduce first four 35 mm sources before alterations",
+  "primary_pair": [
+    "OpenMEEG 2.6.0 symmetric BEM order3 adaptive0 tolerance.001",
+    "MNE 1.13.x linear collocation with default isolated-problem correction"
+  ],
+  "radii_mm": [
+    82.8,
+    87.3,
+    90
+  ],
+  "reference": "common average P=I-11T/32; fixed electrode zero reference separately reported; no raw-gauge comparison claimed",
+  "scalar_alignment": "explanatory only; never used in physical gate or inverse",
+  "schema": "soma.bem-discrepancy.design/1",
+  "seed": 28042,
+  "sources": "48 frozen M27 candidates followed by 12 independent M27 off-grid generators per head; original 4-column-location subset separately reported",
+  "thresholds": {
+    "analytical_limit": 0.02,
+    "geometry_m": 1e-12,
+    "independent_agreement": 0.1,
+    "refinement_ratio_max": 0.8,
+    "sensor_m": 1e-09,
+    "series_tail_relative": 1e-12,
+    "solver_residual": 1e-08
+  },
+  "triangles_per_interface": [
+    80,
+    320,
+    1280
+  ],
+  "uncertainty": "1999 fixed-family stratified head then source bootstrap; paired source metrics, orientations averaged within source; no sensors/meshes treated as independent heads; conditional only",
+  "version": "0.28.0"
+}

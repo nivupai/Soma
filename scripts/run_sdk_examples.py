@@ -25,6 +25,7 @@ NAMES = (
     "external_validation",
     "source_uncertainty",
     "nonspherical",
+    "bem_diagnostics",
 )
 
 

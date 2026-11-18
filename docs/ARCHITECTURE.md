@@ -408,3 +408,8 @@ no model calculation or human source localization is triggered over HTTP.
 ## Milestone 27 addendum
 
 M27 adds a bounded synthetic four-interface OpenMEEG child-process adapter and reuses M19 seals, M17 envelopes, existing geometry QC and M26 inverse kernels. There is no parallel workflow engine or FEM solver. See HEAD_MODEL_CONVERGENCE.md and BEM_FEM_REFERENCE_COMPARISON.md.
+
+
+## Milestone 28 addendum
+
+M28 adds canonical BEM contracts and a separate isolated diagnostic worker, reusing M17 envelopes, M19 seals, M27 geometry/inverse functions and the existing uncertainty workbench. Native geometry audits and explicit solver/reference matching distinguish physical equivalence from finite-formulation agreement. No generic FEM or parallel workflow framework is introduced.

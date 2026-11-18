@@ -1,3 +1,4 @@
+import BEMDiagnostics from "./BEMDiagnostics";
 import Nonspherical from "./Nonspherical";
 import { useState } from "react";
 import { Async, Panel, Warning, useResource } from "../components/Common";
@@ -199,6 +200,7 @@ export default function SourceUncertainty() {
         </Async>
       </Panel>
       <Nonspherical />
+      <BEMDiagnostics />
     </>
   );
 }

@@ -1,0 +1,4 @@
+level,mean_source_relative,low,high,scope
+1,0.2788753118047582,0.26116962943176647,0.2973503155635058,"conditional family/head/source bootstrap; 72 off-grid generators, orientations not independent"
+2,0.2606402456692643,0.2500340400889097,0.27154235382028075,"conditional family/head/source bootstrap; 72 off-grid generators, orientations not independent"
+3,0.11634528354508526,0.11156041431020008,0.12156136244713325,"conditional family/head/source bootstrap; 72 off-grid generators, orientations not independent"

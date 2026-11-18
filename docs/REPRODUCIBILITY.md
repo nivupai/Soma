@@ -536,3 +536,12 @@ not additional independent generators. No downloads or participant inputs.
 ## Milestone 27 addendum
 
 M27 protocol/design resources retain both revisions; active revision 2 fingerprint is 8f36c19cfc34e9d51e87bf8e9001544467d931ae4eb8db7fa9e19234e8307a79. Run `python -m scripts.nonspherical_references --output reports/reference-v27`, then `soma source nonspherical --output reports/study-v27`. Summarize with `python -m scripts.summarize_nonspherical --root reports/study-v27 --references reports/reference-v27 --output experiments/new-review-directory`. Ordinary CI uses only small references and ten comparison families, including the new homogeneous BEM reference across Linux x86_64/macOS arm64, Python 3.11/3.12. Full ensemble outputs are audited separately. See MILESTONE27_VERIFICATION.md.
+
+
+## Milestone 28 addendum
+
+M28 design SHA is 70aa0942ed36ae6b2b75c1fc64fe13bfb5964d079c2d42811b37746923cbf596, frozen at 61973db. Run `soma source bem-discrepancy --output reports/bem-v28`, then `python -m scripts.summarize_bem_discrepancy --root reports/bem-v28 --output experiments/new-reviewed-export`. Executed source snapshots are archival text, not alternative executable modules. Ordinary CI adds a small homogeneous matched-pair comparison; all ten earlier families remain. See MILESTONE28_VERIFICATION.md for local and remote gates.
+
+The final M28 active seal is `configs/bem-discrepancy-v28-r3.json`; revisions 1/2
+are retained. Revisions 2/3 are explicit post-outcome descriptor corrections,
+with physical design/settings and 10% target unchanged.

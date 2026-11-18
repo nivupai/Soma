@@ -1,0 +1,12 @@
+{
+  "PHYSICS_MATCH_CONFIRMED": true,
+  "GEOMETRY_MATCH_CONFIRMED": true,
+  "SENSOR_REFERENCE_MATCH_CONFIRMED": true,
+  "ANALYTICAL_LIMIT_PASS": true,
+  "WITHIN_SOLVER_CONVERGENCE_PASS": true,
+  "INDEPENDENT_THREE_LAYER_AGREEMENT_PASS": false,
+  "INDEPENDENT_FOUR_LAYER_AGREEMENT_PASS": "NOT_ESTABLISHED",
+  "EMPIRICAL_PHANTOM_VALIDATION": "PHANTOM_NOT_AVAILABLE",
+  "FEM": "NOT_PERFORMED",
+  "scope": "Declared continuous BVP and canonical array correspondence; not equality of discrete formulations or human validation"
+}

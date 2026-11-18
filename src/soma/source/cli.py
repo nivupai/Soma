@@ -312,3 +312,15 @@ def nonspherical_command(output: Path = Path("reports/nonspherical-v27")) -> Non
         _echo_result(run_nonspherical(protocol(), output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("bem-discrepancy")
+def bem_discrepancy_command(output: Path = Path("reports/bem-discrepancy-v28")) -> None:
+    """Run frozen independent synthetic BEM diagnostics (requires [conductor])."""
+    from soma.experiments.bem_discrepancy import run_diagnostics
+    from soma.source.bem_discrepancy import protocol
+
+    try:
+        _echo_result(run_diagnostics(protocol(), output), output)
+    except Exception as exc:
+        _fail(exc)
