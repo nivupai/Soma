@@ -111,3 +111,14 @@ def test_small_aggregate_delta_does_not_replace_entrywise_gate(tmp_path, result)
         p.write_text(json.dumps(v))
     with pytest.raises(ValueError, match="Cross-platform field disagreement"):
         compare(root)
+
+
+@pytest.mark.parametrize("residual", [float("nan"), float("inf"), -1.0])
+def test_invalid_algebraic_residuals_fail_closed(tmp_path, result, residual):
+    root = four_reports(tmp_path, result)
+    path = root / "1/canonical-mesh-v1.json"
+    value = json.loads(path.read_text())
+    value["solver_diagnostics"]["relative_residual"] = residual
+    path.write_text(json.dumps(value))
+    with pytest.raises(ValueError, match="algebraic residual"):
+        compare(root)

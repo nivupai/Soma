@@ -98,8 +98,8 @@ def run():
     )
     relative = float(np.linalg.norm(g - exact) / np.linalg.norm(exact))
     if (
-        relative >= protocol["analytical_relative_limit"]
-        or diagnostics["relative_residual"] >= protocol["max_algebraic_residual"]
+        not 0 < relative < protocol["analytical_relative_limit"]
+        or not 0 <= diagnostics["relative_residual"] < protocol["max_algebraic_residual"]
     ):
         raise ValueError("Canonical physical solver control failed")
     environment = dict(

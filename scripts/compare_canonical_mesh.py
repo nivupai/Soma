@@ -43,7 +43,11 @@ def compare(root):
             field = r["strict_field_report"]
             if field["environment"] != r["environment"] or field["protocol"] != PROTOCOL_SHA256:
                 raise ValueError("Canonical field provenance mismatch")
-            if r["solver_diagnostics"]["relative_residual"] >= protocol["max_algebraic_residual"]:
+            if (
+                not 0
+                <= r["solver_diagnostics"]["relative_residual"]
+                < protocol["max_algebraic_residual"]
+            ):
                 raise ValueError("Canonical algebraic residual failed")
             folder = temporary / path.parent.name
             folder.mkdir()
