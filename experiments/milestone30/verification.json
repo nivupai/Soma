@@ -71,9 +71,9 @@
   "privacy": {
     "scanner": "Gitleaks 8.30.1",
     "rules_suppressed": false,
-    "current_files": 1581,
-    "commits": 76,
-    "blobs": 1857,
+    "current_files": 1582,
+    "commits": 77,
+    "blobs": 2056,
     "material_secrets": 0,
     "restricted_data_files": 0,
     "personal_home_paths": 0,
@@ -154,13 +154,21 @@
     "human_accuracy": "NOT_ESTABLISHED"
   },
   "publication": {
-    "status": "DEPENDENT_PR_BLOCKED_REQUIRED_NPM_SECURITY_GATE",
+    "status": "DEPENDENT_PR_BLOCKED_SECURITY_AND_NATIVE_MESH_PLATFORM_GATE",
     "base_branch": "feature/milestone29-independent-four-layer",
     "merge_permitted": false,
     "postmerge_ci": "NOT_PERFORMED",
     "expected_ci_jobs": 13,
     "comparison_families": 13,
-    "cross_platform_status": "ACTUAL_PR_BUNDLES_REQUIRED_BEFORE_COMPLETION; recorded in PR completion receipt"
+    "cross_platform_status": "FAILED_FROZEN_PER_ENTRY_NATIVE_MESH_TOLERANCE",
+    "actual_audited_head": "77e54b1f7d2dde92c6bd640ff44960d33e90e9dc",
+    "actual_ci_url": "https://github.com/nivupai/Soma/actions/runs/44280567582",
+    "actual_ci_jobs": 13,
+    "actual_ci_passed": 11,
+    "actual_ci_failed": 2,
+    "actual_comparison_families_passed": 12,
+    "actual_comparison_families_failed": 1,
+    "platform_evidence": "cross-platform/audit.json"
   },
   "milestone31_started": false
 }

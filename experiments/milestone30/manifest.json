@@ -44,6 +44,11 @@
   "S-3-1-V_per_Am.csv": "a5f0e6ac869b754d5262ec026921d19ba6896b094f9e6930b6fbced12fffba79",
   "comparisons.json": "a5067a9f17ce005eb6e68b0dc807af4c0b532d6d29fa5243901341b425490123",
   "cost-quality.csv": "293dca898f72e0b8b61c174f1f65cb6dba2f0cfc4968c38d4b752baf72574a1f",
+  "cross-platform/audit.json": "bfa0317689108b0592a3715c022b3d12796c98be86163fb0cde9b93b0be2ca37",
+  "cross-platform/synthetic-repro-macos-15-3.11.json": "b4ef1d0e85f17c98139bf930769eb5fb37714def503c7aed28d13624e3576005",
+  "cross-platform/synthetic-repro-macos-15-3.12.json": "897ec8a3e78582665f61e8e95a2c5abdc5b2d92dffc740fb79700f1c362176e9",
+  "cross-platform/synthetic-repro-ubuntu-24.04-3.11.json": "84f3e49e639fa44c17206a7a0cc36f862d1702e9c070bbda4dddfd046254404a",
+  "cross-platform/synthetic-repro-ubuntu-24.04-3.12.json": "9772e6bce8ab1dfb425686f0652267a71caa9e1d89116aeeb39a3e335c245956",
   "error-components.csv": "11f219a1ef925d6ecc463096aae061be9d143b5b86306cbee3977358c12913be",
   "figures/01-independent-volume.svg": "77c65ceb78388534e6a63ceaac45474e374641742bbb7a7a5a2edeafd3a10137",
   "figures/02-interface-deviations.svg": "7617bb76193c22bcca11f192ac046f998bca371324dcbad2917244395587795f",
@@ -167,5 +172,5 @@
   "resolution-diagonals.json": "41a6d7628fdafd6a10c39d5552aa3a9d5828d4d10a905daac4465fe6368f8129",
   "resolutions.json": "4775184e2d23936f994e2490f448c4bb321b0d5c76a8486b98cff6ff67069c77",
   "result/result.json": "fbca62f2244aba76bb824d6d9c2b5ca720cd09b59034f0ed33a05e7f11710256",
-  "verification.json": "368647026ef9e60a778223deafae339cd3b3db4925ea215bec9954ee5b6c4b72"
+  "verification.json": "975577a1da9b8b9941fa22c04bd56b39eb7f52b505abb2160d8a3c24208de35d"
 }
