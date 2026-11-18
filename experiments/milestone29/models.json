@@ -1,0 +1,6070 @@
+[
+  {
+    "label": "H-1",
+    "head": null,
+    "level": 1,
+    "solver": "fem",
+    "status": "FAILED",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
+    "reason": "Current conservation/quadrature failed: 0.001213710973226114"
+  },
+  {
+    "label": "H-1",
+    "head": null,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.334536847973837e-15,
+      "algebraic_reciprocity_relative": 4.489387118812155e-18,
+      "reciprocal_condition_estimate_mixed_units": 8.246447705278107e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "6b9ed2ce1ee0a81faaadb1bf7bbcfe232ea49a0dff595f73379c6c7231a86251",
+        "c5fd9c6a0dbf3ab73a80f4e2d7981fefc6fad30bec568bd63ceb65fa4afbd824",
+        "83b26c9f17c3310b07e27926af35a95e9e6f7e21d1326191603a8eb2340f1e1c",
+        "4afb0bf5f3a70e7555ae0d25b38b6fe594cc9c90e2756dd819d50606d2f29151"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "136737e77d36de859955953cd8036e944b84997a0fbef82c7d1cbb68bc912c19",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "417a867fac9c37307d52ce2a989175ad0cf14121f04a93a3000cf3754addc40c",
+        "conductivity": "516b3279b5a44d19b043fa602fb08ac5e2cd00ac7bbd223a9b2fd2080dac763b",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.17544995801290497,
+      "process_peak_rss_mib": 300.25,
+      "rank": 31,
+      "retained_condition": 46.954253498233506,
+      "singular_values": [
+        1789.1874073745369,
+        1676.2708509877334,
+        1464.496770840586,
+        1022.4378160896858,
+        995.210623933425,
+        876.9890545903353,
+        779.494296539575,
+        724.247842924949,
+        663.2663044779215,
+        613.8288732373342,
+        606.4510422615627,
+        544.4092301577822,
+        445.88057893520374,
+        434.3377537768178,
+        388.8091292101517,
+        376.9669943629927,
+        366.590933926535,
+        314.93049595442415,
+        278.2130176051815,
+        271.0040005896606,
+        183.32895508193118,
+        176.05120776632623,
+        167.1366214013862,
+        138.86667219166483,
+        130.69013542934496,
+        102.08196862514855,
+        95.56803215597003,
+        76.82792702877657,
+        68.72471288877246,
+        48.46759018586448,
+        38.10490581948766,
+        1.6613845514656697e-13
+      ],
+      "reference_null_relative": 2.7168243223638405e-16,
+      "reference_reprojection_relative": 3.1983178304004997e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "3abd1c8e3051e8ab24ad225d267a2973fb24e93b891246783f5ab0c1b8e44ed4"
+    }
+  },
+  {
+    "label": "H-2",
+    "head": null,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2286071869921263e-08,
+      "min_mean_ratio": 0.14123609925628652,
+      "max_mean_ratio": 0.9234600236487241,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "228c3d0e0881466bbfa4d112e23ffb52c9587183d95dbdf0502e6fe3ed12b4ab",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.3586014432219454e-13,
+      "preprojection_current_imbalance": 7.820954418331625e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.434710791974794,
+      "reference": "sensor average",
+      "peak_child_MiB": 449.0625,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2286071869921263e-08,
+        "min_mean_ratio": 0.14123609925628652,
+        "max_mean_ratio": 0.9234600236487241,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "228c3d0e0881466bbfa4d112e23ffb52c9587183d95dbdf0502e6fe3ed12b4ab",
+        "exact_surface_facets": true,
+        "boundary_hash": "b77a7da75ff696791809b314b7239bad3a2ba7bbc8608bd1816cda3ba8d34260"
+      }
+    }
+  },
+  {
+    "label": "H-2",
+    "head": null,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 6.2887517234071604e-15,
+      "algebraic_reciprocity_relative": 1.3573042982014162e-17,
+      "reciprocal_condition_estimate_mixed_units": 2.7672197713652327e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "7c9527a6f7c12c6b7ebf33c95edb983ddfc9db6e1ed88f2c72341440b3194838",
+        "fd4e3ed46a00001ef91711c08dd41499046d52e06b1053d2a3e8b669df4036df",
+        "7ced4ad1f4fbf4b9e757260c2416ee2c085745fbda9a3b170dd34b30a84ce67d",
+        "ba7890ee71123924cca408cb85c93bff3250a4fe83ceed724482ae6d940f91e9"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "df175880ca78633fc1dbc7d2928cd185efe5c5fe0214343b6794b81c71824fc8",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "417a867fac9c37307d52ce2a989175ad0cf14121f04a93a3000cf3754addc40c",
+        "conductivity": "516b3279b5a44d19b043fa602fb08ac5e2cd00ac7bbd223a9b2fd2080dac763b",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 1.0662980829947628,
+      "process_peak_rss_mib": 316.40625,
+      "rank": 31,
+      "retained_condition": 81.9662801527767,
+      "singular_values": [
+        1606.8170644660709,
+        1507.8382385237596,
+        1306.6847444410307,
+        871.1566613639171,
+        833.3190374830828,
+        750.6717390715093,
+        634.8336362155876,
+        599.586904459742,
+        563.4505305871,
+        483.39558225690445,
+        477.4829069004694,
+        410.02867177016265,
+        364.54957939656003,
+        339.7038478415564,
+        327.14686701138766,
+        302.99346858153785,
+        290.6439639837593,
+        257.4008576141779,
+        232.9685313909143,
+        231.84283564845958,
+        162.6640743756121,
+        152.74666610754028,
+        129.5761930184909,
+        113.03314902005442,
+        105.27111873105501,
+        94.37922742999777,
+        84.22400630415629,
+        61.93619366696361,
+        52.334094626347586,
+        33.48375461569532,
+        19.603391314954507,
+        1.6140003930640625e-13
+      ],
+      "reference_null_relative": 3.384594221623395e-16,
+      "reference_reprojection_relative": 3.0758117089803043e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "0c0fa25274b5ac37fbe7a246c2024bc2259d962e08d4c1119a30ac1e0d43fe1b"
+    }
+  },
+  {
+    "label": "H-3",
+    "head": null,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.277349557505095e-10,
+      "min_mean_ratio": 0.1651521654589069,
+      "max_mean_ratio": 0.9011129744657127,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "02921a2f1b57313a5fc56edce3fa516c03be3a9a5d5f9d04c74e57cefccb69e6",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 3.3130102130099517e-13,
+      "preprojection_current_imbalance": 5.069526222381848e-11,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 26.27744137495756,
+      "reference": "sensor average",
+      "peak_child_MiB": 958.015625,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.277349557505095e-10,
+        "min_mean_ratio": 0.1651521654589069,
+        "max_mean_ratio": 0.9011129744657127,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "02921a2f1b57313a5fc56edce3fa516c03be3a9a5d5f9d04c74e57cefccb69e6",
+        "exact_surface_facets": true,
+        "boundary_hash": "dbd45fe5d04e5546c88d4a69937ffa3679759e573a0ef425f337c9e91238d3c2"
+      }
+    }
+  },
+  {
+    "label": "H-3",
+    "head": null,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.33,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.1179299575055642e-14,
+      "algebraic_reciprocity_relative": 9.76658490985082e-17,
+      "reciprocal_condition_estimate_mixed_units": 9.619493121272695e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "437e2ed6666bc1ec6475d3e05b2bc92b7557115375633f1a68783c7e571bd1f2",
+        "01e2cf3019c18de8126811c17f81af1fdc5a5843824e8fc274b33223f472da2c",
+        "e3ad9d445331b2be3d804b1580041065d9185b05b34e23c9df91a9b50c5615cf",
+        "4eab2dedb99d5cd54eb4a6c580c215cea314cb3a5258ab6b95444af9f3c60e04"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "f5c149adf9b2408a5495aef1f961151737802cbc4d9038930c88a316333934bb",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "417a867fac9c37307d52ce2a989175ad0cf14121f04a93a3000cf3754addc40c",
+        "conductivity": "516b3279b5a44d19b043fa602fb08ac5e2cd00ac7bbd223a9b2fd2080dac763b",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.517498500004876,
+      "process_peak_rss_mib": 1094.125,
+      "rank": 31,
+      "retained_condition": 84.48798199935538,
+      "singular_values": [
+        1563.8979022949866,
+        1467.2327085839413,
+        1270.0239447363535,
+        831.2591774593997,
+        793.4905351173726,
+        713.6078657814825,
+        603.8439712788567,
+        570.9244840460864,
+        529.8818085827743,
+        448.9298413284319,
+        443.4741720786776,
+        379.87703396016025,
+        336.1003549495614,
+        313.0062665233779,
+        299.8750598267067,
+        279.1243839790189,
+        265.7912355103721,
+        235.42223603619797,
+        211.96835694127526,
+        210.8224854003525,
+        147.38048018753415,
+        138.30105640212088,
+        116.57058563843246,
+        102.51418379191696,
+        94.71789118489242,
+        85.21382983679636,
+        75.48955028950708,
+        55.61430504418661,
+        47.20768879198595,
+        30.695047208981272,
+        18.51030010761671,
+        1.5085571119358914e-13
+      ],
+      "reference_null_relative": 2.5773112550089876e-16,
+      "reference_reprojection_relative": 3.106912895180289e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "aa406dfd060e46e82dc9c04d60188cf770e763a476427c2fbdcc996f607695b1"
+    }
+  },
+  {
+    "label": "S-1",
+    "head": null,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.6379566140065616e-07,
+      "min_mean_ratio": 0.14163457851819017,
+      "max_mean_ratio": 0.9635686445079338,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "baaeeea499c957df86ad8c1153b9c525ef9f94b01af7b6cfcea2327575ea31a5",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 3.37671102935221e-14,
+      "preprojection_current_imbalance": 0.00022797824028265805,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.4135857919463888,
+      "reference": "sensor average",
+      "peak_child_MiB": 109.84375,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.6379566140065616e-07,
+        "min_mean_ratio": 0.14163457851819017,
+        "max_mean_ratio": 0.9635686445079338,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "baaeeea499c957df86ad8c1153b9c525ef9f94b01af7b6cfcea2327575ea31a5",
+        "exact_surface_facets": true,
+        "boundary_hash": "26c8a1b7b6305fe1354d9f9a4fabfc9c70c14e34fad169bfcac227d2e05c8537"
+      }
+    }
+  },
+  {
+    "label": "S-1",
+    "head": null,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.413184423074107e-15,
+      "algebraic_reciprocity_relative": 6.403501690211656e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.674760510683103e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "6b9ed2ce1ee0a81faaadb1bf7bbcfe232ea49a0dff595f73379c6c7231a86251",
+        "c5fd9c6a0dbf3ab73a80f4e2d7981fefc6fad30bec568bd63ceb65fa4afbd824",
+        "83b26c9f17c3310b07e27926af35a95e9e6f7e21d1326191603a8eb2340f1e1c",
+        "4afb0bf5f3a70e7555ae0d25b38b6fe594cc9c90e2756dd819d50606d2f29151"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "136737e77d36de859955953cd8036e944b84997a0fbef82c7d1cbb68bc912c19",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "417a867fac9c37307d52ce2a989175ad0cf14121f04a93a3000cf3754addc40c",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.08696179196704179,
+      "process_peak_rss_mib": 303.75,
+      "rank": 31,
+      "retained_condition": 319.90328972983457,
+      "singular_values": [
+        1416.7122566050684,
+        1329.545588400713,
+        1142.958991737849,
+        556.4089464815805,
+        534.8312601635981,
+        472.73121439186,
+        419.0351161610749,
+        384.9723324756715,
+        235.1985019924702,
+        213.16702253504968,
+        210.9818765295137,
+        178.29027740496437,
+        161.34884120037984,
+        134.2374726226973,
+        110.74487471342484,
+        82.27395398245497,
+        78.03262170797632,
+        65.35442679751037,
+        60.99567158742622,
+        51.91107539023098,
+        39.447029610803014,
+        33.8741964296604,
+        28.441405472422773,
+        19.716341270917443,
+        17.8425395200516,
+        15.167593298136591,
+        13.06459207220991,
+        10.730158843814536,
+        7.857836214869829,
+        6.57535103613857,
+        4.42856420076678,
+        1.2124046359597689e-13
+      ],
+      "reference_null_relative": 3.480663653415304e-16,
+      "reference_reprojection_relative": 2.992591488366604e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "3abd1c8e3051e8ab24ad225d267a2973fb24e93b891246783f5ab0c1b8e44ed4"
+    }
+  },
+  {
+    "label": "S-2",
+    "head": null,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2286071869921263e-08,
+      "min_mean_ratio": 0.14123609925628652,
+      "max_mean_ratio": 0.9234600236487241,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "228c3d0e0881466bbfa4d112e23ffb52c9587183d95dbdf0502e6fe3ed12b4ab",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.1923215988655751e-13,
+      "preprojection_current_imbalance": 1.342804301426979e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.8635991670307703,
+      "reference": "sensor average",
+      "peak_child_MiB": 458.28125,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2286071869921263e-08,
+        "min_mean_ratio": 0.14123609925628652,
+        "max_mean_ratio": 0.9234600236487241,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "228c3d0e0881466bbfa4d112e23ffb52c9587183d95dbdf0502e6fe3ed12b4ab",
+        "exact_surface_facets": true,
+        "boundary_hash": "b77a7da75ff696791809b314b7239bad3a2ba7bbc8608bd1816cda3ba8d34260"
+      }
+    }
+  },
+  {
+    "label": "S-2",
+    "head": null,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 8.828110130489259e-15,
+      "algebraic_reciprocity_relative": 3.6597644593153793e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.8385036778371843e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "7c9527a6f7c12c6b7ebf33c95edb983ddfc9db6e1ed88f2c72341440b3194838",
+        "fd4e3ed46a00001ef91711c08dd41499046d52e06b1053d2a3e8b669df4036df",
+        "7ced4ad1f4fbf4b9e757260c2416ee2c085745fbda9a3b170dd34b30a84ce67d",
+        "ba7890ee71123924cca408cb85c93bff3250a4fe83ceed724482ae6d940f91e9"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "df175880ca78633fc1dbc7d2928cd185efe5c5fe0214343b6794b81c71824fc8",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "417a867fac9c37307d52ce2a989175ad0cf14121f04a93a3000cf3754addc40c",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 1.0576266249991022,
+      "process_peak_rss_mib": 324.046875,
+      "rank": 31,
+      "retained_condition": 190.11679332812614,
+      "singular_values": [
+        1279.752190452304,
+        1201.7410757449695,
+        1031.7848092454853,
+        484.43268177106364,
+        465.1992877439097,
+        412.1885409175545,
+        365.33186840860003,
+        335.453160265674,
+        214.50363435323126,
+        193.9447849958969,
+        192.33562303913655,
+        164.56835422459585,
+        144.09736654163973,
+        124.94138535921685,
+        106.87421187518477,
+        88.89638091726894,
+        86.3747316321696,
+        71.4064111849543,
+        64.8722920885638,
+        60.42889739362761,
+        45.313297082373005,
+        39.30487565851845,
+        34.63403142218442,
+        28.801912819285846,
+        25.612114987306384,
+        22.72810518619456,
+        19.910433625784933,
+        14.818671183257532,
+        13.860032217837418,
+        9.964302821885031,
+        6.731400041255459,
+        1.4687552144113333e-13
+      ],
+      "reference_null_relative": 3.606227586468352e-16,
+      "reference_reprojection_relative": 2.8240735611398847e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "0c0fa25274b5ac37fbe7a246c2024bc2259d962e08d4c1119a30ac1e0d43fe1b"
+    }
+  },
+  {
+    "label": "S-3",
+    "head": null,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.277349557505095e-10,
+      "min_mean_ratio": 0.1651521654589069,
+      "max_mean_ratio": 0.9011129744657127,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "02921a2f1b57313a5fc56edce3fa516c03be3a9a5d5f9d04c74e57cefccb69e6",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.468212418523695e-13,
+      "preprojection_current_imbalance": 7.762554089030567e-12,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 26.65257016697433,
+      "reference": "sensor average",
+      "peak_child_MiB": 986.140625,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.277349557505095e-10,
+        "min_mean_ratio": 0.1651521654589069,
+        "max_mean_ratio": 0.9011129744657127,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "02921a2f1b57313a5fc56edce3fa516c03be3a9a5d5f9d04c74e57cefccb69e6",
+        "exact_surface_facets": true,
+        "boundary_hash": "dbd45fe5d04e5546c88d4a69937ffa3679759e573a0ef425f337c9e91238d3c2"
+      }
+    }
+  },
+  {
+    "label": "S-3",
+    "head": null,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.804603546051362e-14,
+      "algebraic_reciprocity_relative": 9.285075754345913e-17,
+      "reciprocal_condition_estimate_mixed_units": 4.525524381905345e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "437e2ed6666bc1ec6475d3e05b2bc92b7557115375633f1a68783c7e571bd1f2",
+        "01e2cf3019c18de8126811c17f81af1fdc5a5843824e8fc274b33223f472da2c",
+        "e3ad9d445331b2be3d804b1580041065d9185b05b34e23c9df91a9b50c5615cf",
+        "4eab2dedb99d5cd54eb4a6c580c215cea314cb3a5258ab6b95444af9f3c60e04"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "f5c149adf9b2408a5495aef1f961151737802cbc4d9038930c88a316333934bb",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "417a867fac9c37307d52ce2a989175ad0cf14121f04a93a3000cf3754addc40c",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.17353466694476,
+      "process_peak_rss_mib": 1097.59375,
+      "rank": 31,
+      "retained_condition": 194.0262112806241,
+      "singular_values": [
+        1247.7118425792396,
+        1171.790567850286,
+        1006.188519949276,
+        466.3795866062958,
+        447.48623929779455,
+        397.3610536148836,
+        351.74480614205515,
+        323.61620343787047,
+        206.99577193792769,
+        185.93258653405758,
+        184.16834535463678,
+        157.2493219171285,
+        138.02878680916405,
+        119.80445650937432,
+        102.74902837024305,
+        85.94915926111533,
+        84.01654300192354,
+        68.30465077645565,
+        62.7521322073552,
+        59.70859517645106,
+        43.76193202327147,
+        38.97200067322147,
+        33.225123352357336,
+        28.665892277943062,
+        24.89030314975561,
+        22.404744731408144,
+        19.396964354180238,
+        14.581109318616189,
+        13.479202009833207,
+        9.63219483736881,
+        6.430635501997451,
+        1.3126625365105263e-13
+      ],
+      "reference_null_relative": 3.60220194099567e-16,
+      "reference_reprojection_relative": 3.0026644261973143e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "aa406dfd060e46e82dc9c04d60188cf770e763a476427c2fbdcc996f607695b1"
+    }
+  },
+  {
+    "label": "C-0-1",
+    "head": 0,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.5675998805465695e-07,
+      "min_mean_ratio": 0.13254043151217249,
+      "max_mean_ratio": 0.9812748194664305,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "95262ba150aba86b23e6b2ac0b45c60d05484154598fb49765b58b7459faac0b",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.6783376366311706e-14,
+      "preprojection_current_imbalance": 0.00024902783371090654,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.40375441598007455,
+      "reference": "sensor average",
+      "peak_child_MiB": 101.40625,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.5675998805465695e-07,
+        "min_mean_ratio": 0.13254043151217249,
+        "max_mean_ratio": 0.9812748194664305,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "95262ba150aba86b23e6b2ac0b45c60d05484154598fb49765b58b7459faac0b",
+        "exact_surface_facets": true,
+        "boundary_hash": "14a8faa821cb201e1182e317f90f7a12d7063f7eebeec2ac67e63117da7c3f64"
+      }
+    }
+  },
+  {
+    "label": "C-0-1",
+    "head": 0,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.4250333288301356e-15,
+      "algebraic_reciprocity_relative": 5.5134248774293466e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.105220863118459e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "a346262a3fbd371a6476c3c353296012537a99470a5a818fca61600b32495807",
+        "1f6eeaa13e0585a2ea3e66fd7e2c7ead93d196f293b055f892c0d597d6f2037d",
+        "7e7aa3927a0e81e1541d342c2ea95434f4459d7623b443b462f3ac8c997d55db",
+        "b688488f5eae8b536beea78626c4a506bfea2647d27cccf1d3f536314daf3407"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "169f528f00b4d1269441c36ee7e46d31020c99dd4c9739c39ac9a3bacdcfed45",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.08476404205430299,
+      "process_peak_rss_mib": 300.734375,
+      "rank": 31,
+      "retained_condition": 301.37741311894047,
+      "singular_values": [
+        1467.7259881088278,
+        1285.8394277375367,
+        1107.3632197443515,
+        553.1331303563204,
+        533.8265770159876,
+        461.10208003300113,
+        412.508272606306,
+        379.27383037366917,
+        232.54156321322455,
+        210.89785955954903,
+        205.93323624508974,
+        176.50819732136046,
+        155.4213188542143,
+        128.6134978633145,
+        108.7628916198352,
+        82.0897310255847,
+        75.39255496393203,
+        62.698325448196854,
+        56.7994548118718,
+        49.144095830069396,
+        36.396035016894146,
+        32.94365242839474,
+        27.912413290015756,
+        19.601306846062542,
+        16.121540183571927,
+        15.582795437023774,
+        13.010547157322462,
+        11.234475389368283,
+        7.624621445295476,
+        6.509303628622403,
+        4.870059680051672,
+        1.2897776969638698e-13
+      ],
+      "reference_null_relative": 3.5848216575095926e-16,
+      "reference_reprojection_relative": 3.1437433411164986e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "05edda9c26af5d0343d7199bee0fadc2236871507577a38565f1ef2d7e597827"
+    }
+  },
+  {
+    "label": "C-0-2",
+    "head": 0,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2053329891794115e-08,
+      "min_mean_ratio": 0.13203035720441367,
+      "max_mean_ratio": 0.9475020874344993,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "5c183fd9142986524d4a05994321ae5737893a6caaac272f042a65bb4aa2fed4",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 8.578443652196828e-14,
+      "preprojection_current_imbalance": 1.21601398703753e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.465823625039775,
+      "reference": "sensor average",
+      "peak_child_MiB": 382.84375,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2053329891794115e-08,
+        "min_mean_ratio": 0.13203035720441367,
+        "max_mean_ratio": 0.9475020874344993,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "5c183fd9142986524d4a05994321ae5737893a6caaac272f042a65bb4aa2fed4",
+        "exact_surface_facets": true,
+        "boundary_hash": "89ef041c16778ee9b4a9ba7d638bd618d6d504bb010276d88bac0053cc503d1b"
+      }
+    }
+  },
+  {
+    "label": "C-0-2",
+    "head": 0,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 8.795196699275661e-15,
+      "algebraic_reciprocity_relative": 5.617324457861962e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.685591609338491e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "cd899005212b35c0205659d4682b4497865254831b9b2f57dde8ea3caf8f5638",
+        "329ab623db4f58f4233c9d477da202cf68046848aa4d01f994a353606fa3bb45",
+        "5350deb9d1437b3bd4755b1b42b782ebd96b82009bedb7b826c7347fb3e8729b",
+        "83593109feb3843b95b7f88275cbc4a310a0bdad84d2e9e7be4e1661e2d6a45a"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "bb17eef06b26ccfe587bf49d88d2c74f15d9f8eacd127d82ba045a6e4ab6b74d",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.9930288339965045,
+      "process_peak_rss_mib": 356.15625,
+      "rank": 31,
+      "retained_condition": 177.79436945482422,
+      "singular_values": [
+        1325.862919257925,
+        1163.8071064850133,
+        1000.3618744240683,
+        482.9151694591932,
+        466.1903953255038,
+        402.08873522417815,
+        358.6440841236708,
+        331.1701847847056,
+        213.66967092836995,
+        195.0873118993068,
+        185.5964240883252,
+        163.54989491607054,
+        137.01981173585585,
+        119.30866295698156,
+        103.69150451009767,
+        91.10660590997479,
+        80.8308736713799,
+        67.75877461980923,
+        61.87027210423362,
+        54.969707657499086,
+        42.23817642416487,
+        36.0727317422633,
+        33.733931668796814,
+        27.486817446088438,
+        25.192108252628593,
+        21.300490422698722,
+        20.246943358180793,
+        15.586848828263493,
+        13.446061811687754,
+        10.38062890654152,
+        7.457282946155466,
+        1.303579640240852e-13
+      ],
+      "reference_null_relative": 3.2754888407413533e-16,
+      "reference_reprojection_relative": 2.9426958241326166e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "d4373776d94bf7ccb8970dda10d0c58413652e6a0d228f2d3977083b5a1e2dd1"
+    }
+  },
+  {
+    "label": "C-0-3",
+    "head": 0,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.103241719168791e-10,
+      "min_mean_ratio": 0.14965913836284275,
+      "max_mean_ratio": 0.9266404347717031,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "a826a2c7ca9fbe1f18571023b370ee7a7683cf799b6de7458b352dd6faae29ca",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.1136119245441628e-13,
+      "preprojection_current_imbalance": 8.840207707104975e-12,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 26.091315332974773,
+      "reference": "sensor average",
+      "peak_child_MiB": 936.296875,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.103241719168791e-10,
+        "min_mean_ratio": 0.14965913836284275,
+        "max_mean_ratio": 0.9266404347717031,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "a826a2c7ca9fbe1f18571023b370ee7a7683cf799b6de7458b352dd6faae29ca",
+        "exact_surface_facets": true,
+        "boundary_hash": "a4a9669631febff00583afb955d749de14c3e7fb007613b28e6b956cb490cb20"
+      }
+    }
+  },
+  {
+    "label": "C-0-3",
+    "head": 0,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.919035585452252e-14,
+      "algebraic_reciprocity_relative": 6.971967389036488e-17,
+      "reciprocal_condition_estimate_mixed_units": 4.241016314521575e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "5add616ee3fa461b1cd0be8c27f89156ea3a006085e3d7feb596f685c0636825",
+        "bfa7229d37744b863060dac732f77a81004c7919f3188b2c2c4473af0e28f563",
+        "d35dcaa9fc3cac244d61b474f8accb68218c84da00327aa3efbe26269521e64a",
+        "f4d0a61207bbc258ca8bfc12de3e5efd49107ad56779942fc4fccbc3560c442d"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "737c8086f1f2d15aa512b6ca7ade58455739592966508a7810c5f3773d2815c7",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.143910666985903,
+      "process_peak_rss_mib": 1111.40625,
+      "rank": 31,
+      "retained_condition": 181.26375486342587,
+      "singular_values": [
+        1292.9206351291912,
+        1134.982224294692,
+        975.6166012214071,
+        465.27967382909304,
+        448.65336098552496,
+        387.7214425270609,
+        345.21321141840764,
+        319.4881920659602,
+        206.8610914437443,
+        187.04200572984294,
+        177.82859083548152,
+        156.36644121491275,
+        130.8985143156561,
+        114.48664193467776,
+        99.72465949824812,
+        88.70851915168627,
+        77.95844136092386,
+        64.60945041678016,
+        60.22918769802742,
+        53.805526428350774,
+        40.803621466602934,
+        35.211725445012064,
+        32.5941874444201,
+        26.879556472656127,
+        25.0753843990094,
+        20.97344230156171,
+        19.76921219307883,
+        15.249843527734482,
+        13.275354726611738,
+        10.124226702666586,
+        7.13281392688433,
+        1.224372075046027e-13
+      ],
+      "reference_null_relative": 3.489350046012883e-16,
+      "reference_reprojection_relative": 3.207094805417486e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "bea7a9869b5cfb5f31685ac36aa5089518479822ad69aabbb27452fb207ac5d0"
+    }
+  },
+  {
+    "label": "C-1-1",
+    "head": 1,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.5933918681153496e-07,
+      "min_mean_ratio": 0.13433662518020312,
+      "max_mean_ratio": 0.9806180614533307,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "c73007219179dd59bb36a3b3a2f7abb72b56aea89795cdf54046c016fb51006c",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.6671021688778255e-14,
+      "preprojection_current_imbalance": 4.3738297172641584e-05,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.39380541699938476,
+      "reference": "sensor average",
+      "peak_child_MiB": 88.625,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.5933918681153496e-07,
+        "min_mean_ratio": 0.13433662518020312,
+        "max_mean_ratio": 0.9806180614533307,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "c73007219179dd59bb36a3b3a2f7abb72b56aea89795cdf54046c016fb51006c",
+        "exact_surface_facets": true,
+        "boundary_hash": "0446bf1f700cbe7f9f49233139a2ef2341fc79056870729ee196660c5a222a75"
+      }
+    }
+  },
+  {
+    "label": "C-1-1",
+    "head": 1,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.621171378619912e-15,
+      "algebraic_reciprocity_relative": 3.233081127617676e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.153752883450894e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "b73890ff045cee03cc189ff448b7b60b71ebdb67df52959aa7008a0f2e25cc05",
+        "6e75f5a4aec4d31455c901309e32fbecc10db0f3b398b888e985b440c18617a8",
+        "b3686e3e9233016447cf4fe4213640f4725b445da22b82805aea813c1b23d379",
+        "bf3beb957a6cbc8f4bc8d7f5a3bfa0499ec079575a5ae45d00de067372977906"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "d31247a983fabcabbb8b237f0ae7ea900927eae18a6c7828ea5a03ee69747f8c",
+        "sources": "6c151beba1158182979ab2af0ee3a424e9b0c21b429edb11f4c4fa9fd1008450",
+        "sensors": "84fadd8b980e3b4410c1997ade1ba03457249f23cdf8ff5ad2d8e68255198dd9",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.08396866702241823,
+      "process_peak_rss_mib": 300.734375,
+      "rank": 31,
+      "retained_condition": 287.57085288308133,
+      "singular_values": [
+        1493.2563213055168,
+        1324.4232034159063,
+        1139.4565523949018,
+        557.4869150752647,
+        541.4482147026382,
+        442.77898223533805,
+        388.6062927064108,
+        376.3502673130947,
+        213.94830065091915,
+        203.66419799341128,
+        185.8939337649526,
+        147.1409265804406,
+        136.67505501469105,
+        125.01425954046177,
+        115.98185002945411,
+        70.91195476039178,
+        66.93020052016591,
+        59.22597907906688,
+        51.7396437868564,
+        45.74625861094927,
+        42.456684427545746,
+        32.72904799384527,
+        28.4392307286907,
+        22.185968665688335,
+        20.156520448558553,
+        16.887934634475716,
+        13.598221591487908,
+        10.601083839742758,
+        9.714327264969445,
+        7.556985482902034,
+        5.192655327668535,
+        1.1338275397083801e-13
+      ],
+      "reference_null_relative": 3.231678885308812e-16,
+      "reference_reprojection_relative": 2.7924623979441135e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "5ea1933e5940e7d7d67fe0ff78542c8a0d60938696a2b612a332f20167d67f44"
+    }
+  },
+  {
+    "label": "C-1-2",
+    "head": 1,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2140469522117234e-08,
+      "min_mean_ratio": 0.13362622106899752,
+      "max_mean_ratio": 0.9463829718304707,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "46820aa74675618b4d0b34528ed23217309aa1a2d31c543d24b52f717904ce4a",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 8.033842835020346e-14,
+      "preprojection_current_imbalance": 1.8711758228035396e-08,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.6227044580155052,
+      "reference": "sensor average",
+      "peak_child_MiB": 448.921875,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2140469522117234e-08,
+        "min_mean_ratio": 0.13362622106899752,
+        "max_mean_ratio": 0.9463829718304707,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "46820aa74675618b4d0b34528ed23217309aa1a2d31c543d24b52f717904ce4a",
+        "exact_surface_facets": true,
+        "boundary_hash": "a1cfbe563c3c27cbb0cbb151e800efdf38f16b7936801ce4fca14b929edcdbc9"
+      }
+    }
+  },
+  {
+    "label": "C-1-2",
+    "head": 1,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 9.434991703946445e-15,
+      "algebraic_reciprocity_relative": 1.726564106454503e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.6933542034126583e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "d64c14085f5c5edff1c9856876f3e1bf9470ce5b2031681caf2249e24c8c2821",
+        "dac35237504f87391d7aa2fc2ed11310600ce8658aaa2c678a2fbc12e10ea4c5",
+        "83fe53ec9e85ca3d3cc20c78a9285ec8cb33864d378013d4b861a3790323bcec",
+        "ee1e0fba78f0d0749ccb6b4263b7afa9fedd8f196d1ff3320dd1c25de7f0f7b1"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "8a5755a828c13145f45088b4b5e25498f7d5bc00049a6d8edd78258985268929",
+        "sources": "6c151beba1158182979ab2af0ee3a424e9b0c21b429edb11f4c4fa9fd1008450",
+        "sensors": "84fadd8b980e3b4410c1997ade1ba03457249f23cdf8ff5ad2d8e68255198dd9",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 1.0154157920042053,
+      "process_peak_rss_mib": 361.15625,
+      "rank": 31,
+      "retained_condition": 151.6541571675871,
+      "singular_values": [
+        1348.7669201857548,
+        1194.8823328646763,
+        1028.0343434234555,
+        484.8966680776321,
+        471.1600593104661,
+        386.7546820429382,
+        339.6000107645247,
+        329.9690456553309,
+        195.3479739203433,
+        185.5221580274164,
+        168.68566321643053,
+        136.88202684065521,
+        125.76540016699316,
+        118.13496502324998,
+        109.44135738851129,
+        78.83688425870706,
+        71.44881018642697,
+        64.52174136020871,
+        56.65776584060361,
+        54.79200824068827,
+        48.83309669821879,
+        41.29122244867107,
+        33.30244140674813,
+        32.9616564585256,
+        26.924893890970747,
+        25.670758545936692,
+        21.581787542921997,
+        18.365615714395375,
+        15.602534183059586,
+        14.066904760835262,
+        8.893702258984467,
+        1.1849800502793327e-13
+      ],
+      "reference_null_relative": 2.964995350049532e-16,
+      "reference_reprojection_relative": 2.896476502056184e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "daf856602db58bfc8b897f6049d7cd20563075753f844b159e3170cc0e4dc616"
+    }
+  },
+  {
+    "label": "C-1-3",
+    "head": 1,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.169053667009862e-10,
+      "min_mean_ratio": 0.15056830838533716,
+      "max_mean_ratio": 0.925885613191799,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "586d45bd0ca3c3f28730f66c86c7f71ddac25644e1bd293832bcfca8e97262f6",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.8676066333213855e-13,
+      "preprojection_current_imbalance": 2.2917099360957835e-12,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 25.737975333991926,
+      "reference": "sensor average",
+      "peak_child_MiB": 928.9375,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.169053667009862e-10,
+        "min_mean_ratio": 0.15056830838533716,
+        "max_mean_ratio": 0.925885613191799,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "586d45bd0ca3c3f28730f66c86c7f71ddac25644e1bd293832bcfca8e97262f6",
+        "exact_surface_facets": true,
+        "boundary_hash": "32e2a330d96d541e9c007cabbab4f5287a2063edf818140dc2731cc57b2c983b"
+      }
+    }
+  },
+  {
+    "label": "C-1-3",
+    "head": 1,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.3717412870939345e-14,
+      "algebraic_reciprocity_relative": 8.512923022142165e-17,
+      "reciprocal_condition_estimate_mixed_units": 4.265162436692885e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "436506c2a75d2986a1cf34fb93ac473907aec63d7076bf19ca1c8c38fcb9f9f4",
+        "09e646e188e823d85d0b358ceb570fead4a11fde7dd31501e44dd4705ae1f58f",
+        "bdffc03f0b006763a7757751d5359f84eb188db1b7aff4e9583de628ce06fb89",
+        "633fd53556533cac599a4b11a699ea24fc308400fbd68e02a188b719b6f18b75"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "8a6b0474e8bbda5e1d9d9fdb6dbc4f8eec85679997e3651ea6aa48aedd692f41",
+        "sources": "6c151beba1158182979ab2af0ee3a424e9b0c21b429edb11f4c4fa9fd1008450",
+        "sensors": "84fadd8b980e3b4410c1997ade1ba03457249f23cdf8ff5ad2d8e68255198dd9",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.45822579198284,
+      "process_peak_rss_mib": 928.875,
+      "rank": 31,
+      "retained_condition": 150.10450080868534,
+      "singular_values": [
+        1314.7549471434197,
+        1164.6730808526304,
+        1001.8463546923905,
+        466.7219790735307,
+        452.95056925205915,
+        372.2721614440527,
+        326.94497801353015,
+        317.9658459337394,
+        187.51125813447527,
+        177.3004869852972,
+        161.98821880791937,
+        131.1681453174785,
+        121.27115951010413,
+        113.2388845240311,
+        105.13219742316849,
+        76.1153269302812,
+        68.67613266046497,
+        62.44090517908344,
+        55.15359904694907,
+        52.98084752272932,
+        47.94939881167352,
+        40.25084598019983,
+        33.01078186768529,
+        32.23347640483751,
+        26.918567077067213,
+        25.565424199855425,
+        20.986053243767596,
+        17.812145132404208,
+        15.489055389281901,
+        13.83391931559618,
+        8.758930878555944,
+        1.1671758585323893e-13
+      ],
+      "reference_null_relative": 3.1730491028188747e-16,
+      "reference_reprojection_relative": 2.9559904562794835e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "3fbef8b100596a12513f87a20e0d52cd8775439021a0192d3fb26be6cab7e279"
+    }
+  },
+  {
+    "label": "C-2-1",
+    "head": 2,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.5706131552477725e-07,
+      "min_mean_ratio": 0.13088230349337812,
+      "max_mean_ratio": 0.9751951410060474,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "0eaa0244093137a7eb46e01d31fa1c008115f270ed055b1d9528f437e6225b11",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 4.252176770098621e-14,
+      "preprojection_current_imbalance": 0.00016633899830184986,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.40682062500854954,
+      "reference": "sensor average",
+      "peak_child_MiB": 95.71875,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.5706131552477725e-07,
+        "min_mean_ratio": 0.13088230349337812,
+        "max_mean_ratio": 0.9751951410060474,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "0eaa0244093137a7eb46e01d31fa1c008115f270ed055b1d9528f437e6225b11",
+        "exact_surface_facets": true,
+        "boundary_hash": "44a4aaf9fa5138a993dcb85b44bfca8f3bf516b93f4cbac5cb918a276b6730ce"
+      }
+    }
+  },
+  {
+    "label": "C-2-1",
+    "head": 2,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.2687046367005837e-15,
+      "algebraic_reciprocity_relative": 3.6259351179633647e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.107334290386393e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "afe5200ca2069dcc6ae807f8262bac0c85f84e3e339fbb74f5d595f44f262841",
+        "6a57b900c5d5597b14e676ff9a36f1558a60011396f10e8599be5162d4df0288",
+        "8c14ae1b3254c948b2a97bcef1a20dd2a8e4059e9c46d3e3c9de0f3718e6ffa0",
+        "e2a6fc92333d2a3331576623cebc9f494d9a055b8b42d7ba129aab0d8151cba8"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "08a37edd2bffc185bc84c80d6b1cc60b173a08b40dc2939110eddfa7e272d625",
+        "sources": "fbeb01b8dc232523ca593a195574c3f0f030abdcbdeddf39611b8108a05152ff",
+        "sensors": "a6a2015d11915d169396d0f361d68db44848f0bdb89321054121f52cc6e25647",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.08600462501635775,
+      "process_peak_rss_mib": 304.84375,
+      "rank": 31,
+      "retained_condition": 428.3785333896251,
+      "singular_values": [
+        1420.4689410406197,
+        1352.5210221437349,
+        1202.0190649035337,
+        593.0967485145186,
+        533.7787716555584,
+        500.51455686288557,
+        389.7864712318181,
+        367.4151463467998,
+        229.60766123970032,
+        191.36923239379976,
+        188.06385215497636,
+        166.53990484535,
+        158.99693106537407,
+        127.44758348218461,
+        105.47650076862979,
+        77.88563750656087,
+        72.85771793610061,
+        62.09119716585991,
+        53.81369606333584,
+        51.00362558962403,
+        41.51219144233717,
+        36.834212194380456,
+        29.585689988982345,
+        21.08699449763218,
+        18.94100100677519,
+        13.864935489091327,
+        10.85338285855946,
+        10.15707015177308,
+        7.8627426035295445,
+        3.865010740652109,
+        3.3159199874020158,
+        9.772400976658006e-14
+      ],
+      "reference_null_relative": 3.4119886486788583e-16,
+      "reference_reprojection_relative": 2.829065984029758e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "7f50aaab905c617e205923810d728fa3ac373fa882afa67084539ce10ea36a29"
+    }
+  },
+  {
+    "label": "C-2-2",
+    "head": 2,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2063510403971591e-08,
+      "min_mean_ratio": 0.1308622652000452,
+      "max_mean_ratio": 0.9482504609335619,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "bd9d094951368da631fefbfc6ff898d0f0ad4787eef5beeb0b133f6f21e2242c",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 9.511413630553861e-14,
+      "preprojection_current_imbalance": 1.433368176849446e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.752740875002928,
+      "reference": "sensor average",
+      "peak_child_MiB": 343.796875,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2063510403971591e-08,
+        "min_mean_ratio": 0.1308622652000452,
+        "max_mean_ratio": 0.9482504609335619,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "bd9d094951368da631fefbfc6ff898d0f0ad4787eef5beeb0b133f6f21e2242c",
+        "exact_surface_facets": true,
+        "boundary_hash": "d799a6ad6ac61e2688a8994be44c6b57e09d6fbc58acf77754db32deb9508532"
+      }
+    }
+  },
+  {
+    "label": "C-2-2",
+    "head": 2,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 8.425506576647174e-15,
+      "algebraic_reciprocity_relative": 1.6682035052081806e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.6902487646514296e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "51acc08c8e11f24fc79e2da9915325c98719dddefd06c5f344f59ad0b02c0a2c",
+        "70d8fb8c34a090d52dcd81b9f6ff3622b8f9614b1f0e0eaf8495e2181b508211",
+        "e135a27c4850216986061b1020c1f0a469c53053582a2df1c5adc8143506edd6",
+        "831388674483bb36c5499ca0313546a1fc2d9dcbc99c911b4cfb0c914728a90b"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "9af3bc52d24669d762af9f03ee7789349f895f507ed5fe3d7c55ed1b040f243d",
+        "sources": "fbeb01b8dc232523ca593a195574c3f0f030abdcbdeddf39611b8108a05152ff",
+        "sensors": "a6a2015d11915d169396d0f361d68db44848f0bdb89321054121f52cc6e25647",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.9938581250025891,
+      "process_peak_rss_mib": 341.0625,
+      "rank": 31,
+      "retained_condition": 276.72183561695397,
+      "singular_values": [
+        1283.2471529664956,
+        1221.6138641985074,
+        1085.7386668832996,
+        519.0050799578831,
+        470.0734371923148,
+        439.3164312611485,
+        341.61091652803225,
+        323.91187473161705,
+        215.054280143522,
+        179.33406738215197,
+        175.13314515924424,
+        160.7814278800131,
+        149.1443378411172,
+        118.32106374994491,
+        103.72474958828492,
+        88.27908748607939,
+        82.82704699605198,
+        67.71658393976897,
+        63.08445118518347,
+        61.50655932872498,
+        54.77408170056661,
+        40.83677691778285,
+        32.83059611828635,
+        30.952538818799333,
+        26.217853589063118,
+        22.769303668645883,
+        17.543393773435447,
+        14.077684883143709,
+        11.59435873076468,
+        6.187055293380882,
+        4.637318013251408,
+        1.0469305352885844e-13
+      ],
+      "reference_null_relative": 3.4546154375121506e-16,
+      "reference_reprojection_relative": 3.13595914077733e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "cb9db7cf8e4f7e7b78b002efdf7bf2379c7caf4ef9dc5f94bc6d0c916e4844bc"
+    }
+  },
+  {
+    "label": "C-2-3",
+    "head": 2,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.110930520853346e-10,
+      "min_mean_ratio": 0.15475430752567695,
+      "max_mean_ratio": 0.9292656028513312,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "dac47c5e33f86842afd1567dec5cefd43dda93e27f0aaa792a078a7273750c68",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.0963820170210723e-13,
+      "preprojection_current_imbalance": 1.8631366865560838e-11,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 26.225135374988895,
+      "reference": "sensor average",
+      "peak_child_MiB": 989.484375,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.110930520853346e-10,
+        "min_mean_ratio": 0.15475430752567695,
+        "max_mean_ratio": 0.9292656028513312,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "dac47c5e33f86842afd1567dec5cefd43dda93e27f0aaa792a078a7273750c68",
+        "exact_surface_facets": true,
+        "boundary_hash": "04eacefc9c8d3a91301deeca214ea1e2c771f777afc022769177084e177e900e"
+      }
+    }
+  },
+  {
+    "label": "C-2-3",
+    "head": 2,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.7126977482457935e-14,
+      "algebraic_reciprocity_relative": 2.1145073947942256e-17,
+      "reciprocal_condition_estimate_mixed_units": 4.191709276744574e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "a1d98ac7683fb074b482a854c3d88e050eab7828c0ea12b0ba033be4025cfd24",
+        "2033b1a6e966c4e2345ae370eeceb7b6e58c4c30522fe050aa8106a9aaaad241",
+        "c83d38daf97dde4184788e8e202fb7d804f313c0105a09ecd628b155b92237a5",
+        "feaf88540ea295f6435d7bf5815580da2f71d70dd6b8b748a25088e0acc435bc"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "a1decdf1224d966705a0bf4aac78e796a59b7326a517d753f53918095bc96324",
+        "sources": "fbeb01b8dc232523ca593a195574c3f0f030abdcbdeddf39611b8108a05152ff",
+        "sensors": "a6a2015d11915d169396d0f361d68db44848f0bdb89321054121f52cc6e25647",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.043575750023592,
+      "process_peak_rss_mib": 1116.59375,
+      "rank": 31,
+      "retained_condition": 277.5606946424019,
+      "singular_values": [
+        1251.1501374712714,
+        1190.3988666983907,
+        1058.8873622206106,
+        500.73564273651493,
+        453.2377790927901,
+        423.817841570117,
+        328.52694953540345,
+        312.25566443696613,
+        209.9805848295498,
+        173.47709310798462,
+        167.768090818428,
+        154.40719580608112,
+        142.71148509870977,
+        113.69789931866302,
+        100.23868463648246,
+        86.98496281405232,
+        79.67930320751555,
+        65.73821533018007,
+        61.49775001839179,
+        59.78792854092679,
+        54.00184941416379,
+        39.085483258009916,
+        31.84306595615936,
+        30.513442857915255,
+        25.594843505555474,
+        22.09036550548158,
+        17.04905008704506,
+        13.671743995184903,
+        11.154468443220363,
+        5.917681351184809,
+        4.5076632304988395,
+        1.293181494322261e-13
+      ],
+      "reference_null_relative": 3.3460344045711884e-16,
+      "reference_reprojection_relative": 3.120056932383043e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "44362be72fb2a0e46e10e0ba1f7a98f1955efe41ead37ac7fa499498a4f0f350"
+    }
+  },
+  {
+    "label": "C-3-1",
+    "head": 3,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.569107354615013e-07,
+      "min_mean_ratio": 0.12973575926209982,
+      "max_mean_ratio": 0.9761904619616366,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "6ab902bd5d030e7e4f6c7ace36bd85129c978eb4e65dec4803fe80335b88d4aa",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.80407722511898e-14,
+      "preprojection_current_imbalance": 6.006389351853729e-05,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.4045053330482915,
+      "reference": "sensor average",
+      "peak_child_MiB": 103.78125,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.569107354615013e-07,
+        "min_mean_ratio": 0.12973575926209982,
+        "max_mean_ratio": 0.9761904619616366,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "6ab902bd5d030e7e4f6c7ace36bd85129c978eb4e65dec4803fe80335b88d4aa",
+        "exact_surface_facets": true,
+        "boundary_hash": "6a733cb25d3c26e53f0188f03d6e42482e3d0a6d7ea26db1e8b2a68ba95a71be"
+      }
+    }
+  },
+  {
+    "label": "C-3-1",
+    "head": 3,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.4894438309621782e-15,
+      "algebraic_reciprocity_relative": 3.3384903262110593e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.1037848485256e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "86ff2b8542abf28e803acb8e41e875ff43c19bc4c8cbe2a1e82907542c7fdcfc",
+        "07d1b390c1f5b927a589937a5881446241fac080c98486a282bafc5d8f2da453",
+        "351a11efcfc2f0545d6e4f8d39fce12dd3fe2960d01ff3ed54ffdc840d86c093",
+        "aad639d7d4d5ac0185d078391b89df650855f94c63fcacf70c2bbcdb1522e68b"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "d525a41f2188d700fc21b450ba6923a72e356a88fa28b7b814b653668c7b72e1",
+        "sources": "de2e0a3dc2ac3b024bf06a15f1f13a5ee2c05b6cd8b647f7a6128b38012b84a3",
+        "sensors": "70fe59e5c60114997f5a77b3ba7235be25ff5a98ea6cf95608e1572250e6e0fa",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.08352824999019504,
+      "process_peak_rss_mib": 304.4375,
+      "rank": 31,
+      "retained_condition": 195.97832626851672,
+      "singular_values": [
+        1437.5489293367107,
+        1363.2580115105904,
+        1200.1921416297193,
+        595.7069094633817,
+        587.976257238055,
+        484.4527386595541,
+        429.703106366891,
+        392.0004981695962,
+        250.05151538902658,
+        230.31524251037425,
+        217.7024880251978,
+        186.8432883266043,
+        154.75327838595126,
+        141.92743799267254,
+        126.09545783218043,
+        90.49221163800422,
+        83.89553971178105,
+        76.52449965984435,
+        62.91517326025154,
+        58.22713940978529,
+        47.38190189123937,
+        43.404147960183664,
+        32.34319799646637,
+        27.97656147835954,
+        24.34801297054947,
+        20.82190363702891,
+        19.563785608968992,
+        13.997900033160805,
+        10.706455016934674,
+        10.098953868837457,
+        7.33524444620001,
+        1.3261513134603152e-13
+      ],
+      "reference_null_relative": 3.4096310240516478e-16,
+      "reference_reprojection_relative": 3.197162504047245e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "1693972a58f1f22ca2252cd727ded24c33df60a3cefb3e070a3cb64c9157d33d"
+    }
+  },
+  {
+    "label": "C-3-2",
+    "head": 3,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.20584229747795e-08,
+      "min_mean_ratio": 0.12997238866745112,
+      "max_mean_ratio": 0.9468518667083508,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "e3f0d48413f141e8cb1314cf03ed00a00d6403c166788339cce3ae2013df23c5",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 5.787191245441634e-14,
+      "preprojection_current_imbalance": 1.6816968924143446e-08,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.5679418750223704,
+      "reference": "sensor average",
+      "peak_child_MiB": 467.453125,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.20584229747795e-08,
+        "min_mean_ratio": 0.12997238866745112,
+        "max_mean_ratio": 0.9468518667083508,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "e3f0d48413f141e8cb1314cf03ed00a00d6403c166788339cce3ae2013df23c5",
+        "exact_surface_facets": true,
+        "boundary_hash": "264a379ae5f1cd4c72b8e5428d3cf30d54dab104378773f0b804c44ab894a05c"
+      }
+    }
+  },
+  {
+    "label": "C-3-2",
+    "head": 3,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 8.392139347004647e-15,
+      "algebraic_reciprocity_relative": 3.0242837282938895e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.7071732019639355e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "619b1fdc7bc16b782e061307d0636e104ad568bfc8778230ea2f3dcc85efa33d",
+        "2243e85dbde83677d5ee298ad032921e756088fbfb7791e13cd405763452613e",
+        "b3be582a6a9902ca48df7d9e30c01ca898f0353cc96d64ae3b486baa816c0211",
+        "977624cc343577a291f4b7fa2834264b70501318b2b1f597bf4a784bfaa7993b"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "8789cd77b9777346eb1068eb05bbf3fd6cea613aad9775cb1cf543a38a898af5",
+        "sources": "de2e0a3dc2ac3b024bf06a15f1f13a5ee2c05b6cd8b647f7a6128b38012b84a3",
+        "sensors": "70fe59e5c60114997f5a77b3ba7235be25ff5a98ea6cf95608e1572250e6e0fa",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 1.0602220839937218,
+      "process_peak_rss_mib": 312.640625,
+      "rank": 31,
+      "retained_condition": 96.76760577580015,
+      "singular_values": [
+        1296.5691754497611,
+        1231.7743524332056,
+        1084.2011554244978,
+        518.6060573910432,
+        512.1541944164073,
+        424.69114321652586,
+        378.0154500696187,
+        343.2211444855823,
+        227.19481535624377,
+        211.155833753577,
+        197.90237620716897,
+        172.00182400024383,
+        144.04415843460117,
+        134.766399024626,
+        121.8597515415458,
+        95.69546553324462,
+        93.10069334744975,
+        83.8177938306997,
+        74.68371613151686,
+        68.90981049394009,
+        55.826309896022956,
+        52.15872790184998,
+        43.18452776143754,
+        39.790429795396676,
+        36.55636903031766,
+        31.736680432399734,
+        29.662001606123084,
+        24.02058291390815,
+        20.833576908631812,
+        18.41529817586776,
+        13.398793584433294,
+        1.3567333364850838e-13
+      ],
+      "reference_null_relative": 3.170133966770586e-16,
+      "reference_reprojection_relative": 3.105535477911495e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "73f5e1bc6485d0ec40be83b676b999e68336a268d11977e489c0a10fba422eff"
+    }
+  },
+  {
+    "label": "C-3-3",
+    "head": 3,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.107088255016392e-10,
+      "min_mean_ratio": 0.1540230771416636,
+      "max_mean_ratio": 0.9288309541150174,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "0ec7026368d2e9ef0e34022cc7f6b34c15a9e256c0b5b2004b4488e2e63b0858",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.3865612657406657e-13,
+      "preprojection_current_imbalance": 1.643670485668575e-12,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 25.810777582984883,
+      "reference": "sensor average",
+      "peak_child_MiB": 951.71875,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.107088255016392e-10,
+        "min_mean_ratio": 0.1540230771416636,
+        "max_mean_ratio": 0.9288309541150174,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "0ec7026368d2e9ef0e34022cc7f6b34c15a9e256c0b5b2004b4488e2e63b0858",
+        "exact_surface_facets": true,
+        "boundary_hash": "89e32659dd21c73620dbfe4e6f6a6883ef067d8dd0f5420aba8aa666aa6dd78f"
+      }
+    }
+  },
+  {
+    "label": "C-3-3",
+    "head": 3,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.886468921696999e-14,
+      "algebraic_reciprocity_relative": 8.145215311791183e-18,
+      "reciprocal_condition_estimate_mixed_units": 4.219726324184633e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "b1eec097612301f4a61985c24abd1622b280b085012543f25d53cbca8a0a25e2",
+        "fb520620fdb2e2270fbdb3e272df0171b57d4df62d129282895853c654ff021a",
+        "ef1539a6a88fcd74f7b5287191f1fcd3f9820c78f99d9a9454fb3529962a183c",
+        "09d53d772cd06b3a576ec4228268ccc73bc06bd0cf763ebe990c6e06fb46ba5e"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "935f096ba5a630aa0adf5f8e0ae34ec5a3d6fee28ef63d76f93dbf6a7acdf7ef",
+        "sources": "de2e0a3dc2ac3b024bf06a15f1f13a5ee2c05b6cd8b647f7a6128b38012b84a3",
+        "sensors": "70fe59e5c60114997f5a77b3ba7235be25ff5a98ea6cf95608e1572250e6e0fa",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.41558100003749,
+      "process_peak_rss_mib": 1067.296875,
+      "rank": 31,
+      "retained_condition": 96.0630012346156,
+      "singular_values": [
+        1263.380233777134,
+        1200.3352564202294,
+        1056.723596655277,
+        498.7983529395068,
+        492.55995568365506,
+        408.9734520435047,
+        364.014556742498,
+        330.75463150731787,
+        217.8401895621485,
+        201.99037276683777,
+        190.1547529168932,
+        165.28643777222314,
+        138.5013252160304,
+        129.46333899184538,
+        117.13739029906172,
+        92.55780113192127,
+        89.78133497488473,
+        80.74665817563712,
+        73.90609593534198,
+        67.23439642905163,
+        54.631431101940684,
+        50.9598892687877,
+        42.584052686183576,
+        39.949247854618086,
+        35.639754954737285,
+        31.376895095401636,
+        28.688639878205343,
+        23.522485414574078,
+        20.447665054425965,
+        18.49185078631718,
+        13.151579875081856,
+        1.1120825617615759e-13
+      ],
+      "reference_null_relative": 3.7119413160247584e-16,
+      "reference_reprojection_relative": 3.093433060301771e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "075559a690b154a50727b3132918d8ec66a1a24880dd17551a8b7aac705524a5"
+    }
+  },
+  {
+    "label": "C-4-1",
+    "head": 4,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.535605961952276e-07,
+      "min_mean_ratio": 0.13701519804633047,
+      "max_mean_ratio": 0.9696745182665799,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "dd99ddb7f4872616a84abb0a64b4d81aa842b6c689f2237f2aa0da4a88443fa8",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.2703267428133426e-14,
+      "preprojection_current_imbalance": 0.00021652803187740754,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.38819170801434666,
+      "reference": "sensor average",
+      "peak_child_MiB": 99.46875,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.535605961952276e-07,
+        "min_mean_ratio": 0.13701519804633047,
+        "max_mean_ratio": 0.9696745182665799,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "dd99ddb7f4872616a84abb0a64b4d81aa842b6c689f2237f2aa0da4a88443fa8",
+        "exact_surface_facets": true,
+        "boundary_hash": "a2a086f262a665d447837e4f66e03f41dbf27f42ddcd6ba4313c7fcc88ac981e"
+      }
+    }
+  },
+  {
+    "label": "C-4-1",
+    "head": 4,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.2306606593815636e-15,
+      "algebraic_reciprocity_relative": 3.001172719578507e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.298903291534015e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "d132d2fc99f945ab6e0ea777bc35d29b68a6093aa6b1a8e353ad43eab1590346",
+        "527b50caddc0b5e65848ff7c1d5f01b5c240df90c871909124f367c5c0076590",
+        "33a032457c2748cb581ef18a4a131a52d3538a3d7357e995952650129ae1dc44",
+        "095f9a97c1ff3f3c64dff5e80310d9ee717c256ed2e3da9f9a3378ee000deb73"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "5155765fb41a0d6d960eee3e4117a6fea0b795041ef0a5ed8abff379ed8bfd58",
+        "sources": "703a196c6b687f12b86cb1fc9d2c952871dc06d3312cda45084eddc4d8420791",
+        "sensors": "543d6296fcb0b7937dffc8348a2806451578208e580e15ea80065509ec965851",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.08532479201676324,
+      "process_peak_rss_mib": 304.453125,
+      "rank": 31,
+      "retained_condition": 220.9556873898352,
+      "singular_values": [
+        1434.7411859790282,
+        1333.3282575484807,
+        1160.1990072309784,
+        548.1121976741134,
+        523.666697333887,
+        492.3685665182798,
+        445.7737121395813,
+        406.9472473850902,
+        240.02974567164384,
+        224.6051939995538,
+        195.31694397901964,
+        191.99469072463043,
+        161.70320920029297,
+        150.55291260552667,
+        133.37228731708294,
+        79.98484702879347,
+        77.31074706843161,
+        69.20457579467444,
+        55.129289113769495,
+        53.771991233949755,
+        47.492060291056056,
+        41.236067254925885,
+        35.50891246158171,
+        26.359874624868425,
+        21.929079000393592,
+        17.84005940411415,
+        15.294087486947998,
+        12.604402838005239,
+        11.306661895571184,
+        7.874326406287872,
+        6.493343542896429,
+        1.5258124922435216e-13
+      ],
+      "reference_null_relative": 3.223841442116429e-16,
+      "reference_reprojection_relative": 3.034575803640004e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "a6f547e49025cc85d63f09da4e969adc08cf0d97a3b82bd62b41a70f06fad148"
+    }
+  },
+  {
+    "label": "C-4-2",
+    "head": 4,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.1945236700780474e-08,
+      "min_mean_ratio": 0.1366770587667971,
+      "max_mean_ratio": 0.9367847308235154,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "3767dfcae9216498950757969fc1fd0fb963ba3c631bb6eef5bdcd1c632bf799",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.1610673953931904e-13,
+      "preprojection_current_imbalance": 7.996390235441292e-08,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.4948734589852393,
+      "reference": "sensor average",
+      "peak_child_MiB": 425.953125,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.1945236700780474e-08,
+        "min_mean_ratio": 0.1366770587667971,
+        "max_mean_ratio": 0.9367847308235154,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "3767dfcae9216498950757969fc1fd0fb963ba3c631bb6eef5bdcd1c632bf799",
+        "exact_surface_facets": true,
+        "boundary_hash": "64f0b648295d4b75d96be9045cd44ca0b1c9613a2e6e23e1f9dcaef5d917fc4d"
+      }
+    }
+  },
+  {
+    "label": "C-4-2",
+    "head": 4,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 8.120914835553485e-15,
+      "algebraic_reciprocity_relative": 3.537849020294958e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.7212832073259632e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "be6c699cdc8c34d87a109f48af45390df87aaeb4819dcc78b8f0cd18432c32b4",
+        "b4a32d9247aa3c23a597a95d80706dad8c48a3a5ed2ddcbeb076400a88fc0486",
+        "17e03133a00e895bf1ac6553b5b839969d59348fd25bab423efe8facdc127cb4",
+        "1add0c673a6ea33f6439f7b604ce94aaab6e6b3f1628faef52e4b8a27694c152"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "1b8f83ef2ac6e9067b5386460d5d1e6c0dae6fda09a30c5844a9487950e8ba12",
+        "sources": "703a196c6b687f12b86cb1fc9d2c952871dc06d3312cda45084eddc4d8420791",
+        "sensors": "543d6296fcb0b7937dffc8348a2806451578208e580e15ea80065509ec965851",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.9975384580320679,
+      "process_peak_rss_mib": 356.625,
+      "rank": 31,
+      "retained_condition": 125.36101424325612,
+      "singular_values": [
+        1296.1184365673143,
+        1205.613376916045,
+        1046.3444628485786,
+        476.97156796343415,
+        456.6906454102032,
+        431.0369496405509,
+        387.3407697187967,
+        355.0585624494773,
+        216.1869837632164,
+        206.21019385117899,
+        180.92356589691153,
+        171.91302110415606,
+        151.11071675076286,
+        138.3642839583865,
+        125.77087415892095,
+        92.21471140695334,
+        82.5085979169191,
+        75.24943358841776,
+        62.07057791181666,
+        59.69612082286617,
+        54.16332102640951,
+        46.95468918991474,
+        40.04905002244854,
+        37.38248600639053,
+        28.60359461960901,
+        27.518297095607164,
+        23.376348824661815,
+        20.686633183563128,
+        17.75427024898574,
+        15.192526556533469,
+        10.339087031094596,
+        1.211707530523155e-13
+      ],
+      "reference_null_relative": 3.8803743236351277e-16,
+      "reference_reprojection_relative": 3.0057659139230254e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "80dfb8ff25aab54e19a39fce164da77bcd46486872d55dd7a50c39ef5ff5af3e"
+    }
+  },
+  {
+    "label": "C-4-3",
+    "head": 4,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.021604656645202e-10,
+      "min_mean_ratio": 0.159899164395297,
+      "max_mean_ratio": 0.9167922933350379,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "3f7c591a9f5b3519406fdc9f3e3d53b3d874b5386ee46d07dc8736712adcf58a",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.9718094913853324e-13,
+      "preprojection_current_imbalance": 9.647106508853769e-12,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 25.102475958992727,
+      "reference": "sensor average",
+      "peak_child_MiB": 962.28125,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.021604656645202e-10,
+        "min_mean_ratio": 0.159899164395297,
+        "max_mean_ratio": 0.9167922933350379,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "3f7c591a9f5b3519406fdc9f3e3d53b3d874b5386ee46d07dc8736712adcf58a",
+        "exact_surface_facets": true,
+        "boundary_hash": "0ac64a59b3529106b202718975965556a8a926b33749df2bc3ed6e8535be5127"
+      }
+    }
+  },
+  {
+    "label": "C-4-3",
+    "head": 4,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.6448888290899374e-14,
+      "algebraic_reciprocity_relative": 3.1306470055574565e-17,
+      "reciprocal_condition_estimate_mixed_units": 4.3797518675337425e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "46ae8fd102453dc3b413417135dc04e504478517cb9af2f154f07baa3376c204",
+        "7d07c66e477a5c44f25971ba1d7b4dcb92b237689380a528bc3f04a414a03115",
+        "c1e22e7ea9805d03b1432fefaa342f10677582c36d467526f30657d8f8981983",
+        "009ed13447d0008d6230337a13f7088fe965fdb9f2982004c506b5c487d61664"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "f618a365ee1261d4fe389d1c1aab916e2b3d689e1bd550fb025b1d8248e9b86a",
+        "sources": "703a196c6b687f12b86cb1fc9d2c952871dc06d3312cda45084eddc4d8420791",
+        "sensors": "543d6296fcb0b7937dffc8348a2806451578208e580e15ea80065509ec965851",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.148074208002072,
+      "process_peak_rss_mib": 1084.640625,
+      "rank": 31,
+      "retained_condition": 125.32963172196489,
+      "singular_values": [
+        1263.6058376684919,
+        1175.3512832961624,
+        1020.2062549027071,
+        459.1092814643982,
+        439.1068446730431,
+        416.27957074552177,
+        373.13469511369095,
+        342.1823383314913,
+        206.98134376227495,
+        198.6797947613103,
+        173.33144779033546,
+        164.89533955669575,
+        145.32168964157643,
+        132.5318056262104,
+        121.16609037747246,
+        89.8861614536863,
+        79.3297070801777,
+        72.8181108175441,
+        59.857823321302604,
+        57.42262424272427,
+        52.75221146006462,
+        45.39705600485884,
+        38.66579669470536,
+        37.35037920880643,
+        28.603939150346736,
+        27.353249154565443,
+        22.867522822076165,
+        20.266026249423177,
+        17.26759219958476,
+        14.998919760241218,
+        10.082259241547234,
+        1.3083357321453567e-13
+      ],
+      "reference_null_relative": 4.18638717194754e-16,
+      "reference_reprojection_relative": 3.189877440967663e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "09c5ed32624efa2dcc6c579e8a0bc4be294ccf211ddf33caa41f86135c56242e"
+    }
+  },
+  {
+    "label": "C-5-1",
+    "head": 5,
+    "level": 1,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 295,
+      "elements": 1520,
+      "min_volume_m3": 3.526710923729285e-07,
+      "min_mean_ratio": 0.1357651569061146,
+      "max_mean_ratio": 0.9695364507121953,
+      "tissue_counts": [
+        800,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "569fca801c6c060b03c0e7465c8bc86a547a458e21d916f68483389faa6ed529",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 3.6322653492497815e-14,
+      "preprojection_current_imbalance": 6.912878846523552e-05,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 0.39699562499299645,
+      "reference": "sensor average",
+      "peak_child_MiB": 93.78125,
+      "surface_audit": {
+        "nodes": 295,
+        "elements": 1520,
+        "min_volume_m3": 3.526710923729285e-07,
+        "min_mean_ratio": 0.1357651569061146,
+        "max_mean_ratio": 0.9695364507121953,
+        "tissue_counts": [
+          800,
+          240,
+          240,
+          240
+        ],
+        "mesh_hash": "569fca801c6c060b03c0e7465c8bc86a547a458e21d916f68483389faa6ed529",
+        "exact_surface_facets": true,
+        "boundary_hash": "a6d1bc26d8a16370aed2dea7b0a645b98d1e7e102a7612269cc5eff1893f21cf"
+      }
+    }
+  },
+  {
+    "label": "C-5-1",
+    "head": 5,
+    "level": 1,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 408,
+      "estimated_dense_bytes": 5326848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.3481908415500497e-15,
+      "algebraic_reciprocity_relative": 3.7173106923441955e-17,
+      "reciprocal_condition_estimate_mixed_units": 7.351250585268146e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "e4aee9da1a78d9ee33639b242be9498851f56e6e256e84286285ea889f33d257",
+        "ca063d7b874cfbec0951280707e486c3b03cf6d9061275d26fc7d2a9416532c7",
+        "bf41a34235c1fce112449b9ac85388683821a17e2870c3884f70cbaaa63148b0",
+        "83ec8d40b06d6e96245c7d608554ecd090a70bd5bb08a1bcd41a4f34b9561515"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "b9573dd8fa912b348a0d76d66eefbe202c2db2516199d490e143458ba522038e",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.0851630829856731,
+      "process_peak_rss_mib": 305.46875,
+      "rank": 31,
+      "retained_condition": 221.06000539390374,
+      "singular_values": [
+        1457.0678864926274,
+        1341.986348996975,
+        1169.6937264060443,
+        557.6978163471642,
+        549.2641631274151,
+        460.2813368415172,
+        412.6350255504902,
+        362.7121301073979,
+        237.15478390732935,
+        205.15195475477773,
+        189.07831343407076,
+        162.09915699723257,
+        142.66998975503637,
+        123.77400067604776,
+        114.85983267038279,
+        85.17957715815835,
+        70.38083399798431,
+        59.12424549682669,
+        52.27037875238652,
+        52.195286755749144,
+        38.27196810925107,
+        36.47834685945716,
+        28.93747245343763,
+        24.578720333662524,
+        18.198266976796923,
+        17.149342664440546,
+        16.59824895817949,
+        10.745571391503269,
+        10.442916533948328,
+        7.185094264947128,
+        6.591277711661585,
+        1.4878289518238854e-13
+      ],
+      "reference_null_relative": 3.270602187570164e-16,
+      "reference_reprojection_relative": 2.77116390112732e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "f55cccdeaa1edaedb822fb8701fd40e08953c0688508d521d7dab1a90a83dc08"
+    }
+  },
+  {
+    "label": "C-5-2",
+    "head": 5,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.191518433120662e-08,
+      "min_mean_ratio": 0.13567171434178524,
+      "max_mean_ratio": 0.9330797563867506,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "a4ea667ea0c70130566090ac31d6b8597f2f9833a3ec40262b5bc1108ba47f70",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 9.797552967365258e-14,
+      "preprojection_current_imbalance": 3.9181498290769846e-08,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.5054444160196,
+      "reference": "sensor average",
+      "peak_child_MiB": 414.6875,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.191518433120662e-08,
+        "min_mean_ratio": 0.13567171434178524,
+        "max_mean_ratio": 0.9330797563867506,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "a4ea667ea0c70130566090ac31d6b8597f2f9833a3ec40262b5bc1108ba47f70",
+        "exact_surface_facets": true,
+        "boundary_hash": "3488451c98591346c8b620e9893ae6b5ee89b12c260f15af9a004be295497b42"
+      }
+    }
+  },
+  {
+    "label": "C-5-2",
+    "head": 5,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 1608,
+      "estimated_dense_bytes": 82741248,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 8.933297649739246e-15,
+      "algebraic_reciprocity_relative": 2.1209919196829318e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.7353254090803056e-05,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "4ad924b7c62830c3ec79323109d9184d737e64129611082886b29d40b17fbe0d",
+        "d10e34c293379dff828e62fc754563904af5e109302e099a9daaa038040149a7",
+        "e63e8791b450bef4740d3adc32c15450351f1960cabf0a0799741159ebb6a4d0",
+        "f8e4cbbea3763d66ad406efb77e3bf5243b3f2468c88d5cc443837011b25a441"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "21ec1e5930d628df3209abddd240e630b17dc43a5d007332f5a7192dc2e1789f",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 1.0077232079929672,
+      "process_peak_rss_mib": 359.625,
+      "rank": 31,
+      "retained_condition": 123.92329201633527,
+      "singular_values": [
+        1315.050847467517,
+        1210.744445352913,
+        1056.737268327155,
+        484.646582083553,
+        476.7465294519694,
+        402.7928838402621,
+        359.8813822335765,
+        315.47657415357475,
+        213.28509810914903,
+        185.24530313703147,
+        171.55877416976602,
+        150.61688167242468,
+        126.8993187777497,
+        116.17778912952996,
+        109.91983605892429,
+        89.63485625641061,
+        76.29890153109706,
+        65.25174650105332,
+        59.439891895362855,
+        57.959124423742395,
+        46.34976147053028,
+        39.47117211688547,
+        35.698430522177944,
+        34.302194360231674,
+        27.931337860016292,
+        24.80168107154813,
+        21.963170394723228,
+        19.928404438406183,
+        16.155419032172155,
+        12.562906937910938,
+        10.611813373180647,
+        1.281201805653351e-13
+      ],
+      "reference_null_relative": 3.328041057892503e-16,
+      "reference_reprojection_relative": 3.047021202684878e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "05d3bbc80120ccfe2b03739449523a2373a7e4ed6ea1c57a6c7b7facad6d2532"
+    }
+  },
+  {
+    "label": "C-5-3",
+    "head": 5,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 8.998907693488919e-10,
+      "min_mean_ratio": 0.16189552435497953,
+      "max_mean_ratio": 0.913869529562248,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "e3bf5695deb7aa2eca4b4d3f2e71a534ea73bbdd4511423a00c2cbf2950d9ad5",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.5609514104816542e-13,
+      "preprojection_current_imbalance": 1.0840027934057145e-11,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 25.202886999992188,
+      "reference": "sensor average",
+      "peak_child_MiB": 954.265625,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 8.998907693488919e-10,
+        "min_mean_ratio": 0.16189552435497953,
+        "max_mean_ratio": 0.913869529562248,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "e3bf5695deb7aa2eca4b4d3f2e71a534ea73bbdd4511423a00c2cbf2950d9ad5",
+        "exact_surface_facets": true,
+        "boundary_hash": "b4145c9656233880e738d014b582751e609f83ee6b4dcb73d2787b6ba51a1883"
+      }
+    }
+  },
+  {
+    "label": "C-5-3",
+    "head": 5,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6408,
+      "estimated_dense_bytes": 1313998848,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.061852423423708e-14,
+      "algebraic_reciprocity_relative": 1.0243173930639038e-16,
+      "reciprocal_condition_estimate_mixed_units": 4.366777477194402e-06,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "a1e745fec4daf21a927e4a54d0c6550e4571d993454be87fc3eb1be348d990e3",
+        "85298711adfc1a6908598e92f738fcd438484e370aa916e3182d0383dd25892c",
+        "387519e465c1720c2949a3c5f13fc18c02bb8de4a97ddcdeeda4efbd12533700",
+        "1d0ee23d4f1b25a9876d1cb61d3e31689729548e77cc27f6d728ab64f617e70a"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "b5abd8c9f3dbf3a2eda18733036289b17c9eab5ab603ae94a3e6b326b826ea94",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 16.155647124978714,
+      "process_peak_rss_mib": 1062.9375,
+      "rank": 31,
+      "retained_condition": 124.03817929433953,
+      "singular_values": [
+        1281.6216012253403,
+        1180.2825100746643,
+        1030.1897586542873,
+        466.28784713979957,
+        458.690076606798,
+        387.6331573163698,
+        346.29980580006514,
+        304.0335314393359,
+        204.47785741736186,
+        177.15117609202176,
+        164.1185248500992,
+        144.43457198148124,
+        121.67623943834636,
+        111.17879901443537,
+        105.5923756099112,
+        86.35121697850158,
+        73.42590314889758,
+        63.3115867738272,
+        57.11580767107669,
+        56.27109648443849,
+        45.09146880457888,
+        38.5891465766806,
+        35.20471125053073,
+        33.6074444165145,
+        27.514021469852498,
+        24.391312511074037,
+        21.501860385014883,
+        19.62996136502462,
+        15.71416342388247,
+        12.435937388091086,
+        10.332476730282247,
+        1.204395482753657e-13
+      ],
+      "reference_null_relative": 3.4703984512387985e-16,
+      "reference_reprojection_relative": 2.994052842991277e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "f2e503ec92dee7f2ea2e25563ed52527569b1955d53ad3ac94e51660a230832e"
+    }
+  },
+  {
+    "label": "T-0-2",
+    "head": 0,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2053329891794115e-08,
+      "min_mean_ratio": 0.13203035720441367,
+      "max_mean_ratio": 0.9475020874344993,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "5c183fd9142986524d4a05994321ae5737893a6caaac272f042a65bb4aa2fed4",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 8.640417876897613e-14,
+      "preprojection_current_imbalance": 3.3953919734615635e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.4728907080134377,
+      "reference": "sensor average",
+      "peak_child_MiB": 410.453125,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2053329891794115e-08,
+        "min_mean_ratio": 0.13203035720441367,
+        "max_mean_ratio": 0.9475020874344993,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "5c183fd9142986524d4a05994321ae5737893a6caaac272f042a65bb4aa2fed4",
+        "exact_surface_facets": true,
+        "boundary_hash": "89ef041c16778ee9b4a9ba7d638bd618d6d504bb010276d88bac0053cc503d1b"
+      }
+    }
+  },
+  {
+    "label": "T-0-2",
+    "head": 0,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 3,
+      "unknowns": 1126,
+      "estimated_dense_bytes": 40572032,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.2853336719561232e-15,
+      "algebraic_reciprocity_relative": 6.027779874884802e-17,
+      "reciprocal_condition_estimate_mixed_units": 0.0010804331458731035,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "329ab623db4f58f4233c9d477da202cf68046848aa4d01f994a353606fa3bb45",
+        "5350deb9d1437b3bd4755b1b42b782ebd96b82009bedb7b826c7347fb3e8729b",
+        "83593109feb3843b95b7f88275cbc4a310a0bdad84d2e9e7be4e1661e2d6a45a"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "a209fa2cc6efbab49e7c65b0bbc69dc5ae8e8bb91a6087bbcbdcd9308814eb5a",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.6615844999905676,
+      "process_peak_rss_mib": 327.65625,
+      "rank": 31,
+      "retained_condition": 160.63285206572013,
+      "singular_values": [
+        1437.0826822659542,
+        1257.8918810930209,
+        1081.8116458827626,
+        542.7826858529356,
+        524.1703446445573,
+        452.1252635496823,
+        402.32648411158004,
+        371.51383680808914,
+        251.16572217611048,
+        228.33055054083437,
+        216.0586138679455,
+        191.14397555650703,
+        158.98495731281756,
+        140.21623855287035,
+        122.70608894338848,
+        111.33014854084666,
+        97.7080000149238,
+        81.60029737258867,
+        75.88043074260453,
+        67.80669021633433,
+        51.59563998423876,
+        44.925475466646006,
+        41.49595435471557,
+        34.09908761970629,
+        32.269631486497836,
+        27.008532469207555,
+        25.479826894681043,
+        19.425923271895314,
+        17.056057504844475,
+        12.970704795656257,
+        8.946380916389362,
+        1.2753919423026785e-13
+      ],
+      "reference_null_relative": 3.184061463075557e-16,
+      "reference_reprojection_relative": 2.9873487899555394e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "8c27e2c4f5a987594b265968ade285193d4536cf691334378587afa0faac1fa7"
+    }
+  },
+  {
+    "label": "T-0-2",
+    "head": 0,
+    "level": 2,
+    "solver": "mne",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "MNE linear collocation",
+      "solver_version": "1.13.2",
+      "system_residual_scope": "MNE diagnostics not exposed; no fabricated PDE residual",
+      "independent_codebase_from_OpenMEEG": true,
+      "effective_geometry_unchanged": true,
+      "sensor_projection_max_m": 0.0,
+      "sensor_weights": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sensor_triangles": [
+        0,
+        68,
+        16,
+        164,
+        4,
+        20,
+        64,
+        192,
+        8,
+        112,
+        40,
+        240,
+        1,
+        5,
+        2,
+        17,
+        21,
+        18,
+        33,
+        37,
+        34,
+        65,
+        69,
+        66,
+        81,
+        82,
+        113,
+        114,
+        129,
+        145,
+        161,
+        165
+      ],
+      "effective_sensors_m": [
+        [
+          0.0,
+          -0.04631334302627036,
+          -0.08097537374927129
+        ],
+        [
+          0.0,
+          -0.04631334302627036,
+          0.08097537374927129
+        ],
+        [
+          0.0,
+          0.04647513832904382,
+          -0.08125826058612792
+        ],
+        [
+          0.0,
+          0.04647513832904382,
+          0.08125826058612792
+        ],
+        [
+          -0.04563145395506336,
+          -0.07451490649296338,
+          0.0
+        ],
+        [
+          -0.04631056586227842,
+          0.07562387751795464,
+          0.0
+        ],
+        [
+          0.04563145395506336,
+          -0.07451490649296338,
+          0.0
+        ],
+        [
+          0.04631056586227842,
+          0.07562387751795464,
+          0.0
+        ],
+        [
+          -0.0750488921071169,
+          0.0,
+          -0.05058328721683074
+        ],
+        [
+          -0.0737183132529989,
+          0.0,
+          0.04968647114862777
+        ],
+        [
+          0.0737183132529989,
+          0.0,
+          -0.04968647114862777
+        ],
+        [
+          0.0750488921071169,
+          0.0,
+          0.05058328721683074
+        ],
+        [
+          -0.02693229574866013,
+          -0.0711606438779547,
+          -0.04752382839719549
+        ],
+        [
+          -0.07098820482927248,
+          -0.0442781805806899,
+          -0.029570680378689405
+        ],
+        [
+          -0.04405936710991253,
+          -0.027481588213922003,
+          -0.07774568575071031
+        ],
+        [
+          -0.02727674085915831,
+          0.07207073843775039,
+          -0.04813162472010579
+        ],
+        [
+          -0.07120148921036869,
+          0.04441121457364592,
+          -0.029659525621055095
+        ],
+        [
+          -0.04409058117862169,
+          0.027501057676127538,
+          -0.07780076505248079
+        ],
+        [
+          0.0,
+          0.0,
+          -0.09535839271967203
+        ],
+        [
+          0.04335220803988652,
+          -0.027040504838490978,
+          -0.0764978565048463
+        ],
+        [
+          0.0433829211183807,
+          0.027059661813076046,
+          -0.07655205177603776
+        ],
+        [
+          0.02693229574866013,
+          -0.0711606438779547,
+          0.04752382839719549
+        ],
+        [
+          -0.02676635831005493,
+          -0.07072220316406971,
+          0.0472310207423807
+        ],
+        [
+          0.0,
+          -0.08719432064644607,
+          0.0
+        ],
+        [
+          0.02676635831005493,
+          -0.07072220316406971,
+          -0.0472310207423807
+        ],
+        [
+          0.0702818603893731,
+          -0.04383760532262767,
+          -0.029276447192771227
+        ],
+        [
+          -0.0704930225554187,
+          0.04396931560523677,
+          0.02936440841020479
+        ],
+        [
+          -0.08743967172525549,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0702818603893731,
+          -0.04383760532262767,
+          0.029276447192771227
+        ],
+        [
+          -0.04335220803988652,
+          -0.027040504838490978,
+          0.0764978565048463
+        ],
+        [
+          -0.0433829211183807,
+          0.027059661813076046,
+          0.07655205177603776
+        ],
+        [
+          0.0,
+          0.0,
+          0.09535839271967203
+        ]
+      ],
+      "ip_enabled": true,
+      "ip_ratio": 0.012121212121212121,
+      "contracts": {
+        "geometry": "a209fa2cc6efbab49e7c65b0bbc69dc5ae8e8bb91a6087bbcbdcd9308814eb5a",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.42491729196626693,
+      "process_peak_rss_mib": 313.25,
+      "rank": 31,
+      "retained_condition": 276.9578288480393,
+      "singular_values": [
+        1225.080951651499,
+        1053.801381033945,
+        906.2863307113522,
+        373.3577602151095,
+        357.86721080346564,
+        311.05899099271636,
+        276.6972818710184,
+        255.61243357153234,
+        144.32772791429642,
+        130.73381442225997,
+        125.70076309198728,
+        108.97890218425529,
+        93.40064657425448,
+        79.66529350911988,
+        68.5908440720139,
+        56.65687355705137,
+        50.60521231619246,
+        41.494779397985155,
+        38.347480276915284,
+        34.151426772068184,
+        26.158691149683452,
+        21.737426041431764,
+        20.602244038401587,
+        16.427349400932254,
+        14.895337757523738,
+        12.705867652204839,
+        12.135561237496763,
+        9.282421478986741,
+        7.911802106704212,
+        6.2201630987801,
+        4.423348336990589,
+        1.3184971957079114e-13
+      ],
+      "reference_null_relative": 3.697975325530814e-16,
+      "reference_reprojection_relative": 2.9515376361034375e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "8c27e2c4f5a987594b265968ade285193d4536cf691334378587afa0faac1fa7"
+    }
+  },
+  {
+    "label": "T-0-3",
+    "head": 0,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 9.103241719168791e-10,
+      "min_mean_ratio": 0.14965913836284275,
+      "max_mean_ratio": 0.9266404347717031,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "a826a2c7ca9fbe1f18571023b370ee7a7683cf799b6de7458b352dd6faae29ca",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.514367817335846e-13,
+      "preprojection_current_imbalance": 2.5476586989161594e-11,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 26.830183332960587,
+      "reference": "sensor average",
+      "peak_child_MiB": 954.015625,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 9.103241719168791e-10,
+        "min_mean_ratio": 0.14965913836284275,
+        "max_mean_ratio": 0.9266404347717031,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "a826a2c7ca9fbe1f18571023b370ee7a7683cf799b6de7458b352dd6faae29ca",
+        "exact_surface_facets": true,
+        "boundary_hash": "a4a9669631febff00583afb955d749de14c3e7fb007613b28e6b956cb490cb20"
+      }
+    }
+  },
+  {
+    "label": "T-0-3",
+    "head": 0,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 3,
+      "unknowns": 4486,
+      "estimated_dense_bytes": 643974272,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 1.0349594221169797e-14,
+      "algebraic_reciprocity_relative": 1.6336041147704485e-17,
+      "reciprocal_condition_estimate_mixed_units": 0.0005220033574472745,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "bfa7229d37744b863060dac732f77a81004c7919f3188b2c2c4473af0e28f563",
+        "d35dcaa9fc3cac244d61b474f8accb68218c84da00327aa3efbe26269521e64a",
+        "f4d0a61207bbc258ca8bfc12de3e5efd49107ad56779942fc4fccbc3560c442d"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "987d9b34077e58bd1c4b5f4a5f6e2cc8653aca4381fa98d423ceb463563de216",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 10.430348499969114,
+      "process_peak_rss_mib": 686.96875,
+      "rank": 31,
+      "retained_condition": 165.43018758739245,
+      "singular_values": [
+        1401.2348828692134,
+        1226.63622580719,
+        1054.9282778838494,
+        521.8144705253421,
+        503.22224015683304,
+        434.92634268433056,
+        386.5037380800267,
+        357.63386901180877,
+        241.18592422848957,
+        217.15322134016932,
+        205.67909165682005,
+        181.46633127779515,
+        151.15355947152256,
+        133.3789360920572,
+        116.8338388024547,
+        106.54578423259412,
+        92.89825965297142,
+        76.83466523588051,
+        72.58288773032484,
+        65.05756800402975,
+        48.9568157998302,
+        42.799998045222786,
+        39.46241786243763,
+        32.56097409633654,
+        31.06420580813408,
+        25.848043455769346,
+        24.205115552390577,
+        18.564788075448988,
+        16.35527080366198,
+        12.31338370767065,
+        8.470249011408377,
+        1.2508098812198507e-13
+      ],
+      "reference_null_relative": 3.217554092787827e-16,
+      "reference_reprojection_relative": 3.154706947924429e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "f1438fcc9e2c5163278e10dc71e29a79644544d1fa324a89f49d21e02d61fa1c"
+    }
+  },
+  {
+    "label": "T-0-3",
+    "head": 0,
+    "level": 3,
+    "solver": "mne",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "MNE linear collocation",
+      "solver_version": "1.13.2",
+      "system_residual_scope": "MNE diagnostics not exposed; no fabricated PDE residual",
+      "independent_codebase_from_OpenMEEG": true,
+      "effective_geometry_unchanged": true,
+      "sensor_projection_max_m": 0.0,
+      "sensor_weights": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sensor_triangles": [
+        0,
+        272,
+        64,
+        656,
+        16,
+        80,
+        256,
+        768,
+        32,
+        448,
+        160,
+        960,
+        4,
+        20,
+        8,
+        68,
+        84,
+        72,
+        132,
+        148,
+        136,
+        260,
+        276,
+        264,
+        324,
+        328,
+        452,
+        456,
+        516,
+        580,
+        644,
+        660
+      ],
+      "effective_sensors_m": [
+        [
+          0.0,
+          -0.04631334302627036,
+          -0.08097537374927129
+        ],
+        [
+          0.0,
+          -0.04631334302627036,
+          0.08097537374927129
+        ],
+        [
+          0.0,
+          0.04647513832904382,
+          -0.08125826058612792
+        ],
+        [
+          0.0,
+          0.04647513832904382,
+          0.08125826058612792
+        ],
+        [
+          -0.04563145395506336,
+          -0.07451490649296338,
+          0.0
+        ],
+        [
+          -0.04631056586227842,
+          0.07562387751795464,
+          0.0
+        ],
+        [
+          0.04563145395506336,
+          -0.07451490649296338,
+          0.0
+        ],
+        [
+          0.04631056586227842,
+          0.07562387751795464,
+          0.0
+        ],
+        [
+          -0.0750488921071169,
+          0.0,
+          -0.05058328721683074
+        ],
+        [
+          -0.0737183132529989,
+          0.0,
+          0.04968647114862777
+        ],
+        [
+          0.0737183132529989,
+          0.0,
+          -0.04968647114862777
+        ],
+        [
+          0.0750488921071169,
+          0.0,
+          0.05058328721683074
+        ],
+        [
+          -0.02693229574866013,
+          -0.0711606438779547,
+          -0.04752382839719549
+        ],
+        [
+          -0.07098820482927248,
+          -0.0442781805806899,
+          -0.029570680378689405
+        ],
+        [
+          -0.04405936710991253,
+          -0.027481588213922003,
+          -0.07774568575071031
+        ],
+        [
+          -0.02727674085915831,
+          0.07207073843775039,
+          -0.04813162472010579
+        ],
+        [
+          -0.07120148921036869,
+          0.04441121457364592,
+          -0.029659525621055095
+        ],
+        [
+          -0.04409058117862169,
+          0.027501057676127538,
+          -0.07780076505248079
+        ],
+        [
+          0.0,
+          0.0,
+          -0.09535839271967203
+        ],
+        [
+          0.04335220803988652,
+          -0.027040504838490978,
+          -0.0764978565048463
+        ],
+        [
+          0.0433829211183807,
+          0.027059661813076046,
+          -0.07655205177603776
+        ],
+        [
+          0.02693229574866013,
+          -0.0711606438779547,
+          0.04752382839719549
+        ],
+        [
+          -0.02676635831005493,
+          -0.07072220316406971,
+          0.0472310207423807
+        ],
+        [
+          0.0,
+          -0.08719432064644607,
+          0.0
+        ],
+        [
+          0.02676635831005493,
+          -0.07072220316406971,
+          -0.0472310207423807
+        ],
+        [
+          0.0702818603893731,
+          -0.04383760532262767,
+          -0.029276447192771227
+        ],
+        [
+          -0.0704930225554187,
+          0.04396931560523677,
+          0.02936440841020479
+        ],
+        [
+          -0.08743967172525549,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0702818603893731,
+          -0.04383760532262767,
+          0.029276447192771227
+        ],
+        [
+          -0.04335220803988652,
+          -0.027040504838490978,
+          0.0764978565048463
+        ],
+        [
+          -0.0433829211183807,
+          0.027059661813076046,
+          0.07655205177603776
+        ],
+        [
+          0.0,
+          0.0,
+          0.09535839271967203
+        ]
+      ],
+      "ip_enabled": true,
+      "ip_ratio": 0.012121212121212121,
+      "contracts": {
+        "geometry": "987d9b34077e58bd1c4b5f4a5f6e2cc8653aca4381fa98d423ceb463563de216",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 2.741492874978576,
+      "process_peak_rss_mib": 428.796875,
+      "rank": 31,
+      "retained_condition": 208.17798822015635,
+      "singular_values": [
+        1299.8556226374458,
+        1130.413620366252,
+        972.199807837061,
+        439.3179597445616,
+        422.52992435404053,
+        366.35358573398173,
+        325.98285975719887,
+        301.41467066595726,
+        186.69543992406915,
+        168.24497629528761,
+        161.2239548930709,
+        140.86220519566902,
+        119.15161859895548,
+        103.12400237777527,
+        89.44724861027386,
+        77.75383424185266,
+        69.1107582019605,
+        56.80743344587518,
+        52.94107084278272,
+        47.37389028887905,
+        35.93715226639217,
+        30.655328665875782,
+        28.61148653566875,
+        23.359053160177528,
+        21.6580058986535,
+        18.1462600338314,
+        17.168030423934,
+        13.223727135665484,
+        11.50411037282017,
+        8.78445630467681,
+        6.243962840407496,
+        1.185065245325564e-13
+      ],
+      "reference_null_relative": 3.462989533711314e-16,
+      "reference_reprojection_relative": 3.1087980537852033e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "f1438fcc9e2c5163278e10dc71e29a79644544d1fa324a89f49d21e02d61fa1c"
+    }
+  },
+  {
+    "label": "T-5-2",
+    "head": 5,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.191518433120662e-08,
+      "min_mean_ratio": 0.13567171434178524,
+      "max_mean_ratio": 0.9330797563867506,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "a4ea667ea0c70130566090ac31d6b8597f2f9833a3ec40262b5bc1108ba47f70",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.2006980827125013e-13,
+      "preprojection_current_imbalance": 1.1067582597978747e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 3.759718041983433,
+      "reference": "sensor average",
+      "peak_child_MiB": 441.515625,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.191518433120662e-08,
+        "min_mean_ratio": 0.13567171434178524,
+        "max_mean_ratio": 0.9330797563867506,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "a4ea667ea0c70130566090ac31d6b8597f2f9833a3ec40262b5bc1108ba47f70",
+        "exact_surface_facets": true,
+        "boundary_hash": "3488451c98591346c8b620e9893ae6b5ee89b12c260f15af9a004be295497b42"
+      }
+    }
+  },
+  {
+    "label": "T-5-2",
+    "head": 5,
+    "level": 2,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 3,
+      "unknowns": 1126,
+      "estimated_dense_bytes": 40572032,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.41654393867228e-15,
+      "algebraic_reciprocity_relative": 9.361490773147458e-17,
+      "reciprocal_condition_estimate_mixed_units": 0.0010915127713983445,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "d10e34c293379dff828e62fc754563904af5e109302e099a9daaa038040149a7",
+        "e63e8791b450bef4740d3adc32c15450351f1960cabf0a0799741159ebb6a4d0",
+        "f8e4cbbea3763d66ad406efb77e3bf5243b3f2468c88d5cc443837011b25a441"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "f83f4e66e5a60c36efc88960bf61086d8c31b30d18e900121e9b3f0ff2333d94",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 1.074074833013583,
+      "process_peak_rss_mib": 302.515625,
+      "rank": 31,
+      "retained_condition": 109.03124867570418,
+      "singular_values": [
+        1424.477106786544,
+        1310.0495433855174,
+        1144.8492636033482,
+        544.1917097367535,
+        534.7629724036367,
+        453.5579180279633,
+        404.03913785377557,
+        354.0482043775627,
+        247.8429928761921,
+        215.87648614769887,
+        200.25745895461796,
+        176.6031184165616,
+        147.4430716314479,
+        136.39652648250694,
+        130.61697698175863,
+        108.1741095653754,
+        92.6719938073987,
+        79.83630524634128,
+        72.39611075584918,
+        71.09428556544378,
+        57.23389733670587,
+        49.0801592525912,
+        44.97314529497363,
+        42.93228384452591,
+        35.114781697581485,
+        31.176768323313684,
+        27.586882048227974,
+        25.31777258953694,
+        20.24627954662954,
+        16.1813347144712,
+        13.06485181164366,
+        1.0999544457926049e-13
+      ],
+      "reference_null_relative": 2.9231162025093844e-16,
+      "reference_reprojection_relative": 2.9106749375641193e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "0da255e8a8ca9025fb63fed9c472a9b448f75feac5bf1d07a528f52cc63caad0"
+    }
+  },
+  {
+    "label": "T-5-2",
+    "head": 5,
+    "level": 2,
+    "solver": "mne",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "MNE linear collocation",
+      "solver_version": "1.13.2",
+      "system_residual_scope": "MNE diagnostics not exposed; no fabricated PDE residual",
+      "independent_codebase_from_OpenMEEG": true,
+      "effective_geometry_unchanged": true,
+      "sensor_projection_max_m": 0.0,
+      "sensor_weights": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sensor_triangles": [
+        0,
+        68,
+        16,
+        164,
+        4,
+        20,
+        64,
+        192,
+        8,
+        112,
+        40,
+        240,
+        1,
+        5,
+        2,
+        17,
+        21,
+        18,
+        33,
+        37,
+        34,
+        65,
+        69,
+        66,
+        81,
+        82,
+        113,
+        114,
+        129,
+        145,
+        161,
+        165
+      ],
+      "effective_sensors_m": [
+        [
+          0.0,
+          -0.04654465675348105,
+          -0.07746991192176926
+        ],
+        [
+          0.0,
+          -0.04654465675348105,
+          0.07746991192176926
+        ],
+        [
+          0.0,
+          0.0463826194341169,
+          -0.07720021357753899
+        ],
+        [
+          0.0,
+          0.0463826194341169,
+          0.07720021357753899
+        ],
+        [
+          -0.04794674491869663,
+          -0.07573699719879692,
+          0.0
+        ],
+        [
+          -0.04724363959531702,
+          0.07462636735317218,
+          0.0
+        ],
+        [
+          0.04794674491869663,
+          -0.07573699719879692,
+          0.0
+        ],
+        [
+          0.04724363959531702,
+          0.07462636735317218,
+          0.0
+        ],
+        [
+          -0.07632282386463192,
+          0.0,
+          -0.04737003371500723
+        ],
+        [
+          -0.07770041283865421,
+          0.0,
+          0.04822503924075401
+        ],
+        [
+          0.07770041283865421,
+          0.0,
+          -0.04822503924075401
+        ],
+        [
+          0.07632282386463192,
+          0.0,
+          0.04737003371500723
+        ],
+        [
+          -0.028066446571249577,
+          -0.07173383098549474,
+          -0.045604949061601466
+        ],
+        [
+          -0.07298358178269734,
+          -0.0440350857708427,
+          -0.02799540768857881
+        ],
+        [
+          -0.0449156647940082,
+          -0.02710013818652395,
+          -0.0729831116952655
+        ],
+        [
+          -0.027712029218368534,
+          0.07082799082417063,
+          -0.04502905908266681
+        ],
+        [
+          -0.07276495913528733,
+          0.04390317847340677,
+          -0.02791154731896276
+        ],
+        [
+          -0.04488386660470065,
+          0.027080952556560154,
+          -0.0729314430666794
+        ],
+        [
+          0.0,
+          0.0,
+          -0.09091268052882273
+        ],
+        [
+          0.04564832689315913,
+          -0.02754219429817406,
+          -0.0741736085979041
+        ],
+        [
+          0.045616010013362775,
+          0.027522695713164683,
+          -0.07412109715320798
+        ],
+        [
+          0.028066446571249577,
+          -0.07173383098549474,
+          0.045604949061601466
+        ],
+        [
+          -0.02824044387789975,
+          -0.07217854326339174,
+          0.045887675921465705
+        ],
+        [
+          0.0,
+          -0.08944589350279025,
+          0.0
+        ],
+        [
+          0.02824044387789975,
+          -0.07217854326339174,
+          -0.045887675921465705
+        ],
+        [
+          0.0737170789740145,
+          -0.04447764574040534,
+          -0.028276766213438425
+        ],
+        [
+          -0.07349625913246963,
+          0.044344412752590566,
+          0.028192063033096
+        ],
+        [
+          -0.09052896586176874,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0737170789740145,
+          -0.04447764574040534,
+          0.028276766213438425
+        ],
+        [
+          -0.04564832689315913,
+          -0.02754219429817406,
+          0.0741736085979041
+        ],
+        [
+          -0.045616010013362775,
+          0.027522695713164683,
+          0.07412109715320798
+        ],
+        [
+          0.0,
+          0.0,
+          0.09091268052882273
+        ]
+      ],
+      "ip_enabled": true,
+      "ip_ratio": 0.012121212121212121,
+      "contracts": {
+        "geometry": "f83f4e66e5a60c36efc88960bf61086d8c31b30d18e900121e9b3f0ff2333d94",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 0.4748899579863064,
+      "process_peak_rss_mib": 304.265625,
+      "rank": 31,
+      "retained_condition": 191.16966208313173,
+      "singular_values": [
+        1201.783969560531,
+        1098.8104225284749,
+        957.1773076673501,
+        374.9004478717775,
+        369.3196193764193,
+        308.43561672707233,
+        277.2052692332383,
+        243.3999955088784,
+        145.56496586057557,
+        124.76811988062232,
+        115.51759913403798,
+        100.74534377129173,
+        86.4843377825906,
+        77.4903242578459,
+        71.76335073737498,
+        56.21684205443484,
+        46.842546185946816,
+        40.12805929338793,
+        36.296520091647544,
+        35.86325003874766,
+        28.007953650711922,
+        24.191126831808532,
+        21.555906929918937,
+        20.473547003190887,
+        16.77897844280579,
+        14.893914197128183,
+        13.170935491178492,
+        11.60099392590545,
+        9.499592714025564,
+        7.289884495093785,
+        6.286478494887568,
+        1.1974928110023256e-13
+      ],
+      "reference_null_relative": 3.1903359444615656e-16,
+      "reference_reprojection_relative": 2.887973214561416e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "0da255e8a8ca9025fb63fed9c472a9b448f75feac5bf1d07a528f52cc63caad0"
+    }
+  },
+  {
+    "label": "T-5-3",
+    "head": 5,
+    "level": 3,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 13483,
+      "elements": 78080,
+      "min_volume_m3": 8.998907693488919e-10,
+      "min_mean_ratio": 0.16189552435497953,
+      "max_mean_ratio": 0.913869529562248,
+      "tissue_counts": [
+        43520,
+        11520,
+        11520,
+        11520
+      ],
+      "mesh_hash": "e3bf5695deb7aa2eca4b4d3f2e71a534ea73bbdd4511423a00c2cbf2950d9ad5",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.3725335426955164e-13,
+      "preprojection_current_imbalance": 3.106825842575751e-11,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 28.425682750006672,
+      "reference": "sensor average",
+      "peak_child_MiB": 962.890625,
+      "surface_audit": {
+        "nodes": 13483,
+        "elements": 78080,
+        "min_volume_m3": 8.998907693488919e-10,
+        "min_mean_ratio": 0.16189552435497953,
+        "max_mean_ratio": 0.913869529562248,
+        "tissue_counts": [
+          43520,
+          11520,
+          11520,
+          11520
+        ],
+        "mesh_hash": "e3bf5695deb7aa2eca4b4d3f2e71a534ea73bbdd4511423a00c2cbf2950d9ad5",
+        "exact_surface_facets": true,
+        "boundary_hash": "b4145c9656233880e738d014b582751e609f83ee6b4dcb73d2787b6ba51a1883"
+      }
+    }
+  },
+  {
+    "label": "T-5-3",
+    "head": 5,
+    "level": 3,
+    "solver": "openmeeg",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 3,
+      "unknowns": 4486,
+      "estimated_dense_bytes": 643974272,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 1.1336957961289864e-14,
+      "algebraic_reciprocity_relative": 5.551123837131278e-17,
+      "reciprocal_condition_estimate_mixed_units": 0.0005223908444471457,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "85298711adfc1a6908598e92f738fcd438484e370aa916e3182d0383dd25892c",
+        "387519e465c1720c2949a3c5f13fc18c02bb8de4a97ddcdeeda4efbd12533700",
+        "1d0ee23d4f1b25a9876d1cb61d3e31689729548e77cc27f6d728ab64f617e70a"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "23d8f8206a76b440d8c6ccbdb17e6ac93e9e6169f91cda7ab46e63204d746bf7",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 10.539575250004418,
+      "process_peak_rss_mib": 689.75,
+      "rank": 31,
+      "retained_condition": 111.25627208024737,
+      "singular_values": [
+        1388.1249170361934,
+        1276.991416878855,
+        1115.8082466206463,
+        522.5005512714732,
+        513.5383821783945,
+        435.3238966838307,
+        387.9762092927912,
+        340.4532051027413,
+        236.27860210943365,
+        205.100652372439,
+        190.25314290551538,
+        168.00184950235305,
+        140.56075293362667,
+        129.4494475905482,
+        124.15021930733771,
+        102.86046228095755,
+        87.81580101702775,
+        76.20434176770299,
+        68.46313042277254,
+        67.7603328676592,
+        54.626244671648315,
+        47.021119807052074,
+        43.354935368761694,
+        40.766070950873896,
+        33.68580810866448,
+        29.831064938483063,
+        26.29842302949759,
+        24.196921258219643,
+        19.20684642715798,
+        15.480931154720876,
+        12.476823922654546,
+        1.3613683780842993e-13
+      ],
+      "reference_null_relative": 3.6229743923743277e-16,
+      "reference_reprojection_relative": 2.9826344523963613e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "e6106a6195400e41030d47995efee0dd82148eba086cbace1011f3d39fd66e11"
+    }
+  },
+  {
+    "label": "T-5-3",
+    "head": 5,
+    "level": 3,
+    "solver": "mne",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      0.33,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "solver": "MNE linear collocation",
+      "solver_version": "1.13.2",
+      "system_residual_scope": "MNE diagnostics not exposed; no fabricated PDE residual",
+      "independent_codebase_from_OpenMEEG": true,
+      "effective_geometry_unchanged": true,
+      "sensor_projection_max_m": 0.0,
+      "sensor_weights": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sensor_triangles": [
+        0,
+        272,
+        64,
+        656,
+        16,
+        80,
+        256,
+        768,
+        32,
+        448,
+        160,
+        960,
+        4,
+        20,
+        8,
+        68,
+        84,
+        72,
+        132,
+        148,
+        136,
+        260,
+        276,
+        264,
+        324,
+        328,
+        452,
+        456,
+        516,
+        580,
+        644,
+        660
+      ],
+      "effective_sensors_m": [
+        [
+          0.0,
+          -0.04654465675348105,
+          -0.07746991192176926
+        ],
+        [
+          0.0,
+          -0.04654465675348105,
+          0.07746991192176926
+        ],
+        [
+          0.0,
+          0.0463826194341169,
+          -0.07720021357753899
+        ],
+        [
+          0.0,
+          0.0463826194341169,
+          0.07720021357753899
+        ],
+        [
+          -0.04794674491869663,
+          -0.07573699719879692,
+          0.0
+        ],
+        [
+          -0.04724363959531702,
+          0.07462636735317218,
+          0.0
+        ],
+        [
+          0.04794674491869663,
+          -0.07573699719879692,
+          0.0
+        ],
+        [
+          0.04724363959531702,
+          0.07462636735317218,
+          0.0
+        ],
+        [
+          -0.07632282386463192,
+          0.0,
+          -0.04737003371500723
+        ],
+        [
+          -0.07770041283865421,
+          0.0,
+          0.04822503924075401
+        ],
+        [
+          0.07770041283865421,
+          0.0,
+          -0.04822503924075401
+        ],
+        [
+          0.07632282386463192,
+          0.0,
+          0.04737003371500723
+        ],
+        [
+          -0.028066446571249577,
+          -0.07173383098549474,
+          -0.045604949061601466
+        ],
+        [
+          -0.07298358178269734,
+          -0.0440350857708427,
+          -0.02799540768857881
+        ],
+        [
+          -0.0449156647940082,
+          -0.02710013818652395,
+          -0.0729831116952655
+        ],
+        [
+          -0.027712029218368534,
+          0.07082799082417063,
+          -0.04502905908266681
+        ],
+        [
+          -0.07276495913528733,
+          0.04390317847340677,
+          -0.02791154731896276
+        ],
+        [
+          -0.04488386660470065,
+          0.027080952556560154,
+          -0.0729314430666794
+        ],
+        [
+          0.0,
+          0.0,
+          -0.09091268052882273
+        ],
+        [
+          0.04564832689315913,
+          -0.02754219429817406,
+          -0.0741736085979041
+        ],
+        [
+          0.045616010013362775,
+          0.027522695713164683,
+          -0.07412109715320798
+        ],
+        [
+          0.028066446571249577,
+          -0.07173383098549474,
+          0.045604949061601466
+        ],
+        [
+          -0.02824044387789975,
+          -0.07217854326339174,
+          0.045887675921465705
+        ],
+        [
+          0.0,
+          -0.08944589350279025,
+          0.0
+        ],
+        [
+          0.02824044387789975,
+          -0.07217854326339174,
+          -0.045887675921465705
+        ],
+        [
+          0.0737170789740145,
+          -0.04447764574040534,
+          -0.028276766213438425
+        ],
+        [
+          -0.07349625913246963,
+          0.044344412752590566,
+          0.028192063033096
+        ],
+        [
+          -0.09052896586176874,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0737170789740145,
+          -0.04447764574040534,
+          0.028276766213438425
+        ],
+        [
+          -0.04564832689315913,
+          -0.02754219429817406,
+          0.0741736085979041
+        ],
+        [
+          -0.045616010013362775,
+          0.027522695713164683,
+          0.07412109715320798
+        ],
+        [
+          0.0,
+          0.0,
+          0.09091268052882273
+        ]
+      ],
+      "ip_enabled": true,
+      "ip_ratio": 0.012121212121212121,
+      "contracts": {
+        "geometry": "23d8f8206a76b440d8c6ccbdb17e6ac93e9e6169f91cda7ab46e63204d746bf7",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "abb2b2bf0e6e06b6d2db3cc47c7d05446bec242527b971d43ff2c13cc8fbf76d",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 2.896884665999096,
+      "process_peak_rss_mib": 438.296875,
+      "rank": 31,
+      "retained_condition": 142.43012861334256,
+      "singular_values": [
+        1282.1835902843711,
+        1177.1479261734748,
+        1026.6498898531197,
+        440.6395790438504,
+        433.99778239315856,
+        365.1415349261345,
+        326.8006448115365,
+        286.92562612182985,
+        186.10526831876797,
+        160.1381572662746,
+        148.45099097413225,
+        130.27997461514104,
+        110.43899679001652,
+        100.258255365477,
+        94.23612666638172,
+        76.44365906977835,
+        64.43317792975195,
+        55.61191596046839,
+        49.99114232037816,
+        49.51038355087163,
+        39.280509150983356,
+        33.74496425328934,
+        30.528599466783636,
+        29.273364697683366,
+        23.891342577002945,
+        21.20803714576006,
+        18.696885312781593,
+        16.91043227260401,
+        13.558743901561819,
+        10.714199389636214,
+        9.002193586197878,
+        1.1547817192599498e-13
+      ],
+      "reference_null_relative": 3.149891090066121e-16,
+      "reference_reprojection_relative": 2.997703885321965e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "e6106a6195400e41030d47995efee0dd82148eba086cbace1011f3d39fd66e11"
+    }
+  },
+  {
+    "label": "F-0-2-r1-q8",
+    "head": 0,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 1,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 1135,
+      "elements": 6080,
+      "min_volume_m3": 9.64266391343531e-08,
+      "min_mean_ratio": 0.20980173883391331,
+      "max_mean_ratio": 0.9475020874344994,
+      "tissue_counts": [
+        3200,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "69211c37209672d7d305cc30e8e2f827b23028c076a6bbe98485e47b22cd64e6",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 2.2341470105877635e-14,
+      "preprojection_current_imbalance": 1.2159798630466275e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 1.9397244169958867,
+      "reference": "sensor average",
+      "peak_child_MiB": 280.984375,
+      "surface_audit": {
+        "nodes": 1135,
+        "elements": 6080,
+        "min_volume_m3": 9.64266391343531e-08,
+        "min_mean_ratio": 0.20980173883391331,
+        "max_mean_ratio": 0.9475020874344994,
+        "tissue_counts": [
+          3200,
+          960,
+          960,
+          960
+        ],
+        "mesh_hash": "69211c37209672d7d305cc30e8e2f827b23028c076a6bbe98485e47b22cd64e6",
+        "exact_surface_facets": true,
+        "boundary_hash": "89ef041c16778ee9b4a9ba7d638bd618d6d504bb010276d88bac0053cc503d1b"
+      }
+    }
+  },
+  {
+    "label": "F-0-2-r3-q8",
+    "head": 0,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 3,
+    "quadrature": 8,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 3403,
+      "elements": 19520,
+      "min_volume_m3": 3.571357004976041e-09,
+      "min_mean_ratio": 0.1006873730027721,
+      "max_mean_ratio": 0.9475020874344999,
+      "tissue_counts": [
+        10880,
+        2880,
+        2880,
+        2880
+      ],
+      "mesh_hash": "f09693c694c29c378bf6a1edcd683dedf6d269401a9ec7e064942361ca437fbc",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 8,
+      "relative_residual": 1.9937385543123661e-13,
+      "preprojection_current_imbalance": 1.2160305967698357e-07,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 5.943870666029397,
+      "reference": "sensor average",
+      "peak_child_MiB": 478.53125,
+      "surface_audit": {
+        "nodes": 3403,
+        "elements": 19520,
+        "min_volume_m3": 3.571357004976041e-09,
+        "min_mean_ratio": 0.1006873730027721,
+        "max_mean_ratio": 0.9475020874344999,
+        "tissue_counts": [
+          10880,
+          2880,
+          2880,
+          2880
+        ],
+        "mesh_hash": "f09693c694c29c378bf6a1edcd683dedf6d269401a9ec7e064942361ca437fbc",
+        "exact_surface_facets": true,
+        "boundary_hash": "89ef041c16778ee9b4a9ba7d638bd618d6d504bb010276d88bac0053cc503d1b"
+      }
+    }
+  },
+  {
+    "label": "F-0-2-r2-q4",
+    "head": 0,
+    "level": 2,
+    "solver": "fem",
+    "status": "computed",
+    "radial_steps": 2,
+    "quadrature": 4,
+    "sigmas_S_m": [
+      0.33,
+      1.0,
+      0.004,
+      0.33
+    ],
+    "diagnostics": {
+      "nodes": 2269,
+      "elements": 12800,
+      "min_volume_m3": 1.2053329891794115e-08,
+      "min_mean_ratio": 0.13203035720441367,
+      "max_mean_ratio": 0.9475020874344993,
+      "tissue_counts": [
+        7040,
+        1920,
+        1920,
+        1920
+      ],
+      "mesh_hash": "5c183fd9142986524d4a05994321ae5737893a6caaac272f042a65bb4aa2fed4",
+      "solver": "scikit-fem P1 full subtraction",
+      "solver_version": "12.0.2",
+      "independent_of_OpenMEEG": true,
+      "units": "V/(A*m)",
+      "frame": "MRI_RAS_m",
+      "source_order": "source-major XYZ",
+      "quadrature": 4,
+      "relative_residual": 8.251646998564155e-14,
+      "preprojection_current_imbalance": 3.68041409527131e-05,
+      "compatibility_correction": "subtract algebraic RHS mean; reported before correction",
+      "seconds": 1.556804541964084,
+      "reference": "sensor average",
+      "peak_child_MiB": 238.515625,
+      "surface_audit": {
+        "nodes": 2269,
+        "elements": 12800,
+        "min_volume_m3": 1.2053329891794115e-08,
+        "min_mean_ratio": 0.13203035720441367,
+        "max_mean_ratio": 0.9475020874344993,
+        "tissue_counts": [
+          7040,
+          1920,
+          1920,
+          1920
+        ],
+        "mesh_hash": "5c183fd9142986524d4a05994321ae5737893a6caaac272f042a65bb4aa2fed4",
+        "exact_surface_facets": true,
+        "boundary_hash": "89ef041c16778ee9b4a9ba7d638bd618d6d504bb010276d88bac0053cc503d1b"
+      }
+    }
+  }
+]

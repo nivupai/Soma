@@ -1,0 +1,17 @@
+{
+  "source/fem_reference.py": {
+    "artifact": "source-fem_reference.py.txt",
+    "sha256": "34a904c397cd443a1ddfc2a0af04bede822c02cd56d0dc8f8ab0bfdc86224671",
+    "scope": "final repeated study; unique relative module identity; local snapshot is not external authentication"
+  },
+  "source/fem_worker.py": {
+    "artifact": "source-fem_worker.py.txt",
+    "sha256": "b831de1b06e963b23018e62a783536414ae3709c0e2fa12c82f24607aaf71edb",
+    "scope": "final repeated study; unique relative module identity; local snapshot is not external authentication"
+  },
+  "experiments/fem_reference.py": {
+    "artifact": "experiment-fem_reference.py.txt",
+    "sha256": "54b18e0c48b305ebe177053c54c83069bce3ad286da8b3287f4aa95534a66cce",
+    "scope": "final repeated study; unique relative module identity; local snapshot is not external authentication"
+  }
+}

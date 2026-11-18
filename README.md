@@ -505,3 +505,11 @@ The finest full nonspherical comparisons still differ by 11.7–12.2%, above the
 unchanged 10% target. Software verification does not establish human accuracy,
 four-layer independent agreement, FEM or phantom validation.
 See [measured M28 results](docs/MILESTONE28_RESULTS.md).
+
+Soma v0.29.0 adds an independent P1 full-subtraction FEM reference for synthetic
+four-layer EEG conductors, analytical transmission controls and read-only Explorer
+results. [Actual M29 findings](docs/MILESTONE29_RESULTS.md) distinguish numerical
+agreement from poor sparse-grid localization and unavailable human/phantom evidence.
+Install `[fem,conductor]` to reproduce the bounded study with
+`soma source fem-reference --output reports/fem-reference-v29`.
+M29 depends on unmerged M28 PR13; the upstream npm security gate remains enabled.

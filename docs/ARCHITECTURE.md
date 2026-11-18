@@ -413,3 +413,9 @@ M27 adds a bounded synthetic four-interface OpenMEEG child-process adapter and r
 ## Milestone 28 addendum
 
 M28 adds canonical BEM contracts and a separate isolated diagnostic worker, reusing M17 envelopes, M19 seals, M27 geometry/inverse functions and the existing uncertainty workbench. Native geometry audits and explicit solver/reference matching distinguish physical equivalence from finite-formulation agreement. No generic FEM or parallel workflow framework is introduced.
+
+M29 separates optional P1 FEM full-subtraction assembly (`source.fem_reference`),
+isolated bounded computation (`source.fem_worker`), frozen execution
+(`experiments.fem_reference`) and read-only reviewed aggregate Explorer data.
+The concentric harmonic reference is independent of the volume/BEM assemblies.
+No expensive solver or private input is executed by a browser GET request.

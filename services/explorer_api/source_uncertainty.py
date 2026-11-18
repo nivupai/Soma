@@ -40,6 +40,10 @@ def router() -> APIRouter:
     def bem_discrepancy() -> Any:
         return bem_example()
 
+    @routes.get("/fem-reference")
+    def fem_reference() -> Any:
+        return fem_example()
+
     return routes
 
 
@@ -86,5 +90,27 @@ def bem_example() -> dict[str, Any]:
         or value.get("protocol_fingerprint") != bem_protocol().protocol.fingerprint
     ):
         raise ValueError("Unapproved scientific identity/threshold")
+    value["content_sha256"] = hashlib.sha256(raw).hexdigest()
+    return value
+
+
+def fem_example() -> dict[str, Any]:
+    from soma.experiments.fem_reference import protocol as fem_protocol
+
+    raw = files("soma.resources").joinpath("fem-reference-example-v29.json").read_bytes()
+    if (
+        hashlib.sha256(raw).hexdigest()
+        != "17d8fa13741c253483c34f2ea5b8de63ac392b4e64d5175ad931e20d903785bb"
+    ):
+        raise ValueError("FEM reference integrity failure")
+    value = dict(json.loads(raw))
+    if (
+        value.get("schema") != "soma.fem-reference.explorer/1"
+        or value.get("synthetic_only") is not True
+        or value.get("human_subjects") != 0
+        or value.get("threshold") != 0.10
+        or value.get("protocol") != fem_protocol().protocol.fingerprint
+    ):
+        raise ValueError("Unapproved FEM physical evidence")
     value["content_sha256"] = hashlib.sha256(raw).hexdigest()
     return value

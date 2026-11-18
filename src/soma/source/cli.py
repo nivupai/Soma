@@ -324,3 +324,14 @@ def bem_discrepancy_command(output: Path = Path("reports/bem-discrepancy-v28")) 
         _echo_result(run_diagnostics(protocol(), output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("fem-reference")
+def fem_reference_command(output: Path = Path("reports/fem-reference-v29")) -> None:
+    """Frozen independent synthetic FEM/BEM experiment (requires [fem,conductor])."""
+    from soma.experiments.fem_reference import run
+
+    try:
+        _echo_result(run(output), output)
+    except Exception as exc:
+        _fail(exc)
