@@ -1,0 +1,14 @@
+{
+  "head": 5,
+  "spacing_mm": 30,
+  "candidates": 33,
+  "solver": "fem",
+  "seconds": 0.06695358298020437,
+  "peak_MiB": 297.28125,
+  "scope": "post-run isolated kernel/resolution cost; imports included in peak RSS",
+  "resolution_norms": {
+    "Tikhonov": 4.742389210214098,
+    "MNE": 3.1052122073637225,
+    "dSPM": 43093848484.53699
+  }
+}

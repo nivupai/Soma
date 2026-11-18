@@ -1,0 +1,3 @@
+level,mean_head_sampled_max_mm,lower,upper,heads,scope
+2,1.6058554817953385,1.5950465965194203,1.616664367071257,6,head-only family-stratified conditional bootstrap; no surface vertex pseudo-replication; sampled distance not Hausdorff certificate
+3,0.40987951767493375,0.4057612173976211,0.4139978179522464,6,head-only family-stratified conditional bootstrap; no surface vertex pseudo-replication; sampled distance not Hausdorff certificate

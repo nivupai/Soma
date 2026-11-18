@@ -1,0 +1,13 @@
+condition,level,estimand,status,mean,lower,upper,heads,sources_per_head,interval_scope
+A radial/Gmsh,1,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.02021196149557948,0.018003626412699373,0.022892641180883768,6,12,conditional uncalibrated simulation summary
+A radial/Gmsh,2,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.00562668092973503,0.004798489322335868,0.006741125800946212,6,12,conditional uncalibrated simulation summary
+A radial/Gmsh,3,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.0015944361746612083,0.0013497927145291243,0.0019236606454241178,6,12,conditional uncalibrated simulation summary
+B alternative matched,3,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.005423353496435175,0.004156605359199786,0.007487634261182105,6,12,conditional uncalibrated simulation summary
+B matched,1,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.06271934232751734,0.05195940312080385,0.07915078524835477,6,12,conditional uncalibrated simulation summary
+B matched,2,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.01125283828384149,0.009925919748236915,0.013095982422958606,6,12,conditional uncalibrated simulation summary
+B matched,3,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.0032937533868572263,0.00281682989229565,0.003988049062192102,6,12,conditional uncalibrated simulation summary
+C BEM geometry only,3,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.00253736508217634,0.002250214370630017,0.002843505723312552,6,12,conditional uncalibrated simulation summary
+C distinct boundary,2,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.015493188435412777,0.013147258798491232,0.018837325493974648,6,12,conditional uncalibrated simulation summary
+C distinct boundary,3,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.004589647411742323,0.0035485810243026054,0.006405691553871896,6,12,conditional uncalibrated simulation summary
+C geometry and volume,2,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.008388908795034946,0.006898131669921938,0.010540970318193676,6,12,conditional uncalibrated simulation summary
+C geometry and volume,3,"mean offgrid-source combined XYZ relative L2, not aggregate Frobenius",complete,0.0032060445571824945,0.002500114696677223,0.004323146366952147,6,12,conditional uncalibrated simulation summary

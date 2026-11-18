@@ -44,6 +44,10 @@ def router() -> APIRouter:
     def fem_reference() -> Any:
         return fem_example()
 
+    @routes.get("/mesh-grid")
+    def mesh_grid() -> Any:
+        return mesh_grid_example()
+
     return routes
 
 
@@ -112,5 +116,20 @@ def fem_example() -> dict[str, Any]:
         or value.get("protocol") != fem_protocol().protocol.fingerprint
     ):
         raise ValueError("Unapproved FEM physical evidence")
+    value["content_sha256"] = hashlib.sha256(raw).hexdigest()
+    return value
+
+
+def mesh_grid_example() -> dict[str, Any]:
+    from soma.source.grid_diagnostics import validate_evidence
+
+    raw = files("soma.resources").joinpath("mesh-grid-example-v30.json").read_bytes()
+    if (
+        hashlib.sha256(raw).hexdigest()
+        != "0515d239c5c1d0211add0d3a7b28b5a02204589dcf7e76b9d7865fba9cd8c24f"
+    ):
+        raise ValueError("Mesh/grid resource integrity failure")
+    value = dict(json.loads(raw))
+    validate_evidence(value)
     value["content_sha256"] = hashlib.sha256(raw).hexdigest()
     return value

@@ -231,3 +231,10 @@ source-wise errors, analytical/independent gate status and frozen inverse summar
 Alignment is diagnostic only. The finest FEM is approximate, localization uses a
 sparse fixed grid, and passing synthetic fields does not establish human accuracy.
 M28 panels remain historical evidence with their original failed gates.
+
+The M30 panel separates forward mesh level from inverse candidate spacing. Inspect
+same-interface and differing-boundary fields, measured surface deviations and
+all-six-head localization/lower-bound curves. Head/source selectors expose actual
+truth and peak coordinates for a paired noise draw. Dense grids need not improve
+regularized accuracy. Shared-interface, source-grid and human validation claims
+remain distinct; the viewer does not run Gmsh or numerical experiments remotely.

@@ -1,0 +1,26 @@
+{
+  "src/soma/source/mesh_replication.py": {
+    "file": "source--mesh_replication.py.txt",
+    "sha256": "2e8b8fd8300eed1e21cf87cf9e144e8539fb9ee5c380776182b51473a6720b4a"
+  },
+  "src/soma/source/mesh_worker.py": {
+    "file": "source--mesh_worker.py.txt",
+    "sha256": "9b03d4da87e97dd69af5c68c545bdc0fe34cfc40c03d8ca69410af8f0d080b3b"
+  },
+  "src/soma/experiments/mesh_grid.py": {
+    "file": "experiments--mesh_grid.py.txt",
+    "sha256": "3a6561e5118aed1c92e3285bb3b394015787fe0c16803045f5dcbaba5764ecad"
+  },
+  "src/soma/source/fem_reference.py": {
+    "file": "source--fem_reference.py.txt",
+    "sha256": "34a904c397cd443a1ddfc2a0af04bede822c02cd56d0dc8f8ab0bfdc86224671"
+  },
+  "src/soma/source/fem_worker.py": {
+    "file": "source--fem_worker.py.txt",
+    "sha256": "b831de1b06e963b23018e62a783536414ae3709c0e2fa12c82f24607aaf71edb"
+  },
+  "src/soma/source/bem_worker.py": {
+    "file": "source--bem_worker.py.txt",
+    "sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3"
+  }
+}

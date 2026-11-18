@@ -4,6 +4,9 @@ from soma.experiments.bem_discrepancy import run_diagnostics as _run_bem_diagnos
 from soma.experiments.fem_reference import design as _fem_design
 from soma.experiments.fem_reference import protocol as _fem_protocol
 from soma.experiments.fem_reference import run as _run_fem_reference
+from soma.experiments.mesh_grid import design as _mesh_grid_design
+from soma.experiments.mesh_grid import protocol as _mesh_grid_protocol
+from soma.experiments.mesh_grid import run as _run_mesh_grid
 from soma.experiments.nonspherical import run_nonspherical as run_nonspherical
 from soma.experiments.source_uncertainty import run_uncertainty as run_uncertainty
 from soma.source.bem_discrepancy import design as _bem_design
@@ -14,6 +17,7 @@ from soma.source.forward import ForwardModel as ForwardModel
 from soma.source.forward import build_forward as build_forward
 from soma.source.inverse import CorticalInverse as CorticalInverse
 from soma.source.inverse import Tikhonov as Tikhonov
+from soma.source.mesh_replication import candidate_grid as _convergence_grid
 from soma.source.noise import NoiseModel as NoiseModel
 from soma.source.noise import average_projector as average_projector
 from soma.source.nonspherical import design as _nonspherical_design
@@ -44,3 +48,8 @@ fem_reference_protocol = _fem_protocol
 run_fem_reference = _run_fem_reference
 fem_forward = _fem_forward
 layered_sphere_reference = _layered_sphere
+
+mesh_grid_design = _mesh_grid_design
+mesh_grid_protocol = _mesh_grid_protocol
+run_mesh_grid = _run_mesh_grid
+convergence_grid = _convergence_grid

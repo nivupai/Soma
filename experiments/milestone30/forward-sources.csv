@@ -1,0 +1,2065 @@
+label,head,level,condition,source,relative,independent_source
+H-2-0,,2,analytical H,0,0.02404904695779197,False
+H-2-0,,2,analytical H,1,0.022935672534738966,False
+H-2-0,,2,analytical H,2,0.023712864915601303,False
+H-2-0,,2,analytical H,3,0.02366037886366007,False
+H-2-0,,2,analytical H,4,0.023770173170788618,False
+H-2-0,,2,analytical H,5,0.02388654729825896,False
+H-2-0,,2,analytical H,6,0.02637549944632216,False
+H-2-0,,2,analytical H,7,0.02128284558804186,False
+H-2-0,,2,analytical H,8,0.023129839064004863,False
+H-2-0,,2,analytical H,9,0.024559893964040357,False
+H-2-0,,2,analytical H,10,0.02501727726129115,False
+H-2-0,,2,analytical H,11,0.024395376517665386,False
+H-2-0,,2,analytical H,12,0.029580693030763584,True
+H-2-0,,2,analytical H,13,0.02556590171427124,True
+H-2-0,,2,analytical H,14,0.02490749679821989,True
+H-2-0,,2,analytical H,15,0.02366920748277249,True
+H-2-0,,2,analytical H,16,0.023471670327843412,True
+H-2-0,,2,analytical H,17,0.027573113179893527,True
+H-2-0,,2,analytical H,18,0.025702785614663555,True
+H-2-0,,2,analytical H,19,0.023086274722769883,True
+H-2-0,,2,analytical H,20,0.024040238210018307,True
+H-2-0,,2,analytical H,21,0.02435548049679118,True
+H-2-0,,2,analytical H,22,0.02417703686589209,True
+H-2-0,,2,analytical H,23,0.026037232105242763,True
+H-2-0-vs-BEM,,2,D matched,0,0.02644250298205574,False
+H-2-0-vs-BEM,,2,D matched,1,0.028146559230029095,False
+H-2-0-vs-BEM,,2,D matched,2,0.026520169979377145,False
+H-2-0-vs-BEM,,2,D matched,3,0.02330878403012589,False
+H-2-0-vs-BEM,,2,D matched,4,0.026600589288466484,False
+H-2-0-vs-BEM,,2,D matched,5,0.02643027314308708,False
+H-2-0-vs-BEM,,2,D matched,6,0.05886358356959564,False
+H-2-0-vs-BEM,,2,D matched,7,0.06501195165880032,False
+H-2-0-vs-BEM,,2,D matched,8,0.056672966809323426,False
+H-2-0-vs-BEM,,2,D matched,9,0.055014582598364,False
+H-2-0-vs-BEM,,2,D matched,10,0.05958959679293543,False
+H-2-0-vs-BEM,,2,D matched,11,0.0609271769164943,False
+H-2-0-vs-BEM,,2,D matched,12,0.03728225536803846,True
+H-2-0-vs-BEM,,2,D matched,13,0.062009655129605906,True
+H-2-0-vs-BEM,,2,D matched,14,0.029770201871309823,True
+H-2-0-vs-BEM,,2,D matched,15,0.026352231428316695,True
+H-2-0-vs-BEM,,2,D matched,16,0.029190276751663264,True
+H-2-0-vs-BEM,,2,D matched,17,0.05868942165552506,True
+H-2-0-vs-BEM,,2,D matched,18,0.021154912742817198,True
+H-2-0-vs-BEM,,2,D matched,19,0.019031487794673806,True
+H-2-0-vs-BEM,,2,D matched,20,0.020741858962329794,True
+H-2-0-vs-BEM,,2,D matched,21,0.035799301056122515,True
+H-2-0-vs-BEM,,2,D matched,22,0.01961269251153993,True
+H-2-0-vs-BEM,,2,D matched,23,0.06853231203468248,True
+H-3-0,,3,analytical H,0,0.005660178124264631,False
+H-3-0,,3,analytical H,1,0.005659321057637918,False
+H-3-0,,3,analytical H,2,0.005706145791996542,False
+H-3-0,,3,analytical H,3,0.005809654811262698,False
+H-3-0,,3,analytical H,4,0.005770650941249295,False
+H-3-0,,3,analytical H,5,0.005550143920218302,False
+H-3-0,,3,analytical H,6,0.005471425177155189,False
+H-3-0,,3,analytical H,7,0.005281772531736271,False
+H-3-0,,3,analytical H,8,0.005964404780841665,False
+H-3-0,,3,analytical H,9,0.006074411918822637,False
+H-3-0,,3,analytical H,10,0.006358696072038313,False
+H-3-0,,3,analytical H,11,0.005143902681664151,False
+H-3-0,,3,analytical H,12,0.0077708820300750325,True
+H-3-0,,3,analytical H,13,0.005783365919598307,True
+H-3-0,,3,analytical H,14,0.005782920060761726,True
+H-3-0,,3,analytical H,15,0.006007304752925324,True
+H-3-0,,3,analytical H,16,0.005529156293034797,True
+H-3-0,,3,analytical H,17,0.005115619116306054,True
+H-3-0,,3,analytical H,18,0.006393070345492103,True
+H-3-0,,3,analytical H,19,0.005663600784320474,True
+H-3-0,,3,analytical H,20,0.0058565438941033,True
+H-3-0,,3,analytical H,21,0.005476094616245388,True
+H-3-0,,3,analytical H,22,0.005909361492371567,True
+H-3-0,,3,analytical H,23,0.007234727552768407,True
+H-3-0-vs-BEM,,3,D matched,0,0.007566534905903022,False
+H-3-0-vs-BEM,,3,D matched,1,0.007660681661236534,False
+H-3-0-vs-BEM,,3,D matched,2,0.007368113405188552,False
+H-3-0-vs-BEM,,3,D matched,3,0.006435253330939097,False
+H-3-0-vs-BEM,,3,D matched,4,0.007473515597939158,False
+H-3-0-vs-BEM,,3,D matched,5,0.007605198157472516,False
+H-3-0-vs-BEM,,3,D matched,6,0.0172007175390406,False
+H-3-0-vs-BEM,,3,D matched,7,0.021395018303175042,False
+H-3-0-vs-BEM,,3,D matched,8,0.01825677445858115,False
+H-3-0-vs-BEM,,3,D matched,9,0.01629531613431442,False
+H-3-0-vs-BEM,,3,D matched,10,0.01829672487399472,False
+H-3-0-vs-BEM,,3,D matched,11,0.018285107298910894,False
+H-3-0-vs-BEM,,3,D matched,12,0.008504015644480284,True
+H-3-0-vs-BEM,,3,D matched,13,0.018525176751504183,True
+H-3-0-vs-BEM,,3,D matched,14,0.008299669162276646,True
+H-3-0-vs-BEM,,3,D matched,15,0.007095656882188686,True
+H-3-0-vs-BEM,,3,D matched,16,0.008366619590371473,True
+H-3-0-vs-BEM,,3,D matched,17,0.01885091190708821,True
+H-3-0-vs-BEM,,3,D matched,18,0.006054480097001947,True
+H-3-0-vs-BEM,,3,D matched,19,0.005581475103220711,True
+H-3-0-vs-BEM,,3,D matched,20,0.005952450967730384,True
+H-3-0-vs-BEM,,3,D matched,21,0.010592029554297206,True
+H-3-0-vs-BEM,,3,D matched,22,0.005622669037951443,True
+H-3-0-vs-BEM,,3,D matched,23,0.029285877198280217,True
+H-3-1,,3,analytical H,0,0.005226177984433611,False
+H-3-1,,3,analytical H,1,0.005461813152799983,False
+H-3-1,,3,analytical H,2,0.005363184183766023,False
+H-3-1,,3,analytical H,3,0.005577240676121804,False
+H-3-1,,3,analytical H,4,0.0054575532163266705,False
+H-3-1,,3,analytical H,5,0.005206510691590877,False
+H-3-1,,3,analytical H,6,0.0050962733851891,False
+H-3-1,,3,analytical H,7,0.005733590959451738,False
+H-3-1,,3,analytical H,8,0.006970874990672505,False
+H-3-1,,3,analytical H,9,0.006359772776666658,False
+H-3-1,,3,analytical H,10,0.005853850100292559,False
+H-3-1,,3,analytical H,11,0.004902648675512446,False
+H-3-1,,3,analytical H,12,0.00760411433702899,True
+H-3-1,,3,analytical H,13,0.005561749045235226,True
+H-3-1,,3,analytical H,14,0.0062369260998650115,True
+H-3-1,,3,analytical H,15,0.0058223175506954125,True
+H-3-1,,3,analytical H,16,0.005211134424906091,True
+H-3-1,,3,analytical H,17,0.005429656723308444,True
+H-3-1,,3,analytical H,18,0.006329532809595976,True
+H-3-1,,3,analytical H,19,0.006034259459062594,True
+H-3-1,,3,analytical H,20,0.005869097266782406,True
+H-3-1,,3,analytical H,21,0.005310535834544389,True
+H-3-1,,3,analytical H,22,0.005894820255912252,True
+H-3-1,,3,analytical H,23,0.008981003228723715,True
+H-3-1-vs-BEM,,3,D distinct boundary,0,0.008297264728096151,False
+H-3-1-vs-BEM,,3,D distinct boundary,1,0.00798198520890865,False
+H-3-1-vs-BEM,,3,D distinct boundary,2,0.008066856225194811,False
+H-3-1-vs-BEM,,3,D distinct boundary,3,0.0068910274590845725,False
+H-3-1-vs-BEM,,3,D distinct boundary,4,0.00796021954693851,False
+H-3-1-vs-BEM,,3,D distinct boundary,5,0.008210913631742894,False
+H-3-1-vs-BEM,,3,D distinct boundary,6,0.01951705181049292,False
+H-3-1-vs-BEM,,3,D distinct boundary,7,0.021279047551596576,False
+H-3-1-vs-BEM,,3,D distinct boundary,8,0.020704120329191406,False
+H-3-1-vs-BEM,,3,D distinct boundary,9,0.017912171099667834,False
+H-3-1-vs-BEM,,3,D distinct boundary,10,0.01930209758566197,False
+H-3-1-vs-BEM,,3,D distinct boundary,11,0.020271595260198425,False
+H-3-1-vs-BEM,,3,D distinct boundary,12,0.007874347068793123,True
+H-3-1-vs-BEM,,3,D distinct boundary,13,0.019827877994523856,True
+H-3-1-vs-BEM,,3,D distinct boundary,14,0.00859031678192886,True
+H-3-1-vs-BEM,,3,D distinct boundary,15,0.007394853974444658,True
+H-3-1-vs-BEM,,3,D distinct boundary,16,0.009056349328041793,True
+H-3-1-vs-BEM,,3,D distinct boundary,17,0.019991136914735343,True
+H-3-1-vs-BEM,,3,D distinct boundary,18,0.006365304160162263,True
+H-3-1-vs-BEM,,3,D distinct boundary,19,0.005340235107412099,True
+H-3-1-vs-BEM,,3,D distinct boundary,20,0.00611424926972347,True
+H-3-1-vs-BEM,,3,D distinct boundary,21,0.011149535604180525,True
+H-3-1-vs-BEM,,3,D distinct boundary,22,0.0057627102681081736,True
+H-3-1-vs-BEM,,3,D distinct boundary,23,0.031144871335551126,True
+S-1-0,,1,analytical S,0,0.13161897623875377,False
+S-1-0,,1,analytical S,1,0.13208654132532258,False
+S-1-0,,1,analytical S,2,0.1331825741107643,False
+S-1-0,,1,analytical S,3,0.12504110599187623,False
+S-1-0,,1,analytical S,4,0.13277606767128167,False
+S-1-0,,1,analytical S,5,0.13094685262888664,False
+S-1-0,,1,analytical S,6,0.15923620491920448,False
+S-1-0,,1,analytical S,7,0.1606115550509083,False
+S-1-0,,1,analytical S,8,0.16040958818768447,False
+S-1-0,,1,analytical S,9,0.1534156557015752,False
+S-1-0,,1,analytical S,10,0.15831586215380203,False
+S-1-0,,1,analytical S,11,0.17044627655860345,False
+S-1-0,,1,analytical S,12,0.12456554761860089,True
+S-1-0,,1,analytical S,13,0.1619204758404278,True
+S-1-0,,1,analytical S,14,0.12793501015254374,True
+S-1-0,,1,analytical S,15,0.1184212158409082,True
+S-1-0,,1,analytical S,16,0.12815610581546608,True
+S-1-0,,1,analytical S,17,0.14736125550226975,True
+S-1-0,,1,analytical S,18,0.12296993008628125,True
+S-1-0,,1,analytical S,19,0.11446049881113772,True
+S-1-0,,1,analytical S,20,0.11395037489776776,True
+S-1-0,,1,analytical S,21,0.13922159545948237,True
+S-1-0,,1,analytical S,22,0.11412272603352772,True
+S-1-0,,1,analytical S,23,0.15045451066969615,True
+S-1-0-vs-BEM,,1,D matched,0,0.028275742738239407,False
+S-1-0-vs-BEM,,1,D matched,1,0.028783697509232955,False
+S-1-0-vs-BEM,,1,D matched,2,0.030678564166291385,False
+S-1-0-vs-BEM,,1,D matched,3,0.02958744193780073,False
+S-1-0-vs-BEM,,1,D matched,4,0.030740204108041506,False
+S-1-0-vs-BEM,,1,D matched,5,0.029048851510823908,False
+S-1-0-vs-BEM,,1,D matched,6,0.0667142019907885,False
+S-1-0-vs-BEM,,1,D matched,7,0.07984159625131769,False
+S-1-0-vs-BEM,,1,D matched,8,0.07432768405592627,False
+S-1-0-vs-BEM,,1,D matched,9,0.06679550035082805,False
+S-1-0-vs-BEM,,1,D matched,10,0.06951007495170337,False
+S-1-0-vs-BEM,,1,D matched,11,0.0800417663531801,False
+S-1-0-vs-BEM,,1,D matched,12,0.10025531264795061,True
+S-1-0-vs-BEM,,1,D matched,13,0.07362191233000319,True
+S-1-0-vs-BEM,,1,D matched,14,0.04389860822073489,True
+S-1-0-vs-BEM,,1,D matched,15,0.03898928031086442,True
+S-1-0-vs-BEM,,1,D matched,16,0.032728294200837976,True
+S-1-0-vs-BEM,,1,D matched,17,0.0671932161982692,True
+S-1-0-vs-BEM,,1,D matched,18,0.04685623995734059,True
+S-1-0-vs-BEM,,1,D matched,19,0.031600097792895125,True
+S-1-0-vs-BEM,,1,D matched,20,0.034630200159525476,True
+S-1-0-vs-BEM,,1,D matched,21,0.037283676870290994,True
+S-1-0-vs-BEM,,1,D matched,22,0.034318484490599294,True
+S-1-0-vs-BEM,,1,D matched,23,0.10045885252245128,True
+S-2-0,,2,analytical S,0,0.03241384151585106,False
+S-2-0,,2,analytical S,1,0.03174576697409745,False
+S-2-0,,2,analytical S,2,0.03234310153689811,False
+S-2-0,,2,analytical S,3,0.03059919607470081,False
+S-2-0,,2,analytical S,4,0.032129556226275995,False
+S-2-0,,2,analytical S,5,0.03226794671558838,False
+S-2-0,,2,analytical S,6,0.042585018818328935,False
+S-2-0,,2,analytical S,7,0.03720653854998028,False
+S-2-0,,2,analytical S,8,0.03822448300263742,False
+S-2-0,,2,analytical S,9,0.03813429720166907,False
+S-2-0,,2,analytical S,10,0.037821066449231125,False
+S-2-0,,2,analytical S,11,0.042517793985091736,False
+S-2-0,,2,analytical S,12,0.03669437856979491,True
+S-2-0,,2,analytical S,13,0.04196367667053774,True
+S-2-0,,2,analytical S,14,0.03328872881197522,True
+S-2-0,,2,analytical S,15,0.031173058626000366,True
+S-2-0,,2,analytical S,16,0.03244801134050049,True
+S-2-0,,2,analytical S,17,0.044405292566064944,True
+S-2-0,,2,analytical S,18,0.03227513955158921,True
+S-2-0,,2,analytical S,19,0.02901926810117677,True
+S-2-0,,2,analytical S,20,0.030252497624023458,True
+S-2-0,,2,analytical S,21,0.034986380484559834,True
+S-2-0,,2,analytical S,22,0.030093001344442465,True
+S-2-0,,2,analytical S,23,0.0435998734071129,True
+S-2-0-vs-BEM,,2,D matched,0,0.006732759584117384,False
+S-2-0-vs-BEM,,2,D matched,1,0.007021225751922292,False
+S-2-0-vs-BEM,,2,D matched,2,0.007519318132696905,False
+S-2-0-vs-BEM,,2,D matched,3,0.006685813040901134,False
+S-2-0-vs-BEM,,2,D matched,4,0.007362031085338963,False
+S-2-0-vs-BEM,,2,D matched,5,0.006673810807130718,False
+S-2-0-vs-BEM,,2,D matched,6,0.01043864639545593,False
+S-2-0-vs-BEM,,2,D matched,7,0.010807280809123977,False
+S-2-0-vs-BEM,,2,D matched,8,0.014946508436159337,False
+S-2-0-vs-BEM,,2,D matched,9,0.011312112787489946,False
+S-2-0-vs-BEM,,2,D matched,10,0.01272407695603704,False
+S-2-0-vs-BEM,,2,D matched,11,0.010393317915645675,False
+S-2-0-vs-BEM,,2,D matched,12,0.013224242593135135,True
+S-2-0-vs-BEM,,2,D matched,13,0.013373891598340234,True
+S-2-0-vs-BEM,,2,D matched,14,0.008521788246232271,True
+S-2-0-vs-BEM,,2,D matched,15,0.007497745273655725,True
+S-2-0-vs-BEM,,2,D matched,16,0.007642709113484928,True
+S-2-0-vs-BEM,,2,D matched,17,0.01438755586657535,True
+S-2-0-vs-BEM,,2,D matched,18,0.00899690970550369,True
+S-2-0-vs-BEM,,2,D matched,19,0.006284796831211919,True
+S-2-0-vs-BEM,,2,D matched,20,0.006777809921518248,True
+S-2-0-vs-BEM,,2,D matched,21,0.0078710534908268,True
+S-2-0-vs-BEM,,2,D matched,22,0.006676322233944268,True
+S-2-0-vs-BEM,,2,D matched,23,0.02385694876810901,True
+S-3-0,,3,analytical S,0,0.008648498667636192,False
+S-3-0,,3,analytical S,1,0.008602147707198662,False
+S-3-0,,3,analytical S,2,0.008636366755937593,False
+S-3-0,,3,analytical S,3,0.008299747452801149,False
+S-3-0,,3,analytical S,4,0.008595966497063616,False
+S-3-0,,3,analytical S,5,0.008491519003259076,False
+S-3-0,,3,analytical S,6,0.011708019234411879,False
+S-3-0,,3,analytical S,7,0.010512871317231914,False
+S-3-0,,3,analytical S,8,0.011993219370480961,False
+S-3-0,,3,analytical S,9,0.010753658479681296,False
+S-3-0,,3,analytical S,10,0.011941729626279622,False
+S-3-0,,3,analytical S,11,0.011940759547266566,False
+S-3-0,,3,analytical S,12,0.008586385516893617,True
+S-3-0,,3,analytical S,13,0.01181031400091719,True
+S-3-0,,3,analytical S,14,0.008083893408482912,True
+S-3-0,,3,analytical S,15,0.008924562881135844,True
+S-3-0,,3,analytical S,16,0.008835070528913651,True
+S-3-0,,3,analytical S,17,0.011507006283832912,True
+S-3-0,,3,analytical S,18,0.008170537082010449,True
+S-3-0,,3,analytical S,19,0.00785629797670258,True
+S-3-0,,3,analytical S,20,0.008125283127049451,True
+S-3-0,,3,analytical S,21,0.009674058839822358,True
+S-3-0,,3,analytical S,22,0.007993005402136509,True
+S-3-0,,3,analytical S,23,0.015979132579639236,True
+S-3-0-vs-BEM,,3,D matched,0,0.0017647100570896152,False
+S-3-0-vs-BEM,,3,D matched,1,0.0019144331176749476,False
+S-3-0-vs-BEM,,3,D matched,2,0.002000990998950591,False
+S-3-0-vs-BEM,,3,D matched,3,0.0017583846506966424,False
+S-3-0-vs-BEM,,3,D matched,4,0.0020121798617253467,False
+S-3-0-vs-BEM,,3,D matched,5,0.0015800691328343947,False
+S-3-0-vs-BEM,,3,D matched,6,0.002871202035086029,False
+S-3-0-vs-BEM,,3,D matched,7,0.004707923460937029,False
+S-3-0-vs-BEM,,3,D matched,8,0.005311054963782045,False
+S-3-0-vs-BEM,,3,D matched,9,0.0037146113669574454,False
+S-3-0-vs-BEM,,3,D matched,10,0.005539362375665851,False
+S-3-0-vs-BEM,,3,D matched,11,0.0032712460375229047,False
+S-3-0-vs-BEM,,3,D matched,12,0.0038156059384940925,True
+S-3-0-vs-BEM,,3,D matched,13,0.004750217625367119,True
+S-3-0-vs-BEM,,3,D matched,14,0.0023981676395010273,True
+S-3-0-vs-BEM,,3,D matched,15,0.0022007654774862094,True
+S-3-0-vs-BEM,,3,D matched,16,0.0024039239650461004,True
+S-3-0-vs-BEM,,3,D matched,17,0.004949284757942065,True
+S-3-0-vs-BEM,,3,D matched,18,0.00258510730213159,True
+S-3-0-vs-BEM,,3,D matched,19,0.0016270099701953238,True
+S-3-0-vs-BEM,,3,D matched,20,0.001931569517775474,True
+S-3-0-vs-BEM,,3,D matched,21,0.002628371305657986,True
+S-3-0-vs-BEM,,3,D matched,22,0.0018104731287366923,True
+S-3-0-vs-BEM,,3,D matched,23,0.010119631537457239,True
+S-3-1,,3,analytical S,0,0.008781259424772238,False
+S-3-1,,3,analytical S,1,0.008414370422107225,False
+S-3-1,,3,analytical S,2,0.009353204021884557,False
+S-3-1,,3,analytical S,3,0.008002103906345297,False
+S-3-1,,3,analytical S,4,0.008733245173207093,False
+S-3-1,,3,analytical S,5,0.008821143565895098,False
+S-3-1,,3,analytical S,6,0.012470273180195475,False
+S-3-1,,3,analytical S,7,0.011062657586459584,False
+S-3-1,,3,analytical S,8,0.01709827946446229,False
+S-3-1,,3,analytical S,9,0.010354447457828903,False
+S-3-1,,3,analytical S,10,0.012810024371911793,False
+S-3-1,,3,analytical S,11,0.012349023266405383,False
+S-3-1,,3,analytical S,12,0.009037001608925383,True
+S-3-1,,3,analytical S,13,0.012453791300415051,True
+S-3-1,,3,analytical S,14,0.007960439151804097,True
+S-3-1,,3,analytical S,15,0.008702739061149312,True
+S-3-1,,3,analytical S,16,0.008999796936343497,True
+S-3-1,,3,analytical S,17,0.014442699154767697,True
+S-3-1,,3,analytical S,18,0.008143105147774665,True
+S-3-1,,3,analytical S,19,0.007698037560233987,True
+S-3-1,,3,analytical S,20,0.008444319001689802,True
+S-3-1,,3,analytical S,21,0.009906843445460127,True
+S-3-1,,3,analytical S,22,0.008303456309712782,True
+S-3-1,,3,analytical S,23,0.025884213032401338,True
+S-3-1-vs-BEM,,3,D distinct boundary,0,0.001546054085294232,False
+S-3-1-vs-BEM,,3,D distinct boundary,1,0.0018528663069053884,False
+S-3-1-vs-BEM,,3,D distinct boundary,2,0.0020253977166039736,False
+S-3-1-vs-BEM,,3,D distinct boundary,3,0.0016487926842218262,False
+S-3-1-vs-BEM,,3,D distinct boundary,4,0.001873352582303865,False
+S-3-1-vs-BEM,,3,D distinct boundary,5,0.0015303986111773501,False
+S-3-1-vs-BEM,,3,D distinct boundary,6,0.004029891795873353,False
+S-3-1-vs-BEM,,3,D distinct boundary,7,0.00412182324914963,False
+S-3-1-vs-BEM,,3,D distinct boundary,8,0.009839782534456809,False
+S-3-1-vs-BEM,,3,D distinct boundary,9,0.0036788005775526622,False
+S-3-1-vs-BEM,,3,D distinct boundary,10,0.005725695477723159,False
+S-3-1-vs-BEM,,3,D distinct boundary,11,0.004783098723221224,False
+S-3-1-vs-BEM,,3,D distinct boundary,12,0.0045829738728060685,True
+S-3-1-vs-BEM,,3,D distinct boundary,13,0.004522612251366666,True
+S-3-1-vs-BEM,,3,D distinct boundary,14,0.0028029888947640846,True
+S-3-1-vs-BEM,,3,D distinct boundary,15,0.0028692669257582505,True
+S-3-1-vs-BEM,,3,D distinct boundary,16,0.0026672011322922923,True
+S-3-1-vs-BEM,,3,D distinct boundary,17,0.008871003939766694,True
+S-3-1-vs-BEM,,3,D distinct boundary,18,0.002714271566053529,True
+S-3-1-vs-BEM,,3,D distinct boundary,19,0.0016792535383773279,True
+S-3-1-vs-BEM,,3,D distinct boundary,20,0.002309179539105423,True
+S-3-1-vs-BEM,,3,D distinct boundary,21,0.002194652414579655,True
+S-3-1-vs-BEM,,3,D distinct boundary,22,0.002187903693811241,True
+S-3-1-vs-BEM,,3,D distinct boundary,23,0.020073821670332483,True
+F-0-1-0,0.0,1,B matched,0,0.024509107832563697,False
+F-0-1-0,0.0,1,B matched,1,0.02714591781045286,False
+F-0-1-0,0.0,1,B matched,2,0.029281724196969523,False
+F-0-1-0,0.0,1,B matched,3,0.027752529154470646,False
+F-0-1-0,0.0,1,B matched,4,0.03138712661920584,False
+F-0-1-0,0.0,1,B matched,5,0.029954243010501192,False
+F-0-1-0,0.0,1,B matched,6,0.05382060939691327,False
+F-0-1-0,0.0,1,B matched,7,0.07057597363055136,False
+F-0-1-0,0.0,1,B matched,8,0.06711803900582658,False
+F-0-1-0,0.0,1,B matched,9,0.059138255217889776,False
+F-0-1-0,0.0,1,B matched,10,0.07264026917901695,False
+F-0-1-0,0.0,1,B matched,11,0.08912243544229514,False
+F-0-1-0,0.0,1,B matched,12,0.11279208358676393,True
+F-0-1-0,0.0,1,B matched,13,0.08336867361688806,True
+F-0-1-0,0.0,1,B matched,14,0.04992115488516124,True
+F-0-1-0,0.0,1,B matched,15,0.03585502327933119,True
+F-0-1-0,0.0,1,B matched,16,0.0368953206016184,True
+F-0-1-0,0.0,1,B matched,17,0.0849559836499771,True
+F-0-1-0,0.0,1,B matched,18,0.046907990345950286,True
+F-0-1-0,0.0,1,B matched,19,0.0346809996191014,True
+F-0-1-0,0.0,1,B matched,20,0.03487087961321393,True
+F-0-1-0,0.0,1,B matched,21,0.040181097924480685,True
+F-0-1-0,0.0,1,B matched,22,0.033778805570664684,True
+F-0-1-0,0.0,1,B matched,23,0.13557546030344583,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,0,0.009324323359286315,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,1,0.007923619067397499,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,2,0.008936659411253565,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,3,0.00965132811050246,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,4,0.009458500541544871,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,5,0.01185546707010353,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,6,0.018040976275357425,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,7,0.015685503652472062,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,8,0.020555238876139248,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,9,0.017834556562074475,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,10,0.023501253862297008,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,11,0.02498329818193432,False
+F-0-1-0-radial,0.0,1,A radial/Gmsh,12,0.029000070580520593,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,13,0.02062431200595785,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,14,0.01496322460597994,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,15,0.013839926393498516,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,16,0.018173401709124095,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,17,0.02906630712341181,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,18,0.01963021987441893,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,19,0.01133212143886829,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,20,0.014850772093880088,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,21,0.012011264699022925,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,22,0.014287016784151512,True
+F-0-1-0-radial,0.0,1,A radial/Gmsh,23,0.05128662791836486,True
+F-0-2-0,0.0,2,B matched,0,0.0058777460928937895,False
+F-0-2-0,0.0,2,B matched,1,0.006399670859180695,False
+F-0-2-0,0.0,2,B matched,2,0.006744077980468315,False
+F-0-2-0,0.0,2,B matched,3,0.006250273383514124,False
+F-0-2-0,0.0,2,B matched,4,0.00767170774281,False
+F-0-2-0,0.0,2,B matched,5,0.006737794182244603,False
+F-0-2-0,0.0,2,B matched,6,0.008922371398315435,False
+F-0-2-0,0.0,2,B matched,7,0.011526937824395756,False
+F-0-2-0,0.0,2,B matched,8,0.01222755869304542,False
+F-0-2-0,0.0,2,B matched,9,0.010243753281450494,False
+F-0-2-0,0.0,2,B matched,10,0.016576192999782295,False
+F-0-2-0,0.0,2,B matched,11,0.01496414378502297,False
+F-0-2-0,0.0,2,B matched,12,0.012240525388840955,True
+F-0-2-0,0.0,2,B matched,13,0.010848549487398561,True
+F-0-2-0,0.0,2,B matched,14,0.009287399744838973,True
+F-0-2-0,0.0,2,B matched,15,0.007646048551419896,True
+F-0-2-0,0.0,2,B matched,16,0.008396409369703654,True
+F-0-2-0,0.0,2,B matched,17,0.01623896280745092,True
+F-0-2-0,0.0,2,B matched,18,0.008203454185000321,True
+F-0-2-0,0.0,2,B matched,19,0.0068335633160218,True
+F-0-2-0,0.0,2,B matched,20,0.006360178331066676,True
+F-0-2-0,0.0,2,B matched,21,0.007493439029191433,True
+F-0-2-0,0.0,2,B matched,22,0.006312243763401584,True
+F-0-2-0,0.0,2,B matched,23,0.029834558827494365,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,0,0.0018400785427220197,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,1,0.0018709315983688184,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,2,0.0026491211634402457,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,3,0.0021194524781261155,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,4,0.0030439216607025667,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,5,0.003050048616987596,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,6,0.004127674740990185,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,7,0.0035022543788398434,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,8,0.005985127211441926,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,9,0.004035219977370219,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,10,0.006512684355228856,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,11,0.00655760027827388,False
+F-0-2-0-radial,0.0,2,A radial/Gmsh,12,0.0053649341738509,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,13,0.009128408705406871,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,14,0.004447989552524192,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,15,0.0030252680588470134,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,16,0.005147514272953465,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,17,0.009292771910253492,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,18,0.004423859798614396,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,19,0.003067339954092241,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,20,0.0038877753307193915,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,21,0.004407594336582114,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,22,0.003565749300295783,True
+F-0-2-0-radial,0.0,2,A radial/Gmsh,23,0.016306943220720602,True
+F-0-3-0,0.0,3,B matched,0,0.001451229626710143,False
+F-0-3-0,0.0,3,B matched,1,0.0015821969799807275,False
+F-0-3-0,0.0,3,B matched,2,0.0017356354179188021,False
+F-0-3-0,0.0,3,B matched,3,0.001548091140485602,False
+F-0-3-0,0.0,3,B matched,4,0.0020317940755915703,False
+F-0-3-0,0.0,3,B matched,5,0.0017974319005040083,False
+F-0-3-0,0.0,3,B matched,6,0.0026781469089190747,False
+F-0-3-0,0.0,3,B matched,7,0.0032939484937931146,False
+F-0-3-0,0.0,3,B matched,8,0.00441774791479155,False
+F-0-3-0,0.0,3,B matched,9,0.0028258132921786497,False
+F-0-3-0,0.0,3,B matched,10,0.0060801674372353036,False
+F-0-3-0,0.0,3,B matched,11,0.0037057371208639635,False
+F-0-3-0,0.0,3,B matched,12,0.003960580865123956,True
+F-0-3-0,0.0,3,B matched,13,0.0034529540039162235,True
+F-0-3-0,0.0,3,B matched,14,0.0024442519453522337,True
+F-0-3-0,0.0,3,B matched,15,0.0021412718551196254,True
+F-0-3-0,0.0,3,B matched,16,0.0022703124634983135,True
+F-0-3-0,0.0,3,B matched,17,0.004885234338190186,True
+F-0-3-0,0.0,3,B matched,18,0.0021413230270190585,True
+F-0-3-0,0.0,3,B matched,19,0.001588945775563899,True
+F-0-3-0,0.0,3,B matched,20,0.0016037209518553644,True
+F-0-3-0,0.0,3,B matched,21,0.002149320301032983,True
+F-0-3-0,0.0,3,B matched,22,0.001566851972356664,True
+F-0-3-0,0.0,3,B matched,23,0.012308971537025398,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,0,0.0007507560181571503,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,1,0.0006642009057019763,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,2,0.0007316605385197021,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,3,0.0007086842611383343,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,4,0.0006658587467732297,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,5,0.0008019701582905146,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,6,0.0019069894630172168,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,7,0.0014888022605843553,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,8,0.001537864110577062,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,9,0.001394094180577982,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,10,0.0013789436431875012,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,11,0.0015574848642033081,False
+F-0-3-0-radial,0.0,3,A radial/Gmsh,12,0.0016201831565185972,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,13,0.0017203772517005401,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,14,0.0009116109555319735,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,15,0.0008432427976964087,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,16,0.0012282272791516284,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,17,0.002736874522388256,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,18,0.0013295284156254739,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,19,0.0007631685626709092,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,20,0.0008664917410088707,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,21,0.0009702387269994921,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,22,0.0008150644942584993,True
+F-0-3-0-radial,0.0,3,A radial/Gmsh,23,0.003783547309750356,True
+F-0-2-1,0.0,2,C distinct boundary,0,0.007084675183277133,False
+F-0-2-1,0.0,2,C distinct boundary,1,0.00704540764445863,False
+F-0-2-1,0.0,2,C distinct boundary,2,0.00828669072088925,False
+F-0-2-1,0.0,2,C distinct boundary,3,0.00745236813623699,False
+F-0-2-1,0.0,2,C distinct boundary,4,0.008231435587892725,False
+F-0-2-1,0.0,2,C distinct boundary,5,0.008152469903983953,False
+F-0-2-1,0.0,2,C distinct boundary,6,0.014015096128374975,False
+F-0-2-1,0.0,2,C distinct boundary,7,0.018852843713015554,False
+F-0-2-1,0.0,2,C distinct boundary,8,0.0176833083442685,False
+F-0-2-1,0.0,2,C distinct boundary,9,0.014397782777435303,False
+F-0-2-1,0.0,2,C distinct boundary,10,0.017704528870937018,False
+F-0-2-1,0.0,2,C distinct boundary,11,0.015786503064438635,False
+F-0-2-1,0.0,2,C distinct boundary,12,0.01745324146375686,True
+F-0-2-1,0.0,2,C distinct boundary,13,0.02357376622071968,True
+F-0-2-1,0.0,2,C distinct boundary,14,0.010710235237365284,True
+F-0-2-1,0.0,2,C distinct boundary,15,0.007530283456781989,True
+F-0-2-1,0.0,2,C distinct boundary,16,0.01266485831741555,True
+F-0-2-1,0.0,2,C distinct boundary,17,0.0202057401510513,True
+F-0-2-1,0.0,2,C distinct boundary,18,0.011545969756875066,True
+F-0-2-1,0.0,2,C distinct boundary,19,0.007086615449787958,True
+F-0-2-1,0.0,2,C distinct boundary,20,0.008916909521094836,True
+F-0-2-1,0.0,2,C distinct boundary,21,0.008659629439463539,True
+F-0-2-1,0.0,2,C distinct boundary,22,0.008517351512847885,True
+F-0-2-1,0.0,2,C distinct boundary,23,0.051301899132605466,True
+F-0-2-1-radial,0.0,2,C geometry and volume,0,0.003454649097804305,False
+F-0-2-1-radial,0.0,2,C geometry and volume,1,0.0033339945222338498,False
+F-0-2-1-radial,0.0,2,C geometry and volume,2,0.00408834200957882,False
+F-0-2-1-radial,0.0,2,C geometry and volume,3,0.0032503487930611403,False
+F-0-2-1-radial,0.0,2,C geometry and volume,4,0.003874615610328175,False
+F-0-2-1-radial,0.0,2,C geometry and volume,5,0.004190353406219619,False
+F-0-2-1-radial,0.0,2,C geometry and volume,6,0.008950536828375138,False
+F-0-2-1-radial,0.0,2,C geometry and volume,7,0.010428857282770971,False
+F-0-2-1-radial,0.0,2,C geometry and volume,8,0.008495803355164103,False
+F-0-2-1-radial,0.0,2,C geometry and volume,9,0.009466718980757545,False
+F-0-2-1-radial,0.0,2,C geometry and volume,10,0.009293563993044558,False
+F-0-2-1-radial,0.0,2,C geometry and volume,11,0.013046100060599027,False
+F-0-2-1-radial,0.0,2,C geometry and volume,12,0.01099645833531356,True
+F-0-2-1-radial,0.0,2,C geometry and volume,13,0.012565735285550654,True
+F-0-2-1-radial,0.0,2,C geometry and volume,14,0.004023251361383645,True
+F-0-2-1-radial,0.0,2,C geometry and volume,15,0.004897697589059146,True
+F-0-2-1-radial,0.0,2,C geometry and volume,16,0.0059162339012794225,True
+F-0-2-1-radial,0.0,2,C geometry and volume,17,0.011369220013309604,True
+F-0-2-1-radial,0.0,2,C geometry and volume,18,0.005954325435859081,True
+F-0-2-1-radial,0.0,2,C geometry and volume,19,0.003199919467304584,True
+F-0-2-1-radial,0.0,2,C geometry and volume,20,0.0036482688402975382,True
+F-0-2-1-radial,0.0,2,C geometry and volume,21,0.00423408560433509,True
+F-0-2-1-radial,0.0,2,C geometry and volume,22,0.0035757925858210696,True
+F-0-2-1-radial,0.0,2,C geometry and volume,23,0.025812829402417296,True
+F-0-3-1,0.0,3,C distinct boundary,0,0.001597080942626662,False
+F-0-3-1,0.0,3,C distinct boundary,1,0.0016217546018860492,False
+F-0-3-1,0.0,3,C distinct boundary,2,0.002140051949295027,False
+F-0-3-1,0.0,3,C distinct boundary,3,0.0013603122787685894,False
+F-0-3-1,0.0,3,C distinct boundary,4,0.0018628805662063892,False
+F-0-3-1,0.0,3,C distinct boundary,5,0.001796125271759377,False
+F-0-3-1,0.0,3,C distinct boundary,6,0.0046451678132264605,False
+F-0-3-1,0.0,3,C distinct boundary,7,0.004365506496932534,False
+F-0-3-1,0.0,3,C distinct boundary,8,0.007756049651504165,False
+F-0-3-1,0.0,3,C distinct boundary,9,0.00298247633074699,False
+F-0-3-1,0.0,3,C distinct boundary,10,0.005766947685764286,False
+F-0-3-1,0.0,3,C distinct boundary,11,0.004762622581227241,False
+F-0-3-1,0.0,3,C distinct boundary,12,0.0036468216063087143,True
+F-0-3-1,0.0,3,C distinct boundary,13,0.005653992951106682,True
+F-0-3-1,0.0,3,C distinct boundary,14,0.0029556802809645364,True
+F-0-3-1,0.0,3,C distinct boundary,15,0.0020167620989924796,True
+F-0-3-1,0.0,3,C distinct boundary,16,0.0028324670204969665,True
+F-0-3-1,0.0,3,C distinct boundary,17,0.00690001054316998,True
+F-0-3-1,0.0,3,C distinct boundary,18,0.002181380705966009,True
+F-0-3-1,0.0,3,C distinct boundary,19,0.0014208760897670217,True
+F-0-3-1,0.0,3,C distinct boundary,20,0.001466724033409487,True
+F-0-3-1,0.0,3,C distinct boundary,21,0.0023994394344899316,True
+F-0-3-1,0.0,3,C distinct boundary,22,0.001509870154355974,True
+F-0-3-1,0.0,3,C distinct boundary,23,0.019518532543148833,True
+F-0-3-1-radial,0.0,3,C geometry and volume,0,0.0013222465869373095,False
+F-0-3-1-radial,0.0,3,C geometry and volume,1,0.0010068658984271083,False
+F-0-3-1-radial,0.0,3,C geometry and volume,2,0.001393262024929344,False
+F-0-3-1-radial,0.0,3,C geometry and volume,3,0.0010743834569365202,False
+F-0-3-1-radial,0.0,3,C geometry and volume,4,0.0011606635126948004,False
+F-0-3-1-radial,0.0,3,C geometry and volume,5,0.0011317052869683427,False
+F-0-3-1-radial,0.0,3,C geometry and volume,6,0.004575619201660959,False
+F-0-3-1-radial,0.0,3,C geometry and volume,7,0.0038781012429160043,False
+F-0-3-1-radial,0.0,3,C geometry and volume,8,0.004994413761392988,False
+F-0-3-1-radial,0.0,3,C geometry and volume,9,0.003081069777215137,False
+F-0-3-1-radial,0.0,3,C geometry and volume,10,0.0030324105398937587,False
+F-0-3-1-radial,0.0,3,C geometry and volume,11,0.004732834838220071,False
+F-0-3-1-radial,0.0,3,C geometry and volume,12,0.002395823388395945,True
+F-0-3-1-radial,0.0,3,C geometry and volume,13,0.004524866039688084,True
+F-0-3-1-radial,0.0,3,C geometry and volume,14,0.0016283654455776274,True
+F-0-3-1-radial,0.0,3,C geometry and volume,15,0.0009662762560749502,True
+F-0-3-1-radial,0.0,3,C geometry and volume,16,0.0012761014047698337,True
+F-0-3-1-radial,0.0,3,C geometry and volume,17,0.004178861959800832,True
+F-0-3-1-radial,0.0,3,C geometry and volume,18,0.0018373733677203956,True
+F-0-3-1-radial,0.0,3,C geometry and volume,19,0.0009059272421264802,True
+F-0-3-1-radial,0.0,3,C geometry and volume,20,0.0012904978329845525,True
+F-0-3-1-radial,0.0,3,C geometry and volume,21,0.0018504896868242345,True
+F-0-3-1-radial,0.0,3,C geometry and volume,22,0.0012085468987198442,True
+F-0-3-1-radial,0.0,3,C geometry and volume,23,0.011187111266689257,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,0,0.002076221696567904,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,1,0.0016434289331499175,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,2,0.002650309180855259,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,3,0.0013723486201910112,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,4,0.002117421938205921,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,5,0.0020194976721165008,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,6,0.006601538237228188,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,7,0.005243797790368447,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,8,0.009531639239418641,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,9,0.0043194913660711326,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,10,0.006339939791457126,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,11,0.006107040100748781,False
+F-0-3-1-matched-alt,0.0,3,B alternative matched,12,0.0035115920511860094,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,13,0.007643593918688551,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,14,0.002676182498331271,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,15,0.002196581161169201,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,16,0.002945932403257531,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,17,0.007282751168063752,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,18,0.0021077819816677813,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,19,0.0014540681331095967,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,20,0.001537506531083648,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,21,0.0035470060036210727,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,22,0.0016467076062828755,True
+F-0-3-1-matched-alt,0.0,3,B alternative matched,23,0.020427014885676,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,0,0.0018598319695706646,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,1,0.0018507922462065013,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,2,0.002215674485395467,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,3,0.0013890343894175658,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,4,0.002161179765184215,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,5,0.0019654406079394966,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,6,0.0031988028649096094,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,7,0.002911633680672319,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,8,0.003671121115568621,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,9,0.002400890633049466,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,10,0.003466947648128758,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,11,0.003583974535384087,False
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,12,0.001818956444631837,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,13,0.003926135734476696,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,14,0.001893786996763251,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,15,0.0012544184929046103,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,16,0.0020407901666969924,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,17,0.003443232607244204,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,18,0.0015008422794681254,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,19,0.0009542487307464181,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,20,0.0010843584392263195,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,21,0.0026742398166885294,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,22,0.0011066029628696618,True
+F-0-3-1-BEM-geometry,0.0,3,C BEM geometry only,23,0.0037722852075629545,True
+F-1-1-0,1.0,1,B matched,0,0.025572459194576656,False
+F-1-1-0,1.0,1,B matched,1,0.029476212650757345,False
+F-1-1-0,1.0,1,B matched,2,0.02728076903819859,False
+F-1-1-0,1.0,1,B matched,3,0.02854119213843519,False
+F-1-1-0,1.0,1,B matched,4,0.03347021173771659,False
+F-1-1-0,1.0,1,B matched,5,0.027798120821572812,False
+F-1-1-0,1.0,1,B matched,6,0.05877893161439849,False
+F-1-1-0,1.0,1,B matched,7,0.08505777513700799,False
+F-1-1-0,1.0,1,B matched,8,0.05763792823503174,False
+F-1-1-0,1.0,1,B matched,9,0.05874841076020611,False
+F-1-1-0,1.0,1,B matched,10,0.08825335170468972,False
+F-1-1-0,1.0,1,B matched,11,0.0765871946903488,False
+F-1-1-0,1.0,1,B matched,12,0.042042775835571054,True
+F-1-1-0,1.0,1,B matched,13,0.03916669082722806,True
+F-1-1-0,1.0,1,B matched,14,0.04609866229986387,True
+F-1-1-0,1.0,1,B matched,15,0.0303379584901824,True
+F-1-1-0,1.0,1,B matched,16,0.05221152817955451,True
+F-1-1-0,1.0,1,B matched,17,0.05714904681803768,True
+F-1-1-0,1.0,1,B matched,18,0.032598192917384194,True
+F-1-1-0,1.0,1,B matched,19,0.06328035899852298,True
+F-1-1-0,1.0,1,B matched,20,0.08686399661439316,True
+F-1-1-0,1.0,1,B matched,21,0.035551121668923796,True
+F-1-1-0,1.0,1,B matched,22,0.03461133477182941,True
+F-1-1-0,1.0,1,B matched,23,0.06560914053818011,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,0,0.007367525645616073,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,1,0.007957031095849092,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,2,0.010422035896301744,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,3,0.007521349341887561,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,4,0.009992767531881538,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,5,0.011706934851495371,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,6,0.012799306373227353,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,7,0.015825597497755608,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,8,0.0247485300624475,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,9,0.012549081521200857,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,10,0.01858537176451785,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,11,0.023460139639261142,False
+F-1-1-0-radial,1.0,1,A radial/Gmsh,12,0.012851857396516867,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,13,0.01977933636014189,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,14,0.022039405890330974,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,15,0.012699594139988954,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,16,0.01919440365631208,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,17,0.022312641946773206,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,18,0.012897683061915634,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,19,0.0338436101332633,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,20,0.03332049767101358,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,21,0.01367516804230652,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,22,0.012560590063283276,True
+F-1-1-0-radial,1.0,1,A radial/Gmsh,23,0.02858619588068327,True
+F-1-2-0,1.0,2,B matched,0,0.00603820528434633,False
+F-1-2-0,1.0,2,B matched,1,0.006597433137647949,False
+F-1-2-0,1.0,2,B matched,2,0.006780157462387565,False
+F-1-2-0,1.0,2,B matched,3,0.006396381854462515,False
+F-1-2-0,1.0,2,B matched,4,0.008123909876655682,False
+F-1-2-0,1.0,2,B matched,5,0.006645122593819295,False
+F-1-2-0,1.0,2,B matched,6,0.009143733427843165,False
+F-1-2-0,1.0,2,B matched,7,0.011809070670341289,False
+F-1-2-0,1.0,2,B matched,8,0.012225648002581198,False
+F-1-2-0,1.0,2,B matched,9,0.0101950999605345,False
+F-1-2-0,1.0,2,B matched,10,0.018354781674510788,False
+F-1-2-0,1.0,2,B matched,11,0.013724119712066619,False
+F-1-2-0,1.0,2,B matched,12,0.009040932082734892,True
+F-1-2-0,1.0,2,B matched,13,0.007838641711731542,True
+F-1-2-0,1.0,2,B matched,14,0.010008801460801756,True
+F-1-2-0,1.0,2,B matched,15,0.0065058078294945075,True
+F-1-2-0,1.0,2,B matched,16,0.009532001866582944,True
+F-1-2-0,1.0,2,B matched,17,0.00963156814078483,True
+F-1-2-0,1.0,2,B matched,18,0.007044111867292978,True
+F-1-2-0,1.0,2,B matched,19,0.016013562764523422,True
+F-1-2-0,1.0,2,B matched,20,0.012447346197751862,True
+F-1-2-0,1.0,2,B matched,21,0.007709468931099895,True
+F-1-2-0,1.0,2,B matched,22,0.0068911163680720625,True
+F-1-2-0,1.0,2,B matched,23,0.014919706659564377,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,0,0.0017322593640241336,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,1,0.0023528560598336024,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,2,0.002207579873468757,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,3,0.0024303537160189938,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,4,0.0032698716027545448,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,5,0.0026746756112159503,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,6,0.0034670399963158535,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,7,0.005699575232847623,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,8,0.0054857174013444,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,9,0.005043644552381597,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,10,0.007650817633844733,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,11,0.006222890642984099,False
+F-1-2-0-radial,1.0,2,A radial/Gmsh,12,0.004066602493416887,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,13,0.004464567834669648,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,14,0.006592236731971609,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,15,0.002729805752746624,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,16,0.005302305243848973,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,17,0.006844500408291599,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,18,0.003360885745711962,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,19,0.007482487842955687,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,20,0.008422204420633182,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,21,0.0024467753978832133,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,22,0.0025248266067446528,True
+F-1-2-0-radial,1.0,2,A radial/Gmsh,23,0.008086182804079486,True
+F-1-3-0,1.0,3,B matched,0,0.0014179013383325866,False
+F-1-3-0,1.0,3,B matched,1,0.0016677332873245925,False
+F-1-3-0,1.0,3,B matched,2,0.0017800604248541043,False
+F-1-3-0,1.0,3,B matched,3,0.001492261126867026,False
+F-1-3-0,1.0,3,B matched,4,0.0023139506278744893,False
+F-1-3-0,1.0,3,B matched,5,0.0016144982664971753,False
+F-1-3-0,1.0,3,B matched,6,0.0028182505666297015,False
+F-1-3-0,1.0,3,B matched,7,0.002968444411843151,False
+F-1-3-0,1.0,3,B matched,8,0.004726419567156529,False
+F-1-3-0,1.0,3,B matched,9,0.002925874744699481,False
+F-1-3-0,1.0,3,B matched,10,0.0067007722989286716,False
+F-1-3-0,1.0,3,B matched,11,0.003170025205024782,False
+F-1-3-0,1.0,3,B matched,12,0.002411965034788995,True
+F-1-3-0,1.0,3,B matched,13,0.002464104819983967,True
+F-1-3-0,1.0,3,B matched,14,0.0028525023086330595,True
+F-1-3-0,1.0,3,B matched,15,0.0015694162589534493,True
+F-1-3-0,1.0,3,B matched,16,0.002649971573457215,True
+F-1-3-0,1.0,3,B matched,17,0.0028086549680838777,True
+F-1-3-0,1.0,3,B matched,18,0.001696373213060846,True
+F-1-3-0,1.0,3,B matched,19,0.004908724208153998,True
+F-1-3-0,1.0,3,B matched,20,0.00394052621294013,True
+F-1-3-0,1.0,3,B matched,21,0.0022244755427910153,True
+F-1-3-0,1.0,3,B matched,22,0.0016912585779394562,True
+F-1-3-0,1.0,3,B matched,23,0.005666581567681302,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,0,0.0007580831355418532,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,1,0.0007078425087898655,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,2,0.0006214202692879094,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,3,0.0006946949787370204,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,4,0.0008753670335644888,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,5,0.0006305039672438214,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,6,0.002152650617915226,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,7,0.00142458735083413,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,8,0.0011902584904493134,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,9,0.0012324114668202729,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,10,0.0018759783210378087,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,11,0.0012834991125662014,False
+F-1-3-0-radial,1.0,3,A radial/Gmsh,12,0.001130174310566377,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,13,0.0009065235017149602,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,14,0.0018249351471200602,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,15,0.0006725575544058442,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,16,0.0013535361169232716,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,17,0.0008887478856449703,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,18,0.0007818442236850928,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,19,0.0017004082831247587,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,20,0.0027014629378239283,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,21,0.0009705828132613257,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,22,0.0008422182819022915,True
+F-1-3-0-radial,1.0,3,A radial/Gmsh,23,0.0011389077919378352,True
+F-1-2-1,1.0,2,C distinct boundary,0,0.006980699550849347,False
+F-1-2-1,1.0,2,C distinct boundary,1,0.007408160379753089,False
+F-1-2-1,1.0,2,C distinct boundary,2,0.008493116812767905,False
+F-1-2-1,1.0,2,C distinct boundary,3,0.007255548779188951,False
+F-1-2-1,1.0,2,C distinct boundary,4,0.008929592196974645,False
+F-1-2-1,1.0,2,C distinct boundary,5,0.007640199621386712,False
+F-1-2-1,1.0,2,C distinct boundary,6,0.013653964115352442,False
+F-1-2-1,1.0,2,C distinct boundary,7,0.021473325851398713,False
+F-1-2-1,1.0,2,C distinct boundary,8,0.02037837261260798,False
+F-1-2-1,1.0,2,C distinct boundary,9,0.013751294190233895,False
+F-1-2-1,1.0,2,C distinct boundary,10,0.020992781311402198,False
+F-1-2-1,1.0,2,C distinct boundary,11,0.015257615775854471,False
+F-1-2-1,1.0,2,C distinct boundary,12,0.010547315850509222,True
+F-1-2-1,1.0,2,C distinct boundary,13,0.010067173272378261,True
+F-1-2-1,1.0,2,C distinct boundary,14,0.01641283615594463,True
+F-1-2-1,1.0,2,C distinct boundary,15,0.006845982895868398,True
+F-1-2-1,1.0,2,C distinct boundary,16,0.014646807725327072,True
+F-1-2-1,1.0,2,C distinct boundary,17,0.012822020399994789,True
+F-1-2-1,1.0,2,C distinct boundary,18,0.009003267920205478,True
+F-1-2-1,1.0,2,C distinct boundary,19,0.02589429756725797,True
+F-1-2-1,1.0,2,C distinct boundary,20,0.021005627961661198,True
+F-1-2-1,1.0,2,C distinct boundary,21,0.009348431186356166,True
+F-1-2-1,1.0,2,C distinct boundary,22,0.00888008380045192,True
+F-1-2-1,1.0,2,C distinct boundary,23,0.02018735934851453,True
+F-1-2-1-radial,1.0,2,C geometry and volume,0,0.0033864861495081534,False
+F-1-2-1-radial,1.0,2,C geometry and volume,1,0.0036031760046757676,False
+F-1-2-1-radial,1.0,2,C geometry and volume,2,0.003706039107162438,False
+F-1-2-1-radial,1.0,2,C geometry and volume,3,0.0029662634958656964,False
+F-1-2-1-radial,1.0,2,C geometry and volume,4,0.004121719406753385,False
+F-1-2-1-radial,1.0,2,C geometry and volume,5,0.0035521002701362804,False
+F-1-2-1-radial,1.0,2,C geometry and volume,6,0.008993036905642017,False
+F-1-2-1-radial,1.0,2,C geometry and volume,7,0.011509988300312808,False
+F-1-2-1-radial,1.0,2,C geometry and volume,8,0.009487213320344648,False
+F-1-2-1-radial,1.0,2,C geometry and volume,9,0.007829652827902614,False
+F-1-2-1-radial,1.0,2,C geometry and volume,10,0.009883861435349434,False
+F-1-2-1-radial,1.0,2,C geometry and volume,11,0.011437612914725646,False
+F-1-2-1-radial,1.0,2,C geometry and volume,12,0.005559289210761145,True
+F-1-2-1-radial,1.0,2,C geometry and volume,13,0.006115406626719663,True
+F-1-2-1-radial,1.0,2,C geometry and volume,14,0.005228123681952988,True
+F-1-2-1-radial,1.0,2,C geometry and volume,15,0.00337084790688946,True
+F-1-2-1-radial,1.0,2,C geometry and volume,16,0.0064013715798505455,True
+F-1-2-1-radial,1.0,2,C geometry and volume,17,0.008492335478468756,True
+F-1-2-1-radial,1.0,2,C geometry and volume,18,0.004177903088849202,True
+F-1-2-1-radial,1.0,2,C geometry and volume,19,0.00887443060796582,True
+F-1-2-1-radial,1.0,2,C geometry and volume,20,0.011812846862784812,True
+F-1-2-1-radial,1.0,2,C geometry and volume,21,0.0041170855377430735,True
+F-1-2-1-radial,1.0,2,C geometry and volume,22,0.0036922153657356054,True
+F-1-2-1-radial,1.0,2,C geometry and volume,23,0.01075132303629106,True
+F-1-3-1,1.0,3,C distinct boundary,0,0.0014919400150697996,False
+F-1-3-1,1.0,3,C distinct boundary,1,0.0017044825699549838,False
+F-1-3-1,1.0,3,C distinct boundary,2,0.0019979913106023457,False
+F-1-3-1,1.0,3,C distinct boundary,3,0.0013835771807116292,False
+F-1-3-1,1.0,3,C distinct boundary,4,0.0022019416282602175,False
+F-1-3-1,1.0,3,C distinct boundary,5,0.0016452128459394635,False
+F-1-3-1,1.0,3,C distinct boundary,6,0.0039197345518405795,False
+F-1-3-1,1.0,3,C distinct boundary,7,0.00392021371977683,False
+F-1-3-1,1.0,3,C distinct boundary,8,0.00776803576990558,False
+F-1-3-1,1.0,3,C distinct boundary,9,0.003142763655513189,False
+F-1-3-1,1.0,3,C distinct boundary,10,0.007122219597144956,False
+F-1-3-1,1.0,3,C distinct boundary,11,0.004646029674510113,False
+F-1-3-1,1.0,3,C distinct boundary,12,0.0021850999679100965,True
+F-1-3-1,1.0,3,C distinct boundary,13,0.002261216339444151,True
+F-1-3-1,1.0,3,C distinct boundary,14,0.0039017286183880015,True
+F-1-3-1,1.0,3,C distinct boundary,15,0.0014986703225145074,True
+F-1-3-1,1.0,3,C distinct boundary,16,0.004147654477383016,True
+F-1-3-1,1.0,3,C distinct boundary,17,0.003501397972225829,True
+F-1-3-1,1.0,3,C distinct boundary,18,0.002170672237596247,True
+F-1-3-1,1.0,3,C distinct boundary,19,0.0067812147767936405,True
+F-1-3-1,1.0,3,C distinct boundary,20,0.0071805752026406055,True
+F-1-3-1,1.0,3,C distinct boundary,21,0.0028333040835945844,True
+F-1-3-1,1.0,3,C distinct boundary,22,0.002286090431827807,True
+F-1-3-1,1.0,3,C distinct boundary,23,0.006219063365474065,True
+F-1-3-1-radial,1.0,3,C geometry and volume,0,0.0011950245179303725,False
+F-1-3-1-radial,1.0,3,C geometry and volume,1,0.0009599227247489565,False
+F-1-3-1-radial,1.0,3,C geometry and volume,2,0.001343134630770725,False
+F-1-3-1-radial,1.0,3,C geometry and volume,3,0.0009782516497665555,False
+F-1-3-1-radial,1.0,3,C geometry and volume,4,0.0011327109228880118,False
+F-1-3-1-radial,1.0,3,C geometry and volume,5,0.0011347847526522118,False
+F-1-3-1-radial,1.0,3,C geometry and volume,6,0.0037322250806018638,False
+F-1-3-1-radial,1.0,3,C geometry and volume,7,0.003732242360099351,False
+F-1-3-1-radial,1.0,3,C geometry and volume,8,0.004820493192455191,False
+F-1-3-1-radial,1.0,3,C geometry and volume,9,0.0025478733806298497,False
+F-1-3-1-radial,1.0,3,C geometry and volume,10,0.002793969336811949,False
+F-1-3-1-radial,1.0,3,C geometry and volume,11,0.004647240623665012,False
+F-1-3-1-radial,1.0,3,C geometry and volume,12,0.0014135592842529044,True
+F-1-3-1-radial,1.0,3,C geometry and volume,13,0.0017865948674200933,True
+F-1-3-1-radial,1.0,3,C geometry and volume,14,0.0011880049286316803,True
+F-1-3-1-radial,1.0,3,C geometry and volume,15,0.0007948916618737836,True
+F-1-3-1-radial,1.0,3,C geometry and volume,16,0.003909049594284133,True
+F-1-3-1-radial,1.0,3,C geometry and volume,17,0.0029679610504264008,True
+F-1-3-1-radial,1.0,3,C geometry and volume,18,0.0010693862274429565,True
+F-1-3-1-radial,1.0,3,C geometry and volume,19,0.00401302299681849,True
+F-1-3-1-radial,1.0,3,C geometry and volume,20,0.007083247123714543,True
+F-1-3-1-radial,1.0,3,C geometry and volume,21,0.001525975800705713,True
+F-1-3-1-radial,1.0,3,C geometry and volume,22,0.0013279595268902672,True
+F-1-3-1-radial,1.0,3,C geometry and volume,23,0.0031255765081838935,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,0,0.0019757757468595715,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,1,0.0015088618904997347,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,2,0.0026370359098965247,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,3,0.0012960130547164563,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,4,0.0020445991520388995,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,5,0.001979853283137423,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,6,0.006001580142747062,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,7,0.004930950411479012,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,8,0.009697150015901124,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,9,0.003864192177023224,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,10,0.007132058253551558,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,11,0.006093416722762236,False
+F-1-3-1-matched-alt,1.0,3,B alternative matched,12,0.0022485941056831545,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,13,0.0028694657398725303,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,14,0.004163485894210911,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,15,0.0012928866280061814,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,16,0.006484803900413578,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,17,0.004405299489872538,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,18,0.002035515958740946,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,19,0.007569884261345183,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,20,0.01057087415063685,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,21,0.003507270072272681,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,22,0.002554854975192497,True
+F-1-3-1-matched-alt,1.0,3,B alternative matched,23,0.006445806432750261,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,0,0.0018201632940438603,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,1,0.0018880428215763527,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,2,0.0021657597192187477,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,3,0.0013725892402899347,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,4,0.002219064076384927,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,5,0.0018850582704340204,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,6,0.0030797488418054775,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,7,0.003015916884578889,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,8,0.003563748582989895,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,9,0.002344418348055272,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,10,0.0035744167504885623,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,11,0.00341233714731473,False
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,12,0.0022198035539980677,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,13,0.002376295514416923,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,14,0.0020465071257841382,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,15,0.0015059957236464346,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,16,0.0035833738791192665,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,17,0.0028879615403398333,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,18,0.0016797566082020934,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,19,0.0028248318634670777,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,20,0.005204279890989285,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,21,0.001644405647085257,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,22,0.0014571494857832784,True
+F-1-3-1-BEM-geometry,1.0,3,C BEM geometry only,23,0.002818729346296418,True
+F-2-1-0,2.0,1,B matched,0,0.0362160117296392,False
+F-2-1-0,2.0,1,B matched,1,0.03377089373802246,False
+F-2-1-0,2.0,1,B matched,2,0.03603608689534312,False
+F-2-1-0,2.0,1,B matched,3,0.03320088132290668,False
+F-2-1-0,2.0,1,B matched,4,0.03302172593890139,False
+F-2-1-0,2.0,1,B matched,5,0.03050223016608903,False
+F-2-1-0,2.0,1,B matched,6,0.09433571117903844,False
+F-2-1-0,2.0,1,B matched,7,0.09095383056287652,False
+F-2-1-0,2.0,1,B matched,8,0.10261680435314927,False
+F-2-1-0,2.0,1,B matched,9,0.08202892633345338,False
+F-2-1-0,2.0,1,B matched,10,0.07751368660050152,False
+F-2-1-0,2.0,1,B matched,11,0.0729700370970996,False
+F-2-1-0,2.0,1,B matched,12,0.03924045481486552,True
+F-2-1-0,2.0,1,B matched,13,0.03215590855930656,True
+F-2-1-0,2.0,1,B matched,14,0.07068454569095914,True
+F-2-1-0,2.0,1,B matched,15,0.06831130530650512,True
+F-2-1-0,2.0,1,B matched,16,0.0323746785347842,True
+F-2-1-0,2.0,1,B matched,17,0.03755561027243229,True
+F-2-1-0,2.0,1,B matched,18,0.42874958164458166,True
+F-2-1-0,2.0,1,B matched,19,0.05152580270637077,True
+F-2-1-0,2.0,1,B matched,20,0.03180650643831742,True
+F-2-1-0,2.0,1,B matched,21,0.06859526621515405,True
+F-2-1-0,2.0,1,B matched,22,0.03661291833925947,True
+F-2-1-0,2.0,1,B matched,23,0.04710951875281259,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,0,0.018000896591325966,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,1,0.014845197695334352,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,2,0.015023077095802874,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,3,0.016468660649415885,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,4,0.009377195944799546,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,5,0.015306138227347393,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,6,0.03491735473764274,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,7,0.034382219960530806,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,8,0.034966840222630066,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,9,0.032265006056616224,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,10,0.01601996257215565,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,11,0.031390647935559395,False
+F-2-1-0-radial,2.0,1,A radial/Gmsh,12,0.02224971363594931,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,13,0.016888382297587008,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,14,0.024992693380093564,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,15,0.01686444700021975,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,16,0.012206572494955823,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,17,0.023251754453640736,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,18,0.042848781618929244,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,19,0.020692799992797124,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,20,0.01165177707055422,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,21,0.045884607121251135,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,22,0.012271636517261158,True
+F-2-1-0-radial,2.0,1,A radial/Gmsh,23,0.038089451147275424,True
+F-2-2-0,2.0,2,B matched,0,0.00867094235642723,False
+F-2-2-0,2.0,2,B matched,1,0.008402116584008074,False
+F-2-2-0,2.0,2,B matched,2,0.009036624832206302,False
+F-2-2-0,2.0,2,B matched,3,0.00815332367602638,False
+F-2-2-0,2.0,2,B matched,4,0.007525809118207,False
+F-2-2-0,2.0,2,B matched,5,0.007272246190754312,False
+F-2-2-0,2.0,2,B matched,6,0.016360433892479116,False
+F-2-2-0,2.0,2,B matched,7,0.01638944335543294,False
+F-2-2-0,2.0,2,B matched,8,0.021739343324147824,False
+F-2-2-0,2.0,2,B matched,9,0.01622711964670652,False
+F-2-2-0,2.0,2,B matched,10,0.012401436482017986,False
+F-2-2-0,2.0,2,B matched,11,0.012947736856712695,False
+F-2-2-0,2.0,2,B matched,12,0.008419463918306967,True
+F-2-2-0,2.0,2,B matched,13,0.008357145186242887,True
+F-2-2-0,2.0,2,B matched,14,0.013352789443967596,True
+F-2-2-0,2.0,2,B matched,15,0.011168050269924878,True
+F-2-2-0,2.0,2,B matched,16,0.007131631104026901,True
+F-2-2-0,2.0,2,B matched,17,0.008223871148927189,True
+F-2-2-0,2.0,2,B matched,18,0.041606238780430384,True
+F-2-2-0,2.0,2,B matched,19,0.009735342584907165,True
+F-2-2-0,2.0,2,B matched,20,0.007070619476155455,True
+F-2-2-0,2.0,2,B matched,21,0.01739898245521975,True
+F-2-2-0,2.0,2,B matched,22,0.007452138580999432,True
+F-2-2-0,2.0,2,B matched,23,0.012110624475629446,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,0,0.004507222430585479,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,1,0.003843292376370595,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,2,0.004245815378213823,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,3,0.0040293422090973635,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,4,0.0030219378700727696,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,5,0.0034484576078669064,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,6,0.009467955141693348,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,7,0.008889306057510897,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,8,0.012617107605209567,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,9,0.00938094750909505,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,10,0.007770577511698648,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,11,0.007116165079504701,False
+F-2-2-0-radial,2.0,2,A radial/Gmsh,12,0.0057557979838180374,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,13,0.0049658334705227425,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,14,0.00862679942629847,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,15,0.005285948060094831,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,16,0.003197491751567682,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,17,0.006532930277367301,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,18,0.02556083372929792,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,19,0.006095126596438821,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,20,0.0027584527238718663,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,21,0.009513467117824744,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,22,0.0027678969773426284,True
+F-2-2-0-radial,2.0,2,A radial/Gmsh,23,0.009101495649052183,True
+F-2-3-0,2.0,3,B matched,0,0.0028718074538966213,False
+F-2-3-0,2.0,3,B matched,1,0.0024054208070929143,False
+F-2-3-0,2.0,3,B matched,2,0.0025670157833970215,False
+F-2-3-0,2.0,3,B matched,3,0.0024177632099636522,False
+F-2-3-0,2.0,3,B matched,4,0.0019369507699424507,False
+F-2-3-0,2.0,3,B matched,5,0.002118389682994705,False
+F-2-3-0,2.0,3,B matched,6,0.004360819982119708,False
+F-2-3-0,2.0,3,B matched,7,0.00412695029411315,False
+F-2-3-0,2.0,3,B matched,8,0.0070975611511878405,False
+F-2-3-0,2.0,3,B matched,9,0.004811912944247844,False
+F-2-3-0,2.0,3,B matched,10,0.004024268814774768,False
+F-2-3-0,2.0,3,B matched,11,0.0033089934052957905,False
+F-2-3-0,2.0,3,B matched,12,0.00222323073318127,True
+F-2-3-0,2.0,3,B matched,13,0.00227358163057296,True
+F-2-3-0,2.0,3,B matched,14,0.004089585022359059,True
+F-2-3-0,2.0,3,B matched,15,0.003224150337714566,True
+F-2-3-0,2.0,3,B matched,16,0.0019418707289392842,True
+F-2-3-0,2.0,3,B matched,17,0.0023065459964295237,True
+F-2-3-0,2.0,3,B matched,18,0.017848422510993535,True
+F-2-3-0,2.0,3,B matched,19,0.0027889112718247114,True
+F-2-3-0,2.0,3,B matched,20,0.0018399357775459395,True
+F-2-3-0,2.0,3,B matched,21,0.00484151919633425,True
+F-2-3-0,2.0,3,B matched,22,0.0021080725932402693,True
+F-2-3-0,2.0,3,B matched,23,0.003556459927519581,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,0,0.001716146525845422,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,1,0.0011665168515748855,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,2,0.0011174369419001357,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,3,0.0012795679514204746,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,4,0.000882005158836617,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,5,0.0008964463302894355,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,6,0.005046293688163194,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,7,0.002272553102170474,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,8,0.0029318948752680768,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,9,0.0031480498931521664,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,10,0.002069346797424992,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,11,0.0015557547763194943,False
+F-2-3-0-radial,2.0,3,A radial/Gmsh,12,0.0014977552398017272,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,13,0.0011248033724135947,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,14,0.0020743189234326198,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,15,0.0015561841123882903,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,16,0.0009568597243831056,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,17,0.0015627134493729016,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,18,0.007504103931597671,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,19,0.0015614911100098152,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,20,0.0007979270017613991,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,21,0.0031171597347935892,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,22,0.001042364595669438,True
+F-2-3-0-radial,2.0,3,A radial/Gmsh,23,0.002046160578270046,True
+F-2-2-1,2.0,2,C distinct boundary,0,0.009534124299365253,False
+F-2-2-1,2.0,2,C distinct boundary,1,0.009008497292835675,False
+F-2-2-1,2.0,2,C distinct boundary,2,0.010383755569093841,False
+F-2-2-1,2.0,2,C distinct boundary,3,0.00906270894399842,False
+F-2-2-1,2.0,2,C distinct boundary,4,0.00850665306577153,False
+F-2-2-1,2.0,2,C distinct boundary,5,0.008653962605782103,False
+F-2-2-1,2.0,2,C distinct boundary,6,0.030118360665240852,False
+F-2-2-1,2.0,2,C distinct boundary,7,0.02541035734816476,False
+F-2-2-1,2.0,2,C distinct boundary,8,0.03543797112308991,False
+F-2-2-1,2.0,2,C distinct boundary,9,0.01812297072831983,False
+F-2-2-1,2.0,2,C distinct boundary,10,0.019334137280925683,False
+F-2-2-1,2.0,2,C distinct boundary,11,0.016199010497636578,False
+F-2-2-1,2.0,2,C distinct boundary,12,0.009928820346955324,True
+F-2-2-1,2.0,2,C distinct boundary,13,0.008843463737610451,True
+F-2-2-1,2.0,2,C distinct boundary,14,0.019281374768676186,True
+F-2-2-1,2.0,2,C distinct boundary,15,0.016164553298949502,True
+F-2-2-1,2.0,2,C distinct boundary,16,0.009179352961120314,True
+F-2-2-1,2.0,2,C distinct boundary,17,0.009123877452058815,True
+F-2-2-1,2.0,2,C distinct boundary,18,0.08002983208438977,True
+F-2-2-1,2.0,2,C distinct boundary,19,0.013927922042401321,True
+F-2-2-1,2.0,2,C distinct boundary,20,0.007935458967733061,True
+F-2-2-1,2.0,2,C distinct boundary,21,0.019008006818133905,True
+F-2-2-1,2.0,2,C distinct boundary,22,0.009727428717034655,True
+F-2-2-1,2.0,2,C distinct boundary,23,0.012954397068372087,True
+F-2-2-1-radial,2.0,2,C geometry and volume,0,0.004717523275229613,False
+F-2-2-1-radial,2.0,2,C geometry and volume,1,0.004032374715974215,False
+F-2-2-1-radial,2.0,2,C geometry and volume,2,0.004510896096316789,False
+F-2-2-1-radial,2.0,2,C geometry and volume,3,0.004901229658103661,False
+F-2-2-1-radial,2.0,2,C geometry and volume,4,0.0035117652017844178,False
+F-2-2-1-radial,2.0,2,C geometry and volume,5,0.004453319225923542,False
+F-2-2-1-radial,2.0,2,C geometry and volume,6,0.019621745529751072,False
+F-2-2-1-radial,2.0,2,C geometry and volume,7,0.010575706842936466,False
+F-2-2-1-radial,2.0,2,C geometry and volume,8,0.011425688960546434,False
+F-2-2-1-radial,2.0,2,C geometry and volume,9,0.01379474752492551,False
+F-2-2-1-radial,2.0,2,C geometry and volume,10,0.007949257317326463,False
+F-2-2-1-radial,2.0,2,C geometry and volume,11,0.010196495082337852,False
+F-2-2-1-radial,2.0,2,C geometry and volume,12,0.007114576055100447,True
+F-2-2-1-radial,2.0,2,C geometry and volume,13,0.006020754965371788,True
+F-2-2-1-radial,2.0,2,C geometry and volume,14,0.014050663864980622,True
+F-2-2-1-radial,2.0,2,C geometry and volume,15,0.01055663303589554,True
+F-2-2-1-radial,2.0,2,C geometry and volume,16,0.004469873273454853,True
+F-2-2-1-radial,2.0,2,C geometry and volume,17,0.006131017760504643,True
+F-2-2-1-radial,2.0,2,C geometry and volume,18,0.049686838558406735,True
+F-2-2-1-radial,2.0,2,C geometry and volume,19,0.009975779415066648,True
+F-2-2-1-radial,2.0,2,C geometry and volume,20,0.003786450644184704,True
+F-2-2-1-radial,2.0,2,C geometry and volume,21,0.01793639339451592,True
+F-2-2-1-radial,2.0,2,C geometry and volume,22,0.003524726918039218,True
+F-2-2-1-radial,2.0,2,C geometry and volume,23,0.007738788586787068,True
+F-2-3-1,2.0,3,C distinct boundary,0,0.0024902728558493016,False
+F-2-3-1,2.0,3,C distinct boundary,1,0.0023085765727224625,False
+F-2-3-1,2.0,3,C distinct boundary,2,0.0026288207276247352,False
+F-2-3-1,2.0,3,C distinct boundary,3,0.002341379332585104,False
+F-2-3-1,2.0,3,C distinct boundary,4,0.0017440943812459552,False
+F-2-3-1,2.0,3,C distinct boundary,5,0.002040010783755292,False
+F-2-3-1,2.0,3,C distinct boundary,6,0.004955890243454351,False
+F-2-3-1,2.0,3,C distinct boundary,7,0.005112074572714308,False
+F-2-3-1,2.0,3,C distinct boundary,8,0.013699987647179994,False
+F-2-3-1,2.0,3,C distinct boundary,9,0.00539023777260325,False
+F-2-3-1,2.0,3,C distinct boundary,10,0.005317448429047462,False
+F-2-3-1,2.0,3,C distinct boundary,11,0.0055776438913559875,False
+F-2-3-1,2.0,3,C distinct boundary,12,0.0035302955024200987,True
+F-2-3-1,2.0,3,C distinct boundary,13,0.0022142672869825838,True
+F-2-3-1,2.0,3,C distinct boundary,14,0.006390545479046292,True
+F-2-3-1,2.0,3,C distinct boundary,15,0.004610800439399706,True
+F-2-3-1,2.0,3,C distinct boundary,16,0.002058121483715688,True
+F-2-3-1,2.0,3,C distinct boundary,17,0.0033536516658464305,True
+F-2-3-1,2.0,3,C distinct boundary,18,0.04643055992748047,True
+F-2-3-1,2.0,3,C distinct boundary,19,0.003617394861496522,True
+F-2-3-1,2.0,3,C distinct boundary,20,0.002086699079910812,True
+F-2-3-1,2.0,3,C distinct boundary,21,0.004999099684929493,True
+F-2-3-1,2.0,3,C distinct boundary,22,0.0022910886914712454,True
+F-2-3-1,2.0,3,C distinct boundary,23,0.004880916067225692,True
+F-2-3-1-radial,2.0,3,C geometry and volume,0,0.0015902661444346495,False
+F-2-3-1-radial,2.0,3,C geometry and volume,1,0.0011932057220889517,False
+F-2-3-1-radial,2.0,3,C geometry and volume,2,0.001148717635882652,False
+F-2-3-1-radial,2.0,3,C geometry and volume,3,0.001156022190561452,False
+F-2-3-1-radial,2.0,3,C geometry and volume,4,0.0011266525118942996,False
+F-2-3-1-radial,2.0,3,C geometry and volume,5,0.0012310259341697582,False
+F-2-3-1-radial,2.0,3,C geometry and volume,6,0.005314585754261486,False
+F-2-3-1-radial,2.0,3,C geometry and volume,7,0.0033628021787835208,False
+F-2-3-1-radial,2.0,3,C geometry and volume,8,0.005586093923666762,False
+F-2-3-1-radial,2.0,3,C geometry and volume,9,0.00412040158822501,False
+F-2-3-1-radial,2.0,3,C geometry and volume,10,0.003952762087609148,False
+F-2-3-1-radial,2.0,3,C geometry and volume,11,0.005243836700911693,False
+F-2-3-1-radial,2.0,3,C geometry and volume,12,0.002854324602397331,True
+F-2-3-1-radial,2.0,3,C geometry and volume,13,0.001332961947843581,True
+F-2-3-1-radial,2.0,3,C geometry and volume,14,0.0037725923609678047,True
+F-2-3-1-radial,2.0,3,C geometry and volume,15,0.003644764475840416,True
+F-2-3-1-radial,2.0,3,C geometry and volume,16,0.001040225345051335,True
+F-2-3-1-radial,2.0,3,C geometry and volume,17,0.0027264724108443886,True
+F-2-3-1-radial,2.0,3,C geometry and volume,18,0.02688454433078645,True
+F-2-3-1-radial,2.0,3,C geometry and volume,19,0.002153650972853244,True
+F-2-3-1-radial,2.0,3,C geometry and volume,20,0.0010684233110381243,True
+F-2-3-1-radial,2.0,3,C geometry and volume,21,0.006572057927359292,True
+F-2-3-1-radial,2.0,3,C geometry and volume,22,0.0010004752547755917,True
+F-2-3-1-radial,2.0,3,C geometry and volume,23,0.0034606454604842866,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,0,0.002252646851611505,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,1,0.0018675417025367236,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,2,0.0030585646630032367,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,3,0.0015525230519310917,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,4,0.0022637450514400343,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,5,0.0024976489791027857,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,6,0.00615426217026593,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,7,0.005455503029803787,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,8,0.016425558911341797,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,9,0.0051142331831698406,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,10,0.0076697626557907595,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,11,0.007641250580653906,False
+F-2-3-1-matched-alt,2.0,3,B alternative matched,12,0.0031773675391211587,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,13,0.0020317749457499476,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,14,0.008925639358658337,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,15,0.005737972294500959,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,16,0.0025599966721526527,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,17,0.0028649614591136027,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,18,0.053664202938479705,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,19,0.005182887196806017,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,20,0.0018480087477741579,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,21,0.0054372983213399366,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,22,0.0024536250670864914,True
+F-2-3-1-matched-alt,2.0,3,B alternative matched,23,0.003931870966630588,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,0,0.002244544613926816,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,1,0.00204989144052551,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,2,0.0024937840185331717,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,3,0.0017497449269980577,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,4,0.0022506920676444776,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,5,0.002278908665241267,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,6,0.0038563673821906405,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,7,0.0034301186040225505,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,8,0.004580565383495283,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,9,0.0032973097223083464,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,10,0.0040053182975729705,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,11,0.004318800104664572,False
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,12,0.001716035565640256,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,13,0.0021768801001119335,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,14,0.00401291840162345,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,15,0.0029227944846229132,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,16,0.0019141412263294156,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,17,0.0018370730006802742,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,18,0.008300932903754369,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,19,0.003087405679494931,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,20,0.0011189594128398527,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,21,0.003256681738505348,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,22,0.001519918888083836,True
+F-2-3-1-BEM-geometry,2.0,3,C BEM geometry only,23,0.0025756562469995896,True
+F-3-1-0,3.0,1,B matched,0,0.03442807862798788,False
+F-3-1-0,3.0,1,B matched,1,0.035687649715968224,False
+F-3-1-0,3.0,1,B matched,2,0.03487998675355187,False
+F-3-1-0,3.0,1,B matched,3,0.03434272025315522,False
+F-3-1-0,3.0,1,B matched,4,0.03402738041836518,False
+F-3-1-0,3.0,1,B matched,5,0.02943717134995026,False
+F-3-1-0,3.0,1,B matched,6,0.08950134825253016,False
+F-3-1-0,3.0,1,B matched,7,0.10512271993290138,False
+F-3-1-0,3.0,1,B matched,8,0.10054028162638677,False
+F-3-1-0,3.0,1,B matched,9,0.08914711397965029,False
+F-3-1-0,3.0,1,B matched,10,0.08197661556294358,False
+F-3-1-0,3.0,1,B matched,11,0.07106661907554845,False
+F-3-1-0,3.0,1,B matched,12,0.0735173215886061,True
+F-3-1-0,3.0,1,B matched,13,0.03855730864071894,True
+F-3-1-0,3.0,1,B matched,14,0.049350284618719646,True
+F-3-1-0,3.0,1,B matched,15,0.039839002494799415,True
+F-3-1-0,3.0,1,B matched,16,0.04600648856213502,True
+F-3-1-0,3.0,1,B matched,17,0.049330287861571474,True
+F-3-1-0,3.0,1,B matched,18,0.08123134591316075,True
+F-3-1-0,3.0,1,B matched,19,0.08497190271812179,True
+F-3-1-0,3.0,1,B matched,20,0.09738379652338262,True
+F-3-1-0,3.0,1,B matched,21,0.07313225699911755,True
+F-3-1-0,3.0,1,B matched,22,0.0713838818358179,True
+F-3-1-0,3.0,1,B matched,23,0.06664461450072143,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,0,0.013084609457434579,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,1,0.012623417377705694,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,2,0.012000806837689724,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,3,0.011784984079419187,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,4,0.009782067433689505,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,5,0.010539426780374766,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,6,0.028188016853848495,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,7,0.027019546972869065,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,8,0.030907551269378886,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,9,0.021919349074938643,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,10,0.020114414252665306,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,11,0.021859882050141242,False
+F-3-1-0-radial,3.0,1,A radial/Gmsh,12,0.018937617272906684,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,13,0.01584951632991794,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,14,0.01884587183088376,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,15,0.022199193601628357,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,16,0.01431234133093961,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,17,0.028062229152796974,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,18,0.019745032545342982,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,19,0.02050364605933584,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,20,0.02697710950172806,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,21,0.02405264844490987,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,22,0.026950112890075647,True
+F-3-1-0-radial,3.0,1,A radial/Gmsh,23,0.03160135969176542,True
+F-3-2-0,3.0,2,B matched,0,0.008431224394058807,False
+F-3-2-0,3.0,2,B matched,1,0.008747054494726089,False
+F-3-2-0,3.0,2,B matched,2,0.009336454072488495,False
+F-3-2-0,3.0,2,B matched,3,0.007975812905961973,False
+F-3-2-0,3.0,2,B matched,4,0.0083167096706505,False
+F-3-2-0,3.0,2,B matched,5,0.007178394688467292,False
+F-3-2-0,3.0,2,B matched,6,0.013127176385072391,False
+F-3-2-0,3.0,2,B matched,7,0.01484692608047117,False
+F-3-2-0,3.0,2,B matched,8,0.023329796316285796,False
+F-3-2-0,3.0,2,B matched,9,0.014116289443479833,False
+F-3-2-0,3.0,2,B matched,10,0.014494277648106901,False
+F-3-2-0,3.0,2,B matched,11,0.01163186001554187,False
+F-3-2-0,3.0,2,B matched,12,0.011079757321456302,True
+F-3-2-0,3.0,2,B matched,13,0.007981219100121765,True
+F-3-2-0,3.0,2,B matched,14,0.010872125500205563,True
+F-3-2-0,3.0,2,B matched,15,0.008399479051636965,True
+F-3-2-0,3.0,2,B matched,16,0.008744474703292924,True
+F-3-2-0,3.0,2,B matched,17,0.009950533711849414,True
+F-3-2-0,3.0,2,B matched,18,0.012127980135800697,True
+F-3-2-0,3.0,2,B matched,19,0.015256698692192207,True
+F-3-2-0,3.0,2,B matched,20,0.022090258982234528,True
+F-3-2-0,3.0,2,B matched,21,0.015742206036590087,True
+F-3-2-0,3.0,2,B matched,22,0.011427293658608643,True
+F-3-2-0,3.0,2,B matched,23,0.012179450018831,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,0,0.004879038921306254,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,1,0.005364817849420982,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,2,0.004359941962777411,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,3,0.003915719818765232,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,4,0.004213634510443791,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,5,0.00282918788473848,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,6,0.010926464848347828,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,7,0.01378742273822046,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,8,0.01055839685133097,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,9,0.00930462424815224,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,10,0.010296289891911822,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,11,0.006057435967406369,False
+F-3-2-0-radial,3.0,2,A radial/Gmsh,12,0.006193039878547689,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,13,0.003670602043395915,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,14,0.003812644035443467,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,15,0.003991771971187375,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,16,0.004100969637563444,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,17,0.004504962857167528,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,18,0.007612410756610764,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,19,0.00673337044775096,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,20,0.009858996461911494,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,21,0.004697522814643071,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,22,0.0069887862479728865,True
+F-3-2-0-radial,3.0,2,A radial/Gmsh,23,0.005444399013705231,True
+F-3-3-0,3.0,3,B matched,0,0.002467878736730032,False
+F-3-3-0,3.0,3,B matched,1,0.0025277316119380676,False
+F-3-3-0,3.0,3,B matched,2,0.002611006412080076,False
+F-3-3-0,3.0,3,B matched,3,0.0022515823958936315,False
+F-3-3-0,3.0,3,B matched,4,0.002232703449966634,False
+F-3-3-0,3.0,3,B matched,5,0.0018917287473071585,False
+F-3-3-0,3.0,3,B matched,6,0.003446009801494267,False
+F-3-3-0,3.0,3,B matched,7,0.004684725485468881,False
+F-3-3-0,3.0,3,B matched,8,0.007373671816814695,False
+F-3-3-0,3.0,3,B matched,9,0.004766493155725146,False
+F-3-3-0,3.0,3,B matched,10,0.005022910759712969,False
+F-3-3-0,3.0,3,B matched,11,0.0030569188971608864,False
+F-3-3-0,3.0,3,B matched,12,0.003542996367970226,True
+F-3-3-0,3.0,3,B matched,13,0.0024316537785601233,True
+F-3-3-0,3.0,3,B matched,14,0.002947169595937733,True
+F-3-3-0,3.0,3,B matched,15,0.0020732571915951397,True
+F-3-3-0,3.0,3,B matched,16,0.0028746048337220005,True
+F-3-3-0,3.0,3,B matched,17,0.003044684149322068,True
+F-3-3-0,3.0,3,B matched,18,0.003145948526411106,True
+F-3-3-0,3.0,3,B matched,19,0.005395056710633126,True
+F-3-3-0,3.0,3,B matched,20,0.008035592132294846,True
+F-3-3-0,3.0,3,B matched,21,0.0037129006588591347,True
+F-3-3-0,3.0,3,B matched,22,0.0027903416253800347,True
+F-3-3-0,3.0,3,B matched,23,0.0037684734915862613,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,0,0.001342893292995996,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,1,0.0012192325826989832,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,2,0.0011466554218977844,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,3,0.0009626239164459845,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,4,0.0009447995078049832,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,5,0.000808726190911655,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,6,0.0031155063457241356,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,7,0.0027065053583593198,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,8,0.0026627408704469223,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,9,0.002113277995085687,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,10,0.0018876330330196917,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,11,0.0017382602095226346,False
+F-3-3-0-radial,3.0,3,A radial/Gmsh,12,0.0018556431924242783,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,13,0.0009127939010682788,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,14,0.001419384580786365,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,15,0.001180438917363294,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,16,0.001339506448863668,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,17,0.0015829144023008206,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,18,0.00149226940595834,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,19,0.0029363025865977908,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,20,0.002603637339595889,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,21,0.0019156173328038356,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,22,0.0017109912972274961,True
+F-3-3-0-radial,3.0,3,A radial/Gmsh,23,0.0022348894484368366,True
+F-3-2-1,3.0,2,C distinct boundary,0,0.00966904989618956,False
+F-3-2-1,3.0,2,C distinct boundary,1,0.008811404863520129,False
+F-3-2-1,3.0,2,C distinct boundary,2,0.01053607353120436,False
+F-3-2-1,3.0,2,C distinct boundary,3,0.009208597372836117,False
+F-3-2-1,3.0,2,C distinct boundary,4,0.00875387616555052,False
+F-3-2-1,3.0,2,C distinct boundary,5,0.0086699147038368,False
+F-3-2-1,3.0,2,C distinct boundary,6,0.029812151708840606,False
+F-3-2-1,3.0,2,C distinct boundary,7,0.024247123646413602,False
+F-3-2-1,3.0,2,C distinct boundary,8,0.03410625475795305,False
+F-3-2-1,3.0,2,C distinct boundary,9,0.017189403966823138,False
+F-3-2-1,3.0,2,C distinct boundary,10,0.020180160091678737,False
+F-3-2-1,3.0,2,C distinct boundary,11,0.015437740594461506,False
+F-3-2-1,3.0,2,C distinct boundary,12,0.020243215788401728,True
+F-3-2-1,3.0,2,C distinct boundary,13,0.009495183025041948,True
+F-3-2-1,3.0,2,C distinct boundary,14,0.011858091706816886,True
+F-3-2-1,3.0,2,C distinct boundary,15,0.010839414367004519,True
+F-3-2-1,3.0,2,C distinct boundary,16,0.013550716756361379,True
+F-3-2-1,3.0,2,C distinct boundary,17,0.01389944884770409,True
+F-3-2-1,3.0,2,C distinct boundary,18,0.016659938837789528,True
+F-3-2-1,3.0,2,C distinct boundary,19,0.022729280788735297,True
+F-3-2-1,3.0,2,C distinct boundary,20,0.021859185233396573,True
+F-3-2-1,3.0,2,C distinct boundary,21,0.014163792820559816,True
+F-3-2-1,3.0,2,C distinct boundary,22,0.017569270587926577,True
+F-3-2-1,3.0,2,C distinct boundary,23,0.01724760644622534,True
+F-3-2-1-radial,3.0,2,C geometry and volume,0,0.005474507511401194,False
+F-3-2-1-radial,3.0,2,C geometry and volume,1,0.004565508981128273,False
+F-3-2-1-radial,3.0,2,C geometry and volume,2,0.005183513044946355,False
+F-3-2-1-radial,3.0,2,C geometry and volume,3,0.0051030417400692646,False
+F-3-2-1-radial,3.0,2,C geometry and volume,4,0.003959045105055069,False
+F-3-2-1-radial,3.0,2,C geometry and volume,5,0.004387695938732792,False
+F-3-2-1-radial,3.0,2,C geometry and volume,6,0.022153933993948872,False
+F-3-2-1-radial,3.0,2,C geometry and volume,7,0.010137099169664971,False
+F-3-2-1-radial,3.0,2,C geometry and volume,8,0.0130518607489193,False
+F-3-2-1-radial,3.0,2,C geometry and volume,9,0.012454497898499268,False
+F-3-2-1-radial,3.0,2,C geometry and volume,10,0.00917848580819874,False
+F-3-2-1-radial,3.0,2,C geometry and volume,11,0.010518272123715424,False
+F-3-2-1-radial,3.0,2,C geometry and volume,12,0.008096708361606229,True
+F-3-2-1-radial,3.0,2,C geometry and volume,13,0.005841644017132071,True
+F-3-2-1-radial,3.0,2,C geometry and volume,14,0.004069518922043616,True
+F-3-2-1-radial,3.0,2,C geometry and volume,15,0.004382066221008211,True
+F-3-2-1-radial,3.0,2,C geometry and volume,16,0.00646086354146516,True
+F-3-2-1-radial,3.0,2,C geometry and volume,17,0.006084918452708941,True
+F-3-2-1-radial,3.0,2,C geometry and volume,18,0.01032548141760679,True
+F-3-2-1-radial,3.0,2,C geometry and volume,19,0.008690255116381523,True
+F-3-2-1-radial,3.0,2,C geometry and volume,20,0.017946320422085695,True
+F-3-2-1-radial,3.0,2,C geometry and volume,21,0.008800080560849962,True
+F-3-2-1-radial,3.0,2,C geometry and volume,22,0.009186658590924598,True
+F-3-2-1-radial,3.0,2,C geometry and volume,23,0.008781733332721902,True
+F-3-3-1,3.0,3,C distinct boundary,0,0.0021640334775482875,False
+F-3-3-1,3.0,3,C distinct boundary,1,0.0025773046833292694,False
+F-3-3-1,3.0,3,C distinct boundary,2,0.0024737190149397167,False
+F-3-3-1,3.0,3,C distinct boundary,3,0.00203837324568981,False
+F-3-3-1,3.0,3,C distinct boundary,4,0.0021956420564309344,False
+F-3-3-1,3.0,3,C distinct boundary,5,0.00184566676557612,False
+F-3-3-1,3.0,3,C distinct boundary,6,0.0042147086308645075,False
+F-3-3-1,3.0,3,C distinct boundary,7,0.0059640963987668836,False
+F-3-3-1,3.0,3,C distinct boundary,8,0.013079235081483665,False
+F-3-3-1,3.0,3,C distinct boundary,9,0.003954212638645103,False
+F-3-3-1,3.0,3,C distinct boundary,10,0.006252346860379039,False
+F-3-3-1,3.0,3,C distinct boundary,11,0.005161801536757444,False
+F-3-3-1,3.0,3,C distinct boundary,12,0.00468997614345216,True
+F-3-3-1,3.0,3,C distinct boundary,13,0.002834834430933795,True
+F-3-3-1,3.0,3,C distinct boundary,14,0.002838161499051706,True
+F-3-3-1,3.0,3,C distinct boundary,15,0.0027061327037651616,True
+F-3-3-1,3.0,3,C distinct boundary,16,0.003615991371912554,True
+F-3-3-1,3.0,3,C distinct boundary,17,0.0036545300318176015,True
+F-3-3-1,3.0,3,C distinct boundary,18,0.005719593611968048,True
+F-3-3-1,3.0,3,C distinct boundary,19,0.006333657772853192,True
+F-3-3-1,3.0,3,C distinct boundary,20,0.006307012165144642,True
+F-3-3-1,3.0,3,C distinct boundary,21,0.003149836243499791,True
+F-3-3-1,3.0,3,C distinct boundary,22,0.007082511646258914,True
+F-3-3-1,3.0,3,C distinct boundary,23,0.005595584764681396,True
+F-3-3-1-radial,3.0,3,C geometry and volume,0,0.001382477130949975,False
+F-3-3-1-radial,3.0,3,C geometry and volume,1,0.0014895427106291247,False
+F-3-3-1-radial,3.0,3,C geometry and volume,2,0.001165985312008448,False
+F-3-3-1-radial,3.0,3,C geometry and volume,3,0.001253927135725192,False
+F-3-3-1-radial,3.0,3,C geometry and volume,4,0.0012569387124756607,False
+F-3-3-1-radial,3.0,3,C geometry and volume,5,0.0011465924619793665,False
+F-3-3-1-radial,3.0,3,C geometry and volume,6,0.004010048797810876,False
+F-3-3-1-radial,3.0,3,C geometry and volume,7,0.00466105179775425,False
+F-3-3-1-radial,3.0,3,C geometry and volume,8,0.0051874898326839634,False
+F-3-3-1-radial,3.0,3,C geometry and volume,9,0.004047938545424639,False
+F-3-3-1-radial,3.0,3,C geometry and volume,10,0.0038319503830585603,False
+F-3-3-1-radial,3.0,3,C geometry and volume,11,0.004619076756360712,False
+F-3-3-1-radial,3.0,3,C geometry and volume,12,0.0032935719695176466,True
+F-3-3-1-radial,3.0,3,C geometry and volume,13,0.0018375335247770965,True
+F-3-3-1-radial,3.0,3,C geometry and volume,14,0.0019870849316665625,True
+F-3-3-1-radial,3.0,3,C geometry and volume,15,0.0011219427833411486,True
+F-3-3-1-radial,3.0,3,C geometry and volume,16,0.002341586586159315,True
+F-3-3-1-radial,3.0,3,C geometry and volume,17,0.0016310034383004955,True
+F-3-3-1-radial,3.0,3,C geometry and volume,18,0.006009856755714655,True
+F-3-3-1-radial,3.0,3,C geometry and volume,19,0.004188326818284572,True
+F-3-3-1-radial,3.0,3,C geometry and volume,20,0.006558516066400358,True
+F-3-3-1-radial,3.0,3,C geometry and volume,21,0.003998335952076355,True
+F-3-3-1-radial,3.0,3,C geometry and volume,22,0.0065100040482437395,True
+F-3-3-1-radial,3.0,3,C geometry and volume,23,0.004136195743035394,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,0,0.00208393785623871,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,1,0.002118635072308868,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,2,0.0030654404378069842,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,3,0.0015015853706909976,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,4,0.0022890337913510136,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,5,0.0023786705892119755,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,6,0.005906090019902441,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,7,0.005938204079274335,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,8,0.015832807380932023,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,9,0.004569023789706378,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,10,0.006929310580978774,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,11,0.007341206384438721,False
+F-3-3-1-matched-alt,3.0,3,B alternative matched,12,0.00602832734538584,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,13,0.003196162714660633,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,14,0.0028388841182240324,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,15,0.003063727441801213,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,16,0.00487895031215557,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,17,0.003928380848659493,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,18,0.00903655462761719,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,19,0.00678035648835898,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,20,0.007275847872409728,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,21,0.0037207961147471672,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,22,0.010492803560463813,True
+F-3-3-1-matched-alt,3.0,3,B alternative matched,23,0.007533395370755919,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,0,0.002173801825647865,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,1,0.0020396666890879433,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,2,0.0024376113878652617,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,3,0.0016916834921357248,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,4,0.002262745428337085,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,5,0.002200359052491061,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,6,0.0037043125349223178,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,7,0.003429422716040063,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,8,0.004461244848043994,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,9,0.0031141221345084764,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,10,0.004043547162812524,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,11,0.004128778467667499,False
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,12,0.0028426294509503913,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,13,0.002448284980881354,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,14,0.0014556040759528951,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,15,0.0020425589497042583,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,16,0.002702662936660111,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,17,0.002430361820903753,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,18,0.004306167731619383,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,19,0.0027890891472395233,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,20,0.0042041033525858,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,21,0.0016873515568566423,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,22,0.004299104565884409,True
+F-3-3-1-BEM-geometry,3.0,3,C BEM geometry only,23,0.0034699636358273044,True
+F-4-1-0,4.0,1,B matched,0,0.028994989127508475,False
+F-4-1-0,4.0,1,B matched,1,0.02979121193246312,False
+F-4-1-0,4.0,1,B matched,2,0.03167368362190357,False
+F-4-1-0,4.0,1,B matched,3,0.028473835922929944,False
+F-4-1-0,4.0,1,B matched,4,0.029834376097653582,False
+F-4-1-0,4.0,1,B matched,5,0.028385159175668292,False
+F-4-1-0,4.0,1,B matched,6,0.07047720680424437,False
+F-4-1-0,4.0,1,B matched,7,0.08323379809953031,False
+F-4-1-0,4.0,1,B matched,8,0.08075698583812939,False
+F-4-1-0,4.0,1,B matched,9,0.05947414924212553,False
+F-4-1-0,4.0,1,B matched,10,0.06648168593625867,False
+F-4-1-0,4.0,1,B matched,11,0.0751685553732082,False
+F-4-1-0,4.0,1,B matched,12,0.05467731523530835,True
+F-4-1-0,4.0,1,B matched,13,0.057525274309363994,True
+F-4-1-0,4.0,1,B matched,14,0.21753025848409224,True
+F-4-1-0,4.0,1,B matched,15,0.0917946984748038,True
+F-4-1-0,4.0,1,B matched,16,0.06504244615692552,True
+F-4-1-0,4.0,1,B matched,17,0.07693311923104272,True
+F-4-1-0,4.0,1,B matched,18,0.032810090169152116,True
+F-4-1-0,4.0,1,B matched,19,0.04066227332505622,True
+F-4-1-0,4.0,1,B matched,20,0.09696715905091884,True
+F-4-1-0,4.0,1,B matched,21,0.05977796202901318,True
+F-4-1-0,4.0,1,B matched,22,0.039812823703272014,True
+F-4-1-0,4.0,1,B matched,23,0.0316703080328306,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,0,0.010205686051507533,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,1,0.009190261322429573,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,2,0.010184322607404272,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,3,0.011480435555498072,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,4,0.008175767287111904,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,5,0.011542509652995251,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,6,0.0217308335812326,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,7,0.02038180730425134,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,8,0.02090651388811454,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,9,0.026947819340551807,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,10,0.021326878111951775,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,11,0.023713794090718016,False
+F-4-1-0-radial,4.0,1,A radial/Gmsh,12,0.014595428241856006,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,13,0.029371865804441507,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,14,0.01922746813144934,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,15,0.03858055690134452,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,16,0.015601607341363406,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,17,0.04028078485896365,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,18,0.007218857382975142,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,19,0.010389914819624564,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,20,0.020739160415696064,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,21,0.016573796249107788,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,22,0.011304501916806967,True
+F-4-1-0-radial,4.0,1,A radial/Gmsh,23,0.008099924353391045,True
+F-4-2-0,4.0,2,B matched,0,0.006436645014498669,False
+F-4-2-0,4.0,2,B matched,1,0.006542155668754557,False
+F-4-2-0,4.0,2,B matched,2,0.0076796060475907936,False
+F-4-2-0,4.0,2,B matched,3,0.006532008022343502,False
+F-4-2-0,4.0,2,B matched,4,0.006934070794530878,False
+F-4-2-0,4.0,2,B matched,5,0.006910292143714249,False
+F-4-2-0,4.0,2,B matched,6,0.00895038732190379,False
+F-4-2-0,4.0,2,B matched,7,0.011994098698388075,False
+F-4-2-0,4.0,2,B matched,8,0.015942834503287585,False
+F-4-2-0,4.0,2,B matched,9,0.011530263324086461,False
+F-4-2-0,4.0,2,B matched,10,0.013342208670378233,False
+F-4-2-0,4.0,2,B matched,11,0.010731403392769168,False
+F-4-2-0,4.0,2,B matched,12,0.009584330549722459,True
+F-4-2-0,4.0,2,B matched,13,0.011132063964187991,True
+F-4-2-0,4.0,2,B matched,14,0.03994008941317164,True
+F-4-2-0,4.0,2,B matched,15,0.012776486981260942,True
+F-4-2-0,4.0,2,B matched,16,0.010842161706874758,True
+F-4-2-0,4.0,2,B matched,17,0.01305988693524969,True
+F-4-2-0,4.0,2,B matched,18,0.006724947016755997,True
+F-4-2-0,4.0,2,B matched,19,0.007592837306963217,True
+F-4-2-0,4.0,2,B matched,20,0.013460128328992266,True
+F-4-2-0,4.0,2,B matched,21,0.010998898734634565,True
+F-4-2-0,4.0,2,B matched,22,0.006735770855878002,True
+F-4-2-0,4.0,2,B matched,23,0.006821377837274232,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,0,0.0026328129703663858,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,1,0.002262286030039567,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,2,0.00315238749163361,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,3,0.0022482489410368183,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,4,0.002011964035394468,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,5,0.0034454345271379074,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,6,0.0064117474542341795,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,7,0.0061372163968786446,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,8,0.007309658701738092,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,9,0.005015818481314796,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,10,0.005729678645993882,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,11,0.008477465358654696,False
+F-4-2-0-radial,4.0,2,A radial/Gmsh,12,0.006967332900856024,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,13,0.005696809348000628,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,14,0.008115057797951365,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,15,0.006700302025209247,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,16,0.004023756008463962,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,17,0.005006698746946339,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,18,0.0029627811518102404,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,19,0.0029542511640128807,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,20,0.009408451525044896,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,21,0.008061198020097946,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,22,0.004307487111828188,True
+F-4-2-0-radial,4.0,2,A radial/Gmsh,23,0.0029071568506445823,True
+F-4-3-0,4.0,3,B matched,0,0.0017052074109093747,False
+F-4-3-0,4.0,3,B matched,1,0.001667375205931777,False
+F-4-3-0,4.0,3,B matched,2,0.002056195307133078,False
+F-4-3-0,4.0,3,B matched,3,0.0016808724281917918,False
+F-4-3-0,4.0,3,B matched,4,0.001902818979488814,False
+F-4-3-0,4.0,3,B matched,5,0.0019211173341569167,False
+F-4-3-0,4.0,3,B matched,6,0.0026656832216281666,False
+F-4-3-0,4.0,3,B matched,7,0.003812108448273122,False
+F-4-3-0,4.0,3,B matched,8,0.005229400509855398,False
+F-4-3-0,4.0,3,B matched,9,0.0036453516634476863,False
+F-4-3-0,4.0,3,B matched,10,0.005690314665095854,False
+F-4-3-0,4.0,3,B matched,11,0.0032307151789084366,False
+F-4-3-0,4.0,3,B matched,12,0.0035868165592833528,True
+F-4-3-0,4.0,3,B matched,13,0.003851169881195048,True
+F-4-3-0,4.0,3,B matched,14,0.0039580735543526925,True
+F-4-3-0,4.0,3,B matched,15,0.004674757559296378,True
+F-4-3-0,4.0,3,B matched,16,0.002999030352606144,True
+F-4-3-0,4.0,3,B matched,17,0.004065872600943953,True
+F-4-3-0,4.0,3,B matched,18,0.0016878694625377107,True
+F-4-3-0,4.0,3,B matched,19,0.002030152227455333,True
+F-4-3-0,4.0,3,B matched,20,0.0031774356817791316,True
+F-4-3-0,4.0,3,B matched,21,0.004187217243498882,True
+F-4-3-0,4.0,3,B matched,22,0.001906396523348957,True
+F-4-3-0,4.0,3,B matched,23,0.0016245535422552391,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,0,0.000643678283584284,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,1,0.0007563510784878217,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,2,0.0007785713126750635,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,3,0.0006432544030865081,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,4,0.0008200061838510151,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,5,0.0007999747420187758,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,6,0.0015720105602893756,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,7,0.002028096442910078,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,8,0.001809314107032784,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,9,0.001453739805857659,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,10,0.0020259430971411667,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,11,0.00239064705944776,False
+F-4-3-0-radial,4.0,3,A radial/Gmsh,12,0.0024949595185202707,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,13,0.0023428215716846976,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,14,0.004613553317927946,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,15,0.0013562571045667956,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,16,0.001423574336170744,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,17,0.002321239118645109,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,18,0.0007760656372003221,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,19,0.000924382312298046,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,20,0.0016084561152371027,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,21,0.0028231156852980264,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,22,0.0008477691213303238,True
+F-4-3-0-radial,4.0,3,A radial/Gmsh,23,0.0006770466778464412,True
+F-4-2-1,4.0,2,C distinct boundary,0,0.007391839174843208,False
+F-4-2-1,4.0,2,C distinct boundary,1,0.007352255706878341,False
+F-4-2-1,4.0,2,C distinct boundary,2,0.009016499869917493,False
+F-4-2-1,4.0,2,C distinct boundary,3,0.007297875444104364,False
+F-4-2-1,4.0,2,C distinct boundary,4,0.00835512949725957,False
+F-4-2-1,4.0,2,C distinct boundary,5,0.008019471687503232,False
+F-4-2-1,4.0,2,C distinct boundary,6,0.016804534927444055,False
+F-4-2-1,4.0,2,C distinct boundary,7,0.021803583765606406,False
+F-4-2-1,4.0,2,C distinct boundary,8,0.023721732107206697,False
+F-4-2-1,4.0,2,C distinct boundary,9,0.014550106638668016,False
+F-4-2-1,4.0,2,C distinct boundary,10,0.019756434507842105,False
+F-4-2-1,4.0,2,C distinct boundary,11,0.01329977754692779,False
+F-4-2-1,4.0,2,C distinct boundary,12,0.01442281703516562,True
+F-4-2-1,4.0,2,C distinct boundary,13,0.013640276610412559,True
+F-4-2-1,4.0,2,C distinct boundary,14,0.05039210815020963,True
+F-4-2-1,4.0,2,C distinct boundary,15,0.01827794054828842,True
+F-4-2-1,4.0,2,C distinct boundary,16,0.013308465927230728,True
+F-4-2-1,4.0,2,C distinct boundary,17,0.013725902315769228,True
+F-4-2-1,4.0,2,C distinct boundary,18,0.008334912377347554,True
+F-4-2-1,4.0,2,C distinct boundary,19,0.00892450854141183,True
+F-4-2-1,4.0,2,C distinct boundary,20,0.022655691604581595,True
+F-4-2-1,4.0,2,C distinct boundary,21,0.01766072013638423,True
+F-4-2-1,4.0,2,C distinct boundary,22,0.00967963656746377,True
+F-4-2-1,4.0,2,C distinct boundary,23,0.008395093123061664,True
+F-4-2-1-radial,4.0,2,C geometry and volume,0,0.003485151410200216,False
+F-4-2-1-radial,4.0,2,C geometry and volume,1,0.0032267150897807846,False
+F-4-2-1-radial,4.0,2,C geometry and volume,2,0.00417825217646037,False
+F-4-2-1-radial,4.0,2,C geometry and volume,3,0.003481155215842889,False
+F-4-2-1-radial,4.0,2,C geometry and volume,4,0.002986034120410167,False
+F-4-2-1-radial,4.0,2,C geometry and volume,5,0.00422015499290033,False
+F-4-2-1-radial,4.0,2,C geometry and volume,6,0.010638558786437621,False
+F-4-2-1-radial,4.0,2,C geometry and volume,7,0.011228114058143985,False
+F-4-2-1-radial,4.0,2,C geometry and volume,8,0.010384986741946425,False
+F-4-2-1-radial,4.0,2,C geometry and volume,9,0.010596883793740896,False
+F-4-2-1-radial,4.0,2,C geometry and volume,10,0.007008906738274958,False
+F-4-2-1-radial,4.0,2,C geometry and volume,11,0.01118517317401665,False
+F-4-2-1-radial,4.0,2,C geometry and volume,12,0.007326171025298642,True
+F-4-2-1-radial,4.0,2,C geometry and volume,13,0.006763055004079998,True
+F-4-2-1-radial,4.0,2,C geometry and volume,14,0.029996930930770375,True
+F-4-2-1-radial,4.0,2,C geometry and volume,15,0.014416291379066892,True
+F-4-2-1-radial,4.0,2,C geometry and volume,16,0.009058204164752583,True
+F-4-2-1-radial,4.0,2,C geometry and volume,17,0.006948392843642569,True
+F-4-2-1-radial,4.0,2,C geometry and volume,18,0.0038228213693564258,True
+F-4-2-1-radial,4.0,2,C geometry and volume,19,0.004917144385929506,True
+F-4-2-1-radial,4.0,2,C geometry and volume,20,0.009616576581495218,True
+F-4-2-1-radial,4.0,2,C geometry and volume,21,0.00755592951877392,True
+F-4-2-1-radial,4.0,2,C geometry and volume,22,0.004484816357195569,True
+F-4-2-1-radial,4.0,2,C geometry and volume,23,0.0037033500635154453,True
+F-4-3-1,4.0,3,C distinct boundary,0,0.0016186308214895294,False
+F-4-3-1,4.0,3,C distinct boundary,1,0.0018325263690168636,False
+F-4-3-1,4.0,3,C distinct boundary,2,0.0021461737946401947,False
+F-4-3-1,4.0,3,C distinct boundary,3,0.0015837352879888532,False
+F-4-3-1,4.0,3,C distinct boundary,4,0.001977782219776364,False
+F-4-3-1,4.0,3,C distinct boundary,5,0.0018687233938220259,False
+F-4-3-1,4.0,3,C distinct boundary,6,0.004183502866408866,False
+F-4-3-1,4.0,3,C distinct boundary,7,0.005138352133995425,False
+F-4-3-1,4.0,3,C distinct boundary,8,0.009524241395790263,False
+F-4-3-1,4.0,3,C distinct boundary,9,0.0033004522966794815,False
+F-4-3-1,4.0,3,C distinct boundary,10,0.006300426142604843,False
+F-4-3-1,4.0,3,C distinct boundary,11,0.005442532330444782,False
+F-4-3-1,4.0,3,C distinct boundary,12,0.0029164724512226957,True
+F-4-3-1,4.0,3,C distinct boundary,13,0.003929423752198092,True
+F-4-3-1,4.0,3,C distinct boundary,14,0.014671735288146494,True
+F-4-3-1,4.0,3,C distinct boundary,15,0.005198890851276551,True
+F-4-3-1,4.0,3,C distinct boundary,16,0.003843158460894041,True
+F-4-3-1,4.0,3,C distinct boundary,17,0.00372679480890662,True
+F-4-3-1,4.0,3,C distinct boundary,18,0.001804561638849851,True
+F-4-3-1,4.0,3,C distinct boundary,19,0.002271830638413257,True
+F-4-3-1,4.0,3,C distinct boundary,20,0.007628052361193383,True
+F-4-3-1,4.0,3,C distinct boundary,21,0.003804378210998283,True
+F-4-3-1,4.0,3,C distinct boundary,22,0.0020587213191107533,True
+F-4-3-1,4.0,3,C distinct boundary,23,0.0018993121524890804,True
+F-4-3-1-radial,4.0,3,C geometry and volume,0,0.001115222648975669,False
+F-4-3-1-radial,4.0,3,C geometry and volume,1,0.0010943203493695357,False
+F-4-3-1-radial,4.0,3,C geometry and volume,2,0.0012237191459108484,False
+F-4-3-1-radial,4.0,3,C geometry and volume,3,0.000783860739547949,False
+F-4-3-1-radial,4.0,3,C geometry and volume,4,0.0012103895159060842,False
+F-4-3-1-radial,4.0,3,C geometry and volume,5,0.0010029094835540644,False
+F-4-3-1-radial,4.0,3,C geometry and volume,6,0.0036815256487924917,False
+F-4-3-1-radial,4.0,3,C geometry and volume,7,0.004265934007207202,False
+F-4-3-1-radial,4.0,3,C geometry and volume,8,0.00505345289610143,False
+F-4-3-1-radial,4.0,3,C geometry and volume,9,0.0023659185346016007,False
+F-4-3-1-radial,4.0,3,C geometry and volume,10,0.003344902053460985,False
+F-4-3-1-radial,4.0,3,C geometry and volume,11,0.004777532602762614,False
+F-4-3-1-radial,4.0,3,C geometry and volume,12,0.0018551772095696042,True
+F-4-3-1-radial,4.0,3,C geometry and volume,13,0.0018332489166988533,True
+F-4-3-1-radial,4.0,3,C geometry and volume,14,0.01495272848228825,True
+F-4-3-1-radial,4.0,3,C geometry and volume,15,0.0037840301135464347,True
+F-4-3-1-radial,4.0,3,C geometry and volume,16,0.002945703217617768,True
+F-4-3-1-radial,4.0,3,C geometry and volume,17,0.0018984760481223575,True
+F-4-3-1-radial,4.0,3,C geometry and volume,18,0.001111987798324856,True
+F-4-3-1-radial,4.0,3,C geometry and volume,19,0.0012644886853559253,True
+F-4-3-1-radial,4.0,3,C geometry and volume,20,0.006434645138896748,True
+F-4-3-1-radial,4.0,3,C geometry and volume,21,0.0020671658605414724,True
+F-4-3-1-radial,4.0,3,C geometry and volume,22,0.0013343497734247033,True
+F-4-3-1-radial,4.0,3,C geometry and volume,23,0.0011332154196468183,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,0,0.002090258373176628,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,1,0.00177303434724066,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,2,0.0028238824992042762,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,3,0.0012980103356004882,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,4,0.002327643868430887,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,5,0.002133385875732433,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,6,0.00634150169924858,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,7,0.005888126517027452,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,8,0.011744405963876183,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,9,0.003924121463591268,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,10,0.007247689841016911,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,11,0.006677186395724222,False
+F-4-3-1-matched-alt,4.0,3,B alternative matched,12,0.004512746140418059,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,13,0.00487883910271668,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,14,0.017726552700531223,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,15,0.004681438821041219,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,16,0.004356380972783257,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,17,0.004406773995842022,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,18,0.0022226943920464026,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,19,0.0021441187692492814,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,20,0.01192498905045848,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,21,0.005702871870038837,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,22,0.0020395260176879703,True
+F-4-3-1-matched-alt,4.0,3,B alternative matched,23,0.0025663361344252155,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,0,0.0020104565089368465,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,1,0.0018731585278414437,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,2,0.0023631282510526894,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,3,0.0015073599867161996,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,4,0.002117322783616285,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,5,0.0021320804313983244,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,6,0.0034530093227229694,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,7,0.0030121510439517093,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,8,0.004050802107732647,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,9,0.0026821886642612322,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,10,0.0035336805404697284,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,11,0.0038710584797725955,False
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,12,0.0034311046316093563,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,13,0.001926156089635518,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,14,0.004608041916030753,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,15,0.0017721490750606172,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,16,0.0023358127483803495,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,17,0.0019189530663292693,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,18,0.0019258949726287927,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,19,0.0016657090333520653,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,20,0.0051922860166857,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,21,0.0037491416198923958,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,22,0.0012201935793683463,True
+F-4-3-1-BEM-geometry,4.0,3,C BEM geometry only,23,0.0016827946056367827,True
+F-5-1-0,5.0,1,B matched,0,0.02770502179425318,False
+F-5-1-0,5.0,1,B matched,1,0.02911166061504968,False
+F-5-1-0,5.0,1,B matched,2,0.030606929611799134,False
+F-5-1-0,5.0,1,B matched,3,0.029420895670728336,False
+F-5-1-0,5.0,1,B matched,4,0.02957391448218342,False
+F-5-1-0,5.0,1,B matched,5,0.028439333616519714,False
+F-5-1-0,5.0,1,B matched,6,0.07036496847236404,False
+F-5-1-0,5.0,1,B matched,7,0.0790837778999651,False
+F-5-1-0,5.0,1,B matched,8,0.07891125554705515,False
+F-5-1-0,5.0,1,B matched,9,0.0690245284693049,False
+F-5-1-0,5.0,1,B matched,10,0.06398451620984007,False
+F-5-1-0,5.0,1,B matched,11,0.08007382115500665,False
+F-5-1-0,5.0,1,B matched,12,0.03669044945772685,True
+F-5-1-0,5.0,1,B matched,13,0.031342186005648046,True
+F-5-1-0,5.0,1,B matched,14,0.08358437910693917,True
+F-5-1-0,5.0,1,B matched,15,0.06837275408619646,True
+F-5-1-0,5.0,1,B matched,16,0.05996106801219104,True
+F-5-1-0,5.0,1,B matched,17,0.041240681266967505,True
+F-5-1-0,5.0,1,B matched,18,0.07100432801486095,True
+F-5-1-0,5.0,1,B matched,19,0.032098748427393936,True
+F-5-1-0,5.0,1,B matched,20,0.036906197854095026,True
+F-5-1-0,5.0,1,B matched,21,0.06738814171296349,True
+F-5-1-0,5.0,1,B matched,22,0.028267850625569305,True
+F-5-1-0,5.0,1,B matched,23,0.062357264320430275,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,0,0.006649417667826609,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,1,0.010447471741314268,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,2,0.008194178484909869,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,3,0.008156163080080773,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,4,0.012014619570339528,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,5,0.007735729725321579,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,6,0.012788927912893978,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,7,0.02172926161991745,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,8,0.018715344553843393,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,9,0.014167376099613181,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,10,0.03149298663949445,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,11,0.016589666372325413,False
+F-5-1-0-radial,5.0,1,A radial/Gmsh,12,0.01456033014443401,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,13,0.007037056298465059,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,14,0.010761914576189866,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,15,0.0221277868612997,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,16,0.014774571396567198,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,17,0.009645547128384568,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,18,0.014584839851614797,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,19,0.011405708434946331,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,20,0.010449658176615037,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,21,0.014665168167320896,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,22,0.00996570260183846,True
+F-5-1-0-radial,5.0,1,A radial/Gmsh,23,0.034543532774555366,True
+F-5-2-0,5.0,2,B matched,0,0.006154477024414407,False
+F-5-2-0,5.0,2,B matched,1,0.006802102117648123,False
+F-5-2-0,5.0,2,B matched,2,0.007174932517369914,False
+F-5-2-0,5.0,2,B matched,3,0.006549504520069844,False
+F-5-2-0,5.0,2,B matched,4,0.0075503620836537885,False
+F-5-2-0,5.0,2,B matched,5,0.006072842455958827,False
+F-5-2-0,5.0,2,B matched,6,0.01052609946528642,False
+F-5-2-0,5.0,2,B matched,7,0.012962799006758735,False
+F-5-2-0,5.0,2,B matched,8,0.015171746993198612,False
+F-5-2-0,5.0,2,B matched,9,0.010482060233932526,False
+F-5-2-0,5.0,2,B matched,10,0.014512104333905908,False
+F-5-2-0,5.0,2,B matched,11,0.010241922528615185,False
+F-5-2-0,5.0,2,B matched,12,0.007145326505167852,True
+F-5-2-0,5.0,2,B matched,13,0.0067694488452012674,True
+F-5-2-0,5.0,2,B matched,14,0.012204264334903176,True
+F-5-2-0,5.0,2,B matched,15,0.010496108362320873,True
+F-5-2-0,5.0,2,B matched,16,0.008755386781985347,True
+F-5-2-0,5.0,2,B matched,17,0.008723252726597361,True
+F-5-2-0,5.0,2,B matched,18,0.014436526281562794,True
+F-5-2-0,5.0,2,B matched,19,0.0066960761016581286,True
+F-5-2-0,5.0,2,B matched,20,0.008004317559885914,True
+F-5-2-0,5.0,2,B matched,21,0.01069397224289621,True
+F-5-2-0,5.0,2,B matched,22,0.005924666401077372,True
+F-5-2-0,5.0,2,B matched,23,0.015529257642546758,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,0,0.0022621845364791215,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,1,0.002711478723776707,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,2,0.0027614310345203128,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,3,0.0028827127246829013,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,4,0.002952035135987471,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,5,0.002607035171045686,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,6,0.004758447690806516,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,7,0.005995754655407045,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,8,0.007639783393759429,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,9,0.007088252099573143,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,10,0.008133884028098864,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,11,0.006155138573139793,False
+F-5-2-0-radial,5.0,2,A radial/Gmsh,12,0.003850782196867296,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,13,0.0021555707306077053,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,14,0.0047084308360918255,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,15,0.004365734950610879,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,16,0.005489884071814346,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,17,0.002848182422975141,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,18,0.004891035087581924,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,19,0.0027358933853292053,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,20,0.003115621598366178,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,21,0.0038495356769061404,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,22,0.0024684392399418847,True
+F-5-2-0-radial,5.0,2,A radial/Gmsh,23,0.005369554265756131,True
+F-5-3-0,5.0,3,B matched,0,0.0014897854483771121,False
+F-5-3-0,5.0,3,B matched,1,0.0017924564708888407,False
+F-5-3-0,5.0,3,B matched,2,0.0017877784892590626,False
+F-5-3-0,5.0,3,B matched,3,0.001602260286513423,False
+F-5-3-0,5.0,3,B matched,4,0.0019904400129764415,False
+F-5-3-0,5.0,3,B matched,5,0.0015452747702663881,False
+F-5-3-0,5.0,3,B matched,6,0.002825786119333772,False
+F-5-3-0,5.0,3,B matched,7,0.003876404984366568,False
+F-5-3-0,5.0,3,B matched,8,0.005284255035951821,False
+F-5-3-0,5.0,3,B matched,9,0.003064677416316145,False
+F-5-3-0,5.0,3,B matched,10,0.005561002075738982,False
+F-5-3-0,5.0,3,B matched,11,0.003057109783163989,False
+F-5-3-0,5.0,3,B matched,12,0.0016951534257822756,True
+F-5-3-0,5.0,3,B matched,13,0.0016257402598524313,True
+F-5-3-0,5.0,3,B matched,14,0.003163544724920202,True
+F-5-3-0,5.0,3,B matched,15,0.0026264224321026937,True
+F-5-3-0,5.0,3,B matched,16,0.0022883957773291563,True
+F-5-3-0,5.0,3,B matched,17,0.0028215335126329116,True
+F-5-3-0,5.0,3,B matched,18,0.005150235362048217,True
+F-5-3-0,5.0,3,B matched,19,0.0015548859918690075,True
+F-5-3-0,5.0,3,B matched,20,0.002582014694760595,True
+F-5-3-0,5.0,3,B matched,21,0.002625348078762014,True
+F-5-3-0,5.0,3,B matched,22,0.0013970108674324275,True
+F-5-3-0,5.0,3,B matched,23,0.003667355426231065,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,0,0.0007989368751413138,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,1,0.0007050960854924434,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,2,0.0007191682789042212,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,3,0.0007275883660274047,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,4,0.0007181162436222336,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,5,0.0007519284408195548,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,6,0.0022026097500557878,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,7,0.0017265743444398196,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,8,0.0013905738206778648,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,9,0.0018677045874623407,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,10,0.0021599059687981825,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,11,0.0016765443853809362,False
+F-5-3-0-radial,5.0,3,A radial/Gmsh,12,0.0010116373638269377,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,13,0.0007584461649744802,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,14,0.001453032696604918,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,15,0.0016768864476173072,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,16,0.0011887076156098123,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,17,0.0010976210536705825,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,18,0.001816468507575921,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,19,0.0006842871052149976,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,20,0.0008453335440063902,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,21,0.0015932857818942616,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,22,0.0005382847487537175,True
+F-5-3-0-radial,5.0,3,A radial/Gmsh,23,0.0013994883404029911,True
+F-5-2-1,5.0,2,C distinct boundary,0,0.007041501581035893,False
+F-5-2-1,5.0,2,C distinct boundary,1,0.007550890477646366,False
+F-5-2-1,5.0,2,C distinct boundary,2,0.00844429755722483,False
+F-5-2-1,5.0,2,C distinct boundary,3,0.007447345000104922,False
+F-5-2-1,5.0,2,C distinct boundary,4,0.008555189815323652,False
+F-5-2-1,5.0,2,C distinct boundary,5,0.007487305310525867,False
+F-5-2-1,5.0,2,C distinct boundary,6,0.01800179290081488,False
+F-5-2-1,5.0,2,C distinct boundary,7,0.022366364712201447,False
+F-5-2-1,5.0,2,C distinct boundary,8,0.023333194682596266,False
+F-5-2-1,5.0,2,C distinct boundary,9,0.015468527315181056,False
+F-5-2-1,5.0,2,C distinct boundary,10,0.019121935250352724,False
+F-5-2-1,5.0,2,C distinct boundary,11,0.014186819469778272,False
+F-5-2-1,5.0,2,C distinct boundary,12,0.009409862363953619,True
+F-5-2-1,5.0,2,C distinct boundary,13,0.007826984745576988,True
+F-5-2-1,5.0,2,C distinct boundary,14,0.02726138401012231,True
+F-5-2-1,5.0,2,C distinct boundary,15,0.013881517931473127,True
+F-5-2-1,5.0,2,C distinct boundary,16,0.014951647828820682,True
+F-5-2-1,5.0,2,C distinct boundary,17,0.010848238432440068,True
+F-5-2-1,5.0,2,C distinct boundary,18,0.017922725015215323,True
+F-5-2-1,5.0,2,C distinct boundary,19,0.007055567154901582,True
+F-5-2-1,5.0,2,C distinct boundary,20,0.009502802241452562,True
+F-5-2-1,5.0,2,C distinct boundary,21,0.013495830296733218,True
+F-5-2-1,5.0,2,C distinct boundary,22,0.006525345420065092,True
+F-5-2-1,5.0,2,C distinct boundary,23,0.01736225175800815,True
+F-5-2-1-radial,5.0,2,C geometry and volume,0,0.0031065124985835647,False
+F-5-2-1-radial,5.0,2,C geometry and volume,1,0.0036132214047771417,False
+F-5-2-1-radial,5.0,2,C geometry and volume,2,0.003347827779831626,False
+F-5-2-1-radial,5.0,2,C geometry and volume,3,0.0030602040695431715,False
+F-5-2-1-radial,5.0,2,C geometry and volume,4,0.0038229521875659026,False
+F-5-2-1-radial,5.0,2,C geometry and volume,5,0.0032607373838458523,False
+F-5-2-1-radial,5.0,2,C geometry and volume,6,0.010581830081197272,False
+F-5-2-1-radial,5.0,2,C geometry and volume,7,0.01084665930424863,False
+F-5-2-1-radial,5.0,2,C geometry and volume,8,0.00905223355258009,False
+F-5-2-1-radial,5.0,2,C geometry and volume,9,0.009016293935711258,False
+F-5-2-1-radial,5.0,2,C geometry and volume,10,0.009349038602410776,False
+F-5-2-1-radial,5.0,2,C geometry and volume,11,0.00934506946374345,False
+F-5-2-1-radial,5.0,2,C geometry and volume,12,0.003720559629591499,True
+F-5-2-1-radial,5.0,2,C geometry and volume,13,0.0036596606890806327,True
+F-5-2-1-radial,5.0,2,C geometry and volume,14,0.016451271617016164,True
+F-5-2-1-radial,5.0,2,C geometry and volume,15,0.007368590750107101,True
+F-5-2-1-radial,5.0,2,C geometry and volume,16,0.007075052255506119,True
+F-5-2-1-radial,5.0,2,C geometry and volume,17,0.006133380160596705,True
+F-5-2-1-radial,5.0,2,C geometry and volume,18,0.010216972441430675,True
+F-5-2-1-radial,5.0,2,C geometry and volume,19,0.003148172204934272,True
+F-5-2-1-radial,5.0,2,C geometry and volume,20,0.0046195196991277165,True
+F-5-2-1-radial,5.0,2,C geometry and volume,21,0.009146704898042536,True
+F-5-2-1-radial,5.0,2,C geometry and volume,22,0.0027018007425202695,True
+F-5-2-1-radial,5.0,2,C geometry and volume,23,0.006704322295902901,True
+F-5-3-1,5.0,3,C distinct boundary,0,0.0015406790690454522,False
+F-5-3-1,5.0,3,C distinct boundary,1,0.0018795434159942154,False
+F-5-3-1,5.0,3,C distinct boundary,2,0.0019420852491988903,False
+F-5-3-1,5.0,3,C distinct boundary,3,0.001609796770897293,False
+F-5-3-1,5.0,3,C distinct boundary,4,0.0018416469676197865,False
+F-5-3-1,5.0,3,C distinct boundary,5,0.0015790140205212432,False
+F-5-3-1,5.0,3,C distinct boundary,6,0.004214211144056758,False
+F-5-3-1,5.0,3,C distinct boundary,7,0.006068238457687353,False
+F-5-3-1,5.0,3,C distinct boundary,8,0.009521481919741788,False
+F-5-3-1,5.0,3,C distinct boundary,9,0.003959787409121891,False
+F-5-3-1,5.0,3,C distinct boundary,10,0.0057223850514207765,False
+F-5-3-1,5.0,3,C distinct boundary,11,0.004735230778945478,False
+F-5-3-1,5.0,3,C distinct boundary,12,0.0016721947277112132,True
+F-5-3-1,5.0,3,C distinct boundary,13,0.001629821186015619,True
+F-5-3-1,5.0,3,C distinct boundary,14,0.0038073881627269947,True
+F-5-3-1,5.0,3,C distinct boundary,15,0.004215994213311757,True
+F-5-3-1,5.0,3,C distinct boundary,16,0.003528810896254103,True
+F-5-3-1,5.0,3,C distinct boundary,17,0.0032019875505278693,True
+F-5-3-1,5.0,3,C distinct boundary,18,0.0057834016174823245,True
+F-5-3-1,5.0,3,C distinct boundary,19,0.0016661169762430574,True
+F-5-3-1,5.0,3,C distinct boundary,20,0.0032666822071891937,True
+F-5-3-1,5.0,3,C distinct boundary,21,0.004093736326921749,True
+F-5-3-1,5.0,3,C distinct boundary,22,0.0013324356824370904,True
+F-5-3-1,5.0,3,C distinct boundary,23,0.00404220435169782,True
+F-5-3-1-radial,5.0,3,C geometry and volume,0,0.0012170270166757273,False
+F-5-3-1-radial,5.0,3,C geometry and volume,1,0.0010389535375395804,False
+F-5-3-1-radial,5.0,3,C geometry and volume,2,0.001236444175205277,False
+F-5-3-1-radial,5.0,3,C geometry and volume,3,0.0010572925298394061,False
+F-5-3-1-radial,5.0,3,C geometry and volume,4,0.0009976397383828818,False
+F-5-3-1-radial,5.0,3,C geometry and volume,5,0.001101619929816304,False
+F-5-3-1-radial,5.0,3,C geometry and volume,6,0.0037934328904824406,False
+F-5-3-1-radial,5.0,3,C geometry and volume,7,0.004976729003944937,False
+F-5-3-1-radial,5.0,3,C geometry and volume,8,0.004910016430483897,False
+F-5-3-1-radial,5.0,3,C geometry and volume,9,0.0035459368645350473,False
+F-5-3-1-radial,5.0,3,C geometry and volume,10,0.002759492011782036,False
+F-5-3-1-radial,5.0,3,C geometry and volume,11,0.003925687226713526,False
+F-5-3-1-radial,5.0,3,C geometry and volume,12,0.0012293073125414617,True
+F-5-3-1-radial,5.0,3,C geometry and volume,13,0.0011831780461905234,True
+F-5-3-1-radial,5.0,3,C geometry and volume,14,0.002559571534803562,True
+F-5-3-1-radial,5.0,3,C geometry and volume,15,0.003854445782868864,True
+F-5-3-1-radial,5.0,3,C geometry and volume,16,0.0028842931075230057,True
+F-5-3-1-radial,5.0,3,C geometry and volume,17,0.002077422308352178,True
+F-5-3-1-radial,5.0,3,C geometry and volume,18,0.0031392650068097485,True
+F-5-3-1-radial,5.0,3,C geometry and volume,19,0.0008488760495427221,True
+F-5-3-1-radial,5.0,3,C geometry and volume,20,0.0016785409840241357,True
+F-5-3-1-radial,5.0,3,C geometry and volume,21,0.0036324997802371275,True
+F-5-3-1-radial,5.0,3,C geometry and volume,22,0.00071343667982343,True
+F-5-3-1-radial,5.0,3,C geometry and volume,23,0.002838587482616698,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,0,0.002144878202739346,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,1,0.0017254628200548208,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,2,0.002875590215429897,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,3,0.001500684127043156,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,4,0.002065052952813667,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,5,0.0023169139565485503,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,6,0.006332646315148573,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,7,0.006774990965739754,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,8,0.011793102770647495,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,9,0.0051240300253296055,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,10,0.006395531728014859,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,11,0.006522814186077642,False
+F-5-3-1-matched-alt,5.0,3,B alternative matched,12,0.0016957642617632268,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,13,0.001787465302580774,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,14,0.004508421257010776,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,15,0.005297126000386514,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,16,0.005676765677151756,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,17,0.0037585125891365706,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,18,0.005868049966151018,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,19,0.0015620663817107216,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,20,0.0046148415723109674,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,21,0.004948858399648907,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,22,0.001188029914859773,True
+F-5-3-1-matched-alt,5.0,3,B alternative matched,23,0.004697030179598789,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,0,0.001968459582807497,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,1,0.0019128053539907927,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,2,0.0022945808949103226,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,3,0.0014874000960678807,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,4,0.0021767482752419213,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,5,0.0020314122714902034,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,6,0.0033596206437247625,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,7,0.0031359160865848793,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,8,0.0039345979198832275,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,9,0.002619015320970539,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,10,0.0036522014130552184,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,11,0.0036865895399298184,False
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,12,0.0012706337852389103,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,13,0.0019407209822994063,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,14,0.002615162312555345,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,15,0.0027448401843152073,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,16,0.003541608588386812,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,17,0.0023546244732316046,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,18,0.002794538030008533,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,19,0.001354616570314134,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,20,0.0021336526468647213,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,21,0.0026600160149016284,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,22,0.0009817314077560473,True
+F-5-3-1-BEM-geometry,5.0,3,C BEM geometry only,23,0.0020336356540577747,True

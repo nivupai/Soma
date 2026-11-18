@@ -210,3 +210,10 @@ The analytic helper is core-only; full volume assembly requires `[fem]` and the
 full frozen BEM/FEM experiment requires `[fem,conductor]`. Inputs use MRI/RAS metres,
 S/m and source-major Cartesian moments; outputs use V/(A m). No participant data
 or generalized clinical mesh processing is supported by this synthetic reference.
+
+M30 exports `mesh_grid_design`, `mesh_grid_protocol`, `convergence_grid` and
+`run_mesh_grid` from `soma.sdk.source`. The core-only example validates candidate
+geometry, not forward/inverse accuracy. Full experiments require
+`[mesher,fem,conductor]`, official Gmsh 4.15.2 and the immutable public M29 artifacts.
+`soma source mesh-grid --parent experiments/milestone29 --output reports/mesh-grid-v30`
+refuses a changed parent manifest. Inputs use MRI/RAS metres and physical S/m.

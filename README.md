@@ -513,3 +513,11 @@ agreement from poor sparse-grid localization and unavailable human/phantom evide
 Install `[fem,conductor]` to reproduce the bounded study with
 `soma source fem-reference --output reports/fem-reference-v29`.
 M29 depends on unmerged M28 PR13; the upstream npm security gate remains enabled.
+
+M30 (v0.30.0 candidate) challenges four-layer fields with independent Gmsh volume
+meshes and surface sampling, then tests frozen inverse grids from 12 to 341
+candidates. [Actual results](docs/MILESTONE30_RESULTS.md) retain non-monotonic
+localization and distinguish shared-interface agreement from geometry effects.
+The optional full study uses `[mesher,fem,conductor]`; Explorer serves reviewed
+synthetic aggregates only. M30 depends on unmerged PRs #14 and #13 and retains the
+required npm security gate.

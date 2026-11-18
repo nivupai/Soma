@@ -130,3 +130,14 @@ Historical scientific reports and original release records are preserved.
 - Export physical field, mesh, uncertainty, inverse, provenance and figure data;
   extend the synthetic-only Explorer, SDK/CLI and small cross-platform checks.
 - Preserve all M28 artifacts; keep PR13's npm security audit blocking dependent merges.
+
+## 0.30.0 — independent mesh and source-grid study (dependent, unmerged)
+
+- Add optional official Gmsh 4.15.2 native meshing with material/facet/volume audits;
+  preserve M29 radial and M28 scientific artifacts and all frozen targets.
+- Compare shared and separately sampled boundaries across six synthetic heads;
+  retain failures and distinguish geometry from discretization effects.
+- Evaluate 12/33/147/341 inverse candidates under paired signals and frozen settings;
+  report lower bounds, non-monotonic errors, uncertainty, PSFs and resolution data.
+- Extend the read-only workbench and SDK/CLI without new frontend packages.
+- Keep upstream npm audit blocking all dependent merges.

@@ -1,0 +1,17 @@
+head,spacing_mm,candidates,solver,seconds,peak_MiB,scope
+0,0,12,fem,0.07945766701595858,294.75,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,0,12,openmeeg,0.06632341700606048,305.03125,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,30,33,fem,0.06961141701322049,306.46875,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,30,33,openmeeg,0.07076733297435567,307.21875,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,20,147,fem,0.07044058397877961,304.9375,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,20,147,openmeeg,0.07584979198873043,309.421875,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,15,341,fem,0.07818204199429601,331.90625,post-run isolated kernel/resolution cost; imports included in peak RSS
+0,15,341,openmeeg,0.07768491603201255,331.578125,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,0,12,fem,0.06939300004160032,307.234375,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,0,12,openmeeg,0.07170479098567739,287.140625,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,30,33,fem,0.06695358298020437,297.28125,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,30,33,openmeeg,0.06502704200102016,306.53125,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,20,147,fem,0.06543499999679625,306.8125,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,20,147,openmeeg,0.06800416699843481,306.078125,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,15,341,fem,0.07323099998757243,332.171875,post-run isolated kernel/resolution cost; imports included in peak RSS
+5,15,341,openmeeg,0.167183333018329,313.046875,post-run isolated kernel/resolution cost; imports included in peak RSS

@@ -1,0 +1,13 @@
+head,method,solver,mean_delta_mm,min_source_mean_mm,max_source_mean_mm,source_count,scope
+0,MNE,fem,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+0,MNE,openmeeg,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+0,Tikhonov,fem,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+0,Tikhonov,openmeeg,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+0,dSPM,fem,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+0,dSPM,openmeeg,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+5,MNE,fem,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+5,MNE,openmeeg,-0.1121723211827278,-1.3460678541927336,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+5,Tikhonov,fem,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+5,Tikhonov,openmeeg,0.03666668495039494,-0.9524137049934563,1.3924139243981957,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+5,dSPM,fem,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
+5,dSPM,openmeeg,0.0,0.0,0.0,12,separate prescribed head0/head5 sensitivity; no pooled6-head or human interval
