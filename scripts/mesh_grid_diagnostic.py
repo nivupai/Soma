@@ -181,6 +181,7 @@ def run(output, create_fixture=False):
         ("native", bs, {}),
         ("canonical_input", canonical_surfaces(bs), {}),
         ("shared_input", fixed_bs, {}),
+        ("alternate_seed", fixed_bs, {"Mesh.RandomSeed": 30043}),
         ("reproducible_option", fixed_bs, {"Mesh.Reproducible": 1}),
         ("random_factor_zero", fixed_bs, {"Mesh.RandomFactor": 0, "Mesh.RandomFactor3D": 0}),
     ]:
