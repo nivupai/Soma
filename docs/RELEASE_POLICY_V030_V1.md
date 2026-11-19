@@ -33,7 +33,7 @@ may be reported without failing the aggregate release workflow.
 The mandatory policy handler validates every primary report and companion before
 calling the frozen comparator, which can otherwise stop at an early mismatch.
 Validation includes four distinct environments, schemas/protocol/fixture identity,
-complete controls, finite numeric values, units/reference/source order, source/sensor
+complete controls, unique JSON keys, finite numeric values, units/reference/source order, source/sensor
 identity checked against frozen geometry with native roundoff bounds, positive tetrahedra, material labels,
 interface facets, physical volumes/quality, mesh fingerprints, solver residuals,
 CSR/RHS structure, numerical options, and independent consistency of the reported

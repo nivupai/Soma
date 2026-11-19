@@ -289,3 +289,11 @@ def test_cli_honest_failure_summary_is_required_in_ci(reports, tmp_path, has_sum
         assert "scientific diagnostic: FAIL" in summary.read_text()
     else:
         assert p.returncode != 0 and value["release_disposition"] == "BLOCK_RELEASE"
+
+
+def test_duplicate_json_keys_cannot_hide_invalid_metadata(reports):
+    path = late(reports) / "mesh-grid-synthetic.json"
+    text = path.read_text()
+    path.write_text(text.replace('"relative":', '"relative": 0.99, "relative":', 1))
+    with pytest.raises(ValueError, match="Duplicate native diagnostic JSON keys"):
+        diagnostic.report(reports)

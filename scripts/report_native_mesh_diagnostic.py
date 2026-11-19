@@ -50,7 +50,12 @@ def read_json(path):
     def invalid(_):
         raise ValueError("Nonfinite JSON native diagnostic value")
 
-    value = json.loads(path.read_text(), parse_constant=invalid)
+    def unique_object(pairs):
+        result = dict(pairs)
+        require(len(result) == len(pairs), "Duplicate native diagnostic JSON keys")
+        return result
+
+    value = json.loads(path.read_text(), parse_constant=invalid, object_pairs_hook=unique_object)
     require(isinstance(value, dict), "Native report must be a JSON object")
     return value
 
