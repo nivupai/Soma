@@ -36,8 +36,8 @@ def reports(tmp_path):
             C_runtime_random_sequence=[0] * 8,
         )
         companion["environment"]["blas"] = {
-            "numpy": {"name": "unit_fixture"},
-            "scipy": {"name": "unit_fixture"},
+            "numpy": {"name": "unit_fixture", "version": "unit", "openblas configuration": "unit"},
+            "scipy": {"name": "unit_fixture", "version": "unit", "openblas configuration": "unit"},
         }
         (dest / "mesh-grid-diagnostic.json").write_text(json.dumps(companion))
     return tmp_path
@@ -143,6 +143,10 @@ def test_invalid_primary_reports_are_blocking(reports, fault):
         "control_failure",
         "options",
         "lead",
+        "solver_missing",
+        "packages_missing",
+        "blas_invalid",
+        "top_missing",
     ],
 )
 def test_invalid_companion_physics_and_structure_are_blocking(reports, fault):
@@ -170,6 +174,14 @@ def test_invalid_companion_physics_and_structure_are_blocking(reports, fault):
             c["options"]["General.NumThreads"] = 2
         elif fault == "lead":
             c["lead"][0][0] += 0.1
+        elif fault == "solver_missing":
+            c["diagnostics"].pop("compatibility_correction")
+        elif fault == "packages_missing":
+            v["environment"]["packages"].pop("numpy")
+        elif fault == "blas_invalid":
+            v["environment"]["blas"] = "not-an-object"
+        elif fault == "top_missing":
+            v.pop("C_runtime_random_sequence")
 
     modify(path, change)
     with pytest.raises((ValueError, KeyError)):

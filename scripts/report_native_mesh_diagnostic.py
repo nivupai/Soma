@@ -156,6 +156,37 @@ def control(name, c, d, fixture):
     n = q["nodes"]
     diag = c["diagnostics"]
     require(isinstance(diag, dict), "Invalid native solver diagnostic")
+    require(
+        set(diag)
+        == {
+            "nodes",
+            "elements",
+            "min_volume_m3",
+            "min_mean_ratio",
+            "max_mean_ratio",
+            "tissue_counts",
+            "mesh_hash",
+            "solver",
+            "solver_version",
+            "independent_of_OpenMEEG",
+            "units",
+            "frame",
+            "source_order",
+            "quadrature",
+            "relative_residual",
+            "preprojection_current_imbalance",
+            "compatibility_correction",
+            "seconds",
+            "reference",
+        },
+        "Incomplete native solver diagnostic",
+    )
+    require(
+        diag["solver"] == "scikit-fem P1 full subtraction"
+        and diag["compatibility_correction"]
+        == "subtract algebraic RHS mean; reported before correction",
+        "Native subtraction method changed",
+    )
     for key in ["nodes", "elements", "tissue_counts", "mesh_hash"]:
         require(diag[key] == q[key], "Native mesh identity/labels mismatch")
     for key in ["min_volume_m3", "min_mean_ratio", "max_mean_ratio"]:
@@ -329,6 +360,33 @@ def validate_report(report, detail, signature, fixture, expected_quality):
         set(detail["environment"])
         == {"system", "machine", "python", "packages", "blas", "threadpools"},
         "Incomplete native numerical environment",
+    )
+    packages = detail["environment"]["packages"]
+    require(
+        isinstance(packages, dict)
+        and set(packages) == {"gmsh", "numpy", "scipy", "scikit-fem"}
+        and all(isinstance(v, str) and bool(v) for v in packages.values()),
+        "Incomplete native numerical package provenance",
+    )
+    blas = detail["environment"]["blas"]
+    require(
+        isinstance(blas, dict)
+        and set(blas) == {"numpy", "scipy"}
+        and all(
+            isinstance(v, dict)
+            and {"name", "version", "openblas configuration"} <= set(v)
+            and all(
+                isinstance(v[k], str) and bool(v[k])
+                for k in ["name", "version", "openblas configuration"]
+            )
+            for v in blas.values()
+        ),
+        "Incomplete native BLAS provenance",
+    )
+    require(
+        isinstance(detail["environment"]["threadpools"], list)
+        and all(isinstance(v, dict) for v in detail["environment"]["threadpools"]),
+        "Invalid native threadpool provenance",
     )
     key = identity(report["environment"])
     require(
