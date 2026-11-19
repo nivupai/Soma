@@ -1,0 +1,6 @@
+{
+  "all_passed": false,
+  "reason": "Cross-platform field disagreement",
+  "rtol": 0.02,
+  "atol_V_per_Am": 0.01
+}
