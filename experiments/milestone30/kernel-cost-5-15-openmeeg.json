@@ -1,0 +1,14 @@
+{
+  "head": 5,
+  "spacing_mm": 15,
+  "candidates": 341,
+  "solver": "openmeeg",
+  "seconds": 0.167183333018329,
+  "peak_MiB": 313.046875,
+  "scope": "post-run isolated kernel/resolution cost; imports included in peak RSS",
+  "resolution_norms": {
+    "Tikhonov": 5.501142814219491,
+    "MNE": 3.2527495065068295,
+    "dSPM": 459602333683.2768
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "milestones": {
+    "28": {
+      "merge_sha": "ed3a1fa94972786cd342d74981e04474a2a93d53",
+      "postmerge_run": "https://github.com/nivupai/Soma/actions/runs/44380042115",
+      "event": "push",
+      "passed_checks": 13,
+      "checks": [
+        {
+          "name": "quality",
+          "conclusion": "success"
+        },
+        {
+          "name": "scientific (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "distributions (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "scientific (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (macos-15, 3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (ubuntu-24.04, 3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "security",
+          "conclusion": "success"
+        },
+        {
+          "name": "explorer",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (ubuntu-24.04, 3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "distributions (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "dependency-floor",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (macos-15, 3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "cross-platform-comparison",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "29": {
+      "merge_sha": "d5cb067cb6d8da8c30c83db7278f65aeb63eea70",
+      "postmerge_run": "https://github.com/nivupai/Soma/actions/runs/44380486134",
+      "event": "push",
+      "passed_checks": 13,
+      "checks": [
+        {
+          "name": "security",
+          "conclusion": "success"
+        },
+        {
+          "name": "dependency-floor",
+          "conclusion": "success"
+        },
+        {
+          "name": "quality",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (ubuntu-24.04, 3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "scientific (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "explorer",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (ubuntu-24.04, 3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "distributions (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "scientific (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "distributions (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (macos-15, 3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "reproducibility (macos-15, 3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "cross-platform-comparison",
+          "conclusion": "success"
+        }
+      ]
+    }
+  },
+  "main": "d5cb067cb6d8da8c30c83db7278f65aeb63eea70",
+  "local_remote_main_equal": true,
+  "PR15_base": "main",
+  "PR15_merged": false,
+  "branch_protection": false,
+  "rulesets": [],
+  "configured_required_reviews": false,
+  "merge_trees_equal_reviewed_heads": true,
+  "merge_authorized": false,
+  "release_gate_decision": "EXPLICIT_USER_DECISION_REQUIRED",
+  "milestone31_started": false
+}

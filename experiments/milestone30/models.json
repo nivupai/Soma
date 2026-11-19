@@ -1,0 +1,3238 @@
+[
+  {
+    "label": "H-1-0",
+    "head": null,
+    "level": 1,
+    "alternative": false,
+    "status": "FAILED",
+    "kind": "analytical",
+    "reason": "ValueError: Current conservation/quadrature failed: 0.0012137109732260993"
+  },
+  {
+    "label": "H-2-0",
+    "head": null,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 949,
+      "elements": 5148,
+      "min_volume_m3": 4.765670419056327e-08,
+      "min_mean_ratio": 0.16612177527283933,
+      "max_mean_ratio": 0.9993943298154379,
+      "tissue_counts": [
+        2193,
+        970,
+        1000,
+        985
+      ],
+      "mesh_hash": "770c7c69a9583db0fad997dc746eff85ebd1f45a8a0ed95d8dde09d3469cd32f",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021507654717726394,
+        0.00014659428636685682,
+        0.0003952953521748386,
+        0.00025764046139024546
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16925274999812245,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.09247154982400818,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 325.28125,
+      "solve_seconds": 1.8604699590359814,
+      "peak_solver_MiB": 261.4375,
+      "residual": 1.278275567853199e-13,
+      "current_imbalance": 7.820954415141838e-07
+    }
+  },
+  {
+    "label": "H-3-0",
+    "head": null,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 4261,
+      "elements": 23905,
+      "min_volume_m3": 1.200791854831035e-08,
+      "min_mean_ratio": 0.2519993329376855,
+      "max_mean_ratio": 0.9985181196359995,
+      "tissue_counts": [
+        12085,
+        3930,
+        3945,
+        3945
+      ],
+      "mesh_hash": "ebf689e336754248beff0c2f65544a52fcd547a52a91aa11b689780d0ad93ff0",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002206936732576752,
+        0.0001504228701896755,
+        0.00040561922923771786,
+        0.0002643692236566936
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5815471250098199,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.16926818726656082,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 384.90625,
+      "solve_seconds": 8.073256958974525,
+      "peak_solver_MiB": 492.53125,
+      "residual": 2.335218532777063e-13,
+      "current_imbalance": 5.069506511602546e-11
+    }
+  },
+  {
+    "label": "H-3-1",
+    "head": null,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 4394,
+      "elements": 24566,
+      "min_volume_m3": 1.7425631109358521e-09,
+      "min_mean_ratio": 0.09705908427933577,
+      "max_mean_ratio": 0.9990129273044874,
+      "tissue_counts": [
+        12126,
+        4147,
+        4146,
+        4147
+      ],
+      "mesh_hash": "2ed039a9ee8f02970f020420044ae6f5cd078e4090b9b82d55c7ae2e03146947",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022072061964957214,
+        0.00015044123661382596,
+        0.0004056687547839224,
+        0.000264401502772814
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.6483434999827296,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.1206765634148483,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 396.265625,
+      "solve_seconds": 8.350612582988106,
+      "peak_solver_MiB": 481.828125,
+      "residual": 1.9084916535469855e-13,
+      "current_imbalance": 7.923369983053774e-11
+    }
+  },
+  {
+    "label": "S-1-0",
+    "head": null,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 212,
+      "elements": 1072,
+      "min_volume_m3": 1.7439641942315175e-07,
+      "min_mean_ratio": 0.10427967817471075,
+      "max_mean_ratio": 0.9874442974001404,
+      "tissue_counts": [
+        317,
+        245,
+        260,
+        250
+      ],
+      "mesh_hash": "8b28861c81a4a353f06806beaeaad282702c23389f5146bbedf21f3b0b07d7b5",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.001944389674803911,
+        0.00013252789322586612,
+        0.00035736495278271925,
+        0.00023291867919286784
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.06193154101492837,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.04626440905340904,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 318.40625,
+      "solve_seconds": 0.41098841704661027,
+      "peak_solver_MiB": 101.09375,
+      "residual": 8.350728552674665e-14,
+      "current_imbalance": 0.00022884327353358197
+    }
+  },
+  {
+    "label": "S-2-0",
+    "head": null,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 949,
+      "elements": 5148,
+      "min_volume_m3": 4.765670419056327e-08,
+      "min_mean_ratio": 0.16612177527283933,
+      "max_mean_ratio": 0.9993943298154379,
+      "tissue_counts": [
+        2193,
+        970,
+        1000,
+        985
+      ],
+      "mesh_hash": "770c7c69a9583db0fad997dc746eff85ebd1f45a8a0ed95d8dde09d3469cd32f",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021507654717726394,
+        0.00014659428636685682,
+        0.0003952953521748386,
+        0.00025764046139024546
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16925274999812245,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.09247154982400818,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 325.28125,
+      "solve_seconds": 1.745790999964811,
+      "peak_solver_MiB": 290.265625,
+      "residual": 4.1668857881377305e-14,
+      "current_imbalance": 1.3428650721281039e-07
+    }
+  },
+  {
+    "label": "S-3-0",
+    "head": null,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 4261,
+      "elements": 23905,
+      "min_volume_m3": 1.200791854831035e-08,
+      "min_mean_ratio": 0.2519993329376855,
+      "max_mean_ratio": 0.9985181196359995,
+      "tissue_counts": [
+        12085,
+        3930,
+        3945,
+        3945
+      ],
+      "mesh_hash": "ebf689e336754248beff0c2f65544a52fcd547a52a91aa11b689780d0ad93ff0",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002206936732576752,
+        0.0001504228701896755,
+        0.00040561922923771786,
+        0.0002643692236566936
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5815471250098199,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.16926818726656082,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 384.90625,
+      "solve_seconds": 7.698671541991644,
+      "peak_solver_MiB": 485.890625,
+      "residual": 5.467865678548789e-14,
+      "current_imbalance": 7.762620772745271e-12
+    }
+  },
+  {
+    "label": "S-3-1",
+    "head": null,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "analytical",
+    "diagnostics": {
+      "nodes": 4394,
+      "elements": 24566,
+      "min_volume_m3": 1.7425631109358521e-09,
+      "min_mean_ratio": 0.09705908427933577,
+      "max_mean_ratio": 0.9990129273044874,
+      "tissue_counts": [
+        12126,
+        4147,
+        4146,
+        4147
+      ],
+      "mesh_hash": "2ed039a9ee8f02970f020420044ae6f5cd078e4090b9b82d55c7ae2e03146947",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022072061964957214,
+        0.00015044123661382596,
+        0.0004056687547839224,
+        0.000264401502772814
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.6483434999827296,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.1206765634148483,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 396.265625,
+      "solve_seconds": 8.452038082992658,
+      "peak_solver_MiB": 483.625,
+      "residual": 5.420074412504914e-14,
+      "current_imbalance": 1.3062947619072392e-11
+    }
+  },
+  {
+    "label": "F-0-1-0",
+    "head": 0,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 203,
+      "elements": 1017,
+      "min_volume_m3": 4.822036943534655e-07,
+      "min_mean_ratio": 0.13240496995195686,
+      "max_mean_ratio": 0.989192958454315,
+      "tissue_counts": [
+        297,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "e4b8372e66d523afca48759215633374e43f29ab392d1301e9d9c6f6aeff7979",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.001962870326619251,
+        0.0001337875182291594,
+        0.00036180734364646406,
+        0.0002340866998717247
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.05266425001900643,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.05786036998818859,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 317.5625,
+      "solve_seconds": 0.40299170796060935,
+      "peak_solver_MiB": 106.0625,
+      "residual": 3.896958558400535e-14,
+      "current_imbalance": 0.00025049278438074574
+    }
+  },
+  {
+    "label": "F-0-2-0",
+    "head": 0,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 924,
+      "elements": 5018,
+      "min_volume_m3": 1.311436671427923e-07,
+      "min_mean_ratio": 0.21094207851610688,
+      "max_mean_ratio": 0.9964685017876244,
+      "tissue_counts": [
+        2138,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "8e2dbbcd6824679c135f5e69d03d62443186cb2916cda826b652d50baebcf327",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021712922440004874,
+        0.00014799337314114685,
+        0.0004002273994162908,
+        0.0002589399930449383
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.18206108402227983,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11590681838691744,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 329.59375,
+      "solve_seconds": 1.7823632910149172,
+      "peak_solver_MiB": 249.359375,
+      "residual": 6.144873116746136e-14,
+      "current_imbalance": 1.2159280166251578e-07
+    }
+  },
+  {
+    "label": "F-0-3-0",
+    "head": 0,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4233,
+      "elements": 23816,
+      "min_volume_m3": 3.3461464606590357e-08,
+      "min_mean_ratio": 0.3324136953690393,
+      "max_mean_ratio": 0.9984892780863323,
+      "tissue_counts": [
+        12296,
+        3840,
+        3840,
+        3840
+      ],
+      "mesh_hash": "41c648af8e9fc6dd15c1987b26ddc03d44677abe4be645cf72abd86377ed5a6c",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002228025212167224,
+        0.00015186024244467065,
+        0.0004106856656293634,
+        0.0002657048909620671
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5691107079619542,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.22884128986851773,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 380.6875,
+      "solve_seconds": 7.848013832990546,
+      "peak_solver_MiB": 473.171875,
+      "residual": 8.162729035889177e-14,
+      "current_imbalance": 8.840655387984441e-12
+    }
+  },
+  {
+    "label": "F-0-2-1",
+    "head": 0,
+    "level": 2,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 1061,
+      "elements": 5748,
+      "min_volume_m3": 6.041496618953461e-09,
+      "min_mean_ratio": 0.022734266492227234,
+      "max_mean_ratio": 0.999546718722198,
+      "tissue_counts": [
+        2290,
+        1152,
+        1153,
+        1153
+      ],
+      "mesh_hash": "7f7e83e27d0e1d30d9d0a5243c48d32a9f3a863f4cff4929cdb14e3340041097",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002175002172675582,
+        0.00014824623862263951,
+        0.0004009092582201166,
+        0.0002593844054824603
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16563841700553894,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.004037533420843092,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 326.84375,
+      "solve_seconds": 2.036109499982558,
+      "peak_solver_MiB": 266.09375,
+      "residual": 5.466522540838113e-14,
+      "current_imbalance": 4.4732027451753374e-08
+    }
+  },
+  {
+    "label": "F-0-3-1",
+    "head": 0,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4319,
+      "elements": 24204,
+      "min_volume_m3": 3.051967666806894e-09,
+      "min_mean_ratio": 0.10342667926932705,
+      "max_mean_ratio": 0.9995687977129161,
+      "tissue_counts": [
+        12108,
+        4032,
+        4032,
+        4032
+      ],
+      "mesh_hash": "db4dec7b2f3ebe789c854672559db49ab1b64e54622275a8cb0e035eaef8484a",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002228293768491016,
+        0.00015187854700793064,
+        0.0004107349868889259,
+        0.0002657370988343716
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5683762499829754,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.10786414281055558,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 386.453125,
+      "solve_seconds": 8.898261624970473,
+      "peak_solver_MiB": 496.078125,
+      "residual": 1.5505807592502294e-13,
+      "current_imbalance": 1.3165693128533702e-11
+    },
+    "BEM_alternative_diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6728,
+      "estimated_dense_bytes": 1448511488,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.984632468714808e-14,
+      "algebraic_reciprocity_relative": 9.087976697965e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.3775473533077356e-07,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "372195c4f9f4c72202b680e45cf67295266e718c0b188d97e8a3619947f85274",
+        "3862fc96fbb72cf7c9eda47563ba89de925e49bf5b200a5f657f7e5b1500d336",
+        "570e326f3aa105eadf2ade7389d39af762bce2e1c15a624dcc3da734ec9326b4",
+        "d3fb5ddb119dbe24e7eb20e1c823ed1de479ad127b05f215f3f26c87799c9d95"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "2a768862f67b98c0c6ba16dfd05b110dcc51cd671b8deb91bbd72e5439886eed",
+        "sources": "35083e38e9b1de25cdf683eb21bb99d0601cac6b99ee3b8fd6235d1cf1266d03",
+        "sensors": "461d5f1d4786a6e9071916bcbf19cc816ca304215ce70a113465ef691fc7426f",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 18.449057499994524,
+      "process_peak_rss_mib": 1203.984375,
+      "rank": 31,
+      "retained_condition": 181.14706489058935,
+      "singular_values": [
+        1291.842073271461,
+        1133.9106507160877,
+        974.6774431017437,
+        464.3477382506209,
+        447.63524369940865,
+        386.48321639695456,
+        344.4502002271044,
+        318.8806068290973,
+        206.1715701674432,
+        186.36090563148707,
+        177.0387882738221,
+        155.5697508134711,
+        130.25326171186344,
+        113.8143995732462,
+        98.97886229271356,
+        88.3475888244711,
+        77.4806541496568,
+        64.1203523977966,
+        59.80360256031045,
+        53.220975890739,
+        40.31110247462458,
+        34.8641467189416,
+        32.37240904477095,
+        26.812279903137643,
+        24.788811465216224,
+        20.65591014541561,
+        19.531276602438503,
+        15.176222787222391,
+        13.20424187753442,
+        10.021423717519289,
+        7.131454622528485,
+        1.2822602636282855e-13
+      ],
+      "reference_null_relative": 3.0331857197429326e-16,
+      "reference_reprojection_relative": 2.825541247624247e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "95d3094437103dcafe922b8bb2279952f9b7745cb1a6ec6b818bd8f7e8ba2847"
+    }
+  },
+  {
+    "label": "grid-0-0-fem",
+    "head": 0,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.2599803092813845e-14,
+      "normal_equation_residual_relative": 3.76997266806178e-15
+    }
+  },
+  {
+    "label": "grid-0-0-openmeeg",
+    "head": 0,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.3491167936952705e-14,
+      "normal_equation_residual_relative": 3.939361476781729e-15
+    }
+  },
+  {
+    "label": "grid-0-30-fem",
+    "head": 0,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 924,
+      "elements": 5018,
+      "min_volume_m3": 1.311436671427923e-07,
+      "min_mean_ratio": 0.21094207851610688,
+      "max_mean_ratio": 0.9964685017876244,
+      "tissue_counts": [
+        2138,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "8e2dbbcd6824679c135f5e69d03d62443186cb2916cda826b652d50baebcf327",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021712922440004874,
+        0.00014799337314114685,
+        0.0004002273994162908,
+        0.0002589399930449383
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.18206108402227983,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11590681838691744,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 329.59375,
+      "solve_seconds": 2.5868430419941433,
+      "peak_solver_MiB": 263.09375,
+      "residual": 5.977870697646835e-14,
+      "current_imbalance": 2.7637954900630983e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.392577481330657e-14,
+      "normal_equation_residual_relative": 5.844155906326973e-15
+    }
+  },
+  {
+    "label": "grid-0-30-openmeeg",
+    "head": 0,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.678682748476445e-14,
+      "normal_equation_residual_relative": 5.971678350968357e-15
+    }
+  },
+  {
+    "label": "grid-0-20-fem",
+    "head": 0,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 924,
+      "elements": 5018,
+      "min_volume_m3": 1.311436671427923e-07,
+      "min_mean_ratio": 0.21094207851610688,
+      "max_mean_ratio": 0.9964685017876244,
+      "tissue_counts": [
+        2138,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "8e2dbbcd6824679c135f5e69d03d62443186cb2916cda826b652d50baebcf327",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021712922440004874,
+        0.00014799337314114685,
+        0.0004002273994162908,
+        0.0002589399930449383
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.18206108402227983,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11590681838691744,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 329.59375,
+      "solve_seconds": 11.686947209003847,
+      "peak_solver_MiB": 305.953125,
+      "residual": 6.161147651829411e-14,
+      "current_imbalance": 3.5451803292405914e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 2.2799067946327797e-13,
+      "normal_equation_residual_relative": 1.0740440634161487e-14
+    }
+  },
+  {
+    "label": "grid-0-20-openmeeg",
+    "head": 0,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 2.539990381666455e-13,
+      "normal_equation_residual_relative": 1.1533259977245702e-14
+    }
+  },
+  {
+    "label": "grid-0-15-fem",
+    "head": 0,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 924,
+      "elements": 5018,
+      "min_volume_m3": 1.311436671427923e-07,
+      "min_mean_ratio": 0.21094207851610688,
+      "max_mean_ratio": 0.9964685017876244,
+      "tissue_counts": [
+        2138,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "8e2dbbcd6824679c135f5e69d03d62443186cb2916cda826b652d50baebcf327",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021712922440004874,
+        0.00014799337314114685,
+        0.0004002273994162908,
+        0.0002589399930449383
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.18206108402227983,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11590681838691744,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 329.59375,
+      "solve_seconds": 25.252391290967353,
+      "peak_solver_MiB": 324.171875,
+      "residual": 6.03820673781735e-14,
+      "current_imbalance": 2.0432201592743874e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 8.972054092138296e-13,
+      "normal_equation_residual_relative": 1.2902841846672638e-14
+    }
+  },
+  {
+    "label": "grid-0-15-openmeeg",
+    "head": 0,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.788507288316004e-13,
+      "normal_equation_residual_relative": 1.364999395308125e-14
+    }
+  },
+  {
+    "label": "F-1-1-0",
+    "head": 1,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 205,
+      "elements": 1031,
+      "min_volume_m3": 4.951782757213332e-07,
+      "min_mean_ratio": 0.1343366251802031,
+      "max_mean_ratio": 0.9993801381270553,
+      "tissue_counts": [
+        311,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "2977f3f9e3fbfadadcb4b7319fcd3e078087bd25bfc72d0770f7522804304c5b",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0019770609109780388,
+        0.00013475473600092818,
+        0.00036441080182464153,
+        0.0002357912617286803
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.0578405000269413,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.05862091873183909,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 315.484375,
+      "solve_seconds": 0.43560770800104365,
+      "peak_solver_MiB": 113.046875,
+      "residual": 2.7965192462783676e-14,
+      "current_imbalance": 4.366071001371969e-05
+    }
+  },
+  {
+    "label": "F-1-2-0",
+    "head": 1,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5084,
+      "min_volume_m3": 1.340812631312737e-07,
+      "min_mean_ratio": 0.21336953997710237,
+      "max_mean_ratio": 0.9998805365751771,
+      "tissue_counts": [
+        2204,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b6a44c88e4a3858fa4af912e4735d67f09ad80e42dbd94bb4b95779ed348a90e",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021869896160266566,
+        0.00014906329223749295,
+        0.0004031056303896584,
+        0.0002608272172126619
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16104379098396748,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11698853282157878,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 326.03125,
+      "solve_seconds": 1.9044892499805428,
+      "peak_solver_MiB": 265.25,
+      "residual": 4.661469403819946e-14,
+      "current_imbalance": 1.8711386674941226e-08
+    }
+  },
+  {
+    "label": "F-1-3-0",
+    "head": 1,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4226,
+      "elements": 23753,
+      "min_volume_m3": 3.4215939973429577e-08,
+      "min_mean_ratio": 0.33612878356925807,
+      "max_mean_ratio": 0.9986319043741141,
+      "tissue_counts": [
+        12233,
+        3840,
+        3840,
+        3840
+      ],
+      "mesh_hash": "c53cec0248c40a24d56ccac3fa99a26e0f8cfdc7b82539f60f09bb64a80156f1",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022441327355721043,
+        0.00015295811709891162,
+        0.0004136377030985001,
+        0.0002676428236160866
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5847892909660004,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.23070070642405047,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 385.421875,
+      "solve_seconds": 8.039974832965527,
+      "peak_solver_MiB": 466.296875,
+      "residual": 5.670763885889307e-14,
+      "current_imbalance": 2.2921373892170255e-12
+    }
+  },
+  {
+    "label": "F-1-2-1",
+    "head": 1,
+    "level": 2,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 1058,
+      "elements": 5711,
+      "min_volume_m3": 5.9794316843473874e-09,
+      "min_mean_ratio": 0.033607168745405966,
+      "max_mean_ratio": 0.9999361074410371,
+      "tissue_counts": [
+        2253,
+        1152,
+        1153,
+        1153
+      ],
+      "mesh_hash": "8e370513f6b3cacec7f1e006cc8c1309007953f60ff0ab1297edf05c460ada3a",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002190830193195833,
+        0.00014932506260564382,
+        0.0004038131385957207,
+        0.00026128564290847184
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1684582080342807,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.007257422486475313,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 322.015625,
+      "solve_seconds": 2.1500163749442436,
+      "peak_solver_MiB": 305.171875,
+      "residual": 3.798067349826173e-14,
+      "current_imbalance": 1.1911270035073297e-08
+    }
+  },
+  {
+    "label": "F-1-3-1",
+    "head": 1,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4366,
+      "elements": 24531,
+      "min_volume_m3": 3.026883861006673e-09,
+      "min_mean_ratio": 0.10352940509593629,
+      "max_mean_ratio": 0.9997181431749204,
+      "tissue_counts": [
+        12435,
+        4032,
+        4032,
+        4032
+      ],
+      "mesh_hash": "f661d848e11cd36cee8a6b6d1f9d393e447e68e3a88a3963c7afb9f2d06ba1e6",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022444105811740755,
+        0.0001529770548112171,
+        0.000413688887068267,
+        0.0002676759888450352
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5690626249997877,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.13504566205833088,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 372.21875,
+      "solve_seconds": 8.307065333006904,
+      "peak_solver_MiB": 489.359375,
+      "residual": 7.71686722132969e-14,
+      "current_imbalance": 1.211251269127194e-12
+    },
+    "BEM_alternative_diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6728,
+      "estimated_dense_bytes": 1448511488,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.4778789262833965e-14,
+      "algebraic_reciprocity_relative": 1.135917199350299e-16,
+      "reciprocal_condition_estimate_mixed_units": 1.3759463283498552e-07,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "ff5fae057adbf0cd2ba9b9a9becc2e4c3207a84da404c2cafd6d1613c3a667a1",
+        "105905562fe70bfe21653648303b541f133544f0a332ee1b451290d3a5474bbd",
+        "84ee608cb745a1075cd0a092f3d615af6fd8e96714f0c9d569e55263a5c5a414",
+        "ea59b1cca037f076a4245bdfa3af431cc3e21adcdf3f7ac674e04792f5913161"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "1194bffa7369842b292887816f29edb9de496a76256e86f4ad5ff643dc16aeca",
+        "sources": "6c151beba1158182979ab2af0ee3a424e9b0c21b429edb11f4c4fa9fd1008450",
+        "sensors": "84fadd8b980e3b4410c1997ade1ba03457249f23cdf8ff5ad2d8e68255198dd9",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 18.0295861249906,
+      "process_peak_rss_mib": 1202.921875,
+      "rank": 31,
+      "retained_condition": 150.81574169505114,
+      "singular_values": [
+        1313.5509256330854,
+        1163.4053439328761,
+        1000.7715384170925,
+        465.49428594932783,
+        452.10858124938113,
+        370.95543129027516,
+        326.081740413927,
+        317.1400501854902,
+        186.5752467485431,
+        176.6098050085178,
+        161.24018028413494,
+        130.27800552570284,
+        120.91844268601139,
+        112.29341578288177,
+        104.7175436139175,
+        75.4414959620368,
+        68.26080566803668,
+        62.03649826963577,
+        54.67620472759161,
+        52.25363105094764,
+        47.668949076283475,
+        39.68369853179306,
+        32.609154614547435,
+        32.063578067356495,
+        26.773737122708038,
+        25.387043250610333,
+        20.75091448054178,
+        17.59680436450181,
+        15.442716200645599,
+        13.743370770680453,
+        8.709640723639316,
+        1.0322596452003473e-13
+      ],
+      "reference_null_relative": 3.293887117209443e-16,
+      "reference_reprojection_relative": 3.057928666697907e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "e93cc8e3b31e7882dac4d75f37888e68c30dbd0ed98ae2723162ace81f02d710"
+    }
+  },
+  {
+    "label": "grid-1-0-fem",
+    "head": 1,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 2.8747179195523625e-14,
+      "normal_equation_residual_relative": 3.6211220580851005e-15
+    }
+  },
+  {
+    "label": "grid-1-0-openmeeg",
+    "head": 1,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.1680687686471934e-14,
+      "normal_equation_residual_relative": 3.312230420973286e-15
+    }
+  },
+  {
+    "label": "grid-1-30-fem",
+    "head": 1,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5084,
+      "min_volume_m3": 1.340812631312737e-07,
+      "min_mean_ratio": 0.21336953997710237,
+      "max_mean_ratio": 0.9998805365751771,
+      "tissue_counts": [
+        2204,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b6a44c88e4a3858fa4af912e4735d67f09ad80e42dbd94bb4b95779ed348a90e",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021869896160266566,
+        0.00014906329223749295,
+        0.0004031056303896584,
+        0.0002608272172126619
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16104379098396748,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11698853282157878,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 326.03125,
+      "solve_seconds": 2.39563454198651,
+      "peak_solver_MiB": 261.09375,
+      "residual": 4.1916434565719403e-14,
+      "current_imbalance": 2.7327505151267765e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.890761962947546e-14,
+      "normal_equation_residual_relative": 6.044574364504722e-15
+    }
+  },
+  {
+    "label": "grid-1-30-openmeeg",
+    "head": 1,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.730255850378284e-14,
+      "normal_equation_residual_relative": 6.529997630794063e-15
+    }
+  },
+  {
+    "label": "grid-1-20-fem",
+    "head": 1,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5084,
+      "min_volume_m3": 1.340812631312737e-07,
+      "min_mean_ratio": 0.21336953997710237,
+      "max_mean_ratio": 0.9998805365751771,
+      "tissue_counts": [
+        2204,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b6a44c88e4a3858fa4af912e4735d67f09ad80e42dbd94bb4b95779ed348a90e",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021869896160266566,
+        0.00014906329223749295,
+        0.0004031056303896584,
+        0.0002608272172126619
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16104379098396748,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11698853282157878,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 326.03125,
+      "solve_seconds": 11.040478041977622,
+      "peak_solver_MiB": 307.046875,
+      "residual": 4.5729420040196314e-14,
+      "current_imbalance": 3.3177514879426343e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.4047931888283437e-13,
+      "normal_equation_residual_relative": 1.0969068588305199e-14
+    }
+  },
+  {
+    "label": "grid-1-20-openmeeg",
+    "head": 1,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.372336352240736e-13,
+      "normal_equation_residual_relative": 1.0817657854690064e-14
+    }
+  },
+  {
+    "label": "grid-1-15-fem",
+    "head": 1,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5084,
+      "min_volume_m3": 1.340812631312737e-07,
+      "min_mean_ratio": 0.21336953997710237,
+      "max_mean_ratio": 0.9998805365751771,
+      "tissue_counts": [
+        2204,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b6a44c88e4a3858fa4af912e4735d67f09ad80e42dbd94bb4b95779ed348a90e",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021869896160266566,
+        0.00014906329223749295,
+        0.0004031056303896584,
+        0.0002608272172126619
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.16104379098396748,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11698853282157878,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 326.03125,
+      "solve_seconds": 28.049389625084586,
+      "peak_solver_MiB": 309.59375,
+      "residual": 5.217455213312949e-14,
+      "current_imbalance": 1.818621786592967e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 9.273479509169813e-13,
+      "normal_equation_residual_relative": 1.1995032142889977e-14
+    }
+  },
+  {
+    "label": "grid-1-15-openmeeg",
+    "head": 1,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.685119701860309e-13,
+      "normal_equation_residual_relative": 1.4220113586389496e-14
+    }
+  },
+  {
+    "label": "F-2-1-0",
+    "head": 2,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 203,
+      "elements": 1020,
+      "min_volume_m3": 4.81751055756732e-07,
+      "min_mean_ratio": 0.1311087271320462,
+      "max_mean_ratio": 0.9971465194043315,
+      "tissue_counts": [
+        300,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "5b18871f49edd60af42896a172f30c8da9e6c816e3bb7fe15500ea564706b461",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0019645282108257177,
+        0.00013390051816119088,
+        0.0003621026485027441,
+        0.00023429470046057706
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.05817566701443866,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.056043841413540525,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 289.578125,
+      "solve_seconds": 0.49131891696015373,
+      "peak_solver_MiB": 113.40625,
+      "residual": 4.9639499592968673e-14,
+      "current_imbalance": 0.00016655822724372514
+    }
+  },
+  {
+    "label": "F-2-2-0",
+    "head": 2,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 925,
+      "elements": 5014,
+      "min_volume_m3": 1.3031926390081625e-07,
+      "min_mean_ratio": 0.20849912568967063,
+      "max_mean_ratio": 0.9963562159359398,
+      "tissue_counts": [
+        2134,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "c8114d793aa0814991a1b93fe536521602d79be25ada31e22d126ce9ccba6daa",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002173126166022811,
+        0.0001481183716561609,
+        0.0004005577007763474,
+        0.000259166439216575
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15555420803138986,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11216041901316391,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 315.03125,
+      "solve_seconds": 2.197528999997303,
+      "peak_solver_MiB": 230.765625,
+      "residual": 5.552252295779839e-14,
+      "current_imbalance": 1.4333103523198474e-07
+    }
+  },
+  {
+    "label": "F-2-3-0",
+    "head": 2,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4218,
+      "elements": 23746,
+      "min_volume_m3": 3.3243615418324416e-08,
+      "min_mean_ratio": 0.32869765058681766,
+      "max_mean_ratio": 0.9989332918161654,
+      "tissue_counts": [
+        12226,
+        3840,
+        3840,
+        3840
+      ],
+      "mesh_hash": "eb7e6e9e7d0d81ddb21a97cafcd9c1038b48154ecf669fa22ff128bc2c4fcb02",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022299070521241324,
+        0.00015198850700403813,
+        0.0004110249347763668,
+        0.00026593691641663207
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5809170419815928,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.2209443159308318,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 370.28125,
+      "solve_seconds": 9.207324540999252,
+      "peak_solver_MiB": 465.390625,
+      "residual": 7.708462987189665e-14,
+      "current_imbalance": 1.8631352851747586e-11
+    }
+  },
+  {
+    "label": "F-2-2-1",
+    "head": 2,
+    "level": 2,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 1050,
+      "elements": 5660,
+      "min_volume_m3": 5.908456244833717e-09,
+      "min_mean_ratio": 0.036898821119621776,
+      "max_mean_ratio": 0.9973483503221791,
+      "tissue_counts": [
+        2204,
+        1152,
+        1152,
+        1152
+      ],
+      "mesh_hash": "70edc1fc94e1f11bc24e6ae5ffee0780da5e3719faa364b0587dda7cb0c670b3",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021768392281866916,
+        0.00014837145071349824,
+        0.00040124187127732415,
+        0.0002596094912308422
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.21711229102220386,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.06382945745808552,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 303.1875,
+      "solve_seconds": 2.6415148330270313,
+      "peak_solver_MiB": 285.046875,
+      "residual": 7.571243892663805e-14,
+      "current_imbalance": 3.413965198567989e-07
+    }
+  },
+  {
+    "label": "F-2-3-1",
+    "head": 2,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4353,
+      "elements": 24384,
+      "min_volume_m3": 3.0013210694719367e-09,
+      "min_mean_ratio": 0.09049210455067741,
+      "max_mean_ratio": 0.9988576808587125,
+      "tissue_counts": [
+        12288,
+        4032,
+        4032,
+        4032
+      ],
+      "mesh_hash": "ccb4abda4e477a1a26487cbc07c496db7215ad26cf7ad1fd44147d645fdf9886",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022301758352766057,
+        0.00015200682702774186,
+        0.00041107430051117485,
+        0.0002659691486750204
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.6023518329602666,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.11014334425402303,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 368.921875,
+      "solve_seconds": 13.277081083972007,
+      "peak_solver_MiB": 486.3125,
+      "residual": 1.6550546886502885e-13,
+      "current_imbalance": 6.854621385028196e-11
+    },
+    "BEM_alternative_diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6728,
+      "estimated_dense_bytes": 1448511488,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.859601836307901e-14,
+      "algebraic_reciprocity_relative": 9.045699077719193e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.5203371703202793e-07,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "850bb94a7f2f1fe30b2bbf9af42c69af4a3a80dad16e936e2cf2155e257876c7",
+        "10669502f40417c05f9ff3efa5b5e5d3295988087761e5cc3d935ff724396bf2",
+        "ff3e9123bc69e1d0eb95f7f14144948c3a5bd5c79be83c0a191ab56066598005",
+        "3c7e1022e0cd8c5ac1e20dfd586724ea3e73d64ec35234bae09b94cdbc04fc71"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "5d699521eeaf77347266a45d841d664fffa0323fa54158b3d42d46488210c0f9",
+        "sources": "fbeb01b8dc232523ca593a195574c3f0f030abdcbdeddf39611b8108a05152ff",
+        "sensors": "a6a2015d11915d169396d0f361d68db44848f0bdb89321054121f52cc6e25647",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 22.282698875002097,
+      "process_peak_rss_mib": 969.484375,
+      "rank": 31,
+      "retained_condition": 275.70033672393345,
+      "singular_values": [
+        1249.771517975407,
+        1189.5909050836108,
+        1057.3444533192028,
+        498.850871673931,
+        452.3359327412814,
+        422.2083708631957,
+        327.39461114670104,
+        311.5770227186132,
+        208.37300610199745,
+        172.49079380299102,
+        167.10764576780755,
+        153.60292114338836,
+        141.794317457,
+        113.13915836358449,
+        99.71958230315212,
+        86.36716944411,
+        78.38412421119362,
+        65.4653548870612,
+        61.05732070881601,
+        59.05312767016726,
+        53.51689061778602,
+        38.81404700102931,
+        31.823569991333162,
+        30.115426981745816,
+        25.379233420922596,
+        21.808078552716633,
+        16.861245031347003,
+        13.621183290097285,
+        11.170078808157266,
+        5.835398255297972,
+        4.533079403623793,
+        1.3253023958904224e-13
+      ],
+      "reference_null_relative": 3.319239387817012e-16,
+      "reference_reprojection_relative": 3.138851223747363e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "24fcaaf6f2e9176ac1672de5abc6d454d99ccac0c4f6606b39647c00d8d199c1"
+    }
+  },
+  {
+    "label": "grid-2-0-fem",
+    "head": 2,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.12773692676878e-14,
+      "normal_equation_residual_relative": 3.589786315260738e-15
+    }
+  },
+  {
+    "label": "grid-2-0-openmeeg",
+    "head": 2,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.393453221325308e-14,
+      "normal_equation_residual_relative": 2.9570587903618325e-15
+    }
+  },
+  {
+    "label": "grid-2-30-fem",
+    "head": 2,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 925,
+      "elements": 5014,
+      "min_volume_m3": 1.3031926390081625e-07,
+      "min_mean_ratio": 0.20849912568967063,
+      "max_mean_ratio": 0.9963562159359398,
+      "tissue_counts": [
+        2134,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "c8114d793aa0814991a1b93fe536521602d79be25ada31e22d126ce9ccba6daa",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002173126166022811,
+        0.0001481183716561609,
+        0.0004005577007763474,
+        0.000259166439216575
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15555420803138986,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11216041901316391,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 315.03125,
+      "solve_seconds": 3.798005208023824,
+      "peak_solver_MiB": 234.28125,
+      "residual": 5.680529704547886e-14,
+      "current_imbalance": 1.053035224655508e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.292969109054467e-14,
+      "normal_equation_residual_relative": 7.576916029253338e-15
+    }
+  },
+  {
+    "label": "grid-2-30-openmeeg",
+    "head": 2,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.651561326126395e-14,
+      "normal_equation_residual_relative": 5.864004827691884e-15
+    }
+  },
+  {
+    "label": "grid-2-20-fem",
+    "head": 2,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 925,
+      "elements": 5014,
+      "min_volume_m3": 1.3031926390081625e-07,
+      "min_mean_ratio": 0.20849912568967063,
+      "max_mean_ratio": 0.9963562159359398,
+      "tissue_counts": [
+        2134,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "c8114d793aa0814991a1b93fe536521602d79be25ada31e22d126ce9ccba6daa",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002173126166022811,
+        0.0001481183716561609,
+        0.0004005577007763474,
+        0.000259166439216575
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15555420803138986,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11216041901316391,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 315.03125,
+      "solve_seconds": 14.958315123978537,
+      "peak_solver_MiB": 245.046875,
+      "residual": 5.825713918793786e-14,
+      "current_imbalance": 4.2250628163218044e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.319907446030563e-13,
+      "normal_equation_residual_relative": 9.334526827254569e-15
+    }
+  },
+  {
+    "label": "grid-2-20-openmeeg",
+    "head": 2,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 2.1532919006139787e-13,
+      "normal_equation_residual_relative": 1.0511117034864083e-14
+    }
+  },
+  {
+    "label": "grid-2-15-fem",
+    "head": 2,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 925,
+      "elements": 5014,
+      "min_volume_m3": 1.3031926390081625e-07,
+      "min_mean_ratio": 0.20849912568967063,
+      "max_mean_ratio": 0.9963562159359398,
+      "tissue_counts": [
+        2134,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "c8114d793aa0814991a1b93fe536521602d79be25ada31e22d126ce9ccba6daa",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002173126166022811,
+        0.0001481183716561609,
+        0.0004005577007763474,
+        0.000259166439216575
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15555420803138986,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11216041901316391,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 315.03125,
+      "solve_seconds": 27.919592374004424,
+      "peak_solver_MiB": 263.734375,
+      "residual": 5.930091721575447e-14,
+      "current_imbalance": 3.374896492172319e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.421027535159964e-13,
+      "normal_equation_residual_relative": 1.1436522110190683e-14
+    }
+  },
+  {
+    "label": "grid-2-15-openmeeg",
+    "head": 2,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 8.455419610066831e-13,
+      "normal_equation_residual_relative": 1.1668364583233306e-14
+    }
+  },
+  {
+    "label": "F-3-1-0",
+    "head": 3,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 203,
+      "elements": 1021,
+      "min_volume_m3": 4.793400682273989e-07,
+      "min_mean_ratio": 0.12961851404003785,
+      "max_mean_ratio": 0.9987027426356602,
+      "tissue_counts": [
+        301,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "b96a4add7bc1f4048b04b908fb0dcc778917b1b51a0a1b4a6fe39e12cb7ff343",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.001963699729079215,
+        0.00013384404957268584,
+        0.00036195582533264816,
+        0.00023419001066457952
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.05902091600000858,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.05527534351896787,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 311.6875,
+      "solve_seconds": 0.43437787500442937,
+      "peak_solver_MiB": 117.734375,
+      "residual": 6.870323561741637e-14,
+      "current_imbalance": 6.0055906583439105e-05
+    }
+  },
+  {
+    "label": "F-3-2-0",
+    "head": 3,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 934,
+      "elements": 5068,
+      "min_volume_m3": 1.3013525225231177e-07,
+      "min_mean_ratio": 0.20709123650599798,
+      "max_mean_ratio": 0.9973703791093513,
+      "tissue_counts": [
+        2188,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b8deb6d5aeda1045a7471c5127b8de62be5c14386659899133bcd51bdc0771ac",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021722097142500767,
+        0.00014805590710789806,
+        0.0004003974277354944,
+        0.000259048493087706
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1598792080185376,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11092716783337832,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 311.546875,
+      "solve_seconds": 1.958236415986903,
+      "peak_solver_MiB": 245.90625,
+      "residual": 3.9712548783237505e-14,
+      "current_imbalance": 1.681713949816121e-08
+    }
+  },
+  {
+    "label": "F-3-3-0",
+    "head": 3,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4215,
+      "elements": 23674,
+      "min_volume_m3": 3.319959728650308e-08,
+      "min_mean_ratio": 0.32643582322682785,
+      "max_mean_ratio": 0.9998472864827649,
+      "tissue_counts": [
+        12154,
+        3840,
+        3840,
+        3840
+      ],
+      "mesh_hash": "c5c4cdeb502af949558cd6e48f0e012669749a25091df026482c6c1001e2883d",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022289666546898264,
+        0.00015192441034050474,
+        0.00041086077618101755,
+        0.00026581558634671215
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5765329579589888,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.219297391234096,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 371.0625,
+      "solve_seconds": 8.003233833005652,
+      "peak_solver_MiB": 450.53125,
+      "residual": 1.353624426183359e-13,
+      "current_imbalance": 1.6438764313516657e-12
+    }
+  },
+  {
+    "label": "F-3-2-1",
+    "head": 3,
+    "level": 2,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 1061,
+      "elements": 5758,
+      "min_volume_m3": 5.731723684567739e-09,
+      "min_mean_ratio": 0.03589982194128148,
+      "max_mean_ratio": 0.9966697266749308,
+      "tissue_counts": [
+        2302,
+        1152,
+        1152,
+        1152
+      ],
+      "mesh_hash": "6c99f39c7531de82cd3427ab7cfd4d09be1acaefc768c8983ae419f801d4be66",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021760243364019505,
+        0.00014831590840485583,
+        0.00040110295902559144,
+        0.0002595010161977124
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.2021344169625081,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.06366244837646891,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 325.75,
+      "solve_seconds": 2.036542374989949,
+      "peak_solver_MiB": 274.140625,
+      "residual": 4.082570340566626e-14,
+      "current_imbalance": 1.8599287347049524e-08
+    }
+  },
+  {
+    "label": "F-3-3-1",
+    "head": 3,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4364,
+      "elements": 24513,
+      "min_volume_m3": 2.898993280457524e-09,
+      "min_mean_ratio": 0.08773550791580444,
+      "max_mean_ratio": 0.9996590863217837,
+      "tissue_counts": [
+        12417,
+        4032,
+        4032,
+        4032
+      ],
+      "mesh_hash": "3eb21c7e5c56217426530b0a7eebb7193c57e27108815fc781beaba83e3eecd0",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022292426225825135,
+        0.00015194322006979386,
+        0.0004109116217815308,
+        0.00026584851990431486
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.6284964579972439,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.09936237917873038,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 372.765625,
+      "solve_seconds": 8.648679708014242,
+      "peak_solver_MiB": 402.515625,
+      "residual": 7.176594765164742e-14,
+      "current_imbalance": 1.9896966259032933e-12
+    },
+    "BEM_alternative_diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6728,
+      "estimated_dense_bytes": 1448511488,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.0150306211660587e-14,
+      "algebraic_reciprocity_relative": 3.6616472620054385e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.5196028017779108e-07,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "68ed8f1a6627fe7869b9e3d4579d2102add260741b5323e9cfec86b92c30f126",
+        "d98641354dfcf31b5ce02b4137feb3f64c6b6ef098e99043849dca14016cc01e",
+        "1353cf4ed4993dc8054f13edf8f37a877961fbd9e32137454c08900709f6b6c7",
+        "1667e36329afc5e0b7ed142abf184eafbf48bc2cbfd47ba599108dadb1d422e6"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "e97eb480d824dcbe51db002ee58a9944e4daac9bf5e87ed68eb83c62a5d4aad7",
+        "sources": "de2e0a3dc2ac3b024bf06a15f1f13a5ee2c05b6cd8b647f7a6128b38012b84a3",
+        "sensors": "70fe59e5c60114997f5a77b3ba7235be25ff5a98ea6cf95608e1572250e6e0fa",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 19.277124708984047,
+      "process_peak_rss_mib": 1095.21875,
+      "rank": 31,
+      "retained_condition": 96.15087846733856,
+      "singular_values": [
+        1262.0590146687284,
+        1199.2830697419422,
+        1055.447037265529,
+        497.9074813290864,
+        491.30143398681406,
+        407.40536685167655,
+        362.94292450173475,
+        330.14595324207863,
+        217.12352048588477,
+        201.28859050048874,
+        189.21675749935775,
+        164.29534551724828,
+        137.5460000412778,
+        128.80420817300129,
+        116.28564860687206,
+        92.20186851000695,
+        89.08443529651777,
+        80.10068842839019,
+        72.90958730909638,
+        66.53654907852562,
+        54.03394685464938,
+        50.554418659647766,
+        42.328949221391845,
+        39.57878562233468,
+        35.402847577321126,
+        31.112412877339683,
+        28.37113522561702,
+        23.14607960978079,
+        20.243189113319698,
+        18.37377308285107,
+        13.125818867036525,
+        1.2706921524781035e-13
+      ],
+      "reference_null_relative": 3.4200429139204974e-16,
+      "reference_reprojection_relative": 2.888724239560846e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "967c49f3e58a4d795297bbec2ea9fd15036d5b1dfe7ae6dddc8298113266564a"
+    }
+  },
+  {
+    "label": "grid-3-0-fem",
+    "head": 3,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.648480006517941e-14,
+      "normal_equation_residual_relative": 3.3709403853782295e-15
+    }
+  },
+  {
+    "label": "grid-3-0-openmeeg",
+    "head": 3,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.296734272841628e-14,
+      "normal_equation_residual_relative": 3.294528908337794e-15
+    }
+  },
+  {
+    "label": "grid-3-30-fem",
+    "head": 3,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 934,
+      "elements": 5068,
+      "min_volume_m3": 1.3013525225231177e-07,
+      "min_mean_ratio": 0.20709123650599798,
+      "max_mean_ratio": 0.9973703791093513,
+      "tissue_counts": [
+        2188,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b8deb6d5aeda1045a7471c5127b8de62be5c14386659899133bcd51bdc0771ac",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021722097142500767,
+        0.00014805590710789806,
+        0.0004003974277354944,
+        0.000259048493087706
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1598792080185376,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11092716783337832,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 311.546875,
+      "solve_seconds": 2.749205333995633,
+      "peak_solver_MiB": 275.015625,
+      "residual": 4.29006710056252e-14,
+      "current_imbalance": 1.3134916464317675e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.764479478868183e-14,
+      "normal_equation_residual_relative": 6.590014498538654e-15
+    }
+  },
+  {
+    "label": "grid-3-30-openmeeg",
+    "head": 3,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.368174790152403e-14,
+      "normal_equation_residual_relative": 7.060038428986445e-15
+    }
+  },
+  {
+    "label": "grid-3-20-fem",
+    "head": 3,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 934,
+      "elements": 5068,
+      "min_volume_m3": 1.3013525225231177e-07,
+      "min_mean_ratio": 0.20709123650599798,
+      "max_mean_ratio": 0.9973703791093513,
+      "tissue_counts": [
+        2188,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b8deb6d5aeda1045a7471c5127b8de62be5c14386659899133bcd51bdc0771ac",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021722097142500767,
+        0.00014805590710789806,
+        0.0004003974277354944,
+        0.000259048493087706
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1598792080185376,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11092716783337832,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 311.546875,
+      "solve_seconds": 12.537267875042744,
+      "peak_solver_MiB": 255.609375,
+      "residual": 4.477037874644949e-14,
+      "current_imbalance": 3.075747807856569e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.142178715085639e-13,
+      "normal_equation_residual_relative": 1.0210418876556203e-14
+    }
+  },
+  {
+    "label": "grid-3-20-openmeeg",
+    "head": 3,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 2.658087528528433e-13,
+      "normal_equation_residual_relative": 1.0501386474329369e-14
+    }
+  },
+  {
+    "label": "grid-3-15-fem",
+    "head": 3,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 934,
+      "elements": 5068,
+      "min_volume_m3": 1.3013525225231177e-07,
+      "min_mean_ratio": 0.20709123650599798,
+      "max_mean_ratio": 0.9973703791093513,
+      "tissue_counts": [
+        2188,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "b8deb6d5aeda1045a7471c5127b8de62be5c14386659899133bcd51bdc0771ac",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021722097142500767,
+        0.00014805590710789806,
+        0.0004003974277354944,
+        0.000259048493087706
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1598792080185376,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11092716783337832,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 311.546875,
+      "solve_seconds": 27.68904483411461,
+      "peak_solver_MiB": 272.3125,
+      "residual": 4.5529190400565964e-14,
+      "current_imbalance": 2.668797065006479e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.428052947864753e-13,
+      "normal_equation_residual_relative": 1.1446642825781673e-14
+    }
+  },
+  {
+    "label": "grid-3-15-openmeeg",
+    "head": 3,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.223244766853014e-13,
+      "normal_equation_residual_relative": 1.3406412719466183e-14
+    }
+  },
+  {
+    "label": "F-4-1-0",
+    "head": 4,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 212,
+      "elements": 1068,
+      "min_volume_m3": 4.937019085073821e-07,
+      "min_mean_ratio": 0.1370053010240618,
+      "max_mean_ratio": 0.9989263184568256,
+      "tissue_counts": [
+        348,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "186258c018344eb9c52efcf8eb4844831ebfca3c9929e452b0c97ea773d60d7c",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0019452674800154452,
+        0.00013258772365844635,
+        0.0003585439893473979,
+        0.00023200612935929347
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.06808200001250952,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.05990065096927399,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 299.125,
+      "solve_seconds": 0.42995695798890665,
+      "peak_solver_MiB": 106.859375,
+      "residual": 4.226084015786564e-14,
+      "current_imbalance": 0.0002190310919413011
+    }
+  },
+  {
+    "label": "F-4-2-0",
+    "head": 4,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5075,
+      "min_volume_m3": 1.3299358756299113e-07,
+      "min_mean_ratio": 0.21732562748232293,
+      "max_mean_ratio": 0.9987160842987722,
+      "tissue_counts": [
+        2195,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "59f5f260ffdaafbb24308741e32e414f8c0b6ea919bdb581f0bd1429c8549f32",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002151820288168844,
+        0.00014666618172638326,
+        0.00039661171053231034,
+        0.00025664432734865425
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15833933401154354,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11952767099334165,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 302.046875,
+      "solve_seconds": 2.067360666987952,
+      "peak_solver_MiB": 241.6875,
+      "residual": 4.643034824670397e-14,
+      "current_imbalance": 7.996939010794416e-08
+    }
+  },
+  {
+    "label": "F-4-3-0",
+    "head": 4,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4207,
+      "elements": 23635,
+      "min_volume_m3": 3.3883689918576676e-08,
+      "min_mean_ratio": 0.3430172886404476,
+      "max_mean_ratio": 0.9993217465239387,
+      "tissue_counts": [
+        12115,
+        3840,
+        3840,
+        3840
+      ],
+      "mesh_hash": "a492acf0dfa5562effa74d798d6ad26ceed0aedeb5a8a5a9fbbcd034834f57cd",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022080444801202215,
+        0.0001504983732897304,
+        0.00040697402173411575,
+        0.0002633507244721485
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5704299170174636,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.2352756976422917,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 372.0,
+      "solve_seconds": 8.752948291017674,
+      "peak_solver_MiB": 365.78125,
+      "residual": 1.19381216772634e-13,
+      "current_imbalance": 9.646997717877214e-12
+    }
+  },
+  {
+    "label": "F-4-2-1",
+    "head": 4,
+    "level": 2,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 1053,
+      "elements": 5697,
+      "min_volume_m3": 5.939862008283841e-09,
+      "min_mean_ratio": 0.038898921612232656,
+      "max_mean_ratio": 0.9968131291152273,
+      "tissue_counts": [
+        2241,
+        1152,
+        1152,
+        1152
+      ],
+      "mesh_hash": "eacf5e18c3e40ff13e73b728235990909ba94ac97165b3bdc8815465d43d5772",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021554969465333662,
+        0.00014691677953271575,
+        0.00039728895497269097,
+        0.0002570832538492467
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.19373558298684657,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.06079956374079181,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 325.5625,
+      "solve_seconds": 2.0094222499756142,
+      "peak_solver_MiB": 290.328125,
+      "residual": 5.005389911246924e-14,
+      "current_imbalance": 7.953660090439722e-08
+    }
+  },
+  {
+    "label": "F-4-3-1",
+    "head": 4,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4352,
+      "elements": 24414,
+      "min_volume_m3": 2.9992355462948586e-09,
+      "min_mean_ratio": 0.09452506531077222,
+      "max_mean_ratio": 0.999804014343292,
+      "tissue_counts": [
+        12318,
+        4032,
+        4032,
+        4032
+      ],
+      "mesh_hash": "8c86b31d9a96966d6d7f799ad2eff4e65d12b5963c93e56827644b836d851525",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002208310628054774,
+        0.00015051651369929418,
+        0.0004070229612229439,
+        0.0002633825829691801
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.6651268329587765,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.11443154305293966,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 350.125,
+      "solve_seconds": 9.387069249991328,
+      "peak_solver_MiB": 463.921875,
+      "residual": 6.392577415872606e-14,
+      "current_imbalance": 2.315075185866751e-11
+    },
+    "BEM_alternative_diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6728,
+      "estimated_dense_bytes": 1448511488,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 2.7346738035289713e-14,
+      "algebraic_reciprocity_relative": 2.112245516845061e-17,
+      "reciprocal_condition_estimate_mixed_units": 1.4344249851697174e-07,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "57589894605699bef2b63742d09456b42f695aa1f48aa813e2634e9ede9c711f",
+        "80e4ac66a73bf8291132648d5c8bc0d4df739d3d3840fce29a8a170c09344d30",
+        "1952b1191f93461a03709784a381cc9c8b69123f3b4defe92a1edf21a781b685",
+        "9bdcc4e93d1224fcafba74c2d15b5606e17b38e93539cfe083c84c3701afa705"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "a9ce5d5dca012e28270cf2ecca7d5fd803c16e455d5dbcb8f15d686fbbcd6185",
+        "sources": "703a196c6b687f12b86cb1fc9d2c952871dc06d3312cda45084eddc4d8420791",
+        "sensors": "543d6296fcb0b7937dffc8348a2806451578208e580e15ea80065509ec965851",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 19.889041333983187,
+      "process_peak_rss_mib": 1101.359375,
+      "rank": 31,
+      "retained_condition": 125.83147765126171,
+      "singular_values": [
+        1262.4109598343189,
+        1174.2629464714973,
+        1019.0784462133142,
+        458.17538797592107,
+        438.2185920196415,
+        414.88298672691474,
+        372.1785085545233,
+        341.4139916718894,
+        206.02354399485,
+        197.68031225363256,
+        172.59170932276973,
+        164.27699010429177,
+        144.58434126073882,
+        131.92043412953635,
+        119.95707608491394,
+        89.10794574029043,
+        78.90465291445763,
+        72.14928186993482,
+        59.41194500386625,
+        56.76551554843433,
+        52.31736876555447,
+        45.05669872797915,
+        38.39145098786966,
+        37.15658511690763,
+        28.27247336917619,
+        27.304291578475986,
+        22.636970552947684,
+        20.083613698948003,
+        17.29246613175658,
+        14.867955721562621,
+        10.032552930301385,
+        1.1021349906496702e-13
+      ],
+      "reference_null_relative": 3.413637247972447e-16,
+      "reference_reprojection_relative": 3.163264248168072e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "1a3943ba6c4ff7c911c93915bf70595d0321bd4459830a66d1d496813dcb5210"
+    }
+  },
+  {
+    "label": "grid-4-0-fem",
+    "head": 4,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.128799844536741e-14,
+      "normal_equation_residual_relative": 3.675139016070268e-15
+    }
+  },
+  {
+    "label": "grid-4-0-openmeeg",
+    "head": 4,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.538438735066267e-14,
+      "normal_equation_residual_relative": 4.47308114129597e-15
+    }
+  },
+  {
+    "label": "grid-4-30-fem",
+    "head": 4,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5075,
+      "min_volume_m3": 1.3299358756299113e-07,
+      "min_mean_ratio": 0.21732562748232293,
+      "max_mean_ratio": 0.9987160842987722,
+      "tissue_counts": [
+        2195,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "59f5f260ffdaafbb24308741e32e414f8c0b6ea919bdb581f0bd1429c8549f32",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002151820288168844,
+        0.00014666618172638326,
+        0.00039661171053231034,
+        0.00025664432734865425
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15833933401154354,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11952767099334165,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 302.046875,
+      "solve_seconds": 4.124792959017213,
+      "peak_solver_MiB": 283.3125,
+      "residual": 4.0610652788276094e-14,
+      "current_imbalance": 2.5990402594883953e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 5.781319636708428e-14,
+      "normal_equation_residual_relative": 6.378465417430643e-15
+    }
+  },
+  {
+    "label": "grid-4-30-openmeeg",
+    "head": 4,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.280247586061251e-14,
+      "normal_equation_residual_relative": 6.994618404583679e-15
+    }
+  },
+  {
+    "label": "grid-4-20-fem",
+    "head": 4,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5075,
+      "min_volume_m3": 1.3299358756299113e-07,
+      "min_mean_ratio": 0.21732562748232293,
+      "max_mean_ratio": 0.9987160842987722,
+      "tissue_counts": [
+        2195,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "59f5f260ffdaafbb24308741e32e414f8c0b6ea919bdb581f0bd1429c8549f32",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002151820288168844,
+        0.00014666618172638326,
+        0.00039661171053231034,
+        0.00025664432734865425
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15833933401154354,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11952767099334165,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 302.046875,
+      "solve_seconds": 13.692955084028654,
+      "peak_solver_MiB": 274.3125,
+      "residual": 4.7276626421154394e-14,
+      "current_imbalance": 1.8761021479936144e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.8091684370654874e-13,
+      "normal_equation_residual_relative": 8.896916118164324e-15
+    }
+  },
+  {
+    "label": "grid-4-20-openmeeg",
+    "head": 4,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.327393813428153e-13,
+      "normal_equation_residual_relative": 1.0060363606045192e-14
+    }
+  },
+  {
+    "label": "grid-4-15-fem",
+    "head": 4,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 935,
+      "elements": 5075,
+      "min_volume_m3": 1.3299358756299113e-07,
+      "min_mean_ratio": 0.21732562748232293,
+      "max_mean_ratio": 0.9987160842987722,
+      "tissue_counts": [
+        2195,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "59f5f260ffdaafbb24308741e32e414f8c0b6ea919bdb581f0bd1429c8549f32",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002151820288168844,
+        0.00014666618172638326,
+        0.00039661171053231034,
+        0.00025664432734865425
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.15833933401154354,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11952767099334165,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 302.046875,
+      "solve_seconds": 28.417235999077093,
+      "peak_solver_MiB": 264.34375,
+      "residual": 4.417528074552493e-14,
+      "current_imbalance": 1.3854569338450023e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 9.27707890557175e-13,
+      "normal_equation_residual_relative": 1.2444702851374332e-14
+    }
+  },
+  {
+    "label": "grid-4-15-openmeeg",
+    "head": 4,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.188375602105935e-13,
+      "normal_equation_residual_relative": 1.337926441149316e-14
+    }
+  },
+  {
+    "label": "F-5-1-0",
+    "head": 5,
+    "level": 1,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 209,
+      "elements": 1049,
+      "min_volume_m3": 4.910429587191942e-07,
+      "min_mean_ratio": 0.13593173939673073,
+      "max_mean_ratio": 0.9876527824595661,
+      "tissue_counts": [
+        329,
+        240,
+        240,
+        240
+      ],
+      "mesh_hash": "f585660cbdcaaa10ce67134d5a9c128583ac8ccf52547de7a9ac6a1d3ee574fe",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0019403734876489664,
+        0.00013225415343525617,
+        0.0003576534954957702,
+        0.0002314108903733217
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.06063483300385997,
+      "max_size_m": 0.025,
+      "native_minSICN": 0.0590922466151734,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 306.421875,
+      "solve_seconds": 0.5111642920528539,
+      "peak_solver_MiB": 124.875,
+      "residual": 7.878339431637779e-14,
+      "current_imbalance": 6.926129141016585e-05
+    }
+  },
+  {
+    "label": "F-5-2-0",
+    "head": 5,
+    "level": 2,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 921,
+      "elements": 4990,
+      "min_volume_m3": 1.3276966885074468e-07,
+      "min_mean_ratio": 0.21562426152118777,
+      "max_mean_ratio": 0.9994514455663591,
+      "tissue_counts": [
+        2110,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "26652923b8f732bf8a5003e424b85db159a6d0c8639774f5a95cc406b9434f18",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021464066408568307,
+        0.00014629719227831836,
+        0.00039562906530447146,
+        0.0002559834813365533
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1599807920283638,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11794276813286142,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 317.015625,
+      "solve_seconds": 1.912097041029483,
+      "peak_solver_MiB": 267.890625,
+      "residual": 5.122885843700058e-14,
+      "current_imbalance": 3.918168061740642e-08
+    }
+  },
+  {
+    "label": "F-5-3-0",
+    "head": 5,
+    "level": 3,
+    "alternative": false,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4187,
+      "elements": 23498,
+      "min_volume_m3": 3.3834488848148126e-08,
+      "min_mean_ratio": 0.3396483460106927,
+      "max_mean_ratio": 0.9994277634946963,
+      "tissue_counts": [
+        11978,
+        3840,
+        3840,
+        3840
+      ],
+      "mesh_hash": "2b76a92f4e25d3e94991909ab44871bf3e61040a7f2529eda8bc56cb2fed5d68",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0022024893814299026,
+        0.00015011974263990242,
+        0.00040596654046515983,
+        0.00026267177226874246
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.5778854580130428,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.23157227415678622,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 368.875,
+      "solve_seconds": 8.40045137499692,
+      "peak_solver_MiB": 431.265625,
+      "residual": 5.799399579176448e-14,
+      "current_imbalance": 1.0839784084960486e-11
+    }
+  },
+  {
+    "label": "F-5-2-1",
+    "head": 5,
+    "level": 2,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 1050,
+      "elements": 5680,
+      "min_volume_m3": 5.952916318728939e-09,
+      "min_mean_ratio": 0.03956936751515451,
+      "max_mean_ratio": 0.9949273582880568,
+      "tissue_counts": [
+        2224,
+        1152,
+        1152,
+        1152
+      ],
+      "mesh_hash": "b6b049d5d48047df849a121c71eb1aedcd874963a8d29678aa27838ee341d102",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021501759501760132,
+        0.00014655410509238078,
+        0.0003963249264879282,
+        0.00025643191834794825
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.23743470897898078,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.06564540982572226,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 312.046875,
+      "solve_seconds": 2.984306040976662,
+      "peak_solver_MiB": 264.953125,
+      "residual": 4.061439736853067e-14,
+      "current_imbalance": 2.8508689863424872e-08
+    }
+  },
+  {
+    "label": "F-5-3-1",
+    "head": 5,
+    "level": 3,
+    "alternative": true,
+    "status": "computed",
+    "kind": "forward",
+    "diagnostics": {
+      "nodes": 4342,
+      "elements": 24343,
+      "min_volume_m3": 3.0067713843537414e-09,
+      "min_mean_ratio": 0.09656115821826804,
+      "max_mean_ratio": 0.9984910133692818,
+      "tissue_counts": [
+        12247,
+        4032,
+        4032,
+        4032
+      ],
+      "mesh_hash": "7af3d2a4d461ce69aece41d3e3349c33fdf6860ad20957401ccfd3d774b47a06",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.002202762071176957,
+        0.00015013832893366315,
+        0.00040601655006045225,
+        0.0002627045466423116
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.649669916019775,
+      "max_size_m": 0.009,
+      "native_minSICN": 0.11115272151441646,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 357.015625,
+      "solve_seconds": 8.92874620796647,
+      "peak_solver_MiB": 472.71875,
+      "residual": 1.994800686024185e-13,
+      "current_imbalance": 5.3888327299300895e-12
+    },
+    "BEM_alternative_diagnostics": {
+      "solver": "OpenMEEG symmetric BEM / SciPy pivoted LU",
+      "solver_version": "2.6.0",
+      "layers": 4,
+      "unknowns": 6728,
+      "estimated_dense_bytes": 1448511488,
+      "assembly_symmetry_relative": 0.0,
+      "algebraic_residual_relative": 3.1087263216374926e-14,
+      "algebraic_reciprocity_relative": 1.0732258066055187e-16,
+      "reciprocal_condition_estimate_mixed_units": 1.4214757602511303e-07,
+      "residual_scope": "mixed potential/current discrete BEM system; not FEM PDE residual",
+      "integrator": {
+        "order": 3,
+        "adaptive_levels": 0,
+        "tolerance": 0.001
+      },
+      "effective_geometry_unchanged": true,
+      "effective_triangle_hashes": [
+        "c0ff49479f99c8ca604202cf557ef04d7bcae0eba6fb7fdd46e90b368232e0ef",
+        "286fd4b4a781ecb418a1acc1ad951d273b620969cca2989868d75dffbfc485c7",
+        "55c8228dbce8f347b36a9b3114f2691f2aa6e09b8d1feacf585294c1e4215d56",
+        "322d862f0a48d26327e066e5d10ad9e7996c44e7fc5142e05bb75804a25e0a81"
+      ],
+      "passed_face_orientation": "explicit inward permutation [1,0,2]",
+      "contracts": {
+        "geometry": "d52cf4dc16dfba7978d0eaa777455d0ad0f0e5e60685cd0704046f05ef2583a8",
+        "sources": "49a2b17c0af0307b1e709e18dea183645e2952bc975c4c14014351c4123e7cf8",
+        "sensors": "c6fe12e8cdfa3fd258c83d643423f790eedb25c9f408b29546d9acb7dc563a16",
+        "conductivity": "5b62b856a444165f22d1c6909fffb8478b0d5c94d9a6736f275b6f3e309ee0e9",
+        "reference": "451dfed8f3e739546bae572c029ba4fdb8173b108ba50e05899e7656dd0d0224",
+        "frame": "216349368f3b64972b2a137a25172fed6ebde4c09656030c646e0cec1d8c7ce5"
+      },
+      "runtime_seconds": 43.83470816700719,
+      "process_peak_rss_mib": 954.5625,
+      "rank": 31,
+      "retained_condition": 124.07677078745016,
+      "singular_values": [
+        1280.4599519836029,
+        1179.2535779146824,
+        1029.0940637559668,
+        465.5291438126864,
+        457.7081544959809,
+        386.3300973503401,
+        345.4298655384128,
+        303.51395223802996,
+        203.96684582661038,
+        176.44696861273312,
+        163.25858414971444,
+        143.70044473626143,
+        121.17483900507719,
+        110.63067197770181,
+        104.84253737427161,
+        85.84736177535149,
+        72.9840242362474,
+        62.69756285749818,
+        56.65716020736094,
+        55.864174992898356,
+        44.61503249059129,
+        38.37366496698705,
+        34.840338651514784,
+        33.462230531697344,
+        27.31813847753238,
+        24.17497534215514,
+        21.296923489336482,
+        19.507576847482202,
+        15.438684994292236,
+        12.409129792614056,
+        10.319900686141294,
+        1.127904407384527e-13
+      ],
+      "reference_null_relative": 3.625502524273137e-16,
+      "reference_reprojection_relative": 3.0055859209113774e-16,
+      "units": "V/(A m)",
+      "solver_frame": "MRI RAS metres; declared coincident head for calculation",
+      "worker_sha256": "55c2460c065f16f7574fbc238abfbeebd2c81a1a25ccbc7837b39b1da99ed8e3",
+      "packet_sha256": "7fef9df6d52114f3e1c4c79b52d88078b6217258ae004a8f5e2d612b0b869f67"
+    }
+  },
+  {
+    "label": "grid-5-0-fem",
+    "head": 5,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.298781645786937e-14,
+      "normal_equation_residual_relative": 3.635385641672084e-15
+    }
+  },
+  {
+    "label": "grid-5-0-openmeeg",
+    "head": 5,
+    "spacing_mm": 0,
+    "candidates": 12,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.468432487766829e-14,
+      "normal_equation_residual_relative": 3.4522980163656437e-15
+    }
+  },
+  {
+    "label": "grid-5-30-fem",
+    "head": 5,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 921,
+      "elements": 4990,
+      "min_volume_m3": 1.3276966885074468e-07,
+      "min_mean_ratio": 0.21562426152118777,
+      "max_mean_ratio": 0.9994514455663591,
+      "tissue_counts": [
+        2110,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "26652923b8f732bf8a5003e424b85db159a6d0c8639774f5a95cc406b9434f18",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021464066408568307,
+        0.00014629719227831836,
+        0.00039562906530447146,
+        0.0002559834813365533
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1599807920283638,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11794276813286142,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 317.015625,
+      "solve_seconds": 12.068606541957706,
+      "peak_solver_MiB": 283.890625,
+      "residual": 4.9554739755396826e-14,
+      "current_imbalance": 2.3030146429801255e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.245185100186472e-14,
+      "normal_equation_residual_relative": 5.9035802823975206e-15
+    }
+  },
+  {
+    "label": "grid-5-30-openmeeg",
+    "head": 5,
+    "spacing_mm": 30,
+    "candidates": 33,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 6.387845793722754e-14,
+      "normal_equation_residual_relative": 6.535463452097134e-15
+    }
+  },
+  {
+    "label": "grid-5-20-fem",
+    "head": 5,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 921,
+      "elements": 4990,
+      "min_volume_m3": 1.3276966885074468e-07,
+      "min_mean_ratio": 0.21562426152118777,
+      "max_mean_ratio": 0.9994514455663591,
+      "tissue_counts": [
+        2110,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "26652923b8f732bf8a5003e424b85db159a6d0c8639774f5a95cc406b9434f18",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021464066408568307,
+        0.00014629719227831836,
+        0.00039562906530447146,
+        0.0002559834813365533
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1599807920283638,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11794276813286142,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 317.015625,
+      "solve_seconds": 13.194998332997784,
+      "peak_solver_MiB": 279.546875,
+      "residual": 4.9554739755396826e-14,
+      "current_imbalance": 1.4025440379548703e-07
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 4.059517151344913e-13,
+      "normal_equation_residual_relative": 8.401784050043782e-15
+    }
+  },
+  {
+    "label": "grid-5-20-openmeeg",
+    "head": 5,
+    "spacing_mm": 20,
+    "candidates": 147,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 3.617949776461804e-13,
+      "normal_equation_residual_relative": 1.1648026654309517e-14
+    }
+  },
+  {
+    "label": "grid-5-15-fem",
+    "head": 5,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "fem",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {
+      "nodes": 921,
+      "elements": 4990,
+      "min_volume_m3": 1.3276966885074468e-07,
+      "min_mean_ratio": 0.21562426152118777,
+      "max_mean_ratio": 0.9994514455663591,
+      "tissue_counts": [
+        2110,
+        960,
+        960,
+        960
+      ],
+      "mesh_hash": "26652923b8f732bf8a5003e424b85db159a6d0c8639774f5a95cc406b9434f18",
+      "interface_connectivity_verified": true,
+      "boundary_coordinate_max_m": 0.0,
+      "tissue_volumes_m3": [
+        0.0021464066408568307,
+        0.00014629719227831836,
+        0.00039562906530447146,
+        0.0002559834813365533
+      ],
+      "mesher": "Gmsh",
+      "mesher_version": "4.15.2",
+      "mesh_seconds": 0.1599807920283638,
+      "max_size_m": 0.015,
+      "native_minSICN": 0.11794276813286142,
+      "boundary_policy": "MeshOnlyEmpty; imported discrete facets retained; no Soma extrusion",
+      "peak_mesher_MiB": 317.015625,
+      "solve_seconds": 27.29283079196466,
+      "peak_solver_MiB": 306.25,
+      "residual": 5.0983624397642194e-14,
+      "current_imbalance": 8.909688163295975e-08
+    },
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.761846478664567e-13,
+      "normal_equation_residual_relative": 1.1847311386261654e-14
+    }
+  },
+  {
+    "label": "grid-5-15-openmeeg",
+    "head": 5,
+    "spacing_mm": 15,
+    "candidates": 341,
+    "solver": "openmeeg",
+    "status": "computed",
+    "kind": "grid",
+    "diagnostics": {},
+    "operator_diagnostics": {
+      "svd_vs_independent_solve_relative": 7.861722132930283e-13,
+      "normal_equation_residual_relative": 1.3600309045455489e-14
+    }
+  }
+]

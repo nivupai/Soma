@@ -27,6 +27,7 @@ NAMES = (
     "nonspherical",
     "bem_diagnostics",
     "fem_reference",
+    "mesh_grid",
 )
 
 

@@ -1,0 +1,31 @@
+{
+  "ghsa_id": "GHSA-fc5q-39xc-vjpf",
+  "url": "https://github.com/advisories/GHSA-fc5q-39xc-vjpf",
+  "withdrawn_at": "2026-11-18T15:38:56Z",
+  "updated_at": "2026-11-18T15:38:58Z",
+  "patched_versions": [
+    null
+  ],
+  "installed_picomatch": "4.0.7",
+  "latest_registry": "4.0.7",
+  "npm_audit": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 29,
+      "dev": 325,
+      "optional": 53,
+      "peer": 8,
+      "peerOptional": 0,
+      "total": 353
+    }
+  },
+  "dependencies_changed": false,
+  "security_gate_unchanged": true
+}

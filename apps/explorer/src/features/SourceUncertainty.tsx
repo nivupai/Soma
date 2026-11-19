@@ -1,3 +1,4 @@
+import MeshGrid from "./MeshGrid";
 import FEMReference from "./FEMReference";
 import BEMDiagnostics from "./BEMDiagnostics";
 import Nonspherical from "./Nonspherical";
@@ -203,6 +204,7 @@ export default function SourceUncertainty() {
       <Nonspherical />
       <BEMDiagnostics />
       <FEMReference />
+      <MeshGrid />
     </>
   );
 }

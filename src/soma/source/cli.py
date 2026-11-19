@@ -335,3 +335,16 @@ def fem_reference_command(output: Path = Path("reports/fem-reference-v29")) -> N
         _echo_result(run(output), output)
     except Exception as exc:
         _fail(exc)
+
+
+@app.command("mesh-grid")
+def mesh_grid_command(
+    output: Path = Path("reports/mesh-grid-v30"), parent: Path = Path("experiments/milestone29")
+) -> None:
+    """Frozen synthetic independent mesher/grid experiment; requires [mesher,fem,conductor]."""
+    from soma.experiments.mesh_grid import run
+
+    try:
+        _echo_result(run(output, parent), output)
+    except Exception as exc:
+        _fail(exc)

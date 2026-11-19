@@ -1,0 +1,794 @@
+[
+  {
+    "head": 0,
+    "spacing_mm": 0,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.030917282547504112,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 0,
+    "method": "MNE",
+    "relative_resolution_difference": 0.021639472847067014,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 0,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.020934117474789113,
+    "units": "1/(A*m)",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 30,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.04201835987037974,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 30,
+    "method": "MNE",
+    "relative_resolution_difference": 0.028719784470030714,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 30,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.023471860346100736,
+    "units": "1/(A*m)",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 20,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.0572161130316121,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 20,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03654179484532668,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 20,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.022946970263507845,
+    "units": "1/(A*m)",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 15,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.0603953749163352,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 15,
+    "method": "MNE",
+    "relative_resolution_difference": 0.036030903215138715,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 0,
+    "spacing_mm": 15,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.02254207241897218,
+    "units": "1/(A*m)",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 0,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.02953904959511204,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 0,
+    "method": "MNE",
+    "relative_resolution_difference": 0.021224042440699982,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 0,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.020789037376051596,
+    "units": "1/(A*m)",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 30,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.042348924024670324,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 30,
+    "method": "MNE",
+    "relative_resolution_difference": 0.027625643797411864,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 30,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.022353738006631686,
+    "units": "1/(A*m)",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 20,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.05668849997984762,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 20,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03575797158431127,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 20,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.022448577076032178,
+    "units": "1/(A*m)",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 15,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.059747326476069874,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 15,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03538940238147525,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 1,
+    "spacing_mm": 15,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.022207690981965067,
+    "units": "1/(A*m)",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 0,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.030981455629008156,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 0,
+    "method": "MNE",
+    "relative_resolution_difference": 0.030083301596945815,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 0,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.025427293289335583,
+    "units": "1/(A*m)",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 30,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.044302893691811396,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 30,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03955932742711013,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 30,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.02913024922937653,
+    "units": "1/(A*m)",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 20,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.05851970315943709,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 20,
+    "method": "MNE",
+    "relative_resolution_difference": 0.04253184707354072,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 20,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.025496776369027748,
+    "units": "1/(A*m)",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 15,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.06037061509827959,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 15,
+    "method": "MNE",
+    "relative_resolution_difference": 0.04034075342832177,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 2,
+    "spacing_mm": 15,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.024356679000882144,
+    "units": "1/(A*m)",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 0,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.029796819599504892,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 0,
+    "method": "MNE",
+    "relative_resolution_difference": 0.027339155900222102,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 0,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.023321495082705982,
+    "units": "1/(A*m)",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 30,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.04399105425521391,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 30,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03628916360098958,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 30,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.027698549027142087,
+    "units": "1/(A*m)",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 20,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.05883539200714022,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 20,
+    "method": "MNE",
+    "relative_resolution_difference": 0.040412973713845564,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 20,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.024926663941590058,
+    "units": "1/(A*m)",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 15,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.06098783954472569,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 15,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03837605699517488,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 3,
+    "spacing_mm": 15,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.023825769133407178,
+    "units": "1/(A*m)",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 0,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.026663921824244166,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 0,
+    "method": "MNE",
+    "relative_resolution_difference": 0.021090925185011888,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 0,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.019859999202493726,
+    "units": "1/(A*m)",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 30,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.041069222480565756,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 30,
+    "method": "MNE",
+    "relative_resolution_difference": 0.028085352736533283,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 30,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.023210823897479405,
+    "units": "1/(A*m)",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 20,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.04983495912077888,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 20,
+    "method": "MNE",
+    "relative_resolution_difference": 0.0365166630735903,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 20,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.022468326066344538,
+    "units": "1/(A*m)",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 15,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.05088038917730521,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 15,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03530568271299676,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 4,
+    "spacing_mm": 15,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.02185497726998328,
+    "units": "1/(A*m)",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 0,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.027598261510517457,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 0,
+    "method": "MNE",
+    "relative_resolution_difference": 0.022036737945496963,
+    "units": "1",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 0,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.020356279949283164,
+    "units": "1/(A*m)",
+    "shape": [
+      36,
+      36
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 30,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.04023746438709899,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 30,
+    "method": "MNE",
+    "relative_resolution_difference": 0.028037633104403246,
+    "units": "1",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 30,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.023370199449894463,
+    "units": "1/(A*m)",
+    "shape": [
+      99,
+      99
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 20,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.04892322800973688,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 20,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03497447595841352,
+    "units": "1",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 20,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.02184112939295655,
+    "units": "1/(A*m)",
+    "shape": [
+      441,
+      441
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 15,
+    "method": "Tikhonov",
+    "relative_resolution_difference": 0.05031017117007945,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 15,
+    "method": "MNE",
+    "relative_resolution_difference": 0.03391747458927128,
+    "units": "1",
+    "shape": [
+      1023,
+      1023
+    ]
+  },
+  {
+    "head": 5,
+    "spacing_mm": 15,
+    "method": "dSPM",
+    "relative_resolution_difference": 0.02137053328998269,
+    "units": "1/(A*m)",
+    "shape": [
+      1023,
+      1023
+    ]
+  }
+]

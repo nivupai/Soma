@@ -1,0 +1,106 @@
+{
+  "schema": "soma.canonical-mesh.verification/1",
+  "evidence_head": "41e528d88f9e8570d9d720f6acba0e9b3cf6d35f",
+  "CI": "https://github.com/nivupai/Soma/actions/runs/44425538067",
+  "CI_success": 13,
+  "CI_failure": 1,
+  "canonical_gate": "PASS",
+  "native_gate": "FAIL_UNCHANGED",
+  "tests": {
+    "full_passed": 1663,
+    "offline_passed": 1646,
+    "offline_deselected": 17,
+    "frontend": 48,
+    "browser_configured": 23,
+    "new_canonical_tests": 11
+  },
+  "quality": {
+    "ruff": true,
+    "formatting": true,
+    "strict_mypy_files": 294,
+    "pip_check": true
+  },
+  "python_audit": {
+    "known_vulnerabilities": 0,
+    "local_soma_skip": "no PyPI audit record"
+  },
+  "npm_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "installations": {
+    "wheel": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 22,
+      "payload_files_verified": 319,
+      "dependency_check": true,
+      "dependency_audit": true
+    },
+    "sdist": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 22,
+      "payload_files_verified": 319,
+      "dependency_check": true,
+      "dependency_audit": true
+    },
+    "source": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 22,
+      "payload_files_verified": 319,
+      "dependency_check": true,
+      "dependency_audit": true
+    }
+  },
+  "fixed_timestamp_build_hashes": {
+    "soma_neuro-0.30.0.tar.gz": "5a84dda57691a5c401b750b8b50fb9c14fb96085d44e8632e17e77b0bc72b5a4",
+    "soma_neuro-0.30.0-py3-none-any.whl": "2c10c0a65e2dab0415c741d700e4c60ef4bd6947d90134af61a42505fac58c50"
+  },
+  "reproducible_builds": true,
+  "privacy_before_archive": {
+    "scanner": "Gitleaks 8.30.1",
+    "rules_suppressed": false,
+    "current_files": 1621,
+    "commits": 87,
+    "blobs": 2098,
+    "material_secrets": 0,
+    "restricted_data_files": 0,
+    "personal_home_paths": 0,
+    "scopes": {
+      "history": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "blobs": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "tree": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "metadata": {
+        "raw_findings": 0,
+        "scanner_exit": 0,
+        "reviewed_false_positives": 0
+      }
+    },
+    "limitation": "Manual review plus pattern scanners cannot prove the absence of all sensitive information"
+  },
+  "preserved_historical_files": 960,
+  "preserved_M24_archive_files": 46,
+  "initial_verification_attempts": "Logs retained: disk exhaustion, followed by inappropriate in-repository pytest temp location. Clean standard-temp full suite passed; no existing assertion or privacy implementation changed.",
+  "merge_authorized": false
+}

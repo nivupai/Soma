@@ -551,3 +551,10 @@ provides a small independent homogeneous physical check for four actual platform
 it is not the full four-layer engineering acceptance study. The expensive frozen
 study is opt-in through `soma source fem-reference`. See the M29 protocol, explicit
 post-outcome metadata amendment, original/repeat hashes and preserved M28 artifacts.
+
+M30's frozen study is reproduced by `soma source mesh-grid`; public exports are
+created by `python scripts/summarize_mesh_grid.py reports/mesh-grid-v30 experiments/milestone30`.
+This invokes the separately implemented uncertainty summaries. The small
+`python -m scripts.mesh_grid_repro --output reports/mesh-grid-synthetic.json`
+checks the actual external mesher on four CI platforms using prespecified tolerances;
+it is not a bitwise tetrahedral-cache identity or the full scientific gate.

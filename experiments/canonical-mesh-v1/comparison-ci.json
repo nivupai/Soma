@@ -1,0 +1,64 @@
+{
+  "schema": "soma.canonical-mesh.comparison/1",
+  "experiment": "m30-canonical-mesh-v1",
+  "version": "1.0.0",
+  "all_passed": true,
+  "reports": 4,
+  "protocol_sha256": "5582092498c99f623c27ea92d3edfebcf26a157025a22d526d4527c417365a0b",
+  "fixture_sha256": "1392c05d8646c2865487dd61fecf5f8f1181244ca985987e2bca53e16ef2ae2c",
+  "rtol": 0.02,
+  "atol_V_per_Am": 0.01,
+  "physical_fingerprints_verified": true,
+  "original_comparator": {
+    "schema": "soma.mesh-grid.comparison/1",
+    "all_passed": true,
+    "reports": 4,
+    "rtol": 0.02,
+    "atol_V_per_Am": 0.01,
+    "scope": "canonical-mesh-v1 numerical portability only; native meshing not invoked or validated"
+  },
+  "platform_differences": [
+    {
+      "environment": {
+        "system": "Darwin",
+        "machine": "arm64",
+        "python": "3.11.9"
+      },
+      "relative": 0.0,
+      "max_absolute_V_per_Am": 0.0,
+      "failed_entries": 0
+    },
+    {
+      "environment": {
+        "system": "Darwin",
+        "machine": "arm64",
+        "python": "3.12.10"
+      },
+      "relative": 0.0,
+      "max_absolute_V_per_Am": 0.0,
+      "failed_entries": 0
+    },
+    {
+      "environment": {
+        "system": "Linux",
+        "machine": "x86_64",
+        "python": "3.11.18"
+      },
+      "relative": 1.1170034248281651e-14,
+      "max_absolute_V_per_Am": 2.9416469260468148e-12,
+      "failed_entries": 0
+    },
+    {
+      "environment": {
+        "system": "Linux",
+        "machine": "x86_64",
+        "python": "3.12.16"
+      },
+      "relative": 1.1170034248281651e-14,
+      "max_absolute_V_per_Am": 2.9416469260468148e-12,
+      "failed_entries": 0
+    }
+  ],
+  "native_mesh_reproducibility": "NOT_ESTABLISHED_SEPARATE_FAILED_NATIVE_GATE",
+  "release_gate_decision": "NOT_AUTHORIZED"
+}

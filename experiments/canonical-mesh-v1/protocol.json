@@ -1,0 +1,57 @@
+{
+  "schema": "soma.canonical-mesh.protocol/1",
+  "experiment": "m30-canonical-mesh-v1",
+  "version": "1.0.0",
+  "classification": "Post-outcome synthetic numerical reproducibility control; not external preregistration",
+  "fixture_path": "configs/mesh-grid-control-v30.json",
+  "fixture_sha256": "1392c05d8646c2865487dd61fecf5f8f1181244ca985987e2bca53e16ef2ae2c",
+  "frame": "MRI_RAS_m",
+  "boundary": "insulating",
+  "reference": "sensor average",
+  "source_order": "source-major XYZ",
+  "conductivities_S_m": [
+    0.33,
+    0.33,
+    0.33,
+    0.33
+  ],
+  "quadrature": 8,
+  "field_units": "V/(A*m)",
+  "strict_comparator": "scripts/compare_mesh_grids.py",
+  "strict_comparator_sha256": "8fb393251bcebaeed83d382f457f89f237834429fae4bc6fc9a596c7f4808c9d",
+  "field_rtol": 0.02,
+  "field_atol_V_per_Am": 0.01,
+  "analytical_relative_limit": 0.15,
+  "max_algebraic_residual": 1e-10,
+  "required_environments": [
+    {
+      "system": "Linux",
+      "machine": "x86_64",
+      "python": "3.11"
+    },
+    {
+      "system": "Linux",
+      "machine": "x86_64",
+      "python": "3.12"
+    },
+    {
+      "system": "Darwin",
+      "machine": "arm64",
+      "python": "3.11"
+    },
+    {
+      "system": "Darwin",
+      "machine": "arm64",
+      "python": "3.12"
+    }
+  ],
+  "native_meshing_invoked": false,
+  "replaces_native_gate": false,
+  "release_gate_decision": "Requires explicit user decision; canonical pass does not establish native meshing determinism",
+  "mesh_counts": {
+    "nodes": 212,
+    "tetrahedra": 1072,
+    "sources": 2,
+    "sensors": 32
+  }
+}

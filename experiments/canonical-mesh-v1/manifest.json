@@ -1,0 +1,20 @@
+{
+  "README.md": "b550bb49479abdbad518ee31ebdf337ba12b284c108d3ff9283421c8815bab82",
+  "comparison-ci.json": "9af26c500c6b840643fcbca9b2d46422d91abfd1e0ba7c599d873e5e2cccbcb2",
+  "comparison-independent-local.json": "9af26c500c6b840643fcbca9b2d46422d91abfd1e0ba7c599d873e5e2cccbcb2",
+  "integration.json": "85e17539619a4dc7cfb94c7f528c824b363973980abf63ef52761af3c5df8919",
+  "native-entry-summary.json": "9c9db7c7854e73514e6d158b9ff1728db5d3c169911d6709cc025a43b3769608",
+  "native-failing-entries.csv": "f1808e563d02cdf07adfd8d5883af61652f67d8097a741fee790577f10b329aa",
+  "native-gate.json": "bc52880a96098dd6534867b9f36c054f2736e9d61cabf0f5c2a785c19217d29e",
+  "native-original-comparator-failures.csv": "a03a769f64777a7f4f309e29cc17faa223b29a508ef85328e4a17d695a11236f",
+  "platforms/synthetic-repro-macos-15-3.11/canonical-mesh-v1.json": "4e4abdce25e1047268d5def637b029b67eb7b99df4c25648b4c8486b5c266788",
+  "platforms/synthetic-repro-macos-15-3.11/mesh-grid-synthetic.json": "b4ef1d0e85f17c98139bf930769eb5fb37714def503c7aed28d13624e3576005",
+  "platforms/synthetic-repro-macos-15-3.12/canonical-mesh-v1.json": "699eb83823f8576d0b8bc247b3ed11248d1f8ee8b4a83f58764115ba175ccd85",
+  "platforms/synthetic-repro-macos-15-3.12/mesh-grid-synthetic.json": "897ec8a3e78582665f61e8e95a2c5abdc5b2d92dffc740fb79700f1c362176e9",
+  "platforms/synthetic-repro-ubuntu-24.04-3.11/canonical-mesh-v1.json": "34583ffb0ed1c2b41535b28866fcb5637266c4bc8a827791b2889ab7ce3cd9b4",
+  "platforms/synthetic-repro-ubuntu-24.04-3.11/mesh-grid-synthetic.json": "84f3e49e639fa44c17206a7a0cc36f862d1702e9c070bbda4dddfd046254404a",
+  "platforms/synthetic-repro-ubuntu-24.04-3.12/canonical-mesh-v1.json": "7c614c0d881da825c28ff402609509efefbdff8711b0337df3a2d3f31d5e9dd6",
+  "platforms/synthetic-repro-ubuntu-24.04-3.12/mesh-grid-synthetic.json": "9772e6bce8ab1dfb425686f0652267a71caa9e1d89116aeeb39a3e335c245956",
+  "protocol.json": "5582092498c99f623c27ea92d3edfebcf26a157025a22d526d4527c417365a0b",
+  "verification.json": "4ef98aa20025d70ebf6c2fdb94ac3c3e839413244f758551b42ff87c79684714"
+}

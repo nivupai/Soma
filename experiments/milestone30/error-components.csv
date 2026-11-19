@@ -1,0 +1,7 @@
+head,matched_alternative_residual_norm,BEM_geometry_delta_norm,combined_norm,vector_cosine,scope
+0,0.006971058484594712,0.002707278585361246,0.006296141135597764,-0.43140910153386564,"common std-BEM denominator; vector terms can reinforce or cancel, not unique scalar attribution"
+1,0.005370654202298979,0.0028130515882826006,0.004368401906173634,-0.5849330022093218,"common std-BEM denominator; vector terms can reinforce or cancel, not unique scalar attribution"
+2,0.013154137458672093,0.0034725089153822496,0.011366808898564784,-0.6117329752606123,"common std-BEM denominator; vector terms can reinforce or cancel, not unique scalar attribution"
+3,0.00665575296757778,0.0032063798290766503,0.005388180351698818,-0.598556413168293,"common std-BEM denominator; vector terms can reinforce or cancel, not unique scalar attribution"
+4,0.00722987499226536,0.003095030276104229,0.00577154631768113,-0.6377075458489456,"common std-BEM denominator; vector terms can reinforce or cancel, not unique scalar attribution"
+5,0.005192569441919651,0.0026866317965884294,0.004239799577411118,-0.5807978786411563,"common std-BEM denominator; vector terms can reinforce or cancel, not unique scalar attribution"

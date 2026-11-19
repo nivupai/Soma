@@ -1,0 +1,174 @@
+{
+  "version": "0.30.0",
+  "baseline_parent": "88fcda2f2d4fd4f215294fac966fa180a6594df9",
+  "parent_prs": [
+    14,
+    13
+  ],
+  "parent_pr_states": "OPEN_UNMERGED",
+  "main": "31e389db42c5cd3bfd2bca0e0a83958257744fcf",
+  "tests": {
+    "full_passed": 1650,
+    "offline_passed": 1633,
+    "offline_deselected": 17,
+    "new_python_tests": 22,
+    "frontend_passed": 48,
+    "browser_passed": 23
+  },
+  "quality": {
+    "ruff": true,
+    "formatting": true,
+    "strict_mypy": true,
+    "strict_source_files": 294,
+    "dependency_check": true
+  },
+  "installations": {
+    "wheel": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 22,
+      "payload_files_verified": 319,
+      "dependency_check": true,
+      "dependency_audit": true
+    },
+    "sdist": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 22,
+      "payload_files_verified": 319,
+      "dependency_check": true,
+      "dependency_audit": true
+    },
+    "source": {
+      "fresh": true,
+      "noneditable": true,
+      "core_and_explorer": true,
+      "sdk_examples": 22,
+      "payload_files_verified": 319,
+      "dependency_check": true,
+      "dependency_audit": true
+    }
+  },
+  "reproducible_builds": true,
+  "artifacts": {
+    "soma_neuro-0.30.0.tar.gz": "40a0d651155fc5c3a48d1843acbf114ee8697eecb890f5e5c8ce65761b37d28a",
+    "soma_neuro-0.30.0-py3-none-any.whl": "2c10c0a65e2dab0415c741d700e4c60ef4bd6947d90134af61a42505fac58c50"
+  },
+  "python_dependency_audit": {
+    "known_vulnerabilities": 0,
+    "local_project_skip": "no PyPI audit record"
+  },
+  "npm_security": {
+    "status": "BLOCKED",
+    "picomatch": "4.0.7",
+    "advisory": "GHSA-fc5q-39xc-vjpf",
+    "high_dependency_entries": 11,
+    "patched_release_available": false,
+    "no_exceptions": true
+  },
+  "privacy": {
+    "scanner": "Gitleaks 8.30.1",
+    "rules_suppressed": false,
+    "current_files": 1582,
+    "commits": 77,
+    "blobs": 2056,
+    "material_secrets": 0,
+    "restricted_data_files": 0,
+    "personal_home_paths": 0,
+    "scopes": {
+      "history": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "blobs": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "tree": {
+        "raw_findings": 65,
+        "scanner_exit": 1,
+        "reviewed_false_positives": 65
+      },
+      "metadata": {
+        "raw_findings": 0,
+        "scanner_exit": 0,
+        "reviewed_false_positives": 0
+      }
+    },
+    "limitation": "Manual review plus pattern scanners cannot prove the absence of all sensitive information"
+  },
+  "preserved": {
+    "M28_artifact_hashes": 147,
+    "M29_artifact_hashes": 156,
+    "protected_historical_files": 731,
+    "M24_archive_files": 46
+  },
+  "scientific": {
+    "receipt": {
+      "schema": "soma.mesh-grid.receipt/1",
+      "protocol": "61360de2076b3e4e01853358b3a66bcf69aced771fb7ad7e11f4b1cfff8cc46b",
+      "synthetic_only": true,
+      "human_subjects": 0,
+      "computed_fields": 85,
+      "failed_fields": 1,
+      "inverse_rows": 30528,
+      "heads": 6,
+      "sources_per_head": 12,
+      "grids": 4,
+      "seconds": 1029.2758949999698,
+      "matched_finest_pass": true,
+      "matched_finest_relative": [
+        0.004344656031381909,
+        0.0033596777866529127,
+        0.005269500176496353,
+        0.004110946990290281,
+        0.003388049916031994,
+        0.0031421280343747714
+      ],
+      "threshold": 0.1,
+      "parent_commit": "88fcda2f2d4fd4f215294fac966fa180a6594df9",
+      "parent_prs": [
+        14,
+        13
+      ],
+      "phantom": "NOT_AVAILABLE",
+      "human_accuracy": "NOT_ESTABLISHED"
+    },
+    "complete_configuration_rows": 85,
+    "new_field_arrays": 79,
+    "reused_legacy_grid_operators": 12,
+    "alternative_BEM_controls_nested_in_forward_rows": 6,
+    "primary_inverse_rows": 29376,
+    "geometry_sensitivity_rows": 1152,
+    "primary_figures": 19,
+    "independent_mesher": "Gmsh 4.15.2 native Delaunay",
+    "FEM": "scikit-fem 12.0.2 P1 full subtraction",
+    "BEM": "OpenMEEG 2.6.0",
+    "executed_source_snapshots": 6,
+    "local_protocol_sealed_before_final_outcomes": true,
+    "external_preregistration": false,
+    "human_accuracy": "NOT_ESTABLISHED"
+  },
+  "publication": {
+    "status": "DEPENDENT_PR_BLOCKED_SECURITY_AND_NATIVE_MESH_PLATFORM_GATE",
+    "base_branch": "feature/milestone29-independent-four-layer",
+    "merge_permitted": false,
+    "postmerge_ci": "NOT_PERFORMED",
+    "expected_ci_jobs": 13,
+    "comparison_families": 13,
+    "cross_platform_status": "FAILED_FROZEN_PER_ENTRY_NATIVE_MESH_TOLERANCE",
+    "actual_audited_head": "77e54b1f7d2dde92c6bd640ff44960d33e90e9dc",
+    "actual_ci_url": "https://github.com/nivupai/Soma/actions/runs/44280567582",
+    "actual_ci_jobs": 13,
+    "actual_ci_passed": 11,
+    "actual_ci_failed": 2,
+    "actual_comparison_families_passed": 12,
+    "actual_comparison_families_failed": 1,
+    "platform_evidence": "cross-platform/audit.json"
+  },
+  "milestone31_started": false
+}

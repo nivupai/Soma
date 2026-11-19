@@ -1,0 +1,36 @@
+{
+  "schema": "soma.mesh-grid.receipt/1",
+  "protocol": "61360de2076b3e4e01853358b3a66bcf69aced771fb7ad7e11f4b1cfff8cc46b",
+  "synthetic_only": true,
+  "human_subjects": 0,
+  "computed_fields": 85,
+  "failed_fields": 1,
+  "inverse_rows": 30528,
+  "heads": 6,
+  "sources_per_head": 12,
+  "grids": 4,
+  "seconds": 1029.2758949999698,
+  "matched_finest_pass": true,
+  "matched_finest_relative": [
+    0.004344656031381909,
+    0.0033596777866529127,
+    0.005269500176496353,
+    0.004110946990290281,
+    0.003388049916031994,
+    0.0031421280343747714
+  ],
+  "threshold": 0.1,
+  "parent_commit": "88fcda2f2d4fd4f215294fac966fa180a6594df9",
+  "parent_prs": [
+    14,
+    13
+  ],
+  "phantom": "NOT_AVAILABLE",
+  "human_accuracy": "NOT_ESTABLISHED",
+  "inverse_computed": 29376,
+  "inverse_failed": 0,
+  "geometry_truth_rows": 1152,
+  "missing_evaluations_enumerated": 0,
+  "new_field_arrays": 79,
+  "reused_legacy_grid_arrays": 12
+}

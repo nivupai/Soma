@@ -419,3 +419,10 @@ isolated bounded computation (`source.fem_worker`), frozen execution
 (`experiments.fem_reference`) and read-only reviewed aggregate Explorer data.
 The concentric harmonic reference is independent of the volume/BEM assemblies.
 No expensive solver or private input is executed by a browser GET request.
+
+M30 isolates optional Gmsh in `source.mesh_worker`, validates physical output in
+`source.mesh_replication`, and executes the frozen experiment in `experiments.mesh_grid`.
+The existing P1/BEM/inverse implementations remain unchanged. `grid_diagnostics`
+rejects incompatible resolution comparisons and unsupported public evidence.
+Only reviewed aggregate resources are served by Explorer; native mesh generation
+and dense resolution matrices stay outside browser requests and ordinary CI.

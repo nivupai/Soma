@@ -1,0 +1,938 @@
+[
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.34487324643424455,
+    "sampled_mean_mm": 0.12421623110131477,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3536872325454149,
+    "sampled_mean_mm": 0.12840778444436046,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.35253709635500713,
+    "sampled_mean_mm": 0.126976591792455,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3615469488241974,
+    "sampled_mean_mm": 0.13126129076534687,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3716967211569096,
+    "sampled_mean_mm": 0.13387749352030565,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.38119623952116605,
+    "sampled_mean_mm": 0.1383950565678099,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3831924960380467,
+    "sampled_mean_mm": 0.1380180345570164,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": null,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3929858139393526,
+    "sampled_mean_mm": 0.14267531604928754,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3092652458186587,
+    "sampled_mean_mm": 0.6459939288499067,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4550328571253976,
+    "sampled_mean_mm": 0.6707718389277108,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.338360029059067,
+    "sampled_mean_mm": 0.6603493494910155,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4873669206170668,
+    "sampled_mean_mm": 0.6856778797927706,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4107655286594447,
+    "sampled_mean_mm": 0.6963071760170384,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.5672868490404013,
+    "sampled_mean_mm": 0.7230599423160405,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4547391620207264,
+    "sampled_mean_mm": 0.717771032055452,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 2,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.616703174583773,
+    "sampled_mean_mm": 0.7453020432530117,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.36661009513463977,
+    "sampled_mean_mm": 0.12438098023837262,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.37090404883789485,
+    "sampled_mean_mm": 0.12859015505236976,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.37475698613763553,
+    "sampled_mean_mm": 0.12714500202144755,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3791463610342753,
+    "sampled_mean_mm": 0.13144771405353323,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.39488135222584664,
+    "sampled_mean_mm": 0.13405711615885096,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3997298709273918,
+    "sampled_mean_mm": 0.13859591941644,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.407344550149595,
+    "sampled_mean_mm": 0.13820108915374774,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 0,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.41211560981988005,
+    "sampled_mean_mm": 0.14287795005818849,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3143186232839834,
+    "sampled_mean_mm": 0.647366867417082,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4305991485286005,
+    "sampled_mean_mm": 0.6713740779180608,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3435257038014292,
+    "sampled_mean_mm": 0.6617527978041289,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4623902407181473,
+    "sampled_mean_mm": 0.6862935018717965,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4164574720328285,
+    "sampled_mean_mm": 0.6977926261926963,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.5417965162848284,
+    "sampled_mean_mm": 0.723693458364956,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4603540258711025,
+    "sampled_mean_mm": 0.7192965193523144,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 2,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.5895546094762258,
+    "sampled_mean_mm": 0.745971197686735,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.35885531679267146,
+    "sampled_mean_mm": 0.12511361977869753,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.38106869421637907,
+    "sampled_mean_mm": 0.12931215665796453,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3668298793880703,
+    "sampled_mean_mm": 0.12789392244044645,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3895368874211712,
+    "sampled_mean_mm": 0.1321857601392526,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3867651290185741,
+    "sampled_mean_mm": 0.13485187232665227,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.41066737254560837,
+    "sampled_mean_mm": 0.13937691096584875,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3987281297696449,
+    "sampled_mean_mm": 0.13901513308744196,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 1,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.42340966024042687,
+    "sampled_mean_mm": 0.14368017406440506,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3594354738219256,
+    "sampled_mean_mm": 0.6453070352395083,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.486225318121814,
+    "sampled_mean_mm": 0.6712032495900586,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.38964515101797,
+    "sampled_mean_mm": 0.6596471915781644,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.519252547413405,
+    "sampled_mean_mm": 0.6861188773587268,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.464653314053884,
+    "sampled_mean_mm": 0.6956632575444771,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.6012738744949953,
+    "sampled_mean_mm": 0.7235253887113067,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.5104838598021408,
+    "sampled_mean_mm": 0.7170078169327869,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 2,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.6513614645797996,
+    "sampled_mean_mm": 0.7457813884333981,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3547676779766296,
+    "sampled_mean_mm": 0.1243168479610752,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.36650083278802176,
+    "sampled_mean_mm": 0.1285258102906963,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3626514041538966,
+    "sampled_mean_mm": 0.12707944458243237,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3746452957388844,
+    "sampled_mean_mm": 0.13138193940826698,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3823588880404742,
+    "sampled_mean_mm": 0.1340023566443682,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3950059692190355,
+    "sampled_mean_mm": 0.1385415724088162,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3941863088629114,
+    "sampled_mean_mm": 0.1381298310678616,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 2,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.4072231475422729,
+    "sampled_mean_mm": 0.14280645587855137,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3351296286359902,
+    "sampled_mean_mm": 0.6450883072011689,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4522910462286465,
+    "sampled_mean_mm": 0.6701459314211515,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3647991759390223,
+    "sampled_mean_mm": 0.659423602916751,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4845641805892882,
+    "sampled_mean_mm": 0.6850380632305119,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4375303937485102,
+    "sampled_mean_mm": 0.6953612229744657,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.5634228582390575,
+    "sampled_mean_mm": 0.7223496684842454,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4834773651511073,
+    "sampled_mean_mm": 0.7167647857790782,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 2,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.6136567180318364,
+    "sampled_mean_mm": 0.7446065904679477,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.35883603403224756,
+    "sampled_mean_mm": 0.12472398961026139,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.36749633939533094,
+    "sampled_mean_mm": 0.12891602271844416,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.366810168121854,
+    "sampled_mean_mm": 0.12749563382382278,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3756629247152186,
+    "sampled_mean_mm": 0.13178082322329787,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3867455028026829,
+    "sampled_mean_mm": 0.13443953269892617,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.39570983200011395,
+    "sampled_mean_mm": 0.13895466985184365,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.39870670448028644,
+    "sampled_mean_mm": 0.13858221067806828,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 3,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.4083292659948028,
+    "sampled_mean_mm": 0.1432400252427156,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3015314409080436,
+    "sampled_mean_mm": 0.6440950699398111,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.434902284406901,
+    "sampled_mean_mm": 0.6692299258929899,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.330454361817106,
+    "sampled_mean_mm": 0.6584082937162515,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.466789001838182,
+    "sampled_mean_mm": 0.6841017020239452,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4027611065239245,
+    "sampled_mean_mm": 0.6942940739430177,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.5464934883418908,
+    "sampled_mean_mm": 0.7213855081494241,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.446146045453376,
+    "sampled_mean_mm": 0.7156611888220122,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 2,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.5943358715632188,
+    "sampled_mean_mm": 0.7435888065477658,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3566063324545971,
+    "sampled_mean_mm": 0.12399795518806811,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.357652652043987,
+    "sampled_mean_mm": 0.1282034827086766,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.36453091762025985,
+    "sampled_mean_mm": 0.12675346530335832,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3656004887560535,
+    "sampled_mean_mm": 0.13105244899109136,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3843334816250795,
+    "sampled_mean_mm": 0.13366879862236353,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3854622642041185,
+    "sampled_mean_mm": 0.13819610278995498,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.396229258282871,
+    "sampled_mean_mm": 0.13777550576452008,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 4,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3973918356044455,
+    "sampled_mean_mm": 0.14244831412075162,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.2957194220081905,
+    "sampled_mean_mm": 0.6433959768073398,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4125689472834468,
+    "sampled_mean_mm": 0.6676821379168476,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.324513186941722,
+    "sampled_mean_mm": 0.6576936651808363,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.4439593683342078,
+    "sampled_mean_mm": 0.6825195187594445,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.3964917172781635,
+    "sampled_mean_mm": 0.6935504732243712,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.522428423243357,
+    "sampled_mean_mm": 0.7197053862895919,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 1.4396882466757803,
+    "sampled_mean_mm": 0.7148844186748223,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 2,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 1.569521052537178,
+    "sampled_mean_mm": 0.741869042129831,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 0,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3579383909677202,
+    "sampled_mean_mm": 0.12433920679624627,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 0,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.36972682816301455,
+    "sampled_mean_mm": 0.12851859164324192,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 1,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3658925774336704,
+    "sampled_mean_mm": 0.1271023002806072,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 1,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.3779429798999891,
+    "sampled_mean_mm": 0.1313745603464248,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 2,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.3857780162242019,
+    "sampled_mean_mm": 0.13402196707263692,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 2,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.39848334948643777,
+    "sampled_mean_mm": 0.13852704555504455,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 3,
+    "direction": "alternative-to-std",
+    "sampled_max_mm": 0.39770932329747166,
+    "sampled_mean_mm": 0.13815467421805147,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  },
+  {
+    "head": 5,
+    "level": 3,
+    "tissue": 3,
+    "direction": "std-to-alternative",
+    "sampled_max_mm": 0.41080758684777435,
+    "sampled_mean_mm": 0.14279843515915788,
+    "sampling": "vertices and facet centroids; not certified Hausdorff"
+  }
+]

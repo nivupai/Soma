@@ -1,0 +1,4 @@
+alternative,low,high,status,mean,lower,upper,heads,sources_per_head,interval_scope
+False,1,2,complete,0.11142379144316081,0.10375841942896336,0.12396257220413952,6,12,conditional uncalibrated simulation summary
+False,2,3,complete,0.025989997524774242,0.02490901563083491,0.027249325704756355,6,12,conditional uncalibrated simulation summary
+True,2,3,complete,0.026397287643713116,0.02501701309299092,0.027671819063897693,6,12,conditional uncalibrated simulation summary
