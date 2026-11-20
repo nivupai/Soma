@@ -1,3 +1,4 @@
+import InverseCalibration from "./InverseCalibration";
 import MeshGrid from "./MeshGrid";
 import FEMReference from "./FEMReference";
 import BEMDiagnostics from "./BEMDiagnostics";
@@ -205,6 +206,7 @@ export default function SourceUncertainty() {
       <BEMDiagnostics />
       <FEMReference />
       <MeshGrid />
+      <InverseCalibration />
     </>
   );
 }

@@ -521,3 +521,5 @@ localization and distinguish shared-interface agreement from geometry effects.
 The optional full study uses `[mesher,fem,conductor]`; Explorer serves reviewed
 synthetic aggregates only. M30 depends on unmerged PRs #14 and #13 and retains the
 required npm security gate.
+
+M31: [inverse-prior results](docs/MILESTONE31_RESULTS.md), [density priors](docs/SOURCE_DENSITY_PRIORS.md), and [frozen protocol](docs/MILESTONE31_PROTOCOL.md). All M31 results are synthetic; native-mesh signature review remains a release blocker.

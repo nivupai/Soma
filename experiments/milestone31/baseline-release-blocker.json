@@ -1,0 +1,341 @@
+{
+  "schema": "soma.m31.baseline-release-blocker/1",
+  "base_commit": "4e55256f8dcbcb9a104e4b7b16ad495cdabc9191",
+  "run": 44626578312,
+  "CI_jobs_passed": 13,
+  "CI_jobs_total": 14,
+  "mandatory_canonical": "PASS",
+  "native": {
+    "schema": "soma.native-mesh.release-diagnostic/1",
+    "scientific_status": "INVALID_OR_UNEXPECTED",
+    "release_disposition": "BLOCK_RELEASE",
+    "release_policy_satisfied": false,
+    "error_type": "ValueError",
+    "reason": "Native failure signature changed; review required"
+  },
+  "pairs": [
+    {
+      "reference": "synthetic-repro-macos-15-3.11",
+      "actual": "synthetic-repro-macos-15-3.12",
+      "failed_entries": 0,
+      "failed_sensor_columns": [],
+      "aggregate_relative": 0.0
+    },
+    {
+      "reference": "synthetic-repro-macos-15-3.11",
+      "actual": "synthetic-repro-ubuntu-24.04-3.11",
+      "failed_entries": 10,
+      "failed_sensor_columns": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          23,
+          3
+        ],
+        [
+          29,
+          3
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "aggregate_relative": 0.0043944331836584406
+    },
+    {
+      "reference": "synthetic-repro-macos-15-3.11",
+      "actual": "synthetic-repro-ubuntu-24.04-3.12",
+      "failed_entries": 15,
+      "failed_sensor_columns": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          16,
+          5
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          18,
+          4
+        ],
+        [
+          23,
+          3
+        ],
+        [
+          24,
+          3
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          29,
+          3
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "aggregate_relative": 0.004176368792957427
+    },
+    {
+      "reference": "synthetic-repro-macos-15-3.12",
+      "actual": "synthetic-repro-ubuntu-24.04-3.11",
+      "failed_entries": 10,
+      "failed_sensor_columns": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          23,
+          3
+        ],
+        [
+          29,
+          3
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "aggregate_relative": 0.0043944331836584406
+    },
+    {
+      "reference": "synthetic-repro-macos-15-3.12",
+      "actual": "synthetic-repro-ubuntu-24.04-3.12",
+      "failed_entries": 15,
+      "failed_sensor_columns": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          16,
+          5
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          18,
+          4
+        ],
+        [
+          23,
+          3
+        ],
+        [
+          24,
+          3
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          29,
+          3
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "aggregate_relative": 0.004176368792957427
+    },
+    {
+      "reference": "synthetic-repro-ubuntu-24.04-3.11",
+      "actual": "synthetic-repro-ubuntu-24.04-3.12",
+      "failed_entries": 16,
+      "failed_sensor_columns": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          16,
+          5
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          23,
+          3
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          28,
+          4
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "aggregate_relative": 0.004124235476283686
+    }
+  ],
+  "evidence_sha256": {
+    "synthetic-repro-macos-15-3.11/mesh-grid-diagnostic.json": "9a958160ff67b954314696cf22cfa2913a7e06d9dbf318a8841ef74ec8fa6bf5",
+    "synthetic-repro-macos-15-3.11/mesh-grid-synthetic.json": "b4ef1d0e85f17c98139bf930769eb5fb37714def503c7aed28d13624e3576005",
+    "synthetic-repro-macos-15-3.12/mesh-grid-diagnostic.json": "00a08f9cb18645cccd043cdf7e1df6d4b00387c13a74ed611f9355e916c3b71b",
+    "synthetic-repro-macos-15-3.12/mesh-grid-synthetic.json": "897ec8a3e78582665f61e8e95a2c5abdc5b2d92dffc740fb79700f1c362176e9",
+    "synthetic-repro-ubuntu-24.04-3.11/mesh-grid-diagnostic.json": "fcc0021434118b5896e21571b9c5e21583c62700fddd16c618296bec7110475c",
+    "synthetic-repro-ubuntu-24.04-3.11/mesh-grid-synthetic.json": "5330b9623264e59ff8f1e3b61d8092aa6be91817ad41b5a4abb3de3c460aa365",
+    "synthetic-repro-ubuntu-24.04-3.12/mesh-grid-diagnostic.json": "7c40ec95272abd343b2bb5ed0c5ac5bfb28f0b58de802e930b9cc0d760f9752d",
+    "synthetic-repro-ubuntu-24.04-3.12/mesh-grid-synthetic.json": "9772e6bce8ab1dfb425686f0652267a71caa9e1d89116aeeb39a3e335c245956"
+  },
+  "policy_changed": false,
+  "merge_authorized": false
+}

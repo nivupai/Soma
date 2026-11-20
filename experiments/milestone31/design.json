@@ -1,0 +1,203 @@
+{
+  "schema": "soma.inverse-calibration.protocol/1",
+  "id": "inverse-calibration-v31",
+  "version": "1.0.0",
+  "base": "4e55256f8dcbcb9a104e4b7b16ad495cdabc9191",
+  "synthetic_only": true,
+  "hypotheses": {
+    "H1": "unweighted prior changes effective spectral regularization",
+    "H2": "quadrature discretization stabilizes total prior and some sensor covariance properties",
+    "H3": "prior and regularization explain part, not necessarily all, of localization nonmonotonicity",
+    "H4": "effects interact with method/noise/geometry; negative findings valid"
+  },
+  "heads": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "source_design": {
+    "original_per_head": 12,
+    "original_generator": "unchanged M27 known_truth",
+    "new_per_head": 4,
+    "seed": 310420,
+    "amplitude_Am": 1e-08,
+    "radius_m": [
+      0.035,
+      0.06
+    ],
+    "calibration_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "test_ids": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "heldout_new_ids": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "split_unit": "source; no source appears in both partitions"
+  },
+  "grids": {
+    "original": [
+      "legacy12",
+      "cart30",
+      "cart20",
+      "cart15"
+    ],
+    "nested_union_spacings_mm": [
+      30,
+      20,
+      15
+    ],
+    "nested_counts": [
+      33,
+      173,
+      481
+    ],
+    "domain": "ball radius 0.065 m, same domain for all grids",
+    "quadrature": "65536 unscrambled Sobol uniform-volume ball probes; nearest-site Voronoi mass; explicit approximate cell volumes",
+    "voronoi_probes": 65536
+  },
+  "priors": [
+    "unweighted",
+    "cell_volume",
+    "total_variance"
+  ],
+  "prior_reference_count": 12,
+  "moment_unit": "A*m",
+  "density_white_intensity_unit": "A^2/m",
+  "orientation_order": "source-major XYZ",
+  "noise_V": [
+    0,
+    5e-08,
+    1.5e-07
+  ],
+  "noise_draws": 2,
+  "noise_seed": 310421,
+  "assumed_covariance": "(5e-8 V)^2 average-reference projector for every noise condition; exact retained-subspace whitening",
+  "methods": [
+    "Tikhonov",
+    "MNE",
+    "dSPM"
+  ],
+  "regularization": {
+    "policies": [
+      "historical",
+      "spectral",
+      "prediction"
+    ],
+    "historical_tikhonov": 0.001,
+    "historical_MNE_dSPM": 0.1111111111111111,
+    "spectral": "alpha/maximum eigenvalue of whitened prior lead covariance fixed at method historical numerical constant",
+    "prediction": "choose sweep minimum independent-repeat sensor MSE using calibration sources 0..5 only; no test locations or errors",
+    "sweep_log10": [
+      -4.0,
+      -3.5,
+      -3.0,
+      -2.5,
+      -2.0,
+      -1.5,
+      -1.0,
+      -0.5,
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "tie_break": "first (smallest alpha), flag boundary optimum"
+  },
+  "forward": {
+    "primary": "standard level2 Gmsh FEM candidates; finest level3 Gmsh FEM truth",
+    "truth_new": "independent off-grid seeds; shared full-subtraction formulation remains correlated",
+    "BEM_subset_heads": [
+      0,
+      5
+    ],
+    "BEM_subset_grids": [
+      "cart20",
+      "nested2"
+    ],
+    "BEM": "OpenMEEG2.6.0 level2; same finest FEM truth and measurement vectors",
+    "reuse": "public archived original M30 physical fields with byte hashes; new fields freshly solved, no candidate operator as truth",
+    "sigmas_S_m": [
+      0.33,
+      1,
+      0.004,
+      0.33
+    ]
+  },
+  "metrics": [
+    "peak_localization_mm",
+    "excess_mm",
+    "dispersion_mm",
+    "PSF_RMS_width_mm",
+    "resolution_trace",
+    "resolution_diagonal",
+    "prior_trace_Am2",
+    "whitened_prior_trace",
+    "effective_alpha",
+    "alpha_over_top_eigenvalue",
+    "EDF",
+    "whitened_residual",
+    "sensor_prediction_MSE",
+    "condition_regularized",
+    "runtime_seconds",
+    "peak_RSS_MiB",
+    "source_depth_mm",
+    "orientation_radial_cosine"
+  ],
+  "uncertainty": {
+    "bootstrap": 999,
+    "seed": 310422,
+    "method": "fixed-family-stratified heads then sources within heads; noise averaged first; paired contrasts retain indices",
+    "scope": "conditional six-generator simulation, uncalibrated coverage, no participant/population inference"
+  },
+  "acceptance": {
+    "mathematics_rtol": 1e-09,
+    "PSD_rtol": 1e-12,
+    "volume_sum_rtol": 1e-12,
+    "historical_mean_localization_abs_mm": 0.002,
+    "historical_gate_policy": "unchanged; post-merge native signature drift BLOCK_RELEASE",
+    "hypothesis_decisions": "report estimates and conditional intervals; H2 volume/total prior trace invariant to 1e-12, sensor covariance relative drift and localization contrasts reported without forcing success",
+    "solver_residual_max": 1e-10
+  },
+  "budget": {
+    "total_seconds": 14400,
+    "per_forward_worker_seconds": 240,
+    "peak_worker_MiB": 2400,
+    "no_added_heads": true,
+    "failures": "retain every planned configuration failure; do not choose alternative settings after outcomes"
+  },
+  "limitations": [
+    "local seal is not external preregistration",
+    "existing M30 outcomes already known",
+    "same six synthetic heads, not human anatomical validation",
+    "grid-union refinement adds sites and changes Voronoi cells, not an exact nested FEM basis",
+    "white-source density is a generalized random field, not pointwise finite variance smooth current",
+    "native Gmsh portability remains unestablished and changed signature blocks release"
+  ]
+}

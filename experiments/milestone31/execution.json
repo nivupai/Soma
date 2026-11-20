@@ -1,0 +1,42 @@
+{
+  "schema": "soma.inverse-calibration.execution-provenance/1",
+  "protocol_commit": "44adeed",
+  "base_commit": "4e55256f8dcbcb9a104e4b7b16ad495cdabc9191",
+  "design_sha256": "abb24125e39c51438197e4e7301b3f7079bdb4820bdd6257069348594d6468bc",
+  "environment": {
+    "python": "3.12.2",
+    "system": "Darwin",
+    "machine": "arm64",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "mne": "1.13.2",
+      "gmsh": "4.15.2",
+      "scikit-fem": "12.0.2",
+      "soma-neuro": "0.31.0",
+      "matplotlib": "3.11.2"
+    }
+  },
+  "historical_M30_manifest_sha256": "ee6dabc3995d04e1c8540b3ca1b78245a385b98fee184a6387e68334b6a5d0f4",
+  "historical_files_verified": 957,
+  "implementation_sha256": {
+    "scripts/run_inverse_calibration.py": "04148a466d3b052a5055be179f26cf1a6b9914cc5f9267ff796ec982b43e8b38",
+    "scripts/summarize_inverse_calibration.py": "39d64b0ad86f36e689ed870f4ed401822c996db7c8495d5b8705687277addac4",
+    "src/soma/source/prior_calibration.py": "c6aa6de53685860341b0d358285024b67870edadd8d8889ad989c1c244c15a8c"
+  },
+  "raw_candidate_fields": "public archived independent M30 fields; no new estimated values",
+  "new_truth_fields": "fresh level3 Gmsh FEM at off-grid independently seeded positions",
+  "baseline_tests": {
+    "collected": 1699,
+    "first_run_passed": 1698,
+    "first_run_failed": 1,
+    "failure": "cache-ID assertion overlapped working-tree changes during development; unchanged assertion passed isolated stable-tree rerun",
+    "baseline_sdk_examples": 22
+  },
+  "limitations": [
+    "no external preregistration",
+    "native changed-signature baseline remains blocking"
+  ],
+  "independent_replay": "replay-audit.json",
+  "environment_scope": "finalized-code independent fresh-mesh replay"
+}

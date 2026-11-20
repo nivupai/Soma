@@ -1,0 +1,28 @@
+{
+  "schema": "soma.inverse-calibration.summary/1",
+  "design_sha256": "abb24125e39c51438197e4e7301b3f7079bdb4820bdd6257069348594d6468bc",
+  "receipt": {
+    "schema": "soma.inverse-calibration.receipt/1",
+    "design_sha256": "abb24125e39c51438197e4e7301b3f7079bdb4820bdd6257069348594d6468bc",
+    "heads": 6,
+    "original_sources": 72,
+    "new_heldout_sources": 24,
+    "reconstruction_rows": 99360,
+    "operator_rows": 3726,
+    "failed_configurations": 0,
+    "seconds": 33.37194245803403,
+    "peak_RSS_MiB": 775.40625,
+    "synthetic_only": true,
+    "external_preregistration": false
+  },
+  "replication_max_kernel_relative": 1.6516173492718778e-13,
+  "boundary_prediction_fraction": {
+    "0.0": 1.0,
+    "5e-08": 0.11594202898550725,
+    "1.5e-07": 0.028985507246376812
+  },
+  "BEM_FEM_mean_abs_peak_difference_mm": 0.8649068371787086,
+  "conditional_uncertainty": "heads nested sources, noise averaged; uncalibrated simulation coverage",
+  "all_scientific_failures": [],
+  "native_release_gate": "BLOCK_RELEASE_CHANGED_NATIVE_SIGNATURE_PRESERVED"
+}

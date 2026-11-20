@@ -48,6 +48,10 @@ def router() -> APIRouter:
     def mesh_grid() -> Any:
         return mesh_grid_example()
 
+    @routes.get("/inverse-calibration")
+    def inverse_calibration() -> Any:
+        return inverse_calibration_example()
+
     return routes
 
 
@@ -133,3 +137,10 @@ def mesh_grid_example() -> dict[str, Any]:
     validate_evidence(value)
     value["content_sha256"] = hashlib.sha256(raw).hexdigest()
     return value
+
+
+def inverse_calibration_example() -> dict[str, Any]:
+    raw = files("soma.resources").joinpath("inverse-calibration-example-v31.json").read_bytes()
+    from soma.source.prior_calibration import validate_example
+
+    return validate_example(raw)

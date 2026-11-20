@@ -24,6 +24,8 @@ from soma.source.nonspherical import design as _nonspherical_design
 from soma.source.nonspherical import head_parameters as _synthetic_head
 from soma.source.nonspherical import protocol as _nonspherical_protocol
 from soma.source.nonspherical import validate_meshes as _validate_head_meshes
+from soma.source.prior_calibration import PriorInverse as PriorInverse
+from soma.source.prior_calibration import SourcePrior as SourcePrior
 from soma.source.resolution import Resolution as Resolution
 from soma.source.template import Template as Template
 from soma.source.uncertainty import design as _uncertainty_design
