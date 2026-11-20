@@ -59,3 +59,50 @@ Files:1GiB cap, JSON metadata4MiB, approved PNG4MiB,8 figures maximum, tables4Mi
 design at most2000×64. Requests16KiB. Bounded caches and two concurrent small EEG
 analyses prevent accidental computation bursts. These are local research limits,
 not a claim that the API is suitable for internet exposure.
+
+## M35 head scene and uncertainty overlay
+
+| Route | Returned data |
+|---|---|
+| `GET /api/head-scenes` | Summaries of servable head scenes (only `demo-synthetic-head`) with readiness |
+| `GET /api/head-scenes/{head_id}` | `HeadScene`: nested layers, sensors, cortical-surface sources, readiness |
+| `GET /api/head-scenes/{head_id}/uncertainty` | `SourceUncertaintyOverlay`: per-source scalar + interval |
+
+Any other `head_id` is 404; `m32-*` identities are additionally rejected (403) by the
+existing private-anatomy middleware. Models live in `services/explorer_api/head_scene.py`.
+
+`HeadScene` (`contract = "soma.explorer.head-scene/1"`), units mm, frame
+`synthetic_head_RAS_mm`:
+
+- `readiness`: `VALIDATED | QC_ONLY | NOT_READY`, the short form of Soma's
+  `AnatomicalLevel` (`readiness_status` holds the full value, `readiness_reasons` the
+  limitations from `soma.anatomy.head_models.classify_anatomy`).
+- `geometrically_valid` (closed edge-manifold shells, finite coordinates, per-ray
+  nesting, sensors on scalp, sources inside cortex; details in `geometry_checks`) and
+  `anatomically_validated` are independent fields. The model rejects
+  `anatomically_validated` without `VALIDATED` readiness, and on any synthetic head.
+- `layers[]`: `{name: scalp|outer_skull|inner_skull|cortex, label, vertices_mm, faces}`.
+- `sensors[]`: `{label, position_mm}`; `sources`: `{kind: "cortical_surface",
+  positions_mm, normals, scalar_name, scalar_units, scalar}` with aligned lengths.
+- `synthetic`, `redistributable`, `private_mri_used` (always `false`), `generator`, `warnings`.
+
+The demo head is generated in code from icosphere shells (scalp 95, outer skull 89,
+inner skull 83, folded cortex 77 mm along +y, shared ellipsoidal axes) with idealized
+10-20 sensors and a 162-point synthetic cortical source space. It is not MRI-derived,
+so `classify_anatomy` returns `NOT_READY` although its geometry is valid.
+
+`SourceUncertaintyOverlay` (`contract = "soma.explorer.source-uncertainty-overlay/1"`):
+
+```json
+{"head_id": "demo-synthetic-head", "quantity": "localisation_error", "units": "mm",
+ "statistic": "mean", "interval": "confidence_interval", "confidence_level": 0.95,
+ "n_sources": 162, "mean": [...], "lower": [...], "upper": [...],
+ "origin": "MOCK_FIXTURE", "fixture": true, "warnings": ["MOCK FIXTURE: ..."]}
+```
+
+Validation requires one value per source and `0 <= lower <= mean <= upper`, and
+`fixture` must equal `origin == "MOCK_FIXTURE"`. The current values are a
+deterministic placeholder (worse for lower sources) standing in for M34
+localisation-error results, which do not exist yet; M34 should publish
+`origin = "M34_RESULT"` with the same shape. The browser re-validates the overlay
+against the head's source count and refuses to colour sources with a mismatch.

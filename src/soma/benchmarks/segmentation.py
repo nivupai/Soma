@@ -208,6 +208,39 @@ def score(
     }
 
 
+def masked_intensity_baseline(image: Volume, mask: Volume) -> Volume:
+    """M33 ablation: the frozen multi-Otsu rule applied only inside an intracranial mask.
+
+    The control ``intensity_baseline`` is unchanged; outside the mask is background.
+    """
+    if not image.same_grid(mask):
+        raise ValueError("Mask and image grids differ")
+    inside = require_labels(mask)
+    if not np.isin(inside, [0, 1]).all() or not inside.any():
+        raise ValueError("Nonempty binary intracranial mask required")
+    data = image.array(dtype=np.float32)
+    masked = Volume(
+        np.where(inside.astype(bool), data, 0).astype(np.float32),
+        image.affine_m,
+        "intensity",
+        image.metadata,
+    )
+    labels = intensity_baseline(masked)
+    out = labels.array().copy()
+    out[~inside.astype(bool)] = 0
+    return Volume(
+        out,
+        image.affine_m,
+        "labels",
+        {
+            **labels.metadata,
+            "method": "frozen multi-Otsu restricted to intracranial mask",
+            "mask": mask.metadata,
+            "extracranial_voxels_excluded": True,
+        },
+    )
+
+
 def intensity_baseline(image: Volume, *, modality: str = "T1") -> Volume:
     data = image.array(dtype=np.float32)
     if (

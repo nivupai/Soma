@@ -13,6 +13,8 @@ import {
 import BrainScene from "../components/BrainScene";
 import HumanHeadModels from "./HumanHeadModels";
 import SourceUncertainty from "./SourceUncertainty";
+import HeadExplorer from "./HeadExplorer";
+import ReadinessBanner from "../components/ReadinessBanner";
 export default function Source({
   id,
   state,
@@ -70,6 +72,17 @@ export default function Source({
               eyebrow="3D WORKSPACE / PHYSICAL COORDINATES"
               actions={<span className="unit">Three.js · millimetres</span>}
             >
+              <ReadinessBanner
+                subject="Source geometry"
+                readiness="NOT_READY"
+                geometricallyValid={null}
+                anatomicallyValidated={false}
+                reasons={[
+                  mesh.data?.synthetic
+                    ? "synthetic display geometry, not anatomy"
+                    : "no anatomical readiness receipt accompanies this source archive",
+                ]}
+              />
               <div className="toolbar">
                 {data.layers.map((l) => (
                   <label key={l}>
@@ -196,6 +209,7 @@ export default function Source({
           <p className="muted">{data?.render_geometry}</p>
         </Panel>
       </div>
+      <HeadExplorer mode={state.mode} />
       <SourceUncertainty />
       <HumanHeadModels />
       <Evidence result={mesh.data} />
