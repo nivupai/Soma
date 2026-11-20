@@ -1,0 +1,187 @@
+{
+  "schema": "soma.mri-head-model.protocol/1",
+  "id": "mri-head-models-v32",
+  "version": "1.0.0",
+  "base": "3aff2339a6d8133815eb1cd9a4fb1d8e134587f8",
+  "roles": {
+    "ibsr-v2": {
+      "cases": 18,
+      "role": "known reference tissue-method replication only",
+      "modalities": [
+        "T1",
+        "provided stripped T1"
+      ],
+      "labels": [
+        "CSF",
+        "GM",
+        "WM"
+      ],
+      "permission": "local noncommercial methods evaluation; no raw/derived anatomy redistribution; preserve conflicting legacy notices"
+    },
+    "mrbrains13": {
+      "cases": 5,
+      "partition": "training only",
+      "role": "known reference tissue-method replication only; not new external holdout",
+      "modalities": [
+        "T1",
+        "T1-IR",
+        "T2-FLAIR",
+        "T1_1mm"
+      ],
+      "used_intensity": "registered T1",
+      "labels": [
+        "CSF",
+        "GM",
+        "WM"
+      ],
+      "permission": "user-provided local research; portal agreement not authenticated; no redistribution or hidden-test access"
+    },
+    "mne-sample": {
+      "cases": 1,
+      "role": "MRI-derived educational conductor/coregistration QC; no independent anatomy accuracy",
+      "modalities": [
+        "T1",
+        "distributed FLASH-derived boundaries",
+        "FreeSurfer aseg",
+        "measured EEG digitization"
+      ],
+      "permission": "local educational MNE workflow; restrictive sample notice respected; no participant assets/fingerprints published"
+    },
+    "fsaverage": {
+      "role": "template inventory only, excluded from individualized human counts"
+    },
+    "spm-auditory": {
+      "role": "inventory only; no conductor reference or matched EEG; not evaluated"
+    }
+  },
+  "segmentation": {
+    "backend": "unchanged independent multi-Otsu M10/M12",
+    "parameters": "unchanged existing human_tissues.predict_t1",
+    "reference_fitting": false,
+    "labels_used_for_prediction": false,
+    "historical_results_known": true,
+    "hidden_test_reads": false,
+    "geometry_policy": "reuse explicit IBSR singleton/mm/sform and MRBrainS registered sform/0.05mm alignment policy; never resample references",
+    "metrics": [
+      "Dice",
+      "Jaccard",
+      "ASSD_mm",
+      "HD95_mm",
+      "signed_volume_mm3",
+      "absolute_volume_mm3",
+      "boundary_displacement",
+      "confusion"
+    ],
+    "reference_acceptance": {
+      "minimum_Dice_each_tissue": 0.8,
+      "maximum_HD95_mm_each_tissue": 5,
+      "scope": "operational research target, not clinical certification; independent conductor evidence still required"
+    },
+    "uncertainty": "subject bootstrap 2000 draws, seed32042; no inter-rater/population coverage claim"
+  },
+  "conductor": {
+    "model": "three-compartment brain/skull/scalp; CSF homogenized, not separate",
+    "source": "distributed participant FLASH-derived surfaces; no new FreeSurfer segmentation claimed",
+    "minimum_separation_m": 0.0001,
+    "minimum_triangle_quality": 0.01,
+    "max_electrode_scalp_distance_m": 0.03,
+    "source_margin_m": 0.005,
+    "levels": [
+      2,
+      3,
+      4
+    ],
+    "primary_level": 3,
+    "conductivities_scalp_skull_brain_S_m": [
+      0.3,
+      0.006,
+      0.3
+    ],
+    "topology": "reuse watertight/oriented/connected/no nonadjacent intersections and exact nesting checks",
+    "classification": [
+      "VALIDATED_ANATOMY",
+      "QC_ONLY_ANATOMY",
+      "NOT_READY_FOR_FORWARD_MODEL"
+    ],
+    "validated_requires": "independent full conductor boundary references, passed declared accuracy, and all computational checks",
+    "QC_ONLY_requires": "documented MRI-derived boundaries and passed complete computational geometry/source/sensor checks; missing reference evidence explicit",
+    "failed_anatomical_reference": "cannot be downgraded to successful QC-only validation",
+    "forward_gate": "never execute on NOT_READY geometry"
+  },
+  "geometry": {
+    "chain": [
+      "voxel centers",
+      "scanner_RAS_m",
+      "MRI_surface_RAS_m",
+      "head_m"
+    ],
+    "independent_oracles": [
+      "nibabel apply_affine",
+      "independent FreeSurfer tkregister matrix formula"
+    ],
+    "roundtrip_max_m": 1e-10,
+    "rigid_det": 1,
+    "reflections": "reject head/MRI rigid reflections, permit explicitly oriented voxel storage"
+  },
+  "forward": {
+    "mne_levels": [
+      2,
+      3,
+      4
+    ],
+    "openmeeg_levels": [
+      3
+    ],
+    "comparison": "same surfaces, source/sensor coordinates, conductivities and reference; separate discrete BEM formulations",
+    "relative_discrepancy_target": 0.1,
+    "refinement_3_to_4_target": 0.1,
+    "targets": "engineering numerical comparisons, not anatomical truth",
+    "rank_rtol": 1e-12,
+    "reference": "retained EEG average",
+    "units": "V/(A*m)",
+    "FEM": "NOT_COMPARABLE existing validated four-material contract vs three human compartments; do not synthesize a CSF interface"
+  },
+  "sources": {
+    "mask": "provided automated aseg GM codes [3,42,10,49,11,50,12,51,13,52,17,53,18,54,26,58]",
+    "mask_is_reference_truth": false,
+    "domain": "GM voxel centers inside conservative inscribed inner-skull sphere minus5mm; real irregular GM voxel measure, not ball volume",
+    "weights": "voxel-count Voronoi mass using fixed MRI voxel affine determinant",
+    "grids": [
+      64,
+      128
+    ],
+    "schedule": "nested farthest-point selection, raster-order ties, initial nearest to ROI centroid",
+    "truth_sources": 12,
+    "truth_seed": 32042,
+    "truth_min_candidate_distance_m": 0.001,
+    "orientations": "independent seeded unit Gaussian vectors scaled1e-8 A*m",
+    "truth_forward": "MNE level4, off-grid independent positions; same formulation remains correlated",
+    "inverse_methods": [
+      "Tikhonov",
+      "MNE",
+      "dSPM"
+    ],
+    "prior": "M31 cell-volume law adapted through explicit MRI domain",
+    "noise_V": [
+      0,
+      5e-08
+    ],
+    "noise_seed": 32043,
+    "regularization": "fixed MNE/dSPM1/9; Tikhonov spectral alpha/bmax .001; no final-location tuning",
+    "inverse_gate": "primary level3/4 geometry and finite numerical fields; record unmatched/unconverged evidence and omit claims of absolute accuracy"
+  },
+  "privacy": {
+    "raw_and_derived_anatomy": "ignored reports/data only",
+    "public": "whitelisted dataset aggregates, algorithm/config hashes, nonidentifying numerical/QC summaries; no input MRI hashes/affines, model vertices, images, individual identifiers or raw lead fields",
+    "viewer": "explicit local allowlist only; no bundled participant anatomy"
+  },
+  "budget": {
+    "total_seconds": 7200,
+    "solver_timeout_seconds": 600,
+    "worker_peak_MiB": 4096,
+    "workers": 1
+  },
+  "failures": "retain every attempted case/level/backend failure, missing evidence and blocked step; do not repair data/retune targets after outcomes",
+  "M33": "only evidence-labeled inputs and exploratory ranges, no distributions from missing truth; no factorial now",
+  "seal": "local, not external preregistration"
+}
