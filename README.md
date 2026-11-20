@@ -77,7 +77,7 @@ from soma.signal.spectral import welch, WelchConfig
 
 signal = synthetic("sine10", seed=42)
 spectrum = welch(signal, WelchConfig(nperseg=320, noverlap=160))
-print(spectrum.peak_frequency, spectrum.band_power(8, 13))   # 10.0 ...
+print(spectrum.peak_frequency, spectrum.band_power(8, 13))  # 10.0 ...
 ```
 
 To work with real EEG, fetch an explicit selection first. This is the only step
