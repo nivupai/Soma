@@ -1,9 +1,11 @@
 """SynthSeg label import: fixed ontology map and native-grid return, no tool execution here."""
 
+from pathlib import Path
 from typing import Any
 
 import numpy as np
 
+from soma.imaging.nifti import load_nifti
 from soma.imaging.resampling import resample
 from soma.imaging.segmentation import require_labels
 from soma.imaging.volumes import Volume
@@ -61,3 +63,12 @@ def intracranial_mask(labels: Volume, *, dilation_voxels: int = 1) -> Volume:
         "labels",
         {"mask": "synthseg-nonbackground", "dilation_voxels": dilation_voxels},
     )
+
+
+def load_synthseg(path: Path) -> Volume:
+    """Load SynthSeg output; it works in mm, and inherits 'unknown' units from IBSR headers."""
+    import nibabel as nib
+
+    unit = nib.load(path).header.get_xyzt_units()[0]
+    override = "mm" if unit == "unknown" else None
+    return load_nifti(path, policy="sform", units_override=override, kind="labels")

@@ -34,9 +34,13 @@ from soma.datasets.human_mri import (
     mapped_reference,
     safe_local_output,
 )
-from soma.imaging.nifti import load_nifti
 from soma.imaging.volumes import Volume
-from soma.pipeline.synthseg import intracranial_mask, map_synthseg, to_native_grid
+from soma.pipeline.synthseg import (
+    intracranial_mask,
+    load_synthseg,
+    map_synthseg,
+    to_native_grid,
+)
 from soma.validation.cohort import subject_interval
 
 PROTOCOL = Path("docs/MILESTONE33_SEGMENTATION_PROTOCOL.md")
@@ -68,7 +72,7 @@ def run_synthseg(command: str, image_path: Path, cache: Path) -> Path:
 def predictions(
     image: Volume, synthseg_path: Path, *, subject: str, space: str
 ) -> dict[str, LabelVolume]:
-    raw = load_nifti(synthseg_path, policy="sform", kind="labels")
+    raw = load_synthseg(synthseg_path)
     mapped, receipt = to_native_grid(map_synthseg(raw), image)
     raw_native, _ = to_native_grid(raw, image)
     mask = intracranial_mask(raw_native)
