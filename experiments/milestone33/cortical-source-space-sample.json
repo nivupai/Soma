@@ -1,0 +1,263 @@
+{
+  "schema": "soma.cortical-source-space/1",
+  "frame": "MRI_surface_RAS_m",
+  "units": {
+    "positions": "m",
+    "areas": "m2 (reported as mm2)",
+    "normals": "unit"
+  },
+  "surface": "white/pial midsurface: vertexwise mean of white and pial, shared topology",
+  "spacing": "oct6",
+  "spacing_definition": "oct6: 4098 unit-sphere vertices per hemisphere (count-matched to MNE; not vertex-identical), each mapped to its nearest subject-sphere vertex; duplicates merged",
+  "weights": "barycentric midsurface vertex area of every eligible full-resolution vertex, assigned to its sphere-nearest eligible candidate; excluded patches are not redistributed",
+  "normals": "area-weighted midsurface vertex normals from outward FreeSurfer winding",
+  "hemispheres": {
+    "lh": {
+      "full_resolution_vertices": 155407,
+      "midsurface_area_mm2": 107073.92396800952,
+      "label_excluded_vertices": 8260,
+      "candidate_sources": 4098,
+      "eligible_candidates": 3821,
+      "sources": 3809,
+      "retained_area_mm2": 101183.2799566017,
+      "midsurface_signed_volume_mm3": 411836.9644679279
+    },
+    "rh": {
+      "full_resolution_vertices": 156866,
+      "midsurface_area_mm2": 108473.05126589337,
+      "label_excluded_vertices": 8641,
+      "candidate_sources": 4098,
+      "eligible_candidates": 3817,
+      "sources": 3809,
+      "retained_area_mm2": 102359.2353938795,
+      "midsurface_signed_volume_mm3": 412051.5030260203
+    }
+  },
+  "counts": {
+    "full_resolution_vertices": 312273,
+    "candidate_sources": 8196,
+    "sources": 7618,
+    "excluded_candidates_by_reason": {
+      "anatomical_label": 558,
+      "orientation_undefined_zero_thickness": 0,
+      "normal_opposes_white_to_pial": 1,
+      "outside_inner_skull": 19,
+      "inner_skull_margin_below_minimum": 0
+    }
+  },
+  "coverage": {
+    "area_fraction_of_midsurface": 0.9443069898318223,
+    "area_fraction_of_eligible_cortex": 0.9958771904428932,
+    "full_resolution_vertices_represented_fraction": 0.9422524521812645,
+    "vertex_fraction_retained": 0.024395320761000792,
+    "midsurface_area_mm2": 215546.9752339029,
+    "retained_area_mm2": 203542.51535048118,
+    "definitions": {
+      "area_fraction_of_midsurface": "sum of retained source patch areas / total midsurface area of both hemispheres (barycentric vertex areas; medial wall and every excluded patch count against it)",
+      "area_fraction_of_eligible_cortex": "sum of retained source patch areas / midsurface area after label exclusions (fraction lost only to containment/orientation exclusions)",
+      "full_resolution_vertices_represented_fraction": "full-resolution vertices whose patch is assigned to a retained source / all full-resolution vertices",
+      "vertex_fraction_retained": "retained sources / full-resolution vertices (decimation ratio, not coverage)"
+    }
+  },
+  "containment": {
+    "surface": "inner skull",
+    "inner_skull": {
+      "vertex_count": 2562,
+      "face_count": 5120,
+      "outward_global_winding": true,
+      "geometrically_valid_under_checks": true
+    },
+    "test": "generalized winding number (soma.imaging.mesh_quality.contains)",
+    "minimum_margin_m": 0.0,
+    "tested_candidates": 7638,
+    "inside_candidates": 7619,
+    "outside_candidates": 19,
+    "candidate_signed_margin_min_mm": -1.8389972713199092,
+    "retained_sources_inside": 7618,
+    "retained_margin_min_mm": 0.018157832883284736,
+    "retained_margin_median_mm": 12.700074722928148,
+    "retained_below_mm": {
+      "1": 92,
+      "2": 308,
+      "5": 1227
+    },
+    "all_retained_inside": true
+  },
+  "orientation": {
+    "check": "cosine between source normal and unit white->pial vector",
+    "minimum_thickness_m": 1e-05,
+    "defined_candidates": 7638,
+    "outward_candidates": 7637,
+    "outward_fraction_of_defined": 0.9998690756742603,
+    "cosine_median": 0.9139237199838421,
+    "cosine_min": -0.09171633010346132,
+    "retained_cosine_min": 0.27190004928766565,
+    "retained_cosine_median": 0.9138002713112654,
+    "global_midsurface_winding_outward": true
+  },
+  "exclusions": [
+    {
+      "hemisphere": "lh",
+      "reason": "anatomical_label",
+      "label": "unknown",
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {
+        "unknown": 0
+      }
+    },
+    {
+      "hemisphere": "lh",
+      "reason": "anatomical_label",
+      "label": "corpuscallosum",
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {
+        "corpuscallosum": 0
+      }
+    },
+    {
+      "hemisphere": "lh",
+      "reason": "anatomical_label",
+      "label": "unlabelled (aparc -1; FreeSurfer medial wall)",
+      "full_resolution_vertices": 8260,
+      "area_mm2": 5440.534754118239,
+      "candidate_sources": 277,
+      "candidate_regions": {
+        "unlabelled (aparc -1; FreeSurfer medial wall)": 277
+      }
+    },
+    {
+      "hemisphere": "lh",
+      "reason": "orientation_undefined_zero_thickness",
+      "label": null,
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {}
+    },
+    {
+      "hemisphere": "lh",
+      "reason": "normal_opposes_white_to_pial",
+      "label": null,
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {}
+    },
+    {
+      "hemisphere": "lh",
+      "reason": "outside_inner_skull",
+      "label": null,
+      "full_resolution_vertices": 629,
+      "area_mm2": 450.10925728957596,
+      "candidate_sources": 12,
+      "candidate_regions": {
+        "cuneus": 1,
+        "inferiortemporal": 1,
+        "lateraloccipital": 9,
+        "parsorbitalis": 1
+      }
+    },
+    {
+      "hemisphere": "lh",
+      "reason": "inner_skull_margin_below_minimum",
+      "label": null,
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {}
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "anatomical_label",
+      "label": "unknown",
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {
+        "unknown": 0
+      }
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "anatomical_label",
+      "label": "corpuscallosum",
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {
+        "corpuscallosum": 0
+      }
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "anatomical_label",
+      "label": "unlabelled (aparc -1; FreeSurfer medial wall)",
+      "full_resolution_vertices": 8641,
+      "area_mm2": 5721.284053056584,
+      "candidate_sources": 281,
+      "candidate_regions": {
+        "unlabelled (aparc -1; FreeSurfer medial wall)": 281
+      }
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "orientation_undefined_zero_thickness",
+      "label": null,
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {}
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "normal_opposes_white_to_pial",
+      "label": null,
+      "full_resolution_vertices": 41,
+      "area_mm2": 29.037952078278277,
+      "candidate_sources": 1,
+      "candidate_regions": {
+        "rostralanteriorcingulate": 1
+      }
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "outside_inner_skull",
+      "label": null,
+      "full_resolution_vertices": 462,
+      "area_mm2": 363.4938668790029,
+      "candidate_sources": 7,
+      "candidate_regions": {
+        "inferiortemporal": 2,
+        "lateraloccipital": 5
+      }
+    },
+    {
+      "hemisphere": "rh",
+      "reason": "inner_skull_margin_below_minimum",
+      "label": null,
+      "full_resolution_vertices": 0,
+      "area_mm2": 0.0,
+      "candidate_sources": 0,
+      "candidate_regions": {}
+    }
+  ],
+  "volumetric_option": "soma.source.domains.SourceDomain unchanged",
+  "anatomical_accuracy_established": false,
+  "volumetric_baseline": {
+    "source": "experiments/milestone32/aggregate.json",
+    "eligible_fraction": 0.13099493487698988,
+    "definition": "automated MRI GM inside conservative inner-skull inscribed region; not full cortical coverage",
+    "comparable_measure": false,
+    "note": "voxel-count fraction of GM inside an inscribed region vs. surface-area fraction; reported side by side, not as the same estimand"
+  },
+  "subject": "MNE sample (public dataset)",
+  "implementation_sha256": {
+    "scripts/run_cortical_source_space.py": "b68c6bde381d681ebffa8315e186caa8ad10780d7613c4519502dec6448137a7",
+    "src/soma/source/cortical.py": "3ab338807c5de7d20629dcaff73f96d09abeddf411f5c0b73092433eba7a7c13"
+  },
+  "seconds": 14.533134041994344
+}
