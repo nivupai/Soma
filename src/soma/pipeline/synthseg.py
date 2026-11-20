@@ -69,6 +69,7 @@ def load_synthseg(path: Path) -> Volume:
     """Load SynthSeg output; it works in mm, and inherits 'unknown' units from IBSR headers."""
     import nibabel as nib
 
-    unit = nib.load(path).header.get_xyzt_units()[0]
+    image: Any = nib.load(path)
+    unit = image.header.get_xyzt_units()[0]
     override = "mm" if unit == "unknown" else None
     return load_nifti(path, policy="sform", units_override=override, kind="labels")
