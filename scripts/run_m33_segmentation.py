@@ -62,7 +62,9 @@ def run_synthseg(command: str, image_path: Path, cache: Path) -> Path:
     if out.exists():
         return out
     cache.mkdir(parents=True, exist_ok=True)
-    argv = [a.format(input=image_path, output=out) for a in shlex.split(command)]
+    argv = [
+        a.format(input=image_path.resolve(), output=out.resolve()) for a in shlex.split(command)
+    ]
     start = time.perf_counter()
     subprocess.run(argv, check=True)
     (cache / "runtime.json").write_text(json.dumps({"runtime_s": time.perf_counter() - start}))
