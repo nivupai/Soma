@@ -6,6 +6,8 @@ from typing import Any
 
 import numpy as np
 
+from soma.anatomy.head_models import MRIFrameChain as MRIFrameChain
+from soma.anatomy.head_models import classify_anatomy as classify_anatomy
 from soma.benchmarks.segmentation import LabelVolume as LabelVolume
 from soma.benchmarks.segmentation import score as _score
 from soma.geometry import Frame as Frame

@@ -190,6 +190,27 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     from .source_uncertainty import router as uncertainty_router
 
     app.include_router(uncertainty_router())
+    from .anatomical_models import private_anatomy_path, private_view_allowed
+    from .anatomical_models import router as anatomical_router
+
+    @app.middleware("http")
+    async def local_anatomy_guard(request: Request, call_next: Any) -> Any:
+        # Covers existing MRI slice/metadata routes too, not just the new mesh route.
+        if private_anatomy_path(request.url.path) and not private_view_allowed(request):
+            from fastapi.responses import JSONResponse
+
+            return JSONResponse(
+                status_code=403,
+                content={
+                    "detail": (
+                        "Private M32 anatomy requires explicit local opt-in "
+                        "and direct loopback access"
+                    )
+                },
+            )
+        return await call_next(request)
+
+    app.include_router(anatomical_router(registry))
     app.include_router(protocol_router(registry))
     from .human import router as human_router
 

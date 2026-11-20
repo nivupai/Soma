@@ -13,6 +13,7 @@ from numpy.typing import NDArray
 from scipy.spatial import cKDTree
 from scipy.stats import qmc
 
+from soma.source.domains import SourceDomain
 from soma.source.noise import NoiseModel
 
 Array = NDArray[np.float64]
@@ -20,7 +21,9 @@ PriorKind = Literal["unweighted", "cell_volume", "total_variance"]
 Method = Literal["Tikhonov", "MNE", "dSPM"]
 
 
-def positions(value: Array) -> Array:
+def positions(value: Array, domain: SourceDomain | None = None) -> Array:
+    if domain is not None:
+        return domain.positions(value)
     p = np.asarray(value, dtype=float)
     if (
         p.ndim != 2
@@ -34,8 +37,11 @@ def positions(value: Array) -> Array:
     return p
 
 
-def grid_hash(grid: Array) -> str:
-    return hashlib.sha256(np.ascontiguousarray(positions(grid), dtype="<f8").tobytes()).hexdigest()
+def grid_hash(grid: Array, domain: SourceDomain | None = None) -> str:
+    prefix = b"" if domain is None else domain.identity.encode()
+    return hashlib.sha256(
+        prefix + np.ascontiguousarray(positions(grid, domain), dtype="<f8").tobytes()
+    ).hexdigest()
 
 
 def cell_volumes(grid: Array, probes: int = 65536) -> Array:
@@ -69,10 +75,11 @@ class SourcePrior:
     moment_scale_Am: float = 1e-8
     coefficient_unit: str = "A*m"
     orientation_order: str = "source-major XYZ"
+    domain: SourceDomain | None = None
 
     def __post_init__(self) -> None:
         d, v = np.asarray(self.diagonal, float), np.asarray(self.volumes_m3, float)
-        domain = 4 * np.pi * 0.065**3 / 3
+        domain = 4 * np.pi * 0.065**3 / 3 if self.domain is None else self.domain.volume_m3
         if (
             v.ndim != 1
             or not len(v)
@@ -103,20 +110,32 @@ class SourcePrior:
             object.__setattr__(self, name, value)
 
     @classmethod
-    def create(cls, grid: Array, kind: PriorKind, volumes: Array | None = None) -> "SourcePrior":
-        p = positions(grid)
-        v = cell_volumes(p) if volumes is None else np.asarray(volumes, float)
+    def create(
+        cls,
+        grid: Array,
+        kind: PriorKind,
+        volumes: Array | None = None,
+        *,
+        domain: SourceDomain | None = None,
+    ) -> "SourcePrior":
+        p = positions(grid, domain)
+        v = (
+            (cell_volumes(p) if domain is None else domain.weights(p))
+            if volumes is None
+            else np.asarray(volumes, float)
+        )
+        domain_volume = 4 * np.pi * 0.065**3 / 3 if domain is None else domain.volume_m3
         if kind == "unweighted":
             d = np.ones(len(p))
         elif kind == "cell_volume":
-            d = 12 * v / (4 * np.pi * 0.065**3 / 3)
+            d = 12 * v / domain_volume
         elif kind == "total_variance":
             d = np.full(len(p), 12 / len(p))
         else:
             raise ValueError("Unsupported source prior")
         if v.shape != (len(p),):
             raise ValueError("Cell/grid dimension mismatch")
-        return cls(grid_hash(p), np.repeat(d, 3), v, kind)
+        return cls(grid_hash(p, domain), np.repeat(d, 3), v, kind, domain=domain)
 
     @property
     def trace_Am2(self) -> float:
@@ -140,7 +159,7 @@ class PriorInverse:
     def __post_init__(self) -> None:
         g = np.asarray(self.lead, float)
         if (
-            grid_hash(self.grid) != self.prior.grid_fingerprint
+            grid_hash(self.grid, self.prior.domain) != self.prior.grid_fingerprint
             or g.shape != (len(self.noise.channels), len(self.prior.diagonal))
             or not np.isfinite(g).all()
             or not np.any(g)
@@ -148,7 +167,7 @@ class PriorInverse:
             or not np.allclose(self.noise.projector @ g, g, rtol=1e-10, atol=1e-12)
         ):
             raise ValueError("Forward/prior grid order, reference or dimensions disagree")
-        for name, value in [("lead", g), ("grid", positions(self.grid))]:
+        for name, value in [("lead", g), ("grid", positions(self.grid, self.prior.domain))]:
             value = value.copy()
             value.flags.writeable = False
             object.__setattr__(self, name, value)

@@ -1,0 +1,38 @@
+{
+  "schema": "soma.mri-execution-history/1",
+  "executions": [
+    {
+      "label": "initial exact-code replay",
+      "implementation_commit": "dd7d6b6",
+      "seconds": 218.0133069580188,
+      "parent_peak_MiB": 875.8125,
+      "maximum_worker_peak_MiB": 1400.8125,
+      "executed_code_sha256": {
+        "scripts/run_mri_head_models.py": "58e23f57f042e194d37be3d01d1bb5f72a3c32812fbf9339b32c8ee8a46339fd",
+        "scripts/mri_head_worker.py": "e2e8afa1002b876f34c0cdfa45b88c22e6bd91060d5eac371889fb853c277612",
+        "src/soma/anatomy/head_models.py": "071de3c91b6ba47e59d6b6267067ca8a02bb2394ddfbc4ff6b63e28249c67d88",
+        "src/soma/source/domains.py": "ffe846a87393066ce976b1d9cdc57271fc9ea9a44dbbb6111e233069b63aadbc",
+        "src/soma/source/prior_calibration.py": "7a5e47af2fc889ad52574daed898173c522759a58a246702a20fcf3092f50ffe",
+        "src/soma/validation/human_tissues.py": "ff0c1013b5faf955678d570353c0369acc133105213cd8a9aa570bdab874f850"
+      }
+    },
+    {
+      "label": "intrinsic evidence-domain guard replay",
+      "implementation_commit": "8c7e6d6",
+      "seconds": 213.19017099996563,
+      "parent_peak_MiB": 795.953125,
+      "maximum_worker_peak_MiB": 1406.078125,
+      "executed_code_sha256": {
+        "scripts/run_mri_head_models.py": "58e23f57f042e194d37be3d01d1bb5f72a3c32812fbf9339b32c8ee8a46339fd",
+        "scripts/mri_head_worker.py": "e2e8afa1002b876f34c0cdfa45b88c22e6bd91060d5eac371889fb853c277612",
+        "src/soma/anatomy/head_models.py": "da8cfe2bc364e4d852ebe6cee052c0efafbb613d9a10db3eef77ed5b175b7847",
+        "src/soma/source/domains.py": "ffe846a87393066ce976b1d9cdc57271fc9ea9a44dbbb6111e233069b63aadbc",
+        "src/soma/source/prior_calibration.py": "7a5e47af2fc889ad52574daed898173c522759a58a246702a20fcf3092f50ffe",
+        "src/soma/validation/human_tissues.py": "ff0c1013b5faf955678d570353c0369acc133105213cd8a9aa570bdab874f850"
+      }
+    }
+  ],
+  "all_scientific_metrics_equal": true,
+  "all_four_operator_files_byte_identical": true,
+  "scope": "same-environment repeatability; earlier results retained, not relabeled"
+}

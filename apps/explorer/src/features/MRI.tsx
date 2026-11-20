@@ -8,7 +8,7 @@ import {
   useResource,
   Warning,
 } from "../components/Common";
-function SliceCanvas({
+export function SliceCanvas({
   slice,
   meta,
   range,

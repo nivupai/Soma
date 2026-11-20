@@ -11,6 +11,7 @@ from soma.experiments.nonspherical import run_nonspherical as run_nonspherical
 from soma.experiments.source_uncertainty import run_uncertainty as run_uncertainty
 from soma.source.bem_discrepancy import design as _bem_design
 from soma.source.bem_discrepancy import protocol as _bem_protocol
+from soma.source.domains import SourceDomain as SourceDomain
 from soma.source.fem_reference import full_subtraction as _fem_forward
 from soma.source.fem_reference import layered_sphere_series as _layered_sphere
 from soma.source.forward import ForwardModel as ForwardModel

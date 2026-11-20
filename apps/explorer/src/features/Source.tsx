@@ -11,6 +11,7 @@ import {
   Warning,
 } from "../components/Common";
 import BrainScene from "../components/BrainScene";
+import HumanHeadModels from "./HumanHeadModels";
 import SourceUncertainty from "./SourceUncertainty";
 export default function Source({
   id,
@@ -196,6 +197,7 @@ export default function Source({
         </Panel>
       </div>
       <SourceUncertainty />
+      <HumanHeadModels />
       <Evidence result={mesh.data} />
     </>
   );

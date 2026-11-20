@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.32.0 — MRI-derived head models and anatomical evidence
+
+- Execute independent tissue-baseline replication on 18 IBSR and five MRBrainS training
+  cases, preserving poor segmentation results and all historical scientific outputs.
+- Add explicit scanner/surface/head geometry, MRI voxel-measure source priors and
+  evidence-based conductor readiness; execute one real MRI-derived QC-only BEM workflow.
+- Retain the failed coarse refinement target, missing conductor truth and limited
+  source coverage. No human source-localization accuracy or compatible human FEM claim.
+- Add public aggregate reports and an explicitly opted-in, loopback-only private MRI
+  showcase; participant anatomy and image fingerprints remain outside public assets.
+- Extend the four-platform mandatory software gate without changing native Gmsh policy.
+
 ## 0.31.0 — inverse priors and source-density calibration
 
 - Add explicit integrated-moment covariance priors, spectral and independent-repeat

@@ -1,0 +1,48 @@
+{
+  "schema": "soma.mri-dataset-geometry-aggregate/1",
+  "data": [
+    {
+      "dataset": "ibsr-v2",
+      "image_reference_files": 36,
+      "coded_sform_files": 36,
+      "coded_qform_files": 0,
+      "qform_sform_max_corner_difference_mm": null,
+      "spacing_axis_min_mm": [
+        0.8370535969734192,
+        1.5,
+        0.8370535969734192
+      ],
+      "spacing_axis_max_mm": [
+        1.0,
+        1.5,
+        1.0
+      ],
+      "storage_orientations": {
+        "RAS": 36
+      }
+    },
+    {
+      "dataset": "mrbrains13",
+      "image_reference_files": 10,
+      "coded_sform_files": 10,
+      "coded_qform_files": 10,
+      "qform_sform_max_corner_difference_mm": 0.42909973916728744,
+      "spacing_axis_min_mm": [
+        0.9583326578140259,
+        0.9583325386047363,
+        2.9999983310699463
+      ],
+      "spacing_axis_max_mm": [
+        0.9583332538604736,
+        0.9583332538604736,
+        3.0000011920928955
+      ],
+      "storage_orientations": {
+        "LPS": 10
+      }
+    }
+  ],
+  "reference_resampling_cases": 0,
+  "intensity_alignment_cases": 2,
+  "hidden_test_data_opened": false
+}

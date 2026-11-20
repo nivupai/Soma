@@ -1,0 +1,6 @@
+{
+  "schema": "soma.local-protocol-seal/1",
+  "design_sha256": "89690086412e8682d4f4d19e7657644588b7e240590f15afd2dd464c3cf5d619",
+  "outcomes_inspected": false,
+  "external_preregistration": false
+}
