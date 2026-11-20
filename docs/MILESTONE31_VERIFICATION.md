@@ -36,3 +36,20 @@ inspected. Gmsh portability and MRI-derived anatomical accuracy are not establis
 Final test, security, packaging and exact-head GitHub receipts are recorded in a
 verification addendum after checks complete. No merge or M32 is authorized by
 passing this local study alone.
+
+## Final local numerical checks
+
+Full suite: 1,725 passed (117 warnings); offline suite: 1,708 passed, 17 integration
+tests deselected (115 warnings). All earlier 1,699 tests remain present. There are
+26 new Python regressions, 50 frontend tests and 24 configured local browser tests.
+Ruff/formatting, TypeScript/lint/Prettier and strict mypy over 295 source files pass.
+SDK examples increase from 22 to 23. Complete npm audit reports zero vulnerabilities;
+Python dependency consistency/audit pass (the local Soma package is not on PyPI
+and is reported as unauditable by pip-audit). No audit ignore was introduced.
+
+The new cross-platform fixture uses exact analytical Voronoi slab volumes for
+three collinear sites, avoiding platform-sensitive quadrature inputs when testing
+inverse arithmetic. A separate analytical integral check bounds the fixed Sobol
+fixture's absolute cell-mass fraction error by 5×10⁻⁴; this is an additional bounded
+geometry regression, not a relaxation of M30 or algebraic tolerances. The full
+scientific experiment continues to use its originally frozen Sobol quadrature.

@@ -123,3 +123,18 @@ The derived distances and all inverse rows are retained in the public tables.
 Source generators retain the original upper-hemisphere convention, limiting spatial
 generalization. Arbitrary MRI-domain quadrature and physiological source correlations
 remain work for subsequent modeling; the current SDK control assumes a 65 mm ball.
+
+A descriptive paired-pool check on the original non-nested grids illustrates H3.
+At 0.05 µV, Tikhonov unweighted/historical mean error on 33/147/341 candidates is
+25.341/32.905/40.444 mm. Total-variance/historical gives 23.706/27.675/30.350 mm;
+cell-volume/historical gives 21.890/27.142/26.014 mm. Fixing the spectral scale with
+unweighted priors gives 23.536/27.735/31.587 mm. Thus controls reduce, but do not
+eliminate, the nonmonotonicity. These are descriptive functions of the published
+held-out summary, not new tuned acceptance metrics. The identical-geometry
+cart30/nested0 ordering control has zero difference in mean peak error for every
+prior/method/policy/noise combination. Candidate arrangement and density still
+cannot be separately assigned a unique causal fraction in the other comparisons.
+
+The simulated generators are single point dipoles, not draws from the diffuse
+white-density prior. Performance changes do not establish that prior as the true
+generative distribution or a physiological model.

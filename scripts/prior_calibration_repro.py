@@ -16,9 +16,17 @@ def run():
     proj = average_projector(5)
     g = proj @ np.sin(np.arange(45).reshape(5, 9) + 0.3) * 100
     noise = NoiseModel((5e-8) ** 2 * proj, tuple("abcde"), proj)
+    # Exact Voronoi slabs: x = ±0.01 m bisect the three collinear sites.
+    # This fixes identical physical covariance inputs, independently of trig/QMC.
+    radius, half_width = 0.065, 0.01
+    volume = 4 * np.pi * radius**3 / 3
+    central_fraction = 3 * half_width / (2 * radius) - half_width**3 / (2 * radius**3)
+    volumes = volume * np.array(
+        [central_fraction, (1 - central_fraction) / 2, (1 - central_fraction) / 2]
+    )
     data = []
     for kind in ["unweighted", "cell_volume", "total_variance"]:
-        prior = SourcePrior.create(p, kind)
+        prior = SourcePrior.create(p, kind, volumes)
         for method in ["Tikhonov", "MNE", "dSPM"]:
             inv = PriorInverse(g, p, prior, noise, method)
             data.append(

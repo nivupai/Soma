@@ -36,6 +36,10 @@ def test_covariance_and_continuous_mass(kind):
     v = cell_volumes(p)
     prior = SourcePrior.create(p, kind, v)
     assert np.isclose(v.sum(), 4 * np.pi * 0.065**3 / 3, rtol=1e-14)
+    # Independent analytical ball/slab integral checks the approximate cell masses.
+    central = 3 * 0.01 / (2 * 0.065) - 0.01**3 / (2 * 0.065**3)
+    exact = np.array([central, (1 - central) / 2, (1 - central) / 2])
+    assert np.max(np.abs(v / v.sum() - exact)) < 5e-4
     assert np.all(prior.diagonal > 0) and not prior.diagonal.flags.writeable
     assert np.isclose(prior.trace_Am2, (9 if kind == "unweighted" else 36) * 1e-16, rtol=1e-12)
     if kind == "cell_volume":
