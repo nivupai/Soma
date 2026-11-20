@@ -250,7 +250,8 @@ export default function InverseCalibration() {
                 <p>
                   Actual head 0, new source 12, XY projection. {example.units};
                   dSPM is dimensionless and cannot be interpreted as dipole
-                  current.
+                  current. Point-spread response units:{" "}
+                  {method === "dSPM" ? "1/(A·m)" : "1"}.
                 </p>
                 <div className="two-col">
                   {(["amplitude", "PSF"] as const).map((key) => {

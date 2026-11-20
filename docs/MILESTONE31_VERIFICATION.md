@@ -53,3 +53,26 @@ inverse arithmetic. A separate analytical integral check bounds the fixed Sobol
 fixture's absolute cell-mass fraction error by 5×10⁻⁴; this is an additional bounded
 geometry regression, not a relaxation of M30 or algebraic tolerances. The full
 scientific experiment continues to use its originally frozen Sobol quadrature.
+
+## Packaging and publication boundary
+
+Independent fixed-epoch wheel/sdist builds are byte-reproducible. Distribution
+inspection passes. Fresh noneditable wheel, sdist and source installations each
+execute 23 SDK examples, verify 321 package payload files, and pass dependency
+consistency and vulnerability audits. Installed BEM/FEM/Gmsh physical smoke checks
+also pass. Core code is unchanged by the final documentation/CI-reference refinements.
+
+The committed-history privacy scan at fdd51f4 checks 1,758 current files, 95 commits
+and 2,269 blobs: zero material secrets, restricted datasets or personal-home paths;
+65 existing reviewed false positives and no rule suppression. The final exact-head
+scan is rerun before push. All 957 historical experiment/config/test hashes and all
+46 M24 archive files remain unchanged. Raw medical datasets, credentials and local
+scientific outputs remain ignored. All new scientific figures are reviewable SVG
+text and all numerical shards remain below the existing 5 MiB publication limit.
+
+The final branch PR carries actual four-platform run links and job outcomes; local
+passes do not substitute for CI. Canonical reproducibility remains mandatory. A
+changed native signature, malformed report or unexpected native pass remains a
+blocking policy finding. No automatic merge is authorized by these local results.
+The scientific results and complete required CI must be reviewed and accepted
+before merging; M32 is not started.

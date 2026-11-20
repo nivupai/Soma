@@ -138,3 +138,12 @@ cannot be separately assigned a unique causal fraction in the other comparisons.
 The simulated generators are single point dipoles, not draws from the diffuse
 white-density prior. Performance changes do not establish that prior as the true
 generative distribution or a physiological model.
+
+Exploratory depth/orientation associations in the displayed nested-481, cell-volume,
+spectral-MNE, 0.05 µV slice are computed after averaging repeats per test source.
+Within-head Pearson correlations of error with actual brain-interface depth are
+0.457/0.284/0.611/0.324/0.263/−0.011 for heads 0–5; correlations with absolute radial
+orientation cosine are −0.256/0.671/−0.195/−0.121/−0.233/−0.447. These ten-source
+within-head summaries are descriptive and confounded by location/geometry; no
+causal orientation effect or population significance is claimed. One orientation
+is drawn per off-grid source, rather than a full factorial rotation experiment.
