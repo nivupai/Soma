@@ -14,6 +14,8 @@ import numpy as np
 import pandas as pd
 
 from scripts.run_inverse_calibration import DESIGN_SHA, grids, lead_for
+from soma.imaging.mesh_quality import _point_triangle
+from soma.source.mesh_replication import boundaries
 from soma.source.noise import NoiseModel, average_projector
 from soma.source.prior_calibration import (
     PriorInverse,
@@ -30,6 +32,24 @@ def run(root, out):
     fig = out / "figures"
     fig.mkdir(exist_ok=True)
     x = pd.read_csv(root / "reconstructions.csv")
+    geometry = []
+    sources = json.loads((root / "sources.json").read_text())
+    for head in range(6):
+        surface = boundaries(head, 3)[0]
+        triangles = surface.vertices.xyz[surface.faces]
+        for source in sources:
+            if source["head"] != head:
+                continue
+            point = np.array(source["xyz_m"])
+            distance = _point_triangle(np.broadcast_to(point, (len(triangles), 3)), triangles)
+            depth = float(distance.min() * 1000)
+            if depth <= 0:
+                raise ValueError("Invalid positive source-to-brain distance")
+            geometry.append(dict(head=head, source=source["source"], brain_surface_depth_mm=depth))
+    source_geometry = pd.DataFrame(geometry)
+    source_geometry.to_csv(out / "source-geometry.csv", index=False)
+    x = x.merge(source_geometry, on=["head", "source"], validate="many_to_one")
+
     ops = pd.read_csv(root / "operators.csv")
     rep = pd.read_csv(root / "M30-replication.csv")
     failures = json.loads((root / "failures.json").read_text())
@@ -200,6 +220,10 @@ def run(root, out):
         plt.title(title)
         plt.tight_layout()
         plt.savefig(fig / (name + ".svg"), metadata={"Date": None})
+        target = fig / (name + ".svg")
+        target.write_text(
+            "\n".join(line.rstrip() for line in target.read_text().splitlines()) + "\n"
+        )
         plt.close()
 
     for method, g in replication.groupby("method"):
@@ -297,13 +321,13 @@ def run(root, out):
             & (x.method == "MNE")
             & (x.split == "test")
         ]
-        .groupby(["head", "source", "noise_std_V"])[["depth_radius_mm", "localization_mm"]]
+        .groupby(["head", "source", "noise_std_V"])[["brain_surface_depth_mm", "localization_mm"]]
         .mean()
         .reset_index()
     )
     for std, g in sens.groupby("noise_std_V"):
-        plt.scatter(g.depth_radius_mm, g.localization_mm, s=12, label=f"{std * 1e6:g} µV")
-    plt.xlabel("Source radial depth coordinate (mm)")
+        plt.scatter(g.brain_surface_depth_mm, g.localization_mm, s=12, label=f"{std * 1e6:g} µV")
+    plt.xlabel("Distance below finest brain interface (mm)")
     plt.ylabel("Peak error (mm)")
     plt.legend()
     save("10-noise-depth", "Each point is a source average, not an independent participant")
@@ -345,7 +369,13 @@ def run(root, out):
         "failures": failures,
         "source_metrics": x[(x.solver == "fem") & (x.split == "test")]
         .groupby([*KEYS, "head", "source"])[
-            ["depth_radius_mm", "orientation_radial_cosine", "localization_mm", "dispersion_mm"]
+            [
+                "depth_radius_mm",
+                "brain_surface_depth_mm",
+                "orientation_radial_cosine",
+                "localization_mm",
+                "dispersion_mm",
+            ]
         ]
         .mean()
         .reset_index()

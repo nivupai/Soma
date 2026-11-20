@@ -1,0 +1,10 @@
+{
+  "schema": "soma.m31.analysis-clarification/1",
+  "after_inverse_outcomes_known": true,
+  "metric": "minimum distance to finest synthetic brain-interface triangulation; radial coordinate retained separately",
+  "initial_radius_figure_commit": "f2d315a05e7a61281903b6be4ba5a566fe762258",
+  "inverse_outputs_unchanged": true,
+  "calibration_and_split_unchanged": true,
+  "protocol_design_unchanged": true,
+  "formatting": "SVG trailing whitespace normalized; mathematical data unaffected"
+}

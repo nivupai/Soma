@@ -18,6 +18,7 @@ type Source = Row & {
   head: number;
   source: number;
   depth_radius_mm: number;
+  brain_surface_depth_mm: number;
   orientation_radial_cosine: number;
 };
 type Example = Row & {
@@ -69,7 +70,7 @@ export default function InverseCalibration() {
   const selected = rows.find((a) => a.grid === grid);
   const sources =
     report?.source_metrics.filter(
-      (a) => match(a) && a.grid === grid && a.depth_radius_mm >= depth,
+      (a) => match(a) && a.grid === grid && a.brain_surface_depth_mm >= depth,
     ) ?? [];
   const example = report?.examples.find((a) => match(a) && a.grid === grid);
   return (
@@ -201,9 +202,9 @@ export default function InverseCalibration() {
               </tbody>
             </table>
             <label>
-              Head 0 source detail: minimum radial coordinate (mm){" "}
+              Head 0 source detail: minimum distance below brain interface (mm){" "}
               <input
-                aria-label="Source radial coordinate"
+                aria-label="Source brain depth"
                 type="range"
                 min="0"
                 max="60"
@@ -215,7 +216,8 @@ export default function InverseCalibration() {
             <p>
               Depth/orientation detail is a bounded head 0 slice at 0.05 µV. The
               table above always uses all 60 test sources across six heads.
-              Radius is distance from origin, not distance below cortex.
+              Depth is minimum distance to the finest synthetic brain interface;
+              radius is retained separately.
             </p>
             <svg
               viewBox="0 0 420 180"
@@ -226,7 +228,7 @@ export default function InverseCalibration() {
               {sources.map((s) => (
                 <circle
                   key={s.source}
-                  cx={20 + s.depth_radius_mm * 5}
+                  cx={20 + s.brain_surface_depth_mm * 7}
                   cy={160 - Math.min(s.localization_mm, 140)}
                   r="5"
                   fill="var(--cyan)"
@@ -239,8 +241,8 @@ export default function InverseCalibration() {
                 </circle>
               ))}
               <text x="8" y="178" fill="currentColor" fontSize="10">
-                Radius → · Error ↑ · hover for orientation · observed points
-                only
+                Brain depth → · Error ↑ · hover for orientation · observed
+                points only
               </text>
             </svg>
             {example ? (

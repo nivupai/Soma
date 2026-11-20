@@ -113,3 +113,13 @@ The framework is mathematically defensible for controlled MRI-derived experiment
 planned for M32, under its explicit white-density/discretization/whitening assumptions.
 It does not establish human anatomical accuracy, optimal physiological priors,
 calibrated uncertainty coverage or deterministic native meshing. M32 is not started.
+
+Analysis clarification: the first depth visualization used radial coordinate as an
+explicitly labeled proxy. During final review it was replaced with the prespecified
+source-depth metric: minimum distance to the finest synthetic brain-interface
+triangulation (13.646–46.581 mm). Radius remains separate (35.088–64.558 mm). This
+changes no inverse, tuning, split, reconstruction or paired localization result.
+The derived distances and all inverse rows are retained in the public tables.
+Source generators retain the original upper-hemisphere convention, limiting spatial
+generalization. Arbitrary MRI-domain quadrature and physiological source correlations
+remain work for subsequent modeling; the current SDK control assumes a 65 mm ball.

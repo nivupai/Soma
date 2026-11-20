@@ -279,7 +279,7 @@ def conditional_interval(values: Array, seed: int = 310422) -> tuple[float, floa
     return float(a.mean()), float(lo), float(hi)
 
 
-EXAMPLE_SHA256 = "7569937adeb219ae109d371c196803604e2662e9477737842a6769d0e6c0d9bf"
+EXAMPLE_SHA256 = "7fa45a960ceca3cb83eb668aacb067c83cbd32fcb571b67036be33d002a7d050"
 
 
 def validate_example(raw: bytes) -> dict[str, object]:

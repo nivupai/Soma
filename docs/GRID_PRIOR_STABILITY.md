@@ -40,3 +40,9 @@ Noise draws are averaged per source before fixed-family head-then-source
 resampling. Six heads and 60 test sources are not 90,720 independent participants.
 Intervals are conditional simulation summaries with uncalibrated coverage. They
 are not population or human-anatomical uncertainty estimates.
+
+The depth sensitivity uses exact point-to-triangle distance on each head's finest
+synthetic brain interface; it is not human anatomical ground truth. Radial coordinate
+and radial orientation cosine are separate variables in the source-level exports.
+An initial radius-proxy figure was corrected during analysis without changing any
+reconstruction, calibration rule or localization metric.

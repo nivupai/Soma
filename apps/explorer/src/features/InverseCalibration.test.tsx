@@ -48,7 +48,7 @@ it("uses frozen results and exposes prior controls and limitations", async () =>
     target: { value: "unweighted" },
   });
   expect(screen.getByText(/Computed held-out FEM results/)).toBeTruthy();
-  expect(screen.getByLabelText("Source radial coordinate")).toBeTruthy();
+  expect(screen.getByLabelText("Source brain depth")).toBeTruthy();
 });
 it("rejects a human or unsupported result identity", async () => {
   vi.stubGlobal(
