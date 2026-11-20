@@ -1,0 +1,14 @@
+{
+  "schema": "soma.inverse-calibration.receipt/1",
+  "design_sha256": "abb24125e39c51438197e4e7301b3f7079bdb4820bdd6257069348594d6468bc",
+  "heads": 6,
+  "original_sources": 72,
+  "new_heldout_sources": 24,
+  "reconstruction_rows": 99360,
+  "operator_rows": 3726,
+  "failed_configurations": 0,
+  "seconds": 33.37194245803403,
+  "peak_RSS_MiB": 775.40625,
+  "synthetic_only": true,
+  "external_preregistration": false
+}

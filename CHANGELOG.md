@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.31.0 — inverse priors and source-density calibration
+
+- Add explicit integrated-moment covariance priors, spectral and independent-repeat
+  regularization controls, with rank-aware whitening and analytical checks.
+- Preserve M30 results; replicate original inverse-grid findings and publish a
+  frozen six-head/96-source synthetic study, nested grids, conditional intervals,
+  negative findings, point-spread diagnostics and twelve figures.
+- Extend the existing Explorer with read-only, fingerprint-checked M31 results.
+- Keep the M30 canonical gate and native diagnostic policy unchanged. A changed
+  native signature already blocks the merged baseline; no release exception added.
+
+
 ## 0.26.0
 
 - Frozen four-shell physical source uncertainty experiments with independent off-grid generators, paired noise, source-cluster intervals and retained numerical failures.

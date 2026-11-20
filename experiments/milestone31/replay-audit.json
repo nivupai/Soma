@@ -1,0 +1,33 @@
+{
+  "schema": "soma.inverse-calibration.replay-audit/1",
+  "all_99360_numeric_rows_agree": true,
+  "rtol": 1e-10,
+  "atol": 1e-12,
+  "fresh_truth_meshes": true,
+  "truth_fields_byte_identical": {
+    "truth-new-3-V_per_Am.csv": true,
+    "truth-new-4-V_per_Am.csv": true,
+    "truth-new-5-V_per_Am.csv": true,
+    "truth-new-2-V_per_Am.csv": true,
+    "truth-new-0-V_per_Am.csv": true,
+    "truth-new-1-V_per_Am.csv": true
+  },
+  "replay_receipt": {
+    "schema": "soma.inverse-calibration.receipt/1",
+    "design_sha256": "abb24125e39c51438197e4e7301b3f7079bdb4820bdd6257069348594d6468bc",
+    "heads": 6,
+    "original_sources": 72,
+    "new_heldout_sources": 24,
+    "reconstruction_rows": 99360,
+    "operator_rows": 3726,
+    "failed_configurations": 0,
+    "seconds": 31.823280124983285,
+    "peak_RSS_MiB": 852.828125,
+    "synthetic_only": true,
+    "external_preregistration": false
+  },
+  "implementation_sha256": {
+    "scripts/run_inverse_calibration.py": "04148a466d3b052a5055be179f26cf1a6b9914cc5f9267ff796ec982b43e8b38",
+    "src/soma/source/prior_calibration.py": "2cf09abdaa151a24f9aa77adc8de28b1a0e8b14a1883df3dc3ba5f2d930c2bed"
+  }
+}
