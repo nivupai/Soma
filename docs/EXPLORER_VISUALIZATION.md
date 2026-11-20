@@ -82,3 +82,22 @@ All committed screenshots show synthetic data from the running application:
 
 Local participant images/individual screenshots must remain ignored and are not
 release artifacts. Captures are made by Playwright only when explicitly enabled.
+
+## M35 3D head and uncertainty overlay
+
+Source Models → *Synthetic 3D head* (`HeadExplorer` / `HeadScene`) renders the
+synthetic demo head's scalp, outer skull, inner skull and cortex as translucent
+nested shells with per-layer visibility and opacity, EEG sensors (blue) and the
+cortical source space as points. Inner layers draw first; markers are drawn after
+the shells so translucency does not wash them out. Sources are coloured on one
+sequential ramp by the scene scalar, the overlay mean, or the overlay interval
+width; the legend states quantity, units, range and, for fixtures, a MOCK FIXTURE
+badge. Clicking a source (or typing its index) shows its position, scalar and, with
+an overlay, `mean [lower, upper]` at the stated confidence level.
+
+Every anatomy view shows a readiness banner (`ReadinessBanner`): the label
+VALIDATED / QC_ONLY / NOT_READY, then separately "Geometrically valid" (YES / NO /
+NOT ASSESSED) and "Anatomically validated" (YES only for VALIDATED readiness).
+Unknown statuses display as NOT_READY. The MRI page, the source-geometry panel,
+the M32 aggregate and the private M32 mesh view all carry the banner; views with
+no readiness receipt are labelled NOT_READY rather than assumed ready.
