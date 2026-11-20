@@ -14,7 +14,7 @@
     "src/soma/source/prior_calibration.py": "7a5e47af2fc889ad52574daed898173c522759a58a246702a20fcf3092f50ffe",
     "src/soma/validation/human_tissues.py": "ff0c1013b5faf955678d570353c0369acc133105213cd8a9aa570bdab874f850",
     "src/soma/datasets/human_mri.py": "88a0f2e3b5c14e9576dfa2b47a8449767edba1d0437c3adc9f8ada5839bfb2f3",
-    "scripts/audit_mri_geometry32.py": "5924fb0a3d4d90107f44c3d2c312b8344e918b188d41070c1d70cf1c7d56cfee"
+    "scripts/audit_mri_geometry32.py": "05c3e258c4aba961752d3bd56e4e3a9289ac477cd98c628ee1a206dadf7104bd"
   },
   "versions": {
     "soma-neuro": "0.32.0",

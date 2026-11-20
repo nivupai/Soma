@@ -14,6 +14,13 @@ from soma.datasets.human_mri import corner_displacement_mm, safe_local_output
 def run(local, output):
     safe_local_output(local)
     records = json.loads((local / "inventory.private.json").read_text())["subjects"]
+    # Reject any substituted test path before opening even its header.
+    for record in records:
+        if record["dataset"] == "mrbrains13" and any(
+            "training" not in Path(record[k]).parts or "test" in Path(record[k]).parts
+            for k in ["image", "reference"]
+        ):
+            raise ValueError("Only the labeled MRBrainS training subset may be inspected")
     rows = []
     for dataset in ["ibsr-v2", "mrbrains13"]:
         images = [
