@@ -1,5 +1,14 @@
 # Changelog
 
+The detailed per-milestone announcements and command references that previously
+lived in the README are preserved in [docs/MILESTONES.md](docs/MILESTONES.md).
+
+## Unreleased
+
+- Documentation only: README rewritten as a product front page; prior README
+  milestone announcements moved verbatim to `docs/MILESTONES.md`; new
+  `docs/DATA_POLICY.md` dataset inventory. No scientific code changed.
+
 ## 0.32.0 — MRI-derived head models and anatomical evidence
 
 - Execute independent tissue-baseline replication on 18 IBSR and five MRBrainS training
