@@ -1,0 +1,58 @@
+{
+  "schema": "soma.anatomy-data-provenance/1",
+  "participant_assets_redistributed": false,
+  "raw_image_hashes_published": false,
+  "datasets": [
+    {
+      "dataset": "IBSR V2",
+      "cases": 18,
+      "modalities": [
+        "whole-head T1",
+        "provided brain T1"
+      ],
+      "reference": "manual-guided GM/WM/CSF segTRI",
+      "role": "known development/replication",
+      "source": "https://www.nitrc.org/projects/ibsr/",
+      "permission": "Conflicting public-domain release and older CMA/noncommercial notices retained; citation and no image publishing; no redistribution inferred"
+    },
+    {
+      "dataset": "MRBrainS13",
+      "cases": 5,
+      "modalities": [
+        "T1",
+        "T1_IR",
+        "T2_FLAIR"
+      ],
+      "reference": "labeled training subset only",
+      "role": "known external methods replication, not fresh holdout",
+      "permission": "Local Readme/manifest reviewed; registered portal access and separate permission conditions; no redistribution/commercial right inferred; hidden test data untouched"
+    },
+    {
+      "dataset": "MNE sample",
+      "version": "0.12",
+      "cases": 1,
+      "modalities": [
+        "T1",
+        "provided FLASH-derived surfaces",
+        "provided automated aseg",
+        "measured EEG geometry"
+      ],
+      "reference": "no independent full-conductor reference",
+      "role": "local educational geometry and numerical QC, no hardware performance evaluation",
+      "source": "https://mne.tools/stable/documentation/datasets.html#sample",
+      "conditions": "MNE manual sample use notice: familiarize with software; do not redistribute; no MEG/MRI hardware evaluation"
+    },
+    {
+      "dataset": "SPM auditory",
+      "role": "inventory only",
+      "used": false,
+      "conditions": "education/evaluation notice; no matched EEG/conductor truth"
+    },
+    {
+      "dataset": "fsaverage",
+      "role": "template only, excluded from individualized counts",
+      "used": false
+    }
+  ],
+  "inventory_scope": "Actual local directory and metadata inspection; no newly downloaded anatomy; no private identifiers, paths, coordinates, images or input hashes in this public manifest."
+}

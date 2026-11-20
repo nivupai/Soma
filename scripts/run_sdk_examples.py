@@ -29,6 +29,7 @@ NAMES = (
     "fem_reference",
     "mesh_grid",
     "inverse_calibration",
+    "mri_head_model",
 )
 
 

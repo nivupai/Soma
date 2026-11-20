@@ -1,0 +1,28 @@
+[
+  {
+    "dataset": "ibsr-v2",
+    "compared_tissue_rows": 54,
+    "max_absolute_difference": {
+      "Dice": 8.326672684688674e-17,
+      "Jaccard": 8.326672684688674e-17,
+      "ASSD_mm": 3.552713678800501e-15,
+      "HD95_mm": 7.105427357601002e-15,
+      "signed_volume_error_mm3": 1.4551915228366852e-11,
+      "absolute_volume_error_mm3": 1.4551915228366852e-11
+    },
+    "independent_algorithm_unchanged": true
+  },
+  {
+    "dataset": "mrbrains13",
+    "compared_tissue_rows": 15,
+    "max_absolute_difference": {
+      "Dice": 8.695301423333746e-17,
+      "Jaccard": 8.51098705401121e-17,
+      "ASSD_mm": 0.0,
+      "HD95_mm": 3.552713678800501e-15,
+      "signed_volume_error_mm3": 1.4551915228366852e-11,
+      "absolute_volume_error_mm3": 1.4551915228366852e-11
+    },
+    "independent_algorithm_unchanged": true
+  }
+]

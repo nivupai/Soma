@@ -1,5 +1,11 @@
 # Soma
 
+Soma v0.32.0 adds [MRI-derived head modeling](docs/MILESTONE32_RESULTS.md),
+[independent tissue reference replication](docs/ANATOMICAL_REFERENCE_VALIDATION.md)
+and a private local anatomical viewer. One conductor workflow is QC-only; independent
+skull/scalp validation and human source-localization accuracy remain unestablished.
+
+
 Soma v0.17.0 adds [versioned scientific artifacts](docs/RESULT_SCHEMA_SPECIFICATION.md),
 [compatibility checks](docs/SCIENTIFIC_RESULT_COMPATIBILITY.md), read-only migration
 and cross-platform reproducibility evidence. See [Milestone17 results](docs/MILESTONE17_RESULTS.md).

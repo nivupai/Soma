@@ -28,6 +28,7 @@ class Entry(Strict):
         "external-eeg",
         "model-archive",
         "external-validation",
+        "anatomical-model",
     ]
     label: str = Field(max_length=120)
     root: str

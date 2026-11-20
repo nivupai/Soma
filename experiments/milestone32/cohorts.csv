@@ -1,0 +1,3 @@
+dataset,completed,macro_Dice,reference_target_failed,full_conductor_reference,forward_status,fresh_holdout,macro_Dice_lower,macro_Dice_upper
+ibsr-v2,18,0.5873451580127979,18,False,NOT_READY_FOR_FORWARD_MODEL,False,0.5769653687188252,0.597952587711865
+mrbrains13,5,0.4556826170896741,5,False,NOT_READY_FOR_FORWARD_MODEL,False,0.36194593138221764,0.5468503234724182

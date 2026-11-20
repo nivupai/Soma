@@ -1,0 +1,4 @@
+comparison,relative,target,passed,anatomical_accuracy
+refinement2to3,0.14562012613874192,0.1,False,False
+refinement3to4,0.05117222825165996,0.1,True,False
+matched_BEM_MNE_OpenMEEG,0.06813307790734653,0.1,True,False

@@ -1,0 +1,19 @@
+{
+  "M12-baseline-replication.json": "564b2e9c653516787a09e5d157be59d994ed5d8001d4ff3f1bc6a27796a876d8",
+  "M33-inputs.json": "a715f34e30f86717aab5662b2bc31e65fc042837220fa7346eef40e4bfebde21",
+  "aggregate.json": "856ab38c9ec00db36a9f02ade3ccfe83bf6a3611a93946e46b96b8da806398fe",
+  "cohorts.csv": "99b6ae8e6187e67eb37a810f5ff41505c9e60ac2562ea98249344fea805beec4",
+  "conditional-inverse.csv": "2f17d89024b3837bc5377b67eff10b3ebf71295424b34a0411dc2b2a29a52f7d",
+  "design.json": "89690086412e8682d4f4d19e7657644588b7e240590f15afd2dd464c3cf5d619",
+  "figures/01-tissue-overlap.svg": "370b4dc494016a43abafa613b2dcdfec6aba8be5ba75bb05e827a313343a9fdf",
+  "figures/02-boundary-errors.svg": "798b3dcdcce177d7365ab47c3fad8b9710a3d99e8e7ffafcd23315df38e4c3a6",
+  "figures/03-volume-differences.svg": "e120b51f16664da2fb7407cf17a9955f88c5409c3e9ab8f46476105042625ed3",
+  "figures/04-readiness.svg": "a497b848b27683beea8a71f252fd2be1ad455b6efcf46f7d78912d2c9c088856",
+  "figures/05-numerical-comparisons.svg": "7b11427e8609248dda6746f96f5443578fb6108a986851481d228688ec52873d",
+  "figures/06-mesh-quality.svg": "6803250205d594bb0a536b8696eff06b256a18886cf11c271eb8f741b85b6205",
+  "figures/07-conditional-inverse.svg": "3ceb2ae8f6d528f7e7022992f0d35d5a409a60a423ae44d161fa5ae003b1bcba",
+  "forward-QC.csv": "920b31905d22f603ada358cbeac2e1b3d9acd2e84dfd9c86de010e5eb34b7a06",
+  "numerical-comparisons.csv": "23454c34c20b422ef3bbef5ebc153f9da6cd59428e754cda2aded004b77fbfb0",
+  "seal.json": "428ea70b308b2d804a267d806efe41567ea8667a7bea975365e792ce382a46cf",
+  "tissue-aggregate.csv": "39a1be5dd42ace0b85591a42cebf65e824966c9ab9db59f614aab82742d459d9"
+}

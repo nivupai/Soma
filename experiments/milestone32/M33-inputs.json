@@ -1,0 +1,72 @@
+{
+  "schema": "soma.anatomical-uncertainty-inputs/1",
+  "anatomical_reference_distribution_available": false,
+  "baseline_status": "QC_ONLY_ANATOMY",
+  "clinical_source_accuracy": false,
+  "tissue_reference_metrics": "tissue-aggregate.csv; annotation semantics differ by dataset and are not skull/scalp ground truth",
+  "conductivity": {
+    "brain_S_m": 0.3,
+    "skull_S_m": 0.006,
+    "scalp_S_m": 0.3,
+    "evidence": "declared model assumptions, not participant measurements",
+    "exploratory_factors": [
+      0.5,
+      1,
+      2
+    ]
+  },
+  "surface_displacement_mm": {
+    "values": [
+      -1,
+      -0.5,
+      0.5,
+      1
+    ],
+    "evidence": "exploratory subvoxel/voxel-scale sensitivity only; no independent conductor error distribution"
+  },
+  "coregistration_mm": {
+    "values": [
+      1,
+      3
+    ],
+    "evidence": "exploratory rigid translation sensitivity, not calibrated TRE; scalp residual is fit discrepancy"
+  },
+  "rotation_degrees": {
+    "values": [
+      1
+    ],
+    "evidence": "exploratory, not measured distribution"
+  },
+  "source_domains": {
+    "counts": [
+      64,
+      128
+    ],
+    "evidence": "explicit MRI GM voxel measure in conservatively contained ROI; limited cortical coverage"
+  },
+  "mesh_refinement": [
+    {
+      "comparison": "refinement2to3",
+      "relative": 0.14562012613874192,
+      "target": 0.1,
+      "passed": false,
+      "anatomical_accuracy": false
+    },
+    {
+      "comparison": "refinement3to4",
+      "relative": 0.05117222825165996,
+      "target": 0.1,
+      "passed": true,
+      "anatomical_accuracy": false
+    },
+    {
+      "comparison": "matched_BEM_MNE_OpenMEEG",
+      "relative": 0.06813307790734653,
+      "target": 0.1,
+      "passed": true,
+      "anatomical_accuracy": false
+    }
+  ],
+  "inter_subject_full_head_variability": "not estimated from one curated anatomy",
+  "next_study_not_executed": true
+}
