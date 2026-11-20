@@ -260,3 +260,45 @@ def test_mri_platform_comparator_rejects_changed_or_incomplete_reports(tmp_path)
     paths[-1].unlink()
     with pytest.raises(ValueError, match="Four"):
         compare(tmp_path)
+
+
+def test_impossible_metrics_and_blank_provenance_cannot_validate_anatomy():
+    import copy
+
+    references = {
+        name: dict(
+            independent=True,
+            reference_role="conductor_boundary",
+            provenance="independent reference receipt",
+            Dice=0.9,
+            HD95_mm=1.0,
+        )
+        for name in ["inner_skull", "outer_skull", "scalp"]
+    }
+    checks = {k: True for k in COMPUTATIONAL_CHECKS}
+    baseline = classify_anatomy(
+        checks,
+        MRI_derived=True,
+        local_permission=True,
+        conductor_references=references,
+        independent_tissue_validation=True,
+    )
+    assert baseline["status"] == "VALIDATED_ANATOMY"
+    for key, value in [
+        ("Dice", 1.1),
+        ("Dice", True),
+        ("HD95_mm", True),
+        ("provenance", "   "),
+        ("provenance", 1),
+    ]:
+        invalid = copy.deepcopy(references)
+        invalid["inner_skull"][key] = value
+        receipt = classify_anatomy(
+            checks,
+            MRI_derived=True,
+            local_permission=True,
+            conductor_references=invalid,
+            independent_tissue_validation=True,
+        )
+        assert receipt["status"] == "NOT_READY_FOR_FORWARD_MODEL"
+        assert receipt["forward_allowed"] is False

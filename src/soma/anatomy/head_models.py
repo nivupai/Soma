@@ -112,17 +112,20 @@ def classify_anatomy(
                 valid
                 and r.get("independent") is True
                 and r.get("reference_role") == "conductor_boundary"
-                and bool(r.get("provenance"))
+                and isinstance(r.get("provenance"), str)
+                and bool(r["provenance"].strip())
             )
             valid = (
                 valid
                 and isinstance(r.get("Dice"), (int, float))
+                and not isinstance(r["Dice"], bool)
                 and np.isfinite(r["Dice"])
-                and r["Dice"] >= 0.8
+                and 0.8 <= r["Dice"] <= 1
             )
             valid = (
                 valid
                 and isinstance(r.get("HD95_mm"), (int, float))
+                and not isinstance(r["HD95_mm"], bool)
                 and np.isfinite(r["HD95_mm"])
                 and 0 <= r["HD95_mm"] <= 5
             )
