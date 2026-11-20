@@ -1,6 +1,6 @@
 {
   "schema": "soma.mri-execution-provenance/1",
-  "primary_implementation_commit": "dd7d6b6",
+  "primary_implementation_commit": "8c7e6d6",
   "design_sha256": "89690086412e8682d4f4d19e7657644588b7e240590f15afd2dd464c3cf5d619",
   "code_sha256": {
     "scripts/run_mri_head_models.py": "58e23f57f042e194d37be3d01d1bb5f72a3c32812fbf9339b32c8ee8a46339fd",
@@ -8,7 +8,7 @@
     "scripts/summarize_mri_head_models.py": "05e1f093054e74f56059f6b768f893163ba116006034fa4dfd8de76b7147c9d6",
     "scripts/audit_mri_surface_displacement32.py": "3c542381bc25e6303095d0291b924cbbf3988ee9e813a1d6de8416c300f8d1fc",
     "scripts/prepare_mri_head_viewer.py": "b29087578c25c005bca71ecf15e00e6843f5705a20a16dc472a9609cf44a4da3",
-    "src/soma/anatomy/head_models.py": "071de3c91b6ba47e59d6b6267067ca8a02bb2394ddfbc4ff6b63e28249c67d88",
+    "src/soma/anatomy/head_models.py": "da8cfe2bc364e4d852ebe6cee052c0efafbb613d9a10db3eef77ed5b175b7847",
     "src/soma/anatomy/public_head_models.py": "a903303231ec5b1bcc7d7e3a3716ece75f7145250a9d03df074e1c76db6887e9",
     "src/soma/source/domains.py": "ffe846a87393066ce976b1d9cdc57271fc9ea9a44dbbb6111e233069b63aadbc",
     "src/soma/source/prior_calibration.py": "7a5e47af2fc889ad52574daed898173c522759a58a246702a20fcf3092f50ffe",
@@ -33,7 +33,8 @@
   "exact_replay": {
     "scientific_metrics_equal": true,
     "all_four_fields_byte_identical": true,
-    "scope": "same local environment; human fields not independently replicated on four platforms"
+    "scope": "same local environment; human fields not independently replicated on four platforms",
+    "includes_evidence_guard_correction": true
   },
   "supplement": "Descriptive vertex-sampled decimation QC added after primary replay; no threshold, protocol or original numerical result changed."
 }

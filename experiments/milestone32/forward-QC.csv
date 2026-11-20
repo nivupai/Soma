@@ -1,5 +1,5 @@
 level,solver,source_count,lead_rank,lead_nonnull_condition,source_margin_min_mm,reference_mean_max_V_per_Am,source_head_pairing_max_m,seconds,peak_MiB,solver_residual
-2,mne,140,58,158486.3282391046,10.282824218554882,1.5415164436829292e-14,0.0,1.9179794999654405,204.578125,not independently exposed by the MNE BEM solution API; not invented
-3,mne,140,58,94912.32265809154,10.442461576722827,2.1316282072803006e-14,0.0,4.757036582974251,309.421875,not independently exposed by the MNE BEM solution API; not invented
-4,mne,140,58,87918.44712899489,9.884824440300072,1.950981749036207e-14,0.0,41.186515792040154,1400.8125,not independently exposed by the MNE BEM solution API; not invented
-3,openmeeg,140,58,69742.65755680166,10.442461576722827,2.179800596145392e-14,0.0,20.860420334036462,407.734375,not independently exposed by the MNE BEM solution API; not invented
+2,mne,140,58,158486.3282391046,10.282824218554882,1.5415164436829292e-14,0.0,1.767229999997653,188.859375,not independently exposed by the MNE BEM solution API; not invented
+3,mne,140,58,94912.32265809154,10.442461576722827,2.1316282072803006e-14,0.0,4.682212207990233,311.375,not independently exposed by the MNE BEM solution API; not invented
+4,mne,140,58,87918.44712899489,9.884824440300072,1.950981749036207e-14,0.0,40.100543792010285,1406.078125,not independently exposed by the MNE BEM solution API; not invented
+3,openmeeg,140,58,69742.65755680166,10.442461576722827,2.179800596145392e-14,0.0,21.731580583029427,341.78125,not independently exposed by the MNE BEM solution API; not invented

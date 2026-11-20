@@ -211,7 +211,7 @@
   "implementation_sha256": {
     "scripts/run_mri_head_models.py": "58e23f57f042e194d37be3d01d1bb5f72a3c32812fbf9339b32c8ee8a46339fd",
     "scripts/mri_head_worker.py": "e2e8afa1002b876f34c0cdfa45b88c22e6bd91060d5eac371889fb853c277612",
-    "src/soma/anatomy/head_models.py": "071de3c91b6ba47e59d6b6267067ca8a02bb2394ddfbc4ff6b63e28249c67d88",
+    "src/soma/anatomy/head_models.py": "da8cfe2bc364e4d852ebe6cee052c0efafbb613d9a10db3eef77ed5b175b7847",
     "src/soma/source/domains.py": "ffe846a87393066ce976b1d9cdc57271fc9ea9a44dbbb6111e233069b63aadbc",
     "src/soma/source/prior_calibration.py": "7a5e47af2fc889ad52574daed898173c522759a58a246702a20fcf3092f50ffe",
     "src/soma/validation/human_tissues.py": "ff0c1013b5faf955678d570353c0369acc133105213cd8a9aa570bdab874f850"
@@ -275,8 +275,8 @@
       "source_margin_min_mm": 10.282824218554882,
       "reference_mean_max_V_per_Am": 1.5415164436829292e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 1.9179794999654405,
-      "peak_MiB": 204.578125,
+      "seconds": 1.767229999997653,
+      "peak_MiB": 188.859375,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     },
     {
@@ -288,8 +288,8 @@
       "source_margin_min_mm": 10.442461576722827,
       "reference_mean_max_V_per_Am": 2.1316282072803006e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 4.757036582974251,
-      "peak_MiB": 309.421875,
+      "seconds": 4.682212207990233,
+      "peak_MiB": 311.375,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     },
     {
@@ -301,8 +301,8 @@
       "source_margin_min_mm": 9.884824440300072,
       "reference_mean_max_V_per_Am": 1.950981749036207e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 41.186515792040154,
-      "peak_MiB": 1400.8125,
+      "seconds": 40.100543792010285,
+      "peak_MiB": 1406.078125,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     },
     {
@@ -314,8 +314,8 @@
       "source_margin_min_mm": 10.442461576722827,
       "reference_mean_max_V_per_Am": 2.179800596145392e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 20.860420334036462,
-      "peak_MiB": 407.734375,
+      "seconds": 21.731580583029427,
+      "peak_MiB": 341.78125,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     }
   ],
@@ -634,8 +634,8 @@
   "human_localization_accuracy": false,
   "private_viewer_required": true,
   "raw_assets_redistributed": false,
-  "seconds": 218.0133069580188,
-  "peak_process_MiB": 875.8125,
+  "seconds": 213.19017099996563,
+  "peak_process_MiB": 795.953125,
   "baseline_comparison": [
     {
       "dataset": "ibsr-v2",

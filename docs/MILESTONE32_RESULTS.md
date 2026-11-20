@@ -61,3 +61,9 @@ Final exact-code local replay: 218.013 s, parent peak RSS 875.8125 MiB, maximum 
 worker peak 1400.8125 MiB. Worker peaks are individual-process maxima, not summed or
 claimed simultaneous total memory. Every scientific metric and all four lead-field
 CSV files match the previous complete run exactly. This is local repeatability only.
+
+Evidence-domain guard correction: see `MILESTONE32_EVIDENCE_GUARD_ADDENDUM.md`. A new
+exact-code replay at implementation 8c7e6d6 again gives byte-identical operator files
+and identical scientific metrics. Runtime 213.190 s, parent peak 795.9531 MiB,
+maximum individual worker peak 1406.0781 MiB.
+`execution-history.json` preserves both exact-code resource measurements and code hashes.

@@ -1,0 +1,74 @@
+{
+  "schema": "soma.m32-ci-native-finding/1",
+  "run_id": 44705359108,
+  "head": "845cc4d1c578831d257347c2290ae0f2e6543e17",
+  "jobs_passed": 13,
+  "jobs_total": 14,
+  "release_disposition": "BLOCK_RELEASE",
+  "reason": "Native failure signature changed; review required",
+  "rtol": 0.02,
+  "atol_V_per_Am": 0.01,
+  "canonical_gate": "PASS",
+  "mri_fixture_gate": "PASS",
+  "original_comparator_unchanged": true,
+  "original_policy_unchanged": true,
+  "native_portability_established": false,
+  "pairs": [
+    {
+      "reference": "Darwin-arm64-3.11",
+      "actual": "Darwin-arm64-3.12",
+      "failed_entries": 0,
+      "entries": 192,
+      "previously_characterized_failed_entries": 0,
+      "same_failure_indices": true,
+      "aggregate_relative": 0.0
+    },
+    {
+      "reference": "Darwin-arm64-3.11",
+      "actual": "Linux-x86_64-3.11",
+      "failed_entries": 10,
+      "entries": 192,
+      "previously_characterized_failed_entries": 15,
+      "same_failure_indices": false,
+      "aggregate_relative": 0.0043944331836584406
+    },
+    {
+      "reference": "Darwin-arm64-3.11",
+      "actual": "Linux-x86_64-3.12",
+      "failed_entries": 15,
+      "entries": 192,
+      "previously_characterized_failed_entries": 15,
+      "same_failure_indices": true,
+      "aggregate_relative": 0.004176368792957427
+    },
+    {
+      "reference": "Darwin-arm64-3.12",
+      "actual": "Linux-x86_64-3.11",
+      "failed_entries": 10,
+      "entries": 192,
+      "previously_characterized_failed_entries": 15,
+      "same_failure_indices": false,
+      "aggregate_relative": 0.0043944331836584406
+    },
+    {
+      "reference": "Darwin-arm64-3.12",
+      "actual": "Linux-x86_64-3.12",
+      "failed_entries": 15,
+      "entries": 192,
+      "previously_characterized_failed_entries": 15,
+      "same_failure_indices": true,
+      "aggregate_relative": 0.004176368792957427
+    },
+    {
+      "reference": "Linux-x86_64-3.11",
+      "actual": "Linux-x86_64-3.12",
+      "failed_entries": 16,
+      "entries": 192,
+      "previously_characterized_failed_entries": 0,
+      "same_failure_indices": false,
+      "aggregate_relative": 0.004124235476283686
+    }
+  ],
+  "scope": "synthetic native Gmsh CI finding; no human MRI fields",
+  "subsequent_evidence_guard_change": "independent validity fix already underway before this failure was observed; no gate change"
+}

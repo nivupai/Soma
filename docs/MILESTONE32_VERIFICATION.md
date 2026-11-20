@@ -11,18 +11,18 @@ Local main was synchronized and clean before the M32 branch was created.
 M32 protocol/seal commit d2bbe03 precedes final human processing. Design SHA256:
 89690086412e8682d4f4d19e7657644588b7e240590f15afd2dd464c3cf5d619.
 Historical tissue outcomes were known; local sealing is not external preregistration.
-Six executed scientific-code hashes match implementation commit dd7d6b6. Exact-code
+Initial executed code matches dd7d6b6; the final evidence-guard replay matches 8c7e6d6. Exact-code
 replay reproduces every scientific metric and all four lead-field CSVs byte-for-byte.
 Scalar execution provenance contains code/config hashes and software versions only.
 No raw-image-derived fingerprint, private path or participant geometry is public.
 
 ## Local verification
 
-- Complete Python suite: **1,770 passed**, including all 1,725 historical tests and
-  45 new analytical, evidence, numerical and privacy regressions; 117 warnings.
-- Final offline suite: **1,753 passed, 17 integration tests deselected**, 115 warnings.
+- Complete Python suite: **1,771 passed**, including all 1,725 historical tests and
+  46 new analytical, evidence, numerical and privacy regressions; 117 warnings.
+- Final offline suite: **1,754 passed, 17 integration tests deselected**, 115 warnings.
   The complete run above includes those 17 cached-data integration tests.
-- Ruff and formatting: pass, 743 Python files. Strict mypy: **299 files**, no issues.
+- Ruff and formatting: pass. Strict mypy: **299 files**, no issues.
 - Final frontend: **52 unit tests pass**; TypeScript, ESLint, Prettier and production
   build pass. Existing large-chunk advisory remains a nonblocking build warning.
 - Final configured browser suite: **26 pass**, including actual local MRI/overlay and
@@ -81,3 +81,7 @@ are recorded in the M32 pull request and its Actions artifacts, associated with 
 actual published commit. Consult the [branch workflow runs](https://github.com/nivupai/Soma/actions/workflows/ci.yml?query=branch%3Afeature%2Fmilestone32-mri-head-models)
 and PR checks rather than inferring cross-platform success from a local run. All 14
 jobs must pass before scientific review. Stop at the PR; **no M32 merge or M33 work**.
+
+Initial published-head CI is 13/14, blocked by a changed native signature. See
+`MILESTONE32_CI_ADDENDUM.md`; no failing run is retrospectively passed. Final head CI
+is recorded separately in the pull request.
