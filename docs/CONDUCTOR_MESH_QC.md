@@ -39,3 +39,11 @@ cannot silently downgrade to QC-only. NOT_READY cases do not enter the forward w
 Existing four-material FEM and three-compartment human BEM are **NOT_COMPARABLE**.
 No geometrically incompatible BEM/FEM difference is reported as solver error. The
 supported same-surface comparison is MNE/OpenMEEG BEM, not anatomical validation.
+
+A descriptive QC supplement (`decimation-displacement.csv`) measures each decimated
+boundary against the provided full FLASH surface. Bidirectional vertex-to-triangle
+sample means, pooled-sample HD95 and maxima are explicitly sampling diagnostics,
+not area-integrated ASSD or independent anatomical error. Added after the primary
+replay, with no new acceptance threshold or change to frozen numerical results.
+
+At primary level 3, largest sampled displacement over three boundaries is 3.887575 mm. Level 4 reproduces the provided native boundaries to <2e-14 mm sampled distance; this does not validate those boundaries against MRI truth.

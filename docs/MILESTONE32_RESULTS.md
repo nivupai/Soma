@@ -56,3 +56,8 @@ boundary truth, no participant conductivity, no independent registration TRE, no
 human source locations, one conductor example and restricted GM coverage. Improved
 segmentation and suitable external full-head references are still necessary. M32 does
 not relax its scientific criteria or call the coarse refinement failure a pass.
+
+Final exact-code local replay: 218.013 s, parent peak RSS 875.8125 MiB, maximum solver
+worker peak 1400.8125 MiB. Worker peaks are individual-process maxima, not summed or
+claimed simultaneous total memory. Every scientific metric and all four lead-field
+CSV files match the previous complete run exactly. This is local repeatability only.

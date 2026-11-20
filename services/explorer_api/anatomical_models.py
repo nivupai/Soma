@@ -15,7 +15,7 @@ from soma.anatomy.public_head_models import read_public_head_models
 
 from .registry import Registry
 
-REPORT_SHA256 = "cedea10df53421c2a32069a86d154d2569b2824f0b9c6975075ee218901d0f85"
+REPORT_SHA256 = "5d014a063c48c2ddc2eb715d6850ad0b9f4779fe8f6848bdad9cd4538299403f"
 
 
 def private_view_allowed(request: Request) -> bool:

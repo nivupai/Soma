@@ -1,0 +1,10 @@
+level,boundary,symmetric_vertex_sample_mean_mm,pooled_vertex_sample_HD95_mm,vertex_sample_max_mm,reference,definition
+2,inner_skull,0.5349585698467301,3.214705961856584,6.411586287001714,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+3,inner_skull,0.12099178590154593,0.8078802576698019,2.1881601187554187,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+4,inner_skull,1.4415790645984728e-15,1.0612071120306773e-14,1.548014541393987e-14,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+2,outer_skull,0.5555585322483817,3.2607856225702343,6.142688268743149,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+3,outer_skull,0.12461969121424935,0.8023255389963835,1.9320441254388947,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+4,outer_skull,1.4521785393403832e-15,1.12365557309805e-14,1.9402299706719455e-14,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+2,outer_skin,0.6970480511991048,4.025163110755996,13.020562917511574,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+3,outer_skin,0.16263676092744242,1.003627300882954,3.8875746048255984,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD
+4,outer_skin,1.7856181400856304e-15,1.2438133052649759e-14,2.7889070051820133e-14,"provided FLASH boundary, not independent truth",bidirectional vertex-to-triangle samples; not area-integrated ASSD

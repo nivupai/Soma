@@ -1,0 +1,39 @@
+{
+  "schema": "soma.mri-execution-provenance/1",
+  "primary_implementation_commit": "dd7d6b6",
+  "design_sha256": "89690086412e8682d4f4d19e7657644588b7e240590f15afd2dd464c3cf5d619",
+  "code_sha256": {
+    "scripts/run_mri_head_models.py": "58e23f57f042e194d37be3d01d1bb5f72a3c32812fbf9339b32c8ee8a46339fd",
+    "scripts/mri_head_worker.py": "e2e8afa1002b876f34c0cdfa45b88c22e6bd91060d5eac371889fb853c277612",
+    "scripts/summarize_mri_head_models.py": "05e1f093054e74f56059f6b768f893163ba116006034fa4dfd8de76b7147c9d6",
+    "scripts/audit_mri_surface_displacement32.py": "3c542381bc25e6303095d0291b924cbbf3988ee9e813a1d6de8416c300f8d1fc",
+    "scripts/prepare_mri_head_viewer.py": "b29087578c25c005bca71ecf15e00e6843f5705a20a16dc472a9609cf44a4da3",
+    "src/soma/anatomy/head_models.py": "071de3c91b6ba47e59d6b6267067ca8a02bb2394ddfbc4ff6b63e28249c67d88",
+    "src/soma/anatomy/public_head_models.py": "a903303231ec5b1bcc7d7e3a3716ece75f7145250a9d03df074e1c76db6887e9",
+    "src/soma/source/domains.py": "ffe846a87393066ce976b1d9cdc57271fc9ea9a44dbbb6111e233069b63aadbc",
+    "src/soma/source/prior_calibration.py": "7a5e47af2fc889ad52574daed898173c522759a58a246702a20fcf3092f50ffe",
+    "src/soma/validation/human_tissues.py": "ff0c1013b5faf955678d570353c0369acc133105213cd8a9aa570bdab874f850",
+    "src/soma/datasets/human_mri.py": "88a0f2e3b5c14e9576dfa2b47a8449767edba1d0437c3adc9f8ada5839bfb2f3",
+    "scripts/audit_mri_geometry32.py": "5924fb0a3d4d90107f44c3d2c312b8344e918b188d41070c1d70cf1c7d56cfee"
+  },
+  "versions": {
+    "soma-neuro": "0.32.0",
+    "mne": "1.13.2",
+    "openmeeg": "2.6.0",
+    "nibabel": "5.4.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-image": "0.26.0"
+  },
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.12.2"
+  },
+  "exact_replay": {
+    "scientific_metrics_equal": true,
+    "all_four_fields_byte_identical": true,
+    "scope": "same local environment; human fields not independently replicated on four platforms"
+  },
+  "supplement": "Descriptive vertex-sampled decimation QC added after primary replay; no threshold, protocol or original numerical result changed."
+}

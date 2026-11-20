@@ -209,7 +209,7 @@
     }
   ],
   "implementation_sha256": {
-    "scripts/run_mri_head_models.py": "4dd8c106c85c44beee9cc9367ff979a5595eced48a9634b4baabdd138dbf9e3e",
+    "scripts/run_mri_head_models.py": "58e23f57f042e194d37be3d01d1bb5f72a3c32812fbf9339b32c8ee8a46339fd",
     "scripts/mri_head_worker.py": "e2e8afa1002b876f34c0cdfa45b88c22e6bd91060d5eac371889fb853c277612",
     "src/soma/anatomy/head_models.py": "071de3c91b6ba47e59d6b6267067ca8a02bb2394ddfbc4ff6b63e28249c67d88",
     "src/soma/source/domains.py": "ffe846a87393066ce976b1d9cdc57271fc9ea9a44dbbb6111e233069b63aadbc",
@@ -275,8 +275,8 @@
       "source_margin_min_mm": 10.282824218554882,
       "reference_mean_max_V_per_Am": 1.5415164436829292e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 1.6734335829969496,
-      "peak_MiB": 217.328125,
+      "seconds": 1.9179794999654405,
+      "peak_MiB": 204.578125,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     },
     {
@@ -288,8 +288,8 @@
       "source_margin_min_mm": 10.442461576722827,
       "reference_mean_max_V_per_Am": 2.1316282072803006e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 4.716746582998894,
-      "peak_MiB": 315.140625,
+      "seconds": 4.757036582974251,
+      "peak_MiB": 309.421875,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     },
     {
@@ -301,8 +301,8 @@
       "source_margin_min_mm": 9.884824440300072,
       "reference_mean_max_V_per_Am": 1.950981749036207e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 39.6067476249882,
-      "peak_MiB": 1402.9375,
+      "seconds": 41.186515792040154,
+      "peak_MiB": 1400.8125,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     },
     {
@@ -314,8 +314,8 @@
       "source_margin_min_mm": 10.442461576722827,
       "reference_mean_max_V_per_Am": 2.179800596145392e-14,
       "source_head_pairing_max_m": 0.0,
-      "seconds": 21.737438582989853,
-      "peak_MiB": 401.03125,
+      "seconds": 20.860420334036462,
+      "peak_MiB": 407.734375,
       "solver_residual": "not independently exposed by the MNE BEM solution API; not invented"
     }
   ],
@@ -634,8 +634,8 @@
   "human_localization_accuracy": false,
   "private_viewer_required": true,
   "raw_assets_redistributed": false,
-  "seconds": 213.94761400000425,
-  "peak_process_MiB": 790.921875,
+  "seconds": 218.0133069580188,
+  "peak_process_MiB": 875.8125,
   "baseline_comparison": [
     {
       "dataset": "ibsr-v2",

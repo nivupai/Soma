@@ -8,6 +8,8 @@ local metadata/permissions before running these commands from the repository roo
 ```sh
 python -m scripts.run_mri_head_models --local-output reports/milestone32/reproduction
 python -m scripts.summarize_mri_head_models reports/milestone32/reproduction --output reports/milestone32/public-review
+python -m scripts.audit_mri_geometry32 reports/milestone32/reproduction --output reports/milestone32/dataset-geometry.json
+python -m scripts.audit_mri_surface_displacement32 reports/milestone32/reproduction --output reports/milestone32/decimation-displacement.csv
 python -m scripts.prepare_mri_head_viewer reports/milestone32/reproduction --output reports/milestone32/private-view --config reports/milestone32/viewer.local.json
 SOMA_LOCAL_ANATOMY_VIEWER=1 SOMA_EXPLORER_CONFIG=reports/milestone32/viewer.local.json python -m soma.sdk.explorer
 ```

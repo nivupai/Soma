@@ -14,6 +14,12 @@ type Report = {
     target: number;
     passed: boolean;
   }[];
+  mesh_quality: {
+    level: number;
+    passed: boolean;
+    minimum_interface_separation_mm: number;
+    boundaries: { triangle_quality_min: number }[];
+  }[];
   tissue_metrics: {
     dataset: string;
     name: string;
@@ -203,6 +209,30 @@ export default function HumanHeadModels() {
                     <td>{c.comparison}</td>
                     <td>{(100 * c.relative).toFixed(2)}%</td>
                     <td>{c.passed ? "PASS" : "FAIL"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>BEM level</th>
+                  <th>Surface QC</th>
+                  <th>Minimum triangle quality</th>
+                  <th>Minimum interface gap mm</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.mesh_quality.map((q) => (
+                  <tr key={q.level}>
+                    <td>{q.level}</td>
+                    <td>{q.passed ? "PASS" : "FAIL"}</td>
+                    <td>
+                      {Math.min(
+                        ...q.boundaries.map((b) => b.triangle_quality_min),
+                      ).toFixed(3)}
+                    </td>
+                    <td>{q.minimum_interface_separation_mm.toFixed(3)}</td>
                   </tr>
                 ))}
               </tbody>

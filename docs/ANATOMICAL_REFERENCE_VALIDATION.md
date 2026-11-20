@@ -44,3 +44,18 @@ volume < 1.5e-11 mm³ (CSV roundoff). No historical outcome changes.
 The provided MNE FreeSurfer aseg labels are automated anatomical support, **not an
 independent reference**. No improvement over the historical algorithm or independently
 validated skull/scalp/CSF reconstruction is claimed.
+
+Geometry audit: all 36 IBSR image/reference files have coded sforms and absent coded
+qforms; native storage is RAS, spacing .837054–1 mm × 1.5 mm × .837054–1 mm. Published
+IBSR mm spacing supports the existing explicit units override. All ten MRBrainS
+image/reference files have qform code 2/sform code 1, storage LPS and spacing about
+.958333 × .958333 × 3 mm. Maximum coded q/s corner disagreement is .429100 mm,
+within the frozen .5 mm limit; warnings are retained. Sform selection is explicit.
+Two MRBrainS intensities receive the preexisting <=.05 mm identity-world alignment;
+no reference labels are resampled. This is convention-aware QC, not fitted registration.
+
+Permission sources: [MNE sample documentation](https://mne.tools/stable/documentation/datasets.html#sample),
+[MNE manual sample conditions](https://mne.tools/mne-c-manual/MNE-manual-2.7.3.pdf),
+[IBSR release notices](https://www.nitrc.org/frs/shownotes.php?release_id=2316).
+Conflicting older notices and the locally supplied MRBrainS Readme/manifest are retained
+privately. Source availability does not imply redistribution or clinical/commercial use.
