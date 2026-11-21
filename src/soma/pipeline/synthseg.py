@@ -1,7 +1,7 @@
 """SynthSeg label import: fixed ontology map and native-grid return, no tool execution here."""
 
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import numpy as np
 
@@ -72,4 +72,7 @@ def load_synthseg(path: Path) -> Volume:
     image: Any = nib.load(path)
     unit = image.header.get_xyzt_units()[0]
     override = "mm" if unit == "unknown" else None
-    return load_nifti(path, policy="sform", units_override=override, kind="labels")
+    # SynthSeg copies the input's coded transform: sform for IBSR/MRBrainS, qform-only for
+    # SynthRAD2023. Use whichever is coded, preferring sform.
+    policy: Literal["sform", "qform"] = "sform" if image.get_sform(coded=True)[1] else "qform"
+    return load_nifti(path, policy=policy, units_override=override, kind="labels")
