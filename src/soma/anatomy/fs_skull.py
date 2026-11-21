@@ -89,3 +89,23 @@ def voxelize(mesh: Mesh, like: Volume) -> np.ndarray[Any, Any]:
         for start, stop in zip(zs_sorted[0::2], zs_sorted[1::2], strict=False):
             out[i, j, (k >= start) & (k <= stop)] = True
     return out
+
+
+def offset_mesh(mesh: Mesh, offset_mm: float) -> Mesh:
+    """Move every vertex along its outward normal by ``offset_mm`` (negative = inward).
+
+    Used for a bias correction calibrated on development cases only. Winding is checked so
+    "outward" is geometric, whatever the source file's convention.
+    """
+    from soma.anatomy.t1_skull import vertex_normals
+
+    xyz = mesh.vertices.xyz
+    normals = vertex_normals(mesh)
+    if float(np.mean(np.sum(normals * (xyz - xyz.mean(axis=0)), axis=1))) < 0:
+        normals = -normals
+    moved = xyz + normals * (offset_mm / 1000.0)
+    return Mesh(
+        Points(moved, mesh.vertices.frame),
+        np.asarray(mesh.faces),
+        {**mesh.metadata, "normal_offset_mm": offset_mm},
+    )

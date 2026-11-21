@@ -74,3 +74,15 @@ def test_voxelize_sphere_volume_and_lps_grid() -> None:
     expected = 4 / 3 * np.pi * 20**3
     assert abs(mask.sum() - expected) / expected < 0.04
     assert mask[30, 30, 30] and not mask[0, 0, 0]
+
+
+def test_offset_mesh_moves_sphere_radius() -> None:
+    from soma.anatomy.fs_skull import offset_mesh
+
+    sphere = _icosphere(0.02)
+    for mm in (-3.0, 2.0):
+        r = np.linalg.norm(offset_mesh(sphere, mm).vertices.xyz, axis=1).mean() * 1000
+        assert abs(r - (20 + mm)) < 0.05
+    flipped = Mesh(sphere.vertices, np.asarray(sphere.faces)[:, ::-1].copy())
+    r = np.linalg.norm(offset_mesh(flipped, -3.0).vertices.xyz, axis=1).mean() * 1000
+    assert abs(r - 17) < 0.05
