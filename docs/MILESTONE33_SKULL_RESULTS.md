@@ -4,7 +4,16 @@ Protocol: `docs/MILESTONE33_SKULL_PROTOCOL.md`, sealed by the project owner in
 `configs/m33-skull-freeze.json` before any scoring. Aggregates only (CC BY-NC 4.0):
 `experiments/milestone33/skull-aggregate.json`. Per-case outputs stay local.
 
-## Outcome
+> **Correction (2026-11-21): these v1 results are not reliable.** An audit after scoring found a
+> bug in the CT truth: the cranial cavity was filled one axial slice at a time, so any slice with
+> an open bone ring (frontal sinus, orbit roof, crop) split the cavity into slabs and only the
+> largest slab was kept (for example 268 mL instead of about 1,330 mL). The inner/outer skull
+> truth surfaces were therefore wrong in many cases, and the 6 failures came from the same bug.
+> The fix is in `soma.benchmarks.ct_skull` with a regression test. The MR/CT consistency flag
+> was also found not to be meaningful (bright diploic marrow on T1). Protocol v2 replaces v1.
+> The numbers below are kept as the historical v1 record only.
+
+## Outcome (v1, superseded)
 
 **Readiness of the T1-only baseline: `NOT_READY`.** Every decision check fails.
 

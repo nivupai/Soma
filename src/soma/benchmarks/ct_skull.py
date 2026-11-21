@@ -181,10 +181,20 @@ def ct_truth(
         if p.enclosure_closing_voxels
         else bone
     )
-    cavity = _largest(np.asarray(ndimage.binary_fill_holes(_slice_fill(enclosure, axis) & ~bone)))
+    # v2 fix: v1 filled axial slices only, so any slice with an open bone ring split the
+    # cavity into slabs and _largest kept one slab. Fill along all three axes, then in 3D.
+    filled = _slice_fill(enclosure, 0) | _slice_fill(enclosure, 1) | _slice_fill(enclosure, 2)
+    cavity = _largest(np.asarray(ndimage.binary_fill_holes(filled)) & ~bone)
     if not cavity.any():
         raise ValueError("No bone-enclosed cranial cavity at this HU threshold")
-    outer = _largest(np.asarray(ndimage.binary_fill_holes(_slice_fill(bone | cavity, axis))))
+    shell = bone | cavity
+    outer = _largest(
+        np.asarray(
+            ndimage.binary_fill_holes(
+                _slice_fill(shell, 0) | _slice_fill(shell, 1) | _slice_fill(shell, 2)
+            )
+        )
+    )
     tissue = (hu > p.tissue_hu) & within
     if p.scalp_closing_voxels:
         tissue = ndimage.binary_closing(tissue, iterations=p.scalp_closing_voxels)
