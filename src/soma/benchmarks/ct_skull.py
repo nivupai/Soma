@@ -242,6 +242,46 @@ class FlagThresholds:
     minimum_cavity_ml: float = 900.0
     dark_fraction_of_otsu: float = 0.5
     minimum_bone_dark_fraction: float = 0.5
+    # v2 additions (defaults reproduce v1 behaviour exactly).
+    truncation_uses_tissue: bool = True
+    hull_ratio_min: float | None = None
+    crop_band_voxels: int | None = None
+    crop_bone_voxels: int = 200
+    mr_ct_consistency_flags: bool = True
+
+
+# Skull protocol v2: bone-only truncation, convex-hull defect ratio, crop flag, and MR/CT
+# consistency reported but never used to exclude (bright diploic marrow on T1).
+FLAGS_V2 = FlagThresholds(
+    minimum_cavity_ml=0.0,
+    truncation_uses_tissue=False,
+    hull_ratio_min=0.80,
+    crop_band_voxels=2,
+    mr_ct_consistency_flags=False,
+)
+
+
+def hull_ratio(
+    cavity: np.ndarray[Any, Any], bone: np.ndarray[Any, Any], axis: int, direction: int
+) -> float:
+    """Cavity volume over (slice-wise convex hull of bone minus bone), upper half of the cavity."""
+    from skimage.morphology import convex_hull_image
+
+    c = np.moveaxis(cavity, axis, 0)
+    b = np.moveaxis(bone, axis, 0)
+    levels = np.flatnonzero(c.any(axis=(1, 2)))
+    if not len(levels):
+        return 0.0
+    mid = (levels[0] + levels[-1]) // 2
+    upper = range(mid, levels[-1] + 1) if direction > 0 else range(levels[0], mid + 1)
+    cav = hull = 0
+    for k in upper:
+        if b[k].sum() < 3:
+            continue
+        h = convex_hull_image(b[k]) & ~b[k]
+        hull += int(h.sum())
+        cav += int((c[k] & h).sum())
+    return float(cav / hull) if hull else 0.0
 
 
 def exclusion_flags(
@@ -281,7 +321,7 @@ def exclusion_flags(
     )
     bone_top = int(np.sum((top[slab] > truth.provenance["parameters"]["bone_hu"]) & top_mask[slab]))
     flags["vertex_truncation"] = {
-        "flag": tissue_top > 0 or bone_top > 0,
+        "flag": (tissue_top > 0 and f.truncation_uses_tissue) or bone_top > 0,
         "tissue_voxels_top_slices": tissue_top,
         "bone_voxels_top_slices": bone_top,
         "superior_voxel_axis": axis,
@@ -300,8 +340,15 @@ def exclusion_flags(
     sizes: Any = np.bincount(labelled.ravel())[1:]
     largest_mm2 = float(sizes.max() * face_mm2) if count else 0.0
     cavity_ml = float(cavity.sum() * voxel_mm3 / 1000)
+    ratio = None
+    if f.hull_ratio_min is not None:
+        pad_axis, pad_direction = superior_axis(like)
+        ratio = hull_ratio(cavity, bone, pad_axis, pad_direction)
     flags["skull_defect"] = {
-        "flag": largest_mm2 >= f.defect_area_mm2 or cavity_ml < f.minimum_cavity_ml,
+        "flag": largest_mm2 >= f.defect_area_mm2
+        or cavity_ml < f.minimum_cavity_ml
+        or (ratio is not None and ratio < float(f.hull_ratio_min or 0)),
+        "hull_ratio": ratio,
         "largest_uncovered_patch_mm2": largest_mm2,
         "uncovered_fraction": float(uncovered.sum() / max(boundary.sum(), 1)),
         "cavity_ml": cavity_ml,
@@ -309,8 +356,19 @@ def exclusion_flags(
             "area_mm2": f.defect_area_mm2,
             "minimum_cavity_ml": f.minimum_cavity_ml,
             "search_voxels": f.defect_search_voxels,
+            "hull_ratio_min": f.hull_ratio_min,
         },
     }
+
+    if f.crop_band_voxels is not None:
+        edge = within & ~ndimage.binary_erosion(within, iterations=f.crop_band_voxels)
+        bone_native = bone[n:-n, n:-n, n:-n] if n else bone
+        cropped = int(np.sum(edge & bone_native & region_native))
+        flags["field_of_view_crop"] = {
+            "flag": cropped > f.crop_bone_voxels,
+            "bone_voxels_at_mask_edge": cropped,
+            "threshold": {"band_voxels": f.crop_band_voxels, "bone_voxels": f.crop_bone_voxels},
+        }
 
     if t1 is None:
         flags["mr_ct_consistency"] = {"flag": None, "reason": "no T1 supplied"}
@@ -323,7 +381,10 @@ def exclusion_flags(
         core = ndimage.binary_erosion(bone_native) & region_native
         fraction = float(np.sum(dark & core) / max(int(core.sum()), 1))
         flags["mr_ct_consistency"] = {
-            "flag": fraction < f.minimum_bone_dark_fraction,
+            "flag": (fraction < f.minimum_bone_dark_fraction)
+            if f.mr_ct_consistency_flags
+            else None,
+            "reported_only": not f.mr_ct_consistency_flags,
             "ct_bone_dark_in_mr_fraction": fraction,
             "bone_core_voxels": int(core.sum()),
             "threshold": {
