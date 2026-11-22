@@ -50,7 +50,7 @@ def fs_env() -> dict[str, str]:
     return env
 
 
-def build_watershed(case: str, subjects: Path, env: dict[str, str]) -> Path:
+def build_watershed(case: str, subjects: Path, env: dict[str, str], data: Path = DATA) -> Path:
     subject = subjects / case
     if (subject / "bem" / "watershed" / f"{case}_outer_skin_surface").exists():
         return subject
@@ -62,7 +62,7 @@ def build_watershed(case: str, subjects: Path, env: dict[str, str]) -> Path:
         [
             "mri_convert",
             "--conform",
-            str((DATA / case / "mr.nii.gz").resolve()),
+            str((data / case / "mr.nii.gz").resolve()),
             str(mri / "orig.mgz"),
         ],
         **run,  # type: ignore[arg-type]
