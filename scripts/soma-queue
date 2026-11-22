@@ -1,0 +1,62 @@
+#!/bin/bash
+# Start, stop or inspect the resumable Soma job queue.
+#   soma-queue start     start in the background (safe to run again; it resumes)
+#   soma-queue stop      stop the queue and its current jobs (finished work is kept)
+#   soma-queue status    same as soma-status
+#   soma-queue log       follow the queue log
+#   soma-queue install   auto-start at login and restart if it dies (launchd LaunchAgent)
+#   soma-queue uninstall remove the LaunchAgent
+set -u
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+STATE="$ROOT/reports/soma-queue"
+LABEL="com.soma.queue"
+PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
+mkdir -p "$STATE"
+
+running_pid() {
+  pgrep -f "scripts.soma_queue" | head -1
+}
+
+case "${1:-status}" in
+  start)
+    if [ -n "$(running_pid)" ]; then echo "Queue already running (pid $(running_pid))."; exit 0; fi
+    cd "$ROOT" && nohup caffeinate -i "$ROOT/.venv/bin/python" -m scripts.soma_queue >> "$STATE/stdout.log" 2>&1 &
+    sleep 2
+    echo "Queue started (pid $(running_pid)). Check progress with: soma-status"
+    ;;
+  stop)
+    pid="$(running_pid)"
+    if [ -z "$pid" ]; then echo "Queue is not running."; exit 0; fi
+    pkill -f "scripts.soma_queue"
+    pkill -f "scripts.dev_m33_crop|scripts.flags_m33_v3|scripts.run_m33_skull_v31|SynthSeg_predict|mri_normalize|mri_nu_correct|mri_watershed"
+    rm -rf /tmp/soma-synthseg.lock
+    echo "Queue stopped. Finished work is kept; 'soma-queue start' resumes."
+    ;;
+  status) exec "$ROOT/scripts/soma-status" ;;
+  log) exec tail -n 30 -f "$STATE/queue.log" ;;
+  install)
+    mkdir -p "$HOME/Library/LaunchAgents"
+    cat > "$PLIST" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>$LABEL</string>
+  <key>ProgramArguments</key><array>
+    <string>/usr/bin/caffeinate</string><string>-i</string>
+    <string>$ROOT/.venv/bin/python</string><string>-m</string><string>scripts.soma_queue</string>
+  </array>
+  <key>WorkingDirectory</key><string>$ROOT</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>StandardOutPath</key><string>$STATE/stdout.log</string>
+  <key>StandardErrorPath</key><string>$STATE/stdout.log</string>
+</dict></plist>
+EOF
+    launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null
+    launchctl bootstrap "gui/$(id -u)" "$PLIST" && echo "Installed: the queue now starts at login and restarts if it crashes."
+    ;;
+  uninstall)
+    launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null; rm -f "$PLIST"; echo "LaunchAgent removed."
+    ;;
+  *) echo "usage: soma-queue start|stop|status|log|install|uninstall"; exit 1 ;;
+esac
