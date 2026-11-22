@@ -125,6 +125,15 @@ def phases() -> list[Phase]:
     ]
 
 
+def newest_done(all_phases: list[Phase], fallback: str) -> str:
+    """Most recent finish time of any task, including work done by earlier hand-started runs."""
+    times = [t.done.stat().st_mtime for p in all_phases for t in p.tasks if t.done.exists()]
+    if not times:
+        return fallback
+    latest = datetime.datetime.fromtimestamp(max(times)).astimezone().isoformat(timespec="seconds")
+    return max(latest, fallback)
+
+
 def failed_marker(task: Task) -> Path:
     return STATE / "failed" / (task.id.replace(":", "_") + ".json")
 
@@ -170,7 +179,7 @@ def main() -> None:
             status = {
                 "pid": os.getpid(),
                 "updated_at": now(),
-                "last_progress_at": last_progress,
+                "last_progress_at": newest_done(all_phases, last_progress),
                 "phase": phase.name,
                 "phase_index": index + 1,
                 "phases_total": len(all_phases),

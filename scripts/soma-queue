@@ -7,7 +7,8 @@
 #   soma-queue install   auto-start at login and restart if it dies (launchd LaunchAgent)
 #   soma-queue uninstall remove the LaunchAgent
 set -u
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SELF="$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || python3 -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' "${BASH_SOURCE[0]}")"
+ROOT="$(cd "$(dirname "$SELF")/.." && pwd)"
 STATE="$ROOT/reports/soma-queue"
 LABEL="com.soma.queue"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
