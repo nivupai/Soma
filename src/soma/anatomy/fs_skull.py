@@ -109,3 +109,56 @@ def offset_mesh(mesh: Mesh, offset_mm: float) -> Mesh:
         np.asarray(mesh.faces),
         {**mesh.metadata, "normal_offset_mm": offset_mm},
     )
+
+
+def crop_head_top(t1: Volume, height_mm: float = 220.0, margin_mm: float = 10.0) -> Volume:
+    """Keep the superior ``height_mm`` of the T1 head (MRI-only rule; protocol v3.1).
+
+    The top of the head is the most superior slice whose Otsu foreground covers at least 1% of
+    the largest slice's foreground; nothing above it is removed. Slices more than
+    ``height_mm`` below it (neck, shoulders) are dropped, and the in-plane extent is cut to the
+    remaining foreground bounding box plus ``margin_mm``. World coordinates are preserved.
+    """
+    from skimage.filters import threshold_otsu
+
+    from soma.benchmarks.ct_skull import superior_axis
+
+    data = t1.array(np.float32)
+    foreground = data > threshold_otsu(data)
+    axis, direction = superior_axis(t1)
+    area = np.moveaxis(foreground, axis, 0).sum(axis=(1, 2))
+    present = np.flatnonzero(area >= 0.01 * float(np.max(area)))
+    n_axis = data.shape[axis]
+    keep = int(np.ceil(height_mm / float(t1.spacing_m[axis] * 1000)))
+    if direction > 0:
+        top = int(np.max(present))
+        bounds = {axis: (max(top - keep + 1, 0), n_axis)}
+    else:
+        top = int(np.min(present))
+        bounds = {axis: (0, min(top + keep, n_axis))}
+    slab = [slice(None)] * 3
+    slab[axis] = slice(*bounds[axis])
+    kept = foreground[tuple(slab)]
+    for other in (a for a in range(3) if a != axis):
+        profile = np.flatnonzero(np.moveaxis(kept, other, 0).any(axis=(1, 2)))
+        pad_voxels = int(np.ceil(margin_mm / float(t1.spacing_m[other] * 1000)))
+        bounds[other] = (
+            max(int(np.min(profile)) - pad_voxels, 0),
+            min(int(np.max(profile)) + pad_voxels + 1, data.shape[other]),
+        )
+    index = tuple(slice(*bounds[a]) for a in range(3))
+    affine = np.array(t1.affine_m, dtype=float)
+    affine[:3, 3] = affine[:3, 3] + affine[:3, :3] @ np.array([bounds[a][0] for a in range(3)])
+    return Volume(
+        np.ascontiguousarray(t1.array()[index]),
+        affine,
+        t1.kind,
+        {
+            **t1.metadata,
+            "crop_head_top": {
+                "height_mm": height_mm,
+                "margin_mm": margin_mm,
+                "voxel_bounds": [list(bounds[a]) for a in range(3)],
+            },
+        },
+    )
