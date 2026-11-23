@@ -27,7 +27,13 @@ for p in s["phases"]:
 for r in s.get("running", []):
     print(f"Running:  {r['task']} (since {ago(r['started_at'])})")
 if s.get("waiting_for"):
-    print(f"WAITING:  {s['waiting_for']}")
+    w = s["waiting_for"]
+    if "seal" in w:
+        cmd = w[w.find("(") + 1 : w.rfind(")")] if "(" in w else ""
+        print("*** NEEDS YOU: the next step waits for your protocol seal. Run:")
+        print(f"    cd ~/Documents/Soma-publish-clean && {cmd}")
+    else:
+        print(f"WAITING:  {w}")
 print(f"Last finished task: {ago(s['last_progress_at'])}   (status written {ago(s['updated_at'])})")
 idle = (now - datetime.datetime.fromisoformat(s["last_progress_at"])).total_seconds() / 60
 if s.get("finished"):

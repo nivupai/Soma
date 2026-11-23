@@ -84,7 +84,10 @@ def evaluate(
     }
     primary = truths[PRIMARY_BONE_HU]
     region = RegionRule().fit(primary.masks["inner_skull"])
-    flags = exclusion_flags(ct, mask, primary, region, t1=t1, thresholds=FLAGS_V2)
+    # MR/CT consistency is report-only (FLAGS_V2) and needs the paired grid; a cropped T1
+    # (v3.1) is not on the CT grid, so that one report is omitted rather than crashing.
+    paired_t1 = t1 if t1.same_grid(ct) else None
+    flags = exclusion_flags(ct, mask, primary, region, t1=paired_t1, thresholds=FLAGS_V2)
     flags["mri_qc"] = {
         "flag": not qc_pass,
         "watershed_inner_over_synthseg_icv": ratio,
