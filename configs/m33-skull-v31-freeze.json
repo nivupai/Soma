@@ -1,0 +1,17 @@
+{
+  "protocol": "docs/MILESTONE33_SKULL_PROTOCOL_V31.md",
+  "protocol_sha256": "0d9581e30ee7ad88c4786b3312163aa087fb1313bed01de212f68a1f1cc34c8c",
+  "owner_approved": true,
+  "model": "reports/milestone33/skull-dev-crop/refine-model-v3.1-final.pkl",
+  "model_sha256": "36c6391132d699decc9d8e34c176c612aac48ef49fddff574b9096206de67f65",
+  "approved_by": "germ",
+  "frozen_at_utc": "2026-11-23T02:18:32.019017+00:00",
+  "held_out_metrics_inspected": false,
+  "development_cases_inspected": true,
+  "dataset": "SynthRAD2023 Task 1 brain, CC BY-NC 4.0, aggregates only",
+  "synthseg": {
+    "version": "SynthSeg-robust 2.0",
+    "git_commit": "2a2aa3bbfccb83f8253a51ca8b329b9938a2646d",
+    "synthseg_robust_2.0.h5_sha256": "7bc30bf5c3d204f20c4a6cb5a283aedbcab6af1de927cda783f59b67d19cb01c"
+  }
+}
