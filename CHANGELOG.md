@@ -9,6 +9,18 @@ lived in the README are preserved in [docs/MILESTONES.md](docs/MILESTONES.md).
   milestone announcements moved verbatim to `docs/MILESTONES.md`; new
   `docs/DATA_POLICY.md` dataset inventory. No scientific code changed.
 
+### M33 cortical source space (workstream C)
+
+- Add `soma.source.cortical`: white/pial midsurface sources per hemisphere, count-matched
+  ico/oct decimation on the subject sphere, outward area-weighted normals and barycentric
+  patch-area weights. Medial wall/named-label, orientation and inner-skull containment
+  exclusions are counted by reason and region; excluded area is never redistributed.
+- MNE sample (oct6, 5120-face BEM inner skull): 7,618 sources covering 94.43% of the
+  midsurface area (99.59% after medial-wall exclusion), all inside the inner skull;
+  19 candidates outside and 1 with normal opposing white->pial were excluded. Public
+  aggregate in `experiments/milestone33/cortical-source-space-sample.json`.
+- The volumetric `SourceDomain` (13.10% GM voxel coverage) is unchanged for comparison.
+
 ## 0.32.0 — MRI-derived head models and anatomical evidence
 
 - Execute independent tissue-baseline replication on 18 IBSR and five MRBrainS training
