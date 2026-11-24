@@ -1,6 +1,15 @@
 # Changelog
 
-## Unreleased — M33 cortical source space (workstream C)
+The detailed per-milestone announcements and command references that previously
+lived in the README are preserved in [docs/MILESTONES.md](docs/MILESTONES.md).
+
+## Unreleased
+
+- Documentation only: README rewritten as a product front page; prior README
+  milestone announcements moved verbatim to `docs/MILESTONES.md`; new
+  `docs/DATA_POLICY.md` dataset inventory. No scientific code changed.
+
+### M33 cortical source space (workstream C)
 
 - Add `soma.source.cortical`: white/pial midsurface sources per hemisphere, count-matched
   ico/oct decimation on the subject sphere, outward area-weighted normals and barycentric
