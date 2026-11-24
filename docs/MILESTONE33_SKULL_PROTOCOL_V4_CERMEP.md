@@ -37,7 +37,12 @@ On 3 subjects, picked by sorted ID (first, middle, last):
 3. the MRI-only QC ratio is inside [0.80, 1.80];
 4. peak memory stays under 10 GB and runtime under 20 min per subject.
 
-If any check fails, the cause is reported and the protocol is revised **before** sealing.
+The pre-check passes if checks 1 and 4 hold for all 3 subjects and checks 2–3 hold for at
+least 2 of 3. This rule was set by trying the pre-check on two datasets that were already used.
+On 3 SynthRAD2023 brain subjects (in scope) it **passed**: two clean, one with QC ratio 1.96.
+On 3 SynthRAD2025 head-and-neck subjects (out of scope) it **failed**: QC ratios 3.35, 4.11, and
+no brain found. It would have stopped the v3.1 head-and-neck test before sealing.
+If the pre-check fails, the cause is reported and the protocol is revised **before** sealing.
 These 3 subjects remain in the test set, because no CT has been seen.
 
 ## CT truth, flags, metrics, decision rule

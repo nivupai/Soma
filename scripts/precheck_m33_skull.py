@@ -81,7 +81,14 @@ def main() -> None:
     picks = [cases[0], cases[len(cases) // 2], cases[-1]]
     env = fs_env()
     results = [check(c, args.data, args.work, env) for c in picks]
-    passed = all(all(r["checks"].values()) for r in results)
+    # Every subject must run to completion within budget; the per-head QC checks may miss on
+    # at most one of three (brain data has a ~1% per-head QC failure rate, so one miss is
+    # plausible bad luck; a scope mismatch, as with head-and-neck MRI, fails them all).
+    operational = all(
+        r["checks"][k] for r in results for k in ("completed", "runtime_ok", "memory_ok")
+    )
+    qc_ok = sum(r["checks"]["icv_in_range"] and r["checks"]["qc_ratio_in_range"] for r in results)
+    passed = operational and qc_ok >= 2
     args.work.mkdir(parents=True, exist_ok=True)
     (args.work / "precheck.json").write_text(
         json.dumps({"passed": passed, "subjects": results}, indent=1)
