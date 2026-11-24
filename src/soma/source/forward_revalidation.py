@@ -67,7 +67,7 @@ def average_reference(lead: Array) -> Array:
     g = np.asarray(lead, dtype=float)
     if g.ndim != 2 or g.shape[0] < 2:
         raise ValueError("Lead field must be sensors by sources")
-    return g - g.mean(axis=0, keepdims=True)
+    return np.asarray(g - g.mean(axis=0, keepdims=True), dtype=float)
 
 
 def fixed_orientation(free: Array, normals: Array, rotation: Array | None = None) -> Array:
