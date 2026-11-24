@@ -1,0 +1,13 @@
+{
+  "protocol": "docs/MILESTONE33_SEGMENTATION_PROTOCOL.md",
+  "protocol_sha256": "ff19125c5ac70e90405720cf8389d89493fa2684fd80d65da2ab869cca950b19",
+  "owner_approved": true,
+  "approved_by": "germ",
+  "frozen_at_utc": "2026-11-20T17:23:11.844949+00:00",
+  "human_metrics_inspected": false,
+  "synthseg": {
+    "version": "SynthSeg-robust 2.0",
+    "git_commit": "2a2aa3bbfccb83f8253a51ca8b329b9938a2646d",
+    "synthseg_robust_2.0.h5_sha256": "7bc30bf5c3d204f20c4a6cb5a283aedbcab6af1de927cda783f59b67d19cb01c"
+  }
+}
