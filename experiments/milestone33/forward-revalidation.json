@@ -1,0 +1,518 @@
+{
+  "schema": "soma.forward-revalidation/1",
+  "subject": "MNE sample (public dataset)",
+  "head_readiness": "QC_ONLY_ANATOMY",
+  "skull_ct_validated": false,
+  "anatomical_accuracy_established": false,
+  "statement": "Numerical forward-model evidence on a QC_ONLY_ANATOMY conductor; skull not CT-validated; not anatomical or source-accuracy validation",
+  "conductor": "three-compartment BEM (brain/CSF homogenized), provided FLASH surfaces",
+  "conductivity_S_per_m": {
+    "brain": 0.3,
+    "skull": 0.006,
+    "scalp": 0.3
+  },
+  "modality": "EEG, average reference",
+  "source_space": {
+    "kind": "cortical white/pial midsurface, oct6 (soma.source.cortical)",
+    "orientation": "fixed, area-weighted outward midsurface normal",
+    "built_sources": 7618,
+    "common_sources_inside_every_level": 7598,
+    "selection": "sources inside the inner skull of every compared level; none moved",
+    "inner_skull_margin_level4_mm": {
+      "p5": 2.340848958973752,
+      "p25": 7.019095828025753,
+      "p50": 12.722181397362878,
+      "p75": 20.768726490003182,
+      "p95": 37.123514305461235,
+      "p99": 46.54618752735096,
+      "mean": 15.209737032224831,
+      "min": 0.04856348794684946,
+      "max": 51.922240458803046,
+      "count": 7598
+    }
+  },
+  "levels": {
+    "3": "MNE ico3 decimation of the provided surfaces (642 vertices each)",
+    "4": "provided ico4 surfaces (2562 vertices each)",
+    "5i": "level-4 geometry; inner skull midpoint-subdivided (10242 vertices), outer skull/scalp level 4; discretization-only refinement",
+    "5": "INFEASIBLE here: 30726 BEM unknowns, ~7.5 GB per dense matrix copy (MNE), larger for OpenMEEG, on a 16 GB machine",
+    "openmeeg_5i": "not run: ~41k OpenMEEG unknowns, dense matrix exceeds memory"
+  },
+  "metric": "||G_coarse - G_fine||_F / ||G_fine||_F on average-referenced fixed-orientation lead fields (M32 metric); solver agreement uses OpenMEEG as reference",
+  "geometry": {
+    "3": {
+      "surface_geometry_pass": true,
+      "vertex_counts": [
+        642,
+        642,
+        642
+      ],
+      "face_counts": [
+        1280,
+        1280,
+        1280
+      ],
+      "triangle_quality_min": [
+        0.9009801397889677,
+        0.8551051150837395,
+        0.7422784633049132
+      ],
+      "sources_inside_inner_skull": 7598,
+      "inside_margin_min_mm": 0.00677566012765394,
+      "electrode_scalp_max_mm": 5.66874540104314,
+      "electrode_gate_pass": true
+    },
+    "4": {
+      "surface_geometry_pass": true,
+      "vertex_counts": [
+        2562,
+        2562,
+        2562
+      ],
+      "face_counts": [
+        5120,
+        5120,
+        5120
+      ],
+      "triangle_quality_min": [
+        0.8836642555213117,
+        0.8591610118677891,
+        0.7580410354989028
+      ],
+      "sources_inside_inner_skull": 7618,
+      "inside_margin_min_mm": 0.018157532979892428,
+      "electrode_scalp_max_mm": 5.315008289964216,
+      "electrode_gate_pass": true
+    },
+    "5i": {
+      "surface_geometry_pass": true,
+      "vertex_counts": [
+        10242,
+        2562,
+        2562
+      ],
+      "face_counts": [
+        20480,
+        5120,
+        5120
+      ],
+      "triangle_quality_min": [
+        0.8836638307021513,
+        0.8591610118677891,
+        0.7580410354989028
+      ],
+      "sources_inside_inner_skull": 7618,
+      "inside_margin_min_mm": 0.01815661881472627,
+      "electrode_scalp_max_mm": 5.315008289964216,
+      "electrode_gate_pass": true
+    }
+  },
+  "EEG_channels": 59,
+  "forward": [
+    {
+      "level": "3",
+      "solver": "mne",
+      "bem_unknown_vertices": 1926,
+      "source_count": 7598,
+      "EEG_channels": 59,
+      "orientation": "fixed cortical normal",
+      "lead_rank": 58,
+      "lead_nonnull_condition": 158.71249568221083,
+      "bem_solution_seconds": 2.3367289589950815,
+      "seconds": 7.245684083012748,
+      "peak_MiB": 388.0625,
+      "units": "V/(A*m)",
+      "readiness": "QC_ONLY_ANATOMY"
+    },
+    {
+      "level": "4",
+      "solver": "mne",
+      "bem_unknown_vertices": 7686,
+      "source_count": 7598,
+      "EEG_channels": 59,
+      "orientation": "fixed cortical normal",
+      "lead_rank": 58,
+      "lead_nonnull_condition": 132.16476536629634,
+      "bem_solution_seconds": 33.8900025410112,
+      "seconds": 53.11236708400247,
+      "peak_MiB": 1978.609375,
+      "units": "V/(A*m)",
+      "readiness": "QC_ONLY_ANATOMY"
+    },
+    {
+      "level": "5i",
+      "solver": "mne",
+      "bem_unknown_vertices": 15366,
+      "source_count": 7598,
+      "EEG_channels": 59,
+      "orientation": "fixed cortical normal",
+      "lead_rank": 58,
+      "lead_nonnull_condition": 120.3203188670602,
+      "bem_solution_seconds": 251.05205162499624,
+      "seconds": 289.18046862499614,
+      "peak_MiB": 5337.640625,
+      "units": "V/(A*m)",
+      "readiness": "QC_ONLY_ANATOMY"
+    },
+    {
+      "level": "3",
+      "solver": "openmeeg",
+      "bem_unknown_vertices": 1926,
+      "source_count": 7598,
+      "EEG_channels": 59,
+      "orientation": "fixed cortical normal",
+      "lead_rank": 58,
+      "lead_nonnull_condition": 122.77857799860645,
+      "bem_solution_seconds": 14.116021875001024,
+      "seconds": 34.336235750000924,
+      "peak_MiB": 667.921875,
+      "units": "V/(A*m)",
+      "readiness": "QC_ONLY_ANATOMY"
+    },
+    {
+      "level": "4",
+      "solver": "openmeeg",
+      "bem_unknown_vertices": 7686,
+      "source_count": 7598,
+      "EEG_channels": 59,
+      "orientation": "fixed cortical normal",
+      "lead_rank": 58,
+      "lead_nonnull_condition": 115.28542038597313,
+      "bem_solution_seconds": 625.2103014159948,
+      "seconds": 695.3921435420052,
+      "peak_MiB": 4205.1875,
+      "units": "V/(A*m)",
+      "readiness": "QC_ONLY_ANATOMY"
+    }
+  ],
+  "refinement": [
+    {
+      "coarse": "3",
+      "fine": "4",
+      "solver": "mne",
+      "relative": 0.3687380171051237,
+      "target": 0.1,
+      "passed": false,
+      "per_source_relative_error": {
+        "p5": 0.04614502521535027,
+        "p25": 0.05539954298635471,
+        "p50": 0.06500466260355203,
+        "p75": 0.08271856786891002,
+        "p95": 0.33953076391819387,
+        "p99": 1.0030304756134287,
+        "mean": 0.1110757180137453,
+        "min": 0.012493014571276757,
+        "max": 4.232452753214924,
+        "count": 7598
+      },
+      "per_source_correlation": {
+        "p5": 0.9788036696032091,
+        "p25": 0.9990557041617097,
+        "p50": 0.9995895703256572,
+        "p75": 0.9997854541260656,
+        "p95": 0.9999267138460045,
+        "p99": 0.999965391910246,
+        "mean": 0.9906846923031406,
+        "min": -0.7695472477605749,
+        "max": 0.999981492001715,
+        "count": 7598
+      },
+      "by_inner_skull_margin": [
+        {
+          "minimum_margin_mm": 0.0,
+          "sources": 7598,
+          "relative": 0.3687380171051235
+        },
+        {
+          "minimum_margin_mm": 1.0,
+          "sources": 7525,
+          "relative": 0.20585427708751672
+        },
+        {
+          "minimum_margin_mm": 2.0,
+          "sources": 7310,
+          "relative": 0.1290269784474453
+        },
+        {
+          "minimum_margin_mm": 5.0,
+          "sources": 6391,
+          "relative": 0.0697460606355248
+        },
+        {
+          "minimum_margin_mm": 10.0,
+          "sources": 4718,
+          "relative": 0.06266146583732193
+        }
+      ],
+      "anatomical_accuracy": false,
+      "head_readiness": "QC_ONLY_ANATOMY",
+      "skull_ct_validated": false,
+      "anatomical_accuracy_established": false,
+      "statement": "Numerical forward-model evidence on a QC_ONLY_ANATOMY conductor; skull not CT-validated; not anatomical or source-accuracy validation"
+    },
+    {
+      "coarse": "4",
+      "fine": "5i",
+      "solver": "mne",
+      "relative": 0.21480787264174148,
+      "target": 0.1,
+      "passed": false,
+      "per_source_relative_error": {
+        "p5": 0.000952617131485529,
+        "p25": 0.001195681413153709,
+        "p50": 0.001729644167488541,
+        "p75": 0.0034242869358547205,
+        "p95": 0.07020993335397414,
+        "p99": 0.4388985971667302,
+        "mean": 0.021450583207624614,
+        "min": 0.000596908600970115,
+        "max": 3.534549565319692,
+        "count": 7598
+      },
+      "per_source_correlation": {
+        "p5": 0.9992541208024295,
+        "p25": 0.9999960237870563,
+        "p50": 0.999998857686182,
+        "p75": 0.9999995614437933,
+        "p95": 0.999999905159692,
+        "p99": 0.9999999566230892,
+        "mean": 0.9980561195005176,
+        "min": -0.10328290924842456,
+        "max": 0.9999999789375458,
+        "count": 7598
+      },
+      "by_inner_skull_margin": [
+        {
+          "minimum_margin_mm": 0.0,
+          "sources": 7598,
+          "relative": 0.2148078726417415
+        },
+        {
+          "minimum_margin_mm": 1.0,
+          "sources": 7525,
+          "relative": 0.06937167923839736
+        },
+        {
+          "minimum_margin_mm": 2.0,
+          "sources": 7310,
+          "relative": 0.020874164534939715
+        },
+        {
+          "minimum_margin_mm": 5.0,
+          "sources": 6391,
+          "relative": 0.0023688426571813834
+        },
+        {
+          "minimum_margin_mm": 10.0,
+          "sources": 4718,
+          "relative": 0.0016156962936092847
+        }
+      ],
+      "anatomical_accuracy": false,
+      "head_readiness": "QC_ONLY_ANATOMY",
+      "skull_ct_validated": false,
+      "anatomical_accuracy_established": false,
+      "statement": "Numerical forward-model evidence on a QC_ONLY_ANATOMY conductor; skull not CT-validated; not anatomical or source-accuracy validation"
+    }
+  ],
+  "minimum_human_mesh_level": null,
+  "minimum_human_mesh_level_by_source_margin": [
+    {
+      "minimum_margin_mm": 0.0,
+      "sources": 7598,
+      "minimum_human_mesh_level": null
+    },
+    {
+      "minimum_margin_mm": 1.0,
+      "sources": 7525,
+      "minimum_human_mesh_level": "4"
+    },
+    {
+      "minimum_margin_mm": 2.0,
+      "sources": 7310,
+      "minimum_human_mesh_level": "4"
+    },
+    {
+      "minimum_margin_mm": 5.0,
+      "sources": 6391,
+      "minimum_human_mesh_level": "3"
+    },
+    {
+      "minimum_margin_mm": 10.0,
+      "sources": 4718,
+      "minimum_human_mesh_level": "3"
+    }
+  ],
+  "margin_strata_prespecified": true,
+  "two_finest_levels_pass": false,
+  "solver_agreement": [
+    {
+      "level": "3",
+      "comparison": "MNE linear collocation vs OpenMEEG symmetric BEM",
+      "reference": "openmeeg",
+      "relative": 0.3292056639281769,
+      "target": 0.1,
+      "passed": false,
+      "per_source_relative_error": {
+        "p5": 0.06060744858816259,
+        "p25": 0.07318364117706869,
+        "p50": 0.08590880491263839,
+        "p75": 0.10572147652472771,
+        "p95": 0.33680277540360004,
+        "p99": 0.994667839721184,
+        "mean": 0.1335230613448751,
+        "min": 0.0158379677836659,
+        "max": 11.1470854630229,
+        "count": 7598
+      },
+      "per_source_correlation": {
+        "p5": 0.9786249787748262,
+        "p25": 0.9986004632976901,
+        "p50": 0.9993138345150407,
+        "p75": 0.9996397154979527,
+        "p95": 0.9998764101203835,
+        "p99": 0.9999358042314589,
+        "mean": 0.9905891117358586,
+        "min": -0.8969234907636026,
+        "max": 0.9999647985738038,
+        "count": 7598
+      },
+      "per_source_log_magnitude_ratio": {
+        "p5": -0.18490675312459504,
+        "p25": -0.09341360789799322,
+        "p50": -0.07874837046426393,
+        "p75": -0.06829978210404762,
+        "p95": -0.022886849869566628,
+        "p99": 0.46073711897607955,
+        "mean": -0.08267678347372974,
+        "min": -1.462571388424124,
+        "max": 2.487209838018793,
+        "count": 7598
+      },
+      "by_inner_skull_margin": [
+        {
+          "minimum_margin_mm": 0.0,
+          "sources": 7598,
+          "relative": 0.32920566392817696
+        },
+        {
+          "minimum_margin_mm": 1.0,
+          "sources": 7525,
+          "relative": 0.21275534510463429
+        },
+        {
+          "minimum_margin_mm": 2.0,
+          "sources": 7310,
+          "relative": 0.14231150108800955
+        },
+        {
+          "minimum_margin_mm": 5.0,
+          "sources": 6391,
+          "relative": 0.09150106083351894
+        },
+        {
+          "minimum_margin_mm": 10.0,
+          "sources": 4718,
+          "relative": 0.08403108734054855
+        }
+      ],
+      "ground_truth_error": false,
+      "head_readiness": "QC_ONLY_ANATOMY",
+      "skull_ct_validated": false,
+      "anatomical_accuracy_established": false,
+      "statement": "Numerical forward-model evidence on a QC_ONLY_ANATOMY conductor; skull not CT-validated; not anatomical or source-accuracy validation"
+    },
+    {
+      "level": "4",
+      "comparison": "MNE linear collocation vs OpenMEEG symmetric BEM",
+      "reference": "openmeeg",
+      "relative": 0.2542965686614753,
+      "target": 0.1,
+      "passed": false,
+      "per_source_relative_error": {
+        "p5": 0.01637108629478636,
+        "p25": 0.020019746180873044,
+        "p50": 0.023778385366550935,
+        "p75": 0.029623906164536296,
+        "p95": 0.07938326526542583,
+        "p99": 0.4994704902044087,
+        "mean": 0.045237985823030326,
+        "min": 0.0046466411460421055,
+        "max": 15.627647413911117,
+        "count": 7598
+      },
+      "per_source_correlation": {
+        "p5": 0.9991186176571909,
+        "p25": 0.9998954907079068,
+        "p50": 0.999946733138694,
+        "p75": 0.9999724105808477,
+        "p95": 0.9999904929163876,
+        "p99": 0.9999950880052851,
+        "mean": 0.9976061363227555,
+        "min": -0.11283632199762862,
+        "max": 0.9999970240179311,
+        "count": 7598
+      },
+      "per_source_log_magnitude_ratio": {
+        "p5": -0.04185332561058203,
+        "p25": -0.02545632624720936,
+        "p50": -0.021181018781009392,
+        "p75": -0.01826246337629558,
+        "p95": -0.01049117650042849,
+        "p99": 0.15687237484041516,
+        "mean": -0.02153338429030852,
+        "min": -1.2597146637003565,
+        "max": 2.8083841542725136,
+        "count": 7598
+      },
+      "by_inner_skull_margin": [
+        {
+          "minimum_margin_mm": 0.0,
+          "sources": 7598,
+          "relative": 0.25429656866147554
+        },
+        {
+          "minimum_margin_mm": 1.0,
+          "sources": 7525,
+          "relative": 0.07533997080892559
+        },
+        {
+          "minimum_margin_mm": 2.0,
+          "sources": 7310,
+          "relative": 0.03383111963857917
+        },
+        {
+          "minimum_margin_mm": 5.0,
+          "sources": 6391,
+          "relative": 0.025580824830629907
+        },
+        {
+          "minimum_margin_mm": 10.0,
+          "sources": 4718,
+          "relative": 0.023484609182824967
+        }
+      ],
+      "ground_truth_error": false,
+      "head_readiness": "QC_ONLY_ANATOMY",
+      "skull_ct_validated": false,
+      "anatomical_accuracy_established": false,
+      "statement": "Numerical forward-model evidence on a QC_ONLY_ANATOMY conductor; skull not CT-validated; not anatomical or source-accuracy validation"
+    }
+  ],
+  "margin_stratum_reference": "unsigned distance to the level-4 inner skull",
+  "M32_baseline": {
+    "source_space": "volumetric, 140 sources, free orientation",
+    "refinement2to3": 0.14562012613874192,
+    "refinement3to4": 0.05117222825165996,
+    "matched_BEM_MNE_OpenMEEG_level3": 0.06813307790734653
+  },
+  "anatomical_accuracy": false,
+  "human_source_accuracy": false,
+  "implementation_sha256": {
+    "scripts/run_forward_revalidation.py": "8fcfe9ab61d1865493b2dc093a0db73e243ace63ab6ea8027d3b3b4944393617",
+    "src/soma/source/forward_revalidation.py": "0cbe54d303100357fd7588d5f84af99cd94c8b151efc0f2d1bb80ef63c3c9dbc",
+    "src/soma/source/cortical.py": "3ab338807c5de7d20629dcaff73f96d09abeddf411f5c0b73092433eba7a7c13"
+  },
+  "mne_version": "1.13.2",
+  "orchestrator_seconds": 0.07106079200457316
+}

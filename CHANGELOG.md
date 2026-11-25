@@ -9,6 +9,20 @@ lived in the README are preserved in [docs/MILESTONES.md](docs/MILESTONES.md).
   milestone announcements moved verbatim to `docs/MILESTONES.md`; new
   `docs/DATA_POLICY.md` dataset inventory. No scientific code changed.
 
+### M33 forward-model revalidation (workstream D)
+
+- Add `soma.source.forward_revalidation` (geometry-preserving midpoint subdivision,
+  fixed-normal projection, M32 relative-change metric, per-source agreement, margin
+  strata, minimum-level rule, readiness tags) and `scripts/run_forward_revalidation.py`
+  (resumable one-stage-at-a-time runner; private arrays under ignored `reports/`).
+- MNE sample EEG, 7,598 oct6 cortical sources, fixed normals, M32 conductivities, all
+  tagged QC_ONLY_ANATOMY / skull not CT-validated. Unrestricted refinement FAILS the 10%
+  target (3→4 36.87%, 4→5i 21.48%), driven by sources within 1–2 mm of the inner skull;
+  with a >=1 mm source margin (99.0% of sources) 4→5i is 6.94% and level 4 is the minimum
+  human mesh level. MNE vs OpenMEEG: 32.92% (level 3), 25.43% (level 4); 7.53% at level 4
+  with the >=1 mm margin; median per-source correlation 0.9999 at level 4.
+  See `docs/MILESTONE33_FORWARD_RESULTS.md`.
+
 ### M33 cortical source space (workstream C)
 
 - Add `soma.source.cortical`: white/pial midsurface sources per hemisphere, count-matched
