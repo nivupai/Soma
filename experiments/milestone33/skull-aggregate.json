@@ -1,0 +1,191 @@
+{
+ "protocol_sha256": "82d07af4946000d4a046038aa3a460218417ce3e05b0f41a9ab10c578db9e14e",
+ "soma_version": "0.32.0",
+ "dataset": "SynthRAD2023 Task 1 brain (CC BY-NC 4.0); aggregates only",
+ "requested": 180,
+ "completed_cases": 174,
+ "failures": {
+  "count": 6,
+  "reasons": {
+   "ValueError: No surface inside the evaluation region": 6
+  }
+ },
+ "flag_counts": {
+  "metal": 14,
+  "vertex_truncation": 173,
+  "skull_defect": 122,
+  "mr_ct_consistency": 82
+ },
+ "flagged_case_count": 174,
+ "primary": {
+  "bone_hu": 300.0,
+  "evaluable_cases": 0,
+  "metrics": {}
+ },
+ "by_centre": {},
+ "sensitivity": {
+  "all_cases_including_flagged": {
+   "inner_skull": {
+    "signed_mean_mm": {
+     "n_subjects": 174,
+     "mean": -1.8586961467776328,
+     "SD": 9.360773582049923,
+     "CI95": [
+      -3.1580835038821284,
+      -0.47400054530992364
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_mm": {
+     "n_subjects": 174,
+     "mean": 5.837287143576449,
+     "SD": 6.1099649069778295,
+     "CI95": [
+      4.9744418844684075,
+      6.797704161012992
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "HD95_mm": {
+     "n_subjects": 174,
+     "mean": 15.449988755604272,
+     "SD": 15.40636072318334,
+     "CI95": [
+      13.26359704804251,
+      17.798786436386138
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   },
+   "outer_skull": {
+    "signed_mean_mm": {
+     "n_subjects": 174,
+     "mean": -5.698191446041306,
+     "SD": 4.658943415541474,
+     "CI95": [
+      -6.372608799279847,
+      -5.048716364190325
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_mm": {
+     "n_subjects": 174,
+     "mean": 6.179294494410231,
+     "SD": 3.739422203646905,
+     "CI95": [
+      5.6582614547740135,
+      6.715001553045236
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "HD95_mm": {
+     "n_subjects": 174,
+     "mean": 16.442282199349044,
+     "SD": 9.269217797862707,
+     "CI95": [
+      15.060750544999271,
+      17.728654411931675
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   },
+   "outer_scalp": {
+    "signed_mean_mm": {
+     "n_subjects": 174,
+     "mean": -4.59657655613871,
+     "SD": 3.470053160430747,
+     "CI95": [
+      -5.087132728456388,
+      -4.09596961633339
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_mm": {
+     "n_subjects": 174,
+     "mean": 4.048788031558354,
+     "SD": 2.1888337548668084,
+     "CI95": [
+      3.728393564005555,
+      4.354866237236973
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "HD95_mm": {
+     "n_subjects": 174,
+     "mean": 15.561816077224965,
+     "SD": 8.457798376322865,
+     "CI95": [
+      14.327569630771245,
+      16.792355482608514
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   },
+   "thickness": {
+    "mean_error_mm": {
+     "n_subjects": 174,
+     "mean": -3.9673908880022974,
+     "SD": 2.8293856373766406,
+     "CI95": [
+      -4.366997745773859,
+      -3.5428541970422556
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_error_mm": {
+     "n_subjects": 174,
+     "mean": 4.5003332425114175,
+     "SD": 2.5317010654815095,
+     "CI95": [
+      4.133028525621421,
+      4.863032219104873
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   }
+  }
+ },
+ "decision": {
+  "readiness": "NOT_READY",
+  "scope": "T1-only geometric baseline method only; not any other head model",
+  "checks": {
+   "enough_cases": false,
+   "inner_skull": false,
+   "outer_scalp": false,
+   "outer_skull": false,
+   "thickness": false
+  },
+  "limits_mm": {
+   "inner_skull": {
+    "mean_abs_mm": 2.0,
+    "HD95_mm": 5.0
+   },
+   "outer_scalp": {
+    "mean_abs_mm": 2.0,
+    "HD95_mm": 5.0
+   },
+   "outer_skull": {
+    "mean_abs_mm": 3.0,
+    "HD95_mm": 7.0
+   }
+  },
+  "thickness_limit_mm": 2.0,
+  "minimum_evaluable_cases": 15
+ },
+ "bootstrap": {
+  "seed": 11042,
+  "repetitions": 2000,
+  "unit": "subject"
+ }
+}

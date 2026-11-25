@@ -83,6 +83,9 @@ def evaluate_case(
     case_dir: Path, command: str, output: Path, *, check_nesting: bool
 ) -> dict[str, Any]:
     case = case_dir.name
+    cached = output / "cases" / case / "skull-metrics.json"
+    if cached.exists():  # resume: a finished case is never recomputed or re-scored
+        return dict(json.loads(cached.read_text()))
     t1 = load_nifti(case_dir / "mr.nii.gz")
     ct = load_nifti(case_dir / "ct.nii.gz")
     mask = load_nifti(case_dir / "mask.nii.gz", kind="labels")

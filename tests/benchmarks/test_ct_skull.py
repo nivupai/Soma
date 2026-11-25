@@ -176,3 +176,22 @@ def test_mr_ct_consistency_flag(case) -> None:
     bright = Volume(t1, ph["t1"].affine_m, "intensity", ph["t1"].metadata)
     flags = exclusion_flags(ph["ct"], ph["mask"], truth, region, t1=bright, thresholds=SMALL_HEAD)
     assert flags["mr_ct_consistency"]["flag"]
+
+
+def test_cavity_not_split_by_axial_slice_with_open_bone_ring() -> None:
+    # v1 regression: an axial slice whose bone ring is open (sinus, orbit roof) must not cut
+    # the cranial cavity into slabs.
+    base = phantom()
+    ct = base["ct"].array().copy()
+    r = radius_mm(ct.shape, 2.0)
+    k = ct.shape[2] // 2 + 5
+    shell = (r >= INNER) & (r < OUTER)
+    gap = np.zeros_like(shell)
+    gap[: ct.shape[0] // 2 - 8, :, k : k + 12] = True  # open the ring on one side, 24 mm tall
+    ct[shell & gap] = 40.0
+    truth = ct_truth(
+        Volume(ct, base["ct"].affine_m, "intensity", base["ct"].metadata), base["mask"]
+    )
+    full = ct_truth(base["ct"], base["mask"])
+    cavity = truth.masks["inner_skull"].array().sum()
+    assert cavity > 0.8 * full.masks["inner_skull"].array().sum()

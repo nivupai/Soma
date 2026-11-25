@@ -1,0 +1,189 @@
+{
+ "protocol_sha256": "0d9581e30ee7ad88c4786b3312163aa087fb1313bed01de212f68a1f1cc34c8c",
+ "dataset": "SynthRAD2025 Task 1 head-and-neck (CC BY-NC 4.0); aggregates only",
+ "requested": 156,
+ "completed_cases": 137,
+ "failures": {
+  "SynthSeg found no brain (ICV 0)": 15,
+  "FreeSurfer watershed failed": 4
+ },
+ "mri_qc_failures": 87,
+ "flag_counts": {
+  "skull_defect": 136,
+  "field_of_view_crop": 118,
+  "mri_qc": 87,
+  "vertex_truncation": 34,
+  "metal": 1
+ },
+ "flagged_case_count": 137,
+ "qc_ratio_percentiles": {
+  "p10": 1.1779920627649692,
+  "p50": 3.712058951054417,
+  "p90": 4445.037141255885
+ },
+ "primary": {
+  "bone_hu": 300.0,
+  "evaluable_cases": 0,
+  "metrics": {}
+ },
+ "sensitivity": {
+  "all_cases_including_flagged": {
+   "inner_skull": {
+    "signed_mean_mm": {
+     "n_subjects": 128,
+     "mean": 10.075469270251768,
+     "SD": 12.651267996718964,
+     "CI95": [
+      8.079707557047232,
+      12.251599044080061
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_mm": {
+     "n_subjects": 128,
+     "mean": 12.138006629418221,
+     "SD": 11.560839794393264,
+     "CI95": [
+      10.306525222157982,
+      14.156091699842843
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "HD95_mm": {
+     "n_subjects": 128,
+     "mean": 29.057797555193623,
+     "SD": 20.919695134432242,
+     "CI95": [
+      25.72402427945328,
+      32.61348115515778
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   },
+   "outer_skull": {
+    "signed_mean_mm": {
+     "n_subjects": 128,
+     "mean": 4.921640359962465,
+     "SD": 5.42667732088477,
+     "CI95": [
+      3.9884319181816874,
+      5.849588296233113
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_mm": {
+     "n_subjects": 128,
+     "mean": 6.3906137006225485,
+     "SD": 4.309195635882413,
+     "CI95": [
+      5.640123950407677,
+      7.150679336199124
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "HD95_mm": {
+     "n_subjects": 128,
+     "mean": 17.255723325161014,
+     "SD": 13.202867136824079,
+     "CI95": [
+      14.981251226362103,
+      19.652583826852172
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   },
+   "outer_scalp": {
+    "signed_mean_mm": {
+     "n_subjects": 128,
+     "mean": 2.214616641498151,
+     "SD": 2.3469702435386797,
+     "CI95": [
+      1.7964598783386472,
+      2.627972905728766
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_mm": {
+     "n_subjects": 128,
+     "mean": 2.9292516208305113,
+     "SD": 2.0480703693438502,
+     "CI95": [
+      2.5626690195718167,
+      3.280587761308694
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "HD95_mm": {
+     "n_subjects": 128,
+     "mean": 9.468736436334984,
+     "SD": 7.585542703533082,
+     "CI95": [
+      8.198665218097515,
+      10.798995896823508
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   },
+   "thickness": {
+    "mean_error_mm": {
+     "n_subjects": 128,
+     "mean": 1.52975192468492,
+     "SD": 7.410389764738215,
+     "CI95": [
+      0.260302670635551,
+      2.8714737117385543
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    },
+    "mean_abs_error_mm": {
+     "n_subjects": 128,
+     "mean": 7.203076262149014,
+     "SD": 5.119808974704077,
+     "CI95": [
+      6.314560308628521,
+      8.082765139558584
+     ],
+     "unit": "subject",
+     "scope": "selected small cohort, not broad population certification"
+    }
+   }
+  }
+ },
+ "decision": {
+  "readiness": "NOT_READY",
+  "scope": "v3.1: head crop + watershed + offsets + learned inner skull",
+  "checks": {
+   "enough_cases": false,
+   "inner_skull": false,
+   "outer_scalp": false,
+   "outer_skull": false,
+   "thickness": false
+  },
+  "limits_mm": {
+   "inner_skull": {
+    "mean_abs_mm": 2.0,
+    "HD95_mm": 5.0
+   },
+   "outer_scalp": {
+    "mean_abs_mm": 2.0,
+    "HD95_mm": 5.0
+   },
+   "outer_skull": {
+    "mean_abs_mm": 3.0,
+    "HD95_mm": 7.0
+   }
+  },
+  "thickness_limit_mm": 2.0,
+  "minimum_evaluable_cases": 15
+ }
+}

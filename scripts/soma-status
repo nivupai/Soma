@@ -1,0 +1,61 @@
+#!/bin/bash
+# One-screen status of the Soma job queue, the Mac, and the Claude session.
+#   soma-status            (STALLED warning after 60 min with no finished task)
+#   STALL_MIN=90 soma-status
+SELF="$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || python3 -c 'import os,sys;print(os.path.realpath(sys.argv[1]))' "${BASH_SOURCE[0]}")"
+ROOT="$(cd "$(dirname "$SELF")/.." && pwd)"
+STATE="$ROOT/reports/soma-queue/status.json"
+STALL_MIN="${STALL_MIN:-60}"
+
+echo "=== Soma queue ==="
+pid="$(pgrep -f 'scripts.soma_queue' | head -1)"
+if [ -n "$pid" ]; then echo "Queue:    RUNNING (pid $pid)"; else echo "Queue:    NOT RUNNING  ->  start it with: soma-queue start"; fi
+if launchctl print "gui/$(id -u)/com.soma.queue" >/dev/null 2>&1; then echo "Autostart: installed (launchd)"; else echo "Autostart: not installed"; fi
+
+if [ -f "$STATE" ]; then
+  "$ROOT/.venv/bin/python" - "$STATE" "$STALL_MIN" "${pid:-}" <<'EOF'
+import datetime, json, sys
+s = json.load(open(sys.argv[1])); stall = int(sys.argv[2]); alive = bool(sys.argv[3])
+now = datetime.datetime.now().astimezone()
+def ago(t):
+    m = int((now - datetime.datetime.fromisoformat(t)).total_seconds() // 60)
+    return f"{m} min ago" if m < 120 else f"{m // 60} h {m % 60} min ago"
+print(f"Step:     {s['phase_index']}/{s['phases_total']}  {s['phase']}")
+for p in s["phases"]:
+    bar = f"{p['done']}/{p['total']} done" + (f", {p['failed']} failed" if p["failed"] else "")
+    print(f"   - {p['name']}: {bar}")
+for r in s.get("running", []):
+    print(f"Running:  {r['task']} (since {ago(r['started_at'])})")
+if s.get("waiting_for"):
+    w = s["waiting_for"]
+    if "seal" in w:
+        cmd = w[w.find("(") + 1 : w.rfind(")")] if "(" in w else ""
+        print("*** NEEDS YOU: the next step waits for your protocol seal. Run:")
+        print(f"    cd ~/Documents/Soma-publish-clean && {cmd}")
+    else:
+        print(f"WAITING:  {w}")
+print(f"Last finished task: {ago(s['last_progress_at'])}   (status written {ago(s['updated_at'])})")
+idle = (now - datetime.datetime.fromisoformat(s["last_progress_at"])).total_seconds() / 60
+if s.get("finished"):
+    print("ALL DONE")
+elif alive and not s.get("waiting_for") and idle > stall:
+    print(f"*** STALLED? no task has finished for {int(idle)} min (limit {stall}). Check: soma-queue log")
+elif not alive:
+    print("*** The queue is not running. Finished work is kept; run: soma-queue start")
+EOF
+else
+  echo "No status yet (the queue has not run)."
+fi
+
+echo "=== Mac ==="
+echo "Uptime:   $(uptime | sed 's/.*up \([^,]*\),.*/\1/')"
+sysctl -n vm.swapusage | sed 's/^/Swap:     /'
+memory_pressure 2>/dev/null | tail -1 | sed 's/^/Memory:   /'
+free_pct=$(memory_pressure 2>/dev/null | awk -F': ' '/free percentage/{gsub("%","",$2); print $2}')
+[ -n "$free_pct" ] && [ "$free_pct" -lt 20 ] && echo "*** MEMORY LOW (${free_pct}% free): a restart risk; consider: soma-queue stop"
+mount | grep -q "/Volumes/YOTUO" && echo "YOTUO:    mounted" || echo "YOTUO:    *** NOT MOUNTED (data drive) ***"
+
+echo "=== Claude ==="
+if pgrep -f "/Applications/Claude.app" >/dev/null; then echo "Claude app: running"; else echo "Claude app: not running"; fi
+if pgrep -f "claude-code" >/dev/null || pgrep -x claude >/dev/null; then echo "Claude Code session process: running"; else echo "Claude Code session process: not running"; fi
+echo "(The queue does not need Claude: it keeps working if the session drops.)"
