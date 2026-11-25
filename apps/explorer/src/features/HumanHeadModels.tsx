@@ -2,10 +2,18 @@ import { useState } from "react";
 import { Async, Panel, Warning, useResource } from "../components/Common";
 import { type Result, type VolumeMeta, type Slice } from "../api/client";
 import { SliceCanvas } from "./MRI";
+import ReadinessBanner from "../components/ReadinessBanner";
+import { readinessLabel } from "../components/headColor";
 type View = { id: string; label: string; kind: string };
 type Report = {
   schema: string;
   anatomy_status: string;
+  readiness?: {
+    status: string;
+    anatomical_accuracy_established: boolean;
+    checks: Record<string, boolean | null>;
+    limitations: string[];
+  };
   human_localization_accuracy: boolean;
   local_views: View[];
   comparisons: {
@@ -93,6 +101,13 @@ function LocalMesh({ id }: { id: string }) {
     <Async loading={g.loading} error={g.error}>
       {g.data && (
         <>
+          <ReadinessBanner
+            subject="Local MRI-derived head"
+            readiness={readinessLabel(g.data.status)}
+            geometricallyValid={null}
+            anatomicallyValidated={false}
+            reasons={["topology and registration QC only"]}
+          />
           <svg
             viewBox="-130 -130 260 260"
             role="img"
@@ -163,6 +178,23 @@ export default function HumanHeadModels() {
       >
         {data && valid && (
           <>
+            <ReadinessBanner
+              subject="M32 MRI head model"
+              readiness={readinessLabel(
+                data.readiness?.status ?? data.anatomy_status,
+              )}
+              geometricallyValid={
+                data.readiness
+                  ? Object.values(data.readiness.checks).every(
+                      (v) => v === true,
+                    )
+                  : null
+              }
+              anatomicallyValidated={
+                data.readiness?.anatomical_accuracy_established === true
+              }
+              reasons={data.readiness?.limitations ?? []}
+            />
             <Warning>
               0 validated conductor anatomies · 1 QC-only anatomy · 23
               tissue-reference cases not ready for a full conductor model. Human

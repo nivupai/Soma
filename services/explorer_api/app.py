@@ -190,6 +190,9 @@ def create_app(registry: Registry | None = None, jobs_root: Path | None = None) 
     from .source_uncertainty import router as uncertainty_router
 
     app.include_router(uncertainty_router())
+    from .head_scene import router as head_scene_router
+
+    app.include_router(head_scene_router())
     from .anatomical_models import private_anatomy_path, private_view_allowed
     from .anatomical_models import router as anatomical_router
 

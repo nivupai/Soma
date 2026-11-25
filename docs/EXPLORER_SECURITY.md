@@ -69,3 +69,13 @@ invoke acquisition, fitting or license acceptance. Current default BLOCKED evide
 must not be relabeled a successful external replication. Public BNCI ND notice
 supports scoped local analysis in the software policy; aggregate export requires
 separate content-bound review. Neither policy nor availability verifies consent.
+
+## M35 head scene addendum
+
+The public 3D head view only uses geometry generated in code
+(`services/explorer_api/head_scene.py`); it reads no MRI, participant or allowlisted
+file, and its routes accept only the demo identity. In local-data mode the view
+fetches nothing and points to the existing M32 viewer. Private MRI anatomy remains
+behind `SOMA_LOCAL_ANATOMY_VIEWER=1` plus direct-loopback checks; the guard
+middleware and its tests are unchanged, and an `m32-*` head-scene identity is
+still rejected by it. The uncertainty overlay is a labelled mock fixture.
