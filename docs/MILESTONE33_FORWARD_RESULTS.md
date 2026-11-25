@@ -101,3 +101,11 @@ Source-space build 12 s and geometry checks 45 s. Lead fields are computed in ch
 - The finest level refines the inner skull only; outer skull and scalp stay at ico4.
 - The level-4 choice rests on a single passing pair and a 1 mm source-margin policy.
 - EEG only; MEG was not revalidated here.
+
+## Owner decision (2026-11-25)
+
+The project owner accepted a **minimum 1 mm distance from every cortical source to the inner
+skull** as the standard for human forward models. Sources closer than 1 mm (about 1% here) are
+excluded and listed. Under this rule, mesh refinement 4→5i changes fields by 6.94% (target
+< 10%), and **level 4 is the minimum human mesh level**. MNE and OpenMEEG agree to 7.53% at
+level 4. All results stay `QC_ONLY_ANATOMY` until the skull is CT-validated.
