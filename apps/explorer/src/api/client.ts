@@ -196,3 +196,56 @@ export const query = (values: Record<string, string | number>) =>
   new URLSearchParams(
     Object.entries(values).map(([k, v]) => [k, String(v)]),
   ).toString();
+export type Readiness = "VALIDATED" | "QC_ONLY" | "NOT_READY";
+export type HeadLayerName = "scalp" | "outer_skull" | "inner_skull" | "cortex";
+export interface HeadLayer {
+  name: HeadLayerName;
+  label: string;
+  vertices_mm: number[][];
+  faces: number[][];
+}
+export interface HeadSceneData {
+  contract: "soma.explorer.head-scene/1";
+  head_id: string;
+  label: string;
+  synthetic: boolean;
+  redistributable: boolean;
+  private_mri_used: false;
+  generator: string;
+  frame: string;
+  units: "mm";
+  readiness: Readiness;
+  readiness_status: string;
+  readiness_reasons: string[];
+  geometrically_valid: boolean;
+  anatomically_validated: boolean;
+  geometry_checks: Record<string, boolean | number | string>;
+  layers: HeadLayer[];
+  sensors: { label: string; position_mm: number[] }[];
+  sources: {
+    kind: "cortical_surface";
+    positions_mm: number[][];
+    normals: number[][];
+    scalar_name: string;
+    scalar_units: string;
+    scalar: number[];
+  };
+  warnings: string[];
+}
+/** Per-source scalar + interval overlay (M34 localisation error; mock today). */
+export interface SourceUncertaintyOverlay {
+  contract: "soma.explorer.source-uncertainty-overlay/1";
+  head_id: string;
+  quantity: "localisation_error";
+  units: "mm";
+  statistic: "mean";
+  interval: "confidence_interval";
+  confidence_level: number;
+  n_sources: number;
+  mean: number[];
+  lower: number[];
+  upper: number[];
+  origin: "MOCK_FIXTURE" | "M34_RESULT";
+  fixture: boolean;
+  warnings: string[];
+}

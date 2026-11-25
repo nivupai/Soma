@@ -858,6 +858,109 @@ summary {
   left: 18px;
   bottom: 15px;
 }
+.readiness-banner {
+  --tone: var(--amber);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 18px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--tone) 45%, transparent);
+  border-left: 5px solid var(--tone);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--tone) 8%, var(--panel));
+}
+.readiness-banner.readiness-validated {
+  --tone: var(--cyan);
+}
+.readiness-banner.readiness-qc_only {
+  --tone: var(--blue);
+}
+.readiness-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  font-size: 12px;
+}
+.readiness-label strong {
+  color: var(--tone);
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.readiness-label .eyebrow {
+  width: 100%;
+}
+.readiness-facts {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px 10px;
+  margin: 0;
+  font-size: 11px;
+}
+.readiness-facts dt {
+  color: var(--muted);
+}
+.readiness-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+.readiness-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.head-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+.head-layer {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.head-layer input[type="range"] {
+  width: 80px;
+}
+.scalar-legend {
+  margin: 12px 0 0;
+  font-size: 11px;
+}
+.scalar-legend figcaption {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.scalar-legend-bar {
+  height: 10px;
+  border-radius: 3px;
+}
+.scalar-legend-ticks {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font: 10px monospace;
+}
+.selected-source dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  font-size: 11px;
+}
+.selected-source dd {
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .readiness-banner {
+    grid-template-columns: 1fr;
+  }
+}
 .source-selector {
   display: flex;
   gap: 12px;

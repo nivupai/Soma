@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { type Result, type VolumeMeta, type Slice, query } from "../api/client";
 import type { Action, Selection } from "../state";
+import ReadinessBanner from "../components/ReadinessBanner";
 import {
   Async,
   Evidence,
@@ -218,6 +219,17 @@ export default function MRI({
     <Async loading={m.loading} error={m.error}>
       {meta && (
         <>
+          <ReadinessBanner
+            subject="MRI volume"
+            readiness="NOT_READY"
+            geometricallyValid={null}
+            anatomicallyValidated={false}
+            reasons={[
+              m.data?.synthetic
+                ? "synthetic volume, not a head model"
+                : "a volume alone carries no conductor-model readiness receipt",
+            ]}
+          />
           <div className="metrics">
             <div>
               <span>Voxel grid</span>
