@@ -29,6 +29,7 @@ from soma.imaging.nifti import load_nifti, save_nifti
 from soma.pipeline.synthseg import load_synthseg, to_native_grid
 
 ROOT = Path("reports/milestone33/skull-dev-crop")
+SPLIT_FILE = Path("configs/m33-skull-v2-split.json")
 SUBJECTS = Path("/Volumes/YOTUO/soma-data/fs-subjects-crop")
 
 
@@ -66,8 +67,10 @@ def prepare(case: str, env: dict[str, str]) -> None:
     )
 
 
-def score(case: str, model: Any, env: dict[str, str]) -> dict[str, Any]:
-    out = ROOT / "cases" / case / "refined-metrics.json"
+def score(
+    case: str, model: Any, env: dict[str, str], name: str = "refined-metrics.json"
+) -> dict[str, Any]:
+    out = ROOT / "cases" / case / name
     if out.exists():
         return dict(json.loads(out.read_text()))
     _, _, (meshes,) = prepared(case, env)
@@ -89,11 +92,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("step", choices=["prepare", "evaluate"])
     parser.add_argument("--cases", nargs="*")
+    parser.add_argument(
+        "--pool",
+        choices=["dev", "all"],
+        default="dev",
+        help="all = the 60 development + 120 v2 held-out SynthRAD2023 cases (v2 test is finished; "
+        "the next independent test is CERMEP)",
+    )
     args = parser.parse_args()
-    dev = development()
+    split = json.loads(SPLIT_FILE.read_text())
+    dev = development() if args.pool == "dev" else sorted(split["development"] + split["held_out"])
     cases = args.cases or dev
     if not set(cases) <= set(dev):
-        raise SystemExit("Development only")
+        raise SystemExit("Case outside the chosen training pool")
     env = fs_env()
     if args.step == "prepare":
         for case in cases:
@@ -109,11 +120,14 @@ def main() -> None:
     models = {c: train([d for d in dev if d[2] != c]) for c in "ABC"}
     for case in cases:
         try:
-            score(case, models[case[2]], env)
+            name = "refined-metrics.json" if args.pool == "dev" else "refined180-metrics.json"
+            score(case, models[case[2]], env, name)
             print("done", case, flush=True)
         except Exception as exc:
             print("FAIL", case, type(exc).__name__, exc, flush=True)
-    final = ROOT / "refine-model-v3.1-final.pkl"
+    final = ROOT / (
+        "refine-model-v3.1-final.pkl" if args.pool == "dev" else "refine-model-v3.2-final.pkl"
+    )
     final.write_bytes(pickle.dumps(train(dev)))
 
 

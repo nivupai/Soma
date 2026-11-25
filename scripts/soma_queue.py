@@ -62,7 +62,9 @@ def hn_cases() -> list[str]:
 
 
 def phases() -> list[Phase]:
-    dev = sorted(json.loads(DEV_SPLIT.read_text())["development"])
+    split = json.loads(DEV_SPLIT.read_text())
+    dev = sorted(split["development"])
+    held_out = sorted(split["held_out"])
     run = f"cd {shlex.quote(str(ROOT))} && PYTHONPATH=. {PY} -m"
     return [
         Phase(
@@ -121,6 +123,27 @@ def phases() -> list[Phase]:
                 )
             ],
             gate=SEAL_V31,
+        ),
+        Phase(
+            "6 bigger training set: prepare the 120 finished v2 test cases",
+            [
+                Task(
+                    f"train180:{c}",
+                    f"{run} scripts.dev_m33_crop prepare --pool all --cases {c}",
+                    CROP / "cases" / c / "refine-features.npz",
+                )
+                for c in held_out
+            ],
+        ),
+        Phase(
+            "7 bigger training set: leave-one-centre-out on 180 cases + v3.2 model",
+            [
+                Task(
+                    "train180:evaluate",
+                    f"{run} scripts.dev_m33_crop evaluate --pool all",
+                    CROP / "refine-model-v3.2-final.pkl",
+                )
+            ],
         ),
     ]
 
