@@ -47,6 +47,33 @@ else
   echo "No status yet (the queue has not run)."
 fi
 
+# Network training progress (3D skull net): one line per fold that has started.
+NETMODELS="$ROOT/reports/milestone33/skull-net/models"
+if ls "$NETMODELS"/unet-fold-*.log.jsonl >/dev/null 2>&1; then
+  echo "=== Network training ==="
+  "$ROOT/.venv/bin/python" - "$NETMODELS" <<'EOF'
+import json, pathlib, sys, time
+d = pathlib.Path(sys.argv[1])
+for log in sorted(d.glob("unet-fold-*.log.jsonl")):
+    fold = log.name.split("-")[2].split(".")[0]
+    rows = [json.loads(l) for l in log.read_text().splitlines() if l.strip()]
+    if not rows:
+        continue
+    r = rows[-1]
+    it, of, mins = r["iteration"], r["of"], r["minutes"]
+    first = rows[0]["weighted_l1_mm"]
+    done = (d / f"unet-fold-{fold}.pt").exists() or it >= of
+    age = int((time.time() - log.stat().st_mtime) // 60)
+    if done:
+        state = "DONE"
+    else:
+        left = mins / it * (of - it) if it else 0
+        state = f"about {int(left // 60)} h {int(left % 60)} min left"
+    print(f"Fold {fold}:   {it}/{of} iterations ({100 * it // of}%), {mins:.0f} min so far, {state}")
+    print(f"          error {r['weighted_l1_mm']:.2f} mm (started at {first:.2f} mm), last update {age} min ago")
+EOF
+fi
+
 echo "=== Mac ==="
 echo "Uptime:   $(uptime | sed 's/.*up \([^,]*\),.*/\1/')"
 sysctl -n vm.swapusage | sed 's/^/Swap:     /'
