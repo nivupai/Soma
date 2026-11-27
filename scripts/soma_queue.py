@@ -32,6 +32,7 @@ SEAL_V31 = ROOT / "configs/m33-skull-v31-freeze.json"
 IDEAS = ROOT / "reports/milestone33/skull-improve"  # training-improvement experiments (dev only)
 THICK = ROOT / "reports/milestone33/skull-dev-thick"
 NET = ROOT / "reports/milestone33/skull-net"
+SURF = ROOT / "reports/milestone33/skull-surface"  # network zero surface + per-case choice
 
 
 @dataclass
@@ -273,6 +274,37 @@ def phases() -> list[Phase]:
                     "net:aggregate",
                     f"{run} scripts.dev_m33_skull_net aggregate",
                     NET / "summary.json",
+                )
+            ],
+        ),
+        Phase(
+            "20 network surface: look at the 10 worst cases",
+            [
+                Task(
+                    "surf:worst",
+                    f"{run} scripts.dev_m33_skull_surface worst",
+                    SURF / "worst10.json",
+                )
+            ],
+        ),
+        Phase(
+            "21 network surface: full mesh scoring (180 cases)",
+            [
+                Task(
+                    f"surf-score:{c}",
+                    f"{run} scripts.dev_m33_skull_surface score --case {c}",
+                    CROP / "cases" / c / "netsurf-metrics.json",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "22 network surface: per-case choice and summary",
+            [
+                Task(
+                    "surf:aggregate",
+                    f"{run} scripts.dev_m33_skull_surface aggregate",
+                    SURF / "summary.json",
                 )
             ],
         ),

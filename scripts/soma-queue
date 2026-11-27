@@ -29,7 +29,7 @@ case "${1:-status}" in
     pid="$(running_pid)"
     if [ -z "$pid" ]; then echo "Queue is not running."; exit 0; fi
     pkill -f "scripts.soma_queue"
-    pkill -f "scripts.dev_m33_crop|scripts.dev_m33_skull_improve|scripts.dev_m33_skull_features2|scripts.dev_m33_skull_thick|scripts.dev_m33_skull_score_ideas|scripts.dev_m33_skull_net|scripts.flags_m33_v3|scripts.run_m33_skull_v31|SynthSeg_predict|mri_normalize|mri_nu_correct|mri_watershed"
+    pkill -f "scripts.dev_m33_crop|scripts.dev_m33_skull_improve|scripts.dev_m33_skull_features2|scripts.dev_m33_skull_thick|scripts.dev_m33_skull_score_ideas|scripts.dev_m33_skull_net|scripts.dev_m33_skull_surface|scripts.flags_m33_v3|scripts.run_m33_skull_v31|SynthSeg_predict|mri_normalize|mri_nu_correct|mri_watershed"
     rm -rf /tmp/soma-synthseg.lock
     echo "Queue stopped. Finished work is kept; 'soma-queue start' resumes."
     ;;
