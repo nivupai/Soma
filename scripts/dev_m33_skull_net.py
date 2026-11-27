@@ -40,7 +40,12 @@ def grid_for(t1: Any) -> tuple[np.ndarray, tuple[int, int, int]]:
     """Axis-aligned RAS grid (metres) covering the cropped T1, sides a multiple of 16 voxels."""
     shape = np.array(t1.shape)
     corners = np.array(
-        [[i, j, k, 1.0] for i in (0, shape[0] - 1) for j in (0, shape[1] - 1) for k in (0, shape[2] - 1)]
+        [
+            [i, j, k, 1.0]
+            for i in (0, shape[0] - 1)
+            for j in (0, shape[1] - 1)
+            for k in (0, shape[2] - 1)
+        ]
     )
     world = (corners @ np.asarray(t1.affine_m).T)[:, :3]
     lo, hi = world.min(axis=0), world.max(axis=0)
@@ -197,8 +202,6 @@ def model_path(fold: str) -> Path:
 
 
 def train(fold: str) -> None:
-    import torch
-
     path = model_path(fold)
     if path.exists():
         return

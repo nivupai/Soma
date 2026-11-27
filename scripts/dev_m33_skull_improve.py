@@ -22,13 +22,14 @@ Variants:
   index's mean outward direction over the training cases (MRI-only).
 - combo: weighted + casenorm + location.
 - rich / combo_rich: adds ``refine-features2.npz`` (``scripts.dev_m33_skull_features2``).
-- cascade: the best single-stage variant, plus a second model on combo features + out-of-fold stage-1 prediction.
+- cascade: the best single-stage variant, plus a second model on combo features + out-of-fold
+  stage-1 prediction.
 - thick: the best variant (without the extra features) with 3 mm degraded copies of the
   training centres' cases added (``scripts.dev_m33_skull_thick``), scored on 1 mm and 3 mm.
 - smoothing grid: mesh smoothing iterations x correction clip for the best variant.
-- quantile: the best variant trained at the 10th / 50th / 90th percentile; reports how often the CT truth
-  falls in the 10-90 range per centre, the range width, and whether wider ranges mark larger
-  errors (Spearman); then the same after conformal calibration (CQR) fitted on the training
+- quantile: the best variant trained at the 10th / 50th / 90th percentile; reports how often the
+  CT truth falls in the 10-90 range per centre, the range width, and whether wider ranges mark
+  larger errors (Spearman); then the same after conformal calibration (CQR) fitted on the training
   centres only, which widens the range by a fixed margin to reach 80 % coverage.
 """
 
@@ -198,8 +199,12 @@ def thick_augmentation(
         prior = location_prior(data, train)
         plain = fit(*stack(every, train, variant, prior))
         augmented = fit(
-            *stack(every, train + [f"{c}#thick" for c in train if f"{c}#thick" in thick],
-                   variant, prior)
+            *stack(
+                every,
+                train + [f"{c}#thick" for c in train if f"{c}#thick" in thick],
+                variant,
+                prior,
+            )
         )
         for c in test:
             for tag, key in (("1mm", c), ("3mm", f"{c}#thick")):

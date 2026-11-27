@@ -50,10 +50,16 @@ def ring_curvature(xyz: np.ndarray, faces: np.ndarray, normals: np.ndarray, ring
     deg = np.bincount(edges[:, 0], minlength=n).astype(float)
     avg = xyz.copy()
     for _ in range(rings):
-        avg = np.stack(
-            [np.bincount(edges[:, 0], weights=avg[edges[:, 1], k], minlength=n) for k in range(3)],
-            axis=1,
-        ) / np.maximum(deg, 1)[:, None]
+        avg = (
+            np.stack(
+                [
+                    np.bincount(edges[:, 0], weights=avg[edges[:, 1], k], minlength=n)
+                    for k in range(3)
+                ],
+                axis=1,
+            )
+            / np.maximum(deg, 1)[:, None]
+        )
     # Positive where the surface bulges outward (vertex outside its neighbourhood mean), in mm.
     return np.sum((xyz - avg) * normals, axis=1) * 1000.0
 

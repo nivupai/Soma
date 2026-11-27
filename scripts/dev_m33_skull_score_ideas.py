@@ -23,11 +23,11 @@ import numpy as np
 from scripts.dev_m33_crop import ROOT, SPLIT_FILE, prepared
 from scripts.dev_m33_skull import DATA, fs_env
 from scripts.dev_m33_skull_improve import CENTRES, OUT, design, fit, load, location_prior, stack
+from soma.anatomy.fs_skull import voxelize
 from soma.anatomy.inner_skull_refine import RefineParameters, apply_correction
 from soma.anatomy.t1_skull import mask_volume, pad
 from soma.benchmarks.ct_skull import CTSkullParameters, RegionRule, ct_truth, score_case
 from soma.core.provenance import write_json
-from soma.anatomy.fs_skull import voxelize
 from soma.imaging.nifti import load_nifti
 
 VARIANT = {"weighted", "casenorm", "location", "rich"}
@@ -127,8 +127,10 @@ def aggregate() -> None:
             "v32_HD95_mm": float(arr[:, 2].mean()),
             "ideas_HD95_mm": float(arr[:, 3].mean()),
             "mean_abs_change_mm": float(diff.mean()),
-            "mean_abs_change_95ci_mm": [float(np.percentile(boots, 2.5)),
-                                        float(np.percentile(boots, 97.5))],
+            "mean_abs_change_95ci_mm": [
+                float(np.percentile(boots, 2.5)),
+                float(np.percentile(boots, 97.5)),
+            ],
             "cases_improved": int((diff < 0).sum()),
         }
     path = OUT / "full-mesh-summary.json"
