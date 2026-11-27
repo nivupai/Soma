@@ -29,6 +29,10 @@ HN = Path("/Volumes/YOTUO/soma-data/synthrad2025/hn")
 CROP = ROOT / "reports/milestone33/skull-dev-crop"
 V31 = ROOT / "reports/milestone33/skull-v31"
 SEAL_V31 = ROOT / "configs/m33-skull-v31-freeze.json"
+IDEAS = ROOT / "reports/milestone33/skull-improve"  # training-improvement experiments (dev only)
+THICK = ROOT / "reports/milestone33/skull-dev-thick"
+NET = ROOT / "reports/milestone33/skull-net"
+SURF = ROOT / "reports/milestone33/skull-surface"  # network zero surface + per-case choice
 
 
 @dataclass
@@ -65,6 +69,7 @@ def phases() -> list[Phase]:
     split = json.loads(DEV_SPLIT.read_text())
     dev = sorted(split["development"])
     held_out = sorted(split["held_out"])
+    pool = sorted(dev + held_out)
     run = f"cd {shlex.quote(str(ROOT))} && PYTHONPATH=. {PY} -m"
     return [
         Phase(
@@ -125,7 +130,17 @@ def phases() -> list[Phase]:
             gate=SEAL_V31,
         ),
         Phase(
-            "6 bigger training set: prepare the 120 finished v2 test cases",
+            "6 training ideas: quick comparison on the 60 development cases",
+            [
+                Task(
+                    "ideas:quick60",
+                    f"{run} scripts.dev_m33_skull_improve --pool dev",
+                    IDEAS / "experiments-dev.json",
+                )
+            ],
+        ),
+        Phase(
+            "7 bigger training set: prepare the 120 finished v2 test cases",
             [
                 Task(
                     f"train180:{c}",
@@ -136,12 +151,160 @@ def phases() -> list[Phase]:
             ],
         ),
         Phase(
-            "7 bigger training set: leave-one-centre-out on 180 cases + v3.2 model",
+            "8 bigger training set: leave-one-centre-out on 180 cases + v3.2 model",
             [
                 Task(
                     "train180:evaluate",
                     f"{run} scripts.dev_m33_crop evaluate --pool all",
                     CROP / "refine-model-v3.2-final.pkl",
+                )
+            ],
+        ),
+        Phase(
+            "9 training ideas: extra MRI features (180 cases)",
+            [
+                Task(
+                    f"ideas-features:{c}",
+                    f"{run} scripts.dev_m33_skull_features2 --cases {c}",
+                    CROP / "cases" / c / "refine-features2.npz",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "10 training ideas: 3 mm thick-slice training copies (180 cases)",
+            [
+                Task(
+                    f"ideas-thick:{c}",
+                    f"{run} scripts.dev_m33_skull_thick --cases {c}",
+                    THICK / "cases" / c / "refine-features.npz",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "11 training ideas: full comparison on 180 cases",
+            [
+                Task(
+                    "ideas:compare180",
+                    f"{run} scripts.dev_m33_skull_improve --pool all",
+                    IDEAS / "experiments-all.json",
+                )
+            ],
+        ),
+        Phase(
+            "12 training ideas: train the best combination (3 fold models)",
+            [
+                Task(
+                    "ideas-score:train",
+                    f"{run} scripts.dev_m33_skull_score_ideas train",
+                    IDEAS / "models" / "ideas-folds.done",
+                )
+            ],
+        ),
+        Phase(
+            "13 training ideas: full mesh scoring vs v3.2 (180 cases)",
+            [
+                Task(
+                    f"ideas-score:{c}",
+                    f"{run} scripts.dev_m33_skull_score_ideas score --case {c}",
+                    CROP / "cases" / c / "ideas-metrics.json",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "14 training ideas: summary vs v3.2",
+            [
+                Task(
+                    "ideas-score:aggregate",
+                    f"{run} scripts.dev_m33_skull_score_ideas aggregate",
+                    IDEAS / "full-mesh-summary.json",
+                )
+            ],
+        ),
+        Phase(
+            "15 3D network: install PyTorch and check the Mac GPU",
+            [
+                Task(
+                    "net:install",
+                    f"cd {shlex.quote(str(ROOT))} && {PY} -m pip install torch && "
+                    f"{run} scripts.dev_m33_skull_net install-check",
+                    NET / "torch-ok.json",
+                )
+            ],
+        ),
+        Phase(
+            "16 3D network: 2 mm training grids (180 cases)",
+            [
+                Task(
+                    f"net-grid:{c}",
+                    f"{run} scripts.dev_m33_skull_net prepare --case {c}",
+                    NET / "cases" / c / "grid.npz",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "17 3D network: train one model per held-out centre (A, B, C)",
+            [
+                Task(
+                    f"net-train:{f}",
+                    f"{run} scripts.dev_m33_skull_net train --fold {f}",
+                    NET / "models" / f"unet-fold-{f}.pt",
+                )
+                for f in "ABC"
+            ],
+        ),
+        Phase(
+            "18 3D network: full mesh scoring, network and hybrid (180 cases)",
+            [
+                Task(
+                    f"net-score:{c}",
+                    f"{run} scripts.dev_m33_skull_net score --case {c}",
+                    CROP / "cases" / c / "hybrid-metrics.json",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "19 3D network: summary vs v3.2 and the improved model",
+            [
+                Task(
+                    "net:aggregate",
+                    f"{run} scripts.dev_m33_skull_net aggregate",
+                    NET / "summary.json",
+                )
+            ],
+        ),
+        Phase(
+            "20 network surface: look at the 10 worst cases",
+            [
+                Task(
+                    "surf:worst",
+                    f"{run} scripts.dev_m33_skull_surface worst",
+                    SURF / "worst10.json",
+                )
+            ],
+        ),
+        Phase(
+            "21 network surface: full mesh scoring (180 cases)",
+            [
+                Task(
+                    f"surf-score:{c}",
+                    f"{run} scripts.dev_m33_skull_surface score --case {c}",
+                    CROP / "cases" / c / "netsurf-metrics.json",
+                )
+                for c in pool
+            ],
+        ),
+        Phase(
+            "22 network surface: per-case choice and summary",
+            [
+                Task(
+                    "surf:aggregate",
+                    f"{run} scripts.dev_m33_skull_surface aggregate",
+                    SURF / "summary.json",
                 )
             ],
         ),
